@@ -1,0 +1,33 @@
+<HBProfile>
+<Name>[Quest] Pandaren - Alliance 1 to 90 By [Cava] $Rev: 278 $:</Name>
+	
+<QuestOrder>
+<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="5" ExpiryAction="InputEnabled_Continue"
+  Text="Cava's profiles use special Quest Behaviors, be sure Cava's folder is at right place" />
+
+  <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+	<CustomBehavior File="EnablePlugin" Names="Questhelper - ItemForAura,Anti Drown,AutoEquip2,Talented" />
+
+<!-- #######################################################################################################################-->
+
+<If Condition="Me.Race == WoWRace.Pandaren">
+  <If Condition="!HasQuest(30989) &amp;&amp; IsQuestCompleted(30989)" >
+    <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+  </If>
+  <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="30" ExpiryAction="InputEnabled_Continue"
+  Text="Thank you for taking the time to use Cava's profiles hope you like it\n\n
+
+   Please reporte any bugs to help me improving this profiles\n\n
+   Make sure you do the folowing:\n
+   setup AutoEquip2\n\n
+   If you can, then please:\n
+   Send some money to char at Lvl 12 and - set food and drinks as well\n
+   Send bags to char at Lvl 12 and - equip the bags\n\n
+
+   Config a mail recipient or some valuable itens will be destroid!\n
+    (Settings and Tools Button)" />
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Pandaren[Cava]" />
+</If>
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</QuestOrder>
+</HBProfile>

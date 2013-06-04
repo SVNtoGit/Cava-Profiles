@@ -1,0 +1,643 @@
+<HBProfile creator="Cava">
+<Name>[H-Quest] (39-40) Thousand Needles [Cava] $Rev$:</Name>
+<MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+  <Blackspot X="-6223.099" Y="-3968.073" Z="-58.10962" Radius="3.808825" />
+  <Blackspot X="-6126.955" Y="-3884.521" Z="6.193563" Radius="0.9" />
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="25487" Name="The Grimtotem are Coming">
+  <Objective Type="KillMob" MobId="39947" KillCount="7">
+    <Hotspots>
+      <Hotspot X="-4299.647" Y="-923.9764" Z="80.87127" />
+      <Hotspot X="-4269.388" Y="-950.2452" Z="75.8456" />
+      <Hotspot X="-4244.194" Y="-982.2131" Z="75.1953" />
+      <Hotspot X="-4218.276" Y="-1012.544" Z="79.79317" />
+      <Hotspot X="-4184.919" Y="-1034.816" Z="85.88068" />
+      <Hotspot X="-4146.434" Y="-1022.845" Z="86.13303" />
+      <Hotspot X="-4161.092" Y="-987.5634" Z="73.78672" />
+      <Hotspot X="-4185.203" Y="-961.8823" Z="53.765" />
+      <Hotspot X="-4218.168" Y="-956.6956" Z="30.14188" />
+      <Hotspot X="-4242.122" Y="-929.1366" Z="11.88087" />
+    </Hotspots>
+  </Objective>
+</Quest>
+
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<If Condition="Me.IsAlliance" >
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 || Mount.GroundMounts.Count() &lt;= 0">
+  <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
+</If>
+<If Condition="Me.ZoneId != 400">
+  <If Condition="Me.ZoneId != 1637">
+    <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+  <Else>
+    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" DestName="Westreach Summit" WaitTime="1000" />
+    <RunTo X="-4304.826" Y="-924.9381" Z="81.07814" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.Level &gt;= 400">
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.ZoneId != 400">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: THOUSAND NEEDLES\n
+  and start bot." />
+</If>
+<CustomBehavior File="Message" Text="Compiling Thousand Needles Quests (39-40)" LogColor="Aquamarine" />
+<!--# # # Level 40 # # # -->
+<If Condition="!HasQuest(25999) &amp;&amp; !IsQuestCompleted(25999)" >
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+</If>
+<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="False" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<If Condition="Me.Race == WoWRace.BloodElf">
+  <CustomBehavior File="UserSettings" MountName="34795" />
+<ElseIf Condition="Me.Race == WoWRace.Orc">
+  <CustomBehavior File="UserSettings" MountName="64658" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Tauren">
+  <CustomBehavior File="UserSettings" MountName="18990" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Troll" >
+  <CustomBehavior File="UserSettings" MountName="23243" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Undead" >
+  <CustomBehavior File="UserSettings" MountName="17462" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Goblin" >
+  <CustomBehavior File="UserSettings" MountName="87090" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
+  <CustomBehavior File="UserSettings" MountName="127290" />
+  </ElseIf>
+<Else>
+  </Else>
+</If>
+<If Condition="Me.Class == WoWClass.Paladin">
+  <If Condition="Me.Race == WoWRace.Tauren">
+    <CustomBehavior File="UserSettings" MountName="69820" />
+  <Else>
+    <CustomBehavior File="UserSettings" MountName="34769" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.Class == WoWClass.Warlock">
+  <CustomBehavior File="UserSettings" MountName="5784" />
+</If>
+<PickUp QuestName="The Grimtotem are Coming" QuestId="25487" GiverName="Kanati Greycloud" GiverId="39895" X="-4295.639" Y="-923.2587" Z="80.31674" />
+<If Condition="HasQuest(25487) &amp;&amp; !IsQuestCompleted(25487)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+    <SetGrindArea>
+    <GrindArea>
+    <Factions>2246</Factions>
+    <Hotspots>
+      <Hotspot X="-4299.647" Y="-923.9764" Z="80.87127" />
+      <Hotspot X="-4269.388" Y="-950.2452" Z="75.8456" />
+      <Hotspot X="-4244.194" Y="-982.2131" Z="75.1953" />
+      <Hotspot X="-4218.276" Y="-1012.544" Z="79.79317" />
+      <Hotspot X="-4184.919" Y="-1034.816" Z="85.88068" />
+      <Hotspot X="-4146.434" Y="-1022.845" Z="86.13303" />
+      <Hotspot X="-4161.092" Y="-987.5634" Z="73.78672" />
+      <Hotspot X="-4185.203" Y="-961.8823" Z="53.765" />
+      <Hotspot X="-4218.168" Y="-956.6956" Z="30.14188" />
+      <Hotspot X="-4242.122" Y="-929.1366" Z="11.88087" />
+    </Hotspots>
+    </GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(25487)" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="The Grimtotem are Coming" QuestId="25487" TurnInName="Motega Firemane" TurnInId="39963" X="-4216.221" Y="-897.434" Z="0.2626123" />
+<PickUp QuestName="Two If By Boat" QuestId="25489" GiverName="Motega Firemane" GiverId="39963" X="-4216.221" Y="-897.434" Z="0.2626123" />
+<If Condition="HasQuest(25489)" >
+  <CustomBehavior File="WaitTimer" WaitTime="130000" />
+  <!--Fizzle & Pozzik's Speedbarge-->
+  <RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40769" MobState="Alive" X="-6075.514" Y="-3917.755" Z="21.54748" />
+</If>
+<TurnIn QuestName="Two If By Boat" QuestId="25489" TurnInName="Pozzik" TurnInId="40028" X="-6157.863" Y="-3774.054" Z="33.50671" />
+<PickUp QuestName="Do Me a Favor?" QuestId="25505" GiverName="Pozzik" GiverId="40028" X="-6157.863" Y="-3774.054" Z="33.50671" />
+<TurnIn QuestName="Do Me a Favor?" QuestId="25505" TurnInName="Razzeric" TurnInId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<If Condition="Me.Level &gt;= 40">
+  <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+  <CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+    <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+    <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+    <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+  </If>
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+    <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+  </If>
+  <CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+  <CustomBehavior File="ForcedDismount" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <!--Brill-->
+  <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <!--The Bulwark-->
+  <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <!--Andorhal-->
+  <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <!--The Menders' Stead-->
+  <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <!--Thondroril River-->
+  <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+</If>
+<PickUp QuestName="Down in the Deeps" QuestId="25516" GiverName="Razzeric" GiverId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<PickUp QuestName="Bar Fight!" QuestId="25518" GiverName="Zamek" GiverId="40556" X="-6128.486" Y="-3869.906" Z="6.166988" />
+<If Condition="HasQuest(25518) &amp;&amp; !IsQuestCompleted(25518)" >
+  <RunTo X="-6161.175" Y="-3805.555" Z="6.217677" />
+  <While Condition="!HasItem(54747)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40832" InteractByGossipOptions="1" BuyItemId="54747" BuyItemCount="1" WaitTime="1000" CollectionDistance="100" X="-6160.766" Y="-3797.825" Z="6.18807" />
+  </While>
+  <While Condition="HasQuest(25518) &amp;&amp; !IsQuestCompleted(25518)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25518" MobId="40483" InteractByUsingItemId="54747" IgnoreCombat="True" WaitTime="1000" CollectionDistance="1000" X="-6160.766" Y="-3797.825" Z="6.18807" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  </While>
+</If>
+<TurnIn QuestName="Bar Fight!" QuestId="25518" TurnInName="Zamek" TurnInId="40556" X="-6128.486" Y="-3869.906" Z="6.166988" />
+<CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+<CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+<RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+  <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+  <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+  <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+</If>
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+</If>
+<CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<!--Brill-->
+<RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+<!--The Bulwark-->
+<RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+<!--Andorhal-->
+<RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+<!--The Menders' Stead-->
+<RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+<!--Thondroril River-->
+<RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+
+
+
+
+
+
+<!-- muitos erros-->
+<If Condition="!HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526)" >
+  <RunTo X="-6167.455" Y="-3934.535" Z="-2.194328" />
+  <CustomBehavior File="MyCTM" X="-6167.455" Y="-3934.535" Z="-65.9713" />
+  <While Condition="!HasQuest(25526)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="202975" KeepTargetSelected="True" MobType="GameObject" Nav="CTM" WaitTime="1000" CollectionDistance="100" X="-6160.766" Y="-3797.825" Z="6.18807" />
+	  <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
+  </While>
+<!--
+<PickUp QuestName="In the Outhouse" QuestId="25526" GiverName="Submerged Outhouse" GiverId="202975" GiverType="GameObject" X="-921.4776" Y="-3723.168" Z="9.23311"/>
+-->
+  <CustomBehavior File="AscendInWater" />
+</If>
+<If Condition="HasQuest(25516) &amp;&amp; !IsQuestCompleted(25516)" >
+  <If Condition="HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526)" >
+    <CustomBehavior File="UserSettings" LootMobs="True" />
+  </If>
+  <CustomBehavior File="CollectThings" QuestId="25516" ObjectId1="202957" ObjectId2="202958" ObjectId3="202959" ObjectId4="202960" ObjectId5="202961" CollectUntil="QuestComplete" HuntingGroundRadius="200">
+      <Hotspot X="-6181.03" Y="-3954.418" Z="-43.98534" />
+      <Hotspot X="-6203.04" Y="-3988.46" Z="-44.54507" />
+      <Hotspot X="-6232.574" Y="-4015.545" Z="-47.27394" />
+      <Hotspot X="-6223.242" Y="-3976.074" Z="-47.5787" />
+      <Hotspot X="-6217.928" Y="-3936.338" Z="-49.30799" />
+      <Hotspot X="-6232.894" Y="-3899.229" Z="-50.39641" />
+      <Hotspot X="-6227.544" Y="-3859.163" Z="-51.80899" />
+      <Hotspot X="-6187.674" Y="-3855.237" Z="-51.36177" />
+      <Hotspot X="-6167.805" Y="-3890.108" Z="-48.96612" />
+  </CustomBehavior>
+  <If Condition="HasQuest(25526) &amp;&amp; IsQuestCompleted(25526)" >
+    <CustomBehavior File="UserSettings" LootMobs="Original" />
+  </If>
+  <CustomBehavior File="AscendInWater" />
+</If>
+<If Condition="HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526) &amp;&amp; !HasItem(54821)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <CustomBehavior File="CollectThings" QuestId="25526" MobId="40449" MobState="Alive" CollectItemCount="1" CollectItemId="54821" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
+      <Hotspot X="-6181.03" Y="-3954.418" Z="-43.98534" />
+      <Hotspot X="-6203.04" Y="-3988.46" Z="-44.54507" />
+      <Hotspot X="-6232.574" Y="-4015.545" Z="-47.27394" />
+      <Hotspot X="-6223.242" Y="-3976.074" Z="-47.5787" />
+      <Hotspot X="-6217.928" Y="-3936.338" Z="-49.30799" />
+      <Hotspot X="-6232.894" Y="-3899.229" Z="-50.39641" />
+      <Hotspot X="-6227.544" Y="-3859.163" Z="-51.80899" />
+      <Hotspot X="-6187.674" Y="-3855.237" Z="-51.36177" />
+      <Hotspot X="-6167.805" Y="-3890.108" Z="-48.96612" />
+  </CustomBehavior>
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="AscendInWater" />
+</If>
+<If Condition="HasQuest(25526)" >
+  <RunTo X="-6167.455" Y="-3934.535" Z="-2.194328" />
+  <CustomBehavior File="MyCTM" X="-6167.455" Y="-3934.535" Z="-65.9713" />
+  <While Condition="!IsQuestCompleted(25526)" >
+    <CustomBehavior File="MyCTM" X="-6168.149" Y="-3933.552" Z="-69.48212" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(54821)" WaitTime="1000" />
+  </While>
+  <While Condition="HasQuest(25526)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="202975" KeepTargetSelected="True" MobType="GameObject" Nav="CTM" WaitTime="1000" CollectionDistance="100" X="-6160.766" Y="-3797.825" Z="6.18807" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteButton" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  </While>
+<!--
+<TurnIn QuestName="In the Outhouse" QuestId="25526" TurnInName="Submerged Outhouse" TurnInId="202975" GiverType="GameObject" X="-921.4776" Y="-3723.168" Z="9.23311"/>
+-->
+  <CustomBehavior File="AscendInWater" />
+</If>
+<TurnIn QuestName="Down in the Deeps" QuestId="25516" TurnInName="Razzeric" TurnInId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<If Condition="Me.Level &gt;= 40">
+  <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+  <CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+    <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+    <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+    <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+  </If>
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+    <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+  </If>
+  <CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+  <CustomBehavior File="ForcedDismount" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <!--Brill-->
+  <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <!--The Bulwark-->
+  <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <!--Andorhal-->
+  <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <!--The Menders' Stead-->
+  <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <!--Thondroril River-->
+  <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+</If>
+<PickUp QuestName="Pirate Accuracy Increasing" QuestId="25533" GiverName="Razzeric" GiverId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<If Condition="HasQuest(25533) &amp;&amp; !IsQuestCompleted(25533)" >
+  <While Condition="!IsQuestCompleted(25533)" >
+    <If Condition="!Me.IsOnTransport" >
+      <RunTo X="-6195.506" Y="-3898.304" Z="4.934059" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40727" InteractByGossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-6196.753" Y="-3897.155" Z="4.934963" />
+    </If>
+    <CustomBehavior File="Cava\25533-ThousandNeedles-PirateAccuracyIncreasing" />
+  </While>
+</If>
+<If Condition="HasQuest(25533)" >
+  <While Condition="HasQuest(25533)" >
+    <CustomBehavior File="CompleteLogQuest" QuestId="25533" /><!--<PickUp QuestName="Circle the Wagons... er, Boats" QuestId="25543"/>-->
+  </While>
+</If>
+<If Condition="!HasQuest(25543) &amp;&amp; !IsQuestCompleted(25543)" >
+  <PickUp QuestName="Circle the Wagons... er, Boats" QuestId="25543" GiverName="Razzeric" GiverId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+</If>
+<If Condition="HasQuest(25543) &amp;&amp; !IsQuestCompleted(25543)" >
+  <While Condition="!IsQuestCompleted(25543)" >
+    <If Condition="!Me.IsOnTransport" >
+      <RunTo X="-6195.506" Y="-3898.304" Z="4.934059" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40727" InteractByGossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-6196.753" Y="-3897.155" Z="4.934963" />
+    </If>
+    <CustomBehavior File="Cava\25543-ThousandNeedles-CircletheWagons" />
+  </While>
+  <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteButton" />
+</If>
+<If Condition="HasQuest(25543) &amp;&amp; IsQuestCompleted(25543)" >
+  <While Condition="Me.IsOnTransport" >
+    <CustomBehavior File="RunMacro" Macro="/click OverrideActionBarLeaveFrameLeaveButton" />
+  </While>
+</If>
+<If Condition="HasQuest(25543)">
+  <CustomBehavior File="WaitTimer" WaitTime="15000" />
+  <TurnIn QuestName="Circle the Wagons... er, Boats" QuestId="25543" TurnInName="Razzeric" TurnInId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+</If>
+<PickUp QuestName="Quiet the Cannons" QuestId="25586" GiverName="Razzeric" GiverId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<PickUp QuestName="Negotiations" QuestId="25745" GiverName="Pozzik" GiverId="40028" X="-6157.863" Y="-3774.054" Z="33.50668" />
+<PickUp QuestName="Where's Synge?" QuestId="25596" GiverName="Zamek" GiverId="40556" X="-6128.486" Y="-3869.906" Z="6.167416" />
+<PickUp QuestName="A Little Payback" QuestId="25589" GiverName="Rugfizzle" GiverId="40595" X="-6126.88" Y="-3875.53" Z="6.169012" />
+<PickUp QuestName="Special Delivery for Brivelthwerp" QuestId="28042" GiverName="Griznak" GiverId="40727" X="-6125.73" Y="-3876.78" Z="6.170039" />
+<TurnIn QuestName="Special Delivery for Brivelthwerp" QuestId="28042" TurnInName="Brivelthwerp" TurnInId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
+<If Condition="Me.Level &gt;= 40">
+  <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+  <CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+    <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+    <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+    <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+  </If>
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+    <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+  </If>
+  <CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+  <CustomBehavior File="ForcedDismount" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <!--Brill-->
+  <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <!--The Bulwark-->
+  <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <!--Andorhal-->
+  <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <!--The Menders' Stead-->
+  <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <!--Thondroril River-->
+  <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+ <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+</If>
+<PickUp QuestName="The Greatest Flavor in the World!" QuestId="28045" GiverName="Brivelthwerp" GiverId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
+<PickUp QuestName="We All Scream for Ice Cream... and then Die!" QuestId="28051" GiverName="Brivelthwerp" GiverId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
+<If Condition="HasQuest(28045) &amp;&amp; !IsQuestCompleted(28045)" >
+  <CustomBehavior File="UserSettings" LootMobs="True" />
+</If>
+<If Condition="HasQuest(28051) &amp;&amp; !IsQuestCompleted(28051)" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28051" MobId="47446" NumOfTimes="1000" Nav="CTM" CollectionDistance="1000" >
+    <HuntingGrounds WaypointVisitStrategy="Random" >
+      <Hotspot X="-6472.009" Y="-3551.709" Z="-40.092269" />
+      <Hotspot X="-6433.826" Y="-3565.657" Z="-40.057682" />
+      <Hotspot X="-6394.425" Y="-3556.613" Z="-40.057717" />
+      <Hotspot X="-6368.014" Y="-3526.035" Z="-40.057701" />
+      <Hotspot X="-6359.88" Y="-3486.548" Z="-40.061823" />
+      <Hotspot X="-6374.127" Y="-3449.083" Z="-40.057672" />
+      <Hotspot X="-6411.067" Y="-3432.604" Z="-40.057724" />
+      <Hotspot X="-6451.21" Y="-3434.495" Z="-40.057812" />
+      <Hotspot X="-6491.59" Y="-3438.804" Z="-40.057911" />
+      <Hotspot X="-6532.066" Y="-3443" Z="-40.057819" />
+      <Hotspot X="-6568.23" Y="-3460.956" Z="-40.057704" />
+      <Hotspot X="-6578.877" Y="-3499.781" Z="-40.057672" />
+      <Hotspot X="-6567.345" Y="-3538.741" Z="-40.057832" />
+      <Hotspot X="-6536.336" Y="-3564.768" Z="-40.057683" />
+      <Hotspot X="-6496.221" Y="-3569.227" Z="-40.057672" />
+    </HuntingGrounds>
+  </CustomBehavior>
+  <CustomBehavior File="AscendInWater" />
+</If>
+<If Condition="HasQuest(28045) &amp;&amp; !IsQuestCompleted(28045)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <CustomBehavior File="CollectThings" QuestId="28045" MobId="47388" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-6472.009" Y="-3551.709" Z="-40.092269" />
+      <Hotspot X="-6433.826" Y="-3565.657" Z="-40.057682" />
+      <Hotspot X="-6394.425" Y="-3556.613" Z="-40.057717" />
+      <Hotspot X="-6368.014" Y="-3526.035" Z="-40.057701" />
+      <Hotspot X="-6359.88" Y="-3486.548" Z="-40.061823" />
+      <Hotspot X="-6374.127" Y="-3449.083" Z="-40.057672" />
+      <Hotspot X="-6411.067" Y="-3432.604" Z="-40.057724" />
+      <Hotspot X="-6451.21" Y="-3434.495" Z="-40.057812" />
+      <Hotspot X="-6491.59" Y="-3438.804" Z="-40.057911" />
+      <Hotspot X="-6532.066" Y="-3443" Z="-40.057819" />
+      <Hotspot X="-6568.23" Y="-3460.956" Z="-40.057704" />
+      <Hotspot X="-6578.877" Y="-3499.781" Z="-40.057672" />
+      <Hotspot X="-6567.345" Y="-3538.741" Z="-40.057832" />
+      <Hotspot X="-6536.336" Y="-3564.768" Z="-40.057683" />
+      <Hotspot X="-6496.221" Y="-3569.227" Z="-40.057672" />
+  </CustomBehavior>
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="AscendInWater" />
+</If>
+<If Condition="HasQuest(28045)" >
+  <CustomBehavior File="UserSettings" LootMobs="Original" />
+</If>
+<TurnIn QuestName="The Greatest Flavor in the World!" QuestId="28045" TurnInName="Brivelthwerp" TurnInId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
+<TurnIn QuestName="We All Scream for Ice Cream... and then Die!" QuestId="28051" TurnInName="Brivelthwerp" TurnInId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
+<TurnIn QuestName="Where's Synge?" QuestId="25596" TurnInName="Synge" TurnInId="40888" X="-6293.77" Y="-4467.38" Z="87.87717" />
+<If Condition="Me.Level &gt;= 40">
+  <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+  <CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+    <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+    <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+    <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+  </If>
+  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+    <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+  </If>
+  <CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+  <CustomBehavior File="ForcedDismount" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <!--Brill-->
+  <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <!--The Bulwark-->
+  <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <!--Andorhal-->
+  <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <!--The Menders' Stead-->
+  <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <!--Thondroril River-->
+  <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+</If>
+<PickUp QuestName="Sunken Treasure" QuestId="25610" GiverName="Synge" GiverId="40888" X="-6293.77" Y="-4467.38" Z="87.87717" />
+<If Condition="(HasQuest(25586) &amp;&amp; !IsQuestCompleted(25586)) || (HasQuest(25589) &amp;&amp; !IsQuestCompleted(25589))" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<If Condition="HasQuest(25586) &amp;&amp; !IsQuestCompleted(25586)" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25586" MobId="40869" IgnoreCombat="True" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
+    <HuntingGrounds WaypointVisitStrategy="Random" >
+      <Hotspot X="-6068.194" Y="-4591.535" Z="93.59095" />
+      <Hotspot X="-6082.751" Y="-4553.663" Z="93.57162" />
+      <Hotspot X="-6123.369" Y="-4550.897" Z="93.57559" />
+      <Hotspot X="-6160.642" Y="-4535.939" Z="93.3441" />
+      <Hotspot X="-6187.015" Y="-4506.257" Z="87.27423" />
+      <Hotspot X="-6203.701" Y="-4469.259" Z="87.31763" />
+      <Hotspot X="-6237.209" Y="-4447.433" Z="88.5743" />
+      <Hotspot X="-6274.282" Y="-4431.604" Z="89.08564" />
+      <Hotspot X="-6314.579" Y="-4426.429" Z="89.04797" />
+      <Hotspot X="-6352.056" Y="-4409.565" Z="89.51527" />
+      <Hotspot X="-6391.728" Y="-4400.006" Z="88.14552" />
+      <Hotspot X="-6429.945" Y="-4384.53" Z="88.37161" />
+      <Hotspot X="-6448.236" Y="-4348.274" Z="88.51101" />
+      <Hotspot X="-6475.927" Y="-4318.183" Z="87.73158" />
+    </HuntingGrounds>
+  </CustomBehavior>
+</If>
+<If Condition="HasQuest(25589) &amp;&amp; !IsQuestCompleted(25589)" >
+  <CustomBehavior File="CollectThings" QuestId="25589" MobId1="40432" MobId2="40092" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+    <HuntingGrounds WaypointVisitStrategy="Random" >
+      <Hotspot X="-6457.865" Y="-4377.321" Z="86.81317" />
+      <Hotspot X="-6470.068" Y="-4338.041" Z="87.63423" />
+      <Hotspot X="-6503.804" Y="-4316.51" Z="87.60121" />
+      <Hotspot X="-6542.643" Y="-4330.007" Z="86.80543" />
+      <Hotspot X="-6545.959" Y="-4370.102" Z="87.03041" />
+      <Hotspot X="-6516.24" Y="-4398.274" Z="86.28764" />
+      <Hotspot X="-6476.524" Y="-4404.316" Z="86.5106" />
+      <Hotspot X="-6436.583" Y="-4398.498" Z="87.07795" />
+      <Hotspot X="-6403.776" Y="-4421.907" Z="88.00275" />
+      <Hotspot X="-6366.606" Y="-4437.843" Z="87.74466" />
+      <Hotspot X="-6326.384" Y="-4436.846" Z="88.05272" />
+      <Hotspot X="-6286.104" Y="-4440.662" Z="88.15498" />
+      <Hotspot X="-6252.272" Y="-4462.725" Z="87.87257" />
+      <Hotspot X="-6232.098" Y="-4497.553" Z="88.24773" />
+      <Hotspot X="-6193.926" Y="-4512.354" Z="88.21149" />
+      <Hotspot X="-6170.78" Y="-4545.514" Z="95.14524" />
+      <Hotspot X="-6137.4" Y="-4568.271" Z="93.57553" />
+      <Hotspot X="-6096.916" Y="-4562.44" Z="93.15392" />
+      <Hotspot X="-6135.847" Y="-4549.045" Z="93.57561" />
+      <Hotspot X="-6174.495" Y="-4563.431" Z="93.53209" />
+      <Hotspot X="-6210.666" Y="-4544.879" Z="91.1865" />
+      <Hotspot X="-6238.805" Y="-4515.681" Z="87.83562" />
+      <Hotspot X="-6254.092" Y="-4477.907" Z="87.14359" />
+      <Hotspot X="-6272.641" Y="-4441.882" Z="88.45493" />
+      <Hotspot X="-6310.232" Y="-4427.848" Z="88.99406" />
+      <Hotspot X="-6350.583" Y="-4430.66" Z="88.37074" />
+      <Hotspot X="-6388.899" Y="-4415.72" Z="88.51127" />
+    </HuntingGrounds>
+  </CustomBehavior>
+</If>
+<If Condition="(HasQuest(25586) &amp;&amp; IsQuestCompleted(25586)) || (HasQuest(25589) &amp;&amp; IsQuestCompleted(25589))" >
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="A Little Payback" QuestId="25589" TurnInName="Rugfizzle" TurnInId="40595" X="-6126.88" Y="-3875.53" Z="6.169012" />
+<TurnIn QuestName="Quiet the Cannons" QuestId="25586" TurnInName="Razzeric" TurnInId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />
+<!--# # # Level 41 # # # -->
+<CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="-6075.893" Y="-3914.172" Z="21.61365" />
+<CustomBehavior File="TaxiRide" MobId="40769" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+<RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
+  <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+  <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+  <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+</If>
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem with your char's Riding skill. Please Learn: JOURNEYMAN RIDING SKILL. Then start bot." />
+</If>
+<CustomBehavior File="Message" Text="Moving to EASTERN PLAGUELANDS, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+<CustomBehavior File="ForcedDismount" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<!--Brill-->
+<RunTo X="2273.323" Y="371.9782" Z="35.6977" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+<!--The Bulwark-->
+<RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+<!--Andorhal-->
+<RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+<!--The Menders' Stead-->
+<RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+<!--Thondroril River-->
+<RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+</QuestOrder>
+</HBProfile>

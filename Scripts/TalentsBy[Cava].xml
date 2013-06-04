@@ -1,0 +1,530 @@
+<HBProfile creator="Cava">
+<Name>TalentsBy[Cava] $Rev: 345 $:</Name>
+
+<MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+  
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<CustomBehavior File="UserSettings" LootMobs="Original" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
+<CustomBehavior File="Message" Text="Compiling Talents By Cava" LogColor="Aquamarine" />
+
+
+<!--Level 10-->
+<If Condition="(Me.Level &gt;= 10 )">
+  <!--Check if the character have any spec-->
+  <If Condition="(Me.Class == WoWClass.Hunter)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.HunterBeastMastery &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.HunterMarksmanship &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.HunterSurvival">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Beast Mastery Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Beast Mastery=1  Marksmanship=2  Survival=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Priest)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.PriestDiscipline &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PriestHoly &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PriestShadow">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Shadow Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Discipline=1  Holy=2  Shadow=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Mage)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.MageArcane &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MageFire &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MageFrost">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Fire Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Arcane=1  Fire=2  Frost=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warrior)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.WarriorArms &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarriorFury &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarriorProtection">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Arms Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Arms=1  Fury=2  Protection=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Druid)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.DruidBalance &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidFeral &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidGuardian &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidRestoration">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Feral Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Balance=1  Feral=2  Guardian=3  Restoration=4-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Shaman)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.ShamanElemental &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.ShamanEnhancement &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.ShamanRestoration">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Enhancement Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Elemental=1  Enhancement=2  Restoration=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Monk)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.MonkBrewmaster &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MonkMistweaver &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MonkWindwalker">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Windwalker Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Brewmaster=1  Mistweaver=2  Windwalker=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warlock)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.WarlockAffliction &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarlockDemonology &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarlockDestruction">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Demonology Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Affliction=1  Demonology=2  Destruction=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Rogue)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.RogueAssassination &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.RogueCombat &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.RogueSubtlety">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Combat Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Assassination=1  Combat=2  Subtlety=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Paladin)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.PaladinHoly &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PaladinProtection &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PaladinRetribution">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Retribution Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Holy=1  Protection=2  Retribution=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+  <If Condition="(Me.Class == WoWClass.DeathKnight)">
+    <While Condition="StyxWoW.Me.Specialization != WoWSpec.DeathKnightBlood &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DeathKnightFrost &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DeathKnightUnholy">
+      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="Message" Text="Changing to Blood Specialization" LogColor="Aquamarine" />
+      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <!--Blood=1  Frost=2  Unholy=3-->
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
+	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+  </If>
+</If>
+
+<!--Level 15-->
+<If Condition="(Me.Level &gt;= 15 )">
+  <If Condition="(Me.Class == WoWClass.Hunter)">
+    <!--Posthaste=(1)  Narrow Escape=(2)  Crouching Tiger, Hidden Chimera=(3)-->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Priest)">
+    <!--Void Tendrils(1)  Psyfiend=(2)  Dominate Mind=(3)-->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(1);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Mage)">
+    <!--Presence of Mind=(1)  Scorch=(2)  Ice Floes=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MageFire">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warrior)">
+    <!--Juggernaut=(1)  Double Time=(2)  Warbringer=(3)-->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Druid)">
+    <!--Feline Swiftness=(1)  Displacer Beast=(2)  Wild Charge=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.DruidFeral">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Shaman)">
+    <!--Nature's Guardian=(1)  Stone Bulwark Totem=(2)  Astral Shift=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.ShamanElemental">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Monk)">
+    <!--Celerity=(1)  Tiger's Lust=(2)  Momentum=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MonkMistweaver">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warlock)">
+    <!--Dark Regeneration=(1)  Soul Leech=(2)  Harvest Life=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.WarlockAffliction">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Rogue)">
+    <!--Nightstalker=(1)  Subterfuge=(2)  Shadow Focus=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.RogueSubtlety">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(1);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Paladin)">
+    <!--Speed of Light=(1)  Long Arm of the Law=(2)  Pursuit of Justice=(3)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinHoly">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(2);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+</If>
+
+<!--Level 30-->
+<If Condition="(Me.Level &gt;= 30 )">
+  <If Condition="(Me.Class == WoWClass.Hunter)">
+    <!--Silencing Shot=(4)  Wyvern Sting=(5)  Binding Shot=(6) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.HunterBeastMastery">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(6);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Priest)">
+    <!--Body and Soul=(4)  Angelic Feather=(5)  PhantasmVoid=(6)-->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(4);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Mage)">
+    <!--Temporal Shield=(4)  Blazing Speed=(5)  Ice Barrier=(6) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(6);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warrior)">
+    <!--Enraged Regeneration=(4)  Second Wind=(5)  Impending Victory=(6) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(6);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Druid)">
+    <!--Nature's Swiftness=(4)  Renewal=(5)  Cenarion Ward=(6) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.DruidRestoration">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(6);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Shaman)">
+    <!--Frozen Power=(4)  Earthgrab Totem=(5)  Windwalk Totem=(6) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(4);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Monk)">
+    <!--Chi Wave=(4)  Zen Sphere=(5)  Chi Burst=(6) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MonkMistweaver">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(4);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warlock)">
+    <!--Howl of Terror=(4)  Mortal Coil=(5)  Shadowfury=(6) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.WarlockDestruction">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(6);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(4);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Rogue)">
+    <!--Deadly Throw=(4)  Nerve Strike=(5)  Combat Readiness=(6) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Paladin)">
+    <!--Fist of Justice=(4)  Repentance=(5)  Burden of Guilt=(6) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinProtection">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(4);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+</If>
+
+<!--Level 45-->
+<If Condition="(Me.Level &gt;= 45 )">
+  <If Condition="(Me.Class == WoWClass.Hunter)">
+    <!--Exhilaration=(7) Aspect of the Iron Hawk=(8) Spirit Bond=(9) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(7);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Priest)">
+    <!--From Darkness, Comes Light=(7) Mindbender=(8) Power Word: Solace=(9)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.PriestShadow">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(7);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Mage)">
+    <!--Ring of Frost=(7) Ice Ward=(8) Frostjaw=(9) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warrior)">
+    <!--Staggering Shout=(7) Piercing Howl=(8) Disrupting Shout=(9) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(7);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Druid)">
+    <!--Faerie Swarm=(7) Mass Entanglement=(8) Typhoon=(9) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.DruidGuardiann">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Shaman)">
+    <!--Call of the Elements=(7) Totemic Restoration=(8) Totemic Projection=(9) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Monk)">
+    <!--Power Strikes=(7) Ascension=(8) Chi Brew=(9) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MonkMistweaver">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warlock)">
+    <!--Soul Link=(7) Sacrificial Pact=(8) Dark Bargain=(9) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.WarlockDemonology">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Rogue)">
+    <!--Cheat Death=(7) Leeching Poison=(8) Elusiveness=(9) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Paladin)">
+    <!--Selfless Healer=(7) Eternal Flame=(8) Sacred Shield=(9) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinProtection">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+    <ElseIf Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinHoly">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(8);" NumOfTimes="1" WaitTime="1000" />
+      </ElseIf>
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(7);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+</If>
+
+<!--Level 56 Death Knight-->
+<If Condition="(Me.Level &gt;= 56 &amp;&amp; Me.Class == WoWClass.DeathKnight)">
+  <!--Roiling Blood=(1)  Plague Leech=(2)  Unholy Blight=(3)-->
+  <CustomBehavior File="RunMacro" Macro="/run LearnTalent(3);" NumOfTimes="1" WaitTime="1000" />
+</If>
+
+<!--Level 57 Death Knight-->
+<If Condition="(Me.Level &gt;= 57 &amp;&amp; Me.Class == WoWClass.DeathKnight)">
+  <!--Lichborne=(4)  Anti-Magic Zone=(5)  Purgatory=(6)-->
+  <CustomBehavior File="RunMacro" Macro="/run LearnTalent(5);" NumOfTimes="1" WaitTime="1000" />
+</If>
+
+<!--Level 58 Death Knight-->
+<If Condition="(Me.Level &gt;= 58 &amp;&amp; Me.Class == WoWClass.DeathKnight)">
+  <!--Death's Advance=(7)  Chilblains=(8)  Asphyxiate=(9)-->
+  <CustomBehavior File="RunMacro" Macro="/run LearnTalent(9);" NumOfTimes="1" WaitTime="1000" />
+</If>
+
+<!--Level 60-->
+<If Condition="(Me.Level &gt;= 60 )">
+  <If Condition="(Me.Class == WoWClass.DeathKnight)">
+    <!--Death Pact=(10)  Death Siphon=(11)  Conversion=(12)-->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.DeathKnightBlood">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+    <ElseIf Condition="StyxWoW.Me.Specialization == WoWSpec.DeathKnightFrost">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+      </ElseIf>
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+		</If>	
+  </If>
+  <If Condition="(Me.Class == WoWClass.Priest)">
+    <!--Desperate Prayer=(10)  Spectral Guise=(11)  Angelic Bulwark=(12)-->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Mage)">
+    <!--Greater Invisibility=(10)  Cauterize=(11)  Cold Snap=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MageFrost">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warrior)">
+    <!--Bladestorm=(10)  Shockwave=(11)  Dragon Roar=(12) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Druid)">
+    <!--Soul of the Forest=(10)  Incarnation=(11)  Force of Nature=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.DruidRestoration">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+    <ElseIf Condition="StyxWoW.Me.Specialization == WoWSpec.DruidGuardian">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+      </ElseIf>
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Shaman)">
+    <!--Elemental Mastery=(10)  Ancestral Swiftness=(11)  Echo of the Elements=(12) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Hunter)">
+    <!--Fervor=(10)  Dire Beast=(11)  Thrill of the Hunt=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.HunterBeastMastery">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+    <ElseIf Condition="StyxWoW.Me.Specialization == WoWSpec.HunterMarksmanship">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+      </ElseIf>
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Monk)">
+    <!--Deadly Reach=(10)  Charging Ox Wave=(11)  Leg Sweep=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.MonkMistweaver">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Warlock)">
+    <!--Blood Fear=(10)  Burning Rush=(11)  Unbound Will=(12) -->
+    <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+  </If>
+  <If Condition="(Me.Class == WoWClass.Rogue)">
+    <!--Preparation=(10)  Shadowstep=(11)  Burst of Speed=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.RogueSubtlety">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+  <If Condition="(Me.Class == WoWClass.Paladin)">
+    <!--Hand of Purity=(10)  Unbreakable Spirit=(11)  Clemency=(12) -->
+    <If Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinProtection">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(10);" NumOfTimes="1" WaitTime="1000" />
+    <ElseIf Condition="StyxWoW.Me.Specialization == WoWSpec.PaladinHoly">
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(12);" NumOfTimes="1" WaitTime="1000" />
+      </ElseIf>
+    <Else>
+      <CustomBehavior File="RunMacro" Macro="/run LearnTalent(11);" NumOfTimes="1" WaitTime="1000" />
+      </Else>
+    </If>
+  </If>
+</If>
+
+<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</QuestOrder>
+</HBProfile>
