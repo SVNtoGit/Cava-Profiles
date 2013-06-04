@@ -1,0 +1,29 @@
+<HBProfile>
+<Name>Cava Profiles $Rev$:</Name>
+<QuestOrder>
+<If Condition="(Me.Level &gt;= 0 )"><!--se nao ler falta qbs-->
+
+  <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;CavaPlugin&quot;) == null)">
+    <CustomBehavior File="UserDialog" AllowBotStop="true" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
+  Text="There is a problem with Cava Profiles Instalation\n
+  Please check you have Cava Plugin Instaled and Enabled " />
+  <CustomBehavior File="Halt" />
+  </If>
+
+  <While Condition="Me.Level &gt;= 0">
+    <CustomBehavior File="DisablePlugin" Names="CavaPlugin" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+    <CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+    <CustomBehavior File="Cava\CavaLoader" PBL="0" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  </While>
+
+</If>
+
+<CustomBehavior File="UserDialog" AllowBotStop="true" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
+  Text="There is a problem with Cava Profiles Instalation\n
+  Please check you have Cava Plugin Instaled and Enabled " />
+
+</QuestOrder>
+</HBProfile>

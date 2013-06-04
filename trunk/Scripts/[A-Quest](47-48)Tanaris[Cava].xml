@@ -1,0 +1,196 @@
+<HBProfile creator="Cava" version="1">
+<Name>[A-Quest] (47-48) Tanaris [Cava] $Rev: 354 $:</Name>
+
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+  
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+  <Mailbox X="-7083.402" Y="-3851.429" Z="9.8118" />
+</Mailboxes>
+
+<Vendors>
+  <Vendor Name="Innkeeper Fizzgrimble" Entry="7733" Type="Food" X="-7069.17" Y="-3854.53" Z="9.852146" />
+  <Vendor Name="Fedli Caskcheer" Entry="40815" Type="Food" X="-9478.3" Y="-2962.1" Z="12.55444" />
+  <Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <Vendor Name="Brod Anvilbeard" Entry="40826" Type="Repair" X="-9478.37" Y="-2968.17" Z="12.55392" />
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="25420" Name="Ancient Obstacles">
+  <Objective Type="KillMob" MobId="38914" KillCount="6">
+    <Hotspots>
+      <Hotspot X="-9387.738" Y="-2913.34" Z="9.141903" />
+      <Hotspot X="-9374.67" Y="-2874.022" Z="10.24782" />
+      <Hotspot X="-9373.772" Y="-2833.263" Z="8.64647" />
+      <Hotspot X="-9396.103" Y="-2799.952" Z="14.15667" />
+      <Hotspot X="-9425.743" Y="-2772.036" Z="17.19053" />
+      <Hotspot X="-9465.4" Y="-2764.035" Z="15.0647" />
+      <Hotspot X="-9482.181" Y="-2800.369" Z="11.57897" />
+      <Hotspot X="-9451.219" Y="-2825.64" Z="9.087516" />
+      <Hotspot X="-9412.631" Y="-2838.074" Z="11.99021" />
+      <Hotspot X="-9402.466" Y="-2877.889" Z="9.971826" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25565" Name="Fragments of Language">
+  <Objective Type="CollectItem" ItemId="52061" CollectCount="5">
+    <CollectFrom>
+      <GameObject Name="Ancient Hieroglyph" Id="202420"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-9291.91" Y="-3009.016" Z="11.25423" />
+      <Hotspot X="-9293.335" Y="-3049.416" Z="10.35489" />
+      <Hotspot X="-9285.467" Y="-3088.781" Z="10.34008" />
+      <Hotspot X="-9247.643" Y="-3102.763" Z="18.24234" />
+      <Hotspot X="-9207.028" Y="-3099.959" Z="23.91122" />
+      <Hotspot X="-9217.92" Y="-3061.382" Z="20.6415" />
+      <Hotspot X="-9202.953" Y="-3022.974" Z="25.05265" />
+      <Hotspot X="-9202.93" Y="-2982.714" Z="23.27718" />
+      <Hotspot X="-9243.017" Y="-2976.065" Z="15.06919" />
+   </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25559" Name="Laying Claim">
+  <Objective Type="KillMob" MobId="38997" KillCount="10">
+    <Hotspots>
+      <Hotspot X="-9291.91" Y="-3009.016" Z="11.25423" />
+      <Hotspot X="-9293.335" Y="-3049.416" Z="10.35489" />
+      <Hotspot X="-9285.467" Y="-3088.781" Z="10.34008" />
+      <Hotspot X="-9247.643" Y="-3102.763" Z="18.24234" />
+      <Hotspot X="-9207.028" Y="-3099.959" Z="23.91122" />
+      <Hotspot X="-9217.92" Y="-3061.382" Z="20.6415" />
+      <Hotspot X="-9202.953" Y="-3022.974" Z="25.05265" />
+      <Hotspot X="-9202.93" Y="-2982.714" Z="23.27718" />
+      <Hotspot X="-9243.017" Y="-2976.065" Z="15.06919" />
+    </Hotspots>
+  </Objective>
+</Quest>
+
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<If Condition="Me.IsHorde">
+	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149">
+  <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
+</If>
+<If Condition="Me.ZoneId != 440">
+  <If Condition="Me.ZoneId != 1519">
+    <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+  <Else>
+    <RunTo X="-3861.055" Y="-654.267" Z="5.351726" />
+    <CustomBehavior File="UseTransport" TransportId="176231"
+      WaitAtX="-3861.055" WaitAtY="-654.267" WaitAtZ="5.351726"
+      GetOffX="-4000.711" GetOffY="-4722.725" GetOffZ="4.327367"
+      StandOnX="-3867.26" StandOnY="-637.3785" StandOnZ="6.130961"
+      TransportStartX="-3872.35" TransportStartY="-639.944" TransportStartZ="0.04933518"
+      TransportEndX="-4016.39" TransportEndY="-4740.588" TransportEndZ="-0.0470409" />
+    <RunTo X="-3825.394" Y="-4525.631" Z="10.06851" />
+    <RunTo X="-7185.97" Y="-3768.24" Z="9.30053" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.ZoneId != 440">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: TANARIS\n
+  and start bot." />
+</If>
+<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<If Condition="Me.Race == WoWRace.Dwarf">
+  <CustomBehavior File="UserSettings" MountName="23240" />
+<ElseIf Condition="Me.Race == WoWRace.Gnome">
+  <CustomBehavior File="UserSettings" MountName="23223" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Human">
+  <CustomBehavior File="UserSettings" MountName="23228" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.NightElf" >
+  <CustomBehavior File="UserSettings" MountName="23221" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Worgen" >
+  <CustomBehavior File="UserSettings" MountName="103196" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Draenei" >
+  <CustomBehavior File="UserSettings" MountName="35713" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
+  <CustomBehavior File="UserSettings" MountName="127302" />
+  </ElseIf>
+<Else>
+  </Else>
+</If>
+<If Condition="Me.Class == WoWClass.Paladin">
+  <If Condition="Me.Race == WoWRace.Draenei">
+    <CustomBehavior File="UserSettings" MountName="73630" />
+  <Else>
+    <CustomBehavior File="UserSettings" MountName="23214" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.Class == WoWClass.Warlock">
+  <CustomBehavior File="UserSettings" MountName="23161" />
+</If>
+<CustomBehavior File="Message" Text="Compiling Tanaris Map Zone" LogColor="Aquamarine" />
+<!--# # # Level 47.61 # # # -->
+<If Condition="!HasQuest(25420) &amp;&amp; !IsQuestCompleted(25420)" >
+  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+  <CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+  <RunTo X="-9469.269" Y="-2957.798" Z="12.39528" />
+</If>
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<PickUp QuestName="Ancient Obstacles" QuestId="25420" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<PickUp QuestName="Laying Claim" QuestId="25559" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<PickUp QuestName="Fragments of Language" QuestId="25565" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<PickUp QuestName="The Thunderdrome!" QuestId="26895" GiverName="Flinn" GiverId="38578" X="-9481.25" Y="-2965.49" Z="12.55419" />
+<If Condition="HasQuest(25420) &amp;&amp; !IsQuestCompleted(25420)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <Objective QuestName="Ancient Obstacles" QuestId="25420" Type="KillMob" MobId="38914" KillCount="6" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<Objective QuestName="Fragments of Language" QuestId="25565" Type="CollectItem" ItemId="52061" CollectCount="5" />
+<If Condition="HasQuest(25559) &amp;&amp; !IsQuestCompleted(25559)" >
+  <Objective QuestName="Laying Claim" QuestId="25559" Type="KillMob" MobId="38997" KillCount="10" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Ancient Obstacles" QuestId="25420" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<TurnIn QuestName="Laying Claim" QuestId="25559" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<TurnIn QuestName="Fragments of Language" QuestId="25565" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<If Condition="!HasQuest(25566) &amp;&amp; !IsQuestCompleted(25566) &amp;&amp; (Me.LevelFraction &gt;= 48.1)">
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](48-49)Felwood[Cava]" />
+</If>
+<PickUp QuestName="The Secrets of Uldum" QuestId="25566" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
+<TurnIn QuestName="The Secrets of Uldum" QuestId="25566" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <While Condition="!IsQuestCompleted(25070)">
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
+    <CustomBehavior File="WaitTimer" WaitTime="1000" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<PickUp QuestName="The Grand Tablet" QuestId="25421" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<TurnIn QuestName="The Grand Tablet" QuestId="25421" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55407" />
+<TurnIn QuestName="The Thunderdrome!" QuestId="26895" TurnInName="Dr. Dealwell" TurnInId="39034" X="-7119.906" Y="-3797.747" Z="8.699766" />
+<!--# # # Level 48 # # # -->
+<RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](48-49)Felwood[Cava]" />
+</QuestOrder>
+</HBProfile>

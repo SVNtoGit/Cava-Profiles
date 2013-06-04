@@ -1,0 +1,257 @@
+<HBProfile creator="Cava" >
+<Name>Move to Main City[Cava] $Rev: 354 $:</Name>
+
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+</Blackspots>
+<Mailboxes>
+</Mailboxes>
+<Vendors>
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" />
+<CustomBehavior File="Message" Text="Compiling Move to Main City" LogColor="Green" />
+
+<!-- Arenas -->
+<If Condition="Me.ZoneId == 3702 || Me.ZoneId == 4378 || Me.ZoneId == 3698 || Me.ZoneId == 3968 || Me.ZoneId == 4406 || Me.ZoneId == 6296">
+  <CustomBehavior File="RunMacro" Macro="/afk" NumOfTimes="1" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="10000" />
+</If>
+
+<!-- Battlegrounds -->
+<If Condition="Me.ZoneId == 2597 || Me.ZoneId == 3358 || Me.ZoneId == 3820 || Me.ZoneId == 5799 || Me.ZoneId == 4710 || Me.ZoneId == 6126 ||
+               Me.ZoneId == 4384 || Me.ZoneId == 6051 || Me.ZoneId == 5449 || Me.ZoneId == 5031 || Me.ZoneId == 3277">
+  <CustomBehavior File="RunMacro" Macro="/afk" NumOfTimes="1" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="10000" />
+</If>
+
+<!-- Dungeons -->
+<While Condition="Me.ZoneId ==  719 || Me.ZoneId == 1584 || Me.ZoneId == 1583 || Me.ZoneId == 2557 || Me.ZoneId ==  721 || Me.ZoneId == 2100 ||
+                  Me.ZoneId == 2437 || Me.ZoneId ==  722 || Me.ZoneId ==  491 || Me.ZoneId ==  209 || Me.ZoneId == 2017 || Me.ZoneId == 1477 ||
+                  Me.ZoneId == 1581 || Me.ZoneId ==  717 || Me.ZoneId == 1337 || Me.ZoneId ==  718 || Me.ZoneId == 1176 || Me.ZoneId == 3790 ||
+                  Me.ZoneId == 3792 || Me.ZoneId == 3791 || Me.ZoneId == 3789 || Me.ZoneId == 2367 || Me.ZoneId == 2366 || Me.ZoneId == 3717 ||
+                  Me.ZoneId == 3715 || Me.ZoneId == 3716 || Me.ZoneId == 3562 || Me.ZoneId == 3713 || Me.ZoneId == 3714 || Me.ZoneId == 4131 ||
+                  Me.ZoneId == 3848 || Me.ZoneId == 3847 || Me.ZoneId == 3849 || Me.ZoneId == 4494 || Me.ZoneId == 4277 || Me.ZoneId == 4100 ||
+                  Me.ZoneId == 4723 || Me.ZoneId == 4196 || Me.ZoneId == 4416 || Me.ZoneId == 4820 || Me.ZoneId == 4813 || Me.ZoneId == 4809 ||
+                  Me.ZoneId == 4265 || Me.ZoneId == 4228 || Me.ZoneId == 4415 || Me.ZoneId == 4272 || Me.ZoneId == 4264 || Me.ZoneId ==  206 ||
+                  Me.ZoneId == 1196 || Me.ZoneId == 5004 || Me.ZoneId == 4926 || Me.ZoneId == 5789 || Me.ZoneId == 4950 || Me.ZoneId == 4945 ||
+                  Me.ZoneId == 5844 || Me.ZoneId == 5396 || Me.ZoneId == 5088 || Me.ZoneId == 5035 || Me.ZoneId == 5788 || Me.ZoneId == 3805 ||
+                  Me.ZoneId == 1977 || Me.ZoneId == 5976 || Me.ZoneId == 6182 || Me.ZoneId == 6052 || Me.ZoneId == 6109 || Me.ZoneId == 6066 ||
+                  Me.ZoneId == 5918 || Me.ZoneId == 6214 || Me.ZoneId == 5963 || Me.ZoneId == 5956">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+  <CustomBehavior File="RunMacro" Macro="/script LeaveParty()" NumOfTimes="1" WaitTime="1000" />
+</While>
+
+<!-- Raids -->
+<While Condition="Me.ZoneId == 3959 || Me.ZoneId == 2677 || Me.ZoneId == 3607 || Me.ZoneId == 3923 || Me.ZoneId == 3836 || Me.ZoneId == 2717 ||
+                  Me.ZoneId == 3429 || Me.ZoneId == 4075 || Me.ZoneId == 3845 || Me.ZoneId == 3428 || Me.ZoneId == 3606 || Me.ZoneId == 3457 ||
+                  Me.ZoneId == 4722 || Me.ZoneId == 4812 || Me.ZoneId == 3456 || Me.ZoneId == 2159 || Me.ZoneId == 4500 || Me.ZoneId == 4273 ||
+                  Me.ZoneId == 4603 || Me.ZoneId == 4493 || Me.ZoneId == 4987 || Me.ZoneId == 5600 || Me.ZoneId == 5094 || Me.ZoneId == 5892 ||
+                  Me.ZoneId == 5723 || Me.ZoneId == 5334 || Me.ZoneId == 5638 || Me.ZoneId == 6297 || Me.ZoneId == 6125 || Me.ZoneId == 6067">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+  <CustomBehavior File="RunMacro" Macro="/script LeaveParty()" NumOfTimes="1" WaitTime="1000" />
+</While>
+
+<!-- Deeprun Tram -->
+<While Condition="Me.ZoneId == 2257 &amp;&amp; Me.IsHorde">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</While>
+
+<!-- Ruins of Gilneas Gilneas City Gilneas-->
+<While Condition="Me.ZoneId == 4706 || Me.ZoneId == 4755 || Me.ZoneId == 4714">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</While>
+
+<!-- # # # # # # # # # # # # # Alliance Character # # # # # # # # # # # # #-->
+<If Condition="Me.IsAlliance" >
+<!-- Outland side -->
+<If Condition="Me.ZoneId == 3522 || Me.ZoneId == 3483 || Me.ZoneId == 3518 || Me.ZoneId == 3523 ||
+               Me.ZoneId == 3520 || Me.ZoneId == 3703 || Me.ZoneId == 3519 || Me.ZoneId == 3521">
+  <RunTo X="-1892.391" Y="5389.582" Z="-12.42745" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="183325" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-1892.391" Y="5389.582" Z="-12.42745" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+</If>
+<!-- Kalindor side -->
+<!-- Hord maps -->
+<While Condition="Me.ZoneId == 16   || Me.ZoneId == 6452 || Me.ZoneId == 14   || Me.ZoneId == 6453 || Me.ZoneId == 215  || Me.ZoneId == 17   ||
+                  Me.ZoneId == 1637 || Me.ZoneId == 1638 || Me.ZoneId == 6451 || Me.ZoneId == 6454 || Me.ZoneId == 6451 || Me.ZoneId == 6454 ||
+		          Me.ZoneId == 3430 || Me.ZoneId == 3433 || Me.ZoneId == 3487 || Me.ZoneId == 130  || Me.ZoneId == 85   || Me.ZoneId == 1497 ||
+		          Me.ZoneId == 6455 || Me.ZoneId == 4737 || Me.ZoneId == 4720">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</While>
+
+<!-- Ammen Vale/Azuremyst Isle/Bloodmyst Isle -->
+<If Condition="Me.ZoneId == 6456 || Me.ZoneId == 3524 || Me.ZoneId == 3525">
+  <RunTo X="-3865.313" Y="-11642.25" Z="-137.6485" /> <!-- Exodar FP -->
+</If>
+
+<!-- Exodar -->
+<If Condition="Me.ZoneId == 3557">
+  <RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+</If>
+
+<!-- Shadowglen/Teldrassil -->
+<If Condition="Me.ZoneId == 6450 || (Me.ZoneId == 141 &amp;&amp; (Me.Z &gt; 1000))">
+  <RunTo X="9948.389" Y="2614.481" Z="1316.236" />
+</If>
+
+<!-- Darnassus -->
+<If Condition="Me.ZoneId == 1657">
+  <RunTo X="9948.389" Y="2614.481" Z="1316.236" />
+  <CustomBehavior File="MyCTM" X="9947.438" Y="2621.536" Z="1317.558" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+</If>
+
+<!-- Moonglade -->
+<If Condition="Me.ZoneId == 493">
+  <RunTo X="7464.915" Y="-2484.93" Z="462.0527" />
+  <RunTo X="8177.54" Y="1003.079" Z="6.646164" />
+</If>
+
+<!-- Kalimdor -->
+<If Condition="Me.ZoneId == 5695 || Me.ZoneId == 331  || Me.ZoneId == 405 || Me.ZoneId == 15   || Me.ZoneId == 6463 || Me.ZoneId == 361  ||
+               Me.ZoneId == 357  || Me.ZoneId == 5733 || Me.ZoneId == 616 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406  ||
+               Me.ZoneId == 440  || Me.ZoneId == 457  || Me.ZoneId == 400 || Me.ZoneId == 5034 || Me.ZoneId == 490  || Me.ZoneId == 618  ||
+               Me.ZoneId == 148">
+  <RunTo X="7460.876" Y="-326.7176" Z="8.098938" />
+  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
+</If>
+
+<!-- Teldrassil (Rut'theran Village) -->
+<If Condition="Me.ZoneId == 141 &amp;&amp; (Me.Z &lt; 100)" >
+  <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
+  <CustomBehavior File="UseTransport" TransportId="176310"
+	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
+	GetOffX="-8640.046" GetOffY="1326.006" GetOffZ="5.233113"
+	StandOnX="8168.902" StandOnY="1005.917" StandOnZ="6.204763"
+	TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="-0.02063938"
+	TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="0.04130154" />
+</If>
+
+
+
+<!--North: Eastern Kingdoms-->
+<If Condition="Me.ZoneId == 139  || Me.ZoneId == 28 || Me.ZoneId == 47 || Me.ZoneId == 267  || Me.ZoneId == 45 || Me.ZoneId == 11 ||
+               Me.ZoneId == 4922 || Me.ZoneId == 38 || Me.ZoneId == 1  || Me.ZoneId == 6176 || Me.ZoneId == 6457">
+  <RunTo X="-4832.779" Y="-1273.489" Z="501.8682" />
+</If>
+
+<!--Ironforge-->
+<If Condition="Me.ZoneId == 1537">
+  <RunTo X="-4825.694" Y="-1162.917" Z="502.2075" />
+  <If Condition="(Me.Level &gt;= 6 )">
+     <RunTo X="-8866.692" Y="524.5988" Z="107.407" />
+  <Else>
+    <RunTo X="-4832.779" Y="-1273.489" Z="501.8682" />
+    <RunTo X="-4838.257" Y="-1313.978" Z="501.8682" />
+    <CustomBehavior File="MyCTM" X="-4840.166" Y="-1323.635" Z="501.868" />
+    <CustomBehavior File="WaitTimer" WaitTime="12000" />
+    </Else>
+  </If>
+</If>
+
+<!--Ironforge Deeprun Tram -->
+<If Condition="Me.ZoneId == 2257 &amp;&amp; (Me.Y &lt; 30)" >
+  <RunTo X="12.5861" Y="8.065441" Z="-3.998467" />
+  <CustomBehavior File="UseTransport" TransportId="216507"
+    WaitAtX="12.5861" WaitAtY="8.065441" WaitAtZ="-3.998467"
+	GetOffX="16.77427" GetOffY="2490.513"  GetOffZ="-4.291193"
+	StandOnX="4.692799" StandOnY="8.117762" StandOnZ="-3.456943"
+	TransportStartX="4.528066" TransportStartY="8.435292" TransportStartZ="7.011068"
+	TransportEndX="4.527849" TransportEndY="2490.735" TransportEndZ="7.197604" />
+</If>
+
+<!--Stormwind Deeprun Tram -->
+<If Condition="Me.ZoneId == 2257 &amp;&amp; (Me.Y &gt; 2400)" >
+  <RunTo X="65.96149" Y="2490.913" Z="-4.295956" />
+  <CustomBehavior File="MyCTM" X="73.21138" Y="2491.088" Z="-4.295956" />
+  <CustomBehavior File="WaitTimer" WaitTime="10000" />
+  <RunTo X="-8400.029" Y="566.9911" Z="92.01362" />
+</If>
+<!--South: Eastern Kingdoms-->
+<If Condition="Me.ZoneId == 3    || Me.ZoneId == 51 || Me.ZoneId == 46   || Me.ZoneId == 12   || Me.ZoneId == 6170 || Me.ZoneId == 44 ||
+               Me.ZoneId == 40   || Me.ZoneId == 10 || Me.ZoneId == 41   || Me.ZoneId == 8    || Me.ZoneId == 33   || Me.ZoneId == 4  ||
+               Me.ZoneId == 5287 || Me.ZoneId == 25 || Me.ZoneId == 4080 || Me.ZoneId == 5339">
+  <RunTo X="-8866.692" Y="524.5988" Z="107.407" />
+</If>
+<!--Stormwind city-->
+<If Condition="Me.ZoneId != 1519">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to Main City\n\n
+  Please move your char to: Stormwind City\n
+  and start bot." />
+</If>
+</If>
+<If Condition="Me.IsHorde">
+<!--Eastern Kingdoms-->
+<!-- Aliance maps -->
+<While Condition="Me.ZoneId == 6176 || Me.ZoneId == 1    || Me.ZoneId == 12   || Me.ZoneId == 4755 || Me.ZoneId == 1537 ||
+                  Me.ZoneId == 38   || Me.ZoneId == 6457 || Me.ZoneId == 6170 || Me.ZoneId == 1519 || Me.ZoneId == 40">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</While>
+
+<If Condition="Me.ZoneId == 6455 || Me.ZoneId == 3430 || Me.ZoneId == 3433 || Me.ZoneId == 3487"><!--Blood Elf-->
+  <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+</If>
+<If Condition="Me.ZoneId == 45   || Me.ZoneId == 3    || Me.ZoneId == 25  || Me.ZoneId == 4    || Me.ZoneId == 46   ||
+               Me.ZoneId == 6454 || Me.ZoneId == 10   || Me.ZoneId == 139 || Me.ZoneId == 267  || Me.ZoneId == 4080 ||
+               Me.ZoneId == 33   || Me.ZoneId == 44   || Me.ZoneId == 51  || Me.ZoneId == 4706 || Me.ZoneId == 4714 ||
+               Me.ZoneId == 130  || Me.ZoneId == 5339 || Me.ZoneId == 8   || Me.ZoneId == 5287 || Me.ZoneId == 47   ||
+               Me.ZoneId == 85   || Me.ZoneId == 1497 || Me.ZoneId == 28  || Me.ZoneId == 11   || Me.ZoneId == 41">
+  <RunTo X="2066.672" Y="285.47" Z="97.03136" />
+  <CustomBehavior File="UseTransport" TransportId="164871"
+    WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
+    GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
+    StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
+    TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
+    TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+</If>
+
+<!-- Kalindor side -->
+<!-- Aliance maps -->
+<While Condition="Me.ZoneId == 3524 || Me.ZoneId == 3525 || Me.ZoneId == 148 || Me.ZoneId == 1657 || Me.ZoneId == 6450 ||
+                  Me.ZoneId == 141  || Me.ZoneId == 3557">
+  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</While>
+<If Condition="Me.ZoneId == 331  || Me.ZoneId == 16   || Me.ZoneId == 6452 || Me.ZoneId == 405  || Me.ZoneId == 14  ||
+               Me.ZoneId == 15   || Me.ZoneId == 361  || Me.ZoneId == 357  || Me.ZoneId == 493  || Me.ZoneId == 215 ||
+               Me.ZoneId == 17   || Me.ZoneId == 1637 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406 ||
+               Me.ZoneId == 440  || Me.ZoneId == 457  || Me.ZoneId == 400  || Me.ZoneId == 1638 || Me.ZoneId == 490 ||
+               Me.ZoneId == 6451 || Me.ZoneId == 618">
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+</If>
+<If Condition="Me.ZoneId == 1637 &amp;&amp; Me.Z &lt; 100">
+  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+</If>
+<If Condition="Me.ZoneId != 1637">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to Main City\n\n
+  Please move your char to: Orgrimmar\n
+  and start bot." />
+</If>
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</QuestOrder>
+</HBProfile>

@@ -1,0 +1,234 @@
+<HBProfile>
+<Name>Next [Cava] $Rev: 275 $:</Name>
+<QuestOrder>
+<If Condition="Me.IsHorde" >
+  <If Condition="(Me.Class == WoWClass.DeathKnight &amp;&amp; !IsQuestCompleted(13189))" >
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](55-58)DeathKnight[Cava]" />
+  </If>
+  <If Condition="(Me.Race == WoWRace.Goblin &amp;&amp; !IsQuestCompleted(25266)) || (HasQuest(25266) &amp;&amp; (Me.ZoneId == 4720))">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-12)Goblin[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 85)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](85-86)TheJadeForest[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 44.45)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 40)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 35.85)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](35-40)DustwallowMarsh[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 34.74)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 31.15)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 26.46)" >
+    <If Condition="!HasQuest(26076) &amp;&amp; IsQuestCompleted(26076)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](30-31)Desolace[Cava]" />
+    </If>
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](26-31)StonetalonMountains[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 23.15)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 20)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](20-20)Azshara[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 17.8)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](17-20)NorthernBarrens[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 13.54)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](13-17)NorthernBarrens[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 10.9)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](10-13)NorthernBarrens[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 8.1)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](08-11)Durotar[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 5.5)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.Orc">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-05)Orc[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.Undead">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-05)Undead[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.Tauren">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-05)Tauren[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.Troll">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-05)Troll[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.BloodElf">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-05)BloodElf[Cava]" />
+  </If>
+</If>
+<!-- #######################################################################################################################-->
+<If Condition="Me.IsAlliance" >
+  <If Condition="(Me.Class == WoWClass.DeathKnight &amp;&amp; !IsQuestCompleted(13188))" >
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](55-58)DeathKnight[Cava]" />
+  </If>
+  <If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; !IsQuestCompleted(30989)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Pandaren[Cava]" />
+  </If>
+  <If Condition="(Me.Race == WoWRace.Worgen &amp;&amp; !IsQuestCompleted(14434) &amp;&amp; Me.ZoneId == 4755) ||
+                 (Me.Race == WoWRace.Worgen &amp;&amp; !IsQuestCompleted(14434) &amp;&amp; Me.ZoneId == 4714)">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Worgen[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 88)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 87.75)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 87)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87)KrasarangWilds[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 86)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](86-87)ValleyoftheFourWinds[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 85)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](85-86)TheJadeForest[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 67.2)">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](67-68)Blade'sEdgeMountains[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 65.9 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](65-67)Nagrand[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 64.45 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](64-65)TerokkarForest[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 62.4 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](62-64)Zangarmarsh[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 60)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](60-62)HellfirePeninsula[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 58.15 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](58-60)BlastedLands[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 54.7 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](54-58)Winterspring[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 52.18 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](52-54)SwampofSorrows[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 49.55 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](49-52)BurningSteppes[Cava]" />
+  </If>
+<!--  <If Condition="(Me.LevelFraction &gt;= 48.1)">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](48-49)Felwood[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 47.61)">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](47-48)Tanaris[Cava]" />
+  </If>-->
+  <If Condition="(Me.LevelFraction &gt;= 46.95 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](46-49)SearingGorge[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 39.20 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](39-44)EasternPlaguelands[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 34 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](34-39)WesternPlaguelands[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 31.25 )">>
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](31-34)TheHinterlands[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 30 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](30-31)TheHinterlands[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 25 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](25-26)Wetlands[Cava]" />
+  </If>
+  <If Condition="(Me.Level &gt;= 23 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 21.58 )">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](21-23)Wetlands[Cava]" />
+  </If>
+  <If Condition="(Me.LevelFraction &gt;= 19.65)" >
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](19-21)Wetlands[Cava]" />
+  </If>
+	<If Condition="Me.Race == WoWRace.NightElf || Me.Race == WoWRace.Draenei || Me.Race == WoWRace.Worgen">
+      <If Condition="(Me.Level &gt;= 18.55 )">
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](18-21)Darkshore[Cava]" />
+      </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 16.80)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](16-18)Darkshore[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 11.58)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](11-16)Darkshore[Cava]" />
+	  </If>
+    </If>
+	<If Condition="Me.Race == WoWRace.Human || Me.Race == WoWRace.Pandaren">
+ 	  <If Condition="(Me.LevelFraction &gt;= 16.35)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](16-19)RedridgeMountains[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 15.60)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](15-16)RedridgeMountains[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 10.7)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](10-14)Westfall[Cava]" />
+	  </If>
+ 	  <!--<If Condition="(Me.LevelFraction &gt;= 7.2)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](07-10)ElwynnForest[Cava]" />
+	  </If>-->
+ 	  <If Condition="(Me.LevelFraction &gt;= 5.1)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-07)ElwynnForest[Cava]" />
+	  </If>
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Human[Cava]" />
+ 	</If>
+	<If Condition="Me.Race == WoWRace.Dwarf || Me.Race == WoWRace.Gnome">
+ 	  <If Condition="(Me.LevelFraction &gt;= 16.66)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](16-19)LochModan[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 13.94)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](13-16)LochModan[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 12.55)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](12-13)LochModan[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 10.75)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](10-12)LochModan[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 8.2)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-10)DunMorogh[Cava]" />
+	  </If>
+ 	  <If Condition="(Me.LevelFraction &gt;= 5.4)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)DunMorogh[Cava]" />
+	  </If>
+    </If>
+	<If Condition="Me.Race == WoWRace.Dwarf">
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Dwarf[Cava]" />
+	</If>
+ 	<If Condition="Me.Race == WoWRace.Gnome">
+	  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Gnome[Cava]" />
+	</If>
+	<If Condition="Me.Race == WoWRace.NightElf">
+ 	  <If Condition="(Me.LevelFraction &gt;= 5.5)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-11)Teldrassil[Cava]" />
+ 	  </If>
+	  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)NightElf[Cava]" />
+	</If>
+	<If Condition="Me.Race == WoWRace.Draenei">
+ 	  <If Condition="(Me.LevelFraction &gt;= 5.43)" >
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-11)Azuremyst Isle[Cava]" />
+	  </If>
+	  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Draenei[Cava]" />
+	</If>
+	<If Condition="Me.Race == WoWRace.Worgen" >
+	  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Worgen[Cava]" />
+	</If>
+</If>
+<If Condition="Me.Race == WoWRace.Pandaren" >
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](01-12)Pandaren[Cava]" />
+</If>
+</QuestOrder>
+</HBProfile>

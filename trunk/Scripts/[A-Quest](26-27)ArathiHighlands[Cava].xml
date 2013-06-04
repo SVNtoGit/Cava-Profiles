@@ -1,0 +1,258 @@
+<HBProfile creator="Cava" >
+<Name>[A-Quest] (26-27) Arathi Highlands [Cava] $Rev: 354 $:</Name>
+
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+  
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+  <Vendor Name="Vikki Lonsav" Entry="2808" Type="Food" X="-1278.7" Y="-2514.561" Z="21.44418" />
+  <Vendor Name="Narj Deepslice" Entry="2814" Type="Food" X="-1276.049" Y="-2506.573" Z="21.69975" />
+  <Vendor Name="Jannos Ironwill" Entry="1471" Type="Repair" X="-1257.819" Y="-2546.45" Z="21.45418" />
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="26024" Name="Wanted!  Marez Cowl">
+  <Objective Type="CollectItem" ItemId="4515" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Marez Cowl" Id="2783"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-1644.627" Y="-1930.724" Z="68.07696" />
+      <Hotspot X="-1698.949" Y="-1889.475" Z="80.07626" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="26079" Name="Wanted!  Otto and Falconcrest">
+  <Objective Type="CollectItem" ItemId="4516" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Otto" Id="2599"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-1706.604" Y="-1810.696" Z="101.7082" />
+    </Hotspots>
+  </Objective>
+  <Objective Type="CollectItem" ItemId="4517" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Lord Falconcrest" Id="2597"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-1709.681" Y="-1803.798" Z="101.708" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="26095" Name="Stromgarde Badges">
+  <Objective Type="CollectItem" ItemId="4506" CollectCount="7">
+    <CollectFrom>
+      <Mob Name="Syndicate Thief" Id="24477"/>
+      <Mob Name="Syndicate Prowler" Id="2588"/>
+      <Mob Name="Syndicate Conjuror" Id="2590"/>
+      <Mob Name="Syndicate Magus" Id="2591"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-1589.897" Y="-1803.504" Z="71.19569" />
+      <Hotspot X="-1629.448" Y="-1795.522" Z="80.18644" />
+      <Hotspot X="-1648.485" Y="-1832.002" Z="79.21439" />
+      <Hotspot X="-1687.592" Y="-1841.279" Z="81.15319" />
+      <Hotspot X="-1726.124" Y="-1853.315" Z="81.43729" />
+      <Hotspot X="-1714.448" Y="-1891.866" Z="80.87247" />
+      <Hotspot X="-1673.618" Y="-1896.94" Z="79.5537" />
+      <Hotspot X="-1654.722" Y="-1860.698" Z="79.16383" />
+      <Hotspot X="-1639.098" Y="-1822.79" Z="79.67531" />
+      <Hotspot X="-1602.013" Y="-1807.278" Z="75.88832" />
+      <Hotspot X="-1589.326" Y="-1844.391" Z="67.3503" />
+      <Hotspot X="-1598.013" Y="-1885.035" Z="67.45365" />
+      <Hotspot X="-1612.802" Y="-1922.427" Z="67.57166" />
+    </Hotspots>
+  </Objective>
+</Quest>
+
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<If Condition="Me.IsHorde">
+	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0">
+  <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
+</If>
+<If Condition="(Me.LevelFraction &gt;= 27.75 )">
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](27-30)ArathiHighlands[Cava]" />
+</If>
+<If Condition="Me.ZoneId != 45">
+  <If Condition="Me.ZoneId != 1519">
+    <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+  <Else>
+    <RunTo X="-1272.874" Y="-2516.608" Z="21.33105" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.ZoneId != 45">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: ARATHI HIGHLANDS\n
+  and start bot." />
+</If>
+<CustomBehavior File="UserSettings" UseFlightPaths="True" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<If Condition="Me.Race == WoWRace.Dwarf">
+  <CustomBehavior File="UserSettings" MountName="6898" />
+<ElseIf Condition="Me.Race == WoWRace.Gnome">
+  <CustomBehavior File="UserSettings" MountName="10969" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Human">
+  <CustomBehavior File="UserSettings" MountName="472" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.NightElf" >
+  <CustomBehavior File="UserSettings" MountName="8394" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Worgen" >
+  <CustomBehavior File="UserSettings" MountName="103195" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Draenei" >
+  <CustomBehavior File="UserSettings" MountName="35710" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
+  <CustomBehavior File="UserSettings" MountName="127287" />
+  </ElseIf>
+<Else>
+  </Else>
+</If>
+<If Condition="Me.Class == WoWClass.Paladin">
+  <If Condition="Me.Race == WoWRace.Draenei">
+    <CustomBehavior File="UserSettings" MountName="73629" />
+  <Else>
+    <CustomBehavior File="UserSettings" MountName="13819" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.Class == WoWClass.Warlock">
+  <CustomBehavior File="UserSettings" MountName="5784" />
+</If>
+<If Condition="!HasQuest(26093) &amp;&amp; !IsQuestCompleted(26093)">
+  <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+  <CustomBehavior File="SetHearthstone" MobId="2808" X="-1278.7" Y="-2514.561" Z="21.44418" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+</If>
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="3771" DrinkName="1708" />
+<CustomBehavior File="Message" Text="Compiling Arathi Highlands Map Zone" LogColor="Aquamarine" />
+<!--# # # Level 26 # # # -->
+<PickUp QuestName="Northfold Manor" QuestId="26093" GiverName="Captain Nials" GiverId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
+<PickUp QuestName="Wanted!  Marez Cowl" QuestId="26024" GiverName="Wanted Board" GiverId="2713" GiverType="GameObject" X="-1276.958" Y="-2521.737" Z="21.35519" />
+<!--<PickUp QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" GiverName="Wanted Board" GiverId="2713" GiverType="GameObject" X="-1276.958" Y="-2521.737" Z="21.35519" />-->
+<PickUp QuestName="Shakes O'Breen" QuestId="26336" GiverName="Skuerto" GiverId="2789" X="-1281.153" Y="-2529.644" Z="21.52114" />
+<If Condition="HasQuest(26093) &amp;&amp; !IsQuestCompleted(26093)" >
+  <RunTo X="-915.7569" Y="-2090.314" Z="47.93302" />
+  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+	<CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+  <SetGrindArea>
+  <GrindArea>
+  <Factions>87</Factions>
+    <Hotspots>
+      <Hotspot X="-889.3956" Y="-2078.739" Z="35.77718" />
+      <Hotspot X="-850.5758" Y="-2093.415" Z="36.06291" />
+      <Hotspot X="-810.1912" Y="-2093.783" Z="33.43433" />
+      <Hotspot X="-780.0949" Y="-2067.235" Z="34.10809" />
+      <Hotspot X="-764.3323" Y="-2029.508" Z="33.97659" />
+      <Hotspot X="-788.6132" Y="-1996.401" Z="33.7744" />
+      <Hotspot X="-829.1064" Y="-1991.406" Z="33.99377" />
+      <Hotspot X="-865.038" Y="-2008.994" Z="34.33644" />
+      <Hotspot X="-865.9843" Y="-2049.833" Z="34.25983" />
+    </Hotspots>
+  </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(26093)" />
+<!--
+<Objective QuestName="Northfold Manor" QuestId="26093" Type="KillMob" MobId="2589" KillCount="10" />
+-->
+  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+</If>
+<TurnIn QuestName="Northfold Manor" QuestId="26093" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
+<If Condition="(Me.LevelFraction &gt;= 27.75 )">
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](27-30)ArathiHighlands[Cava]" />
+</If>
+<PickUp QuestName="Stromgarde Badges" QuestId="26095" GiverName="Captain Nials" GiverId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
+<If Condition="HasQuest(26024) &amp;&amp; !IsQuestCompleted(26024)" >
+  <RunTo X="-1547.747" Y="-1805.404" Z="67.30801" />
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" KillBetweenHotspots="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+	<CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+</If>
+<Objective QuestName="Wanted!  Marez Cowl" QuestId="26024" Type="CollectItem" ItemId="4515" CollectCount="1" />
+<!--<If Condition="HasQuest(26079) &amp;&amp; !IsQuestCompleted(26079)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" KillBetweenHotspots="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+	<CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+</If>
+<Objective QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" Type="CollectItem" ItemId="4517" CollectCount="1" />
+<Objective QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" Type="CollectItem" ItemId="4516" CollectCount="1" />
+<If Condition="HasQuest(26079) &amp;&amp; IsQuestCompleted(26079)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" KillBetweenHotspots="False" />
+</If>-->
+<If Condition="HasQuest(26095) &amp;&amp; !IsQuestCompleted(26095)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+	<CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+</If>
+<Objective QuestName="Stromgarde Badges" QuestId="26095" Type="CollectItem" ItemId="4506" CollectCount="7" />
+<If Condition="(Me.Level &lt; 27 )">
+  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+    <CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+  <SetGrindArea>
+  <GrindArea>
+  <Factions>87</Factions>
+  <Hotspots>
+    <Hotspot X="-1642.741" Y="-1816.765" Z="79.30608" />
+    <Hotspot X="-1653.022" Y="-1856.113" Z="78.99402" />
+    <Hotspot X="-1681.253" Y="-1885.823" Z="79.19459" />
+    <Hotspot X="-1567.482" Y="-1811.946" Z="67.28329" />
+    <Hotspot X="-1589.962" Y="-1846.276" Z="67.34589" />
+    <Hotspot X="-1598.51" Y="-1887.137" Z="67.6114" />
+    <Hotspot X="-1610.391" Y="-1925.835" Z="67.21883" />
+  </Hotspots>
+  </GrindArea>
+  </SetGrindArea>
+  <GrindTo Level="27" />
+  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+</If>
+<If Condition="HasQuest(26050) &amp;&amp; !IsQuestCompleted(26050)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+</If>
+<PickUp QuestName="Goggle Boggle" QuestId="26050" GiverName="Professor Phizzlethorpe" GiverId="2768" X="-2066.391" Y="-2086.127" Z="8.949064" />
+<If Condition="HasQuest(26050) &amp;&amp; !IsQuestCompleted(26050)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
+	<CustomBehavior File="UserSettings" PullDistance="35" />
+  </If>
+  <CustomBehavior File="Escort" QuestId="26050" MobId="2768" X="-2073.97" Y="-2121.205" Z="17.69954" />
+</If>
+<TurnIn QuestName="Goggle Boggle" QuestId="26050" TurnInName="Doctor Draxlegauge" TurnInId="2774" X="-2064.04" Y="-2085.467" Z="9.10599" />
+<TurnIn QuestName="Shakes O'Breen" QuestId="26336" TurnInName="Shakes O'Breen" TurnInId="2610" X="-2086.068" Y="-2028.863" Z="3.220881" />
+<If Condition="HasQuest(26095)">
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+</If>
+<TurnIn QuestName="Stromgarde Badges" QuestId="26095" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
+<TurnIn QuestName="Wanted!  Marez Cowl" QuestId="26024" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
+<!--<TurnIn QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />-->
+<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](27-30)ArathiHighlands[Cava]" />
+</QuestOrder>
+</HBProfile>

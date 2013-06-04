@@ -1,0 +1,56 @@
+<HBProfile>
+<Name>[Quest]MOP 85 to 90 With Loot By [Cava] $Rev: 263 $:</Name>
+	
+<QuestOrder>
+<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="5" ExpiryAction="InputEnabled_Continue"
+  Text="Cava's profiles use special Quest Behaviors, be sure Cava's folder is at right place" />
+  <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+	<CustomBehavior File="EnablePlugin" Names="Questhelper - ItemForAura,Anti Drown,AutoEquip2,Talented" />
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="30" ExpiryAction="InputEnabled_Continue"
+  Text="Thank you for taking the time to use Cava's profiles hope you like it\n\n
+
+   Please reporte any bugs to help me improving this profiles\n\n
+   Make sure you do the folowing:\n
+   setup AutoEquip2\n\n
+   If you can, then please:\n
+   Send some money to char at start and - set food and drinks as well\n
+   Send bags to char at start and - equip the bags\n\n
+
+   Config a mail recipient or some valuable itens will be destroid!\n
+    (Settings and Tools Button)" />
+
+<!-- #######################################################################################################################-->
+<If Condition="Me.IsHorde" >
+ <If Condition="(Me.LevelFraction &gt;= 85)" >
+    <If Condition="HasQuest(30814) &amp;&amp; IsQuestCompleted(30814)" >
+    </If>
+    <If Condition="HasQuest(31286) &amp;&amp; IsQuestCompleted(31286)" >
+    </If>
+    <If Condition="HasQuest(30079) &amp;&amp; IsQuestCompleted(30079)" >
+    </If>
+    <If Condition="HasQuest(29907) &amp;&amp; IsQuestCompleted(29907)" >
+   </If>
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](85-86)TheJadeForest(WL)[Cava]" />
+  </If>
+</If>
+<!-- #######################################################################################################################-->
+<If Condition="Me.IsAlliance" >
+  <If Condition="(Me.LevelFraction &gt;= 1)" >
+    <If Condition="HasQuest(30814) &amp;&amp; IsQuestCompleted(30814)" >
+        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes(WL)[Cava]" />
+    </If>
+    <If Condition="HasQuest(31286) &amp;&amp; IsQuestCompleted(31286)" >
+        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit(WL)[Cava]" />
+    </If>
+    <If Condition="HasQuest(30079) &amp;&amp; IsQuestCompleted(30079)" >
+        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87)KrasarangWilds(WL)[Cava]" />
+    </If>
+    <If Condition="HasQuest(29907) &amp;&amp; IsQuestCompleted(29907)" >
+        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](86-87)ValleyoftheFourWinds(WL)[Cava]" />
+    </If>
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](85-86)TheJadeForest(WL)[Cava]" />
+  </If>
+</If>
+
+</QuestOrder>
+</HBProfile>
