@@ -1315,9 +1315,19 @@
     <CustomBehavior File="WaitTimer" WaitTime="110000" />
   </If>
   <TurnIn QuestName="The Alliance Way" QuestId="30988" TurnInName="King Varian Wrynn" TurnInId="61796" X="-8321.054" Y="287.842" Z="156.8328" />
-  <PickUp QuestName="An Old Pit Fighter" QuestId="30989" GiverName="King Varian Wrynn" GiverId="29611" X="-8363.06" Y="232.2361" Z="156.9904" />
+  <If Condition="!HasQuest(30989) &amp;&amp; !IsQuestCompleted(30989)" >
+    <RunTo X="-8320.18" Y="288.9598" Z="156.833" />
+    <If Condition="HasQuestAvailable(61796)" >
+      <PickUp QuestName="An Old Pit Fighter" QuestId="30989" GiverName="King Varian Wrynn" GiverId="61796" X="-8321.054" Y="287.842" Z="156.8332" />
+    <Else>
+      <RunTo X="-8362.639" Y="234.0139" Z="156.9902" />
+      <PickUp QuestName="An Old Pit Fighter" QuestId="30989" GiverName="King Varian Wrynn" GiverId="29611" X="-8363.06" Y="232.2361" Z="156.9904" />
+      </Else>
+    </If>
+  </If>
   <If Condition="HasQuest(30989) &amp;&amp; !IsQuestCompleted(30989)" >
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="12000" />
+    <RunTo X="-8320.18" Y="288.9598" Z="156.833" />
     <CustomBehavior File="Cava\CavaInteractWith" QuestId="30989" MobId="61796" InteractByGossipOptions="1" X="-8323.161" Y="286.9583" Z="156.8326" />
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="10000" />
     <CustomBehavior File="KillUntilComplete" QuestId="30989" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8325" />
