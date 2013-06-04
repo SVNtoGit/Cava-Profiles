@@ -17,4 +17,4 @@ The cava behaviors will be download and instalend in:
 bot_path\Quest Behaviors\Cava\
 
 The cava quest profiles will be download and instalend in:
-bot_path\Default Profiles\Cava \
+bot_path\Default Profiles\Cava  \
