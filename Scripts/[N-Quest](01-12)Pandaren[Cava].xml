@@ -1328,9 +1328,7 @@
   <If Condition="HasQuest(30989) &amp;&amp; !IsQuestCompleted(30989)" >
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="12000" />
     <RunTo X="-8320.18" Y="288.9598" Z="156.833" />
-    <CustomBehavior File="InteractWith" QuestId="30989" NonCompeteDistance="0" KeepTargetSelected="True" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8326" />
-    <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="10000" />
-    <CustomBehavior File="RunMacro" QuestId="30989" Macro="/click GossipTitleButton1" />
+    <CustomBehavior File="InteractWith" QuestId="30989" NonCompeteDistance="0" KeepTargetSelected="True" GossipOptions="1" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8326" />
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="10000" />
     <CustomBehavior File="KillUntilComplete" QuestId="30989" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8325" />
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="15000" />
