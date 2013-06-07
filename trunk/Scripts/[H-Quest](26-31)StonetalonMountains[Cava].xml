@@ -796,6 +796,13 @@
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10435" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
 </If>
+
+
+<CustomBehavior File="Message" Text="Moving to Desolace, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="191.2254" Y="1775.242" Z="90.68433" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](30-31)Desolace[Cava]" />
+
+
 <PickUp QuestName="Spy Infestation" QuestId="26076" GiverName="Jibbly Rakit" GiverId="42033" X="1865.252" Y="777.8646" Z="143.8975" />
 <If Condition="HasQuest(26076) &amp;&amp; !IsQuestCompleted(26076)" >
   <CustomBehavior File="UserSettings" PullDistance="25" />
