@@ -1,35 +1,1379 @@
-<HBProfile creator="Cava" version="1">
-	  	2 	<Name>[H-Quest] (44-47) Tanaris [Cava] $Rev$:</Name>
-	  	3 	<MinLevel>1</MinLevel>
-	  	4 	<MaxLevel>91</MaxLevel>
-	  	5 	<MinDurability>0.2</MinDurability>
-	  	6 	<MinFreeBagSlots>2</MinFreeBagSlots>
-	  	7 	<MailGrey>False</MailGrey>
-	  	8 	<MailWhite>True</MailWhite>
-	  	9 	<MailGreen>True</MailGreen>
-	  	10 	<MailBlue>True</MailBlue>
-	  	11 	<MailPurple>True</MailPurple>
-	  	12 	<SellGrey>True</SellGrey>
-	  	13 	<SellWhite>True</SellWhite>
-	  	14 	<SellGreen>True</SellGreen>
-	  	15 	<SellBlue>False</SellBlue>
-	  	16 	<SellPurple>False</SellPurple>
-	  	17 	<TargetElites>False</TargetElites>
-	  	18
-	  	19 	<AvoidMobs>
-	  	20 	</AvoidMobs>
-	  	21 	<Blackspots>
-	  	22 	</Blackspots>
-	  	23
-	  	24 	<Mailboxes>
-	  	25 	</Mailboxes>
-	  	26
-	  	27 	<Vendors>
-	  	28 	</Vendors>
-	  	29 	<!-- ####################################### Quest Overrides ####################################################################### -->
-	  	30 	<!-- ################################### End of Quest Overrides #################################################################### -->
-	  	31 	<QuestOrder IgnoreCheckPoints="False" >
-	  	32 	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Profile in development,
-	  	33 	Please check again later" />
-	  	34 	</QuestOrder>
-	  	35 	</HBProfile>
+<HBProfile creator="Cava">
+<Name>[H-Quest] (44-47) Tanaris [Cava] $Rev$:</Name>
+<MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+ <Blackspot X="-8264.67" Y="-5111.174" Z="4.887406" Radius="6.659128" />
+ <Blackspot X="-8307.977" Y="-3127.038" Z="8.738775" Radius="0.9" />
+ <Blackspot X="-8033.544" Y="-2509.374" Z="6.416256" Radius="5" />
+ <Blackspot X="-8037.445" Y="-5330.734" Z="0.6881131" Radius="4" />
+ <Blackspot X="-6799.93" Y="-2889.565" Z="8.888994" Radius="10" />
+</Blackspots>
+
+<Mailboxes>
+  <Mailbox X="-7083.833" Y="-3851.508" Z="9.773928" />
+</Mailboxes>
+
+<Vendors>
+  <Vendor Name="Dirge Quikcleave" Entry="40589" Type="Food" X="-7167.672" Y="-3853.661" Z="8.420099" />
+  <Vendor Name="Grohk" Entry="38847" Type="Food" X="-8312.551" Y="-3289.052" Z="24.45138" />
+  <Vendor Name="Krinkle Goodsteel" Entry="5411" Type="Repair" X="-7232.01" Y="-3751.71" Z="9.09296" />
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="24906" Name="Seaside Salvage">
+  <Objective Type="CollectItem" ItemId="33112" CollectCount="7">
+    <CollectFrom>
+      <GameObject Name="Steamwheedle Crate" Id="202198"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-7567.436" Y="-3889.297" Z="-1.716476" />
+      <Hotspot X="-7608.793" Y="-3892.125" Z="0.1727929" />
+      <Hotspot X="-7632.317" Y="-3926.224" Z="-1.484446" />
+      <Hotspot X="-7663.919" Y="-3951.729" Z="-0.07064916" />
+      <Hotspot X="-7650.024" Y="-3989.3" Z="-1.716778" />
+      <Hotspot X="-7609.476" Y="-3994.426" Z="-1.716778" />
+      <Hotspot X="-7568.744" Y="-3997.663" Z="-1.716778" />
+      <Hotspot X="-7528.733" Y="-3996.841" Z="-1.716778" />
+      <Hotspot X="-7520.3" Y="-3957.147" Z="-1.716778" />
+      <Hotspot X="-7534.036" Y="-3917.923" Z="-1.716778" />
+   </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="24907" Name="Puddle Stomping">
+  <Objective Type="KillMob" MobId="39022" KillCount="8">
+    <Hotspots>
+      <Hotspot X="-7567.436" Y="-3889.297" Z="-1.716476" />
+      <Hotspot X="-7608.793" Y="-3892.125" Z="0.1727929" />
+      <Hotspot X="-7632.317" Y="-3926.224" Z="-1.484446" />
+      <Hotspot X="-7663.919" Y="-3951.729" Z="-0.07064916" />
+      <Hotspot X="-7650.024" Y="-3989.3" Z="-1.716778" />
+      <Hotspot X="-7609.476" Y="-3994.426" Z="-1.716778" />
+      <Hotspot X="-7568.744" Y="-3997.663" Z="-1.716778" />
+      <Hotspot X="-7528.733" Y="-3996.841" Z="-1.716778" />
+      <Hotspot X="-7520.3" Y="-3957.147" Z="-1.716778" />
+      <Hotspot X="-7534.036" Y="-3917.923" Z="-1.716778" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25021" Name="Blood to Thrive">
+  <Objective Type="CollectItem" ItemId="52064" CollectCount="6">
+    <CollectFrom>
+      <Mob Name="Sandfury Firecaller" Id="5647"/>
+      <Mob Name="Sandfury Hideskinner" Id="5645"/>
+      <Mob Name="Sandfury Axe Thrower" Id="5646"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-6909.533" Y="-2904.371" Z="13.38124" />
+      <Hotspot X="-6900.225" Y="-2865.004" Z="11.39168" />
+      <Hotspot X="-6928.72" Y="-2835.484" Z="9.319018" />
+      <Hotspot X="-6962.247" Y="-2812.003" Z="10.31794" />
+      <Hotspot X="-6998.697" Y="-2793.859" Z="8.878119" />
+      <Hotspot X="-7039.686" Y="-2793.532" Z="9.172285" />
+      <Hotspot X="-7064" Y="-2825.965" Z="10.19825" />
+      <Hotspot X="-7094.133" Y="-2852.262" Z="13.33568" />
+      <Hotspot X="-7125.01" Y="-2877.641" Z="10.13048" />
+      <Hotspot X="-7152.831" Y="-2908.259" Z="9.817658" />
+      <Hotspot X="-7184.891" Y="-2934.31" Z="9.963451" />
+      <Hotspot X="-7213.425" Y="-2963.172" Z="8.794814" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25521" Name="I'm With Scorpid">
+  <Objective Type="CollectItem" ItemId="54856" CollectCount="6">
+    <CollectFrom>
+      <Mob Name="Duneclaw Lasher" Id="40717"/>
+      <Mob Name="Duneclaw Matriarch" Id="40656"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-6920.406" Y="-3051.802" Z="8.876283" />
+      <Hotspot X="-6918.614" Y="-3011.411" Z="8.948077" />
+      <Hotspot X="-6935.645" Y="-2974.287" Z="8.877443" />
+      <Hotspot X="-6965" Y="-2946.688" Z="8.877855" />
+      <Hotspot X="-7005.164" Y="-2939.091" Z="12.37165" />
+      <Hotspot X="-7045.715" Y="-2943.249" Z="9.877213" />
+      <Hotspot X="-7079.35" Y="-2965.605" Z="11.50088" />
+      <Hotspot X="-7095.175" Y="-3003.406" Z="9.544629" />
+      <Hotspot X="-7110.952" Y="-3041.093" Z="12.34795" />
+      <Hotspot X="-7137.146" Y="-3071.709" Z="10.02074" />
+      <Hotspot X="-7174.185" Y="-3087.531" Z="9.951913" />
+      <Hotspot X="-7207.063" Y="-3111.677" Z="6.528593" />
+      <Hotspot X="-7231.257" Y="-3144.21" Z="9.238215" />
+      <Hotspot X="-7242.759" Y="-3183.182" Z="11.34772" />
+      <Hotspot X="-7243.102" Y="-3223.421" Z="11.78342" />
+      <Hotspot X="-7223.587" Y="-3259.187" Z="13.54039" />
+      <Hotspot X="-7185.855" Y="-3275.018" Z="13.15778" />
+      <Hotspot X="-7146.357" Y="-3284.774" Z="11.68104" />
+      <Hotspot X="-7106.143" Y="-3289.205" Z="10.37005" />
+      <Hotspot X="-7066.079" Y="-3292.599" Z="9.886415" />
+      <Hotspot X="-7029.437" Y="-3276.013" Z="8.856038" />
+      <Hotspot X="-7017.161" Y="-3237.364" Z="10.11554" />
+      <Hotspot X="-7009.051" Y="-3197.059" Z="9.777328" />
+      <Hotspot X="-7000.398" Y="-3157.335" Z="10.5394" />
+      <Hotspot X="-6995.234" Y="-3116.869" Z="10.54237" />
+      <Hotspot X="-6985.254" Y="-3077.199" Z="11.47224" />
+      <Hotspot X="-7010.882" Y="-3045.606" Z="10.9825" />
+      <Hotspot X="-7046.439" Y="-3066.719" Z="13.69235" />
+      <Hotspot X="-7067.936" Y="-3100.716" Z="10.76773" />
+      <Hotspot X="-7083.465" Y="-3138.492" Z="11.45531" />
+      <Hotspot X="-7108.514" Y="-3169.653" Z="8.877039" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25522" Name="Gargantapid">
+  <Objective Type="CollectItem" ItemId="54855" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Gargantapid" Id="40581"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-6907.85" Y="-3388.99" Z="12.89934" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25025" Name="Sang'thraze the Deflector">
+  <Objective Type="CollectItem" ItemId="52069" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Zakkaru" Id="40648"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-7927.89" Y="-3298.67" Z="65.52086" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25026" Name="Darkest Mojo">
+  <Objective Type="CollectItem" ItemId="52072" CollectCount="6">
+    <CollectFrom>
+      <Mob Name="Sandfury Zombie" Id="38909"/>
+      <GameObject Name="Shallow Grave" Id="205057"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-6906.88" Y="-2904.786" Z="10.22802" />
+      <Hotspot X="-6895.188" Y="-2865.067" Z="11.76042" />
+      <Hotspot X="-6901.702" Y="-2825.297" Z="9.914727" />
+      <Hotspot X="-6920.671" Y="-2789.953" Z="10.35187" />
+      <Hotspot X="-6946.23" Y="-2757.99" Z="10.40344" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25017" Name="Ancient Obstacles">
+  <Objective Type="KillMob" MobId="38914" KillCount="6">
+    <Hotspots>
+      <Hotspot X="-9387.738" Y="-2913.34" Z="9.141903" />
+      <Hotspot X="-9374.67" Y="-2874.022" Z="10.24782" />
+      <Hotspot X="-9373.772" Y="-2833.263" Z="8.64647" />
+      <Hotspot X="-9396.103" Y="-2799.952" Z="14.15667" />
+      <Hotspot X="-9425.743" Y="-2772.036" Z="17.19053" />
+      <Hotspot X="-9465.4" Y="-2764.035" Z="15.0647" />
+      <Hotspot X="-9482.181" Y="-2800.369" Z="11.57897" />
+      <Hotspot X="-9451.219" Y="-2825.64" Z="9.087516" />
+      <Hotspot X="-9412.631" Y="-2838.074" Z="11.99021" />
+      <Hotspot X="-9402.466" Y="-2877.889" Z="9.971826" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="24949" Name="Booty Duty">
+  <Objective Type="CollectItem" ItemId="51549" CollectCount="10">
+    <CollectFrom>
+      <GameObject Name="Pirate Booty" Id="203019"/>
+      <GameObject Name="Pirate Booty" Id="203021"/>
+      <GameObject Name="Pirate Booty" Id="203022"/>
+      <GameObject Name="Pirate Booty" Id="202263"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
+      <Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
+      <Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
+      <Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
+      <Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
+      <Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
+      <Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
+      <Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
+   </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25534" Name="Going Off-Task">
+  <Objective Type="KillMob" MobId="40593" KillCount="1">
+    <Hotspots>
+      <Hotspot X="-7959.01" Y="-5446.08" Z="7.518648" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="24950" Name="Captain Dreadbeard">
+  <Objective Type="KillMob" MobId="38749" KillCount="1">
+    <Hotspots>
+      <Hotspot X="-8448.759" Y="-5182.769" Z="13.86311" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="24957" Name="Get The Centipaarty Started">
+  <Objective Type="CollectItem" ItemId="52041" CollectCount="20">
+    <CollectFrom>
+      <Mob Name="Centipaar Sandreaver" Id="5460"/>
+      <Mob Name="Centipaar Worker" Id="5458"/>
+      <Mob Name="Centipaar Wasp" Id="5455"/>
+      <Mob Name="Centipaar Wasp" Id="5459"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-8060.22" Y="-2706.547" Z="9.313126" />
+      <Hotspot X="-8019.744" Y="-2715.366" Z="8.796124" />
+      <Hotspot X="-7981.523" Y="-2729.32" Z="8.79627" />
+      <Hotspot X="-7941.717" Y="-2737.801" Z="8.836287" />
+      <Hotspot X="-7901.292" Y="-2741.383" Z="8.893697" />
+      <Hotspot X="-7860.923" Y="-2737.79" Z="8.875299" />
+      <Hotspot X="-7852.523" Y="-2697.862" Z="8.962224" />
+      <Hotspot X="-7874.926" Y="-2663.156" Z="8.826421" />
+      <Hotspot X="-7896.022" Y="-2627.764" Z="8.864614" />
+      <Hotspot X="-7916.492" Y="-2592.574" Z="9.605001" />
+      <Hotspot X="-7947.707" Y="-2566.84" Z="10.16929" />
+      <Hotspot X="-7974.076" Y="-2536.222" Z="9.463932" />
+      <Hotspot X="-7990.669" Y="-2499.216" Z="10.4733" />
+      <Hotspot X="-8001.207" Y="-2459.73" Z="9.471091" />
+      <Hotspot X="-8018.628" Y="-2423.571" Z="9.338019" />
+      <Hotspot X="-8056.627" Y="-2410.846" Z="9.027796" />
+      <Hotspot X="-8096.491" Y="-2419.36" Z="9.22622" />
+      <Hotspot X="-8132.122" Y="-2438.025" Z="8.990902" />
+      <Hotspot X="-8157.791" Y="-2469.755" Z="8.812734" />
+      <Hotspot X="-8181.1" Y="-2502.969" Z="8.868572" />
+      <Hotspot X="-8192.563" Y="-2542.322" Z="8.877214" />
+      <Hotspot X="-8168.563" Y="-2574.77" Z="8.90954" />
+      <Hotspot X="-8134.584" Y="-2596.81" Z="9.257565" />
+      <Hotspot X="-8103.449" Y="-2623.171" Z="8.936168" />
+      <Hotspot X="-8063.6" Y="-2617.674" Z="9.790725" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25001" Name="Sandscraper">
+  <Objective Type="KillMob" MobId="38880" KillCount="1">
+    <Hotspots>
+      <Hotspot X="-8528.755" Y="-3071.859" Z="7.492484" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25019" Name="Laying Claim">
+  <Objective Type="KillMob" MobId="38998" KillCount="10">
+    <Hotspots>
+      <Hotspot X="-9291.91" Y="-3009.016" Z="11.25423" />
+      <Hotspot X="-9293.335" Y="-3049.416" Z="10.35489" />
+      <Hotspot X="-9285.467" Y="-3088.781" Z="10.34008" />
+      <Hotspot X="-9247.643" Y="-3102.763" Z="18.24234" />
+      <Hotspot X="-9207.028" Y="-3099.959" Z="23.91122" />
+      <Hotspot X="-9217.92" Y="-3061.382" Z="20.6415" />
+      <Hotspot X="-9202.953" Y="-3022.974" Z="25.05265" />
+      <Hotspot X="-9202.93" Y="-2982.714" Z="23.27718" />
+      <Hotspot X="-9243.017" Y="-2976.065" Z="15.06919" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25020" Name="Fragments of Language">
+  <Objective Type="CollectItem" ItemId="52061" CollectCount="5">
+    <CollectFrom>
+      <GameObject Name="Ancient Hieroglyph" Id="202420"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-9291.91" Y="-3009.016" Z="11.25423" />
+      <Hotspot X="-9293.335" Y="-3049.416" Z="10.35489" />
+      <Hotspot X="-9285.467" Y="-3088.781" Z="10.34008" />
+      <Hotspot X="-9247.643" Y="-3102.763" Z="18.24234" />
+      <Hotspot X="-9207.028" Y="-3099.959" Z="23.91122" />
+      <Hotspot X="-9217.92" Y="-3061.382" Z="20.6415" />
+      <Hotspot X="-9202.953" Y="-3022.974" Z="25.05265" />
+      <Hotspot X="-9202.93" Y="-2982.714" Z="23.27718" />
+      <Hotspot X="-9243.017" Y="-2976.065" Z="15.06919" />
+   </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="25068" Name="The Crumbling Past">
+  <Objective Type="CollectItem" ItemId="52284" CollectCount="5">
+    <CollectFrom>
+      <Mob Name="Sandstone Earthen" Id="38916"/>
+	</CollectFrom>
+	<Hotspots>
+      <Hotspot X="-9745.42" Y="-2769.994" Z="10.37477" />
+      <Hotspot X="-9785.771" Y="-2770.464" Z="9.620342" />
+      <Hotspot X="-9807.838" Y="-2803.937" Z="10.38913" />
+      <Hotspot X="-9768.43" Y="-2812.861" Z="10.38913" />
+      <Hotspot X="-9730.075" Y="-2800.853" Z="10.40142" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<!-- ################################### End of Quest Overrides #################################################################### -->
+<QuestOrder IgnoreCheckPoints="False" >
+<If Condition="Me.IsAlliance" >
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<!--<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 || Mount.GroundMounts.Count() &lt;= 0">
+  <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
+</If>-->
+<If Condition="Me.ZoneId != 440 &amp;&amp; Me.ZoneId != 5034">
+  <If Condition="Me.ZoneId != 1637">
+    <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+  <Else>
+    <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
+    <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.ZoneId != 440 &amp;&amp; Me.ZoneId != 5034">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: TANARIS\n
+  and start bot." />
+</If>
+<CustomBehavior File="Message" Text="Compiling Tanaris Quests (44-47)" LogColor="Aquamarine" />
+<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<If Condition="Me.Race == WoWRace.BloodElf">
+  <CustomBehavior File="UserSettings" MountName="34795" />
+<ElseIf Condition="Me.Race == WoWRace.Orc">
+  <CustomBehavior File="UserSettings" MountName="64658" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Tauren">
+  <CustomBehavior File="UserSettings" MountName="18990" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Troll" >
+  <CustomBehavior File="UserSettings" MountName="23243" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Undead" >
+  <CustomBehavior File="UserSettings" MountName="17462" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Goblin" >
+  <CustomBehavior File="UserSettings" MountName="87090" />
+  </ElseIf>
+<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
+  <CustomBehavior File="UserSettings" MountName="127290" />
+  </ElseIf>
+<Else>
+  </Else>
+</If>
+<If Condition="Me.Class == WoWClass.Paladin">
+  <If Condition="Me.Race == WoWRace.Tauren">
+    <CustomBehavior File="UserSettings" MountName="69820" />
+  <Else>
+    <CustomBehavior File="UserSettings" MountName="34769" />
+    </Else>
+  </If>
+</If>
+<If Condition="Me.Class == WoWClass.Warlock">
+  <CustomBehavior File="UserSettings" MountName="5784" />
+</If>
+<!--# # # Level 44 # # # -->
+<If Condition="!HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
+  <!--Gadgetzan-->
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="InteractWith" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.09296" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+  <RunTo X="-7070.228" Y="-3855.308" Z="9.82985" />
+  <CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852807" />
+</If>
+<PickUp QuestName="Butcherbot" QuestId="25112" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<PickUp QuestName="Seaside Salvage" QuestId="24906" GiverName="Megs Dreadshredder" GiverId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<PickUp QuestName="Puddle Stomping" QuestId="24907" GiverName="Megs Dreadshredder" GiverId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<If Condition="HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False"/>
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <RunTo X="-7350.464" Y="-3532.854" Z="8.032914" />
+  <While Condition="!IsQuestCompleted(25112)" >
+    <CustomBehavior File="InteractWith" QuestId="25112" MobId="5419" MobState="Dead" NumOfTimes="1000"
+      InteractByUsingItemId="52715" CollectionDistance="1000" >
+      <HuntingGrounds >
+      <Hotspot X="-7350.464" Y="-3532.854" Z="8.032914" />
+      <Hotspot X="-7382.306" Y="-3508.567" Z="12.27302" />
+      <Hotspot X="-7422.675" Y="-3508.185" Z="12.91014" />
+      <Hotspot X="-7460.731" Y="-3522.188" Z="8.989619" />
+      <Hotspot X="-7499.805" Y="-3534.117" Z="11.12796" />
+      <Hotspot X="-7539.87" Y="-3539.613" Z="15.78771" />
+      <Hotspot X="-7580.511" Y="-3537.436" Z="19.00911" />
+      <Hotspot X="-7619.978" Y="-3528.293" Z="17.80799" />
+      <Hotspot X="-7659.811" Y="-3519.513" Z="23.06022" />
+      <Hotspot X="-7698.371" Y="-3506.327" Z="27.65504" />
+      <Hotspot X="-7719.384" Y="-3540.266" Z="36.83291" />
+      <Hotspot X="-7725.732" Y="-3580.435" Z="36.76946" />
+      <Hotspot X="-7735.697" Y="-3619.783" Z="42.87959" />
+      <Hotspot X="-7748.12" Y="-3658.27" Z="38.99949" />
+      <Hotspot X="-7773.928" Y="-3689.834" Z="41.62568" />
+      <Hotspot X="-7800.463" Y="-3720.056" Z="40.65907" />
+      <Hotspot X="-7810.4" Y="-3758.338" Z="47.33699" />
+      <Hotspot X="-7822.257" Y="-3796.377" Z="39.18591" />
+      <Hotspot X="-7793.719" Y="-3824.528" Z="32.45667" />
+      <Hotspot X="-7753.506" Y="-3817.491" Z="27.81241" />
+      <Hotspot X="-7714.61" Y="-3810.434" Z="21.53432" />
+      <Hotspot X="-7674.188" Y="-3806.021" Z="16.79202" />
+      <Hotspot X="-7642.909" Y="-3779.876" Z="15.76658" />
+      <Hotspot X="-7612.737" Y="-3752.476" Z="14.36769" />
+      <Hotspot X="-7579.337" Y="-3730.166" Z="12.20837" />
+      <Hotspot X="-7540.535" Y="-3718.389" Z="8.261876" />
+      <Hotspot X="-7504.427" Y="-3701.32" Z="10.65149" />
+      <Hotspot X="-7478.795" Y="-3669.573" Z="11.58078" />
+      <Hotspot X="-7461.264" Y="-3632.809" Z="9.971003" />
+      <Hotspot X="-7441.602" Y="-3597.222" Z="11.26228" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" SkinMobs="Original"/>
+</If>
+<Objective QuestName="Seaside Salvage" QuestId="24906" Type="CollectItem" ItemId="50829" CollectCount="7" />
+<If Condition="HasQuest(24907) &amp;&amp; !IsQuestCompleted(24907)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Puddle Stomping" QuestId="24907" Type="KillMob" MobId="39022" KillCount="8" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Seaside Salvage" QuestId="24906" TurnInName="Megs Dreadshredder" TurnInId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<TurnIn QuestName="Puddle Stomping" QuestId="24907" TurnInName="Megs Dreadshredder" TurnInId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<PickUp QuestName="Rocket Rescue" QuestId="24910" GiverName="Megs Dreadshredder" GiverId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<TurnIn QuestName="Butcherbot" QuestId="25112" TurnInName="Driz Plunkbow" TurnInId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<PickUp QuestName="Scavengers Scavenged" QuestId="25111" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<!--start Ballon part-->
+<If Condition="HasQuest(24910) &amp;&amp; !IsQuestCompleted(24910)" >
+  <RunTo X="-7092.517" Y="-3908.433" Z="11.24682" />
+  <CustomBehavior File="RunMacro" Macro="/cancelform" />
+  <CustomBehavior File="ForcedDismount" />
+
+<!--  <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="40604" X="-7092.517" Y="-3908.433" Z="11.24682" />
+
+
+
+  <CustomBehavior File="LoadProfile" ProfileName="erro" />
+  <While Condition="!Me.IsOnTransport" >
+  </While>
+  <CustomBehavior File="WaitTimer" WaitTime="10000" /> -->
+  
+  <CustomBehavior File="SpecificQuests\24910-Tanaris-RocketRescue" />
+</If>
+<TurnIn QuestName="Rocket Rescue" QuestId="24910" TurnInName="Megs Dreadshredder" TurnInId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<If Condition="!HasQuest(24947) &amp;&amp; !IsQuestCompleted(24947) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Momentum" QuestId="24947" GiverName="Megs Dreadshredder" GiverId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<!--End Ballon part-->
+<If Condition="HasQuest(25111) &amp;&amp; !IsQuestCompleted(25111)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <RunTo X="-7482.427" Y="-3699.511" Z="8.443866" />
+  <While Condition="!IsQuestCompleted(25111)" >
+    <CustomBehavior File="InteractWith" QuestId="25111" MobId="5429" MobState="Dead" NumOfTimes="1000"
+      InteractByUsingItemId="52715" CollectionDistance="1000" >
+      <HuntingGrounds >
+      <Hotspot X="-7482.427" Y="-3699.511" Z="8.443866" />
+      <Hotspot X="-7507.053" Y="-3667.409" Z="9.069372" />
+      <Hotspot X="-7530.21" Y="-3634.535" Z="10.46265" />
+      <Hotspot X="-7557.335" Y="-3604.094" Z="13.25252" />
+      <Hotspot X="-7621.023" Y="-3402.446" Z="50.82007" />
+      <Hotspot X="-7641" Y="-3368.009" Z="59.74607" />
+      <Hotspot X="-7662.248" Y="-3334.555" Z="67.5806" />
+      <Hotspot X="-7693.623" Y="-3310.421" Z="75.03305" />
+      <Hotspot X="-7719.278" Y="-3279.545" Z="78.10448" />
+      <Hotspot X="-7736.167" Y="-3243.149" Z="79.9162" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" SkinMobs="Original" />
+</If>
+<TurnIn QuestName="Scavengers Scavenged" QuestId="25111" TurnInName="Driz Plunkbow" TurnInId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<If Condition="!HasQuest(25115) &amp;&amp; !IsQuestCompleted(25115) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Blisterpaw Butchery" QuestId="25115" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<If Condition="HasQuest(25115) &amp;&amp; !IsQuestCompleted(25115)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <RunTo X="-7111.974" Y="-3594.469" Z="9.275411" />
+  <While Condition="!IsQuestCompleted(25115)" >
+    <CustomBehavior File="InteractWith" QuestId="25115" MobId="5426" MobState="Dead" NumOfTimes="1000"
+      InteractByUsingItemId="52715" CollectionDistance="1000" >
+      <HuntingGrounds >
+      <Hotspot X="-7111.974" Y="-3594.469" Z="9.275411" />
+      <Hotspot X="-7100.029" Y="-3555.486" Z="10.75338" />
+      <Hotspot X="-7077.791" Y="-3521.083" Z="11.62226" />
+      <Hotspot X="-7048.261" Y="-3492.719" Z="9.450078" />
+      <Hotspot X="-7041.095" Y="-3452.311" Z="11.94037" />
+      <Hotspot X="-7055.429" Y="-3414.465" Z="9.706905" />
+      <Hotspot X="-7094.912" Y="-3404.516" Z="10.19315" />
+      <Hotspot X="-7135.705" Y="-3402.692" Z="9.631824" />
+      <Hotspot X="-7176.063" Y="-3401.919" Z="10.14618" />
+      <Hotspot X="-7208.542" Y="-3376.921" Z="10.17758" />
+      <Hotspot X="-7248.79" Y="-3372.426" Z="10.01274" />
+      <Hotspot X="-7287.469" Y="-3384.616" Z="10.31236" />
+      <Hotspot X="-7309.703" Y="-3419.251" Z="9.089804" />
+      <Hotspot X="-7309.293" Y="-3460.468" Z="9.106441" />
+      <Hotspot X="-7290.5" Y="-3495.885" Z="9.994449" />
+      <Hotspot X="-7252.783" Y="-3511.776" Z="11.36022" />
+      <Hotspot X="-7218.061" Y="-3532.87" Z="10.92133" />
+      <Hotspot X="-7181.327" Y="-3549.638" Z="10.2888" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" SkinMobs="Original" />
+</If>
+<TurnIn QuestName="Blisterpaw Butchery" QuestId="25115" TurnInName="Driz Plunkbow" TurnInId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<If Condition="!HasQuest(25091) &amp;&amp; !IsQuestCompleted(25091) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Sandsorrow Watch" QuestId="25091" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
+<TurnIn QuestName="Sandsorrow Watch" QuestId="25091" TurnInName="Trenton Lighthammer" TurnInId="7804" X="-6926.155" Y="-3124.703" Z="8.835281" />
+<PickUp QuestName="I'm With Scorpid" QuestId="25521" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
+<PickUp QuestName="Blood to Thrive" QuestId="25021" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<If Condition="(HasQuest(25021) &amp;&amp; !IsQuestCompleted(25021)) || (HasQuest(25521) &amp;&amp; !IsQuestCompleted(25521))" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<If Condition="HasQuest(25521) &amp;&amp; !IsQuestCompleted(25521)" >
+  <CustomBehavior File="UserSettings" LootMobs="True" />
+</If>
+<Objective QuestName="Blood to Thrive" QuestId="25021" Type="CollectItem" ItemId="52064" CollectCount="6" />
+<If Condition="HasQuest(25021)" >
+  <CustomBehavior File="UserSettings" LootMobs="Original" />
+</If>
+<Objective QuestName="I'm With Scorpid" QuestId="25521" Type="CollectItem" ItemId="54856" CollectCount="6" />
+<If Condition="HasQuest(25021) || HasQuest(25521)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+</If>
+<TurnIn QuestName="Blood to Thrive" QuestId="25021" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<PickUp QuestName="Sang'thraze the Deflector" QuestId="25025" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<!--# # # Level 45 # # # -->
+<TurnIn QuestName="I'm With Scorpid" QuestId="25521" TurnInName="Gus Rustflutter" TurnInId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
+<If Condition="!HasQuest(25522) &amp;&amp; !IsQuestCompleted(25522) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Gargantapid" QuestId="25522" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
+<If Condition="(HasQuest(25025) &amp;&amp; !IsQuestCompleted(25025)) || (HasQuest(25522) &amp;&amp; !IsQuestCompleted(25522))">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<Objective QuestName="Gargantapid" QuestId="25522" Type="CollectItem" ItemId="54855" CollectCount="1" />
+<Objective QuestName="Sang'thraze the Deflector" QuestId="25025" Type="CollectItem" ItemId="52069" CollectCount="1" />
+<If Condition="HasQuest(25025) || HasQuest(25522)">
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Gargantapid" QuestId="25522" TurnInName="Gus Rustflutter" TurnInId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
+<TurnIn QuestName="Sang'thraze the Deflector" QuestId="25025" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<If Condition="!HasQuest(25026) &amp;&amp; !IsQuestCompleted(25026) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Darkest Mojo" QuestId="25026" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<If Condition="HasQuest(25026) &amp;&amp; !IsQuestCompleted(25026)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Darkest Mojo" QuestId="25026" Type="CollectItem" ItemId="52072" CollectCount="6" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Darkest Mojo" QuestId="25026" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<If Condition="!HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Secrets in the Oasis" QuestId="25032" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
+<If Condition="HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032)" >
+  <RunTo X="-7452.334" Y="-2882.982" Z="6.584354" />
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <While Condition="!IsQuestCompleted(25032)" >
+    <CustomBehavior File="InteractWith" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
+    <CustomBehavior File="WaitTimer" QuestId="25032" WaitTime="1000" />
+    <CustomBehavior File="InteractWith" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Secrets in the Oasis" QuestId="25032" TurnInName="Trenton Lighthammer" TurnInId="7804" X="-6926.155" Y="-3124.703" Z="8.835281" />
+<If Condition="HasQuest(24947) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<!--start Ballon part chain-->
+<TurnIn QuestName="Momentum" QuestId="24947" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<PickUp QuestName="Dead Man's Chest" QuestId="24927" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<PickUp QuestName="To The Ground!" QuestId="24928" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<PickUp QuestName="Booty Duty" QuestId="24949" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="HasQuest(24927) &amp;&amp; !IsQuestCompleted(24927) ||
+               HasQuest(24928) &amp;&amp; !IsQuestCompleted(24928) ||
+               HasQuest(24949) &amp;&amp; !IsQuestCompleted(24949)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<If Condition="HasQuest(24949) &amp;&amp; !IsQuestCompleted(24949)" >
+  <CustomBehavior File="CollectThings" QuestId="24949" ObjectId1="203019" ObjectId2="203021" ObjectId3="203022" ObjectId4="202263" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
+      <Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
+      <Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
+      <Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
+      <Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
+      <Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
+      <Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
+      <Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
+  </CustomBehavior>
+</If>
+<!--
+<Objective QuestName="Booty Duty" QuestId="24949" Type="CollectItem" ItemId="51549" CollectCount="10" /> -->
+<If Condition="HasQuest(24928) &amp;&amp; !IsQuestCompleted(24928)" >
+  <While Condition="!IsObjectiveComplete(3, 24928)" >
+    <RunTo X="-8003.37" Y="-5305.835" Z="0.5826213" />
+    <RunTo X="-7992.527" Y="-5307.542" Z="0.5805682" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(51547)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  </While>
+  <While Condition="!IsObjectiveComplete(2, 24928)" >
+    <RunTo X="-8081.734" Y="-5266.061" Z="0.6048119" />
+    <RunTo X="-8085.988" Y="-5258.66" Z="0.6796313" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(51547)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  </While>
+  <While Condition="!IsObjectiveComplete(1, 24928)" >
+    <RunTo X="-8020.773" Y="-5245.571" Z="0.5966902" />
+    <RunTo X="-8024.67" Y="-5237.192" Z="0.5958738" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(51547)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  </While>
+</If>
+<If Condition="HasQuest(24927) &amp;&amp; !IsQuestCompleted(24927)" >
+  <CustomBehavior File="CollectThings" QuestId="24927" MobId1="7855" MobId2="7858" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
+      <Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
+      <Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
+      <Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
+      <Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
+      <Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
+      <Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
+      <Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
+  </CustomBehavior>
+</If>
+<If Condition="HasQuest(24927) || HasQuest(24928) || HasQuest(24949)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Dead Man's Chest" QuestId="24927" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<PickUp QuestName="Going Off-Task" QuestId="25534" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<TurnIn QuestName="To The Ground!" QuestId="24928" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<TurnIn QuestName="Booty Duty" QuestId="24949" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="!HasQuest(25541) &amp;&amp; !IsQuestCompleted(25541) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Filling Our Pockets" QuestId="25541" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="HasQuest(25534) &amp;&amp; !IsQuestCompleted(25534)" >
+  <RunTo X="-7962.295" Y="-5439.839" Z="12.8425" />
+  <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  <Objective QuestName="Going Off-Task" QuestId="25534" Type="KillMob" MobId="40593" KillCount="1" />
+</If>
+<If Condition="HasQuest(25541) &amp;&amp; !IsQuestCompleted(25541)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True"/>
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <CustomBehavior File="CollectThings" QuestId="25541" MobId1="40632" MobId2="40635" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-8152.419" Y="-5276.068" Z="0.8975762" />
+      <Hotspot X="-8157.995" Y="-5235.178" Z="3.516941" />
+      <Hotspot X="-8174.156" Y="-5197.875" Z="2.531389" />
+      <Hotspot X="-8184.698" Y="-5158.12" Z="3.853541" />
+      <Hotspot X="-8208.329" Y="-5124.249" Z="3.727931" />
+      <Hotspot X="-8243.462" Y="-5102.378" Z="3.259301" />
+      <Hotspot X="-8283.249" Y="-5092.039" Z="3.979485" />
+      <Hotspot X="-8314.08" Y="-5118.667" Z="1.307739" />
+      <Hotspot X="-8353.678" Y="-5128.391" Z="0.7000142" />
+      <Hotspot X="-8379.993" Y="-5097.702" Z="2.313519" />
+      <Hotspot X="-8390.844" Y="-5058.07" Z="3.921426" />
+      <Hotspot X="-8350.601" Y="-5054.874" Z="3.744461" />
+      <Hotspot X="-8311.204" Y="-5067.991" Z="5.549758" />
+      <Hotspot X="-8270.651" Y="-5077.064" Z="5.571612" />
+      <Hotspot X="-8230.942" Y="-5086.568" Z="4.47315" />
+      <Hotspot X="-8199.298" Y="-5112.278" Z="4.553869" />
+      <Hotspot X="-8176.517" Y="-5145.998" Z="4.070144" />
+      <Hotspot X="-8188.07" Y="-5184.88" Z="3.483377" />
+      <Hotspot X="-8195.218" Y="-5225.7" Z="1.193607" />
+  </CustomBehavior>
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original"/>
+</If>
+<TurnIn QuestName="Going Off-Task" QuestId="25534" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<TurnIn QuestName="Filling Our Pockets" QuestId="25541" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="!HasQuest(24950) &amp;&amp; !IsQuestCompleted(24950) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Captain Dreadbeard" QuestId="24950" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<Objective QuestName="Captain Dreadbeard" QuestId="24950" Type="KillMob" MobId="38749" KillCount="1" />
+<TurnIn QuestName="Captain Dreadbeard" QuestId="24950" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="!HasQuest(25103) &amp;&amp; !IsQuestCompleted(25103) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Bootlegger Outpost" QuestId="25103" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
+<If Condition="HasQuest(25103)">
+  <!--Bootlegger Outpost-->
+  <RunTo X="-8684.399" Y="-4090.714" Z="40.41941" />
+  <CustomBehavior File="InteractWith" MobId="41214" MobState="Alive" X="-8684.64" Y="-4093.03" Z="40.45161" />
+</If>
+<TurnIn QuestName="Bootlegger Outpost" QuestId="25103" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<PickUp QuestName="Cutting Losses" QuestId="24932" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<PickUp QuestName="A Few Good Goblins" QuestId="25072" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="(HasQuest(24932) &amp;&amp; !IsQuestCompleted(24932)) || (HasQuest(25072) &amp;&amp; !IsQuestCompleted(25072))" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<If Condition="HasQuest(24932) &amp;&amp; !IsQuestCompleted(24932) &amp;&amp; HasQuest(25072) &amp;&amp; !IsQuestCompleted(25072)" >
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>14 310</Factions>
+    <Hotspots>
+      <Hotspot X="-8704.516" Y="-4134.333" Z="10.9074" />
+      <Hotspot X="-8736.274" Y="-4109.749" Z="10.08475" />
+      <Hotspot X="-8749.294" Y="-4070.467" Z="10.70455" />
+      <Hotspot X="-8761.132" Y="-4032.083" Z="10.47967" />
+      <Hotspot X="-8766.053" Y="-3990.875" Z="10.15209" />
+      <Hotspot X="-8794.74" Y="-3962.024" Z="10.36274" />
+      <Hotspot X="-8835.57" Y="-3962.563" Z="10.34527" />
+      <Hotspot X="-8875.747" Y="-3953.535" Z="9.907055" />
+      <Hotspot X="-8913.8" Y="-3965.874" Z="9.916885" />
+      <Hotspot X="-8947.734" Y="-3989.024" Z="12.73926" />
+      <Hotspot X="-8956.159" Y="-4028.459" Z="10.70262" />
+      <Hotspot X="-8933.3" Y="-4063.092" Z="9.977797" />
+      <Hotspot X="-8908.549" Y="-4094.53" Z="11.05241" />
+      <Hotspot X="-8889.945" Y="-4130.231" Z="16.26348" />
+      <Hotspot X="-8853.209" Y="-4146.527" Z="11.56638" />
+      <Hotspot X="-8813.096" Y="-4143.431" Z="10.52936" />
+      <Hotspot X="-8773.043" Y="-4139.134" Z="10.05976" />
+      <Hotspot X="-8733.3" Y="-4134.068" Z="9.954183" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(25072) || IsQuestCompleted(24932)" />
+</If>
+<If Condition="HasQuest(25072) &amp;&amp; !IsQuestCompleted(25072)">
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>14</Factions>
+    <Hotspots>
+      <Hotspot X="-8704.516" Y="-4134.333" Z="10.9074" />
+      <Hotspot X="-8736.274" Y="-4109.749" Z="10.08475" />
+      <Hotspot X="-8749.294" Y="-4070.467" Z="10.70455" />
+      <Hotspot X="-8761.132" Y="-4032.083" Z="10.47967" />
+      <Hotspot X="-8766.053" Y="-3990.875" Z="10.15209" />
+      <Hotspot X="-8794.74" Y="-3962.024" Z="10.36274" />
+      <Hotspot X="-8835.57" Y="-3962.563" Z="10.34527" />
+      <Hotspot X="-8875.747" Y="-3953.535" Z="9.907055" />
+      <Hotspot X="-8913.8" Y="-3965.874" Z="9.916885" />
+      <Hotspot X="-8947.734" Y="-3989.024" Z="12.73926" />
+      <Hotspot X="-8956.159" Y="-4028.459" Z="10.70262" />
+      <Hotspot X="-8933.3" Y="-4063.092" Z="9.977797" />
+      <Hotspot X="-8908.549" Y="-4094.53" Z="11.05241" />
+      <Hotspot X="-8889.945" Y="-4130.231" Z="16.26348" />
+      <Hotspot X="-8853.209" Y="-4146.527" Z="11.56638" />
+      <Hotspot X="-8813.096" Y="-4143.431" Z="10.52936" />
+      <Hotspot X="-8773.043" Y="-4139.134" Z="10.05976" />
+      <Hotspot X="-8733.3" Y="-4134.068" Z="9.954183" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(25072)" />
+</If>
+<If Condition="HasQuest(24932) &amp;&amp; !IsQuestCompleted(24932)">
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>310</Factions>
+    <Hotspots>
+      <Hotspot X="-8704.516" Y="-4134.333" Z="10.9074" />
+      <Hotspot X="-8736.274" Y="-4109.749" Z="10.08475" />
+      <Hotspot X="-8749.294" Y="-4070.467" Z="10.70455" />
+      <Hotspot X="-8761.132" Y="-4032.083" Z="10.47967" />
+      <Hotspot X="-8766.053" Y="-3990.875" Z="10.15209" />
+      <Hotspot X="-8794.74" Y="-3962.024" Z="10.36274" />
+      <Hotspot X="-8835.57" Y="-3962.563" Z="10.34527" />
+      <Hotspot X="-8875.747" Y="-3953.535" Z="9.907055" />
+      <Hotspot X="-8913.8" Y="-3965.874" Z="9.916885" />
+      <Hotspot X="-8947.734" Y="-3989.024" Z="12.73926" />
+      <Hotspot X="-8956.159" Y="-4028.459" Z="10.70262" />
+      <Hotspot X="-8933.3" Y="-4063.092" Z="9.977797" />
+      <Hotspot X="-8908.549" Y="-4094.53" Z="11.05241" />
+      <Hotspot X="-8889.945" Y="-4130.231" Z="16.26348" />
+      <Hotspot X="-8853.209" Y="-4146.527" Z="11.56638" />
+      <Hotspot X="-8813.096" Y="-4143.431" Z="10.52936" />
+      <Hotspot X="-8773.043" Y="-4139.134" Z="10.05976" />
+      <Hotspot X="-8733.3" Y="-4134.068" Z="9.954183" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(24932)" />
+</If>
+<If Condition="HasQuest(24932) ||  HasQuest(25072)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="A Few Good Goblins" QuestId="25072" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<TurnIn QuestName="Cutting Losses" QuestId="24932" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<!--# # # Level 46 # # # -->
+<If Condition="!HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Chicken of the Desert" QuestId="24933" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<PickUp QuestName="Gazer Tag" QuestId="24931" GiverName="Narain Soothfancy" GiverId="11811" X="-8668.307" Y="-4046.204" Z="43.67571" />
+<If Condition="(HasQuest(24931) &amp;&amp; !IsQuestCompleted(24931)) || (HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933))" >
+  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True"/>
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<If Condition="HasQuest(24931) &amp;&amp; !IsQuestCompleted(24931) &amp;&amp; HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933)" >
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>38 49</Factions>
+    <Hotspots>
+      <Hotspot X="-8547.823" Y="-4089.556" Z="17.31209" />
+      <Hotspot X="-8553.689" Y="-4130.015" Z="13.20012" />
+      <Hotspot X="-8560.825" Y="-4170.071" Z="10.06844" />
+      <Hotspot X="-8569.606" Y="-4210.117" Z="13.19676" />
+      <Hotspot X="-8553.436" Y="-4247.504" Z="13.45357" />
+      <Hotspot X="-8515.931" Y="-4263.79" Z="10.39881" />
+      <Hotspot X="-8475.74" Y="-4271.86" Z="9.145341" />
+      <Hotspot X="-8435.685" Y="-4264.426" Z="10.71808" />
+      <Hotspot X="-8407.233" Y="-4235.776" Z="15.91363" />
+      <Hotspot X="-8385.627" Y="-4201.445" Z="11.54652" />
+      <Hotspot X="-8372.979" Y="-4163.083" Z="12.64608" />
+      <Hotspot X="-8363.891" Y="-4123.413" Z="10.29674" />
+      <Hotspot X="-8354.811" Y="-4083.771" Z="14.12194" />
+      <Hotspot X="-8346.125" Y="-4044.015" Z="9.893692" />
+      <Hotspot X="-8337.124" Y="-4004.252" Z="12.92937" />
+      <Hotspot X="-8333.708" Y="-3964.334" Z="9.631112" />
+      <Hotspot X="-8356.582" Y="-3930.959" Z="12.44683" />
+      <Hotspot X="-8390.207" Y="-3908.126" Z="11.25357" />
+      <Hotspot X="-8424.635" Y="-3886.213" Z="14.25683" />
+      <Hotspot X="-8450.948" Y="-3855.753" Z="13.84877" />
+      <Hotspot X="-8484.582" Y="-3833.105" Z="20.69949" />
+      <Hotspot X="-8522.11" Y="-3817.49" Z="21.53458" />
+      <Hotspot X="-8557.284" Y="-3797.164" Z="21.60385" />
+      <Hotspot X="-8597.182" Y="-3791.086" Z="21.46632" />
+      <Hotspot X="-8604.477" Y="-3830.804" Z="26.46269" />
+      <Hotspot X="-8580.869" Y="-3863.191" Z="30.74541" />
+      <Hotspot X="-8560.297" Y="-3898.26" Z="34.42583" />
+      <Hotspot X="-8548.753" Y="-3936.18" Z="40.07637" />
+      <Hotspot X="-8532.264" Y="-3973.469" Z="35.47446" />
+      <Hotspot X="-8529.286" Y="-4014.289" Z="30.35078" />
+      <Hotspot X="-8508.679" Y="-4048.094" Z="20.65623" />
+      <Hotspot X="-8478.912" Y="-4075.897" Z="13.33718" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(24931) || IsQuestCompleted(24933)" />
+</If>
+<If Condition="HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933)" >
+  <CustomBehavior File="CollectThings" QuestId="24933" MobId="5427" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-8547.823" Y="-4089.556" Z="17.31209" />
+      <Hotspot X="-8553.689" Y="-4130.015" Z="13.20012" />
+      <Hotspot X="-8560.825" Y="-4170.071" Z="10.06844" />
+      <Hotspot X="-8569.606" Y="-4210.117" Z="13.19676" />
+      <Hotspot X="-8553.436" Y="-4247.504" Z="13.45357" />
+      <Hotspot X="-8515.931" Y="-4263.79" Z="10.39881" />
+      <Hotspot X="-8475.74" Y="-4271.86" Z="9.145341" />
+      <Hotspot X="-8435.685" Y="-4264.426" Z="10.71808" />
+      <Hotspot X="-8407.233" Y="-4235.776" Z="15.91363" />
+      <Hotspot X="-8385.627" Y="-4201.445" Z="11.54652" />
+      <Hotspot X="-8372.979" Y="-4163.083" Z="12.64608" />
+      <Hotspot X="-8363.891" Y="-4123.413" Z="10.29674" />
+      <Hotspot X="-8354.811" Y="-4083.771" Z="14.12194" />
+      <Hotspot X="-8346.125" Y="-4044.015" Z="9.893692" />
+      <Hotspot X="-8337.124" Y="-4004.252" Z="12.92937" />
+      <Hotspot X="-8333.708" Y="-3964.334" Z="9.631112" />
+      <Hotspot X="-8356.582" Y="-3930.959" Z="12.44683" />
+      <Hotspot X="-8390.207" Y="-3908.126" Z="11.25357" />
+      <Hotspot X="-8424.635" Y="-3886.213" Z="14.25683" />
+      <Hotspot X="-8450.948" Y="-3855.753" Z="13.84877" />
+      <Hotspot X="-8484.582" Y="-3833.105" Z="20.69949" />
+      <Hotspot X="-8522.11" Y="-3817.49" Z="21.53458" />
+      <Hotspot X="-8557.284" Y="-3797.164" Z="21.60385" />
+      <Hotspot X="-8597.182" Y="-3791.086" Z="21.46632" />
+      <Hotspot X="-8604.477" Y="-3830.804" Z="26.46269" />
+      <Hotspot X="-8580.869" Y="-3863.191" Z="30.74541" />
+      <Hotspot X="-8560.297" Y="-3898.26" Z="34.42583" />
+      <Hotspot X="-8548.753" Y="-3936.18" Z="40.07637" />
+      <Hotspot X="-8532.264" Y="-3973.469" Z="35.47446" />
+      <Hotspot X="-8529.286" Y="-4014.289" Z="30.35078" />
+      <Hotspot X="-8508.679" Y="-4048.094" Z="20.65623" />
+      <Hotspot X="-8478.912" Y="-4075.897" Z="13.33718" />
+  </CustomBehavior>
+</If>
+<If Condition="HasQuest(24931) &amp;&amp; !IsQuestCompleted(24931)" >
+  <CustomBehavior File="CollectThings" QuestId="24931" MobId="5420" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-8547.823" Y="-4089.556" Z="17.31209" />
+      <Hotspot X="-8553.689" Y="-4130.015" Z="13.20012" />
+      <Hotspot X="-8560.825" Y="-4170.071" Z="10.06844" />
+      <Hotspot X="-8569.606" Y="-4210.117" Z="13.19676" />
+      <Hotspot X="-8553.436" Y="-4247.504" Z="13.45357" />
+      <Hotspot X="-8515.931" Y="-4263.79" Z="10.39881" />
+      <Hotspot X="-8475.74" Y="-4271.86" Z="9.145341" />
+      <Hotspot X="-8435.685" Y="-4264.426" Z="10.71808" />
+      <Hotspot X="-8407.233" Y="-4235.776" Z="15.91363" />
+      <Hotspot X="-8385.627" Y="-4201.445" Z="11.54652" />
+      <Hotspot X="-8372.979" Y="-4163.083" Z="12.64608" />
+      <Hotspot X="-8363.891" Y="-4123.413" Z="10.29674" />
+      <Hotspot X="-8354.811" Y="-4083.771" Z="14.12194" />
+      <Hotspot X="-8346.125" Y="-4044.015" Z="9.893692" />
+      <Hotspot X="-8337.124" Y="-4004.252" Z="12.92937" />
+      <Hotspot X="-8333.708" Y="-3964.334" Z="9.631112" />
+      <Hotspot X="-8356.582" Y="-3930.959" Z="12.44683" />
+      <Hotspot X="-8390.207" Y="-3908.126" Z="11.25357" />
+      <Hotspot X="-8424.635" Y="-3886.213" Z="14.25683" />
+      <Hotspot X="-8450.948" Y="-3855.753" Z="13.84877" />
+      <Hotspot X="-8484.582" Y="-3833.105" Z="20.69949" />
+      <Hotspot X="-8522.11" Y="-3817.49" Z="21.53458" />
+      <Hotspot X="-8557.284" Y="-3797.164" Z="21.60385" />
+      <Hotspot X="-8597.182" Y="-3791.086" Z="21.46632" />
+      <Hotspot X="-8604.477" Y="-3830.804" Z="26.46269" />
+      <Hotspot X="-8580.869" Y="-3863.191" Z="30.74541" />
+      <Hotspot X="-8560.297" Y="-3898.26" Z="34.42583" />
+      <Hotspot X="-8548.753" Y="-3936.18" Z="40.07637" />
+      <Hotspot X="-8532.264" Y="-3973.469" Z="35.47446" />
+      <Hotspot X="-8529.286" Y="-4014.289" Z="30.35078" />
+      <Hotspot X="-8508.679" Y="-4048.094" Z="20.65623" />
+      <Hotspot X="-8478.912" Y="-4075.897" Z="13.33718" />
+  </CustomBehavior>
+</If>
+<If Condition="HasQuest(24931) || HasQuest(24933)" >
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original"/>
+</If>
+<TurnIn QuestName="Gazer Tag" QuestId="24931" TurnInName="Narain Soothfancy" TurnInId="11811" X="-8668.307" Y="-4046.204" Z="43.67571" />
+<TurnIn QuestName="Chicken of the Desert" QuestId="24933" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="!HasQuest(24951) &amp;&amp; !IsQuestCompleted(24951) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="A Great Idea" QuestId="24951" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="HasQuest(24951) &amp;&amp; !IsQuestCompleted(24951)">
+  <While Condition="!IsQuestCompleted(24951)">
+    <RunTo X="-8844.456" Y="-3787.441" Z="17.68003" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
+    <CustomBehavior File="ForcedDismount" />
+    <While Condition="!Me.HasAura(72681)" >
+      <CustomBehavior File="CombatUseItemOnV2" MobId="5451" ItemId="52031" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
+        UseWhenMeMissingAuraId="72681" MaxRangeToUseItem="15" UseItemStrategy="UseItemOncePerTarget" WaitTimeAfterItemUse="5000" >
+      <HuntingGrounds WaypointVisitStrategy="InOrder">
+      <Hotspot X="-8897.153" Y="-3798.257" Z="11.32741" />
+      <Hotspot X="-8934.324" Y="-3780.935" Z="10.12201" />
+      <Hotspot X="-8968.739" Y="-3759.774" Z="11.45411" />
+      <Hotspot X="-9001.799" Y="-3735.395" Z="9.908106" />
+      <Hotspot X="-9040.569" Y="-3723.637" Z="9.754404" />
+      <Hotspot X="-9080.35" Y="-3732.965" Z="10.30662" />
+      <Hotspot X="-9118.175" Y="-3716.468" Z="9.98896" />
+      <Hotspot X="-9154.419" Y="-3699.417" Z="10.26254" />
+      <Hotspot X="-9194.314" Y="-3702.782" Z="11.35958" />
+      <Hotspot X="-9233.142" Y="-3713.498" Z="10.56906" />
+      <Hotspot X="-9270.857" Y="-3727.269" Z="10.96708" />
+      <Hotspot X="-9308.772" Y="-3741.106" Z="10.77544" />
+      <Hotspot X="-9338.308" Y="-3768.345" Z="10.41635" />
+      <Hotspot X="-9328.152" Y="-3808.191" Z="11.15159" />
+      <Hotspot X="-9311.709" Y="-3844.978" Z="11.24608" />
+      <Hotspot X="-9279.646" Y="-3869.73" Z="10.54086" />
+      <Hotspot X="-9242.455" Y="-3884.982" Z="10.22361" />
+      <Hotspot X="-9206.542" Y="-3904.175" Z="10.097" />
+      <Hotspot X="-9168.426" Y="-3916.66" Z="11.12928" />
+      <Hotspot X="-9127.177" Y="-3920.426" Z="9.456616" />
+      <Hotspot X="-9094.243" Y="-3944.673" Z="10.31336" />
+      <Hotspot X="-9062.459" Y="-3969.834" Z="12.38208" />
+      <Hotspot X="-9030.41" Y="-3994.217" Z="9.056857" />
+      <Hotspot X="-8998.295" Y="-4018.649" Z="11.09581" />
+      <Hotspot X="-8966.032" Y="-4043.194" Z="10.48394" />
+      <Hotspot X="-8927.1" Y="-4053.919" Z="10.40947" />
+      <Hotspot X="-8902.377" Y="-4022.166" Z="11.50323" />
+      <Hotspot X="-8877.569" Y="-3990.494" Z="11.00647" />
+      <Hotspot X="-8857.183" Y="-3955.61" Z="10.64864" />
+      <Hotspot X="-8838.416" Y="-3919.802" Z="10.81522" />
+      <Hotspot X="-8836.389" Y="-3879.122" Z="10.42979" />
+      <Hotspot X="-8850.559" Y="-3841.238" Z="10.7066" />
+      </HuntingGrounds>
+      </CustomBehavior>
+
+
+
+
+
+    </While>
+    <While Condition="Me.HasAura(72681)" >
+      <RunTo X="-8695.619" Y="-4076.76" Z="40.38917" />
+    </While>
+  </While>
+  <CustomBehavior File="UserSettings" UseMount="True" />
+</If>
+<TurnIn QuestName="A Great Idea" QuestId="24951" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="!HasQuest(24953) &amp;&amp; !IsQuestCompleted(24953) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Just Trying to Kill Some Bugs" QuestId="24953" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="HasQuest(24953) &amp;&amp; !IsQuestCompleted(24953)">
+  <While Condition="!IsQuestCompleted(24953)">
+    <While Condition="!Me.IsOnTransport" >
+      <CustomBehavior File="InteractWith" MobId="11811" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8668.247" Y="-4046.139" Z="43.67683" />
+    </While>
+    <CustomBehavior File="Vehicles\VehicleMover" QuestId="24953" VehicleId="38748" SpellId="73211" X="-9238.78" Y="-3992.896" Z="-38.73989" />
+  </While>
+  <CustomBehavior File="WaitTimer" WaitTime="8000" />
+</If>
+<TurnIn QuestName="Just Trying to Kill Some Bugs" QuestId="24953" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<If Condition="!HasQuest(24905) &amp;&amp; !IsQuestCompleted(24905) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Returning a Favor" QuestId="24905" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
+<TurnIn QuestName="Returning a Favor" QuestId="24905" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<PickUp QuestName="Un-Chartered" QuestId="24955" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="HasQuest(24955) &amp;&amp; !IsQuestCompleted(24955)">
+  <RunTo X="-8333.085" Y="-3197.027" Z="16.8874" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
+  <While Condition="!IsQuestCompleted(24955)">
+    <While Condition="!Me.HasAura(72984)" >
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(52038)" WaitTime="1000" />
+      <If Condition="!Me.HasAura(72984)" >
+        <RunTo X="-8333.085" Y="-3197.027" Z="16.8874" />
+      </If>
+    </While>
+    <If Condition="Me.HasAura(72984) &amp;&amp; !IsQuestCompleted(24955)" >
+      <CustomBehavior File="InteractWith" MobId1="5471" MobId2="5472" MobId3="5473" MobId4="5474" MobId5="5475" MobState="Alive"
+       InteractByGossipOptions="1" NumOfTimes="1" IgnoreCombat="True" WaitTime="3000" CollectionDistance="1000">
+        <HuntingGrounds>
+        <Hotspot X="-8347.243" Y="-3137.925" Z="8.841303" />
+        <Hotspot X="-8335.741" Y="-3098.435" Z="8.698543" />
+        <Hotspot X="-8300.977" Y="-3076.452" Z="8.625485" />
+        <Hotspot X="-8269.189" Y="-3051.549" Z="9.863403" />
+        <Hotspot X="-8279.102" Y="-3012.276" Z="8.895179" />
+        <Hotspot X="-8319.039" Y="-3016.634" Z="8.624903" />
+        <Hotspot X="-8358.966" Y="-3023.908" Z="8.754727" />
+        <Hotspot X="-8399.143" Y="-3020.319" Z="8.627631" />
+        <Hotspot X="-8439.442" Y="-3016.076" Z="8.625319" />
+        <Hotspot X="-8479.926" Y="-3011.814" Z="10.93727" />
+        <Hotspot X="-8484.223" Y="-3052.52" Z="10.43727" />
+        <Hotspot X="-8466.592" Y="-3089.726" Z="10.29511" />
+        <Hotspot X="-8449.159" Y="-3126.512" Z="10.30507" />
+        <Hotspot X="-8424.889" Y="-3158.326" Z="8.651487" />
+        <Hotspot X="-8384.485" Y="-3161.463" Z="8.886728" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+  </While>
+  <Runto X="-8300.956" Y="-3274.836" Z="24.47888" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
+</If>
+<TurnIn QuestName="Un-Chartered" QuestId="24955" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="!HasQuest(24957) &amp;&amp; !IsQuestCompleted(24957) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Get The Centipaarty Started" QuestId="24957" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="HasQuest(24957) &amp;&amp; !IsQuestCompleted(24957)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Get The Centipaarty Started" QuestId="24957" Type="CollectItem" ItemId="52041" CollectCount="20" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Get The Centipaarty Started" QuestId="24957" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="!HasQuest(24963) &amp;&amp; !IsQuestCompleted(24963) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Maul 'Em With Kindness" QuestId="24963" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="HasQuest(24963) &amp;&amp; !IsQuestCompleted(24963)">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <While Condition="!IsQuestCompleted(24963)">
+    <CustomBehavior File="CombatUseItemOnV2" QuestId="24963" ItemId="52044" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
+      MobId1="5471" MobId2="5472" MobId3="5473" MobId4="5474" MobId5="5475" UseWhenMobHasHealthPercent="40" MaxRangeToUseItem="20"
+      UseItemStrategy="UseItemOncePerTarget" RecallPetAtMobPercentHealth="40" NumOfTimesToUseItem="8" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="-8347.243" Y="-3137.925" Z="8.841303" />
+        <Hotspot X="-8335.741" Y="-3098.435" Z="8.698543" />
+        <Hotspot X="-8300.977" Y="-3076.452" Z="8.625485" />
+        <Hotspot X="-8269.189" Y="-3051.549" Z="9.863403" />
+        <Hotspot X="-8279.102" Y="-3012.276" Z="8.895179" />
+        <Hotspot X="-8319.039" Y="-3016.634" Z="8.624903" />
+        <Hotspot X="-8358.966" Y="-3023.908" Z="8.754727" />
+        <Hotspot X="-8399.143" Y="-3020.319" Z="8.627631" />
+        <Hotspot X="-8439.442" Y="-3016.076" Z="8.625319" />
+        <Hotspot X="-8479.926" Y="-3011.814" Z="10.93727" />
+        <Hotspot X="-8484.223" Y="-3052.52" Z="10.43727" />
+        <Hotspot X="-8466.592" Y="-3089.726" Z="10.29511" />
+        <Hotspot X="-8449.159" Y="-3126.512" Z="10.30507" />
+        <Hotspot X="-8424.889" Y="-3158.326" Z="8.651487" />
+        <Hotspot X="-8384.485" Y="-3161.463" Z="8.886728" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Maul 'Em With Kindness" QuestId="24963" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="!HasQuest(25001) &amp;&amp; !IsQuestCompleted(25001) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Sandscraper" QuestId="25001" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="HasQuest(25001) &amp;&amp; !IsQuestCompleted(25001)">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Sandscraper" QuestId="25001" Type="KillMob" MobId="38880" KillCount="1" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<PickUp QuestName="Sandscraper's Treasure" QuestId="25014" GiverType="GameObject" GiverName="Sandscraper's Chest" GiverId="202407" X="-8535.391" Y="-3081.619" Z="8.686526" />
+<TurnIn QuestName="Sandscraper" QuestId="25001" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<TurnIn QuestName="Sandscraper's Treasure" QuestId="25014" TurnInName="Megs Dreadshredder" TurnInId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="!HasQuest(25018) &amp;&amp; !IsQuestCompleted(25018) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Andoren Will Know" QuestId="25018" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
+<If Condition="HasQuest(25018)">
+  <!--Dawnrise Expedition-->
+  <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
+  <CustomBehavior File="InteractWith" MobId="41215" MobState="Alive" X="-9490.44" Y="-2464.22" Z="17.00078" />
+</If>
+<TurnIn QuestName="Andoren Will Know" QuestId="25018" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<!--# # # Level 47 # # # -->
+<PickUp QuestName="Laying Claim" QuestId="25019" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<PickUp QuestName="Fragments of Language" QuestId="25020" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<PickUp QuestName="The Thunderdrome!" QuestId="26896" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00522" />
+<If Condition="HasQuest(25019) &amp;&amp; !IsQuestCompleted(25019)">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+</If>
+<Objective QuestName="Fragments of Language" QuestId="25020" Type="CollectItem" ItemId="52061" CollectCount="5" />
+<Objective QuestName="Laying Claim" QuestId="25019" Type="KillMob" MobId="38998" KillCount="10" />
+<If Condition="HasQuest(25019)">
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Laying Claim" QuestId="25019" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<TurnIn QuestName="Fragments of Language" QuestId="25020" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<If Condition="!HasQuest(25017) &amp;&amp; !IsQuestCompleted(25017) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="Ancient Obstacles" QuestId="25017" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<If Condition="HasQuest(25017) &amp;&amp; !IsQuestCompleted(25017)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Ancient Obstacles" QuestId="25017" Type="KillMob" MobId="38914" KillCount="6" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="Ancient Obstacles" QuestId="25017" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<If Condition="!HasQuest(25068) &amp;&amp; !IsQuestCompleted(25068) &amp;&amp; Me.LevelFraction &gt;= 47.55">
+  <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+  <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+  <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</If>
+<PickUp QuestName="The Crumbling Past" QuestId="25068" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<PickUp QuestName="The Secrets of Uldum" QuestId="25069" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<If Condition="HasQuest(25068) &amp;&amp; !IsQuestCompleted(25068)" >
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="The Crumbling Past" QuestId="25068" Type="CollectItem" ItemId="52284" CollectCount="5" />
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="The Secrets of Uldum" QuestId="25069" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
+  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
+    <CustomBehavior File="UserSettings" PullDistance="40" />
+  </If>
+  <While Condition="!IsQuestCompleted(25070)">
+    <CustomBehavior File="InteractWith" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
+    <CustomBehavior File="WaitTimer" WaitTime="1000" />
+    <CustomBehavior File="InteractWith" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
+  </While>
+  <CustomBehavior File="UserSettings" PullDistance="1" />
+</If>
+<TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<PickUp QuestName="The Grand Tablet" QuestId="25107" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
+<TurnIn QuestName="The Crumbling Past" QuestId="25068" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<TurnIn QuestName="The Grand Tablet" QuestId="25107" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
+<If Condition="HasQuest(26896)">
+  <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
+</If>
+<TurnIn QuestName="The Thunderdrome!" QuestId="26896" TurnInName="Dr. Dealwell" TurnInId="39034" X="-7119.906" Y="-3797.747" Z="8.69972" />
+<CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
+<CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
+<RunTo X="2159.62" Y="-1144.05" Z="97.87" />
+<CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
+<RunTo X="3972.84" Y="-1324.51" Z="244.803" />
+<CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
+</QuestOrder>
+</HBProfile>
+
