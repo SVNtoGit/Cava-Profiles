@@ -334,6 +334,7 @@
 <If Condition="HasQuest(9313)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
@@ -858,6 +859,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](11-16)Darkshore[Cava]" />
   </If>
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />

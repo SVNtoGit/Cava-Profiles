@@ -384,6 +384,7 @@
 <If Condition="!HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>

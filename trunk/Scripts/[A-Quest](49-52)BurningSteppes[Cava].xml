@@ -347,8 +347,6 @@
 <If Condition="Me.Class == WoWClass.Warlock">
   <CustomBehavior File="UserSettings" MountName="23161" />
 </If>
-<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
-  Text="This profile use special Quest Behaviors, be sure Cava's folder is at right place" />
 <CustomBehavior File="Message" Text="Compiling Burning Steppes Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 49.55 # # # -->
 <!--<If Condition="(Me.LevelFraction &gt;= 52.18 )">
@@ -373,6 +371,7 @@
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
@@ -2103,6 +2102,7 @@
   <RunTo X="-8363.565" Y="-2755.859" Z="186.1545" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -2379,6 +2379,7 @@
       <Hop X="-8098.61" Y="-2563.806" Z="195.7688" />
     </CustomBehavior>
     <CustomBehavior File="ToggleCombat" CombatEnabled="True" />
+    <CustomBehavior File="EjectVeh"/>
   </While>
 </If>
 <TurnIn QuestName="Assault on Dreadmaul Rock" QuestId="28320" TurnInName="Colonel Troteman" TurnInId="48307" X="-8395.82" Y="-2785.71" Z="194.7973" />

@@ -560,6 +560,7 @@
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -989,6 +990,7 @@
 <If Condition="HasQuest(26935)">
   <CustomBehavior File="UserSettings" LootMobs="Original" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />

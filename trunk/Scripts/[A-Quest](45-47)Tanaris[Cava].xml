@@ -1,4 +1,4 @@
-<HBProfile creator="Cava" version="1">
+<HBProfile creator="Cava" >
 <Name>[A-Quest] (45-47) Tanaris [Cava] $Rev: 354 $:</Name>
 
 <MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
@@ -225,6 +225,7 @@
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
