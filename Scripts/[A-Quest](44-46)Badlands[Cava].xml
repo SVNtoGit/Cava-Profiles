@@ -316,22 +316,16 @@
 </If>
 <CustomBehavior File="Message" Text="Compiling Badlands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 44.45 # # # -->
-<If Condition="!HasQuest(27763) &amp;&amp; !IsQuestCompleted(27763) &amp;&amp; (Me.Z &gt; 30) &amp;&amp; !IsQuestCompleted(27774)" >
-    <RunTo X="-6543.251" Y="-4444.295" Z="332.0785" />
-    <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="MyCTM" X="-6551.343" Y="-4446.272" Z="332.6061" />
-    <PickUp QuestName="To Fuselight Proper" QuestId="27763" GiverName="Eddie Flofizzle" GiverId="46650" X="-6651.38" Y="-4746.83" Z="8.326117" />
-</If>
-<If Condition="HasQuest(27763) &amp;&amp; (Me.Z &lt; 30)" >
+<If Condition="!HasQuest(27774) &amp;&amp; !IsQuestCompleted(27774) &amp;&amp; (Me.Z &lt; 30)" >
   <RunTo X="-6521.558" Y="-4609.543" Z="28.16842" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="MyCTM" X="-6518.758" Y="-4605.463" Z="28.83165" />
-  <TurnIn QuestName="To Fuselight Proper" QuestId="27763" TurnInName="Dolph Blastus" TurnInId="46652" X="-6639.79" Y="-3900.45" Z="379.2945" />
 </If>
 <If Condition="!HasQuest(27774) &amp;&amp; !IsQuestCompleted(27774)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48057" WaitTime="1000" CollectionDistance="50" X="-6598.258" Y="-3899.367" Z="379.1715" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48057" WaitTime="1000" CollectionDistance="50" X="-6598.258" Y="-3899.367" Z="379.1715" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
@@ -642,6 +636,7 @@
 <If Condition="!HasQuest(27825) &amp;&amp; !IsQuestCompleted(27825)">
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />

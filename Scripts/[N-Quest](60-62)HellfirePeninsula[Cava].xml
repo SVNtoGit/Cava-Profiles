@@ -1828,6 +1828,7 @@
     <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="InteractWith" MobId="22225" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="179.7871" Y="2605.4" Z="87.28379" />
+    <CustomBehavior File="InteractWith" MobId="22225" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="179.7871" Y="2605.4" Z="87.28379" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -2333,6 +2334,7 @@
   <TurnIn QuestName="Investigate the Crash" QuestId="10213" TurnInName="&quot;Screaming&quot; Screed Luckheed" TurnInId="19367" X="-1096.863" Y="3001.191" Z="8.195295" />
   <If Condition="!HasQuest(10161) &amp;&amp; !IsQuestCompleted(10161)">
     <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
+    <CustomBehavior File="InteractWith" MobId="19561" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="-1329.014" Y="2397.584" Z="89.07536" />
     <CustomBehavior File="InteractWith" MobId="19561" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="-1329.014" Y="2397.584" Z="89.07536" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
@@ -3219,6 +3221,7 @@
     <CustomBehavior File="FlyTo" X="-599.9945" Y="4164.848" Z="64.92676" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+    <CustomBehavior File="InteractWith" MobId="18997" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="-587.4686" Y="4171.818" Z="65.99724" />
     <CustomBehavior File="InteractWith" MobId="18997" MobState="Alive" KeepTargetSelected="True" NonCompeteDistance="0" X="-587.4686" Y="4171.818" Z="65.99724" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />

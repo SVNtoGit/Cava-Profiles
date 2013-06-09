@@ -763,6 +763,7 @@
 <If Condition="!HasQuest(10210) &amp;&amp; !IsQuestCompleted(10210)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1486,6 +1487,7 @@
 <If Condition="!HasQuest(9990) &amp;&amp; !IsQuestCompleted(9990)">
   <PickUp QuestName="Investigate Tuurem" QuestId="9990" GiverName="Wind Trader Lathrai" GiverId="18484" X="-1741.71" Y="5191.837" Z="-40.20834" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
