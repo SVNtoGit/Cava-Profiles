@@ -377,27 +377,19 @@
 <!--# # # Level 4 # # # -->
 <If Condition="HasQuest(8327)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
 <TurnIn QuestName="Report to Lanthan Perilon" QuestId="8327" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="!HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="2066.672" Y="285.47" Z="97.03136" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
-    GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
-    StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
-    TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
-    TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
-  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3310" WaitTime="1000" CollectionDistance="50" X="1799.95" Y="-4370.14" Z="102.6434" />
-  <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" TaxiNumber="5" WaitTime="5000" />
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <PickUp QuestName="Aggression" QuestId="8334" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334)" >
@@ -431,20 +423,12 @@
 </If>
 <TurnIn QuestName="Aggression" QuestId="8334" TurnInName="Lanthan Perilon" TurnInId="15281" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="2066.672" Y="285.47" Z="97.03136" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
-    GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
-    StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
-    TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
-    TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
-  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3310" WaitTime="1000" CollectionDistance="50" X="1799.95" Y="-4370.14" Z="102.6434" />
-  <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" TaxiNumber="5" WaitTime="5000" />
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+<CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
+  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
@@ -493,22 +477,11 @@
 <TurnIn QuestName="Package Recovery" QuestId="9705" TurnInId="15301" TurnInName="Outrunner Alarion" X="9984.044" Y="-6478.019" Z="0.9970118" />
 <PickUp QuestName="Completing the Delivery" QuestId="8350" GiverName="Outrunner Alarion" GiverId="15301" X="9984.044" Y="-6478.019" Z="0.9970118" />
 <TurnIn QuestName="Completing the Delivery" QuestId="8350" TurnInName="Innkeeper Delaniel" TurnInId="15433" X="9476.913" Y="-6859.21" Z="17.34164" />
-<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+<CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
 <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
 <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-<RunTo X="2066.672" Y="285.47" Z="97.03136" />
-<CustomBehavior File="UseTransport" TransportId="164871"
-  WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
-  GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
-  StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
-  TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
-  TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
-<RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-<CustomBehavior File="WaitTimer" WaitTime="1000" />
-<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3310" WaitTime="1000" CollectionDistance="50" X="1799.95" Y="-4370.14" Z="102.6434" />
-<CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" TaxiNumber="5" WaitTime="5000" />
-<RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+<RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </QuestOrder>
 </HBProfile>

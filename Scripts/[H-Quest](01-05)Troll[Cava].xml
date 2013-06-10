@@ -708,8 +708,16 @@
   <TurnIn QuestName="More Than Expected" QuestId="24755" TurnInName="Vol'Jin" TurnInId="38966" X="-1318.085" Y="-5603.771" Z="23.7197" />
 </If>
 <If Condition="!HasQuest(25064) &amp;&amp; !IsQuestCompleted(25064) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <PickUp QuestName="Moraya'" QuestId="25064" GiverName="Vol'jin" GiverId="38966" X="-1318.085" Y="-5603.771" Z="23.7197" />
 <PickUp QuestName="Crab Fishin'" QuestId="25037" GiverName="Tora'jin" GiverId="39007" X="-1282.203" Y="-5585" Z="20.98982" />
@@ -726,8 +734,16 @@
 <PickUp QuestName="A Troll's Truest Companion" QuestId="24622" GiverName="Moraya" GiverId="38005" X="-1291.92" Y="-5518.061" Z="20.76728" />
 <TurnIn QuestName="A Troll's Truest Companion" QuestId="24622" TurnInName="Kijara" TurnInId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
 <If Condition="!HasQuest(24623) &amp;&amp; !IsQuestCompleted(24623) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <PickUp QuestName="Saving the Young" QuestId="24623" GiverName="Kijara" GiverId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
 <PickUp QuestName="Mercy for the Lost" QuestId="24624" GiverName="Tegashi" GiverId="37987" X="-1548.524" Y="-5317.635" Z="7.809188" />
@@ -777,8 +793,16 @@
 </If>
 <TurnIn QuestName="Young and Vicious" QuestId="24626" TurnInName="Moraya" TurnInId="38005" X="-1291.92" Y="-5518.061" Z="20.76728" />
 <If Condition="!HasQuest(25035) &amp;&amp; !IsQuestCompleted(25035) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <If Condition="!HasQuest(25035) &amp;&amp; !IsQuestCompleted(25035)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
@@ -826,14 +850,15 @@
 </If>
 <TurnIn QuestName="No More Mercy" QuestId="24812" TurnInName="Morakki" TurnInId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
 <TurnIn QuestName="Territorial Fetish" QuestId="24813" TurnInName="Morakki" TurnInId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
-<RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-<CustomBehavior File="LoadProfile" ProfileName="[H-Quest]Durotar(5-8)[Cava]" /> -->
-
-
-
-<If Condition="!HasQuest(25172) &amp;&amp; !IsQuestCompleted(25172) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="-821.2162" Y="-4921.418" Z="19.29425" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
-</If>
+<CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+  WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+  GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+  StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+  TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+  TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </QuestOrder>
 </HBProfile>
