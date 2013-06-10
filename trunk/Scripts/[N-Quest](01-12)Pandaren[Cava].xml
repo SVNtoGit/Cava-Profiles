@@ -1334,6 +1334,7 @@
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="15000" />
   </If>
   <TurnIn QuestName="An Old Pit Fighter" QuestId="30989" TurnInName="King Varian Wrynn" TurnInId="29611" />
+  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="Me.IsHorde" >
   <TurnIn QuestName="A New Fate" QuestId="31450" TurnInName="Ji Firepaw" TurnInId="60570" X="1363.75" Y="-4372.512" Z="26.08051" />
@@ -1360,7 +1361,17 @@
     <GrindTo Condition="(IsQuestCompleted(31014))" />
   </If>
   <TurnIn QuestName="Hellscream's Gift" QuestId="31014" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.585" Y="-4343.08" Z="28.36353" />
+  <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+  <CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+  <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
+  <CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-23)SilverpineForest[Cava]" />
 </If>
-<CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </QuestOrder>
 </HBProfile>

@@ -719,7 +719,7 @@
 </If>
 <If Condition="HasQuest(29679) &amp;&amp; !IsQuestCompleted(29679)" >
   <While Condition="!IsQuestCompleted(29679)" >
-    <CustomBehavior File="InteractWith"  QuestId="29679" NonCompeteDistance="0" MobId="60488" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60488" />
   </While>
 </If>
 <TurnIn QuestName="A New Friend" QuestId="29679" TurnInName="Aysa Cloudsinger" TurnInId="54975" X="1086.083" Y="2847.487" Z="92.64539" />
@@ -1118,26 +1118,16 @@
   <GrindTo Condition="IsQuestCompleted(31014)" />
 </If>
 <TurnIn QuestName="Hellscream's Gift" QuestId="31014" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.585" Y="-4343.08" Z="28.36353" />
-<CustomBehavior File="Message" Text="Moving to NORTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
-<PickUp QuestName="Preserving the Barrens" QuestId="26642" GiverName="Gotura Fourwinds" GiverId="35068" X="1660.771" Y="-4334.878" Z="26.76502" />
-<If Condition="!HasQuest(840) &amp;&amp; !IsQuestCompleted(840)">
-  <RunTo X="1759.134" Y="-4408.32" Z="42.50751" />
-  <CustomBehavior File="UseTransport" TransportId="206610"
-    WaitAtX="1760.318" WaitAtY="-4404.6" WaitAtZ="42.50699"
-    GetOffX="1759.831" GetOffY="-4403.512" GetOffZ="109.6217"
-    StandOnX="1756.602" StandOnY="-4398.825" StandOnZ="42.744"
-    TransportStartX="1755.314" TransportStartY="-4396.597" TransportStartZ="42.01785"
-    TransportEndX="1755.314" TransportEndY="-4396.597" TransportEndZ="109.2562" />
-<!--fix for elevator end-->
-  <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3310" WaitTime="1000" CollectionDistance="50" X="1799.95" Y="-4370.14" Z="102.6434" />
-  <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" TaxiNumber="6" WaitTime="5000" />
-</If>
-<PickUp QuestName="Conscript of the Horde" QuestId="840" GiverName="Takrin Pathseeker" GiverId="3336" X="271.8056" Y="-4650.833" Z="13.75506" />
-<CustomBehavior File="Message" Text="Moving to NORTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
-<TurnIn QuestName="Conscript of the Horde" QuestId="840" TurnInName="Kargal Battlescar" TurnInId="3337" X="301.1074" Y="-3685.806" Z="27.10914" />
-<TurnIn QuestName="Preserving the Barrens" QuestId="26642" TurnInName="Kargal Battlescar" TurnInId="3337" X="301.1074" Y="-3685.806" Z="27.10914" />
-<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](10-13)NorthernBarrens[Cava]" />
+<CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="Cava\UseTransport2" TransportId="164871"
+  WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+  GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+  StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+  TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+  TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<RunTo X="1421.067" Y="1019.964" Z="52.67456" />
+<CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-23)SilverpineForest[Cava]" />
 </QuestOrder>
 </HBProfile>
