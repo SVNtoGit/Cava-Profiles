@@ -494,7 +494,7 @@
 </If>
 <PickUp QuestName="Vorsha the Lasher" QuestId="6641" GiverName="Muglash" GiverId="12717" X="3358.74" Y="964.2664" Z="7.404234" />
 <If Condition="HasQuest(6641) &amp;&amp; !IsQuestCompleted(6641)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" UseMount="False"/>
+  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="False" UseMount="False"/>
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(6641)" >
     <CustomBehavior File="EscortGroup" QuestId="6641" EscortNpcId="12717" EscortCompleteWhen="DestinationReached" EscortCompleteX="3609.234" EscortCompleteY="1146.588" EscortCompleteZ="7.994207" />
@@ -512,7 +512,7 @@
       <PickUp QuestName="Vorsha the Lasher" QuestId="6641" GiverName="Muglash" GiverId="12717" X="3358.74" Y="964.2664" Z="7.404234" />
 	</If>
   </While>
-  <CustomBehavior File="UserSettings" UseMount="True"/>
+  <CustomBehavior File="UserSettings" LootMobs="Original" UseMount="True"/>
 </If>
 <If Condition="HasQuest(13890) &amp;&amp;!IsQuestCompleted(13890)">
   <While Condition="!IsQuestCompleted(13890)">
