@@ -360,7 +360,7 @@
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
 	<CustomBehavior File="UserSettings" PullDistance="35" />
   </If>
-  <CustomBehavior File="CollectThings" QuestId="27031" MobId="44628" MobState="Alive" CollectItemCount="3" CollectItemId="60792" HuntingGroundRadius="200" >
+  <CustomBehavior File="Cava\PullThings" QuestId="27031" PullMob="True" MobId="44628" MobState="Alive" CollectItemCount="3" CollectItemId="60792" HuntingGroundRadius="200" >
     <Hotspot X="-5627.713" Y="-4186.69" Z="391.0838" />
     <Hotspot X="-5588.631" Y="-4175.799" Z="383.5922" />
     <Hotspot X="-5590.702" Y="-4135.507" Z="379.7953" />
@@ -382,8 +382,6 @@
     <Hotspot X="-5711.741" Y="-4181.272" Z="384.957" />
     <Hotspot X="-5671.875" Y="-4190.501" Z="387.7491" />
   </CustomBehavior>
-</If>
-<If Condition="HasQuest(27031) &amp;&amp; IsQuestCompleted(27031)">
   <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original"/>
 </If>
 <PickUp QuestName="Explorers' League Document (6 of 6)" QuestId="13659" GiverName="Stolen Explorers' League Document" GiverType="GameObject" GiverId="194390" X="-5147.543" Y="-4011.435" Z="328.9221" />

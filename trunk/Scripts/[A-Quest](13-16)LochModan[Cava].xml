@@ -291,8 +291,21 @@
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
 	<CustomBehavior File="UserSettings" PullDistance="35" />
   </If>
-</If>
+  <CustomBehavior File="Cava\PullThings" QuestId="26932" PullMob="True" MobId="44184" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="-5565.092" Y="-3395.412" Z="282.6703" />
+      <Hotspot X="-5585.981" Y="-3361.089" Z="282.3324" />
+      <Hotspot X="-5597.854" Y="-3321.32" Z="280.8604" />
+      <Hotspot X="-5625.421" Y="-3351.79" Z="283.244" />
+      <Hotspot X="-5638.586" Y="-3388.736" Z="274.9567" />
+      <Hotspot X="-5639.406" Y="-3429.334" Z="277.6321" />
+      <Hotspot X="-5631.22" Y="-3469.585" Z="284.2038" />
+      <Hotspot X="-5600.093" Y="-3441.878" Z="281.9858" />
+      <Hotspot X="-5593.75" Y="-3401.845" Z="280.4627" />
+  </CustomBehavior>
+<!--
 <Objective QuestName="Buzz Off" QuestId="26932" Type="KillMob" MobId="44184" KillCount="8" />
+-->
+</If>
 <If Condition="HasQuest(26929) &amp;&amp; !IsQuestCompleted(26929)">
   <CustomBehavior File="UserSettings" LootMobs="Original" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
