@@ -452,6 +452,10 @@
 <If Condition="Me.IsAlliance" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
+<If Condition="Me.ZoneId == 85">
+    <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
+    <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
+</If>
 <If Condition="Me.ZoneId != 130 &amp;&amp; Me.ZoneId != 4706 &amp;&amp; Me.ZoneId != 267">
   <If Condition="Me.ZoneId != 1637">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
