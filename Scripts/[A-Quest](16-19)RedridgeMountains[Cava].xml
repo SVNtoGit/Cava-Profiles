@@ -332,7 +332,7 @@
 <PickUp QuestName="Nida's Necklace" QuestId="26508" GiverName="Shawn" GiverId="8965" X="-9351.621" Y="-2207.256" Z="61.89818" />
 <If Condition="HasQuest(26508) &amp;&amp; !IsQuestCompleted(26508)" >
   <CustomBehavior File="UserSettings" LootMobs="True" />
-  <CustomBehavior File="CollectThings" QuestId="26508" ObjectId="154357" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+  <CustomBehavior File="CollectThings" QuestId="26508" NonCompeteDistance="1" ObjectId="154357" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-9328.553" Y="-1982.862" Z="54.30484" />
     <Hotspot X="-9339.106" Y="-2021.668" Z="53.92606" />
     <Hotspot X="-9347.554" Y="-2060.873" Z="54.089" />
