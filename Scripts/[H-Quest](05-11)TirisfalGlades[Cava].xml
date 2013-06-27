@@ -757,10 +757,10 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="2305.479" Y="288.0078" Z="33.35704" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
   </If>
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="2305.479" Y="288.0078" Z="33.35704" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
   </If>
   <CustomBehavior File="SetHearthstone" MobId="5688" X="2285.95" Y="282.613" Z="33.24683" />
 </If>
