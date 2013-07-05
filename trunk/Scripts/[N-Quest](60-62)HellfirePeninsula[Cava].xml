@@ -2406,6 +2406,7 @@
 	  <GrindTo Condition="HasItem(23270)" />
 	</If>
     <While Condition="HasItem(23270)" >
+      <CustomBehavior File="ForcedDismount" />
 	  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(23268)" WaitTime="1000" />
     </While>
   </While>
