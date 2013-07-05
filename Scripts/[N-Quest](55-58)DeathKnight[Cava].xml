@@ -288,7 +288,7 @@
   Text="This profile only have quests for Death Knight. Auto changing profile." />
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<If Condition="!IsQuestCompleted(12720) || !IsQuestCompleted(12842)" >
+<If Condition="!IsQuestCompleted(12720)" >
   <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
 Text="\n
 # # # # # # # # # # W A R N I N G # # # # # # # # # #\n
@@ -323,10 +323,8 @@ Text="\n
   <CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
 </If>
 <TurnIn QuestName="Runeforging: Preparation For Battle" QuestId="12842" TurnInName="Instructor Razuvious" TurnInId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
-<CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
 <If Condition="!HasQuest(12848) &amp;&amp; !IsQuestCompleted(12848)" >
   <CustomBehavior File="EquipItem" ItemId="38707" Slot="MainHandSlot" />
-  <CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
 </If>
 <PickUp QuestName="The Endless Hunger" QuestId="12848" GiverName="Instructor Razuvious" GiverId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
 <If Condition="HasQuest(12848) &amp;&amp; !IsQuestCompleted(12848)" >
@@ -368,7 +366,10 @@ Text="\n
 </If>
 <TurnIn QuestName="Death Comes From On High" QuestId="12641" TurnInName="The Lich King" TurnInId="25462" X="2345.299" Y="-5671.679" Z="426.0303" />
 <PickUp QuestName="The Might Of The Scourge" QuestId="12657" GiverName="The Lich King" GiverId="25462" X="2345.299" Y="-5671.679" Z="426.0303" />
-<TurnIn QuestName="The Might Of The Scourge" QuestId="12657" TurnInName="Highlord Darion Mograine" TurnInId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
+<If Condition="HasQuest(12657)">
+  <TurnIn QuestName="The Might Of The Scourge" QuestId="12657" TurnInName="Highlord Darion Mograine" TurnInId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
+  <CustomBehavior File="EquipItem" ItemId="38662" Slot="NeckSlot" />
+</If>
 <PickUp QuestName="Report To Scourge Commander Thalanor" QuestId="12850" GiverName="Highlord Darion Mograine" GiverId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
 <If Condition="!HasQuest(12849) &amp;&amp; !IsQuestCompleted(12849)" >
     <CustomBehavior File="InteractWith" MobId="28472" KeepTargetSelected="True" X="2527.734" Y="-5549.208" Z="377.0358" />
@@ -378,7 +379,11 @@ Text="\n
 </If>
 <TurnIn QuestName="Report To Scourge Commander Thalanor" QuestId="12850" TurnInName="Scourge Commander Thalanor" TurnInId="28510" X="2353.144" Y="-5671.152" Z="382.2409" />
 <PickUp QuestName="The Scarlet Harvest" QuestId="12670" GiverName="Scourge Commander Thalanor" GiverId="28510" X="2353.144" Y="-5671.152" Z="382.2409" />
-<TurnIn QuestName="The Scarlet Harvest" QuestId="12670" TurnInName="Prince Valanar" TurnInId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
+<If Condition="HasQuest(12670)">
+  <TurnIn QuestName="The Scarlet Harvest" QuestId="12670" TurnInName="Prince Valanar" TurnInId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
+  <CustomBehavior File="EquipItem" ItemId="38662" Slot="NeckSlot" />
+</If>
+
 <PickUp QuestName="If Chaos Drives, Let Suffering Hold The Reins" QuestId="12678" GiverName="Prince Valanar" GiverId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
 <PickUp QuestName="Grand Theft Palomino" QuestId="12680" GiverName="Salanar the Horseman" GiverId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
 <PickUp QuestName="Death's Challenge" QuestId="12733" GiverName="Olrun the Battlecaller" GiverId="29047" X="2363.1" Y="-5772.362" Z="153.6424" />
@@ -395,6 +400,12 @@ Text="\n
   </While>
 </If>
 <TurnIn QuestName="Death's Challenge" QuestId="12733" TurnInName="Olrun the Battlecaller" TurnInId="29047" X="2363.1" Y="-5772.362" Z="153.6424" />
+  <CustomBehavior File="EquipItem" ItemId="40483" Slot="Trinket0Slot" />
+
+
+
+
+
 <PickUp QuestName="Tonight We Dine In Havenshire" QuestId="12679" GiverName="Orithos the Sky Darkener" GiverId="28647" X="2316.11" Y="-5739.283" Z="153.9179" />
 <If Condition="!HasQuest(12711) &amp;&amp; !IsQuestCompleted(12711)" >
   <RunTo X="2206.42" Y="-5647.997" Z="124.0076" />
@@ -445,12 +456,19 @@ Text="\n
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </While>
 </If>
-<TurnIn QuestName="Into the Realm of Shadows" QuestId="12687" TurnInName="Salanar the Horseman" TurnInId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
+<If Condition="HasQuest(12687)">
+  <TurnIn QuestName="Into the Realm of Shadows" QuestId="12687" TurnInName="Salanar the Horseman" TurnInId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
+  <CustomBehavior File="EquipItem" ItemId="39208" Slot="RangedSlot" />
+</If>
 <TurnIn QuestName="Tonight We Dine In Havenshire" QuestId="12679" TurnInName="Orithos the Sky Darkener" TurnInId="28647" X="2316.11" Y="-5739.283" Z="153.9179" />
 <TurnIn QuestName="If Chaos Drives, Let Suffering Hold The Reins" QuestId="12678" TurnInName="Prince Valanar" TurnInId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
 <!--# # # Level 56 # # # -->
 <PickUp QuestName="Gothik the Harvester" QuestId="12697" GiverName="Prince Valanar" GiverId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
-<TurnIn QuestName="Gothik the Harvester" QuestId="12697" TurnInName="Gothik the Harvester" TurnInId="28658" X="2348.474" Y="-5758.322" Z="153.9221" />
+<If Condition="HasQuest(12697)">
+  <TurnIn QuestName="Gothik the Harvester" QuestId="12697" TurnInName="Gothik the Harvester" TurnInId="28658" X="2348.474" Y="-5758.322" Z="153.9221" />
+  <CustomBehavior File="EquipItem" ItemId="38671" Slot="Finger0Slot" />
+  <CustomBehavior File="EquipItem" ItemId="39320" Slot="BackSlot" />
+</If>
 <PickUp QuestName="The Gift That Keeps On Giving" QuestId="12698" GiverName="Gothik the Harvester" GiverId="28658" X="2348.474" Y="-5758.322" Z="153.9221" />
 <If Condition="HasQuest(12698) &amp;&amp; !IsQuestCompleted(12698)" >
   <While Condition="Me.Minions.Count &lt; 5" >
@@ -459,7 +477,10 @@ Text="\n
 </If>
 <TurnIn QuestName="The Gift That Keeps On Giving" QuestId="12698" TurnInName="Gothik the Harvester" TurnInId="28658" X="2348.474" Y="-5758.322" Z="153.9221" />
 <PickUp QuestName="An Attack Of Opportunity" QuestId="12700" GiverName="Gothik the Harvester" GiverId="28658" X="2348.474" Y="-5758.322" Z="153.9221" />
-<TurnIn QuestName="An Attack Of Opportunity" QuestId="12700" TurnInName="Prince Valanar" TurnInId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
+<If Condition="HasQuest(12700)" >
+  <TurnIn QuestName="An Attack Of Opportunity" QuestId="12700" TurnInName="Prince Valanar" TurnInId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
+  <CustomBehavior File="EquipItem" ItemId="38674" Slot="Trinket1Slot" />
+</If>
 <PickUp QuestName="Massacre At Light's Point" QuestId="12701" GiverName="Prince Valanar" GiverId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
 <If Condition="HasQuest(12701) &amp;&amp; !IsQuestCompleted(12701)" >
   <If Condition="(Me.Location.Distance(new WoWPoint(2270.801, -6196.619, 13.22168)) &gt;= 30.0) &amp;&amp; (Me.Location.Distance(new WoWPoint(2115.99, -6196.928, 13.31354)) &gt;= 30.0)" >
@@ -473,7 +494,12 @@ Text="\n
 <PickUp QuestName="Victory At Death's Breach!" QuestId="12706" GiverName="Prince Valanar" GiverId="28377" />
 <TurnIn QuestName="Victory At Death's Breach!" QuestId="12706" TurnInName="Highlord Darion Mograine" TurnInId="28444" X="2460.503" Y="-5593.47" Z="367.3929" />
 <PickUp QuestName="The Will Of The Lich King" QuestId="12714" GiverName="Highlord Darion Mograine" GiverId="28444" X="2460.503" Y="-5593.47" Z="367.3929" />
-<TurnIn QuestName="The Will Of The Lich King" QuestId="12714" TurnInName="Prince Valanar" TurnInId="28907" X="2316.648" Y="-5738.609" Z="155.9813" />
+<If Condition="HasQuest(12714)">
+  <TurnIn QuestName="The Will Of The Lich King" QuestId="12714" TurnInName="Prince Valanar" TurnInId="28907" X="2316.648" Y="-5738.609" Z="155.9813" />
+  <CustomBehavior File="EquipItem" ItemId="38666" />
+  <CustomBehavior File="EquipItem" ItemId="38669" />
+</If>
+
 <PickUp QuestName="The Crypt of Remembrance" QuestId="12715" GiverName="Prince Valanar" GiverId="28907" X="2316.648" Y="-5738.609" Z="155.9813" />
 <PickUp QuestName="The Plaguebringer's Request" QuestId="12716" GiverName="Noth the Plaguebringer" GiverId="28919" X="1982.74" Y="-5815.542" Z="100.892" />
 <TurnIn QuestName="The Crypt of Remembrance" QuestId="12715" TurnInName="Prince Keleseth" TurnInId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
@@ -497,9 +523,13 @@ Text="\n
 <TurnIn QuestName="Lambs To The Slaughter" QuestId="12722" TurnInName="Baron Rivendare" TurnInId="28910" X="1876.437" Y="-5777.139" Z="85.01876" />
 <TurnIn QuestName="The Plaguebringer's Request" QuestId="12716" TurnInName="Noth the Plaguebringer" TurnInId="28919" X="1982.74" Y="-5815.542" Z="100.892" />
 <PickUp QuestName="Noth's Special Brew" QuestId="12717" GiverName="Noth the Plaguebringer" GiverId="28919" X="1982.74" Y="-5815.542" Z="100.892" />
-<TurnIn QuestName="Noth's Special Brew" QuestId="12717" TurnInName="Plague Cauldron" TurnInType="GameObject" TurnInId="190936" X="1990.316" Y="-5822.879" Z="102.972" />
+<If Condition="HasQuest(12717)">
+  <TurnIn QuestName="Noth's Special Brew" QuestId="12717" TurnInName="Plague Cauldron" TurnInType="GameObject" TurnInId="190936" X="1990.316" Y="-5822.879" Z="102.972" />
+  <CustomBehavior File="EquipItem" ItemId="38668" />
+  <CustomBehavior File="EquipItem" ItemId="38670" />
+</If>
+
 <If Condition="HasQuest(12720) &amp;&amp; !IsQuestCompleted(12720)" >
-  <CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
   <While Condition="HasItem(39418)" >
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(39418)" WaitTime="1000" />
