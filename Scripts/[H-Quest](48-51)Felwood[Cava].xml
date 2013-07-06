@@ -786,6 +786,18 @@
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
+
+
+
+
+
+<CustomBehavior File="LoadProfile" ProfileName="erro" />
+
+
+
+
+
+
 <PickUp QuestName="A Destiny of Flame and Sorrow" QuestId="28218" GiverName="Feronas Sindweller" GiverId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
 <If Condition="HasQuest(28218) &amp;&amp; !IsQuestCompleted(28218)">
   <CustomBehavior File="UserSettings" PullDistance="25" />
@@ -794,10 +806,10 @@
   </If>
   <While Condition="!IsQuestCompleted(28218)">
     <CustomBehavior File="WaitTimer" WaitTime="28000" />
-    <CustomBehavior File="CollectThings" MobId="47733" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="1" MobState="Alive" >
+    <CustomBehavior File="CollectThings" MobId="47733" NonCompeteDistance="1" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="1" MobState="Alive" >
       <Hotspot X="6439.576" Y="-946.642" Z="423.1492" />
     </CustomBehavior>
-    <CustomBehavior File="WaitTimer" WaitTime="40000" />
+    <CustomBehavior File="WaitTimer" QuestId="28218" WaitTime="40000" />
     <If Condition="!IsQuestCompleted(28218)">
       <CustomBehavior File="AbandonQuest" QuestId="28218" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
