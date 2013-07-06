@@ -399,13 +399,10 @@ Text="\n
     </CustomBehavior>
   </While>
 </If>
-<TurnIn QuestName="Death's Challenge" QuestId="12733" TurnInName="Olrun the Battlecaller" TurnInId="29047" X="2363.1" Y="-5772.362" Z="153.6424" />
+<If Condition="HasQuest(12733)">
+  <TurnIn QuestName="Death's Challenge" QuestId="12733" TurnInName="Olrun the Battlecaller" TurnInId="29047" X="2363.1" Y="-5772.362" Z="153.6424" />
   <CustomBehavior File="EquipItem" ItemId="40483" Slot="Trinket0Slot" />
-
-
-
-
-
+</If>
 <PickUp QuestName="Tonight We Dine In Havenshire" QuestId="12679" GiverName="Orithos the Sky Darkener" GiverId="28647" X="2316.11" Y="-5739.283" Z="153.9179" />
 <If Condition="!HasQuest(12711) &amp;&amp; !IsQuestCompleted(12711)" >
   <RunTo X="2206.42" Y="-5647.997" Z="124.0076" />
@@ -499,7 +496,6 @@ Text="\n
   <CustomBehavior File="EquipItem" ItemId="38666" />
   <CustomBehavior File="EquipItem" ItemId="38669" />
 </If>
-
 <PickUp QuestName="The Crypt of Remembrance" QuestId="12715" GiverName="Prince Valanar" GiverId="28907" X="2316.648" Y="-5738.609" Z="155.9813" />
 <PickUp QuestName="The Plaguebringer's Request" QuestId="12716" GiverName="Noth the Plaguebringer" GiverId="28919" X="1982.74" Y="-5815.542" Z="100.892" />
 <TurnIn QuestName="The Crypt of Remembrance" QuestId="12715" TurnInName="Prince Keleseth" TurnInId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />

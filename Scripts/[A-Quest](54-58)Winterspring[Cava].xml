@@ -919,29 +919,25 @@
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(28632)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6765.769" Y="-5296.978" Z="746.0128" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6725.265" Y="-5301.883" Z="746.0128" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6694.484" Y="-5327.816" Z="748.8179" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6687.046" Y="-5367.076" Z="752.1626" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6723.91" Y="-5370.13" Z="767.6754" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6688.67" Y="-5349.714" Z="770.9094" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6689.467" Y="-5389.509" Z="764.8384" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6651.815" Y="-5403.552" Z="760.0675" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6620.811" Y="-5377.219" Z="762.4326" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6609.324" Y="-5338.547" Z="756.4492" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6588.662" Y="-5304.159" Z="753.9111" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6559.647" Y="-5276.649" Z="751.5068" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6599.844" Y="-5277.714" Z="753.8129" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6639.444" Y="-5271.179" Z="752.8772" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6633.337" Y="-5231.291" Z="757.4406" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6601.73" Y="-5207.287" Z="766.6758" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28632" MobId="49233" CollectionDistance="1000" X="6582.491" Y="-5172.068" Z="768.7744" />
+    <CustomBehavior File="CollectThings" QuestId="28632" MobId="49233" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+      <Hotspot X="6765.769" Y="-5296.978" Z="746.0128" />
+      <Hotspot X="6725.265" Y="-5301.883" Z="746.0128" />
+      <Hotspot X="6694.484" Y="-5327.816" Z="748.8179" />
+      <Hotspot X="6687.046" Y="-5367.076" Z="752.1626" />
+      <Hotspot X="6723.91" Y="-5370.13" Z="767.6754" />
+      <Hotspot X="6688.67" Y="-5349.714" Z="770.9094" />
+      <Hotspot X="6689.467" Y="-5389.509" Z="764.8384" />
+      <Hotspot X="6651.815" Y="-5403.552" Z="760.0675" />
+      <Hotspot X="6620.811" Y="-5377.219" Z="762.4326" />
+      <Hotspot X="6609.324" Y="-5338.547" Z="756.4492" />
+      <Hotspot X="6588.662" Y="-5304.159" Z="753.9111" />
+      <Hotspot X="6559.647" Y="-5276.649" Z="751.5068" />
+      <Hotspot X="6599.844" Y="-5277.714" Z="753.8129" />
+      <Hotspot X="6639.444" Y="-5271.179" Z="752.8772" />
+      <Hotspot X="6633.337" Y="-5231.291" Z="757.4406" />
+      <Hotspot X="6601.73" Y="-5207.287" Z="766.6758" />
+    </CustomBehavior>
   </While>>
-<!--
-<Objective QuestName="Fresh From The Hills" QuestId="28632" Type="CollectItem" ItemId="64662" CollectCount="7" />
--->
-</If>
-<If Condition="HasQuest(28632) &amp;&amp; IsQuestCompleted(28632)" >
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
 <If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >

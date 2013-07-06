@@ -2737,7 +2737,9 @@
   <PickUp QuestName="Overlord Gorefist" QuestId="9839" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
   <TurnIn QuestName="Wanted: Chieftain Mummaki" QuestId="10116" TurnInName="Ikuti" TurnInId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
   <TurnIn QuestName="Daggerfen Deviance" QuestId="10115" TurnInName="Ikuti" TurnInId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
-  <PickUp QuestName="A Message to Telaar" QuestId="9792" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
+  <If Condition="!HasQuest(9792) &amp;&amp; !IsQuestCompleted(9792)">
+    <PickUp QuestName="A Message to Telaar" QuestId="9792" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
+  </If>
   <If Condition="!HasQuest(9830) &amp;&amp; !IsQuestCompleted(9830)">
     <CustomBehavior File="SetHearthstone" MobId="18908" X="1056.379" Y="7370.99" Z="39.58428" />
   </If>
