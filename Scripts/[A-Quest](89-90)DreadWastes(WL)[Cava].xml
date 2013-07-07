@@ -570,8 +570,10 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="45000" />
-  <CustomBehavior File="InteractWith" MobId="212524" ObjectType="GameObject" WaitTime="1000" X="27.70444" Y="3998.375" Z="240.731" />
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(83276)" WaitTime="1000" />
+  <While Condition="!IsQuestCompleted(31009)" >
+    <CustomBehavior File="InteractWith" MobId="212524" ObjectType="GameObject" WaitTime="1000" X="27.70444" Y="3998.375" Z="240.731" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(83276)" WaitTime="1000" />
+  </While>
 </If>
 <While Condition="HasQuest(31009)" >
   <CustomBehavior File="CompleteLogQuest" QuestId="31009" /> <!--<PickUp QuestName="In Her Clutch" QuestId="31010"-->
