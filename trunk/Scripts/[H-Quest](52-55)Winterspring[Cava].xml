@@ -663,7 +663,8 @@
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(28632)" >
-    <CustomBehavior File="CollectThings" QuestId="28632" MobId="49233" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+    <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
+      <HuntingGrounds>
       <Hotspot X="6765.769" Y="-5296.978" Z="746.0128" />
       <Hotspot X="6725.265" Y="-5301.883" Z="746.0128" />
       <Hotspot X="6694.484" Y="-5327.816" Z="748.8179" />
@@ -680,10 +681,9 @@
       <Hotspot X="6639.444" Y="-5271.179" Z="752.8772" />
       <Hotspot X="6633.337" Y="-5231.291" Z="757.4406" />
       <Hotspot X="6601.73" Y="-5207.287" Z="766.6758" />
+      </HuntingGrounds>
     </CustomBehavior>
   </While>>
-</If>
-<If Condition="HasQuest(28632) &amp;&amp; IsQuestCompleted(28632)" >
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
 <If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >
