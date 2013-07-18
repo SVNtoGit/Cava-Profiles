@@ -162,7 +162,30 @@
     Text="There is a problem with your char's Mount. Please Buy : 1 FLY MOUNT. Then start bot." />
       <CustomBehavior File="Halt" />
     </If>
-	</If>
+  </If>
+
+  <If Condition="(Me.Level &gt;= 70 )">
+    <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
+      <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
+      <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
+      <CustomBehavior File="ForceTrainRiding" MobId="43769" />
+    </If>
+    <If Condition="!HasSpell(90267) &amp;&amp; Me.Gold &gt;= 250">
+      <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: FLIGHT MASTER'S LICENSE. Please do not stop bot." LogColor="Aquamarine" />
+      <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
+      <CustomBehavior File="ForceTrainRiding" MobId="43769" />
+    </If>
+    <If Condition="!HasSpell(54197)">
+      <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+    Text="There is a problem with your char's Riding skill. Please Learn: COLD WEATHER FLYING. Then start bot." />
+      <CustomBehavior File="Halt" />
+    </If>
+    <If Condition="!HasSpell(90267)">
+      <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+    Text="There is a problem with your char's Riding skill. Please Learn: FLIGHT MASTER'S LICENSE. Then start bot." />
+      <CustomBehavior File="Halt" />
+    </If>
+  </If>
 </If>
 <!--
  . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -330,11 +353,11 @@ HORDE      HORDE      HORDE      HORDE
 		</If>
 	</If>
   <If Condition="(Me.Level &gt;= 60 )">	
-	  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 224 &amp;&amp; Me.Gold &gt;= 250">
-			<CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: EXPERT RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
-			<RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
-			<CustomBehavior File="ForceTrainRiding" MobId="44919" />
-		</If>
+    <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 224 &amp;&amp; Me.Gold &gt;= 250">
+	  <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: EXPERT RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
+	  <RunTo X="1798.868" Y="-4360.399" Z="102.4656" />
+	  <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+	</If>
     <If Condition="Mount.FlyingMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 50">
       <CustomBehavior File="Message" Text="Continuing Mount Procedures. Going to Buy : 1 FLY MOUNT. Please do not stop bot." LogColor="Aquamarine" />
       <CustomBehavior File="InteractWith" MobId="44918" NonCompeteDistance="0" InteractByBuyingItemId="25470" X="1806.94" Y="-4340.67" Z="102.0508" />
@@ -351,7 +374,29 @@ HORDE      HORDE      HORDE      HORDE
     Text="There is a problem with your char's Mount. Please Buy : 1 FLY MOUNT. Then start bot." />
       <CustomBehavior File="Halt" />
     </If>
-	</If>	
+  </If>
+
+  <If Condition="(Me.Level &gt;= 70 )">
+    <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
+      <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
+      <RunTo X="1798.44" Y="-4360.247" Z="102.4644" />
+      <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+    </If>
+    <If Condition="!HasSpell(90267) &amp;&amp; Me.Gold &gt;= 250">
+      <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: FLIGHT MASTER'S LICENSE. Please do not stop bot." LogColor="Aquamarine" />
+      <RunTo X="1798.44" Y="-4360.247" Z="102.4644" />
+      <CustomBehavior File="ForceTrainRiding" MobId="44919" />
+    </If>
+    <If Condition="!HasSpell(54197)">
+      <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+    Text="There is a problem with your char's Riding skill. Please Learn: COLD WEATHER FLYING. Then start bot." />
+      <CustomBehavior File="Halt" />
+    </If>
+    <If Condition="!HasSpell(90267)">
+      <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+    Text="There is a problem with your char's Riding skill. Please Learn: FLIGHT MASTER'S LICENSE. Then start bot." />
+      <CustomBehavior File="Halt" />
+    </If>
 </If>
 <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </QuestOrder>
