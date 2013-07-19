@@ -75,6 +75,20 @@
 
 <!-- # # # # # # # # # # # # # Alliance Character # # # # # # # # # # # # #-->
 <If Condition="Me.IsAlliance" >
+
+  <!--Northrend Side-->
+  <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 65  || Me.ZoneId == 394  ||
+                 Me.ZoneId == 495  || Me.ZoneId == 4742 || Me.ZoneId == 210 || Me.ZoneId == 3711 ||
+                 Me.ZoneId == 67   || Me.ZoneId == 4197 || Me.ZoneId == 66">
+    <CustomBehavior File="FlyTo" X="5774.665" Y="702.3932" Z="641.6896" />
+    <CustomBehavior File="ForcedDismount" />
+  </If>
+  <If Condition="Me.ZoneId == 4395">
+    <RunTo X="5719.492" Y="722.5092" Z="641.6174" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190960" Range="8" NumOfTimes="1" CollectionDistance="1000" X="5719.492" Y="722.5092" Z="641.6174" />
+    <CustomBehavior File="WaitTimer" WaitTime="8000"/>
+  </If>
+
 <!-- Outland side -->
 <If Condition="Me.ZoneId == 3522 || Me.ZoneId == 3483 || Me.ZoneId == 3518 || Me.ZoneId == 3523 ||
                Me.ZoneId == 3520 || Me.ZoneId == 3703 || Me.ZoneId == 3519 || Me.ZoneId == 3521">
@@ -197,7 +211,38 @@
   and start bot." />
 </If>
 </If>
+
+
+
+
+
+
+
+
+
 <If Condition="Me.IsHorde">
+
+  <!--Northrend Side-->
+  <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 65  || Me.ZoneId == 394  ||
+                 Me.ZoneId == 495  || Me.ZoneId == 4742 || Me.ZoneId == 210 || Me.ZoneId == 3711 ||
+                 Me.ZoneId == 67   || Me.ZoneId == 4197 || Me.ZoneId == 66">
+    <CustomBehavior File="FlyTo" X="5849.01" Y="602.2653" Z="651.1343" />
+    <CustomBehavior File="ForcedDismount" />
+  </If>
+  <If Condition="Me.ZoneId == 4395">
+    <RunTo X="5924.516" Y="591.1973" Z="640.1129" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="191009" Range="8" NumOfTimes="1" CollectionDistance="1000" X="5719.492" Y="722.5092" Z="641.6174" />
+    <CustomBehavior File="WaitTimer" WaitTime="8000"/>
+  </If>
+
+<!-- Outland side -->
+<If Condition="Me.ZoneId == 3522 || Me.ZoneId == 3483 || Me.ZoneId == 3518 || Me.ZoneId == 3523 ||
+               Me.ZoneId == 3520 || Me.ZoneId == 3703 || Me.ZoneId == 3519 || Me.ZoneId == 3521">
+  <RunTo X="-1892.391" Y="5389.582" Z="-12.42745" />
+  <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+  <CustomBehavior File="WaitTimer" WaitTime="8000"/>
+</If>
+
 <!--Eastern Kingdoms-->
 <!-- Aliance maps -->
 <While Condition="Me.ZoneId == 6176 || Me.ZoneId == 1    || Me.ZoneId == 12   || Me.ZoneId == 4755 || Me.ZoneId == 1537 ||
