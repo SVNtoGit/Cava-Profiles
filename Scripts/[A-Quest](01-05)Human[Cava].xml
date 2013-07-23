@@ -543,8 +543,7 @@
   <PickUp QuestName="Mastering the Arcane" QuestId="26916" GiverName="Khelden Bremen" GiverId="198" X="-8851.57" Y="-188.234" Z="89.31409" />
   <RunTo QuestId="26916" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(26916) &amp;&amp; !IsQuestCompleted(26916)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26916" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(122)" QuestId="26916" NumOfTimes="2" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="26916" SpellId="122" MobId="44548" NumOfTimes="2" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="Mastering the Arcane" QuestId="26916" TurnInName="Khelden Bremen" TurnInId="198" X="-8851.57" Y="-188.234" Z="89.31409" />
   <PickUp QuestName="Join the Battle!" QuestId="28784" GiverName="Khelden Bremen" GiverId="198" X="-8851.57" Y="-188.234" Z="89.31409" />
@@ -584,8 +583,7 @@
   <RunTo QuestId="26918" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <CustomBehavior QuestId="26918" File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
   <While Condition="HasQuest(26918) &amp;&amp; !IsQuestCompleted(26918)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26918" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" QuestId="26918" Lua="CastSpellByID(35395)" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="26918" SpellId="35395" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="The Power of the Light" QuestId="26918" TurnInName="Brother Sammuel" TurnInId="925" X="-8914.567" Y="-215.0163" Z="82.11682" />
   <PickUp QuestName="Join the Battle!" QuestId="28785" GiverName="Brother Sammuel" GiverId="925" X="-8914.567" Y="-215.0163" Z="82.11682" />
@@ -624,8 +622,7 @@
   <PickUp QuestName="Healing the Wounded" QuestId="26919" GiverName="Priestess Anetta" GiverId="375" X="-8853.587" Y="-193.336" Z="81.93242" />
   <RunTo QuestId="26919" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(26919) &amp;&amp; !IsQuestCompleted(26919)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26919" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(589)" QuestId="26919" NumOfTimes="5" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="26919" SpellId="589" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="Healing the Wounded" QuestId="26919" TurnInName="Priestess Anetta" TurnInId="375" X="-8853.587" Y="-193.336" Z="81.93242" />
   <PickUp QuestName="Join the Battle!" QuestId="28786" GiverName="Priestess Anetta" GiverId="375" X="-8853.587" Y="-193.336" Z="81.93242" />
@@ -664,9 +661,8 @@
   <PickUp QuestName="The Deepest Cut" QuestId="26915" GiverName="Jorik Kerridan" GiverId="915" X="-8863.468" Y="-210.9055" Z="80.57269" />
   <RunTo QuestId="26915" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(26915) &amp;&amp; !IsQuestCompleted(26915)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26915" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(1752)" QuestId="26915" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(2098)" QuestId="26915" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="26915" SpellId="1752" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
+	<CustomBehavior File="CastSpellOn" QuestId="26915" SpellId="2098" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="The Deepest Cut" QuestId="26915" TurnInName="Jorik Kerridan" TurnInId="915" X="-8863.468" Y="-210.9055" Z="80.57269" />
   <PickUp QuestName="Join the Battle!" QuestId="28787" GiverName="Jorik Kerridan" GiverId="915" X="-8863.468" Y="-210.9055" Z="80.57269" />
@@ -745,7 +741,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26913" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
     <RunTo QuestId="26913" X="-8920.13" Y="-143.5601" Z="80.99368" />
     <RunTo QuestId="26913" X="-8941.607" Y="-144.8659" Z="82.17437" />
-    <CustomBehavior File="CastSpellOn" QuestId="26913" SpellId="100" MobId="44548" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-8965.57" Y="-146.288" Z="81.50985" />
+    <CustomBehavior File="CastSpellOn" QuestId="26913" SpellId="100" MobId="44548" NumOfTimes="1" MobHpPercentLeft="100" MinRange="10" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="Charging into Battle" QuestId="26913" TurnInName="Llane Beshere" TurnInId="911" X="-8918.364" Y="-208.4109" Z="82.12605" />
   <PickUp QuestName="Join the Battle!" QuestId="28789" GiverName="Llane Beshere" GiverId="911" X="-8918.364" Y="-208.4109" Z="82.12605" />
@@ -783,8 +779,7 @@
   <PickUp QuestName="The Hunter's Path" QuestId="26917" GiverName="Ashley Blank" GiverId="43278" X="-8924.651" Y="-149.9028" Z="81.36339" />
   <RunTo QuestId="26917" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(26917) &amp;&amp; !IsQuestCompleted(26917)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26917" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(56641)" QuestId="26917" NumOfTimes="5" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="26917" SpellId="56641" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="The Hunter's Path" QuestId="26917" TurnInName="Ashley Blank" TurnInId="43278" X="-8924.651" Y="-149.9028" Z="81.36339" />
   <PickUp QuestName="Join the Battle!" QuestId="28780" GiverName="Ashley Blank" GiverId="43278" X="-8924.651" Y="-149.9028" Z="81.36339" />
@@ -822,9 +817,8 @@
   <PickUp QuestName="Palm of the Tiger" QuestId="31142" GiverName="Bao" GiverId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
   <RunTo QuestId="31142" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(31142) &amp;&amp; !IsQuestCompleted(31142)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31142" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100780)" QuestId="31142" NumOfTimes="1" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100787)" QuestId="31142" NumOfTimes="1" WaitTime="1000" />
+	<CustomBehavior File="CastSpellOn" QuestId="31142" SpellId="100780" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
+	<CustomBehavior File="CastSpellOn" QuestId="31142" SpellId="100787" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="Palm of the Tiger" QuestId="31142" TurnInName="Bao" TurnInId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
   <PickUp QuestName="Join the Battle!" QuestId="31143" GiverName="Bao" GiverId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
