@@ -1710,9 +1710,10 @@
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(27523)" >
     <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
-    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
-    <CustomBehavior File="WaitTimer" WaitTime="11000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11897" MobState="Dead" Loot="True" WaitForNpcs="False" X="2791.158" Y="-4153.113" Z="89.46413" />
+<!--    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="11000" />-->
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" Range="30" MobId="11897" InteractByUsingItemId="61334"
+       MobState="Alive" Loot="True" WaitForNpcs="False" WaitTime="11000" X="2791.158" Y="-4153.113" Z="89.46413" />
   </While>
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
@@ -1782,12 +1783,47 @@
     <CustomBehavior File="UserSettings" PullDistance="40" />
   </If>
 </If>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <If Condition="HasQuest(27528) &amp;&amp; !IsQuestCompleted(27528)" >
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
     <If Condition="!IsQuestCompleted(27528)" >
-    <CustomBehavior File="UseItemOn" QuestId="27258" MobId="45851" ItemId="61369" Range="5" WaitForNpcs="False" CollectionDistance="1000" >
-      <HuntingGrounds WaypointVisitStrategy="Random" >
+    <CustomBehavior File="InteractWith" QuestId="27528" MobId="45851" MobState="Dead" InteractByUsingItemId="61369" Range="5"
+      WaitForNpcs="False" CollectionDistance="1000" >
+    <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
     <Hotspot X="3128.733" Y="-3187.138" Z="159.3822" />
     <Hotspot X="3158.199" Y="-3158.63" Z="162.0679" />
@@ -1855,7 +1891,7 @@
     <Hotspot X="3026.133" Y="-3386.702" Z="154.9652" />
     <Hotspot X="3050.618" Y="-3419.072" Z="153.5577" />
     <Hotspot X="3041.949" Y="-3458.538" Z="152.7421" />
-      </HuntingGrounds>
+    </HuntingGrounds>
     </CustomBehavior>
     </If>
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
