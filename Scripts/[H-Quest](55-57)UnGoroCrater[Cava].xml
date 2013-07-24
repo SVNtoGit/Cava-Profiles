@@ -893,7 +893,8 @@
 <TurnIn QuestName="Aberrant Flora" QuestId="24855" TurnInName="Ithis Moonwarden" TurnInId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <PickUp QuestName="The Eastern Pylon" QuestId="24721" GiverName="Ithis Moonwarden" GiverId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <If Condition="HasQuest(24721) &amp;&amp; !IsQuestCompleted(24721)" >
-  <CustomBehavior File="WaitTimer" WaitTime="2000" />
+  <CustomBehavior File="WaitTimer" WaitTime="5000" />
+  <CustomBehavior File="InteractWith" WaitTime="5000" NonCompeteDistance="0" QuestId="24721" MobId="38263" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7159.061" Y="-2294.832" Z="-268.1794" />
   <RunTo X="-7198.09" Y="-2326.337" Z="-228.3086" />
   <CustomBehavior File="InteractWith" QuestId="24721" MobId="164957" InteractByGossipOptions="1" X="-7198.09" Y="-2326.337" Z="-228.3086" />
   <RunTo X="-7181.223" Y="-2313.838" Z="-238.1152" />
