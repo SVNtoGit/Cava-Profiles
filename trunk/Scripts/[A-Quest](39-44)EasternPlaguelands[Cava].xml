@@ -1599,9 +1599,10 @@
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(27523)" >
     <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
-    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
-    <CustomBehavior File="WaitTimer" WaitTime="11000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11897" MobState="Dead" Loot="True" WaitForNpcs="False" X="2791.158" Y="-4153.113" Z="89.46413" />
+<!--    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="11000" />-->
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" Range="30" MobId="11897" InteractByUsingItemId="61334"
+       MobState="Alive" Loot="True" WaitForNpcs="False" WaitTime="11000" X="2791.158" Y="-4153.113" Z="89.46413" />
   </While>
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
@@ -1623,14 +1624,14 @@
   <PickUp QuestName="The Baroness' Missive" QuestId="27551" GiverId="61378" GiverType="Item" />
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
-<If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27529)" >
+<If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
   <CustomBehavior File="UserSettings" LootMobs="True" />
 </If>
 <Objective QuestName="Guardians of Stratholme" QuestId="27525" Type="KillMob" MobId="45868" KillCount="1" />
 <TurnIn QuestName="The Baroness' Missive" QuestId="27551" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3135.564" Y="-3409.367" Z="139.8979" />
 <PickUp QuestName="Gidwin's Fate Revealed" QuestId="27526" GiverName="Tarenar Sunstrike" GiverId="45729" X="3135.564" Y="-3409.367" Z="139.8979" />
 <If Condition="HasQuest(27526) &amp;&amp; !IsQuestCompleted(27526)" >
-  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27529)" >
+  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
     <CustomBehavior File="UserSettings" LootMobs="True" />
   </If>
   <RunTo QuestId="27526" X="2999.761" Y="-3460.898" Z="154.4005" />
@@ -1642,6 +1643,9 @@
 </If>
 <Objective QuestName="Guardians of Stratholme" QuestId="27525" Type="KillMob" MobId="45867" KillCount="1" />
 <If Condition="HasQuest(27528) &amp;&amp; !IsQuestCompleted(27528)" >
+  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
+    <CustomBehavior File="UserSettings" LootMobs="True" />
+  </If>
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
     <If Condition="!IsQuestCompleted(27528)" >
@@ -1722,6 +1726,9 @@
   </While>
 </If>
 <If Condition="HasQuest(27529) &amp;&amp; !IsQuestCompleted(27529)" >
+  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
+    <CustomBehavior File="UserSettings" LootMobs="True" />
+  </If>
   <CustomBehavior File="UserSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
 	<CustomBehavior File="UserSettings" PullDistance="35" />
@@ -1934,6 +1941,9 @@
   </While>
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
+  <If Condition="HasQuest(27539)" >
+    <CustomBehavior File="UserSettings" LootMobs="Original" />
+  </If>
 <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
   <CustomBehavior File="UserSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
