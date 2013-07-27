@@ -1783,41 +1783,10 @@
     <CustomBehavior File="UserSettings" PullDistance="40" />
   </If>
 </If>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <If Condition="HasQuest(27528) &amp;&amp; !IsQuestCompleted(27528)" >
+  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
+    <CustomBehavior File="UserSettings" LootMobs="True" />
+  </If>
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
     <If Condition="!IsQuestCompleted(27528)" >
@@ -1898,6 +1867,9 @@
   </While>
 </If>
 <If Condition="HasQuest(27529) &amp;&amp; !IsQuestCompleted(27529)" >
+  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
+    <CustomBehavior File="UserSettings" LootMobs="True" />
+  </If>
   <While Condition="!IsQuestCompleted(27529)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId1="8530" MobId2="11064" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
