@@ -374,7 +374,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
@@ -2104,7 +2104,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1296" WaitTime="1000" CollectionDistance="50" X="-8366.36" Y="-2762.51" Z="187.5347" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
 <TurnIn QuestName="Morgan's Vigil" QuestId="28310" TurnInName="Oralius" TurnInId="9177" X="-8412.73" Y="-2729.77" Z="189.157" />

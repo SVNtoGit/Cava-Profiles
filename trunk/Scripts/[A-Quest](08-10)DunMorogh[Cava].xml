@@ -247,7 +247,7 @@
 <!--# # # Level 9 # # # -->
 <If Condition="!HasQuest(25979) &amp;&amp; !IsQuestCompleted(25979)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1237" X="-5671.19" Y="-1577.15" Z="383.2049" />
- 	<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+ 	<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
 <PickUp QuestName="Dealing with the Surge" QuestId="25979" GiverName="Khurgorn Singefeather" GiverId="41804" X="-5518.347" Y="-1910.189" Z="398.9587" />

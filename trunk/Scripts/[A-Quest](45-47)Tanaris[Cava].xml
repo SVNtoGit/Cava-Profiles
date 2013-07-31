@@ -228,9 +228,9 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
 </If>
 <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
