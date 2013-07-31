@@ -401,7 +401,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
 <PickUp QuestName="Poison Water" QuestId="20440" GiverName="Mull Thunderhorn" GiverId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
 <PickUp QuestName="Swoop Hunting" QuestId="761" GiverName="Harken Windtotem" GiverId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />

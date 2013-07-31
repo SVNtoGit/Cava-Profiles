@@ -1143,7 +1143,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MovementBy="NavigatorPreferred" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MovementBy="NavigatorPreferred" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="FlyTo" X="-1834.204" Y="5351.021" Z="-12.427" />
   <CustomBehavior File="ForcedDismount" />
@@ -2070,7 +2070,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MovementBy="NavigatorPreferred" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MovementBy="NavigatorPreferred" MobId="19662" WaitTime="1000" CollectionDistance="50" X="-2099.862" Y="5298.238" Z="-37.32356" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="FlyTo" X="-1657.668" Y="5446.36" Z="-40.40609" />
   <CustomBehavior File="ForcedDismount" />

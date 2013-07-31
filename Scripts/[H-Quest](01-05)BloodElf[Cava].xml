@@ -380,7 +380,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
 <TurnIn QuestName="Report to Lanthan Perilon" QuestId="8327" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="!HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
@@ -435,7 +435,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
 <PickUp QuestName="Felendren the Banished" QuestId="8335" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="(HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335))|| (!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; !HasItem(20483))" >
