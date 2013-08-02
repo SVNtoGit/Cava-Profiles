@@ -1437,7 +1437,7 @@
 <PickUp QuestName="An Opportune Alliance" QuestId="27457" GiverName="Rimblat Earthshatter" GiverId="16134" X="2309.75" Y="-5261.74" Z="82.22324" />
 <PickUp QuestName="Out of the Ziggurat" QuestId="27481" GiverName="Vex'tul" GiverId="45574" X="2569.906" Y="-4768.837" Z="107.9953" />
 <PickUp QuestName="Righteous Indignation" QuestId="27479" GiverName="Deacon Andaal" GiverId="45736" X="2516.255" Y="-4775.575" Z="103.5668" />
-<PickUp QuestName="The Corpulent One" QuestId="27477" GiverName="Gamella Cracklefizz" GiverId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />
+<!--<PickUp QuestName="The Corpulent One" QuestId="27477" GiverName="Gamella Cracklefizz" GiverId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />-->
 <TurnIn QuestName="An Opportune Alliance" QuestId="27457" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9727" />
 <TurnIn QuestName="Argent Call: Northdale" QuestId="27466" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9727" />
 <PickUp QuestName="Ix'lar the Underlord" QuestId="27487" GiverName="Tarenar Sunstrike" GiverId="45729" X="2542.57" Y="-4769.43" Z="105.2396" />
@@ -1467,7 +1467,7 @@
   <GrindTo Condition="IsQuestCompleted(27487)" />
   <CustomBehavior File="UserSettings" PullDistance="1" />
 </If>
-<Objective QuestName="The Corpulent One" QuestId="27477" Type="KillMob" MobId="11896" KillCount="1" />
+<!--<Objective QuestName="The Corpulent One" QuestId="27477" Type="KillMob" MobId="11896" KillCount="1" />-->
 <If Condition="HasQuest(27481) &amp;&amp; !IsQuestCompleted(27481)" >
   <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="5" />
   <RunTo X="3404.754" Y="-4967.202" Z="164.6362" />
@@ -1521,7 +1521,7 @@
 </If>
 <TurnIn QuestName="Righteous Indignation" QuestId="27479" TurnInName="Deacon Andaal" TurnInId="45736" X="2516.255" Y="-4775.575" Z="103.5668" />
 <!--# # # Level 43 # # # -->
-<TurnIn QuestName="The Corpulent One" QuestId="27477" TurnInName="Gamella Cracklefizz" TurnInId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />
+<!--<TurnIn QuestName="The Corpulent One" QuestId="27477" TurnInName="Gamella Cracklefizz" TurnInId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />-->
 <TurnIn QuestName="Ix'lar the Underlord" QuestId="27487" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9725" />
 <PickUp QuestName="Impatience" QuestId="27488" GiverName="Tarenar Sunstrike" GiverId="45729" X="2542.57" Y="-4769.43" Z="105.2397" />
 <Objective QuestName="Impatience" QuestId="27488" Type="CollectItem" ItemId="61318" CollectCount="1" />
@@ -1595,14 +1595,11 @@
 </If>
 <PickUp QuestName="Duskwing, Oh How I Hate Thee..." QuestId="27523" GiverName="Corpseburner Tim" GiverId="45816" X="3084.89" Y="-4222.7" Z="90.54771" />
 <If Condition="HasQuest(27523) &amp;&amp; !IsQuestCompleted(27523)" >
-  <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
+  <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(27523)" >
-    <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
-<!--    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
-    <CustomBehavior File="WaitTimer" WaitTime="11000" />-->
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" Range="30" MobId="11897" InteractByUsingItemId="61334"
-       MobState="Alive" Loot="True" WaitForNpcs="False" WaitTime="11000" X="2791.158" Y="-4153.113" Z="89.46413" />
+    <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="10000"/>
   </While>
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>

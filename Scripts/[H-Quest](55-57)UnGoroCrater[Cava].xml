@@ -828,6 +828,7 @@
     <CustomBehavior File="UserSettings" PullDistance="40" />
   </If>
   <While Condition="!IsQuestCompleted(24733)" >
+    <CustomBehavior File="InteractWith" QuestId="24733" WaitTime="1000" NonCompeteDistance="0" MobId="169217" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-6976.389" Y="-2059.768" Z="-271.3834" />
     <CustomBehavior File="Misc\RunLua" QuestId="24733" Lua="UseItemByName(11569)" WaitTime="1000" />
     <CustomBehavior File="Misc\RunLua" QuestId="24733" Lua="UseItemByName(11570)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="9000" />
@@ -842,24 +843,18 @@
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
     <CustomBehavior File="UserSettings" PullDistance="40" />
   </If>
-  <SetGrindArea>
-  <GrindArea>
-  <Factions>15</Factions>
-    <Hotspots>
-      <Hotspot X="-7154.958" Y="-2284.508" Z="-268.1763" />
-      <Hotspot X="-7115.22" Y="-2273.248" Z="-266.4176" />
-      <Hotspot X="-7075.078" Y="-2275.348" Z="-269.3998" />
-      <Hotspot X="-7035.793" Y="-2266.738" Z="-270.5745" />
-      <Hotspot X="-6999.101" Y="-2248.984" Z="-271.8267" />
-      <Hotspot X="-6971.545" Y="-2219.639" Z="-272.5565" />
-      <Hotspot X="-6953.694" Y="-2182.291" Z="-272.1486" />
-      <Hotspot X="-6940.339" Y="-2144.24" Z="-270.4767" />
-      <Hotspot X="-6939.734" Y="-2104.149" Z="-271.5825" />
-      <Hotspot X="-6939.126" Y="-2063.89" Z="-271.4555" />
-    </Hotspots>
-  </GrindArea>
-  </SetGrindArea>
-  <GrindTo Condition="IsQuestCompleted(24687)" />
+  <CustomBehavior File="Cava\PullThings" PullMob="True" QuestId="24687" MobId="38213" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+    <Hotspot X="-7154.958" Y="-2284.508" Z="-268.1763" />
+    <Hotspot X="-7115.22" Y="-2273.248" Z="-266.4176" />
+    <Hotspot X="-7075.078" Y="-2275.348" Z="-269.3998" />
+    <Hotspot X="-7035.793" Y="-2266.738" Z="-270.5745" />
+    <Hotspot X="-6999.101" Y="-2248.984" Z="-271.8267" />
+    <Hotspot X="-6971.545" Y="-2219.639" Z="-272.5565" />
+    <Hotspot X="-6953.694" Y="-2182.291" Z="-272.1486" />
+    <Hotspot X="-6940.339" Y="-2144.24" Z="-270.4767" />
+    <Hotspot X="-6939.734" Y="-2104.149" Z="-271.5825" />
+    <Hotspot X="-6939.126" Y="-2063.89" Z="-271.4555" />
+  </CustomBehavior>
   <CustomBehavior File="UserSettings" PullDistance="1"/>
 </If>
 <TurnIn QuestName="Bouquets of Death" QuestId="24687" TurnInName="Ithis Moonwarden" TurnInId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
@@ -956,7 +951,11 @@
 <PickUp QuestName="Lost!" QuestId="24734" GiverName="Spraggle Frock" GiverId="9997" X="-7512.286" Y="-1503.926" Z="-265.554" />
 <TurnIn QuestName="Lost!" QuestId="24734" TurnInName="Ringo's Sack" TurnInId="202264" TurnInType="GameObject" X="-7248.54" Y="-1430.066" Z="-230.8725" />
 <Objective QuestName="Blazerunner" QuestId="24690" Type="KillMob" MobId="9376" KillCount="1" />
-<PickUp QuestName="A Little Help From My Friends" QuestId="24735" GiverName="Ringo" GiverId="9999" X="-7195.259" Y="-1389.547" Z="-231.3248" />
+
+
+
+
+<!--<PickUp QuestName="A Little Help From My Friends" QuestId="24735" GiverName="Ringo" GiverId="9999" X="-7195.259" Y="-1389.547" Z="-231.3248" />
 <If Condition="HasQuest(24735) &amp;&amp; !IsQuestCompleted(24735)" >
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
   <CustomBehavior File="UserSettings" PullDistance="25" UseMount="False"/>
@@ -1070,7 +1069,7 @@
   </While>
   <CustomBehavior File="UserSettings" PullDistance="1" UseMount="True" />/>
 </If>
-<TurnIn QuestName="A Little Help From My Friends" QuestId="24735" TurnInName="Spraggle Frock" TurnInId="9997" X="-7512.159" Y="-1506.016" Z="-265.5514" />
+<TurnIn QuestName="A Little Help From My Friends" QuestId="24735" TurnInName="Spraggle Frock" TurnInId="9997" X="-7512.159" Y="-1506.016" Z="-265.5514" />-->
 <TurnIn QuestName="Blazerunner" QuestId="24690" TurnInName="Williden Marshal" TurnInId="9270" X="-7501.733" Y="-1504.569" Z="-266.2425" />
 <If Condition="!HasQuest(24692) &amp;&amp; !IsQuestCompleted(24692) &amp;&amp; Me.LevelFraction &gt;= 57.95">
   <CustomBehavior File="Message" Text="Moving to BLASTED LANDS, Please do not stop bot" LogColor="Aquamarine" />
