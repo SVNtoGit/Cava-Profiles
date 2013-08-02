@@ -2745,14 +2745,15 @@
   </If>
   <PickUp QuestName="Stinger Venom" QuestId="9830" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />
   <PickUp QuestName="Lines of Communication" QuestId="9833" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />
-  <PickUp QuestName="The Terror of Marshlight Lake" QuestId="9902" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />
-  <If Condition="HasQuest(9731) &amp;&amp; !IsQuestCompleted(9731)">
+  <If Condition="!HasQuest(9902) &amp;&amp; !IsQuestCompleted(9902)">
+    <PickUp QuestName="The Terror of Marshlight Lake" QuestId="9902" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />
     <RunTo X="987.1169" Y="7405.944" Z="29.8877" />
-    <RunTo X="562.6901" Y="6939.983" Z="31.03371" />
+  </If>
+  <If Condition="HasQuest(9731) &amp;&amp; !IsQuestCompleted(9731)">
     <CustomBehavior File="FlyTo" X="569.3351" Y="6942.12" Z="27.11016" />
     <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
-    <RunTo X="569.3351" Y="6942.12" Z="-25.18835" />
+    <CustomBehavior File="MyCTM" X="567.1113" Y="6942.47" Z="-31.55918" />
     <CustomBehavior File="AscendInWater" />
     <RunTo X="541.3874" Y="6923.24" Z="23.01425" />
     <CustomBehavior File="UserSettings" UseMount="True" />

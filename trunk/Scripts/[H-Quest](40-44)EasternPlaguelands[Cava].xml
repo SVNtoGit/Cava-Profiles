@@ -834,9 +834,10 @@
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
     <CustomBehavior File="UserSettings" PullDistance="40" />
   </If>
-  <RunTo X="1451.53" Y="-3911.31" Z="137.2834" />
+  <RunTo X="1462.461" Y="-3841.666" Z="116.8665" />
+  <RunTo X="1455.857" Y="-3909.233" Z="136.4641" />
   <CustomBehavior File="CollectThings" QuestId="27392" MobId="45450" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1451.53" Y="-3911.31" Z="137.2834" />
+    <Hotspot X="1455.857" Y="-3909.233" Z="136.4641" />
   </CustomBehavior>
   <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
 </If>
@@ -1507,7 +1508,7 @@
 <PickUp QuestName="An Opportune Alliance" QuestId="27457" GiverName="Rimblat Earthshatter" GiverId="16134" X="2309.75" Y="-5261.74" Z="82.22324" />
 <PickUp QuestName="Out of the Ziggurat" QuestId="27481" GiverName="Vex'tul" GiverId="45574" X="2569.906" Y="-4768.837" Z="107.9953" />
 <PickUp QuestName="Righteous Indignation" QuestId="27479" GiverName="Deacon Andaal" GiverId="45736" X="2516.255" Y="-4775.575" Z="103.5668" />
-<PickUp QuestName="The Corpulent One" QuestId="27477" GiverName="Gamella Cracklefizz" GiverId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />
+<!--<PickUp QuestName="The Corpulent One" QuestId="27477" GiverName="Gamella Cracklefizz" GiverId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />-->
 <If Condition="HasQuest(27457)" >
   <!--Eastwall Tower-->
   <RunTo X="2526.22" Y="-4770.06" Z="103.6196" />
@@ -1542,7 +1543,7 @@
   <GrindTo Condition="IsQuestCompleted(27487)" />
   <CustomBehavior File="UserSettings" PullDistance="1" />
 </If>
-<Objective QuestName="The Corpulent One" QuestId="27477" Type="KillMob" MobId="11896" KillCount="1" />
+<!--<Objective QuestName="The Corpulent One" QuestId="27477" Type="KillMob" MobId="11896" KillCount="1" />-->
 <If Condition="HasQuest(27481) &amp;&amp; !IsQuestCompleted(27481)" >
   <CustomBehavior File="UserSettings" LootMobs="True" PullDistance="5" />
   <RunTo X="3404.754" Y="-4967.202" Z="164.6362" />
@@ -1556,6 +1557,7 @@
     <RunTo QuestId="27481" X="3435.459" Y="-4977.293" Z="192.0392" />
     <CustomBehavior File="WaitTimer" QuestId="27481" WaitTime="10000"/>
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27481" MobId="10822" MobState="Alive" WaitForNpcs="False" />
+    <CustomBehavior File="WaitTimer" QuestId="27481" WaitTime="30000"/>
   </While>
 </If>
 <If Condition="HasQuest(27481)" >
@@ -1592,7 +1594,7 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="2268" />
 </If>
 <TurnIn QuestName="Righteous Indignation" QuestId="27479" TurnInName="Deacon Andaal" TurnInId="45736" X="2516.255" Y="-4775.575" Z="103.5668" />
-<TurnIn QuestName="The Corpulent One" QuestId="27477" TurnInName="Gamella Cracklefizz" TurnInId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />
+<!--<TurnIn QuestName="The Corpulent One" QuestId="27477" TurnInName="Gamella Cracklefizz" TurnInId="45735" X="2545.14" Y="-4769.8" Z="105.5968" />-->
 <TurnIn QuestName="Ix'lar the Underlord" QuestId="27487" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9725" />
 <If Condition="Me.LevelFraction &gt;= 440.45">
   <CustomBehavior File="Message" Text="Moving to TANARIS, Please do not stop bot" LogColor="Aquamarine" />
@@ -1706,14 +1708,11 @@
 </If>
 <PickUp QuestName="Duskwing, Oh How I Hate Thee..." QuestId="27523" GiverName="Corpseburner Tim" GiverId="45816" X="3084.89" Y="-4222.7" Z="90.54771" />
 <If Condition="HasQuest(27523) &amp;&amp; !IsQuestCompleted(27523)" >
-  <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
+  <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
   <CustomBehavior File="UserSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(27523)" >
-    <RunTo X="2801.124" Y="-4158.093" Z="89.31663" />
-<!--    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="1000" />
-    <CustomBehavior File="WaitTimer" WaitTime="11000" />-->
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" Range="30" MobId="11897" InteractByUsingItemId="61334"
-       MobState="Alive" Loot="True" WaitForNpcs="False" WaitTime="11000" X="2791.158" Y="-4153.113" Z="89.46413" />
+    <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="10000"/>
   </While>
   <CustomBehavior File="UserSettings" LootMobs="Original" />
 </If>
