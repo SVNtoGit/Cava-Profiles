@@ -1354,10 +1354,9 @@
 <Objective QuestName="The Wrathcaster" QuestId="27615" Type="KillMob" MobId="46093" KillCount="1" />
 <Objective QuestName="The Commander" QuestId="27619" Type="KillMob" MobId="46092" KillCount="1" />
 <If Condition="HasQuest(27616) &amp;&amp; !IsQuestCompleted(27616)" >
-<!--  <RunTo X="1620.25" Y="-5292.249" Z="99.9677" />-->
-  <CustomBehavior File="CollectThings" QuestId="27616" MobId="46094" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1622.373" Y="-5288.53" Z="100.1114" />
-  </CustomBehavior>
+  <While Condition="!IsQuestCompleted(27616)" >
+    <RunTo X="1622.037" Y="-5289.918" Z="99.96706" />
+  </While>
 </If>
 <TurnIn QuestName="Scarlet Salvage" QuestId="27614" TurnInName="Crusade Commander Korfax" TurnInId="16112" X="1656.81" Y="-5324.98" Z="74.39872" />
 <TurnIn QuestName="The Wrathcaster" QuestId="27615" TurnInName="Crusade Commander Korfax" TurnInId="16112" X="1656.81" Y="-5324.98" Z="74.39872" />
