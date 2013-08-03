@@ -3067,19 +3067,10 @@
     <CustomBehavior File="TaxiRide" MobId="22485" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
   </If>
   <TurnIn QuestName="Idols of the Feralfen" QuestId="9787" TurnInName="Anchorite Ahuurn" TurnInId="18003" X="280.4301" Y="6046.587" Z="130.3078" />
-  <If Condition="!HasQuest(9801) &amp;&amp; !IsQuestCompleted(9801)">
-    <If Condition="(Me.LevelFraction &gt;= 64.45 )">
-      <If Condition="(Me.Level == 64)">
-        <CustomBehavior File="FlyTo" X="211.6638" Y="6062.737" Z="148.3173" />
-        <CustomBehavior File="ForcedDismount" />
-        <CustomBehavior File="TaxiRide" MobId="18788" MobState="Alive" WaitForNpcs="True" TaxiNumber="6" WaitTime="5000" />
-      <Else>
-        <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
-        <CustomBehavior File="ForcedDismount" />
-        </Else>
-      </If>
-      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](64-65)TerokkarForest[Cava]" />
-    </If>
+  <If Condition="!HasQuest(9801) &amp;&amp; !IsQuestCompleted(9801) &amp;&amp; Me.LevelFraction &gt;= 64.45">
+    <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](64-65)TerokkarForest[Cava]" />
   </If>
   <PickUp QuestName="Gathering the Reagents" QuestId="9801" GiverName="Anchorite Ahuurn" GiverId="18003" X="280.4301" Y="6046.587" Z="130.3078" />
   <If Condition="HasQuest(9801) &amp;&amp; !IsQuestCompleted(9801)">
@@ -3101,19 +3092,10 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Gathering the Reagents" QuestId="9801" TurnInName="Anchorite Ahuurn" TurnInId="18003" X="280.4301" Y="6046.587" Z="130.3078" />
-  <If Condition="!HasQuest(9803) &amp;&amp; !IsQuestCompleted(9803)">
-    <If Condition="(Me.LevelFraction &gt;= 64.45 )">
-      <If Condition="(Me.Level == 64)">
-        <CustomBehavior File="FlyTo" X="211.6638" Y="6062.737" Z="148.3173" />
-        <CustomBehavior File="ForcedDismount" />
-        <CustomBehavior File="TaxiRide" MobId="18788" MobState="Alive" WaitForNpcs="True" TaxiNumber="6" WaitTime="5000" />
-      <Else>
-        <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
-        <CustomBehavior File="ForcedDismount" />
-        </Else>
-      </If>
-      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](64-65)TerokkarForest[Cava]" />
-    </If>
+  <If Condition="!HasQuest(9803) &amp;&amp; !IsQuestCompleted(9803) &amp;&amp; Me.LevelFraction &gt;= 64.45">
+    <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](64-65)TerokkarForest[Cava]" />
   </If>
   <PickUp QuestName="Messenger to the Feralfen" QuestId="9803" GiverName="Anchorite Ahuurn" GiverId="18003" X="280.4301" Y="6046.587" Z="130.3078" />
   <If Condition="HasQuest(24428) &amp;&amp; !IsQuestCompleted(24428)">
@@ -3132,15 +3114,8 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Messenger to the Feralfen" QuestId="9803" TurnInName="Anchorite Ahuurn" TurnInId="18003" X="280.4301" Y="6046.587" Z="130.3078" />
     <If Condition="(Me.LevelFraction &gt;= 64.45 )">
-      <If Condition="(Me.Level == 64)">
-        <CustomBehavior File="FlyTo" X="211.6638" Y="6062.737" Z="148.3173" />
-        <CustomBehavior File="ForcedDismount" />
-        <CustomBehavior File="TaxiRide" MobId="18788" MobState="Alive" WaitForNpcs="True" TaxiNumber="6" WaitTime="5000" />
-      <Else>
-        <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
-        <CustomBehavior File="ForcedDismount" />
-        </Else>
-      </If>
+      <CustomBehavior File="FlyTo" X="-1837.23" Y="5301.9" Z="-12.43" />
+      <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](64-65)TerokkarForest[Cava]" />
     </If>
   </If>
