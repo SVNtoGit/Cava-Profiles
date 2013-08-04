@@ -96,7 +96,9 @@
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Pandaren[Cava]" />
   </If>
   <If Condition="Me.Race == WoWRace.Worgen &amp;&amp; !IsQuestCompleted(14434)">
-    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Worgen[Cava]" />
+    <If Condition="(Me.ZoneId == 4714) || (Me.ZoneId == 4755) || (Me.ZoneId == 4706)">
+      <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-05)Worgen[Cava]" />
+    </If>
   </If>
   <If Condition="(Me.LevelFraction &gt;= 88)" >
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes[Cava]" />
