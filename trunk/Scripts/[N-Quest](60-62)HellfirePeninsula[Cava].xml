@@ -2904,9 +2904,11 @@
     </If>
   </If>
   <If Condition="HasQuest(9374) &amp;&amp; !IsQuestCompleted(9374)">
-    <CustomBehavior File="InteractWith" MobId="184115" Range="6" PreInteractMountStrategy="DismountOrCancelShapeshift" NonCompeteDistance="0" X="197.5536" Y="3473.717" Z="63.0704" />
-    <While Condition="HasItem(31955)">
-	  <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31955)" />
+    <While Condition="!IsQuestCompleted(9374)">
+      <CustomBehavior File="InteractWith" MobId="184115" Range="6" PreInteractMountStrategy="DismountOrCancelShapeshift" NonCompeteDistance="0" X="197.5536" Y="3473.717" Z="63.0704" />
+      <While Condition="HasItem(31955)">
+	    <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(31955)" />
+	  </While>
 	</While>
   </If>
   <Objective QuestName="In Need of Felblood" QuestId="9366" Type="CollectItem" ItemId="23269" CollectCount="6" />
