@@ -1417,7 +1417,10 @@
 	<CustomBehavior File="WaitTimer" WaitTime="1000"/>
   </While>
 </If>
-<Objective QuestName="The Assassin" QuestId="27613" Type="KillMob" MobId="46095" KillCount="1" />
+<If Condition="HasQuest(27613) &amp;&amp; !IsQuestCompleted(27613)" >
+  <RunTo X="1743.739" Y="-5414.819" Z="113.5237" />
+  <Objective QuestName="The Assassin" QuestId="27613" Type="KillMob" MobId="46095" KillCount="1" />
+</If>
 <TurnIn QuestName="Victory From Within" QuestId="27612" TurnInName="Crusade Commander Eligor Dawnbringer" TurnInId="16115" X="1739.5" Y="-5379.68" Z="80.95867" />
 <TurnIn QuestName="The Assassin" QuestId="27613" TurnInName="Crusade Commander Eligor Dawnbringer" TurnInId="16115" X="1739.5" Y="-5379.68" Z="80.95867" />
 <PickUp QuestName="Befouled No More" QuestId="27617" GiverName="Crusade Commander Eligor Dawnbringer" GiverId="16115" X="1739.5" Y="-5379.68" Z="80.95867" />
