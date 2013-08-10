@@ -2654,9 +2654,11 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Apothecary Antonivich" QuestId="10835" TurnInName="Apothecary Antonivich" TurnInId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
-  <PickUp QuestName="A Burden of Souls" QuestId="10864" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+  <If Condition="!HasQuest(10864) &amp;&amp; !IsQuestCompleted(10864)">
+    <PickUp QuestName="A Burden of Souls" QuestId="10864" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+    <RunTo X="199.6663" Y="2785.458" Z="116.9412" />
+  </If>
   <If Condition="!HasQuest(10236) &amp;&amp; !IsQuestCompleted(10236)">
-    <RunTo X="235.8643" Y="2809.982" Z="129.2092" />
     <CustomBehavior File="FlyTo" X="424.4862" Y="2890.236" Z="52.08666" />
     <CustomBehavior File="ForcedDismount" />
   </If>
@@ -2738,7 +2740,10 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="A Burden of Souls" QuestId="10864" TurnInName="Apothecary Antonivich" TurnInId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
-  <PickUp QuestName="The Demoniac Scryer" QuestId="10838" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+  <If Condition="!HasQuest(10838) &amp;&amp; !IsQuestCompleted(10838)">
+    <PickUp QuestName="The Demoniac Scryer" QuestId="10838" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+    <RunTo X="199.6663" Y="2785.458" Z="116.9412" />
+  </If>
   <If Condition="HasQuest(10838) &amp;&amp; !IsQuestCompleted(10838)">
     <CustomBehavior File="FlyTo" X="-144.5695" Y="3191.13" Z="-64.53362" />
     <CustomBehavior File="ForcedDismount" />
@@ -2754,7 +2759,10 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Demoniac Scryer" QuestId="10838" TurnInName="Apothecary Antonivich" TurnInId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
-  <PickUp QuestName="Report to Nazgrel" QuestId="10875" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+  <If Condition="!HasQuest(10875) &amp;&amp; !IsQuestCompleted(10875)">
+    <PickUp QuestName="Report to Nazgrel" QuestId="10875" GiverName="Apothecary Antonivich" GiverId="16588" X="225.6562" Y="2839.378" Z="131.3409" />
+    <RunTo X="199.6663" Y="2785.458" Z="116.9412" />
+  </If>
   <If Condition="HasQuest(10875)">
     <CustomBehavior File="FlyTo" X="179.1567" Y="2686.311" Z="86.9889" />
     <CustomBehavior File="ForcedDismount" />
@@ -2855,19 +2863,28 @@
   <PickUp QuestName="Trueflight Arrows" QuestId="9381" GiverName="Falconer Drenna Riverwind" GiverId="16790" X="-596.3472" Y="4108.465" Z="90.82103" />
   <PickUp QuestName="Birds of a Feather" QuestId="9397" GiverName="Falconer Drenna Riverwind" GiverId="16790" X="-596.3472" Y="4108.465" Z="90.82103" />
   <PickUp QuestName="Helping the Cenarion Post" QuestId="10442" GiverName="Falconer Drenna Riverwind" GiverId="16790" X="-596.3472" Y="4108.465" Z="90.82103" />
-  <If Condition="HasQuest(9498) || HasQuest(9499)">
-    <CustomBehavior File="FlyTo" X="-589.9161" Y="4069.136" Z="180.7507" />
-    <CustomBehavior File="FlyTo" X="-595.1027" Y="4070.502" Z="143.2577" />
-    <CustomBehavior File="ForcedDismount" />
+  <If Condition="HasQuest(9498) || HasQuest(9499) || (!HasQuest(9340) &amp;&amp; !IsQuestCompleted(9340)) || (!HasQuest(10103) &amp;&amp; !IsQuestCompleted(10103))">
+    <!--para cima da torre-->
+    <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
+    <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
+    <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+    <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
+    <If Condition="HasQuest(9498)">
+      <TurnIn QuestName="Falcon Watch" QuestId="9498" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    </If>
+    <If Condition="HasQuest(9499)">
+      <TurnIn QuestName="Falcon Watch" QuestId="9499" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    </If>
+    <If Condition="!HasQuest(9340) &amp;&amp; !IsQuestCompleted(9340)">
+      <PickUp QuestName="The Great Fissure" QuestId="9340" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    </If>
+    <If Condition="!HasQuest(10103) &amp;&amp; !IsQuestCompleted(10103)">
+      <PickUp QuestName="Report to Zurai" QuestId="10103" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    </If>
+    <!--para baixo da torre-->
+    <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+    <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
   </If>
-  <If Condition="HasQuest(9498)">
-    <TurnIn QuestName="Falcon Watch" QuestId="9498" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
-  </If>
-  <If Condition="HasQuest(9499)">
-    <TurnIn QuestName="Falcon Watch" QuestId="9499" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
-  </If>
-  <PickUp QuestName="The Great Fissure" QuestId="9340" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
-  <PickUp QuestName="Report to Zurai" QuestId="10103" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
   <If Condition="HasQuest(9381) &amp;&amp; !IsQuestCompleted(9381)">
     <CustomBehavior File="FlyTo" X="-452.5526" Y="4070.003" Z="68.53501" />
     <CustomBehavior File="ForcedDismount" />
@@ -2918,13 +2935,22 @@
   <TurnIn QuestName="In Need of Felblood" QuestId="9366" TurnInName="Ryathen the Somber" TurnInId="16791" X="-569.171" Y="4145.858" Z="68.10339" />
   <PickUp QuestName="The Cleansing Must Be Stopped" QuestId="9370" GiverName="Ryathen the Somber" GiverId="16791" X="-569.171" Y="4145.858" Z="68.10339" />
   <TurnIn QuestName="Trueflight Arrows" QuestId="9381" TurnInName="Falconer Drenna Riverwind" TurnInId="16790" X="-596.3472" Y="4108.465" Z="90.82103" />
-  <If Condition="HasQuest(9340)">
-    <CustomBehavior File="FlyTo" X="-589.9161" Y="4069.136" Z="180.7507" />
-    <CustomBehavior File="FlyTo" X="-595.1027" Y="4070.502" Z="143.2577" />
-    <CustomBehavior File="ForcedDismount" />
+  <If Condition="HasQuest(9340) || (!HasQuest(9391) &amp;&amp; !IsQuestCompleted(9391))">
+    <!--para cima da torre-->
+    <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
+    <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
+    <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+    <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
+    <If Condition="HasQuest(9340)">
+      <TurnIn QuestName="The Great Fissure" QuestId="9340" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    </If>
+    <If Condition="!HasQuest(9391) &amp;&amp; !IsQuestCompleted(9391)">
+      <PickUp QuestName="Marking the Path" QuestId="9391" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+      <!--para baixo da torre-->
+      <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+      <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
+    </If>
   </If>
-  <TurnIn QuestName="The Great Fissure" QuestId="9340" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
-  <PickUp QuestName="Marking the Path" QuestId="9391" GiverName="Ranger Captain Venn'ren" GiverId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
   <If Condition="HasQuest(9370) &amp;&amp; !IsQuestCompleted(9370)">
     <CustomBehavior File="FlyTo" X="88.92114" Y="3520.128" Z="60.9496" />
     <CustomBehavior File="ForcedDismount" />
@@ -3221,11 +3247,16 @@
     </While>
   </If>
   <If Condition="HasQuest(9391)">
-    <CustomBehavior File="FlyTo" X="-589.9161" Y="4069.136" Z="180.7507" />
-    <CustomBehavior File="FlyTo" X="-595.1027" Y="4070.502" Z="143.2577" />
-    <CustomBehavior File="ForcedDismount" />
+    <!--para cima da torre-->
+    <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
+    <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
+    <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+    <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
+    <TurnIn QuestName="Marking the Path" QuestId="9391" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
+    <!--para baixo da torre-->
+    <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
+    <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
   </If>
-  <TurnIn QuestName="Marking the Path" QuestId="9391" TurnInName="Ranger Captain Venn'ren" TurnInId="16789" X="-593.2421" Y="4068.186" Z="143.2584" />
   <If Condition="(HasQuest(9396) &amp;&amp; !IsQuestCompleted(9396)) || (HasQuest(9397) &amp;&amp; !IsQuestCompleted(9397))">
     <CustomBehavior File="FlyTo" X="-612.728" Y="4098.502" Z="155.3216" />
     <CustomBehavior File="FlyTo" X="-599.9945" Y="4164.848" Z="64.92676" />
