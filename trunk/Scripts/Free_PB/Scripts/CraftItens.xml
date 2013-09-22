@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <While Condition="SecondaryBot.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
+    <ChangeBotAction BotName="Grind Bot" />
+  </While>
+  
+  <!-- Rough Sharpening Stones  1/30-->
+  <If Condition="Blacksmithing.Level &lt; 30" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2835) + InBankCount (2835) &gt;= 1) &amp;&amp; Blacksmithing.Level &lt; 30 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <While Condition="InbagCount(2835) &lt; 1 &amp;&amp; InBankCount (2835) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2835" NpcEntry="0" Amount="1" AutoFindBank="False" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Rough Sharpening Stones untill 30&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2660" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2862) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2862) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2862" Count="0" />
+        </While>
+      </If>
+  <!--Rough Grinding Stones 30/65-->
+  <If Condition="Blacksmithing.Level &gt;= 30 &amp;&amp; Blacksmithing.Level &lt; 65" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2835) + InBankCount (2835) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 30 &amp;&amp; Blacksmithing.Level &lt; 65 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3320)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2835) &lt; 2 &amp;&amp; InBankCount (2835) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2835" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Rough Grinding Stones untill 65&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3320" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <!--Extras Extras Extras Extras Extras-->
+  <If Condition="Blacksmithing.Level &lt; 105 &amp;&amp; (InbagCount(3470) + InBankCount (3470) &lt; 14)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2835) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2835" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2835) &gt;= 2 &amp;&amp; InbagCount(3470) + InBankCount (3470)  &lt; 14 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3320)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Rough Grinding Stones for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3320" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+      </If>
+  <While Condition="Blacksmithing.Level &lt; 105 &amp;&amp; InbagCount(3470) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Rough Grinding Stones for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3470" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="Blacksmithing.Level &lt; 105 &amp;&amp; InbagCount(2835) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Rough Stones for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2835" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <!--Copper Chain Belt 65/75-->
+  <If Condition="Blacksmithing.Level &gt;= 65 &amp;&amp; Blacksmithing.Level &lt; 75" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2840) + InBankCount (2840) &gt;= 6) &amp;&amp; Blacksmithing.Level &gt;= 65 &amp;&amp; Blacksmithing.Level &lt; 75 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (2661)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2840) &lt; 6 &amp;&amp; InBankCount (2840) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2840" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Copper Chain Belt untill 75&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2661" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2851) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2851) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2851" Count="0" />
+        </While>
+      </If>
+  <While Condition="Blacksmithing.Level &lt; 155 &amp;&amp; InbagCount(2840) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Copper Bars for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2840" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <!--Coarse Grinding Stones 75/90-->
+  <If Condition="Blacksmithing.Level &gt;= 75 &amp;&amp; Blacksmithing.Level &lt; 90" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2836) + InBankCount (2836) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 75 &amp;&amp; Blacksmithing.Level &lt; 90 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3326)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2836) &lt; 2 &amp;&amp; InBankCount (2836) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Coarse Grinding Stone untill 90&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3326" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="(InbagCount(2836) + InBankCount (2836) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 100 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <While Condition="InbagCount(2836) &lt; 2 &amp;&amp; InBankCount (2836) &gt;= 1" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <CustomAction Code="slog(&quot;Crafting Coarse Grinding Stone untill 100&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Forge" />
+        <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3326" CastOnItem="False" ItemType="Chest" ItemId="0" />
+      </While>
+  <!--Extras Extras Extras Extras Extras-->
+  <If Condition="Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 155 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 20)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2836) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2836) &gt;= 2 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 20) &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3326)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Coarse Grinding Stone for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3326" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+      </If>
+  <If Condition="Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 145 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 25)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2836) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2836) &gt;= 2 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 25) &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3326)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Coarse Grinding Stone for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3326" CastOnItem="False" ItemType="Chest" ItemId="0" />
+        </While>
+      </If>
+  <If Condition="Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 125 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 40)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2836) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2836) &gt;= 2 &amp;&amp; (InbagCount(3478) + InBankCount (3478) &lt; 40) &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3326)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Coarse Grinding Stone for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3326" CastOnItem="False" ItemType="Chest" ItemId="0" />
+        </While>
+      </If>
+  <While Condition="Blacksmithing.Level &lt; 155 &amp;&amp; InbagCount(3478) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Coarse Grinding Stones for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3478" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="Blacksmithing.Level &lt; 155 &amp;&amp; InbagCount(2836) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Coarse Stones for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2836" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <!--Runed Copper Belt 90/100-->
+  <If Condition="Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 100" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2840) + InBankCount (2840) &gt;= 10) &amp;&amp; Blacksmithing.Level &gt;= 90 &amp;&amp; Blacksmithing.Level &lt; 100 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (2666)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2840) &lt; 10 &amp;&amp; InBankCount (2840) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2840" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Runed Copper Belt untill 100&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2666" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2857) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2857) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2857" Count="0" />
+        </While>
+      </If>
+  <While Condition="Blacksmithing.Level &lt; 155 &amp;&amp; InbagCount(2840) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving Copper Bars for later use&quot;);" />
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2840" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+      </While>
+  <!--Silver Skeleton Key 100/105-->
+  <If Condition="Blacksmithing.Level &gt;= 100 &amp;&amp; Blacksmithing.Level &lt; 105" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2842) + InBankCount (2842) &gt;= 1) &amp;&amp; (InbagCount(3470) + InBankCount (3470) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 100 &amp;&amp; Blacksmithing.Level &lt; 105 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (19666)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2842) &lt; 1 &amp;&amp; InBankCount (2842) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2842" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3470) &lt; 2 &amp;&amp; InBankCount (3470) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3470" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Silver Skeleton Key untill 105&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="19666" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="InbagCount(15869) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Selling Silver Skeleton Key at Vendor&quot;);" />
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="15869" Count="0" />
+      </While>
+  <While Condition="InBankCount (3470) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 105" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3470" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="InbagCount(3470) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 105" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3470" Count="0" />
+      </While>
+  <If Condition="InbagCount (2835) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 105" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(2835) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2835" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (2842) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 105" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(2842) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2842" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (2775) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 105" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(2775) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2775" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Runed Copper Belt 100/110-->
+  <If Condition="Blacksmithing.Level &gt;= 100 &amp;&amp; Blacksmithing.Level &lt; 110" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2840) + InBankCount (2840) &gt;= 10) &amp;&amp; Blacksmithing.Level &gt;= 100 &amp;&amp; Blacksmithing.Level &lt; 110 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (2666)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2840) &lt; 10 &amp;&amp; InBankCount (2840) &gt;= 1" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2840" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Runed Copper Belt untill 110&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2666" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2857) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2857) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move to Vendor" />
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2857" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (2857) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(2857) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2857" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Smelting bronze-->
+  <If Condition="Blacksmithing.Level &gt;= 110 &amp;&amp; Blacksmithing.Level &lt; 155 &amp;&amp; Mining.Level &gt;= 65" IgnoreCanRun="True">
+        <If Condition="(InbagCount(2840) + InBankCount (2840)) &gt; 0 &amp;&amp; (InbagCount(3576) + InBankCount (3576)) &gt; 0" IgnoreCanRun="True">
+          <While Condition="InBankCount (2840) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2840" NpcEntry="0" Amount="75" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InBankCount (3576) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3576" NpcEntry="0" Amount="75" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <If Condition="InbagCount (2840) &gt; 0 &amp;&amp; InbagCount (3576) &gt; 0 &amp;&amp; Mining.Level &gt; 65" IgnoreCanRun="True">
+            <If Condition="!HasRecipe (2659)" IgnoreCanRun="True">
+              <CallSubRoutine SubRoutineName="Train Mining" />
+            </If>
+            <CallSubRoutine SubRoutineName="Move To Forge" />
+            <While Condition="InbagCount (2840) &gt; 0 &amp;&amp; InbagCount (3576) &gt; 0" IgnoreCanRun="True">
+              <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2659" CastOnItem="False" ItemType="Chest" ItemId="0" />
+            </While>
+          </If>
+        </If>
+      </If>
+  <!--Rough Bronze Shoulders 110/125-->
+  <If Condition="Blacksmithing.Level &gt;= 110 &amp;&amp; Blacksmithing.Level &lt; 125" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2841) + InBankCount (2841) &gt;= 5) &amp;&amp; (InbagCount(3478) + InBankCount (3478) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 110 &amp;&amp; Blacksmithing.Level &lt; 125 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3328)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2841) &lt; 5 &amp;&amp; InBankCount (2841) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2841" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3478) &lt; 1 &amp;&amp; InBankCount (3478) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3478" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Rough Bronze Shoulders untill 125&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3328" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (3480) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3480) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3480" Count="0" />
+        </While>
+      </If>
+  <!--Heavy Grinding Stone 125/140-->
+  <If Condition="Blacksmithing.Level &gt;= 125 &amp;&amp; Blacksmithing.Level &lt; 140" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2838) + InBankCount (2838) &gt;= 3) &amp;&amp; Blacksmithing.Level &gt;= 125 &amp;&amp; Blacksmithing.Level &lt; 140 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3337)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2838) &lt; 3 &amp;&amp; InBankCount (2838) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2838" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Heavy Grinding Stone untill 140&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3337" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <!--Heavy Grinding Stone 140/150-->
+  <If Condition="Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 150" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2838) + InBankCount (2838) &gt;= 3) &amp;&amp; Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 150 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3337)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2838) &lt; 3 &amp;&amp; InBankCount (2838) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2838" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Heavy Grinding Stone untill 150&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3337" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <!--Extras Extras Extras Extras Extras-->
+  <If Condition="Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 165 &amp;&amp; (InbagCount(3486) + InBankCount (3486) &lt; 40)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2838) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2838" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2838) &gt;= 3 &amp;&amp; InbagCount(3486) + InBankCount (3486) &lt; 40 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3337)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Heavy Grinding Stone for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3337" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+      </If>
+  <If Condition="Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 200 &amp;&amp; (InbagCount(3486) + InBankCount (3486) &lt; 20)" IgnoreCanRun="True">
+        <While Condition="InBankCount (2838) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2838" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2838) &gt;= 3 &amp;&amp; InbagCount(3486) + InBankCount (3486) &lt; 20 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3337)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <CustomAction Code="slog(&quot;Crafting Heavy Grinding Stone for later use&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3337" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+      </If>
+  <If Condition="Blacksmithing.Level &lt; 200" IgnoreCanRun="True">
+        <If Condition="InbagCount(3486) &gt; 0 || InbagCount(2838) &gt; 0" IgnoreCanRun="True">
+          <CustomAction Code="slog(&quot;Saving mats for later use&quot;);" />
+        </If>
+        <While Condition="InbagCount(3486) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3486" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(2838) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2838" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Rough Bronze Shoulders 140/145-->
+  <If Condition="Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 145" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2841) + InBankCount (2841) &gt;= 5) &amp;&amp; (InbagCount(3478) + InBankCount (3478) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 140 &amp;&amp; Blacksmithing.Level &lt; 145 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3328)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2841) &lt; 5 &amp;&amp; InBankCount (2841) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2841" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3478) &lt; 1 &amp;&amp; InBankCount (3478) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3478" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Rough Bronze Shoulders untill 145&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3328" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (3840) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2840) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3840" Count="0" />
+        </While>
+      </If>
+  <!--Patterned Bronze Bracers 145/150-->
+  <If Condition="(InbagCount(2841) + InBankCount (2841) &gt;= 5) &amp;&amp; (InbagCount(3478) + InBankCount (3478) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 145 &amp;&amp; Blacksmithing.Level &lt; 150 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2841) + InBankCount (2841) &gt;= 5) &amp;&amp; (InbagCount(3478) + InBankCount (3478) &gt;= 2) &amp;&amp; Blacksmithing.Level &gt;= 145 &amp;&amp; Blacksmithing.Level &lt; 150 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (2672)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2841) &lt; 5 &amp;&amp; InBankCount (2841) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2841" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3478) &lt; 2 &amp;&amp; InBankCount (3478) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3478" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Patterned Bronze Bracers untill 150&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <WaitAction Condition="false" Timeout="500" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2672" CastOnItem="False" ItemType="Chest" ItemId="0" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2868) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2868) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2868" Count="0" />
+        </While>
+      </If>
+  <If Condition="Blacksmithing.Level &lt; 155" IgnoreCanRun="True">
+        <If Condition="InbagCount(2841) &gt; 0 || InbagCount(3478) &gt; 0" IgnoreCanRun="True">
+          <CustomAction Code="slog(&quot;Saving mats for later use&quot;);" />
+        </If>
+        <While Condition="InbagCount(2841) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2841" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InbagCount(3478) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3478" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Golden Skeleton Key 150/160-->
+  <If Condition="Blacksmithing.Level &gt;= 150 &amp;&amp; Blacksmithing.Level &lt; 160" IgnoreCanRun="True">
+        <While Condition="(InbagCount(3577) + InBankCount (3577) &gt;= 1) &amp;&amp; (InbagCount(3486) + InBankCount (3486) &gt;= 31) &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (19667)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3577) &lt; 1 &amp;&amp; InBankCount (3577) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3577" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3486) &lt; 1 &amp;&amp; InBankCount (3486) &gt; 31" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3486" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Golden Skeleton Key untill 160&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="19667" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="InbagCount(15870) &gt; 0" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Selling Golden Skeleton Key at Vendor&quot;);" />
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="15870" Count="0" />
+      </While>
+  <If Condition="InbagCount(3486) &gt; 0 &amp;&amp; Blacksmithing.Level &lt; 200" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Saving mats for later use&quot;);" />
+        <While Condition="InbagCount(3486) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3486" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3577) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 160" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(3577) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3577" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Patterned Bronze Bracers 150/155-->
+  <If Condition="Blacksmithing.Level &gt;= 150 &amp;&amp; Blacksmithing.Level &lt; 155" IgnoreCanRun="True">
+        <While Condition="(InbagCount(2841) + InBankCount (2841) &gt;= 5) &amp;&amp; (InbagCount(3478) + InBankCount (3478) &gt;= 2) &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (2672)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(2841) &lt; 5 &amp;&amp; InBankCount (2841) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2841" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3478) &lt; 2 &amp;&amp; InBankCount (3478) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3478" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Patterned Bronze Bracers untill 150&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="2672" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (2868) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(2868) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2868" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3478) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 155" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3478) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3478" Count="0" />
+        </While>
+      </If>
+  <While Condition="InBankCount (2841) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 155" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2841" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="InBankCount (2836) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 155" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2836" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="InBankCount (2840) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 155" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2840" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="InBankCount (3576) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 155" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3576" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <!--Green Iron Leggings 155/165-->
+  <If Condition="Blacksmithing.Level &gt;= 155 &amp;&amp; Blacksmithing.Level &lt; 165" IgnoreCanRun="True">
+        <While Condition="InBankCount (2605) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2605" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <If Condition="InbagCount(2605) &lt; 10" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move to GreenEyeVendor" />
+        </If>
+        <While Condition="InbagCount(3575) + InBankCount (3575) &gt;= 8 &amp;&amp; InbagCount(3486) + InBankCount (3486) &gt;= 1 &amp;&amp; Blacksmithing.Level &gt;= 155 &amp;&amp; Blacksmithing.Level &lt; 165 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3506)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3575) &lt; 8 &amp;&amp; InBankCount (3575) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3575" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3486) &lt; 1 &amp;&amp; InBankCount (3486) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3486" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Green Iron Leggings untill 165&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3506" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (3842) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3842) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3842" Count="0" />
+        </While>
+      </If>
+  <!--Green Iron Bracers 165/190-->
+  <If Condition="Blacksmithing.Level &gt;= 165 &amp;&amp; Blacksmithing.Level &lt; 190" IgnoreCanRun="True">
+        <While Condition="InBankCount (2605) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="2605" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <If Condition="InbagCount(2605) &lt; 25" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move to GreenEyeVendor" />
+        </If>
+        <While Condition="InbagCount(3575) + InBankCount (3575) &gt;= 6 &amp;&amp; Blacksmithing.Level &gt;= 165 &amp;&amp; Blacksmithing.Level &lt; 190 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (3501)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3575) &lt; 6 &amp;&amp; InBankCount (3575) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3575" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Green Iron Bracers untill 190&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3501" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="InbagCount(2605) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 190" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Selling Green Dye at Vendor&quot;);" />
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="2605" Count="0" />
+      </While>
+  <If Condition="InbagCount (3835) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3835) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3835" Count="0" />
+        </While>
+      </If>
+  <!--Smelting Steel-->
+  <If Condition="Blacksmithing.Level &gt;= 190 &amp;&amp; Blacksmithing.Level &lt; 200 &amp;&amp; Mining.Level &gt; 125" IgnoreCanRun="True">
+        <While Condition="InBankCount (3857) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3857" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InBankCount (3575) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3575" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <While Condition="InBankCount (3859) &gt; 0" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move To Bank" />
+          <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3859" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+        </While>
+        <If Condition="InbagCount(3857) &lt; 50" IgnoreCanRun="True">
+          <CustomAction Code="slog(&quot;buying Coal from vendor&quot;);" />
+          <CallSubRoutine SubRoutineName="Move to Vendor" />
+          <While Condition="InbagCount(3857) &lt; 50" IgnoreCanRun="True">
+            <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+              <BuyItemAction NpcEntry="5512" Location="-8432.998, 623.7123, 95.39398" ItemID="3857" BuyItemType="SpecificItem" Count="50" BuyAdditively="False" />
+            </If>
+            <If Condition="Me.IsHorde" IgnoreCanRun="True">
+              <BuyItemAction NpcEntry="3356" Location="2075.79, -4828.07, 27.91945" ItemID="3857" BuyItemType="SpecificItem" Count="50" BuyAdditively="False" />
+            </If>
+          </While>
+        </If>
+        <If Condition="InbagCount(3859) &lt; 50 &amp;&amp; InbagCount(3575) &gt; 0 &amp;&amp; InbagCount(3857) &gt; 0" IgnoreCanRun="True">
+          <While Condition="InbagCount(3859) &lt; 50 &amp;&amp; (InbagCount(3575) &gt;= 1) &amp;&amp; InbagCount(3857) &gt;= 1 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+            <If Condition="!HasRecipe (3569)" IgnoreCanRun="True">
+              <CallSubRoutine SubRoutineName="Train Mining" />
+            </If>
+            <CallSubRoutine SubRoutineName="Move To Forge" />
+            <CastSpellAction RepeatType="Specific" Repeat="1" Entry="3569" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          </While>
+        </If>
+      </If>
+  <!--Golden Scale Bracers 190/200-->
+  <If Condition="Blacksmithing.Level &gt;= 190 &amp;&amp; Blacksmithing.Level &lt; 200" IgnoreCanRun="True">
+        <While Condition="(InbagCount(3859) + InBankCount (3859) &gt;= 5) &amp;&amp; (InbagCount(3486) + InBankCount (3486) &gt;= 2) &amp;&amp; Blacksmithing.Level &lt; 200 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (7223)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3859) &lt; 5 &amp;&amp; InBankCount (3859) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3859" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(3486) &lt; 2 &amp;&amp; InBankCount (3486) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3486" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Golden Scale Bracers untill 200&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="7223" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="InbagCount(6040) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 190" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Selling Golden Scale Bracers at Vendor&quot;);" />
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="6040" Count="0" />
+      </While>
+  <While Condition="Blacksmithing.Level &gt;= 200 &amp;&amp; InBankCount (3486) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3486" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <While Condition="Blacksmithing.Level &gt;= 200 &amp;&amp; InBankCount (3857) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3857" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <If Condition="InbagCount (3486) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 200" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3486) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3486" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3857) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 200" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(3857) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="3857" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3859) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 200" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(3859) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3859" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3575) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 200" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(3575) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3575" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (2838) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 200" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(2838) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="2838" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Solid Sharpening Stone 200/210-->
+  <If Condition="Blacksmithing.Level &gt;= 200 &amp;&amp; Blacksmithing.Level &lt; 210" IgnoreCanRun="True">
+        <While Condition="(InbagCount(7912) + InBankCount (7912) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 200 &amp;&amp; Blacksmithing.Level &lt; 210 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (9918)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(7912) &lt; 1 &amp;&amp; InBankCount (7912) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="7912" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Solid Sharpening Stone untill 210&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="9918" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <While Condition="Blacksmithing.Level &gt;= 210 &amp;&amp; InBankCount (7964) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="7964" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+      </While>
+  <If Condition="InbagCount (7964) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(7964) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="7964" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (7912) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 210" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(7912) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="7912" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Mithril Scale Pants 210/230-->
+  <If Condition="Blacksmithing.Level &gt;= 210 &amp;&amp; Blacksmithing.Level &lt; 230" IgnoreCanRun="True">
+        <While Condition="InbagCount(3860) + InBankCount (3860) &gt;= 12  &amp;&amp; Blacksmithing.Level &gt;= 210 &amp;&amp; Blacksmithing.Level &lt; 230 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (9931)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3860) &lt; 12 &amp;&amp; InBankCount (3860) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3860" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Mithril Scale Pants untill 230&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="9931" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (7920) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(7920) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="7920" Count="0" />
+        </While>
+      </If>
+  <!--Heavy Mithril Breastplate 230/250-->
+  <If Condition="Blacksmithing.Level &gt;= 230 &amp;&amp; Blacksmithing.Level &lt; 250" IgnoreCanRun="True">
+        <While Condition="(InbagCount(3860) + InBankCount (3860) &gt;= 16) &amp;&amp; Blacksmithing.Level &gt;= 230 &amp;&amp; Blacksmithing.Level &lt; 250 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (9959)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(3860) &lt; 16 &amp;&amp; InBankCount (3860) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="3860" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Heavy Mithril Breastplate untill 250&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="9959" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (7930) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(7930) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="7930" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (3860) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 250" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(3860) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="3860" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Dense Sharpening Stones 250/260-->
+  <If Condition="Blacksmithing.Level &gt;= 250 &amp;&amp; Blacksmithing.Level &lt; 260" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12365) + InBankCount (12365) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 250 &amp;&amp; Blacksmithing.Level &lt; 260 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16641)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12365) &lt; 1 &amp;&amp; InBankCount (12365) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12365" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Dense Sharpening Stones untill 260&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16641" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12404) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12404) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12404" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (12365) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 260" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(12365) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="12365" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <!--Thorium Bracers 260/275-->
+  <If Condition="Blacksmithing.Level &gt;= 260 &amp;&amp; Blacksmithing.Level &lt; 275" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12359) + InBankCount (12359) &gt;= 8) &amp;&amp; Blacksmithing.Level &gt;= 260 &amp;&amp; Blacksmithing.Level &lt; 275 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16644)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12359) &lt; 8 &amp;&amp; InBankCount (12359) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12359" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Thorium Bracers untill 275&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16644" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12408) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12408) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12408" Count="0" />
+        </While>
+      </If>
+  <!--Imperial Plate Bracers 275/290-->
+  <If Condition="Blacksmithing.Level &gt;= 275 &amp;&amp; Blacksmithing.Level &lt; 290" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12359) + InBankCount (12359) &gt;= 12) &amp;&amp; Blacksmithing.Level &gt;= 275 &amp;&amp; Blacksmithing.Level &lt; 290 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16649)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12359) &lt; 12 &amp;&amp; InBankCount (12359) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12359" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Imperial Plate Bracers untill 290&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16649" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12425) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12425) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12425" Count="0" />
+        </While>
+      </If>
+  <!--Thorium Helm 290/295-->
+  <If Condition="Blacksmithing.Level &gt;= 290 &amp;&amp; Blacksmithing.Level &lt; 295" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12359) + InBankCount (12359) &gt;= 12) &amp;&amp; (InbagCount(7910) + InBankCount (7910) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 290 &amp;&amp; Blacksmithing.Level &lt; 295 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16653)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12359) &lt; 12 &amp;&amp; InBankCount (12359) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12359" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(7910) &lt; 1 &amp;&amp; InBankCount (7910) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="7910" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Thorium Helm untill 295&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16653" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12410) &gt; 0  &amp;&amp; (bool)Settings[&quot;Excess Mats To AH&quot;]" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12410) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12410" Count="0" />
+        </While>
+      </If>
+  <!--Thorium Helm 295/300-->
+  <If Condition="Blacksmithing.Level &gt;= 295 &amp;&amp; Blacksmithing.Level &lt; 300" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12359) + InBankCount (12359) &gt;= 12) &amp;&amp; (InbagCount(7910) + InBankCount (7910) &gt;= 1) &amp;&amp; Blacksmithing.Level &gt;= 295 &amp;&amp; Blacksmithing.Level &lt; 300 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16653)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12359) &lt; 12 &amp;&amp; InBankCount (12359) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12359" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <While Condition="InbagCount(7910) &lt; 1 &amp;&amp; InBankCount (7910) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="7910" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Thorium Helm untill 300&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16653" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12410) &gt; 0" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12410) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12410" Count="0" />
+        </While>
+      </If>
+  <!--Imperial Plate Boots 295/300-->
+  <If Condition="Blacksmithing.Level &gt;= 295 &amp;&amp; Blacksmithing.Level &lt; 300" IgnoreCanRun="True">
+        <While Condition="(InbagCount(12359) + InBankCount (12359) &gt;= 18) &amp;&amp; Blacksmithing.Level &gt;= 295 &amp;&amp; Blacksmithing.Level &lt; 300 &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+          <If Condition="!HasRecipe (16657)" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+          </If>
+          <While Condition="InbagCount(12359) &lt; 18 &amp;&amp; InBankCount (12359) &gt; 0" IgnoreCanRun="True">
+            <CallSubRoutine SubRoutineName="Move To Bank" />
+            <GetItemfromBankAction Withdraw="All" Bank="Personal" MinFreeBagSlots="5" GetItemfromBankType="SpecificItem" ItemID="12359" NpcEntry="0" Amount="1" AutoFindBank="True" WithdrawAdditively="True" Location="0, 0, 0" />
+          </While>
+          <CustomAction Code="slog(&quot;Crafting Imperial Plate Boots untill 300&quot;);" />
+          <CallSubRoutine SubRoutineName="Move To Forge" />
+          <CastSpellAction RepeatType="Specific" Repeat="1" Entry="16657" CastOnItem="False" ItemType="Chest" ItemId="0" />
+          <WaitAction Condition="false" Timeout="500" />
+        </While>
+        <CallSubRoutine SubRoutineName="Train Blacksmithing" />
+      </If>
+  <If Condition="InbagCount (12426) &gt; 0  &amp;&amp; (bool)Settings[&quot;Excess Mats To AH&quot;]" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move to Vendor" />
+        <While Condition="InbagCount(12426) &gt; 0" IgnoreCanRun="True">
+          <SellItemAction Sell="All" NpcEntry="0" Location="0, 0, 0" SellItemType="Specific" ItemID="12426" Count="0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (12359) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 300" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(12359) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="12359" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+  <If Condition="InbagCount (7910) &gt; 0 &amp;&amp; Blacksmithing.Level &gt;= 300" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move To Bank" />
+        <While Condition="InbagCount(7910) &gt; 0" IgnoreCanRun="True">
+          <PutItemInBankAction Category="TradeGoods" SubCategoryType="WoWItemTradeGoodsClass" SubCategory="None" Deposit="All" UseCategory="False" Bank="Personal" ItemID="7910" PersonalTab="0" NpcEntry="0" Amount="0" AutoFindBank="True" Location="0, 0, 0" />
+        </While>
+      </If>
+
+
+  <LoadProfileAction ProfileType="Professionbuddy" Path="[PB]MB(Cava).xml" />
+  <CustomAction Code="TreeRoot.Stop();" />
+
+  
+  <SubRoutine SubRoutineName="Move To Bank">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <CustomAction Code="slog(&quot;Going to bank at 'The Dwarven Destrict'.&quot;);" />
+      <If Condition="DistanceTo(-8310.676, 577.9235, 100.3048) &gt; 60" IgnoreCanRun="True">
+        <While Condition="DistanceTo(-8345.663, 621.6138, 96.07644) &gt; 5" IgnoreCanRun="True">
+          <FlyToAction Dismount="True" Location="-8345.663, 621.6138, 96.07644" />
+        </While>
+        <CustomAction Code="var9 = rnd.Next(700);" />
+        <If Condition="(int)var9 &lt;= 100" IgnoreCanRun="True">
+          <MoveToAction Location="-8324.74, 604.218, 99.68425" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank1.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 100 &amp;&amp; (int)var9 &lt;= 200" IgnoreCanRun="True">
+          <MoveToAction Location="-8320.722, 600.137, 99.66592" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank2.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 200 &amp;&amp; (int)var9 &lt;= 300" IgnoreCanRun="True">
+          <MoveToAction Location="-8316.812, 595.1612, 99.66646" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank3.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 300 &amp;&amp; (int)var9 &lt;= 400" IgnoreCanRun="True">
+          <MoveToAction Location="-8326.801, 587.6045, 99.6609" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank4.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 400 &amp;&amp; (int)var9 &lt;= 500" IgnoreCanRun="True">
+          <MoveToAction Location="-8330.598, 592.3568, 99.66071" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank5.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 500 &amp;&amp; (int)var9 &lt;= 600" IgnoreCanRun="True">
+          <MoveToAction Location="-8334.195, 596.9282, 99.66006" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank6.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 600" IgnoreCanRun="True">
+          <MoveToAction Location="-8310.676, 577.9235, 100.3048" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="SwBank7.xml" />
+        </If>
+      </If>
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <CustomAction Code="slog(&quot;Going to bank at 'The Valley Of honor'.&quot;);" />
+      <If Condition="DistanceTo(1870.537, -4684.5, 38.55014) &gt; 50" IgnoreCanRun="True">
+        <While Condition="DistanceTo(1911.259, -4683.458, 35.38358) &gt; 5" IgnoreCanRun="True">
+          <FlyToAction Dismount="True" Location="1911.259, -4683.458, 35.38358" />
+        </While>
+        <CustomAction Code="var9 = rnd.Next(400);" />
+        <If Condition="(int)var9 &lt;= 100" IgnoreCanRun="True">
+          <MoveToAction Location="1875.562, -4687.534, 38.50147" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="OrgBank1.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 100 &amp;&amp; (int)var9 &lt;= 200" IgnoreCanRun="True">
+          <MoveToAction Location="1870.846, -4684.877, 38.53323" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="OrgBank2.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 200 &amp;&amp; (int)var9 &lt;= 300" IgnoreCanRun="True">
+          <MoveToAction Location="1870.805, -4678.336, 38.55196" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="OrgBank3.xml" />
+        </If>
+        <If Condition="(int)var9 &gt; 300" IgnoreCanRun="True">
+          <MoveToAction Location="1875.053, -4676.556, 38.50037" MoveType="Location" Pathing="Navigator" Entry="0" />
+          <LoadProfileAction ProfileType="Honorbuddy" Path="OrgBank4.xml" />
+        </If>
+      </If>
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Move To Forge">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" Location="-8420.148, 620.2996, 95.55436" />
+      <LoadProfileAction ProfileType="Honorbuddy" Path="StormwindForge.xml" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" Location="2055.761, -4827.665, 27.47184" />
+      <LoadProfileAction ProfileType="Honorbuddy" Path="OrgrimmarForge.xml" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Train Blacksmithing">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <CustomAction Code="slog(&quot;Going to train blacksmithing, in Stormwind&quot;);" />
+      <FlyToAction Dismount="True" Location="-8419.563, 621.2868, 95.57953" />
+      <TrainSkillAction NpcEntry="5511" Location="-8424.496, 616.8224, 95.4668" />
+      <MoveToAction Location="-8420.742, 619.4836, 95.53332" MoveType="Location" Pathing="Navigator" Entry="0" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <CustomAction Code="slog(&quot;Going to train blacksmithing, in Orgrimmar&quot;);" />
+      <FlyToAction Dismount="True" Location="2056.688, -4825.06, 27.4725" />
+      <TrainSkillAction NpcEntry="7230" Location="2056.528, -4826.787, 27.47173" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Move to Vendor">
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" Location="-8430.279, 623.7834, 95.54025" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="True" Location="2048.109, -4828.162, 27.565" />
+    </If>
+  </SubRoutine>
+  <SubRoutine SubRoutineName="Move to GreenEyeVendor">
+    <CustomAction Code="slog(&quot;buying Green Dye from vendor&quot;);" />
+    <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" Location="-8909.796, 794.1615, 142.8333" />
+      <FlyToAction Dismount="True" Location="-8938.149, 773.1598, 89.4074" />
+      <While Condition="InbagCount(2605) &lt; 35" IgnoreCanRun="True">
+        <BuyItemAction NpcEntry="1347" Location="-8942.841, 799.5444, 90.94246" ItemID="2605" BuyItemType="SpecificItem" Count="35" BuyAdditively="False" />
+      </While>
+      <MoveToAction Location="-8938.149, 773.1598, 89.4074" MoveType="Location" Pathing="Navigator" Entry="0" />
+      <FlyToAction Dismount="False" Location="-8909.796, 794.1615, 142.8333" />
+      <FlyToAction Dismount="True" Location="-8419.098, 621.37, 95.58143" />
+    </If>
+    <If Condition="Me.IsHorde" IgnoreCanRun="True">
+      <FlyToAction Dismount="False" Location="1878.763, -4524.937, 119.5489" />
+      <FlyToAction Dismount="True" Location="1803.011, -4531.015, 23.11243" />
+      <While Condition="InbagCount(2605) &lt; 35" IgnoreCanRun="True">
+        <BuyItemAction NpcEntry="3364" Location="1807.04, -4563.03, 23.00011" ItemID="2605" BuyItemType="SpecificItem" Count="35" BuyAdditively="False" />
+      </While>
+      <MoveToAction Location="1803.011, -4531.015, 23.11243" MoveType="Location" Pathing="Navigator" Entry="0" />
+      <FlyToAction Dismount="False" Location="1878.763, -4524.937, 119.5489" />
+      <FlyToAction Dismount="True" Location="2055.885, -4826.285, 29.96879" />
+    </If>
+  </SubRoutine>
+  <Declaration Code="private void slog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.Aquamarine, &quot;[PB-Cava]: &quot; + format, args);&#xD;&#xA;}" />
+  <Declaration Code="Random rnd = new Random();" />
+</Professionbuddy>
