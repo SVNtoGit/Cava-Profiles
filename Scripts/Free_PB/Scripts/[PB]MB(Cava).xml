@@ -108,6 +108,7 @@
         </If>
         <CallSubRoutine SubRoutineName="SELL ROUTINE" />
       </If>
+      <CallSubRoutine SubRoutineName="Check Needs" />
       <CallSubRoutine SubRoutineName="MINING ROUTINE" />
       <CallSubRoutine SubRoutineName="EXTRAS ROUTINE" />
       <CallSubRoutine SubRoutineName="SELL ROUTINE" />
@@ -1886,23 +1887,23 @@
         <CustomAction Code="Settings[&quot;CoarseStoneNeed&quot;] = 100;" />
       </If>
       <CustomAction Code="Settings[&quot;CoarseStoneNeed&quot;] = (int)Settings[&quot;CoarseStoneNeed&quot;] - InBankCount (2836);" />
-      <CustomAction Code="Settings[&quot;SilverNeed&quot;] = (int)Settings[&quot;SilverNeed&quot;] - InbagCount(2842) - InBankCount (2842) - InBankCount (2775);" />
+      <CustomAction Code="Settings[&quot;SilverNeed&quot;] = (int)Settings[&quot;SilverNeed&quot;] - InBankCount (2842) - InBankCount (2775);" />
       <CustomAction Code="Settings[&quot;BronzeNeed&quot;] = (int)Settings[&quot;BronzeNeed&quot;] - InBankCount (2841);" />
       <CustomAction Code="Settings[&quot;CopperNeed&quot;] = (int)Settings[&quot;CopperNeed&quot;] + ((int)Settings[&quot;BronzeNeed&quot;]+1) /2;" />
       <CustomAction Code="Settings[&quot;TinNeed&quot;] = ((int)Settings[&quot;BronzeNeed&quot;]+1) /2;" />
-      <CustomAction Code="Settings[&quot;TinNeed&quot;] = (int)Settings[&quot;TinNeed&quot;] - InBankCount (2771) - InbagCount(3576) - InBankCount (3576);" />
-      <CustomAction Code="Settings[&quot;IronNeed&quot;] = (int)Settings[&quot;IronNeed&quot;] - InbagCount(3575) - InBankCount (3575) - InBankCount (2772);" />
+      <CustomAction Code="Settings[&quot;TinNeed&quot;] = (int)Settings[&quot;TinNeed&quot;] - InBankCount (2771) - InBankCount (3576);" />
+      <CustomAction Code="Settings[&quot;IronNeed&quot;] = (int)Settings[&quot;IronNeed&quot;] - InBankCount (3575) - InBankCount (2772);" />
       <CustomAction Code="Settings[&quot;HeavyGrindingStoneNeed&quot;] = (int)Settings[&quot;HeavyGrindingStoneNeed&quot;] - InBankCount (3486);" />
       <CustomAction Code="Settings[&quot;HeavyStoneNeed&quot;] = ((int)Settings[&quot;HeavyGrindingStoneNeed&quot;] * 3) - InBankCount (2838);" />
       <If Condition="Blacksmithing.Level &lt; 140" IgnoreCanRun="True">
         <CustomAction Code="Settings[&quot;HeavyStoneNeed&quot;] = 105 - InBankCount (2838);" />
       </If>
-      <CustomAction Code="Settings[&quot;SteelNeed&quot;] = (int)Settings[&quot;SteelNeed&quot;] - InbagCount(3859) - InBankCount (3859);" />
+      <CustomAction Code="Settings[&quot;SteelNeed&quot;] = (int)Settings[&quot;SteelNeed&quot;] - InBankCount (3859);" />
       <CustomAction Code="Settings[&quot;IronNeed&quot;] = (int)Settings[&quot;IronNeed&quot;] + (int)Settings[&quot;SteelNeed&quot;];" />
       <CustomAction Code="Settings[&quot;SolidStoneNeed&quot;] = (int)Settings[&quot;SolidStoneNeed&quot;] - InBankCount (7912);" />
-      <CustomAction Code="Settings[&quot;MithrilNeed&quot;] = (int)Settings[&quot;MithrilNeed&quot;] - InbagCount(3860) - InBankCount (3860) - InBankCount (3858);" />
+      <CustomAction Code="Settings[&quot;MithrilNeed&quot;] = (int)Settings[&quot;MithrilNeed&quot;] - InBankCount (3860) - InBankCount (3858);" />
       <CustomAction Code="Settings[&quot;DenseStoneNeed&quot;] = (int)Settings[&quot;DenseStoneNeed&quot;] - InBankCount (12365);" />
-      <CustomAction Code="Settings[&quot;ThoriumNeed&quot;] = (int)Settings[&quot;ThoriumNeed&quot;] - InbagCount(12359) - InBankCount (12359) - InBankCount (10620);" />
+      <CustomAction Code="Settings[&quot;ThoriumNeed&quot;] = (int)Settings[&quot;ThoriumNeed&quot;] - InBankCount (12359) - InBankCount (10620);" />
       <CustomAction Code="Settings[&quot;StarRubyNeed&quot;] = (int)Settings[&quot;StarRubyNeed&quot;] - InBankCount (7910);" />
       <If Condition="(bool)Settings[&quot;Debug&quot;]" IgnoreCanRun="True">
         <CallSubRoutine SubRoutineName="Print Debug" />
