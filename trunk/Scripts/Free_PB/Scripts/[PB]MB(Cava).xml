@@ -2688,10 +2688,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper148.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper148.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper148.xml" />
       </While>
     </SubRoutine>
@@ -2709,10 +2712,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper12.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper12.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper12.xml" />
       </While>
     </SubRoutine>
@@ -2730,10 +2736,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper1.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper1.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper1.xml" />
       </While>
     </SubRoutine>
@@ -2751,10 +2760,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper38.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper38.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper38.xml" />
       </While>
     </SubRoutine>
@@ -2772,10 +2784,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper14.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper14.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper14.xml" />
       </While>
     </SubRoutine>
@@ -2793,10 +2808,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper16.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper16.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper16.xml" />
       </While>
     </SubRoutine>
@@ -2814,10 +2832,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper17.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper17.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper17.xml" />
       </While>
     </SubRoutine>
@@ -2835,10 +2856,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper85.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper85.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper85.xml" />
       </While>
     </SubRoutine>
@@ -2856,10 +2880,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper215.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2770) &lt; (int)Settings[&quot;CopperNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Copper215.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2835) &lt; (int)Settings[&quot;RoughStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Copper215.xml" />
       </While>
     </SubRoutine>
@@ -2879,13 +2906,16 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin331.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin331.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Tin331.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin331.xml" />
       </While>
     </SubRoutine>
@@ -2905,13 +2935,16 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin406.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin406.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Tin406.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin406.xml" />
       </While>
     </SubRoutine>
@@ -2931,13 +2964,16 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin267.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin267.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Tin267.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin267.xml" />
       </While>
     </SubRoutine>
@@ -2957,13 +2993,16 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin33.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2771) &lt; (int)Settings[&quot;TinNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin33.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2775) &lt; (int)Settings[&quot;SilverNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Tin33.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2836) &lt; (int)Settings[&quot;CoarseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Tin33.xml" />
       </While>
     </SubRoutine>
@@ -2983,10 +3022,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron357.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron357.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron357.xml" />
       </While>
     </SubRoutine>
@@ -3006,10 +3048,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron405.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron405.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron405.xml" />
       </While>
     </SubRoutine>
@@ -3029,10 +3074,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron34709.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron4709.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron34709.xml" />
       </While>
     </SubRoutine>
@@ -3052,10 +3100,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron28.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron28.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron28.xml" />
       </While>
     </SubRoutine>
@@ -3075,10 +3126,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron139.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron139.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron139.xml" />
       </While>
     </SubRoutine>
@@ -3098,10 +3152,13 @@
       </If>
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron5287.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron5287.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron5287.xml" />
       </While>
     </SubRoutine>
@@ -3121,10 +3178,13 @@
       <CustomAction Code="slog(&quot;Farming Iron at Arathi Highlands.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron45.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2772) &lt; (int)Settings[&quot;IronNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Iron45.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(2838) &lt; (int)Settings[&quot;HeavyStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Iron45.xml" />
       </While>
     </SubRoutine>
@@ -3144,10 +3204,13 @@
       <CustomAction Code="slog(&quot;Farming Mithril at Badlands.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril3.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril3.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril3.xml" />
       </While>
     </SubRoutine>
@@ -3167,10 +3230,13 @@
       <CustomAction Code="slog(&quot;Farming Mithril at Burning Steppes.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril46.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril46.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril46.xml" />
       </While>
     </SubRoutine>
@@ -3190,10 +3256,13 @@
       <CustomAction Code="slog(&quot;Farming Mithril at Searing Gorge.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril51.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(3858) &lt; (int)Settings[&quot;MithrilNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril51.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7912) &lt; (int)Settings[&quot;SolidStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Mithril51.xml" />
       </While>
     </SubRoutine>
@@ -3213,13 +3282,16 @@
       <CustomAction Code="slog(&quot;Farming Thorium at Winterspring.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium618.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium618.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium618.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium618.xml" />
       </While>
     </SubRoutine>
@@ -3239,13 +3311,16 @@
       <CustomAction Code="slog(&quot;Farming Thorium at Un'Goro Crater.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium490.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium490.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium490.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium490.xml" />
       </While>
     </SubRoutine>
@@ -3265,13 +3340,16 @@
       <CustomAction Code="slog(&quot;Farming Thorium at Silithus.&quot;);" />
       <CustomAction Code="FarmTime.Reset();" />
       <CustomAction Code="FarmTime.Start();" />
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] == 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium1377.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(10620) &lt; (int)Settings[&quot;ThoriumNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium1377.xml" />
       </While>
-      <While Condition="Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(12365) &lt; (int)Settings[&quot;DenseStoneNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
+        <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium1377.xml" />
+      </While>
+      <While Condition="(int)Settings[&quot;FarmTilLevel&quot;] != 9999 &amp;&amp; Mining.Level &lt; (int)Settings[&quot;FarmTilLevel&quot;] &amp;&amp; InbagCount(7910) &lt; (int)Settings[&quot;StarRubyNeed&quot;] &amp;&amp; FarmTime.Elapsed.TotalMinutes &lt; (int)Settings[&quot;Farm Time&quot;] &amp;&amp; Me.FreeNormalBagSlots &gt; 5" IgnoreCanRun="True">
         <LoadProfileAction ProfileType="Honorbuddy" Path="Thorium1377.xml" />
       </While>
     </SubRoutine>
