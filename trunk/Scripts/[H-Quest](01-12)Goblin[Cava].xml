@@ -14,6 +14,10 @@
   <Blackspot X="1705.541" Y="2866.421" Z="11.43582" Radius="5.368997" />
   <Blackspot X="864.3924" Y="2137.241" Z="76.03908" Radius="0.6620967" />
   <Blackspot X="-8413.854" Y="1330.586" Z="104.7574" Radius="0.9" />
+  <Blackspot X="-8433.154" Y="1335.011" Z="102.1901" Radius="0.9" />
+  <Blackspot X="-8485.284" Y="1251.884" Z="54.5857" Radius="5" />
+  <Blackspot X="907.499" Y="2168.587" Z="62.70585" Radius="0.9" />
+  <Blackspot X="906.2975" Y="2166.204" Z="63.7743" Radius="0.9" />
 </Blackspots>
 
 <Mailboxes>
@@ -854,6 +858,7 @@ MALE <PickUp QuestName="The New You" QuestId="14109" GiverName="FBoK Bank Teller
 </If>
 <PickUp QuestName="Pirate Party Crashers" QuestId="14115" GiverName="Sassy Hardwrench" GiverId="34668" X="-8423.816" Y="1366.066" Z="104.675" />
 <If Condition="HasQuest(14115) &amp;&amp; !IsQuestCompleted(14115)">
+  <RunTo X="-8433.141" Y="1324.781" Z="101.7501" />
   <CustomBehavior File="UserSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
     <CustomBehavior File="UserSettings" PullDistance="40" />
@@ -863,7 +868,10 @@ MALE <PickUp QuestName="The New You" QuestId="14109" GiverName="FBoK Bank Teller
   <CustomBehavior File="UserSettings" PullDistance="1" />
 </If>
 <!--# # # Level 4 # # # -->
-<TurnIn QuestName="Pirate Party Crashers" QuestId="14115" TurnInName="Sassy Hardwrench" TurnInId="34668" X="-8423.816" Y="1366.066" Z="104.675" />
+<If Condition="HasQuest(14115)">
+  <RunTo X="-8439.215" Y="1321.988" Z="101.6989" />
+  <TurnIn QuestName="Pirate Party Crashers" QuestId="14115" TurnInName="Sassy Hardwrench" TurnInId="34668" X="-8423.816" Y="1366.066" Z="104.675" />
+</If>
 <PickUp QuestName="The Uninvited Guest" QuestId="14116" GiverName="Sassy Hardwrench" GiverId="34668" X="-8423.816" Y="1366.066" Z="104.675" />
 <TurnIn QuestName="The Uninvited Guest" QuestId="14116" TurnInName="Trade Prince Gallywix" TurnInId="35222" X="-8423.747" Y="1362.064" Z="116.8615" />
 <PickUp QuestName="A Bazillion Macaroons?!" QuestId="14120" GiverName="Trade Prince Gallywix" GiverId="35222" X="-8423.747" Y="1362.064" Z="116.8615" />
@@ -1237,6 +1245,8 @@ step
   <CustomBehavior File="WaitTimer" WaitTime="21000" />
   <RunTo X="991.7805" Y="3848.961" Z="3.229805" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14242" MobId="36145" NumOfTimes="1" CollectionDistance="10" X="993.2761" Y="3852.146" Z="3.22851" />
+  <RunTo X="979.8125" Y="3836.643" Z="3.230398" />
+  <RunTo X="991.7805" Y="3848.961" Z="3.229805" />
 </If>
 
 <TurnIn QuestName="Precious Cargo" QuestId="14242" TurnInName="Thrall" TurnInId="36145" X="993.2761" Y="3852.146" Z="3.22851" />
@@ -1301,7 +1311,24 @@ step
 <If Condition="HasQuest(24741) &amp;&amp; !IsQuestCompleted(24741)" >
   <CustomBehavior File="UserSettings" PullDistance="1" />
   <While Condition="!IsQuestCompleted(24741)" >
-    <If Condition="!IsQuestCompleted(24741)" >
+    <CustomBehavior File="InteractWith" QuestId="24741" MobId="201972" CollectionDistance="1000" Range="2" InteractBlacklistTimeInSeconds="120" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+        <Hotspot X="829.4785" Y="2146.688" Z="77.04648" />
+        <Hotspot X="815.2286" Y="2184.294" Z="71.79718" />
+        <Hotspot X="775.2722" Y="2180.725" Z="72.68896" />
+        <Hotspot X="742.4292" Y="2157.719" Z="72.06905" />
+        <Hotspot X="745.879" Y="2117.821" Z="72.33566" />
+        <Hotspot X="766.8646" Y="2083.813" Z="79.66754" />
+        <Hotspot X="786.5619" Y="2050.711" Z="91.10107" />
+        <Hotspot X="824.8353" Y="2039.32" Z="97.06718" />
+        <Hotspot X="862.8735" Y="2053.912" Z="96.87995" />
+        <Hotspot X="898.9268" Y="2071.521" Z="96.7288" />
+        <Hotspot X="908.5981" Y="2109.551" Z="88.57785" />
+      </HuntingGrounds>
+    </CustomBehavior>
+    <CustomBehavior File="Misc\RunLua" QuestId="24741" Lua="UseItemByName(50232)" WaitTime="12000" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24741" MobId="201974" WaitTime="2000" WaitForNpcs="False" CollectionDistance="200" />
+    <!--<If Condition="!IsQuestCompleted(24741)" >
       <CustomBehavior File="UseItemOn" ItemId="50232" MobId="201972" Range="2" MobType="GameObject" CollectionDistance="1000" X="829.4785" Y="2146.688" Z="77.04648" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24741" MobId="201974" WaitTime="2000" WaitForNpcs="False" ObjectType="GameObject" CollectionDistance="200" />
@@ -1360,7 +1387,7 @@ step
       <CustomBehavior File="UseItemOn" ItemId="50232" MobId="201972" Range="2" MobType="GameObject" CollectionDistance="1000" X="877.7039" Y="2132.64" Z="76.88692" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24741" MobId="201974" WaitTime="2000" WaitForNpcs="False" ObjectType="GameObject" CollectionDistance="200" />
-    </If>
+    </If>-->
   </While>
   <CustomBehavior File="UserSettings" PullDistance="1" />
 </If>
@@ -1417,6 +1444,7 @@ step
 <If Condition="HasQuest(24817) &amp;&amp; !IsQuestCompleted(24817)" >
   <RunTo X="910.239" Y="2409.445" Z="0.5348477" />
   <While Condition="!IsQuestCompleted(24817)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24817" MobId="202108" WaitTime="2000" CollectionDistance="200" />
     <CustomBehavior File="SpecificQuests\24817-LostIsles-AGoblininSharksClothing" QuestId="24817" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000" />
   </While>
@@ -1511,7 +1539,6 @@ step
   <CustomBehavior File="WaitTimer" WaitTime="20000" />
   <Objective QuestName="Surrender or Else!" QuestId="24868" Type="KillMob" MobId="38448" KillCount="1" />
 </If>
-<CustomBehavior File="LoadProfile" ProfileName="erro" />
 <TurnIn QuestName="Surrender or Else!" QuestId="24868" TurnInName="Megs Dreadshredder" TurnInId="38432" X="679.2257" Y="2026.58" Z="50.14305" />
 <PickUp QuestName="Get Back to Town" QuestId="24897" GiverName="Megs Dreadshredder" GiverId="38432" X="679.2257" Y="2026.58" Z="50.14305" />
 <If Condition="HasQuest(24897)" >
