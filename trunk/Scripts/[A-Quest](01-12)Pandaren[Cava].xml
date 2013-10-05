@@ -902,16 +902,15 @@
       <CustomBehavior File="MyCTM" X="1151.134" Y="4099.06" Z="196.4183" />
     </If>
     <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55595" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="10" X="1151.804" Y="4099.264" Z="196.4569" />
+<!--      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55595" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="10" X="1151.804" Y="4099.264" Z="196.4569" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="MyCTM" X="1147.363" Y="4169.09" Z="188.415" />
-<!--
-    <TurnIn QuestName="Balanced Perspective" QuestId="29784" TurnInName="Aysa Cloudsinger" TurnInId="55595" X="1151.804" Y="4099.264" Z="196.4569" />
-    <PickUp QuestName="Dafeng, the Spirit of Air" QuestId="29785" GiverName="Aysa Cloudsinger" GiverId="55595" />
 -->
+      <TurnIn QuestName="Balanced Perspective" QuestId="29784" TurnInName="Aysa Cloudsinger" TurnInId="55595" X="1151.804" Y="4099.264" Z="196.4569" />
+      <PickUp QuestName="Dafeng, the Spirit of Air" QuestId="29785" GiverName="Aysa Cloudsinger" GiverId="55595" X="1151.804" Y="4099.264" Z="196.4569" />
+      <CustomBehavior File="MyCTM" X="1147.363" Y="4169.09" Z="188.415" />
     </If>
     <If Condition="(Me.Z &lt; 189)" >
       <RunTo X="1149.007" Y="4182.836" Z="188.5352" />

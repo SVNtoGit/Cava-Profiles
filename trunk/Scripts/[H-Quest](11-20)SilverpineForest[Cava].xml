@@ -1041,7 +1041,29 @@
 </If>
 <TurnIn QuestName="Losing Ground" QuestId="27333" TurnInName="Forward Commander Onslaught" TurnInId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 <TurnIn QuestName="The F.C.D." QuestId="27345" TurnInName="Forward Commander Onslaught" TurnInId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
+<If Condition="HasQuest(27342) &amp;&amp; !IsQuestCompleted(27342)">
+  <While Condition="!IsQuestCompleted(27342)">
+    <CustomBehavior File="InteractWith" QuestId="27342" MobId="205367" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000" >
+      <HuntingGrounds WaypointVisitStrategy="Random" >
+      <Hotspot X="-1127.42" Y="1553.873" Z="36.78362" />
+      <Hotspot X="-1166.907" Y="1551.589" Z="28.88032" />
+      <Hotspot X="-1207.501" Y="1555.071" Z="24.80948" />
+      <Hotspot X="-1214.483" Y="1515.199" Z="25.99678" />
+      <Hotspot X="-1209.771" Y="1474.111" Z="22.73998" />
+      <Hotspot X="-1196.095" Y="1437.328" Z="31.3229" />
+      <Hotspot X="-1176.217" Y="1402.869" Z="26.31762" />
+      <Hotspot X="-1144.572" Y="1377.563" Z="24.6593" />
+      <Hotspot X="-1106.284" Y="1391.297" Z="30.35954" />
+      <Hotspot X="-1079.031" Y="1419.713" Z="39.81415" />
+      <Hotspot X="-1085.054" Y="1459.48" Z="39.04674" />
+      <Hotspot X="-1102.105" Y="1497.026" Z="38.08573" />
+      </HuntingGrounds>
+    </CustomBehavior>
+<!--
 <Objective QuestName="In Time, All Will Be Revealed" QuestId="27342" Type="CollectItem" ItemId="60958" CollectCount="6" />
+-->
+  </While>
+</If>
 <TurnIn QuestName="In Time, All Will Be Revealed" QuestId="27342" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <If Condition="!HasQuest(27349) &amp;&amp; !IsQuestCompleted(27349) &amp;&amp; Me.Level &gt;= 200">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
@@ -1344,8 +1366,16 @@
 <TurnIn QuestName="The Great Escape" QuestId="27438" TurnInName="Lady Sylvanas Windrunner" TurnInId="45525" X="-182.658" Y="1275.42" Z="46.45326" />
 <PickUp QuestName="Rise, Godfrey" QuestId="27472" GiverName="Lady Sylvanas Windrunner" GiverId="45525" X="-182.658" Y="1275.42" Z="46.45326" />
 <If Condition="HasQuest(27472) &amp;&amp; !IsQuestCompleted(27472)">
-  <RunTo X="-158.1903" Y="1271.786" Z="50.82452" />
-  <CustomBehavior File="WaitTimer" QuestId="27472" WaitTime="95000" />
+  <While Condition="!IsQuestCompleted(27472)">
+    <RunTo QuestId="27472" X="-158.1903" Y="1271.786" Z="50.82452" />
+    <CustomBehavior File="WaitTimer" QuestId="27472" WaitTime="95000" />
+    <If Condition="!IsQuestCompleted(27472)">
+      <CustomBehavior File="AbandonQuest" QuestId="27472" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+      <PickUp QuestName="Rise, Godfrey" QuestId="27472" GiverName="Lady Sylvanas Windrunner" GiverId="45525" X="-182.658" Y="1275.42" Z="46.45326" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
 </If>
 <TurnIn QuestName="Rise, Godfrey" QuestId="27472" TurnInName="Lady Sylvanas Windrunner" TurnInId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
 <If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.Level &gt;= 200">
