@@ -17,6 +17,7 @@
   <Blackspot X="2157.252" Y="-5693.754" Z="105.2097" Radius="9.798682" />
   <Blackspot X="2130.178" Y="-5756.35" Z="98.58991" Radius="0.9" />
   <Blackspot X="2203.865" Y="-5882.145" Z="101.1928" Radius="10" />
+  <Blackspot X="2053.443" Y="-5787.919" Z="101.0616" Radius="10" />
 </Blackspots>
 
 <Mailboxes>
@@ -434,16 +435,26 @@ Text="\n
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(12680) &amp;&amp; !IsQuestCompleted(12680)" >
+
   <While Condition="HasQuest(12680) &amp;&amp; !IsQuestCompleted(12680)" >
+
     <CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" AvoidMobId="28683" AvoidDistance="85" X="2175.955" Y="-5769.175" Z="101.3312" />
-    <CustomBehavior File="Vehicles\VehicleMover" VehicleId="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
+    <CustomBehavior File="UserSettings" UseMount="False"/>
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="Cava\CavaVehicleMover" QuestId="12680" AuraId_ProxyVehicle="52263" VehicleId1="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
+<!--
+    <CustomBehavior File="Cava\CavaVehicleMover" QuestId="12680" VehicleId="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
+-->
     <CustomBehavior File="Misc\RunLua" Lua= "VehicleExit()" />
+    <CustomBehavior File="UserSettings" UseMount="True"/>
     <CustomBehavior File="WaitTimer" WaitTime="5000" />
   </While>
 </If>
 <TurnIn QuestName="Grand Theft Palomino" QuestId="12680" TurnInName="Salanar the Horseman" TurnInId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
 <PickUp QuestName="Into the Realm of Shadows" QuestId="12687" GiverName="Salanar the Horseman" GiverId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
 <If Condition="HasQuest(12687) &amp;&amp; !IsQuestCompleted(12687)" >
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(12687)" >
     <While Condition="!Me.HasAura(52693)" >
       <CustomBehavior File="InteractWith" MobId="28653" InteractByGossipOptions="1" CollectionDistance="100" X="2336.86" Y="-5686.712" Z="153.9225" />
@@ -452,6 +463,7 @@ Text="\n
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="12687" VehicleId="28782" IgnoreCombat="true" MovementBy="ClickToMoveOnly" SpellId="52362" Hop="True" X="2358.639" Y="-5708.643" Z="153.9229" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </While>
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(12687)">
   <TurnIn QuestName="Into the Realm of Shadows" QuestId="12687" TurnInName="Salanar the Horseman" TurnInId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
