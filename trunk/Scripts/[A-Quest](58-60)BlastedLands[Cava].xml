@@ -740,6 +740,27 @@
 <PickUp QuestName="Curtail the Darktail" QuestId="25709" GiverName="Enohar Thunderbrew" GiverId="9540" X="-11038.6" Y="-3444.98" Z="65.79079" />
 <If Condition="HasQuest(25709) &amp;&amp; !IsQuestCompleted(25709)" >
   <While Condition="!IsQuestCompleted(25709)" >
+    <CustomBehavior File="InteractWith" QuestId="25709" MobId="42235" NumOfTimes="1000" MobState="Alive" InteractByUsingItemId="57119"
+      ProactiveCombatStrategy="ClearMobsTargetingUs" Range="140" WaitTime="2000" CollectionDistance="1000" >
+      <HuntingGrounds>
+      <Hotspot X="-11237.56" Y="-3635.955" Z="12.3443" />
+      <Hotspot X="-11264.23" Y="-3666.702" Z="5.610914" />
+      <Hotspot X="-11295.33" Y="-3692.471" Z="2.492677" />
+      <Hotspot X="-11335.96" Y="-3698.73" Z="3.540311" />
+      <Hotspot X="-11375.95" Y="-3692.691" Z="3.012272" />
+      <Hotspot X="-11416.62" Y="-3692.844" Z="2.78401" />
+      <Hotspot X="-11457.15" Y="-3700.074" Z="2.57701" />
+      <Hotspot X="-11497.06" Y="-3690.27" Z="3.831856" />
+      <Hotspot X="-11503.91" Y="-3650.809" Z="6.767854" />
+      <Hotspot X="-11467.97" Y="-3631.602" Z="7.086145" />
+      <Hotspot X="-11430.97" Y="-3615.419" Z="6.490902" />
+      <Hotspot X="-11390.75" Y="-3611.862" Z="5.082118" />
+      <Hotspot X="-11351.47" Y="-3623.052" Z="6.253554" />
+      <Hotspot X="-11311.18" Y="-3621.618" Z="10.12376" />
+      <Hotspot X="-11270.99" Y="-3619.902" Z="10.14882" />
+      </HuntingGrounds>
+    </CustomBehavior>
+<!--
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11233.74" Y="-3629.829" Z="14.12885" />
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11250.19" Y="-3666.909" Z="6.464286" />
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11262.65" Y="-3706.137" Z="2.875345" />
@@ -758,6 +779,7 @@
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11346.16" Y="-3619.593" Z="7.576146" />
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11305.22" Y="-3618.703" Z="10.23851" />
     <CustomBehavior File="UseItemOn" QuestId="25709" MobId="42235" ItemId="57119" MobState="Alive" Range="100" CollectionDistance="1000" X="-11265.29" Y="-3623.932" Z="10.83077" />
+-->
   </While>
 </If>
 <If Condition="HasQuest(25708) &amp;&amp; !IsQuestCompleted(25708)" >
@@ -996,7 +1018,7 @@
     <RunTo X="-11451.77" Y="-3791.916" Z="4.035245" />
     <CustomBehavior File="MyCTM" X="-11446.63" Y="-3799.184" Z="-2.003908" />
     <CustomBehavior File="MyCTM" X="-11449.92" Y="-3793.96" Z="-4.870585" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26169" MobId="203230" ObjectType="GameObject" X="-11450.43" Y="-3793.646" Z="-4.315826" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26169" MobId="203230" MovementBy="NavigatorPreferred" X="-11450.43" Y="-3793.646" Z="-4.315826" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000"/>
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26169" MobId="41267" WaitForNpcs="False" CollectionDistance="100" X="-11447.32" Y="-3797.772" Z="-7.286124" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000"/>
