@@ -1476,10 +1476,11 @@
 </If>
 <If Condition="HasQuest(10847) &amp;&amp; !IsQuestCompleted(10847)" >
   <If Condition="!IsObjectiveComplete(1, 10847)">
-    <CustomBehavior File="FlyTo" X="-1713.7" Y="4369.576" Z="52.0499" />
-    <CustomBehavior File="FlyTo" X="-1698.561" Y="4376.464" Z="53.19741" />
+    <CustomBehavior File="FlyTo" X="-1589.872" Y="4382.911" Z="34.97273" />
     <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <Objective QuestName="The Eyes of Skettis" QuestId="10847" Type="CollectItem" ItemId="25638" CollectCount="1" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="!IsObjectiveComplete(2, 10847)">
     <CustomBehavior File="FlyTo" X="-1824.587" Y="3979.469" Z="48.14524" />
@@ -1621,6 +1622,7 @@
 <If Condition="HasQuest(10852) &amp;&amp; !IsQuestCompleted(10852)" >
   <CustomBehavior File="FlyTo" X="-2564.119" Y="5327.227" Z="3.670763" />
   <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
   <While Condition="!IsQuestCompleted(10852)" >
     <If Condition="GetItemCount(31655) &lt; 1" >
@@ -1659,6 +1661,7 @@
   </While>
 </If>
 <If Condition="HasQuest(10852)">
+  <CustomBehavior File="UserSettings" UseMount="True" />
   <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
   <CustomBehavior File="FlyTo" X="-2849.89" Y="5047.961" Z="-18.87771" />
   <CustomBehavior File="ForcedDismount" />
@@ -1950,6 +1953,7 @@
     <RunTo X="-2995.579" Y="4545.104" Z="-21.71549" />
   </If>
 </If>
+<CustomBehavior File="LoadProfile" ProfileName="erro" />
 <If Condition="HasQuest(10874) &amp;&amp; !IsQuestCompleted(10874)" >
   <While Condition="!IsObjectiveComplete(1, 10874)" >
     <CustomBehavior File="FlyTo" X="-3408.42" Y="4126.254" Z="65.91043" />
