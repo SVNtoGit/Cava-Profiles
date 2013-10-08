@@ -183,6 +183,20 @@ Also be sure to:\n
   <TurnIn QuestName="Rejuvenating Touch" QuestId="26948" TurnInName="Mardant Strongoak" TurnInId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Mardant Strongoak" GiverId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
 </If>
+<If Condition="Me.Class == WoWClass.Monk">
+  <PickUp QuestName="Calligraphed Sigil" QuestId="31168"  GiverName="Melithar Staghelm" GiverId="2077" X="10328.95" Y="825.3351" Z="1326.383" />
+  <!--# # # Level 3 # # # -->
+  <TurnIn QuestName="Calligraphed Sigil" QuestId="31168" TurnInName="Laoxi" TurnInId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
+  <PickUp QuestName="The Art of the Monk" QuestId="31169" GiverName="Laoxi" GiverId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
+  <If Condition="HasQuest(31169) &amp;&amp; !IsQuestCompleted(31169)" >
+    <While Condition="!IsQuestCompleted(31169)" >
+      <CustomBehavior File="InteractWith" InteractByCastingSpellId="100780" MobId="44614" X="10454.93" Y="801.1702" Z="1322.547" />
+	  <CustomBehavior File="InteractWith" InteractByCastingSpellId="100787" MobId="44614" X="10454.93" Y="801.1702" Z="1322.547" />
+    </While>
+  </If>
+  <TurnIn QuestName="The Art of the Monk" QuestId="31169" TurnInName="Laoxi" TurnInId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
+  <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Laoxi" GiverId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
+</If>
 <TurnIn QuestName="Priestess of the Moon" QuestId="28723" TurnInName="Dentaria Silverglade" TurnInId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <PickUp QuestName="Iverron's Antidote" QuestId="28724" GiverName="Dentaria Silverglade" GiverId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <Objective QuestName="Iverron's Antidote" QuestId="28724" Type="CollectItem" ItemId="10641" CollectCount="7" />
