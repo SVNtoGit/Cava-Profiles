@@ -334,22 +334,18 @@
 <TurnIn QuestName="An Arcane Ally" QuestId="28150" TurnInName="Arcanist Delaris" TurnInId="47341" X="4326.58" Y="-742.314" Z="284.4487" />
 <PickUp QuestName="Do the Imp-Possible" QuestId="28000" GiverName="Arcanist Delaris" GiverId="47341" X="4326.58" Y="-742.314" Z="284.4487" />
 <If Condition="HasQuest(28000) &amp;&amp; !IsQuestCompleted(28000)" >
-  <While Condition="HasQuest(28000)" >
-    <While Condition="!IsQuestCompleted(28000)" >
-      <CustomBehavior File="CombatUseItemOnV2" QuestId="28000" ItemId="62899" MobId="47339" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000"
-        UseWhenMobHasHealthPercent="10" UseItemStrategy="UseItemOncePerTarget" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" X="4283.715" Y="-1112.693" Z="322.3844" />
-      <!--
-      <CustomBehavior File="CombatUseItemOnV2" QuestId="28000" MobId="47339" MobHpPercentLeft="20" ItemId="62899" MaxRange="5" UseOnce="True" X="4283.715" Y="-1112.693" Z="322.3844" />
-      -->
-    </While>
+  <While Condition="!IsQuestCompleted(28000)" >
+    <CustomBehavior File="CombatUseItemOnV2" QuestId="28000" ItemId="62899" MobId="47339" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000"
+      UseWhenMobHasHealthPercent="10" UseItemStrategy="UseItemOncePerTarget" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" X="4283.715" Y="-1112.693" Z="322.3844" />
     <RunTo X="4328.778" Y="-742.7893" Z="284.4471" />
-    <If Condition="Me.HasAura(88330)">
+    <If Condition="Me.HasAura(88330) &amp;&amp; IsQuestCompleted(28000)">
       <TurnIn QuestName="Do the Imp-Possible" QuestId="28000" TurnInName="Arcanist Delaris" TurnInId="47341" X="4326.58" Y="-742.314" Z="284.4487" />
-    <Else>
-      <CustomBehavior File="AbandonQuest" QuestId="28000" />
+    </If>
+    <If Condition="HasQuest(28000)">
+      <CustomBehavior File="AbandonQuest" QuestId="28000" Type="All"/>
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
       <PickUp QuestName="Do the Imp-Possible" QuestId="28000" GiverName="Arcanist Delaris" GiverId="47341" X="4326.58" Y="-742.314" Z="284.4487" />
-      </Else>
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
     </If>
   </While>
 </If>
