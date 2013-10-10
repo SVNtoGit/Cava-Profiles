@@ -5,7 +5,10 @@
   <If Condition="(Me.Class == WoWClass.DeathKnight &amp;&amp; !IsQuestCompleted(13189))" >
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](55-58)DeathKnight[Cava]" />
   </If>
-  <If Condition="(Me.Race == WoWRace.Goblin &amp;&amp; !IsQuestCompleted(25266)) || (HasQuest(25266) &amp;&amp; (Me.ZoneId == 4720))">
+  <If Condition="(Me.Race == WoWRace.Goblin &amp;&amp; Me.ZoneId == 4720)">
+    <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-12)Goblin[Cava]" />
+  </If>
+  <If Condition="(Me.Race == WoWRace.Goblin &amp;&amp; Me.ZoneId == 4737)">
     <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-12)Goblin[Cava]" />
   </If>
   <If Condition="(Me.LevelFraction &gt;= 85)" >
