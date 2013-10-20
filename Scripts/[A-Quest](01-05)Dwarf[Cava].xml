@@ -296,10 +296,10 @@ Also be sure to:\n
   <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
   Text="This profile have some quests particularly writen for race Dwarf. That quests will be ignored."/>
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
-<CustomBehavior File="UserSettings" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="True" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <!--# # # Level 1 # # # -->
 <CustomBehavior File="Message" Text="Compiling Coldridge Valley Map Zone" LogColor="Aquamarine" />
@@ -383,7 +383,7 @@ Also be sure to:\n
 <!--# # # Level 3 # # # -->
 <If Condition="HasQuest(24475) &amp;&amp; !IsQuestCompleted(24475)" >
   <If Condition="!IsObjectiveComplete(1, 24475) &amp;&amp; !IsObjectiveComplete(2, 24475)" >
-	  <CustomBehavior File="UserSettings" LootMobs="True" />
+	  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
     <SetGrindArea>
     <GrindArea>
 		<Factions>32 189</Factions>
@@ -425,7 +425,7 @@ Also be sure to:\n
 		</GrindArea>
 	  </SetGrindArea>
 	  <GrindTo Condition="IsObjectiveComplete(1, 24475) || IsObjectiveComplete(2, 24475)" />
-	  <CustomBehavior File="UserSettings" LootMobs="Original" />
+	  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
   </If>
 </If>
 <Objective QuestName="All the Other Stuff" QuestId="24475" Type="CollectItem" ItemId="49748" CollectCount="4" />

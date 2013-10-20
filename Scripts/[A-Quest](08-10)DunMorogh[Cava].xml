@@ -129,11 +129,11 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
-<CustomBehavior File="UserSettings" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <!--# # # Level 8.2 # # # -->
 <If Condition="HasQuest(25882)" >
@@ -181,15 +181,15 @@
 <TurnIn QuestName="Rams on the Lam" QuestId="25905" TurnInName="Veron Amberstill" TurnInId="1261" X="-5539.55" Y="-1322.55" Z="398.8654" />
 <If Condition="HasQuest(314) &amp;&amp; !IsQuestCompleted(314)" >
   <RunTo X="-5509.723" Y="-1258.756" Z="438.2372" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="314" MobId="1388" MobState="Alive" CollectItemCount="1" CollectItemId="3627" HuntingGroundRadius="200" >
     <Hotspot X="-5390.682" Y="-1278.785" Z="445.3719" />
   </CustomBehavior>
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 <!--
 <Objective QuestName="Protecting the Herd" QuestId="314" Type="CollectItem" ItemId="3627" CollectCount="1" />
 -->
@@ -263,18 +263,18 @@
 </If>
 <PickUp QuestName="Dark Iron Scheming" QuestId="25997" GiverName="Sergeant Bahrum" GiverId="41786" X="-5522.007" Y="-1920.625" Z="398.9587" />
 <If Condition="HasQuest(25997) &amp;&amp; !IsQuestCompleted(25997)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
 </If>
 <Objective QuestName="Dark Iron Scheming" QuestId="25997" Type="CollectItem" ItemId="56264" CollectCount="1" />
 <If Condition="HasQuest(25997) &amp;&amp; !IsQuestCompleted(25997)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Dark Iron Scheming" QuestId="25997" Type="KillMob" MobId="6123" KillCount="5" />
 <If Condition="HasQuest(25997) &amp;&amp; IsQuestCompleted(25997)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Dark Iron Scheming" QuestId="25997" TurnInName="Sergeant Bahrum" TurnInId="41786" X="-5522.007" Y="-1920.625" Z="398.9587" />
 <If Condition="(Me.LevelFraction &gt;= 10.75 )">
@@ -298,7 +298,7 @@
 <TurnIn QuestName="Extinguish the Fires" QuestId="26078" TurnInName="Commander Stonebreaker" TurnInId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <PickUp QuestName="Rallying the Defenders" QuestId="26085" GiverName="Commander Stonebreaker" GiverId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <If Condition="HasQuest(26085) &amp;&amp; !IsQuestCompleted(26085)" >
-  	<CustomBehavior File="UserSettings" PullDistance="1" />
+  	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(26085) &amp;&amp; !IsQuestCompleted(26085)" >
   <While Condition="!IsQuestCompleted(26085)" >
@@ -310,20 +310,20 @@
 </If>
 <TurnIn QuestName="Rallying the Defenders" QuestId="26085" TurnInName="Commander Stonebreaker" TurnInId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <If Condition="!HasQuest(26094)" >
-	<CustomBehavior File="UserSettings" PullDistance="25" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 	</If>
 </If>
 <PickUp QuestName="Striking Back" QuestId="26094" GiverName="Commander Stonebreaker" GiverId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <Objective QuestName="Striking Back" QuestId="26094" Type="KillMob" MobId="42093" KillCount="30" />
 <If Condition="HasQuest(26094) &amp;&amp; !IsQuestCompleted(26094" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Striking Back" QuestId="26094" TurnInName="Commander Stonebreaker" TurnInId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <PickUp QuestName="Grimaxe's Demise" QuestId="26102" GiverName="Commander Stonebreaker" GiverId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />
 <If Condition="HasQuest(26102) &amp;&amp; !IsQuestCompleted(26102)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="-5072.883" Y="-1708.125" Z="497.8175" />
   <While Condition="!IsQuestCompleted(26102)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26102" MobId="42010" MobState="Alive" X="-5072.883" Y="-1708.125" Z="497.8175" />
@@ -331,7 +331,7 @@
   <!--<Objective QuestName="Grimaxe's Demise" QuestId="26102" Type="KillMob" MobId="42010" KillCount="1" />-->
 </If>
 <If Condition="HasQuest(26102) &amp;&amp; IsQuestCompleted(26102" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="-4611.321" Y="-1695.379" Z="503.5686" />
 </If>
 <TurnIn QuestName="Grimaxe's Demise" QuestId="26102" TurnInName="Commander Stonebreaker" TurnInId="41853" X="-4611.321" Y="-1695.379" Z="503.5686" />

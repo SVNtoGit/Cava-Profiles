@@ -94,9 +94,9 @@ Also be sure to:\n
      Send gold and bags to a character in the process of leveling\n
      Be sure to set the food and drink options in Honorbuddy\n
      Configure a mail recipient in Honorbuddy\n" />
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Night Elf Quests (1-5)" LogColor="Green" />
 <!--# # # Level 1 # # # -->
@@ -203,7 +203,7 @@ Also be sure to:\n
 <TurnIn QuestName="Iverron's Antidote" QuestId="28724" TurnInName="Dentaria Silverglade" TurnInId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <PickUp QuestName="The Woodland Protector" QuestId="28725" GiverName="Dentaria Silverglade" GiverId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <If Condition="HasQuest(28725)" >
-  <CustomBehavior File="UserSettings" PullDistance="10" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="10" />
   <RunTo X="10758.43" Y="921.9671" Z="1338.538" />
 </If>
 <TurnIn QuestName="The Woodland Protector" QuestId="28725" TurnInName="Tarindrella" TurnInId="49480" X="10758.43" Y="921.9671" Z="1338.538" />
@@ -214,9 +214,9 @@ Also be sure to:\n
 <PickUp QuestName="Vile Touch" QuestId="28727" GiverName="Tarindrella" GiverId="49480" />
 <Objective QuestName="Vile Touch" QuestId="28727" Type="KillMob" MobId="1994" KillCount="1" />
 <If Condition="HasQuest(28725) &amp;&amp; !IsQuestCompleted(28725)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="UserSettings" PullDistance="35" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <TurnIn QuestName="Vile Touch" QuestId="28727" TurnInName="Tarindrella" TurnInId="49480" />

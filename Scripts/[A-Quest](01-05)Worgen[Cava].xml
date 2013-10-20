@@ -87,9 +87,9 @@
 <If Condition="IsQuestCompleted(14375)">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)Worgen[Cava]" />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" LootChests="False" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-  <CustomBehavior File="UserSettings" PullDistance="35" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
   Text="Thank you for taking the time to use Cava's profiles and I hope you have enjoyed them so far.\n\n
@@ -238,7 +238,7 @@ usualy this two quests have problems:\n
 <PickUp QuestName="Old Divisions" QuestId="14157" GiverName="King Genn Greymane" GiverId="35112" X="-1767.661" Y="1347.892" Z="19.89024" />
 <PickUp QuestName="While You're At It" QuestId="24930" GiverName="Lord Godfrey" GiverId="35115" X="-1767.094" Y="1352.62" Z="19.91799" />
 <If Condition="HasQuest(14157)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Old Divisions" QuestId="14157" TurnInName="Captain Broderick" TurnInId="50371" X="-1755.069" Y="1418.04" Z="23.93229" />
 <PickUp QuestName="The Prison Rooftop" QuestId="28850" GiverName="Captain Broderick" GiverId="50371" X="-1755.069" Y="1418.04" Z="23.93229" />
@@ -261,9 +261,9 @@ usualy this two quests have problems:\n
 <Objective QuestName="While You're At It" QuestId="24930" Type="KillMob" KillCount="5" MobId="35118" />
 <TurnIn QuestName="While You're At It" QuestId="24930" TurnInName="Lord Godfrey" TurnInId="35115" X="-1767.094" Y="1352.62" Z="19.9182" />
 <If Condition="HasQuest(26129)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="UserSettings" PullDistance="35" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <TurnIn QuestName="Brothers In Arms" QuestId="26129" TurnInName="King Genn Greymane" TurnInId="35112" X="-1767.661" Y="1347.892" Z="19.89032" />
@@ -327,7 +327,7 @@ usualy this two quests have problems:\n
 <PickUp QuestName="By Blood and Ash" QuestId="14218" GiverName="Tobias Mistmantle" GiverId="35618" X="-1540.45" Y="1572.61" Z="29.20589" />
 <If Condition="HasQuest(14218) &amp;&amp; !IsQuestCompleted(14218)">
   <While Condition="!IsQuestCompleted(14218)">
-    <CustomBehavior File="UserSettings" PullDistance="1" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 	<CustomBehavior File="NoCombatMoveTo" X="-1524.081" Y="1569.992" Z="26.53791" />
 	<CustomBehavior File="Vehicles\CannonControl" VehicleId="35317" QuestId="14218" MaxAngle="0.55" MinAngle="0.02" Buttons="1" ExitButton="5" />
   </While>
@@ -337,9 +337,9 @@ usualy this two quests have problems:\n
 <TurnIn QuestName="Never Surrender, Sometimes Retreat" QuestId="14221" TurnInName="Lord Darius Crowley" TurnInId="35566" X="-1619.7" Y="1498.03" Z="32.79995" />
 <PickUp QuestName="Last Stand" QuestId="14222" GiverName="Lord Darius Crowley" GiverId="35566" X="-1619.7" Y="1498.03" Z="32.79995" />
 <If Condition="HasQuest(14222) &amp;&amp; !IsQuestCompleted(14222)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="UserSettings" PullDistance="35" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Last Stand" QuestId="14222" Type="KillMob" MobId="35627" KillCount="8" />

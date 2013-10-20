@@ -299,7 +299,7 @@ Text="\n
 ..         but DON'T ENABLE AUTOEQUIP2             ..\n
 # # # # # # # # # # W A R N I N G # # # # # # # # # #" />
 </If>
-<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" MountName="48778" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="20" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" MountName="48778" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="20" />
 <CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
 <!--# # # Level 55 # # # -->
 <CustomBehavior File="Message" Text="Compiling The Scarlet Enclave Map Zone" LogColor="Aquamarine" />
@@ -340,7 +340,7 @@ Text="\n
 <PickUp QuestName="Death Comes From On High" QuestId="12641" GiverName="The Lich King" GiverId="25462" X="2345.299" Y="-5671.679" Z="426.0303" />
 <If Condition="HasQuest(12641) &amp;&amp; !IsQuestCompleted(12641)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" UseMount="false" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="false" />
   <While Condition="!IsQuestCompleted(12641)" >
     <If Condition="!Me.HasAura(51852)">
       <CustomBehavior File="InteractWith" MobId="191609" X="2345.848" Y="-5696.338" Z="426.0303" />
@@ -363,7 +363,7 @@ Text="\n
   <If Condition="Me.HasAura(51852)" >
     <CustomBehavior File="RunMacro" Macro="/click ActionButton5" WaitTime="1000"/>
   </If>
-  <CustomBehavior File="UserSettings" UseMount="True" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Death Comes From On High" QuestId="12641" TurnInName="The Lich King" TurnInId="25462" X="2345.299" Y="-5671.679" Z="426.0303" />
 <PickUp QuestName="The Might Of The Scourge" QuestId="12657" GiverName="The Lich King" GiverId="25462" X="2345.299" Y="-5671.679" Z="426.0303" />
@@ -439,14 +439,14 @@ Text="\n
   <While Condition="HasQuest(12680) &amp;&amp; !IsQuestCompleted(12680)" >
 
     <CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" AvoidMobId="28683" AvoidDistance="85" X="2175.955" Y="-5769.175" Z="101.3312" />
-    <CustomBehavior File="UserSettings" UseMount="False"/>
+    <CustomBehavior File="Cava\CavaSettings" UseMount="False"/>
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Cava\CavaVehicleMover" QuestId="12680" AuraId_ProxyVehicle="52263" VehicleId1="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
 <!--
     <CustomBehavior File="Cava\CavaVehicleMover" QuestId="12680" VehicleId="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
 -->
     <CustomBehavior File="Misc\RunLua" Lua= "VehicleExit()" />
-    <CustomBehavior File="UserSettings" UseMount="True"/>
+    <CustomBehavior File="Cava\CavaSettings" UseMount="True"/>
     <CustomBehavior File="WaitTimer" WaitTime="5000" />
   </While>
 </If>
@@ -454,7 +454,7 @@ Text="\n
 <PickUp QuestName="Into the Realm of Shadows" QuestId="12687" GiverName="Salanar the Horseman" GiverId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
 <If Condition="HasQuest(12687) &amp;&amp; !IsQuestCompleted(12687)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" UseMount="False" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(12687)" >
     <While Condition="!Me.HasAura(52693)" >
       <CustomBehavior File="InteractWith" MobId="28653" InteractByGossipOptions="1" CollectionDistance="100" X="2336.86" Y="-5686.712" Z="153.9225" />
@@ -463,7 +463,7 @@ Text="\n
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="12687" VehicleId="28782" IgnoreCombat="true" MovementBy="ClickToMoveOnly" SpellId="52362" Hop="True" X="2358.639" Y="-5708.643" Z="153.9229" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </While>
-  <CustomBehavior File="UserSettings" UseMount="True" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(12687)">
   <TurnIn QuestName="Into the Realm of Shadows" QuestId="12687" TurnInName="Salanar the Horseman" TurnInId="28653" X="2369.395" Y="-5718.039" Z="153.9223" />
@@ -514,10 +514,10 @@ Text="\n
 <PickUp QuestName="Nowhere To Run And Nowhere To Hide" QuestId="12719" GiverName="Prince Keleseth" GiverId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
 <PickUp QuestName="Lambs To The Slaughter" QuestId="12722" GiverName="Baron Rivendare" GiverId="28910" X="1876.437" Y="-5777.139" Z="85.01876" />
 <If Condition="HasQuest(12716) &amp;&amp; !IsQuestCompleted(12716)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="1" MobId="190937" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1784.615" Y="-5875.238" Z="109.4968" />
   <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="2" MobId="190938" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1811.489" Y="-6002.574" Z="117.6457" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
   <Objective QuestName="The Plaguebringer's Request" QuestId="12716" Type="CollectItem" ItemId="39328" CollectCount="10" />
 </If>
 <If Condition="HasQuest(12719) &amp;&amp; !IsQuestCompleted(12719)" >
@@ -562,13 +562,13 @@ Text="\n
 <TurnIn QuestName="Brothers In Death" QuestId="12725" TurnInName="Koltira Deathweaver" TurnInId="28912" X="1655.967" Y="-6038.763" Z="128.6404" />
 <PickUp QuestName="Bloody Breakout" QuestId="12727" GiverName="Koltira Deathweaver" GiverId="28912" X="1655.967" Y="-6038.763" Z="128.6404" />
 <If Condition="HasQuest(12727) &amp;&amp; !IsQuestCompleted(12727)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <While Condition="!IsQuestCompleted(12727)" >
     <CustomBehavior File="InteractWith" MobId="28912" GossipOptions="1" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
     <CustomBehavior File="InteractWith" MobId="29001" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
 	<CustomBehavior File="InteractWith" MobId="191092" ObjectType="GameObject"  WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
   </While>
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
 </If>
 <!--# # # Level 57 # # # -->
 <Objective QuestName="The Path Of The Righteous Crusader" QuestId="12724" Type="CollectItem" ItemId="39504" CollectCount="1" />
@@ -679,7 +679,7 @@ Text="\n
 <TurnIn QuestName="A Sort Of Homecoming" QuestId="12751" TurnInName="Thassarian" TurnInId="28913" X="1397.508" Y="-5827.419" Z="137.1876" />
 <PickUp QuestName="Ambush At The Overlook" QuestId="12754" GiverName="Orbaz Bloodbane" GiverId="28914" X="1403.938" Y="-5826.62" Z="137.191" />
 <If Condition="HasQuest(12754) &amp;&amp; !IsQuestCompleted(12754)">
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="1441.85" Y="-5945.563" Z="128.7185" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <CustomBehavior File="MyCTM" X="1443.03" Y="-5974.031" Z="115.7256" />
@@ -745,7 +745,7 @@ Text="\n
 <!--# # # Level 58 # # # -->
 <If Condition="Me.IsAlliance" >
   <PickUp QuestName="Where Kings Walk" QuestId="13188" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
-  <CustomBehavior File="UserSettings" PullDistance="0" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="0" />
   <If Condition="HasQuest(13188) &amp;&amp; Me.ZoneId == 139" >
     <CustomBehavior File="InteractWith" MobId="193053" X="2324.879" Y="-5659.905" Z="382.2406" />
 	<CustomBehavior File="WaitTimer" WaitTime="20000" />
@@ -759,7 +759,7 @@ Text="\n
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](58-60)BlastedLands[Cava]" />
 <Else>
   <PickUp QuestName="Warchief's Blessing" QuestId="13189" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
-  <CustomBehavior File="UserSettings" PullDistance="0" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="0" />
   <If Condition="HasQuest(13189) &amp;&amp; Me.ZoneId == 139" >
     <CustomBehavior File="InteractWith" MobId="193052" X="2349.222" Y="-5693.983" Z="382.2392" />
 	<CustomBehavior File="WaitTimer" WaitTime="20000" />

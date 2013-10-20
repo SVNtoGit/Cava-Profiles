@@ -129,7 +129,7 @@
 <If Condition="IsQuestCompleted(14465)">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-13)Worgen[Cava]" />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
 <CustomBehavior File="Message" Text="Compiling Guilneas Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 5 # # # -->
 <PickUp QuestName="Among Humans Again" QuestId="14313" GiverName="Lord Godfrey" GiverId="36170" X="-1839.762" Y="2291.104" Z="42.22679" />
@@ -172,14 +172,14 @@
   </While>
 </If>
 <If Condition="HasQuest(14347) &amp;&amp; !IsQuestCompleted(14347)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Hold the Line" QuestId="14347" Type="KillMob" MobId="34511" KillCount="10" />
 <If Condition="HasQuest(14347) &amp;&amp; IsQuestCompleted(14347)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Hold the Line" QuestId="14347" TurnInName="Prince Liam Greymane" TurnInId="36140" X="-1921.679" Y="2328.22" Z="37.77991" />
 <TurnIn QuestName="You Can't Take 'Em Alone" QuestId="14348" TurnInName="Prince Liam Greymane" TurnInId="36140" X="-1921.679" Y="2328.22" Z="37.77991" />
@@ -235,7 +235,7 @@
     <CustomBehavior File="EjectVeh" />
 	<CustomBehavior File="WaitTimer" WaitTime="2000" />
     <If Condition="(Me.Z &gt;= 8)" >
-      <CustomBehavior File="UserSettings" PullDistance="15" />
+      <CustomBehavior File="Cava\CavaSettings" PullDistance="15" />
       <RunTo X="-2141.673" Y="2653.57" Z="4.997065" />
       <RunTo X="-2127.165" Y="2664.289" Z="0.9278058" />
       <Objective QuestName="Two By Sea" QuestId="14382" Type="KillMob" MobId="36397" KillCount="1" />
@@ -266,14 +266,14 @@
   </While>
 </If>
 <If Condition="HasQuest(14369) &amp;&amp; !IsQuestCompleted(14369)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Unleash the Beast" QuestId="14369" Type="KillMob" MobId="36634" KillCount="8" />
 <If Condition="HasQuest(14369) &amp;&amp; IsQuestCompleted(14369)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <Hotspot X="-1888.488" Y="2539.567" Z="1.692097" />
   <CustomBehavior File="MyCTM" X="-1880.397" Y="2545.938" Z="1.75851" />
   <CustomBehavior File="MyCTM" X="-1874.192" Y="2550.492" Z="-5.908537" />
@@ -290,14 +290,14 @@
 <If Condition="HasQuest(14386) &amp;&amp; !IsQuestCompleted(14386)">
   <CustomBehavior File="UseItemOn" QuestId="14386" ItemId="49240" MobId="36312" Range="30" X="-1943.728" Y="2653.24" Z="0.9589877" />
   <CustomBehavior File="WaitTimer" QuestId="14386" WaitTime="3000" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <Objective QuestName="Leader of the Pack" QuestId="14386" Type="KillMob" MobId="36312" KillCount="1" />
 </If>
 <If Condition="HasQuest(14386) &amp;&amp; IsQuestCompleted(14386)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="-1882.678" Y="2543.867" Z="1.628508" />
   <CustomBehavior File="MyCTM" X="-1880.173" Y="2546.079" Z="1.464187" />
   <CustomBehavior File="MyCTM" X="-1874.158" Y="2550.851" Z="-5.905752" />
@@ -344,7 +344,7 @@
 <TurnIn QuestName="I Can't Wear This" QuestId="14400" TurnInName="Grandma Wahl" TurnInId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <PickUp QuestName="Grandma's Cat" QuestId="14401" GiverName="Grandma Wahl" GiverId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <If Condition="HasQuest(14401) &amp;&amp; !IsQuestCompleted(14401)">
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(14401)">
     <RunTo QuestId="14401" X="-2106.718" Y="2335.631" Z="7.345545" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36459" X="-2102.93" Y="2333.44" Z="8.443903" />
@@ -352,7 +352,7 @@
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36461" WaitForNpcs="False" MobState="Alive" X="-2102.93" Y="2333.44" Z="8.443903" />
 	<CustomBehavior File="WaitTimer" QuestId="14401" WaitTime="5000"/>
   </While>
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <TurnIn QuestName="Grandma's Cat" QuestId="14401" TurnInName="Grandma Wahl" TurnInId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <!--# # # Level 8 # # # -->
@@ -368,14 +368,14 @@
 <Objective QuestName="Not Quite Shipshape" QuestId="14404" Type="CollectItem" ItemId="49337" CollectCount="1" />
 <Objective QuestName="Not Quite Shipshape" QuestId="14404" Type="CollectItem" ItemId="49339" CollectCount="1" />
 <If Condition="HasQuest(14412) &amp;&amp; !IsQuestCompleted(14412)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Washed Up" QuestId="14412" Type="KillMob" MobId="36488" KillCount="6" />
 <If Condition="HasQuest(14412) &amp;&amp; IsQuestCompleted(14412)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Washed Up" QuestId="14412" TurnInName="Sebastian Hayward" TurnInId="36456" X="-2299.521" Y="2279.163" Z="0.3399396" />
 <TurnIn QuestName="Not Quite Shipshape" QuestId="14404" TurnInName="Sebastian Hayward" TurnInId="36456" X="-2299.521" Y="2279.163" Z="0.3399396" />

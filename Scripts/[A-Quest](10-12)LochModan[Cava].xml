@@ -94,7 +94,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" />
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 10.75 # # # -->
 <If Condition="HasQuest(26131)">
@@ -104,7 +104,7 @@
 <TurnIn QuestName="The Lost Pilot" QuestId="26854" TurnInName="A Dwarven Corpse" TurnInId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
 <If Condition="!HasQuest(26855) &amp;&amp; !IsQuestCompleted(26855)">
   <PickUp QuestName="A Pilot's Revenge" QuestId="26855" GiverName="A Dwarven Corpse" GiverId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <While Condition="!HasItem(3183)">
     <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1961" WaitForNpcs="False" MobState="Alive" CollectionDistance="1000" X="-5574.637" Y="-2144.288" Z="400.8333" />
@@ -115,7 +115,7 @@
       <PickUp QuestName="A Pilot's Revenge" QuestId="26855" GiverName="A Dwarven Corpse" GiverId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
     </If>
   </While>
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <TurnIn QuestName="A Pilot's Revenge" QuestId="26855" TurnInName="Pilot Hammerfoot" TurnInId="1960" X="-5526.553" Y="-2380.059" Z="400.2226" />
 <PickUp QuestName="South Gate Status Report" QuestId="13635" GiverName="Pilot Hammerfoot" GiverId="1960" X="-5526.553" Y="-2380.059" Z="400.2226" />
@@ -128,15 +128,15 @@
 <PickUp QuestName="In Defense of the King's Lands" QuestId="26146" GiverName="Captain Rugelfuss" GiverId="1092" X="-5868.018" Y="-2638.677" Z="308.9507" />
 <PickUp QuestName="The Trogg Threat" QuestId="26145" GiverName="Mountaineer Cobbleflint" GiverId="1089" X="-5865.837" Y="-2637.314" Z="308.9652" />
 <If Condition="HasQuest(26145) &amp;&amp; !IsQuestCompleted(26145)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="The Trogg Threat" QuestId="26145" Type="CollectItem" ItemId="2536" CollectCount="8" />
 <If Condition="HasQuest(26146) &amp;&amp; !IsQuestCompleted(26146)">
   <CustomBehavior File="KillUntilComplete" QuestId="26146" MobId1="1161" MobId2="1162" X="-5866.125" Y="-2896.294" Z="365.5801" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="In Defense of the King's Lands" QuestId="26146" TurnInName="Captain Rugelfuss" TurnInId="1092" X="-5868.018" Y="-2638.677" Z="308.9507" />
 <PickUp QuestName="A Decisive Strike" QuestId="26148" GiverName="Captain Rugelfuss" GiverId="1092" X="-5868.018" Y="-2638.677" Z="308.9507" />
@@ -147,22 +147,22 @@
 <PickUp QuestName="Bigger and Uglier" QuestId="26147" GiverName="Mountaineer Wallbang" GiverId="1090" X="-5868.213" Y="-2636.464" Z="308.9581" />
 <If Condition="HasQuest(26148) &amp;&amp; !IsQuestCompleted(26148)">
   <RunTo X="-5754.89" Y="-2908.283" Z="366.6881" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="A Decisive Strike" QuestId="26148" Type="KillMob" MobId="42230" KillCount="1" />
 <If Condition="HasQuest(26147) &amp;&amp; !IsQuestCompleted(26147)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Bigger and Uglier" QuestId="26147" Type="KillMob" MobId="1197" KillCount="8" />
 <Objective QuestName="Bigger and Uglier" QuestId="26147" Type="KillMob" MobId="1164" KillCount="8" />
 <If Condition="HasQuest(26147) &amp;&amp; IsQuestCompleted(26147)">
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 12 # # # -->
 <TurnIn QuestName="A Decisive Strike" QuestId="26148" TurnInName="Captain Rugelfuss" TurnInId="1092" X="-5868.018" Y="-2638.677" Z="308.9507" />

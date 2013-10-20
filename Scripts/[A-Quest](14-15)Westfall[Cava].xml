@@ -98,10 +98,10 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="UserSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
-<CustomBehavior File="UserSettings" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-  <CustomBehavior File="UserSettings" PullDistance="35" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <!--# # # Level 14.4 # # # -->
 <CustomBehavior File="Message" Text="Compiling Westfall Map Zone" LogColor="Aquamarine" />
@@ -125,7 +125,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="HasQuest(26348) &amp;&amp; IsQuestCompleted(26348)" >
-<CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+<CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
 </If>
 <If Condition="HasItem(1357)" >
   <PickUp QuestName="Captain Sanders' Hidden Treasure" QuestId="26353" GiverName="Captain Sanders&apos; Treasure Map" GiverType="Item" GiverId="1357" />
@@ -148,9 +148,9 @@
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="HasQuest(26347) &amp;&amp; !IsQuestCompleted(26347)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="UserSettings" PullDistance="35" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Keeper of the Flame" QuestId="26347" Type="CollectItem" ItemId="58204" CollectCount="5" />
@@ -158,7 +158,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="HasQuest(26347) &amp;&amp; IsQuestCompleted(26347)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(26355)" >
   <TurnIn QuestName="Captain Sanders' Hidden Treasure" QuestId="26355" TurnInName="Old Jug" TurnInId="34" X="-9797.726" Y="1593.988" Z="39.77069" />

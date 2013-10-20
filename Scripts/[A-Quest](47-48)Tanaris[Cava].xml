@@ -101,40 +101,40 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="23240" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="23223" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23223" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="23228" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23228" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="23221" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23221" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103196" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103196" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35713" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35713" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127302" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127302" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73630" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73630" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="23214" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="23214" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="23161" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23161" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Tanaris Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 47.61 # # # -->
@@ -149,23 +149,23 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
-  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
   <RunTo X="-9469.269" Y="-2957.798" Z="12.39528" />
 </If>
-<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 <PickUp QuestName="Ancient Obstacles" QuestId="25420" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="Laying Claim" QuestId="25559" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="Fragments of Language" QuestId="25565" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="The Thunderdrome!" QuestId="26895" GiverName="Flinn" GiverId="38578" X="-9481.25" Y="-2965.49" Z="12.55419" />
 <If Condition="HasQuest(25420) &amp;&amp; !IsQuestCompleted(25420)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="Ancient Obstacles" QuestId="25420" Type="KillMob" MobId="38914" KillCount="6" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <Objective QuestName="Fragments of Language" QuestId="25565" Type="CollectItem" ItemId="52061" CollectCount="5" />
 <If Condition="HasQuest(25559) &amp;&amp; !IsQuestCompleted(25559)" >
   <Objective QuestName="Laying Claim" QuestId="25559" Type="KillMob" MobId="38997" KillCount="10" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Ancient Obstacles" QuestId="25420" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <TurnIn QuestName="Laying Claim" QuestId="25559" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
@@ -178,13 +178,13 @@
 <TurnIn QuestName="The Secrets of Uldum" QuestId="25566" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <While Condition="!IsQuestCompleted(25070)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
   </While>
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <PickUp QuestName="The Grand Tablet" QuestId="25421" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />

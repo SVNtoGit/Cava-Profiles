@@ -571,49 +571,49 @@
   Please move your char to: BLASTED LANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="23240" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="23223" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23223" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="23228" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23228" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="23221" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23221" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103196" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103196" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35713" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35713" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127302" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127302" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73630" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73630" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="23214" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="23214" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="23161" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23161" />
 </If>
 <If Condition="Me.Class == WoWClass.DeathKnight">
-  <CustomBehavior File="UserSettings" MountName="48778" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="48778" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Blasted Lands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 58.15 # # # -->
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -649,14 +649,14 @@
   <CustomBehavior File="SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.50076" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
+<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
 <PickUp QuestName="Minor Distractions" QuestId="25710" GiverName="Quartermaster Lungertz" GiverId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <PickUp QuestName="A Closer Look" QuestId="25715" GiverName="Enohar Thunderbrew" GiverId="9540" X="-11038.6" Y="-3444.98" Z="65.79074" />
 <Objective QuestName="Minor Distractions" QuestId="25710" Type="KillMob" MobId="42228" KillCount="1" />
 <TurnIn QuestName="Minor Distractions" QuestId="25710" TurnInName="Quartermaster Lungertz" TurnInId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -695,21 +695,21 @@
 </If>
 <Objective QuestName="Nethergarde Reigns" QuestId="25712" Type="KillMob" MobId="42231" KillCount="1" />
 <If Condition="HasQuest(25711) &amp;&amp; !IsQuestCompleted(25711)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Eliminate the Okril'lon" QuestId="25711" Type="KillMob" MobId="42359" KillCount="9" />
 <If Condition="HasQuest(25711) &amp;&amp; IsQuestCompleted(25711)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Eliminate the Okril'lon" QuestId="25711" TurnInName="Quartermaster Lungertz" TurnInId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <TurnIn QuestName="Nethergarde Reigns" QuestId="25712" TurnInName="Leyan Steelson" TurnInId="42262" X="-10910.1" Y="-3398.56" Z="81.71423" />
 <TurnIn QuestName="Remove Their Arms" QuestId="25713" TurnInName="Buttonwillow McKittrick" TurnInId="42264" X="-10920.8" Y="-3408.44" Z="81.71606" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -783,9 +783,9 @@
   </While>
 </If>
 <If Condition="HasQuest(25708) &amp;&amp; !IsQuestCompleted(25708)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -813,7 +813,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(25708)" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Our Fallen Friends" QuestId="25708" TurnInName="Enohar Thunderbrew" TurnInId="9540" X="-11038.6" Y="-3444.98" Z="65.79079" />
 <TurnIn QuestName="Curtail the Darktail" QuestId="25709" TurnInName="Enohar Thunderbrew" TurnInId="9540" X="-11038.6" Y="-3444.98" Z="65.79079" />
@@ -821,7 +821,7 @@
 <TurnIn QuestName="Watcher Mahar Ba" QuestId="25714" TurnInName="Watcher Mahar Ba" TurnInId="5385" X="-10994.69" Y="-3507.891" Z="103.1427" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -862,7 +862,7 @@
 <TurnIn QuestName="Attune the Bloodstone" QuestId="26158" TurnInName="Kasim Sharim" TurnInId="42298" X="-11225.13" Y="-3483.986" Z="8.551289" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -893,9 +893,9 @@
   </If>
 </If>
 <If Condition="HasQuest(26159) &amp;&amp; !IsQuestCompleted(26159) &amp;&amp; HasQuest(26172) &amp;&amp; !IsQuestCompleted(26172)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -945,22 +945,22 @@
   <GrindTo Condition="IsQuestCompleted(26172) || IsObjectiveComplete(1, 26159) || IsObjectiveComplete(2, 26159)" />
 </If>
 <If Condition="HasQuest(26172) &amp;&amp; !IsQuestCompleted(26172)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="A Bloodmage's Gotta Eat Too" QuestId="26172" Type="CollectItem" ItemId="55828" CollectCount="5" />
 <If Condition="HasQuest(26159) &amp;&amp; !IsQuestCompleted(26159)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="The First Step" QuestId="26159" Type="CollectItem" ItemId="55826" CollectCount="9" />
 <Objective QuestName="The First Step" QuestId="26159" Type="CollectItem" ItemId="55827" CollectCount="9" />
 <If Condition="HasQuest(26159) &amp;&amp; IsQuestCompleted(26159)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11314.33" Y="-3441.439" Z="7.467997" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="203752" ObjectType="GameObject" X="-11314.1" Y="-3441.44" Z="7.46822" />
@@ -987,7 +987,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1013,7 +1013,7 @@
 <If Condition="HasQuest(26169) &amp;&amp; !IsQuestCompleted(26169)" >
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" UseMount="False" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="False" LootMobs="True" />
   <While Condition="!IsQuestCompleted(26169)" >
     <RunTo X="-11451.77" Y="-3791.916" Z="4.035245" />
     <CustomBehavior File="MyCTM" X="-11446.63" Y="-3799.184" Z="-2.003908" />
@@ -1029,7 +1029,7 @@
     <CustomBehavior File="MyCTM" X="-11450.96" Y="-3800.519" Z="0.3807733" />
   </While>
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
-  <CustomBehavior File="UserSettings" UseMount="True" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original" />
 <!--
 <Objective QuestName="The Amulet of Grol" QuestId="26169" Type="CollectItem" ItemId="10753" CollectCount="1" />
 -->
@@ -1043,9 +1043,9 @@
 <TurnIn QuestName="Home... Gone... Naga..." QuestId="25702" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <PickUp QuestName="Atrocities" QuestId="25703" GiverName="Neptool" GiverId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="HasQuest(25703) &amp;&amp; !IsQuestCompleted(25703)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -1070,12 +1070,12 @@
 <Objective QuestName="Atrocities" QuestId="25703" Type="KillMob" MobId="41386" KillCount="10" />
 <Objective QuestName="Atrocities" QuestId="25703" Type="KillMob" MobId="41387" KillCount="10" />
 <If Condition="HasQuest(25703) &amp;&amp; IsQuestCompleted(25703)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Atrocities" QuestId="25703" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1116,9 +1116,9 @@
   </While>
 </If>
 <If Condition="HasQuest(25706) &amp;&amp; !IsQuestCompleted(25706)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41422" KillCount="8" />
@@ -1127,7 +1127,7 @@
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41405" KillCount="4" />
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41404" KillCount="4" />
 <If Condition="HasQuest(25706) &amp;&amp; IsQuestCompleted(25706)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="False Idols" QuestId="25705" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <TurnIn QuestName="Neptool's Revenge" QuestId="25706" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
@@ -1151,7 +1151,7 @@
 <TurnIn QuestName="Time is Short" QuestId="26163" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1177,30 +1177,30 @@
 <PickUp QuestName="The Vile Blood of Demons" QuestId="26165" GiverName="Watcher Grimeo" GiverId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <PickUp QuestName="Protecting Our Rear" QuestId="26173" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99932" />
 <If Condition="HasQuest(26173) &amp;&amp; !IsQuestCompleted(26173)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="26173" Type="KillMob" MobId="41165" KillCount="1" />
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="26173" Type="KillMob" MobId="41166" KillCount="1" />
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="26173" Type="KillMob" MobId="41164" KillCount="1" />
 <If Condition="HasQuest(26173) &amp;&amp; IsQuestCompleted(26173)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <Objective QuestName="The Vile Blood of Demons" QuestId="26165" Type="CollectItem" ItemId="55991" CollectCount="7" />
 <Objective QuestName="The Charred Granite of the Dark Portal" QuestId="26164" Type="CollectItem" ItemId="55989" CollectCount="24" />
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
 </If>
 <TurnIn QuestName="The Charred Granite of the Dark Portal" QuestId="26164" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <TurnIn QuestName="The Vile Blood of Demons" QuestId="26165" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
@@ -1208,7 +1208,7 @@
 <TurnIn QuestName="Protecting Our Rear" QuestId="26173" TurnInName="Watch Commander Relthorn Netherwane" TurnInId="16841" X="-11815.21" Y="-3195.544" Z="-30.99932" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1251,7 +1251,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1290,7 +1290,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1319,9 +1319,9 @@
 <TurnIn QuestName="Surwich" QuestId="26175" TurnInName="Mayor Charlton Connisport" TurnInId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <PickUp QuestName="Wormthorn's Dream" QuestId="26184" GiverName="Mayor Charlton Connisport" GiverId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <If Condition="HasQuest(26184) &amp;&amp; !IsQuestCompleted(26184)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="45125" KillCount="3" />
@@ -1329,12 +1329,12 @@
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="45119" KillCount="5" />
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="41471" KillCount="5" />
 <If Condition="HasQuest(26184) &amp;&amp; IsQuestCompleted(26184)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Wormthorn's Dream" QuestId="26184" TurnInName="Mayor Charlton Connisport" TurnInId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1360,9 +1360,9 @@
 <TurnIn QuestName="Advice from the Cenarion Circle" QuestId="26185" TurnInName="Cenarion Observer Shayana" TurnInId="42352" X="-12706.26" Y="-2887.116" Z="1.392433" />
 <PickUp QuestName="Demoniac Vessel" QuestId="26186" GiverName="Cenarion Observer Shayana" GiverId="42352" X="-12706.26" Y="-2887.116" Z="1.392433" />
 <If Condition="HasQuest(26186) &amp;&amp; !IsQuestCompleted(26186)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Demoniac Vessel" QuestId="26186" Type="CollectItem" ItemId="57178" CollectCount="20" />
@@ -1426,7 +1426,7 @@
 <GrindTo Level="60" />
 <If Condition="!HasQuest(10119) &amp;&amp; !IsQuestCompleted(10119)">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
