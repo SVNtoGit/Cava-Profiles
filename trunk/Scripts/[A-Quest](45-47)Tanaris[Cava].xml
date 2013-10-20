@@ -184,40 +184,40 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="23240" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="23223" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23223" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="23228" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23228" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="23221" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23221" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103196" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103196" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35713" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35713" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127302" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127302" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73630" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73630" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="23214" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="23214" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="23161" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23161" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Tanaris Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 45.21 # # # -->
@@ -233,12 +233,12 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
 </If>
-<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 <PickUp QuestName="Butcherbot" QuestId="25112" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <PickUp QuestName="Seaside Salvage" QuestId="25048" GiverName="Kelsey Steelspark" GiverId="38535" X="-7209.425" Y="-3756.036" Z="9.188984" />
 <PickUp QuestName="Puddle Stomping" QuestId="25049" GiverName="Kelsey Steelspark" GiverId="38535" X="-7209.425" Y="-3756.036" Z="9.188984" />
 <If Condition="HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False"/>
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" SkinMobs="False"/>
   <While Condition="!IsQuestCompleted(25112)" >
     <If Condition="!IsQuestCompleted(25112)" >
       <CustomBehavior File="CombatUseItemOn" MobId="5419" MobHpPercentLeft="99" NumOfTimes="1" ItemId="52715" X="-7423.516" Y="-3651.443" Z="9.464562" />
@@ -401,7 +401,7 @@
 </If>
 <PickUp QuestName="Scavengers Scavenged" QuestId="25111" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <If Condition="HasQuest(25111) &amp;&amp; !IsQuestCompleted(25111)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" SkinMobs="False" />
   <RunTo X="-7431.793" Y="-3687.643" Z="9.309354" />
   <While Condition="!IsQuestCompleted(25111)" >
     <If Condition="!IsQuestCompleted(25111)" >
@@ -453,7 +453,7 @@
 </If>
 <PickUp QuestName="Blisterpaw Butchery" QuestId="25115" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <If Condition="HasQuest(25115) &amp;&amp; !IsQuestCompleted(25115)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" SkinMobs="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" SkinMobs="False" />
   <RunTo X="-7111.974" Y="-3594.469" Z="9.275411" />
   <While Condition="!IsQuestCompleted(25115)" >
     <If Condition="!IsQuestCompleted(25115)" >
@@ -529,7 +529,7 @@
       <CustomBehavior File="UseItemOn" QuestId="25115" MobId="5426" MobState="Dead" ItemId="52715" CollectionDistance="1000" />
     </If>
   </While>
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Blisterpaw Butchery" QuestId="25115" TurnInName="Driz Plunkbow" TurnInId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <If Condition="!HasQuest(25091) &amp;&amp; !IsQuestCompleted(25091) &amp;&amp; (Me.LevelFraction &gt;= 47.61)">
@@ -541,14 +541,14 @@
 <PickUp QuestName="I'm With Scorpid" QuestId="25521" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
 <PickUp QuestName="Blood to Thrive" QuestId="25021" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25021) &amp;&amp; !IsQuestCompleted(25021)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <Objective QuestName="Blood to Thrive" QuestId="25021" Type="CollectItem" ItemId="52064" CollectCount="6" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <If Condition="HasQuest(25521) &amp;&amp; !IsQuestCompleted(25521)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="I'm With Scorpid" QuestId="25521" Type="CollectItem" ItemId="54856" CollectCount="6" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Blood to Thrive" QuestId="25021" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <PickUp QuestName="Sang'thraze the Deflector" QuestId="25025" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
@@ -559,15 +559,15 @@
 </If>
 <PickUp QuestName="Gargantapid" QuestId="25522" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
 <If Condition="HasQuest(25522) &amp;&amp; !IsQuestCompleted(25522)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="Gargantapid" QuestId="25522" Type="CollectItem" ItemId="54855" CollectCount="1" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(25025) &amp;&amp; !IsQuestCompleted(25025)">
   <RunTo X="-7806.505" Y="-3045.835" Z="54.03069" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="Sang'thraze the Deflector" QuestId="25025" Type="CollectItem" ItemId="52069" CollectCount="1" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="-7806.505" Y="-3045.835" Z="54.03069" />
 </If>
 <TurnIn QuestName="Gargantapid" QuestId="25522" TurnInName="Gus Rustflutter" TurnInId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
@@ -579,9 +579,9 @@
 </If>
 <PickUp QuestName="Darkest Mojo" QuestId="25026" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25026) &amp;&amp; !IsQuestCompleted(25026)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="Darkest Mojo" QuestId="25026" Type="CollectItem" ItemId="52072" CollectCount="6" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Darkest Mojo" QuestId="25026" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="!HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032) &amp;&amp; (Me.LevelFraction &gt;= 47.61)">
@@ -591,13 +591,13 @@
 <PickUp QuestName="Secrets in the Oasis" QuestId="25032" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032)" >
   <RunTo X="-7452.334" Y="-2882.982" Z="6.584354" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <While Condition="!IsQuestCompleted(25032)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
     <CustomBehavior File="WaitTimer" QuestId="25032" WaitTime="1000" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
   </While>
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Secrets in the Oasis" QuestId="25032" TurnInName="Trenton Lighthammer" TurnInId="7804" X="-6926.155" Y="-3124.703" Z="8.835281" />
 <RunTo X="-7185.97" Y="-3768.24" Z="9.30053" />

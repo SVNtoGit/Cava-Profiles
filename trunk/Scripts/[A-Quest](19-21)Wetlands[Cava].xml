@@ -254,40 +254,40 @@
   Please move your char to: LOCH MODAN\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="6898" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="10969" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="10969" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="472" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="472" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="8394" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="8394" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103195" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103195" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35710" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35710" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127287" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127287" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73629" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73629" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="13819" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="13819" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="5784" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="5784" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Loch Modan Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 19.65 # # # -->
@@ -308,9 +308,9 @@
 <Objective QuestName="The Stolen Keg" QuestId="25395" Type="CollectItem" ItemId="55209" CollectCount="1" />
 <Objective QuestName="Cleaning Hovel" QuestId="25211" Type="KillMob" MobId="41080" KillCount="5" />
 <If Condition="HasQuest(25211) &amp;&amp; !IsQuestCompleted(25211)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -327,7 +327,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(25211)" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Cleaning Hovel" QuestId="25211" TurnInName="Mountaineer Grugelm" TurnInId="41074" X="-4331.828" Y="-2453.523" Z="212.2744" />
 <TurnIn QuestName="The Stolen Keg" QuestId="25395" TurnInName="Mountaineer Rharen" TurnInId="41075" X="-4329.554" Y="-2455.144" Z="212.4169" />
@@ -339,22 +339,22 @@
 <Objective QuestName="Sedimentary, My Dear" QuestId="25722" Type="CollectItem" ItemId="55231" CollectCount="8" />
 <If Condition="HasQuest(25723) &amp;&amp; !IsQuestCompleted(25723)" >
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Thresh Out of Luck" QuestId="25723" Type="CollectItem" ItemId="55232" CollectCount="8" />
 <If Condition="HasQuest(25721) &amp;&amp; !IsQuestCompleted(25721)" >
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Fight the Flood" QuestId="25721" Type="KillMob" MobId="41132" KillCount="10" />
 <If Condition="HasQuest(25721) &amp;&amp; IsQuestCompleted(25721)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 20 # # # -->
 <TurnIn QuestName="Thresh Out of Luck" QuestId="25723" TurnInName="Dunlor Marblebeard" TurnInId="41128" X="-4118.5" Y="-2781.31" Z="17.92287" />
@@ -397,14 +397,14 @@
 <PickUp QuestName="A Dumpy Job" QuestId="25726" GiverName="Surveyor Thurdan" GiverId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <!--<PickUp QuestName="Drungeld Glowerglare" QuestId="25727" GiverName="Forba Slabchisel" GiverId="41086" X="-4125.83" Y="-2767.82" Z="17.93012" />-->
 <If Condition="HasQuest(25726) &amp;&amp; !IsQuestCompleted(25726)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="A Dumpy Job" QuestId="25726" Type="CollectItem" ItemId="55234" CollectCount="1" />
 <If Condition="HasQuest(25726) &amp;&amp; IsQuestCompleted(25726)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="A Dumpy Job" QuestId="25726" TurnInName="Surveyor Thurdan" TurnInId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <PickUp QuestName="Down In Thelgen Rock" QuestId="25734" GiverName="Surveyor Thurdan" GiverId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
@@ -419,32 +419,32 @@
 </If>
 <If Condition="HasQuest(25734) &amp;&amp; !IsQuestCompleted(25734)" >
   <RunTo X="-3967.485" Y="-2368.593" Z="18.20854" />
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
 <Objective QuestName="Down In Thelgen Rock" QuestId="25734" Type="CollectItem" ItemId="55242" CollectCount="1" />
 <If Condition="!HasQuest(25736) &amp;&amp; !IsQuestCompleted(25736)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" MobState="Alive"  WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
   <If Condition="!HasItem(55243)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   </If>
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <If Condition="HasItem(55243)" >
   <PickUp QuestName="The Floodsurge Core" QuestId="25736" GiverName="Floodsurge Core" GiverId="55243" GiverType="Item" />
 </If>
 <Objective QuestName="Incendicite Ore" QuestId="25735" Type="CollectItem" ItemId="55241" CollectCount="8" />
 <If Condition="HasQuest(25733) &amp;&amp; !IsQuestCompleted(25733)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <!--<Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="4040" KillCount="7" />
 <Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="1111" KillCount="7" />-->
 <If Condition="HasQuest(25733) &amp;&amp; IsQuestCompleted(25733)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 21 # # # -->
 <TurnIn QuestName="Down In Thelgen Rock" QuestId="25734" TurnInName="Surveyor Thurdan" TurnInId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />

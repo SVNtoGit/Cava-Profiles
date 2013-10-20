@@ -119,40 +119,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="UserSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <CustomBehavior File="UserSettings" MountName="34795" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <CustomBehavior File="UserSettings" MountName="64658" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="64658" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <CustomBehavior File="UserSettings" MountName="18990" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="18990" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <CustomBehavior File="UserSettings" MountName="23243" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23243" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <CustomBehavior File="UserSettings" MountName="17462" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="17462" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <CustomBehavior File="UserSettings" MountName="87090" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="87090" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127290" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127290" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <CustomBehavior File="UserSettings" MountName="69820" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="69820" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="34769" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="34769" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="5784" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="5784" />
 </If>
 <!--# # # Level 51.65 # # # -->
 <If Condition="!HasQuest(28522) &amp;&amp; !IsQuestCompleted(28522)" >
@@ -179,9 +179,9 @@
 <PickUp QuestName="Mystery Goo" QuestId="28467" GiverName="Winterfall Cauldron" GiverId="207179" GiverType="GameObject" X="6841.043" Y="-2497.901" Z="560.6016" />
 <Objective QuestName="Winterfall Activity" QuestId="28522" Type="CollectItem" ItemId="21383" CollectCount="10" />
 <If Condition="HasQuest(28460) &amp;&amp; !IsQuestCompleted(28460)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="UserSettings" PullDistance="40" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -209,9 +209,9 @@
   <GrindTo Condition="IsQuestCompleted(28460)" />
 </If>
 <If Condition="!HasQuest(28656) &amp;&amp; !IsQuestCompleted(28656)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="UserSettings" PullDistance="40" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -239,7 +239,7 @@
   <GrindTo Condition="HasQuest(28656)" />
 </If>
 <If Condition="HasQuest(28460) &amp;&amp; IsQuestCompleted(28460)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Winterfall Activity" QuestId="28522" TurnInName="Salfa" TurnInId="11556" X="6900.443" Y="-2285.773" Z="586.0642" />
 <TurnIn QuestName="Strange Life Forces" QuestId="28656" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" X="6396.568" Y="-2541.832" Z="542.0278" />
@@ -253,13 +253,13 @@
 <PickUp QuestName="Winterfall Runners" QuestId="28469" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <If Condition="(HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)) || (HasQuest(28469) &amp;&amp; !IsQuestCompleted(28469))" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="UserSettings" PullDistance="40" />
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
 </If>
 <If Condition="HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)" >
-  <CustomBehavior File="UserSettings" LootMobs="True"/>
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
   <CustomBehavior File="CollectThings" QuestId="28530" MobId1="48767" MobId2="48768" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6693.444" Y="-2970.353" Z="572.6801" />
     <Hotspot X="6699.752" Y="-3010.257" Z="573.3894" />
@@ -278,11 +278,11 @@
     <Hotspot X="6720.028" Y="-2933.25" Z="575.8972" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="UserSettings" LootMobs="Original"/>
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
 </If>
 <Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
 <If Condition="HasQuest(28530) || HasQuest(28469)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 52 # # # -->
 <TurnIn QuestName="Winterfall Runners" QuestId="28469" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -294,7 +294,7 @@
 </If>
 <PickUp QuestName="High Chief Winterfall" QuestId="28470" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
 <Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
@@ -303,7 +303,7 @@
   </While>
 </If>
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; HasItem(12842)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
   <PickUp QuestName="The Final Piece" QuestId="28471" GiverType="Item" GiverName="Crudely-Written Log" GiverId="12842" />
 </If>
 <TurnIn QuestName="High Chief Winterfall" QuestId="28470" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />

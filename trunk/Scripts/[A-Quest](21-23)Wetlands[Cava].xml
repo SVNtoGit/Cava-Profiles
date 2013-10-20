@@ -173,40 +173,40 @@
   Please move your char to: WETLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="6898" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="10969" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="10969" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="472" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="472" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="8394" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="8394" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103195" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103195" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35710" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35710" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127287" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127287" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73629" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73629" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="13819" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="13819" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="5784" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="5784" />
 </If>
 <If Condition="!HasQuest(25780) &amp;&amp; !IsQuestCompleted(25780)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
@@ -225,19 +225,19 @@
   <CustomBehavior File="InteractWith" MobId="1452" BuyItemId="1205" BuyItemCount="10" WaitTime="1000" CollectionDistance="100" X="-3745.084" Y="-887.7281" Z="0.3046385" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
 <CustomBehavior File="Message" Text="Compiling Wetlands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 21.58 # # # -->
 <PickUp QuestName="Assault on Menethil Keep" QuestId="25780" GiverName="Captain Stoutfist" GiverId="2104" X="-3683.297" Y="-824.5052" Z="1.317258" />
 <If Condition="HasQuest(25780) &amp;&amp; !IsQuestCompleted(25780)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Assault on Menethil Keep" QuestId="25780" Type="KillMob" MobId="41273" KillCount="1" />
 <If Condition="HasQuest(25780) &amp;&amp; IsQuestCompleted(25780)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Assault on Menethil Keep" QuestId="25780" TurnInName="Captain Stoutfist" TurnInId="2104" X="-3683.297" Y="-824.5052" Z="1.317258" />
 <PickUp QuestName="When Life Gives You Crabs" QuestId="25800" GiverName="Karl Boran" GiverId="41297" X="-3740.495" Y="-848.1146" Z="0.5935773" />
@@ -257,11 +257,11 @@
 </If>
 <PickUp QuestName="Cursed to Roam" QuestId="25816" GiverName="First Mate Fitzsimmons" GiverId="1239" X="-3794.61" Y="-842.481" Z="0.8879969" />
 <If Condition="HasQuest(25800) &amp;&amp; !IsQuestCompleted(25800)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="25800" MobId="44116" MobState="Alive" CollectItemCount="5" CollectItemId="56013" HuntingGroundRadius="200" >
       <Hotspot X="-3743.156" Y="-876.3594" Z="-0.3971157" />
       <Hotspot X="-3776.339" Y="-853.7288" Z="-0.3972291" />
@@ -304,15 +304,15 @@
       <Hotspot X="-3685.011" Y="-1009.324" Z="-2.041966" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 <!--
 <Objective QuestName="When Life Gives You Crabs" QuestId="25800" Type="CollectItem" ItemId="56013" CollectCount="5" />
 -->
 </If>
 <If Condition="HasQuest(25820) &amp;&amp; !IsQuestCompleted(25820)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <CustomBehavior File="CollectThings" QuestId="25820" MobId="41293" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-3638.98" Y="-894.0643" Z="-1.985024" />
@@ -348,7 +348,7 @@
 -->
 </If>
 <If Condition="HasQuest(25820) &amp;&amp; IsQuestCompleted(25820)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="When Life Gives You Crabs" QuestId="25800" TurnInName="Karl Boran" TurnInId="41297" X="-3740.495" Y="-848.1146" Z="0.5935773" />
 <PickUp QuestName="Claws from the Deep" QuestId="25801" GiverName="Karl Boran" GiverId="41297" X="-3740.495" Y="-848.1146" Z="0.5935773" />
@@ -378,9 +378,9 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <If Condition="HasQuest(25801) &amp;&amp; !IsQuestCompleted(25801)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -408,7 +408,7 @@
 <!--
 <Objective QuestName="Claws from the Deep" QuestId="25801" Type="KillMob" MobId="42109" KillCount="12" />
 -->
-  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="Cursed to Roam" QuestId="25816" TurnInName="First Mate Snellig" TurnInId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="(Me.Level &gt;= 23 )">
@@ -417,7 +417,7 @@
 <PickUp QuestName="The Cursed Crew" QuestId="25817" GiverName="First Mate Snellig" GiverId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="HasQuest(25817) &amp;&amp; !IsQuestCompleted(25817)" >
   <RunTo X="-2905.468" Y="-990.678" Z="-12.86095" />
-  <CustomBehavior File="UserSettings" PullDistance="20" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="20" />
   <CustomBehavior File="CollectThings" QuestId="25817" MobId1="41427" MobId2="41428" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="20" NonCompeteDistance="10" >
       <Hotspot X="-2905.468" Y="-990.678" Z="-12.86095" />
       <Hotspot X="-2873.223" Y="-1014.889" Z="-12.90189" />
@@ -461,7 +461,7 @@
 <Objective QuestName="The Cursed Crew" QuestId="25817" Type="KillMob" MobId="41428" KillCount="5" />
 <Objective QuestName="The Cursed Crew" QuestId="25817" Type="KillMob" MobId="41427" KillCount="5" />
 -->
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="The Cursed Crew" QuestId="25817" TurnInName="First Mate Snellig" TurnInId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="(Me.Level &gt;= 23 )">
@@ -469,24 +469,24 @@
 </If>
 <PickUp QuestName="Lifting the Curse" QuestId="25818" GiverName="First Mate Snellig" GiverId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="HasQuest(25818) &amp;&amp; !IsQuestCompleted(25818)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <RunTo X="-2839.905" Y="-1011.63" Z="-1.994456" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="AscendInWater" />
   <CustomBehavior File="MyCTM" X="-2803.851" Y="-995.1381" Z="0.3113917" />
   <CustomBehavior File="WaitTimer" WaitTime="5000" />
   <CustomBehavior File="MyCTM" X="-2797.252" Y="-1008.325" Z="4.737027" />
-  <CustomBehavior File="UserSettings" PullDistance="5" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="5" />
   <CustomBehavior File="CollectThings" QuestId="25818" MobId="41429" MobState="Alive" CollectItemCount="1" CollectItemId="2629" HuntingGroundRadius="200" >
      <Hotspot X="-2802.12" Y="-1011.14" Z="4.332458" />
   </CustomBehavior>
 <!--
 <Objective QuestName="Lifting the Curse" QuestId="25818" Type="CollectItem" ItemId="2629" CollectCount="1" />
 -->
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <If Condition="HasQuest(25818) &amp;&amp; IsQuestCompleted(25818)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="-2797.252" Y="-1008.325" Z="4.737027" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="MyCTM" X="-2803.851" Y="-995.1381" Z="0.3113917" />

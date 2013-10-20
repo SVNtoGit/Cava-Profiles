@@ -161,18 +161,18 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Tauren Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="The First Step" QuestId="14449" GiverName="Chief Hawkwind" GiverId="2981" X="-2909.955" Y="-256.526" Z="59.60468" />
 <TurnIn QuestName="The First Step" QuestId="14449" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <PickUp QuestName="Rite of Strength" QuestId="14452" GiverName="Grull Hawkwind" GiverId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <If Condition="HasQuest(14452) &amp;&amp; !IsQuestCompleted(14452)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="UserSettings" PullDistance="40" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <Objective QuestName="Rite of Strength" QuestId="14452" Type="KillMob" MobId="2952" KillCount="6" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Rite of Strength" QuestId="14452" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <If Condition="!HasQuest(24852) &amp;&amp; !IsQuestCompleted(24852) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
@@ -207,13 +207,13 @@
 <PickUp QuestName="Stop the Thorncallers" QuestId="14455" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <If Condition="(HasQuest(14456) &amp;&amp; !IsQuestCompleted(14456)) || (HasQuest(14455) &amp;&amp; !IsQuestCompleted(14455))">
   <RunTo X="-3285.348" Y="-365.1725" Z="53.30185" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="UserSettings" PullDistance="40" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <Objective QuestName="Rite of Courage" QuestId="14456" Type="CollectItem" ItemId="49535" CollectCount="7" />
   <Objective QuestName="Stop the Thorncallers" QuestId="14455" Type="KillMob" MobId="36697" KillCount="7" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Rite of Courage" QuestId="14456" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <TurnIn QuestName="Stop the Thorncallers" QuestId="14455" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
@@ -264,12 +264,12 @@
   </While>
 </If>
 <If Condition="HasQuest(14459) &amp;&amp; !IsQuestCompleted(14459)">
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="UserSettings" PullDistance="40" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <Objective QuestName="The Battleboars" QuestId="14459" Type="KillMob" MobId="36696" KillCount="10" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="The Battleboars" QuestId="14459" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <TurnIn QuestName="Feed of Evil" QuestId="14461" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
@@ -288,12 +288,12 @@
 <PickUp QuestName="Rite of Honor" QuestId="14460" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <If Condition="HasQuest(14460) &amp;&amp; !IsQuestCompleted(14460)">
   <RunTo X="-3131.524" Y="-113.1387" Z="44.36212" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="UserSettings" PullDistance="40" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <Objective QuestName="Rite of Honor" QuestId="14460" Type="CollectItem" ItemId="50473" CollectCount="1" />
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>
@@ -408,9 +408,9 @@
 <PickUp QuestName="Kyle's Gone Missing!" QuestId="11129" GiverName="Ahab Wheathoof" GiverId="23618" X="-2097.517" Y="-430.5395" Z="-6.711194" />
 <If Condition="(HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)) || (HasQuest(761) &amp;&amp; !IsQuestCompleted(761)) || (HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129) &amp;&amp; !HasItem(33009))" >
   <RunTo X="-2097.517" Y="-430.5395" Z="-6.711194" />
-  <CustomBehavior File="UserSettings" PullDistance="25" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="UserSettings" PullDistance="40" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
 </If>
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4759" CollectCount="4" />
@@ -436,7 +436,7 @@
 <Objective QuestName="Swoop Hunting" QuestId="761" Type="CollectItem" ItemId="4769" CollectCount="8" />
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4758" CollectCount="6" />
 <If Condition="HasQuest(20440) || HasQuest(761) || HasQuest(11129)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
 </If>
 <TurnIn QuestName="Poison Water" QuestId="20440" TurnInName="Mull Thunderhorn" TurnInId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
 <TurnIn QuestName="Swoop Hunting" QuestId="761" TurnInName="Harken Windtotem" TurnInId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />

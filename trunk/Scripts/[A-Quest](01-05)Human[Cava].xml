@@ -490,10 +490,10 @@ Also be sure to:\n
   <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
   Text="This profile have some quests particularly writen for race Human. That quests will be ignored."/>
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
-<CustomBehavior File="UserSettings" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="True" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <!--# # # Level 1 # # # -->
 <CustomBehavior File="Message" Text="Compiling Northshire Map Zone" LogColor="Aquamarine" />
@@ -840,7 +840,7 @@ Also be sure to:\n
 <PickUp QuestName="Extinguishing Hope" QuestId="26391" GiverName="Milly Osworth" GiverId="9296" X="-8923.88" Y="-135.8889" Z="81.02888" />
 <If Condition="HasQuest(26391) &amp;&amp; !IsQuestCompleted(26391)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="True" />
   <While Condition="!IsQuestCompleted(26391)" >
 	<CustomBehavior File="UseItemOn" QuestId="26391" MobId="42940" WaitForNpcs="False" ItemId="58362" WaitTime="5000" Range="14" CollectionDistance="1000" X="-9018.247" Y="-333.0823" Z="74.41655" />
 	<CustomBehavior File="UseItemOn" QuestId="26391" MobId="42940" WaitForNpcs="False" ItemId="58362" WaitTime="5000" Range="14" CollectionDistance="1000" X="-9055.313" Y="-316.4948" Z="73.45457" />
@@ -849,23 +849,23 @@ Also be sure to:\n
   </While>
 </If>
 <If Condition="HasQuest(26391) &amp;&amp; IsQuestCompleted(26391)" >
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Blackrock Invasion" QuestId="26389" Type="CollectItem" ItemId="58361" CollectCount="8" />
 <If Condition="HasQuest(26389) &amp;&amp; IsQuestCompleted(26389)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Extinguishing Hope" QuestId="26391" TurnInName="Milly Osworth" TurnInId="9296" X="-8923.88" Y="-135.8889" Z="81.02888" />
 <TurnIn QuestName="Blackrock Invasion" QuestId="26389" TurnInName="Marshal McBride" TurnInId="197" X="-8913.069" Y="-137.4063" Z="80.8181" />
 <PickUp QuestName="Ending the Invasion!" QuestId="26390" GiverName="Marshal McBride" GiverId="197" X="-8913.069" Y="-137.4063" Z="80.8181" />
 <If Condition="HasQuest(26390) &amp;&amp; !IsQuestCompleted(26390)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="Ending the Invasion!" QuestId="26390" Type="KillMob" MobId="42938" KillCount="1" />

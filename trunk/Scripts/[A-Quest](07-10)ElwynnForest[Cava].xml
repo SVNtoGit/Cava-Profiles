@@ -109,10 +109,10 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
-<CustomBehavior File="UserSettings" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="True" PullDistance="25" />
 <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="UserSettings" PullDistance="35" />
+	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
 </If>
 <!--# # # Level 7.2 # # # -->
 <CustomBehavior File="Message" Text="Compiling Elwynn Forest Map Zone" LogColor="Aquamarine" />
@@ -126,11 +126,11 @@
 <PickUp QuestName="Fine Linen Goods" QuestId="83" GiverName="Sara Timberlain" GiverId="278" X="-9530.045" Y="-1222.585" Z="47.28971" />
 
 <If Condition="HasQuest(26152) &amp;&amp; !IsQuestCompleted(26152)">
-	<CustomBehavior File="UserSettings" LootMobs="True" />
+	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
 <Objective QuestName="Wanted: James Clark" QuestId="26152" Type="CollectItem" ItemId="57122" CollectCount="1" />
 <If Condition="(HasItem(1307))" >
-	<CustomBehavior File="UserSettings" LootMobs="Original" />
+	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 	<PickUp QuestName="The Collector" QuestId="123" GiverType="Item" GiverId="1307" />
 </If>
 <PickUp QuestName="A Bundle of Trouble" QuestId="5545" GiverName="Supervisor Raelen" GiverId="10616" X="-9469.795" Y="-1289.215" Z="41.34282" />
@@ -148,12 +148,12 @@
 <Objective QuestName="Fine Linen Goods" QuestId="83" Type="CollectItem" ItemId="1019" CollectCount="6" />
 <!--# # # Level 9 # # # -->
 <If Condition="HasQuest(45)">
-	<CustomBehavior File="UserSettings" LootMobs="True" />
+	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
 <TurnIn QuestName="Discover Rolf's Fate" QuestId="45" TurnInType="GameObject" TurnInId="56" X="-9224.173" Y="-1234.316" Z="73.73194" />
 <PickUp QuestName="Report to Thomas" QuestId="71" GiverType="GameObject" GiverId="56" X="-9224.173" Y="-1234.316" Z="73.73194" />
 <If Condition="HasQuest(71)">
-	<CustomBehavior File="UserSettings" LootMobs="Original" />
+	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
 <Objective QuestName="Bounty on Murlocs" QuestId="46" Type="CollectItem" ItemId="780" CollectCount="8" />
 <TurnIn QuestName="Fine Linen Goods" QuestId="83" TurnInName="Sara Timberlain" TurnInId="278" X="-9530.045" Y="-1222.585" Z="47.28971" />

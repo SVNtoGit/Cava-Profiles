@@ -276,40 +276,40 @@
   Please move your char to: BADLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="UserSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <CustomBehavior File="UserSettings" MountName="23240" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <CustomBehavior File="UserSettings" MountName="23223" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23223" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <CustomBehavior File="UserSettings" MountName="23228" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23228" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <CustomBehavior File="UserSettings" MountName="23221" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23221" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <CustomBehavior File="UserSettings" MountName="103196" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="103196" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <CustomBehavior File="UserSettings" MountName="35713" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="35713" />
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <CustomBehavior File="UserSettings" MountName="127302" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="127302" />
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <CustomBehavior File="UserSettings" MountName="73630" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="73630" />
   <Else>
-    <CustomBehavior File="UserSettings" MountName="23214" />
+    <CustomBehavior File="Cava\CavaSettings" MountName="23214" />
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <CustomBehavior File="UserSettings" MountName="23161" />
+  <CustomBehavior File="Cava\CavaSettings" MountName="23161" />
 </If>
 <CustomBehavior File="Message" Text="Compiling Badlands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 44.45 # # # -->
@@ -338,14 +338,14 @@
   <CustomBehavior File="SetHearthstone" MobId="48054" X="-6584.51" Y="-3923.13" Z="379.5427" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
+<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
 <PickUp QuestName="Easily Swayed" QuestId="27774" GiverName="Dolph Blastus" GiverId="46652" X="-6639.79" Y="-3900.45" Z="379.2945" />
 <PickUp QuestName="When the Going Gets Tough, Cheat" QuestId="27775" GiverName="Garyanne Fleezlebop" GiverId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
 <Objective QuestName="When the Going Gets Tough, Cheat" QuestId="27775" Type="CollectItem" ItemId="62396" CollectCount="1" />
 <If Condition="HasQuest(27774) &amp;&amp; !IsQuestCompleted(27774)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
@@ -374,7 +374,7 @@
 <!--
 <Objective QuestName="Easily Swayed" QuestId="27774" Type="KillMob" MobId="46695" KillCount="9" />
 -->
-  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="When the Going Gets Tough, Cheat" QuestId="27775" TurnInName="Garyanne Fleezlebop" TurnInId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
 <PickUp QuestName="It's Goat Time, Baby" QuestId="27776" GiverName="Garyanne Fleezlebop" GiverId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
@@ -382,7 +382,7 @@
 <PickUp QuestName="A Strange Request" QuestId="27764" GiverName="Dolph Blastus" GiverId="46652" X="-6639.79" Y="-3900.45" Z="379.2945" />
 <If Condition="HasQuest(27776) &amp;&amp; !IsQuestCompleted(27776)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" UseMount="False" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(27776)" >
     <CustomBehavior File="UseItemOn" QuestId="27776" MobId="46393" ItemId="62397" Range="5" MobState="Alive" CollectionDistance="1000" X="-6657.339" Y="-3915.248" Z="378.2864" />
     <CustomBehavior File="WaitTimer" QuestId="27776" WaitTime="3000" />
@@ -406,26 +406,26 @@
 <!--
 <Objective QuestName="It's Goat Time, Baby" QuestId="27776" Type="KillMob" MobId="46696" KillCount="12" />
 -->
-  <CustomBehavior File="UserSettings" UseMount="True" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="It's Goat Time, Baby" QuestId="27776" TurnInName="Garyanne Fleezlebop" TurnInId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
 <TurnIn QuestName="A Strange Request" QuestId="27764" TurnInName="Rhea" TurnInId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />
 <PickUp QuestName="First Sample: Wild Eggs" QuestId="27765" GiverName="Rhea" GiverId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />
 <PickUp QuestName="Second Sample: Whelps" QuestId="27766" GiverName="Rhea" GiverId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />>
 <If Condition="HasQuest(27766) &amp;&amp; !IsQuestCompleted(27766)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
 <Objective QuestName="First Sample: Wild Eggs" QuestId="27765" Type="CollectItem" ItemId="62388" CollectCount="6" />
 <If Condition="HasQuest(27766) &amp;&amp; !IsQuestCompleted(27766)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
 </If>
 <Objective QuestName="Second Sample: Whelps" QuestId="27766" Type="CollectItem" ItemId="62390" CollectCount="10" />
 <If Condition="HasQuest(27766) &amp;&amp; IsQuestCompleted(27766)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
 </If>
 <TurnIn QuestName="First Sample: Wild Eggs" QuestId="27765" TurnInName="Rhea" TurnInId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />
 <TurnIn QuestName="Second Sample: Whelps" QuestId="27766" TurnInName="Rhea" TurnInId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />
@@ -487,9 +487,9 @@
 <PickUp QuestName="All's Fair in Love, War, and Archaeology" QuestId="27792" GiverName="Lead Prospector Durdin" GiverId="46760" X="-6609.52" Y="-3414.63" Z="279.2872" />
 <If Condition="HasQuest(27792) &amp;&amp; !IsQuestCompleted(27792)" >
   <RunTo X="-6826.403" Y="-3590.957" Z="241.6674" />
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="All's Fair in Love, War, and Archaeology" QuestId="27792" Type="CollectItem" ItemId="62485" CollectCount="1" />
@@ -497,34 +497,34 @@
 <Objective QuestName="All's Fair in Love, War, and Archaeology" QuestId="27792" Type="CollectItem" ItemId="62487" CollectCount="1" />
 <Objective QuestName="All's Fair in Love, War, and Archaeology" QuestId="27792" Type="CollectItem" ItemId="62488" CollectCount="1" />
 <If Condition="HasQuest(27792) &amp;&amp; IsQuestCompleted(27792)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="All's Fair in Love, War, and Archaeology" QuestId="27792" TurnInName="Lead Prospector Durdin" TurnInId="46760" X="-6609.52" Y="-3414.63" Z="279.2872" />
 <PickUp QuestName="The Warden's Pawn" QuestId="27796" GiverName="Lead Prospector Durdin" GiverId="46760" X="-6609.52" Y="-3414.63" Z="279.2872" />
 <PickUp QuestName="The Sentinel's Pawn" QuestId="27797" GiverName="Lead Prospector Durdin" GiverId="46760" X="-6609.52" Y="-3414.63" Z="279.2872" />
 <If Condition="HasQuest(27823) &amp;&amp; !IsQuestCompleted(27823)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="A Dwarf's Got Needs" QuestId="27823" Type="CollectItem" ItemId="62510" CollectCount="15" />
 <If Condition="HasQuest(27823) &amp;&amp; IsQuestCompleted(27823)" >
-  <CustomBehavior File="UserSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="A Dwarf's Got Needs" QuestId="27823" TurnInName="Sigrun Ironhew" TurnInId="2860" X="-6610.99" Y="-3421.93" Z="279.2777" />
 <!--<PickUp QuestName="The Good Stuff" QuestId="27824" GiverName="Sigrun Ironhew" GiverId="2860" X="-6610.99" Y="-3421.93" Z="279.2777" />
 <If Condition="HasQuest(27824) &amp;&amp; !IsQuestCompleted(27824)" >
   <RunTo X="-6482.797" Y="-3203.607" Z="260.7603" />
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 </If>
 <Objective QuestName="The Good Stuff" QuestId="27824" Type="CollectItem" ItemId="62509" CollectCount="1" />
 <If Condition="HasQuest(27824) &amp;&amp; IsQuestCompleted(27824)" >
   <RunTo X="-6482.797" Y="-3203.607" Z="260.7603" />
-  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="The Good Stuff" QuestId="27824" TurnInName="Sigrun Ironhew" TurnInId="2860" X="-6610.99" Y="-3421.93" Z="279.2777" />-->
 <TurnIn QuestName="The Sentinel's Pawn" QuestId="27797" TurnInId="206336" TurnInType="GameObject" X="-6895.394" Y="-3377.514" Z="202.2827" />
@@ -670,7 +670,7 @@
 <PickUp QuestName="Baelog, the Glass Cannon" QuestId="27834" GiverName="Baelog" GiverId="46856" X="-6993.829" Y="-2534.15" Z="241.7142" />
 <PickUp QuestName="Olaf, the Big Fella'" QuestId="27835" GiverName="Olaf" GiverId="46857" X="-6994.573" Y="-2531.244" Z="241.7137" />
 <If Condition="!HasQuest(27825) &amp;&amp; !IsQuestCompleted(27825)">
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
@@ -680,7 +680,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="SetHearthstone" MobId="48093" X="-7006.62" Y="-2537.2" Z="241.7148" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
+  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
 </If>
 <PickUp QuestName="Survival of the Fattest" QuestId="27825" GiverName="Victoria Dolen" GiverId="46930" X="-6994.01" Y="-2542.61" Z="241.7141" />
 <PickUp QuestName="To the Aid of the Thorium Brotherhood" QuestId="28512" GiverName="Victoria Dolen" GiverId="46930" X="-6994.01" Y="-2542.61" Z="241.7141" />
@@ -729,9 +729,9 @@
 </If>
 <If Condition="HasQuest(27829) &amp;&amp; !IsQuestCompleted(27829)">
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" PullDistance="25" UseMount="False" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" UseMount="False" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <While Condition="!IsObjectiveComplete(1, 27829)">
     <CustomBehavior File="UsePetAbility" AttackButton="2" />
@@ -744,7 +744,7 @@
 <Objective QuestName="The Wrath of a Dragonflight" QuestId="27829" Type="KillMob" MobId="46859" KillCount="1" />
 -->
   </While>
-  <CustomBehavior File="UserSettings" PullDistance="1" UseMount="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" UseMount="True" />
 </If>
 <Objective QuestName="The Wrath of a Dragonflight" QuestId="27829" Type="KillMob" MobId="46915" KillCount="4" />
 <If Condition="HasQuest(27829) &amp;&amp; IsQuestCompleted(27829)" >
@@ -767,9 +767,9 @@
 </If>
 <If Condition="HasQuest(27833) &amp;&amp; !IsQuestCompleted(27833)" >
   <RunTo X="-7183.751" Y="-2513.527" Z="250.4368" />
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
 <!--  <CustomBehavior File="CollectThings" QuestId="27833" MobId1="2717" MobId2="2718" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-7087.649" Y="-2400.999" Z="241.7056" />
@@ -784,16 +784,16 @@
     <Hotspot X="-7122.88" Y="-2398.652" Z="241.6668" />
   </CustomBehavior>-->
   <Objective QuestName="Half-Ton Holdouts" QuestId="27833" Type="KillMob" MobId="2717" KillCount="12" />
-  <CustomBehavior File="UserSettings" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="False" />
 </If>
 <If Condition="HasQuest(27825) &amp;&amp; !IsQuestCompleted(27825)" >
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <Objective QuestName="Survival of the Fattest" QuestId="27825" Type="CollectItem" ItemId="62544" CollectCount="6" />
   <Objective QuestName="Survival of the Fattest" QuestId="27825" Type="CollectItem" ItemId="62547" CollectCount="10" />
-  <CustomBehavior File="UserSettings" PullDistance="1" KillBetweenHotspots="False"/>
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False"/>
 </If>
 <If Condition="HasQuest(27825)" >
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
@@ -802,9 +802,9 @@
 <TurnIn QuestName="Survival of the Fattest" QuestId="27825" TurnInName="Victoria Dolen" TurnInId="46930" X="-6994.01" Y="-2542.61" Z="241.7141" />
 <TurnIn QuestName="Half-Ton Holdouts" QuestId="27833" TurnInName="Terrance Storm" TurnInId="46972" X="-7027.43" Y="-2540.72" Z="251.7948" />
 <!--<If Condition="(Me.LevelFraction &lt; 46.95 )">
-  <CustomBehavior File="UserSettings" PullDistance="25" KillBetweenHotspots="True" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="UserSettings" PullDistance="35" />
+	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
   </If>
   <SetGrindArea>
   <GrindArea>
