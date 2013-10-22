@@ -2763,7 +2763,29 @@
   <CustomBehavior File="FlyTo" X="-1407.195" Y="7262.97" Z="25.94024" />
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="Vile Idolatry" QuestId="9863" TurnInName="Farseer Kurkush" TurnInId="18066" X="-1409.899" Y="7269.186" Z="25.43684" />
-  <TurnIn QuestName="He Will Walk The Earth..." QuestId="9866" TurnInName="Farseer Corhuk" TurnInId="18067" X="-1426.77" Y="7268.057" Z="25.44008" />
+<!--  <TurnIn QuestName="He Will Walk The Earth..." QuestId="9866" TurnInName="Farseer Corhuk" TurnInId="18067" X="-1426.77" Y="7268.057" Z="25.44008" />-->
+  <If Condition="HasQuest(9866)">
+    <CustomBehavior File="FlyTo" X="-1423.93" Y="7267.801" Z="25.48671" />
+    <While Condition="HasQuest(9866)" >
+      <While Condition="HasQuestAvailable(18067, &quot;TurnIn&quot;)" >
+        <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="18067" KeepTargetSelected="True" WaitForNpcs="False"/>
+        <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
+        <If Condition="(Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Warrior)">
+          <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(3)" />
+        <ElseIf Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Shaman)">
+          <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(3)" />
+          </ElseIf>
+        <ElseIf Condition="(Me.Class == WoWClass.Druid) || (Me.Class == WoWClass.Monk) || (Me.Class == WoWClass.Rogue)">
+          <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(2)" />
+          </ElseIf>
+        <Else>
+          <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" />
+          </Else>
+        </If>
+        <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+      </While>
+    </While>
+  </If>
   <TurnIn QuestName="Murkblood Leaders..." QuestId="9867" TurnInName="Farseer Margadesh" TurnInId="18068" X="-1430.332" Y="7283.28" Z="25.42222" />
   <CustomBehavior File="Message" Text="Moving to BLADE'S EDGE MOUNTAINS, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="898.6176" Y="5884.327" Z="262.8678" />
