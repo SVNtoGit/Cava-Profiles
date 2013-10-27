@@ -518,7 +518,7 @@
 <Objective QuestName="Guts and Gore" QuestId="26995" Type="CollectItem" ItemId="60742" CollectCount="6" />
 <Objective QuestName="The Gilneas Liberation Front" QuestId="26989" Type="KillMob" MobId="44793" KillCount="10" />
 <If Condition="HasQuest(26992) || HasQuest(26995) || HasQuest(26989)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="Original" />
 </If>
 <TurnIn QuestName="The Gilneas Liberation Front" QuestId="26989" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
 <TurnIn QuestName="Agony Abounds" QuestId="26992" TurnInName="Apothecary Witherbloom" TurnInId="44778" X="1409.33" Y="1065.86" Z="60.47844" />
@@ -565,7 +565,14 @@
 <PickUp QuestName="Steel Thunder" QuestId="27069" GiverName="Admiral Hatchet" GiverId="44916" X="1068.75" Y="1601.3" Z="28.00162" />
 <PickUp QuestName="Give 'em Hell!" QuestId="27073" GiverName="Warlord Torok" GiverId="44917" X="1070.59" Y="1602.1" Z="27.99906" />
 <PickUp QuestName="Playing Dirty" QuestId="27082" GiverName="Apothecary Wormcrud" GiverId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
-<Objective QuestName="Playing Dirty" QuestId="27082" Type="CollectItem" ItemId="60793" CollectCount="8" />
+<If Condition="HasQuest(27082) &amp;&amp; !IsQuestCompleted(27082)">
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
+  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
+    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
+  </If>
+  <Objective QuestName="Playing Dirty" QuestId="27082" Type="CollectItem" ItemId="60793" CollectCount="8" />
+  <CustomBehavior File="Cava\CavaSettings" PullDistance="Original" />
+</If>
 <TurnIn QuestName="Playing Dirty" QuestId="27082" TurnInName="Apothecary Wormcrud" TurnInId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <PickUp QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" GiverName="Apothecary Wormcrud" GiverId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <If Condition="HasQuest(27088) &amp;&amp; !IsQuestCompleted(27088)">
