@@ -640,7 +640,15 @@
 <If Condition="!HasQuest(27094) &amp;&amp; !IsQuestCompleted(27094)">
   <PickUp QuestName="Deeper into Darkness" QuestId="27094" GiverName="Warlord Torok" GiverId="44917" X="1070.59" Y="1602.1" Z="27.99906" />
 </If>
+<If Condition="HasQuest(27094) &amp;&amp; !IsQuestCompleted(27094)">
+  <RunTo X="1421.773" Y="1940.224" Z="9.277027" />
+  <CustomBehavior File="PullThings" QuestId="27094" MobId="44906" MobState="Alive" PullMob="True" CollectUntil="QuestComplete" >
+    <Hotspot X="1420.02" Y="1937" Z="19.40883" />
+  </CustomBehavior>
+<!--
 <Objective QuestName="Deeper into Darkness" QuestId="27094" Type="KillMob" MobId="44906" KillCount="1" />
+-->
+</If>
 <If Condition="HasQuest(27093) || HasQuest(27094)">
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="5386" />
 </If>
