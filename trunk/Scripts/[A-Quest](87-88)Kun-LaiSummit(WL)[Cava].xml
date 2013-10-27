@@ -2418,8 +2418,8 @@ Turn-in quest and start bot"     />
 <Objective QuestName="Finish This!" QuestId="30992" Type="KillMob" MobId="62165" KillCount="1" />
 <TurnIn QuestName="Finish This!" QuestId="30992" TurnInName="Ban Bearheart" TurnInId="61819" X="3052.286" Y="2881.175" Z="445.7144" />
 <PickUp QuestName="Where are My Reinforcements?" QuestId="30993" GiverName="Ban Bearheart" GiverId="61819" X="3052.286" Y="2881.175" Z="445.7144" />
-<If Condition="HasQuest(31695) &amp;&amp; !IsQuestCompleted(31695)" >
-  <CustomBehavior File="AbandonQuest" QuestId="31695" />
+<If Condition="HasQuest(31695)" >
+  <CustomBehavior File="AbandonQuest" QuestId="31695" Type="All" />
 </If>
 <If Condition="!HasQuest(31695) &amp;&amp; !IsQuestCompleted(31695)" >
   <PickUp QuestName="My Husband..." QuestId="30768" GiverName="Suna Silentstrike" GiverId="61454" X="3047.551" Y="2882.465" Z="443.6841" />
