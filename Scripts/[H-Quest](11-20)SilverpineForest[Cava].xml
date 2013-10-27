@@ -638,7 +638,12 @@
   </While>
 </If>
 <If Condition="!HasQuest(27094) &amp;&amp; !IsQuestCompleted(27094)">
+  <While Condition="!HasQuest(27094)">
+    <RunTo X="1449.189" Y="1982.873" Z="11.37801" />
+  </While>
+  <!--
   <PickUp QuestName="Deeper into Darkness" QuestId="27094" GiverName="Warlord Torok" GiverId="44917" X="1070.59" Y="1602.1" Z="27.99906" />
+  -->
 </If>
 <If Condition="HasQuest(27094) &amp;&amp; !IsQuestCompleted(27094)">
   <RunTo X="1421.773" Y="1940.224" Z="9.277027" />
