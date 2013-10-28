@@ -119,7 +119,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -179,10 +179,6 @@
 <PickUp QuestName="Mystery Goo" QuestId="28467" GiverName="Winterfall Cauldron" GiverId="207179" GiverType="GameObject" X="6841.043" Y="-2497.901" Z="560.6016" />
 <Objective QuestName="Winterfall Activity" QuestId="28522" Type="CollectItem" ItemId="21383" CollectCount="10" />
 <If Condition="HasQuest(28460) &amp;&amp; !IsQuestCompleted(28460)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>82</Factions>
@@ -209,10 +205,6 @@
   <GrindTo Condition="IsQuestCompleted(28460)" />
 </If>
 <If Condition="!HasQuest(28656) &amp;&amp; !IsQuestCompleted(28656)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>82</Factions>
@@ -238,9 +230,6 @@
   </SetGrindArea>
   <GrindTo Condition="HasQuest(28656)" />
 </If>
-<If Condition="HasQuest(28460) &amp;&amp; IsQuestCompleted(28460)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Winterfall Activity" QuestId="28522" TurnInName="Salfa" TurnInId="11556" X="6900.443" Y="-2285.773" Z="586.0642" />
 <TurnIn QuestName="Strange Life Forces" QuestId="28656" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" X="6396.568" Y="-2541.832" Z="542.0278" />
 <TurnIn QuestName="Threat of the Winterfall" QuestId="28460" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -252,12 +241,6 @@
 </If>
 <PickUp QuestName="Winterfall Runners" QuestId="28469" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
-<If Condition="(HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)) || (HasQuest(28469) &amp;&amp; !IsQuestCompleted(28469))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-</If>
 <If Condition="HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
   <CustomBehavior File="CollectThings" QuestId="28530" MobId1="48767" MobId2="48768" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
@@ -281,9 +264,6 @@
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
 </If>
 <Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
-<If Condition="HasQuest(28530) || HasQuest(28469)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 52 # # # -->
 <TurnIn QuestName="Winterfall Runners" QuestId="28469" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <TurnIn QuestName="Scalding Signs" QuestId="28530" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />

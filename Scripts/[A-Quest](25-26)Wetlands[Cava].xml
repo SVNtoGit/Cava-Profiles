@@ -139,7 +139,7 @@
   Please move your char to: WETLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -184,16 +184,7 @@
 <!--# # # Level 25 # # # -->
 <PickUp QuestName="Mired in Hatred" QuestId="25926" GiverName="Rethiel the Greenwarden" GiverId="41503" X="-3262.715" Y="-2719.243" Z="9.412232" />
 <PickUp QuestName="The Crazed Dragonmaw" QuestId="26120" GiverName="Huntress Iczelia" GiverId="41612" X="-3245.943" Y="-2720.361" Z="9.412746" />
-<If Condition="HasQuest(25926) &amp;&amp; !IsQuestCompleted(25926)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Mired in Hatred" QuestId="25926" Type="KillMob" MobId="41424" KillCount="10" />
-<If Condition="HasQuest(25926) &amp;&amp; IsQuestCompleted(25926)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Mired in Hatred" QuestId="25926" TurnInName="Rethiel the Greenwarden" TurnInId="41503" X="-3262.715" Y="-2719.243" Z="9.412232" />
 <!--<If Condition="(Me.Level &gt;= 26 )">
   <RunTo X="-1272.874" Y="-2516.608" Z="21.33105" />
@@ -237,27 +228,11 @@
     <CustomBehavior File="WaitTimer" QuestId="25939" WaitTime="4000" />
   </While>
 </If>
-<If Condition="HasQuest(25927) &amp;&amp; !IsQuestCompleted(25927)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="The Threat of Flame" QuestId="25927" Type="KillMob" MobId="41449" KillCount="8" />
-<If Condition="HasQuest(25927) &amp;&amp; IsQuestCompleted(25927)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <If Condition="HasQuest(26120) &amp;&amp; !IsQuestCompleted(26120)" >
   <RunTo X="-3359.434" Y="-2813.425" Z="18.89476" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="The Crazed Dragonmaw" QuestId="26120" Type="KillMob" MobId="42041" KillCount="12" />
-<If Condition="HasQuest(26120) &amp;&amp; IsQuestCompleted(26120)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="The Threat of Flame" QuestId="25927" TurnInName="Rethiel the Greenwarden" TurnInId="41503" X="-3262.715" Y="-2719.243" Z="9.412232" />
 <TurnIn QuestName="For Peat's Sake" QuestId="25939" TurnInName="Ferilon Leafborn" TurnInId="41615" X="-3248.208" Y="-2723.014" Z="9.412594" />
 <PickUp QuestName="Longbraid the Grim" QuestId="26196" GiverName="Ferilon Leafborn" GiverId="41615" X="-3248.208" Y="-2723.014" Z="9.412594" />
@@ -270,16 +245,7 @@
 <PickUp QuestName="Anvilmar the Hero" QuestId="26327" GiverName="Longbraid the Grim" GiverId="1071" X="-2651.195" Y="-2449.163" Z="80.03359" />
 <TurnIn QuestName="Anvilmar the Hero" QuestId="26327" TurnInName="Thargas Anvilmar" TurnInId="42160" X="-2622.276" Y="-2433.997" Z="80.75509" />
 <PickUp QuestName="The Twilight's Hammer Revealed" QuestId="26127" GiverName="Thargas Anvilmar" GiverId="42160" X="-2622.276" Y="-2433.997" Z="80.75509" />
-<If Condition="HasQuest(26127) &amp;&amp; !IsQuestCompleted(26127)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="The Twilight's Hammer Revealed" QuestId="26127" Type="KillMob" MobId="42154" KillCount="12" />
-<If Condition="HasQuest(26127) &amp;&amp; IsQuestCompleted(26127)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="The Twilight's Hammer Revealed" QuestId="26127" TurnInName="Thargas Anvilmar" TurnInId="42160" X="-2622.276" Y="-2433.997" Z="80.75509" />
 <PickUp QuestName="The Battle of Thandol Span" QuestId="26128" GiverName="Thargas Anvilmar" GiverId="42160" X="-2622.276" Y="-2433.997" Z="80.75509" />
 <If Condition="HasQuest(26128) &amp;&amp; !IsQuestCompleted(26128)" >

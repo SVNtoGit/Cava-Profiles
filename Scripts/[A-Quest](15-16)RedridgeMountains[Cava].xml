@@ -96,10 +96,7 @@
   Please move your char to: REDRIDGE MOUNTAINS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" PullDistance="25" LootChests="False" DrinkAmount="0" FoodAmount="0" />
-<If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-</If>
+<CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True"  LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <CustomBehavior File="Message" Text="Compiling Redridge Mountains Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 16.35 # # # -->
 <!--<If Condition="(Me.Level &gt;= 60 )">
@@ -174,7 +171,7 @@
 <Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58891" CollectCount="4" />
 <Objective QuestName="Wanted: Redridge Gnolls" QuestId="26504" Type="KillMob" MobId="423" KillCount="15" />
 <If Condition="HasQuest(26506) &amp;&amp; IsQuestCompleted(26506)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="Franks and Beans" QuestId="26506" TurnInName="Darcy Parker" TurnInId="379" X="-9633.35" Y="-1880.43" Z="61.8198" />
 <!-- LVL 16 -->

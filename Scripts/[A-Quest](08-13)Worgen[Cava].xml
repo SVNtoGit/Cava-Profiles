@@ -173,7 +173,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 <CustomBehavior File="Message" Text="Compiling Guilneas Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 8 # # # -->
 <PickUp QuestName="The King's Observatory" QuestId="14466" GiverName="Queen Mia Greymane" GiverId="36606" X="-1582.83" Y="2554.696" Z="130.2197" />
@@ -190,25 +190,12 @@
 </If>
 <TurnIn QuestName="Exodus" QuestId="24438" TurnInName="Prince Liam Greymane" TurnInId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
 <PickUp QuestName="Stranded at the Marsh" QuestId="24468" GiverName="Prince Liam Greymane" GiverId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
-<If Condition="HasQuest(24468) &amp;&amp; !IsQuestCompleted(24468)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Stranded at the Marsh" QuestId="24468" Type="KillMob" MobId="37078" KillCount="5" X="-2222.056" Y="1809.637" Z="11.81762" />
 <TurnIn QuestName="Stranded at the Marsh" QuestId="24468" TurnInName="Prince Liam Greymane" TurnInId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
 <PickUp QuestName="Introductions Are in Order" QuestId="24472" GiverName="Prince Liam Greymane" GiverId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
-<If Condition="HasQuest(24472) &amp;&amp; !IsQuestCompleted(24472)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Introductions Are in Order" QuestId="24472" Type="KillMob" MobId="36293" KillCount="4" />
 <Objective QuestName="Introductions Are in Order" QuestId="24472" Type="CollectItem" ItemId="49742" CollectCount="1" />
 <If Condition="HasQuest(24472) &amp;&amp; IsQuestCompleted(24472)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="NoCombatMoveTo" X="-2234.768" Y="1809.216" Z="11.90612" />
 </If>
 <TurnIn QuestName="Introductions Are in Order" QuestId="24472" TurnInName="Prince Liam Greymane" TurnInId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
@@ -222,16 +209,7 @@
 <PickUp QuestName="Pest Control" QuestId="24484" GiverName="Gwen Armstead" GiverId="37102" X="-2457.271" Y="1556.42" Z="18.69029" />
 <PickUp QuestName="Pieces of the Past" QuestId="24495" GiverName="Lorna Crowley" GiverId="37815" X="-2460.253" Y="1543.885" Z="18.69174" />
 <Objective QuestName="Pieces of the Past" QuestId="24495" Type="CollectItem" ItemId="49760" CollectCount="6" />
-<If Condition="HasQuest(24484) &amp;&amp; !IsQuestCompleted(24484)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Pest Control" QuestId="24484" Type="KillMob" MobId="36813" KillCount="6" />
-<If Condition="HasQuest(24484) &amp;&amp; IsQuestCompleted(24484)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Pest Control" QuestId="24484" TurnInName="Gwen Armstead" TurnInId="37102" X="-2457.271" Y="1556.42" Z="18.69029" />
 <PickUp QuestName="Queen-Sized Troubles" QuestId="24501" GiverName="Gwen Armstead" GiverId="37102" X="-2457.271" Y="1556.42" Z="18.69029" />
 <TurnIn QuestName="Pieces of the Past" QuestId="24495" TurnInName="Lorna Crowley" TurnInId="37815" X="-2460.253" Y="1543.885" Z="18.69174" />
@@ -249,16 +227,7 @@
 <PickUp QuestName="At Our Doorstep" QuestId="24627" GiverName="Lord Darius Crowley" GiverId="37195" X="-2069.712" Y="1277.899" Z="-85.39392" />
 <PickUp QuestName="Preparations" QuestId="24628" GiverName="Vassandra Stormclaw" GiverId="37873" X="-2064.292" Y="1259.444" Z="-85.71357" />
 <Objective QuestName="Preparations" QuestId="24628" Type="CollectItem" ItemId="50017" CollectCount="6" />
-<If Condition="HasQuest(24627) &amp;&amp; !IsQuestCompleted(24627)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="At Our Doorstep" QuestId="24627" Type="KillMob" MobId="37757" KillCount="6" />
-<If Condition="HasQuest(24627) &amp;&amp; IsQuestCompleted(24627)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Preparations" QuestId="24628" TurnInName="Vassandra Stormclaw" TurnInId="37873" X="-2064.292" Y="1259.444" Z="-85.71357" />
 <TurnIn QuestName="At Our Doorstep" QuestId="24627" TurnInName="Lord Darius Crowley" TurnInId="37195" X="-2069.712" Y="1277.899" Z="-85.39392" />
 <!--# # # Level 10 # # # -->
@@ -500,22 +469,13 @@
 <PickUp QuestName="Liberation Day" QuestId="24575" GiverName="Lorna Crowley" GiverId="37783" X="-1369.111" Y="1209.896" Z="35.55989" />
 <PickUp QuestName="Slaves to No One" QuestId="24674" GiverName="Marcus" GiverId="37803" X="-1371.037" Y="1206.225" Z="35.55794" />
 <PickUp QuestName="Last Meal" QuestId="24675" GiverName="Magda Whitewall" GiverId="38143" X="-1366.37" Y="1216.948" Z="35.52562" />
-<If Condition="HasQuest(24675) &amp;&amp; !IsQuestCompleted(24675)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Last Meal" QuestId="24675" Type="CollectItem" ItemId="50219" CollectCount="10" />
 <If Condition="HasQuest(24674) &amp;&amp; !IsQuestCompleted(24674)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <Objective QuestName="Slaves to No One" QuestId="24674" Type="KillMob" MobId="37802" KillCount="1" />
 <If Condition="HasQuest(24575) &amp;&amp; !IsQuestCompleted(24575)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <While Condition="!IsQuestCompleted(24575)" >
     <If Condition="GetItemCount(49881) &lt; 1" >
       <SetGrindArea>
@@ -537,32 +497,22 @@
 	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24575" MobId="201775" CollectionDistance="1000" ObjectType="GameObject" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <!--# # # Level 11 # # # -->
 <TurnIn QuestName="Slaves to No One" QuestId="24674" TurnInName="Marcus" TurnInId="37803" X="-1371.037" Y="1206.225" Z="35.55794" />
 <TurnIn QuestName="Last Meal" QuestId="24675" TurnInName="Magda Whitewall" TurnInId="38143" X="-1366.37" Y="1216.948" Z="35.52562" />
 <TurnIn QuestName="Liberation Day" QuestId="24575" TurnInName="Lorna Crowley" TurnInId="37783" X="-1369.111" Y="1209.896" Z="35.55989" />
 <PickUp QuestName="Push Them Out" QuestId="24676" GiverName="Lorna Crowley" GiverId="37783" X="-1369.111" Y="1209.896" Z="35.55989" />
-<If Condition="HasQuest(24676) &amp;&amp; !IsQuestCompleted(24676)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Push Them Out" QuestId="24676" Type="KillMob" MobId="37686" KillCount="1" />
 <Objective QuestName="Push Them Out" QuestId="24676" Type="KillMob" MobId="37685" KillCount="1" />
 <Objective QuestName="Push Them Out" QuestId="24676" Type="KillMob" MobId="37692" KillCount="4" />
-<If Condition="HasQuest(24676) &amp;&amp; IsQuestCompleted(24676)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Push Them Out" QuestId="24676" TurnInName="Lorna Crowley" TurnInId="37783" X="-1369.111" Y="1209.896" Z="35.55989" />
 <PickUp QuestName="The Battle for Gilneas City" QuestId="24904" GiverName="Lorna Crowley" GiverId="37783" X="-1369.111" Y="1209.896" Z="35.55997" />
 <If Condition="HasQuest(24904) &amp;&amp; !IsQuestCompleted(24904)">
 <!--
   <RunTo X="-1391.056" Y="1234.301" Z="35.5596" />
   <While Condition="!IsQuestCompleted(24904)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="10" />
 	<CustomBehavior File="Message" QuestId="24904" Text="Waiting for Prince Liam" LogColor="Aquamarine" />
     <If Condition="!IsQuestCompleted(24904)">
       <While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 38218 &amp;&amp; u.Distance &lt;= 50))" >
@@ -572,7 +522,6 @@
 
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
     <CustomBehavior File="Escort" QuestId="24904" MobId1="38218" MobId2="38470" EscortUntil="DestinationReached" EscortDestX="-1727.858" EscortDestY="1392.903" EscortDestZ="21.41557" X="-1392.526" Y="1222.099" Z="35.55768"/>
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="10" />
     <While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 38331 &amp;&amp; u.Distance &lt; 500))" >
     </While>
     <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 38331 &amp;&amp; u.Distance &lt; 500))" >
@@ -606,7 +555,6 @@
   <CustomBehavior File="WaitTimer" QuestId="24904" WaitTime="3000" />
   <While Condition="!IsQuestCompleted(24904)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 	<RunTo QuestId="24904" X="-1409.394" Y="1261.183" Z="36.42795" />
     <CustomBehavior File="Escort" QuestId="24904" MobId1="38218" MobId2="38470" X="-1409.394" Y="1261.183" Z="36.42795" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000" />

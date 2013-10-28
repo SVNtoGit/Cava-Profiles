@@ -571,7 +571,7 @@
   Please move your char to: BLASTED LANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -694,16 +694,7 @@
   </While>
 </If>
 <Objective QuestName="Nethergarde Reigns" QuestId="25712" Type="KillMob" MobId="42231" KillCount="1" />
-<If Condition="HasQuest(25711) &amp;&amp; !IsQuestCompleted(25711)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Eliminate the Okril'lon" QuestId="25711" Type="KillMob" MobId="42359" KillCount="9" />
-<If Condition="HasQuest(25711) &amp;&amp; IsQuestCompleted(25711)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Eliminate the Okril'lon" QuestId="25711" TurnInName="Quartermaster Lungertz" TurnInId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <TurnIn QuestName="Nethergarde Reigns" QuestId="25712" TurnInName="Leyan Steelson" TurnInId="42262" X="-10910.1" Y="-3398.56" Z="81.71423" />
 <TurnIn QuestName="Remove Their Arms" QuestId="25713" TurnInName="Buttonwillow McKittrick" TurnInId="42264" X="-10920.8" Y="-3408.44" Z="81.71606" />
@@ -783,10 +774,6 @@
   </While>
 </If>
 <If Condition="HasQuest(25708) &amp;&amp; !IsQuestCompleted(25708)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>14</Factions>
@@ -813,7 +800,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(25708)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Our Fallen Friends" QuestId="25708" TurnInName="Enohar Thunderbrew" TurnInId="9540" X="-11038.6" Y="-3444.98" Z="65.79079" />
 <TurnIn QuestName="Curtail the Darktail" QuestId="25709" TurnInName="Enohar Thunderbrew" TurnInId="9540" X="-11038.6" Y="-3444.98" Z="65.79079" />
@@ -893,10 +879,7 @@
   </If>
 </If>
 <If Condition="HasQuest(26159) &amp;&amp; !IsQuestCompleted(26159) &amp;&amp; HasQuest(26172) &amp;&amp; !IsQuestCompleted(26172)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <SetGrindArea>
   <GrindArea>
   <Factions>14 38 49</Factions>
@@ -945,22 +928,16 @@
   <GrindTo Condition="IsQuestCompleted(26172) || IsObjectiveComplete(1, 26159) || IsObjectiveComplete(2, 26159)" />
 </If>
 <If Condition="HasQuest(26172) &amp;&amp; !IsQuestCompleted(26172)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <Objective QuestName="A Bloodmage's Gotta Eat Too" QuestId="26172" Type="CollectItem" ItemId="55828" CollectCount="5" />
 <If Condition="HasQuest(26159) &amp;&amp; !IsQuestCompleted(26159)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <Objective QuestName="The First Step" QuestId="26159" Type="CollectItem" ItemId="55826" CollectCount="9" />
 <Objective QuestName="The First Step" QuestId="26159" Type="CollectItem" ItemId="55827" CollectCount="9" />
 <If Condition="HasQuest(26159) &amp;&amp; IsQuestCompleted(26159)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11314.33" Y="-3441.439" Z="7.467997" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="203752" ObjectType="GameObject" X="-11314.1" Y="-3441.44" Z="7.46822" />
@@ -1043,10 +1020,6 @@
 <TurnIn QuestName="Home... Gone... Naga..." QuestId="25702" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <PickUp QuestName="Atrocities" QuestId="25703" GiverName="Neptool" GiverId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="HasQuest(25703) &amp;&amp; !IsQuestCompleted(25703)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>2245</Factions>
@@ -1069,9 +1042,6 @@
 </If>
 <Objective QuestName="Atrocities" QuestId="25703" Type="KillMob" MobId="41386" KillCount="10" />
 <Objective QuestName="Atrocities" QuestId="25703" Type="KillMob" MobId="41387" KillCount="10" />
-<If Condition="HasQuest(25703) &amp;&amp; IsQuestCompleted(25703)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Atrocities" QuestId="25703" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
@@ -1115,20 +1085,11 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25705" MobId="203289" ObjectType="GameObject" CollectionDistance="1000" X="-12028.95" Y="-3392.656" Z="-6.200332" />
   </While>
 </If>
-<If Condition="HasQuest(25706) &amp;&amp; !IsQuestCompleted(25706)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41422" KillCount="8" />
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41423" KillCount="8" />
 <!--# # # Level 59 # # # -->
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41405" KillCount="4" />
 <Objective QuestName="Neptool's Revenge" QuestId="25706" Type="KillMob" MobId="41404" KillCount="4" />
-<If Condition="HasQuest(25706) &amp;&amp; IsQuestCompleted(25706)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="False Idols" QuestId="25705" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <TurnIn QuestName="Neptool's Revenge" QuestId="25706" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="HasQuest(26167) &amp;&amp; IsQuestCompleted(26167)" >
@@ -1177,10 +1138,7 @@
 <PickUp QuestName="The Vile Blood of Demons" QuestId="26165" GiverName="Watcher Grimeo" GiverId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <PickUp QuestName="Protecting Our Rear" QuestId="26173" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99932" />
 <If Condition="HasQuest(26173) &amp;&amp; !IsQuestCompleted(26173)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
 </If>
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
@@ -1200,7 +1158,7 @@
 <Objective QuestName="The Vile Blood of Demons" QuestId="26165" Type="CollectItem" ItemId="55991" CollectCount="7" />
 <Objective QuestName="The Charred Granite of the Dark Portal" QuestId="26164" Type="CollectItem" ItemId="55989" CollectCount="24" />
 <If Condition="HasQuest(26165) &amp;&amp; IsQuestCompleted(26165)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
 </If>
 <TurnIn QuestName="The Charred Granite of the Dark Portal" QuestId="26164" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <TurnIn QuestName="The Vile Blood of Demons" QuestId="26165" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
@@ -1318,19 +1276,10 @@
 </If>
 <TurnIn QuestName="Surwich" QuestId="26175" TurnInName="Mayor Charlton Connisport" TurnInId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <PickUp QuestName="Wormthorn's Dream" QuestId="26184" GiverName="Mayor Charlton Connisport" GiverId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
-<If Condition="HasQuest(26184) &amp;&amp; !IsQuestCompleted(26184)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="45125" KillCount="3" />
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="41470" KillCount="5" />
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="45119" KillCount="5" />
 <Objective QuestName="Wormthorn's Dream" QuestId="26184" Type="KillMob" MobId="41471" KillCount="5" />
-<If Condition="HasQuest(26184) &amp;&amp; IsQuestCompleted(26184)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Wormthorn's Dream" QuestId="26184" TurnInName="Mayor Charlton Connisport" TurnInId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
@@ -1360,10 +1309,7 @@
 <TurnIn QuestName="Advice from the Cenarion Circle" QuestId="26185" TurnInName="Cenarion Observer Shayana" TurnInId="42352" X="-12706.26" Y="-2887.116" Z="1.392433" />
 <PickUp QuestName="Demoniac Vessel" QuestId="26186" GiverName="Cenarion Observer Shayana" GiverId="42352" X="-12706.26" Y="-2887.116" Z="1.392433" />
 <If Condition="HasQuest(26186) &amp;&amp; !IsQuestCompleted(26186)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <Objective QuestName="Demoniac Vessel" QuestId="26186" Type="CollectItem" ItemId="57178" CollectCount="20" />
 <Objective QuestName="Demoniac Vessel" QuestId="26186" Type="CollectItem" ItemId="57177" CollectCount="4" />

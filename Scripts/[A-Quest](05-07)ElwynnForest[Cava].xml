@@ -98,12 +98,8 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
 <CustomBehavior File="Message" Text="Compiling Elwynn Forest Map Zone" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-<If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-</If>
 <!--# # # Level 5.1 # # # -->
 <PickUp QuestName="Rest and Relaxation" QuestId="2158" GiverName="Falkhaan Isenstrider" GiverId="6774" X="-9044.558" Y="-45.98166" Z="88.33724" />
 <If Condition="HasQuest(54)">
@@ -161,7 +157,6 @@
 </If>
 <TurnIn QuestName="Gold Dust Exchange" QuestId="47" TurnInName="Remy &quot;Two Times&quot;" TurnInId="241" X="-9496.319" Y="72.82639" Z="56.41537" />
 <If Condition="HasQuest(26150)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 	<RunTo X="-9698.531" Y="67.5159" Z="56.38669" />
 	<RunTo X="-9869.266" Y="82.77895" Z="31.98281" />
 </If>
@@ -217,18 +212,11 @@
 <TurnIn QuestName="Note to William" QuestId="107" TurnInName="William Pestle" TurnInId="253" X="-9460.302" Y="31.93891" Z="56.96619" />
 <!--<PickUp QuestName="Collecting Kelp" QuestId="112" GiverName="William Pestle" GiverId="253" X="-9460.302" Y="31.93891" Z="56.96619" />
 <If Condition="HasQuest(112)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="10" />
     <RunTo X="-9590.715" Y="-479.283" Z="57.71174" />
 </If>
 <Objective QuestName="Collecting Kelp" QuestId="112" Type="CollectItem" ItemId="1256" CollectCount="4" />
 <TurnIn QuestName="Collecting Kelp" QuestId="112" TurnInName="William Pestle" TurnInId="253" X="-9460.302" Y="31.93891" Z="56.96619" />
 <PickUp QuestName="The Escape" QuestId="114" GiverName="William Pestle" GiverId="253" X="-9460.302" Y="31.93891" Z="56.96619" />
-<If Condition="HasQuest(114)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <TurnIn QuestName="The Escape" QuestId="114" TurnInName="Maybell Maclure" TurnInId="251" X="-10014.04" Y="37.6059" Z="35.1707" />-->
 <If Condition="HasQuest(35)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />

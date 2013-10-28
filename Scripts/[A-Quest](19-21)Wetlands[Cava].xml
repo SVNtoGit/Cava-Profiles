@@ -254,7 +254,7 @@
   Please move your char to: LOCH MODAN\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -308,10 +308,6 @@
 <Objective QuestName="The Stolen Keg" QuestId="25395" Type="CollectItem" ItemId="55209" CollectCount="1" />
 <Objective QuestName="Cleaning Hovel" QuestId="25211" Type="KillMob" MobId="41080" KillCount="5" />
 <If Condition="HasQuest(25211) &amp;&amp; !IsQuestCompleted(25211)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>2273</Factions>
@@ -327,7 +323,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(25211)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Cleaning Hovel" QuestId="25211" TurnInName="Mountaineer Grugelm" TurnInId="41074" X="-4331.828" Y="-2453.523" Z="212.2744" />
 <TurnIn QuestName="The Stolen Keg" QuestId="25395" TurnInName="Mountaineer Rharen" TurnInId="41075" X="-4329.554" Y="-2455.144" Z="212.4169" />
@@ -339,23 +334,12 @@
 <Objective QuestName="Sedimentary, My Dear" QuestId="25722" Type="CollectItem" ItemId="55231" CollectCount="8" />
 <If Condition="HasQuest(25723) &amp;&amp; !IsQuestCompleted(25723)" >
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="Thresh Out of Luck" QuestId="25723" Type="CollectItem" ItemId="55232" CollectCount="8" />
 <If Condition="HasQuest(25721) &amp;&amp; !IsQuestCompleted(25721)" >
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="Fight the Flood" QuestId="25721" Type="KillMob" MobId="41132" KillCount="10" />
-<If Condition="HasQuest(25721) &amp;&amp; IsQuestCompleted(25721)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 20 # # # -->
 <TurnIn QuestName="Thresh Out of Luck" QuestId="25723" TurnInName="Dunlor Marblebeard" TurnInId="41128" X="-4118.5" Y="-2781.31" Z="17.92287" />
 <TurnIn QuestName="Sedimentary, My Dear" QuestId="25722" TurnInName="Surveyor Thurdan" TurnInId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
@@ -396,16 +380,7 @@
 <PickUp QuestName="Fenbush Berries" QuestId="25725" GiverName="Dunlor Marblebeard" GiverId="41128" X="-4118.5" Y="-2781.31" Z="17.92287" />
 <PickUp QuestName="A Dumpy Job" QuestId="25726" GiverName="Surveyor Thurdan" GiverId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <!--<PickUp QuestName="Drungeld Glowerglare" QuestId="25727" GiverName="Forba Slabchisel" GiverId="41086" X="-4125.83" Y="-2767.82" Z="17.93012" />-->
-<If Condition="HasQuest(25726) &amp;&amp; !IsQuestCompleted(25726)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="A Dumpy Job" QuestId="25726" Type="CollectItem" ItemId="55234" CollectCount="1" />
-<If Condition="HasQuest(25726) &amp;&amp; IsQuestCompleted(25726)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="A Dumpy Job" QuestId="25726" TurnInName="Surveyor Thurdan" TurnInId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <PickUp QuestName="Down In Thelgen Rock" QuestId="25734" GiverName="Surveyor Thurdan" GiverId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <!--<Objective QuestName="Drungeld Glowerglare" QuestId="25727" Type="CollectItem" ItemId="55988" CollectCount="1" />-->
@@ -435,17 +410,8 @@
   <PickUp QuestName="The Floodsurge Core" QuestId="25736" GiverName="Floodsurge Core" GiverId="55243" GiverType="Item" />
 </If>
 <Objective QuestName="Incendicite Ore" QuestId="25735" Type="CollectItem" ItemId="55241" CollectCount="8" />
-<If Condition="HasQuest(25733) &amp;&amp; !IsQuestCompleted(25733)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <!--<Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="4040" KillCount="7" />
 <Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="1111" KillCount="7" />-->
-<If Condition="HasQuest(25733) &amp;&amp; IsQuestCompleted(25733)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 21 # # # -->
 <TurnIn QuestName="Down In Thelgen Rock" QuestId="25734" TurnInName="Surveyor Thurdan" TurnInId="41129" X="-4116.55" Y="-2766.2" Z="17.92962" />
 <TurnIn QuestName="Incendicite Ore" QuestId="25735" TurnInName="Dunlor Marblebeard" TurnInId="41128" X="-4118.5" Y="-2781.31" Z="17.92287" />

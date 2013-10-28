@@ -205,7 +205,7 @@
   Please move your char to: THE HINTERLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -286,16 +286,7 @@
     <CustomBehavior File="UseItemOn" QuestId="26546" MobId="2657" ItemId="58935" WaitTime="3000" Range="25" WaitForNpcs="False" MobState="Alive" CollectionDistance="1000" X="158.929" Y="-2120.386" Z="101.2632" />
   </While>
 </If>
-<If Condition="HasQuest(26547) &amp;&amp; !IsQuestCompleted(26547)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="A Mangy Threat" QuestId="26547" Type="KillMob" MobId="2923" KillCount="8" />
-<If Condition="HasQuest(26547) &amp;&amp; IsQuestCompleted(26547)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Razorbeak Friends" QuestId="26546" TurnInName="Gryphon Master Talonaxe" TurnInId="5636" X="331.517" Y="-1956.02" Z="197.1004" />
 <TurnIn QuestName="A Mangy Threat" QuestId="26547" TurnInName="Gryphon Master Talonaxe" TurnInId="5636" X="331.517" Y="-1956.02" Z="197.1004" />
 <PickUp QuestName="Out to the Front" QuestId="26548" GiverName="Gryphon Master Talonaxe" GiverId="5636" X="331.517" Y="-1956.02" Z="197.1004" />
@@ -315,10 +306,7 @@
 <PickUp QuestName="Snapjaws, Lad!" QuestId="26485" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.213" />
 <PickUp QuestName="99 Bottles of Booze on the Beach" QuestId="26486" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.213" />
 <If Condition="HasQuest(26483) &amp;&amp; !IsQuestCompleted(26483)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
   <RunTo X="86.10722" Y="-4346.875" Z="118.37" />
 </If>
 <Objective QuestName="Gan'dranda" QuestId="26483" Type="KillMob" MobId="42609" KillCount="1" />
@@ -332,14 +320,11 @@
     <Hotspot X="116.6908" Y="-4309.9" Z="117.1599" />
     <Hotspot X="97.30265" Y="-4345.406" Z="118.8698" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
 </If>
 <If Condition="HasQuest(26485) &amp;&amp; !IsQuestCompleted(26485)" >
   <RunTo X="-114.1853" Y="-4500.412" Z="27.35226" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="26485" MobId="2505" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-90.13332" Y="-4555.643" Z="8.833472" />
       <Hotspot X="-70.66744" Y="-4591.248" Z="12.65366" />
@@ -380,7 +365,7 @@
 -->
 </If>
 <If Condition="HasQuest(26485) &amp;&amp; IsQuestCompleted(26485)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
 </If>
 <Objective QuestName="99 Bottles of Booze on the Beach" QuestId="26486" Type="CollectItem" ItemId="3900" CollectCount="12" />
 <If Condition="HasQuest(26485)">
@@ -400,32 +385,20 @@
 <PickUp QuestName="Prime Slime" QuestId="26490" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.2127" />
 -->
 <If Condition="HasQuest(26492) &amp;&amp; !IsQuestCompleted(26492)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <RunTo X="488.306" Y="-3847.647" Z="108.9968" />
   <Objective QuestName="Skulk Rock Supplies" QuestId="26492" Type="CollectItem" ItemId="57989" CollectCount="5" />
 </If>
 <!--
 <If Condition="HasQuest(26490) &amp;&amp; !IsQuestCompleted(26490)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="Original" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <Objective QuestName="Prime Slime" QuestId="26490" Type="CollectItem" ItemId="58082" CollectCount="1" />
 -->
 <If Condition="HasQuest(26491) &amp;&amp; !IsQuestCompleted(26491)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="Original" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <Objective QuestName="Skulk Rock Clean-Up" QuestId="26491" Type="KillMob" MobId="2656" KillCount="10" />
-<If Condition="HasQuest(26491) &amp;&amp; IsQuestCompleted(26491)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 31 # # # -->
 <!--
 <TurnIn QuestName="Prime Slime" QuestId="26490" TurnInName="Dron Blastbrew" TurnInId="43109" X="330.431" Y="-4125.25" Z="117.2127" />

@@ -503,7 +503,7 @@
   Please move your char to: WINTERSPRING\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -574,10 +574,6 @@
 <PickUp QuestName="Mystery Goo" QuestId="28467" GiverName="Winterfall Cauldron" GiverId="207179" GiverType="GameObject" X="6841.043" Y="-2497.901" Z="560.6016" />
 <Objective QuestName="Winterfall Activity" QuestId="28522" Type="CollectItem" ItemId="21383" CollectCount="10" />
 <If Condition="HasQuest(28460) &amp;&amp; !IsQuestCompleted(28460)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>82</Factions>
@@ -607,10 +603,6 @@
 -->
 </If>
 <If Condition="!HasQuest(28656) &amp;&amp; !IsQuestCompleted(28656)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>82</Factions>
@@ -636,9 +628,6 @@
   </SetGrindArea>
   <GrindTo Condition="HasQuest(28656)" />
 </If>
-<If Condition="HasQuest(28460) &amp;&amp; IsQuestCompleted(28460)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Winterfall Activity" QuestId="28522" TurnInName="Salfa" TurnInId="11556" X="6900.443" Y="-2285.773" Z="586.0642" />
 <TurnIn QuestName="Threat of the Winterfall" QuestId="28460" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <TurnIn QuestName="Mystery Goo" QuestId="28467" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -656,10 +645,7 @@
 <PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <TurnIn QuestName="Strange Life Forces" QuestId="28656" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" X="6396.568" Y="-2541.832" Z="542.0278" />
 <If Condition="HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
   <CustomBehavior File="CollectThings" QuestId="28530" MobId1="48767" MobId2="48768" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6693.444" Y="-2970.353" Z="572.6801" />
     <Hotspot X="6699.752" Y="-3010.257" Z="573.3894" />
@@ -678,7 +664,7 @@
     <Hotspot X="6720.028" Y="-2933.25" Z="575.8972" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original"/>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
 </If>
 <Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
 <TurnIn QuestName="Winterfall Runners" QuestId="28469" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -725,10 +711,6 @@
 </If>
 <PickUp QuestName="Pride of the Highborne" QuestId="28513" GiverName="Kaldorei Spirit" GiverId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
 <If Condition="HasQuest(28513) &amp;&amp; !IsQuestCompleted(28513)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>21</Factions>
@@ -750,7 +732,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(28513)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Pride of the Highborne" QuestId="28513" TurnInName="Kaldorei Spirit" TurnInId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
 <PickUp QuestName="Descendants of the Highborne" QuestId="28534" GiverName="Kaldorei Spirit" GiverId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
@@ -762,10 +743,6 @@
 <TurnIn QuestName="Descendants of the High Elves" QuestId="28535" TurnInName="Sin'dorei Spirit" TurnInId="48660" X="6535.741" Y="-4109.193" Z="662.8593" />
 <PickUp QuestName="Pain of the Blood Elves" QuestId="28519" GiverName="Sin'dorei Spirit" GiverId="48660" X="6535.741" Y="-4109.193" Z="662.8593" />
 <If Condition="HasQuest(28519) &amp;&amp; !IsQuestCompleted(28519)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>14</Factions>
@@ -781,7 +758,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(28519)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Pain of the Blood Elves" QuestId="28519" TurnInName="Sin'dorei Spirit" TurnInId="48660" X="6535.741" Y="-4109.193" Z="662.8593" />
 <PickUp QuestName="The Curse of Zin-Malor" QuestId="28536" GiverName="Sin'dorei Spirit" GiverId="48660" X="6535.741" Y="-4109.193" Z="662.8593" />
@@ -843,15 +819,8 @@
 <TurnIn QuestName="Hammer Time" QuestId="28609" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Rubble Trouble" QuestId="28610" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <If Condition="HasQuest(28610) &amp;&amp; !IsQuestCompleted(28610)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="Rubble Trouble" QuestId="28610" Type="CollectItem" ItemId="64586" CollectCount="6" />
-<If Condition="HasQuest(28610) &amp;&amp; IsQuestCompleted(28610)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Rubble Trouble" QuestId="28610" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Boulder Delivery" QuestId="28618" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <TurnIn QuestName="Boulder Delivery" QuestId="28618" TurnInName="Lilith the Lithe" TurnInId="11191" X="6777.164" Y="-4673.712" Z="723.7983" />
@@ -869,10 +838,7 @@
 <TurnIn QuestName="Kilram's Boast" QuestId="28624" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Chop Chop" QuestId="28625" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <If Condition="HasQuest(28625) &amp;&amp; !IsQuestCompleted(28625)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="28625" MobId="48952" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6628.797" Y="-4403.601" Z="707.5793" />
     <Hotspot X="6651.103" Y="-4368.908" Z="705.916" />
@@ -898,7 +864,7 @@
     <Hotspot X="6738.497" Y="-4215.281" Z="702.4594" />
     <Hotspot X="6727.959" Y="-4253.877" Z="708.2627" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <TurnIn QuestName="Chop Chop" QuestId="28625" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Tree Delivery" QuestId="28626" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
@@ -954,16 +920,7 @@
     </CustomBehavior>
   </While>>
 </If>
-<If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Are We There, Yeti?" QuestId="28629" Type="CollectItem" ItemId="12366" CollectCount="10" />
-<If Condition="HasQuest(28629) &amp;&amp; IsQuestCompleted(28629)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 56 # # # -->
 <TurnIn QuestName="Are We There, Yeti?" QuestId="28629" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <TurnIn QuestName="The Perfect Horns" QuestId="28631" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
@@ -1006,17 +963,8 @@
 <Objective QuestName="Spray it One More Time" QuestId="28710" Type="CollectItem" ItemId="64677" CollectCount="1" />
 <TurnIn QuestName="Spray it One More Time" QuestId="28710" TurnInName="Sana Curtainfire" TurnInId="49402" X="7128.712" Y="-3948.535" Z="712.6964" />
 <PickUp QuestName="Where There's Smoke, There's Delicious Meat" QuestId="28718" GiverName="Sana Curtainfire" GiverId="49402" X="7128.712" Y="-3948.535" Z="712.6964" />
-<If Condition="HasQuest(28703) &amp;&amp; !IsQuestCompleted(28703)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Step Into My Barrow" QuestId="28703" Type="KillMob" MobId="49347" KillCount="5" />
 <Objective QuestName="Step Into My Barrow" QuestId="28703" Type="KillMob" MobId="49346" KillCount="10" />
-<If Condition="HasQuest(28703) &amp;&amp; IsQuestCompleted(28703)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Step Into My Barrow" QuestId="28703" TurnInName="Rinno Curtainfire" TurnInId="49407" X="7112.41" Y="-3806.953" Z="734.5289" />
 <TurnIn QuestName="Out of Harm's Way" QuestId="28701" TurnInName="Wynd Nightchaser" TurnInId="11079" X="7111.751" Y="-3985.116" Z="745.6235" />
 <TurnIn QuestName="Where There's Smoke, There's Delicious Meat" QuestId="28718" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
@@ -1036,10 +984,6 @@
 <PickUp QuestName="A Taste for Bear" QuestId="28637" GiverName="Francis Morcott" GiverId="49436" X="7634.253" Y="-4429.314" Z="623.8746" />
 <Objective QuestName="You Gotta Have Eggs" QuestId="28828" Type="CollectItem" ItemId="65890" CollectCount="40" />
 <If Condition="HasQuest(28640) &amp;&amp; !IsQuestCompleted(28640)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>2358</Factions>
@@ -1079,10 +1023,6 @@
   <PickUp QuestName="Pride of the Dinner Table" QuestId="28641" GiverName="Jez Goodgrub" GiverId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 </If>
 <If Condition="HasQuest(28641) &amp;&amp; !IsQuestCompleted(28641)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>16</Factions>
@@ -1126,7 +1066,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(28641)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(28641) &amp;&amp; IsQuestCompleted(28641)" >
    <While Condition="HasQuest(28641)" >
@@ -1138,10 +1077,6 @@
 </If>
 <Objective QuestName="Shy-Rotam" QuestId="28742" Type="KillMob" MobId="10737" KillCount="1" />
 <If Condition="HasQuest(28638) &amp;&amp; !IsQuestCompleted(28638)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <CustomBehavior File="CollectThings" QuestId="28638" MobId="7455" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="7617.011" Y="-4449.026" Z="614.3275" />
     <Hotspot X="7587.928" Y="-4477.701" Z="609.0082" />
@@ -1178,12 +1113,6 @@
     <Hotspot X="7609.807" Y="-4413.945" Z="612.0551" />
   </CustomBehavior>
 </If>
-<If Condition="HasQuest(28637) &amp;&amp; !IsQuestCompleted(28637)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="A Taste for Bear" QuestId="28637" Type="KillMob" MobId="7444" KillCount="15" />
 <If Condition="HasQuest(28637) &amp;&amp; IsQuestCompleted(28637)" >
    <While Condition="HasQuest(28637)" >
@@ -1203,10 +1132,6 @@
   <PickUp QuestName="Screechy Keen" QuestId="28745" GiverName="Jeb Guthrie" GiverId="49537" X="7635.991" Y="-4433.809" Z="623.8761" />
 </If>
 <If Condition="HasQuest(28745) &amp;&amp; !IsQuestCompleted(28745)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <CustomBehavior File="CollectThings" QuestId="28745" MobId="7456" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="7422.612" Y="-4240.63" Z="676.2335" />
     <Hotspot X="7389.833" Y="-4261.515" Z="688.9408" />
@@ -1234,15 +1159,8 @@
   <PickUp QuestName="A Bird of Legend" QuestId="28782" GiverName="Jeb Guthrie" GiverId="49537" X="7635.991" Y="-4433.809" Z="623.8761" />
 </If>
 <Objective QuestName="A Bird of Legend" QuestId="28782" Type="KillMob" MobId="50044" KillCount="1" />
-<If Condition="HasQuest(28719) &amp;&amp; !IsQuestCompleted(28719)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="A Little Gamy" QuestId="28719" Type="KillMob" MobId="7443" KillCount="15" />
 <If Condition="HasQuest(28719) &amp;&amp; IsQuestCompleted(28719)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <While Condition="HasQuest(28719)" >
     <CustomBehavior File="CompleteLogQuest" QuestId="28719" /><!--<PickUp QuestName="Ursius" QuestId="28639" GiverName="" GiverId="" />-->
   </While>
@@ -1318,10 +1236,6 @@
   <PickUp QuestName="Winterwater" QuestId="28840" GiverName="Haleh" GiverId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
 </If>
 <If Condition="HasQuest(28829) &amp;&amp; !IsQuestCompleted(28829)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <SetGrindArea>
   <GrindArea>
   <Factions>16</Factions>
@@ -1339,7 +1253,6 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(28829)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Razor Beak and Antlers Pointy" QuestId="28829" TurnInName="Jadrag the Slicer" TurnInId="50263" X="5732.452" Y="-4796.549" Z="777.6696" />
 <If Condition="(Me.LevelFraction &gt;= 58.15 )">
@@ -1355,29 +1268,10 @@
 <PickUp QuestName="Chips off the Old Block" QuestId="28830" GiverName="Jadrag the Slicer" GiverId="50263" X="5732.452" Y="-4796.549" Z="777.6696" />
 <PickUp QuestName="Damn You, Frostilicus" QuestId="28831" GiverName="Jadrag the Slicer" GiverId="50263" X="5732.452" Y="-4796.549" Z="777.6696" />
 <If Condition="HasQuest(28840) &amp;&amp; !IsQuestCompleted(28840)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="Winterwater" QuestId="28840" Type="CollectItem" ItemId="65903" CollectCount="7" />
-<If Condition="HasQuest(28831) &amp;&amp; !IsQuestCompleted(28831)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Damn You, Frostilicus" QuestId="28831" Type="KillMob" MobId="50251" KillCount="1" />
-<If Condition="HasQuest(28830) &amp;&amp; !IsQuestCompleted(28830)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Chips off the Old Block" QuestId="28830" Type="KillMob" MobId="50258" KillCount="8" />
-<If Condition="HasQuest(28830) &amp;&amp; IsQuestCompleted(28830)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Chips off the Old Block" QuestId="28830" TurnInName="Jadrag the Slicer" TurnInId="50263" X="5732.452" Y="-4796.549" Z="777.6696" />
 <TurnIn QuestName="Damn You, Frostilicus" QuestId="28831" TurnInName="Jadrag the Slicer" TurnInId="50263" X="5732.452" Y="-4796.549" Z="777.6696" />
 <TurnIn QuestName="Winterwater" QuestId="28840" TurnInName="Haleh" TurnInId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />

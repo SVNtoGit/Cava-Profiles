@@ -101,7 +101,7 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -158,14 +158,11 @@
 <PickUp QuestName="Fragments of Language" QuestId="25565" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="The Thunderdrome!" QuestId="26895" GiverName="Flinn" GiverId="38578" X="-9481.25" Y="-2965.49" Z="12.55419" />
 <If Condition="HasQuest(25420) &amp;&amp; !IsQuestCompleted(25420)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <Objective QuestName="Ancient Obstacles" QuestId="25420" Type="KillMob" MobId="38914" KillCount="6" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <Objective QuestName="Fragments of Language" QuestId="25565" Type="CollectItem" ItemId="52061" CollectCount="5" />
 <If Condition="HasQuest(25559) &amp;&amp; !IsQuestCompleted(25559)" >
   <Objective QuestName="Laying Claim" QuestId="25559" Type="KillMob" MobId="38997" KillCount="10" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Ancient Obstacles" QuestId="25420" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <TurnIn QuestName="Laying Claim" QuestId="25559" TurnInName="Prospector Gunstan" TurnInId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
@@ -178,13 +175,11 @@
 <TurnIn QuestName="The Secrets of Uldum" QuestId="25566" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
   <While Condition="!IsQuestCompleted(25070)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <PickUp QuestName="The Grand Tablet" QuestId="25421" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />

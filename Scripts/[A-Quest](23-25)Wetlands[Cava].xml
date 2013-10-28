@@ -243,7 +243,7 @@
   Please move your char to: WETLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -311,21 +311,12 @@
 <PickUp QuestName="Dinosaur Crisis" QuestId="25864" GiverName="Shilah Slabchisel" GiverId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <PickUp QuestName="I'll Call Him Bitey" QuestId="25854" GiverName="Fradd Swiftgear" GiverId="41435" X="-2860.983" Y="-1498.894" Z="11.04876" />
 <If Condition="HasQuest(25856) &amp;&amp; !IsQuestCompleted(25856)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
 </If>
 <Objective QuestName="Crocolisk Hides" QuestId="25856" Type="CollectItem" ItemId="56087" CollectCount="10" />
-<If Condition="HasQuest(25856) &amp;&amp; IsQuestCompleted(25856)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <Objective QuestName="I'll Call Him Bitey" QuestId="25854" Type="CollectItem" ItemId="56058" CollectCount="6" />
 <If Condition="HasQuest(25864) &amp;&amp; !IsQuestCompleted(25864)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
   <SetGrindArea>
   <GrindArea>
   <Factions>48</Factions>
@@ -359,7 +350,7 @@
 <!--
 <Objective QuestName="Dinosaur Crisis" QuestId="25864" Type="KillMob" MobId="41414" KillCount="8" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="I'll Call Him Bitey" QuestId="25854" TurnInName="Fradd Swiftgear" TurnInId="41435" X="-2860.983" Y="-1498.894" Z="11.04876" />
 <PickUp QuestName="Gizmos and Gadgets" QuestId="25855" GiverName="Fradd Swiftgear" GiverId="41435" X="-2860.983" Y="-1498.894" Z="11.04876" />
@@ -374,10 +365,6 @@
 </If>
 <Objective QuestName="Gizmos and Gadgets" QuestId="25855" Type="CollectItem" ItemId="56085" CollectCount="7" />
 <If Condition="HasQuest(25865) &amp;&amp; !IsQuestCompleted(25865)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="25865" MobId1="41390" MobId2="41391" MobState="Alive" CollectItemCount="8" CollectItemId="56088" HuntingGroundRadius="200" >
      <Hotspot X="-2904.511" Y="-1673.745" Z="9.212906" />
@@ -401,7 +388,7 @@
      <Hotspot X="-2922.066" Y="-1741.204" Z="9.8915" />
      <Hotspot X="-2883.184" Y="-1731.483" Z="8.134402" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  />
 <!--
 <Objective QuestName="The Mosshide Job" QuestId="25865" Type="CollectItem" ItemId="56088" CollectCount="8" />
 -->
@@ -412,10 +399,7 @@
 <PickUp QuestName="Dark Iron Trappers" QuestId="25866" GiverName="Shilah Slabchisel" GiverId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <PickUp QuestName="Gnoll Escape" QuestId="25867" GiverName="Shilah Slabchisel" GiverId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <If Condition="HasQuest(25867) &amp;&amp; !IsQuestCompleted(25867)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" KillBetweenHotspots="True" />
   <While Condition="!IsQuestCompleted(25867)" >
     <If Condition="(GetItemCount(56081) &lt; 1)" >
       <SetGrindArea>
@@ -451,18 +435,9 @@
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
-</If>
-<If Condition="HasQuest(25866) &amp;&amp; !IsQuestCompleted(25866)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
 </If>
 <Objective QuestName="Dark Iron Trappers" QuestId="25866" Type="KillMob" MobId="41409" KillCount="10" />
-<If Condition="HasQuest(25866) &amp;&amp; IsQuestCompleted(25866)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Dark Iron Trappers" QuestId="25866" TurnInName="Shilah Slabchisel" TurnInId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <TurnIn QuestName="Gnoll Escape" QuestId="25867" TurnInName="Shilah Slabchisel" TurnInId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <!--# # # Level 24 # # # -->
@@ -470,15 +445,8 @@
 <If Condition="HasQuest(25868) &amp;&amp; !IsQuestCompleted(25868)" >
   <RunTo X="-2781.379" Y="-2052.884" Z="31.09494" />
   <CustomBehavior File="WaitTimer" WaitTime="5000" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="Yorla Darksnare" QuestId="25868" Type="KillMob" MobId="41416" KillCount="1" />
-<If Condition="HasQuest(25868) &amp;&amp; IsQuestCompleted(25868)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Yorla Darksnare" QuestId="25868" TurnInName="Shilah Slabchisel" TurnInId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <PickUp QuestName="Whelgar's Retreat" QuestId="26981" GiverName="Shilah Slabchisel" GiverId="41415" X="-2866.884" Y="-1503.222" Z="10.20147" />
 <TurnIn QuestName="Whelgar's Retreat" QuestId="26981" TurnInName="Prospector Whelgar" TurnInId="41411" X="-3232.656" Y="-1999.408" Z="50.54785" />
@@ -492,32 +460,14 @@
 <If Condition="HasQuest(25853) &amp;&amp; IsQuestCompleted(25853)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
-<If Condition="HasQuest(25849) &amp;&amp; !IsQuestCompleted(25849)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="When Archaeology Attacks" QuestId="25849" Type="CollectItem" ItemId="56083" CollectCount="20" />
-<If Condition="HasQuest(25850) &amp;&amp; !IsQuestCompleted(25850)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Strike the Earth!" QuestId="25850" Type="KillMob" MobId="41389" KillCount="7" />
-<If Condition="HasQuest(25850) &amp;&amp; IsQuestCompleted(25850)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Strike the Earth!" QuestId="25850" TurnInName="Ormer Ironbraid" TurnInId="41412" X="-3236.997" Y="-1986.802" Z="50.54784" />
 <TurnIn QuestName="Tooling Around" QuestId="25853" TurnInName="Merrin Rockweaver" TurnInId="41413" X="-3242.648" Y="-1995.719" Z="50.54835" />
 <TurnIn QuestName="When Archaeology Attacks" QuestId="25849" TurnInName="Prospector Whelgar" TurnInId="41411" X="-3232.656" Y="-1999.408" Z="50.54785" />
 <PickUp QuestName="The Angerfang Menace" QuestId="26189" GiverName="Prospector Whelgar" GiverId="41411" X="-3232.656" Y="-1999.408" Z="50.54785" />
 <If Condition="HasQuest(26189) &amp;&amp; !IsQuestCompleted(26189)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
   <Objective QuestName="The Angerfang Menace" QuestId="26189" Type="KillMob" MobId="46122" KillCount="1" />
   <SetGrindArea>
   <GrindArea>
@@ -548,7 +498,7 @@
 <!--
 <Objective QuestName="The Angerfang Menace" QuestId="26189" Type="KillMob" MobId="42151" KillCount="16" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
 </If>
 <TurnIn QuestName="The Angerfang Menace" QuestId="26189" TurnInName="Prospector Whelgar" TurnInId="41411" X="-3232.656" Y="-1999.408" Z="50.54785" />
 <!--# # # Level 25 # # # -->

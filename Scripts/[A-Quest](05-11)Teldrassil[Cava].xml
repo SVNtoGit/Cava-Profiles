@@ -275,10 +275,6 @@
 	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="2" Text="You must be an Night Elf to run this profile" />
 </If>
 	<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlok)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
 	<CustomBehavior File="Message" Text="Compiling Teldrassil Quests (5-11)" LogColor="Green" />
   <!-- LVL 5.5 -->
 <PickUp QuestName="Dolanaar Delivery" QuestId="2159" GiverName="Porthannius" GiverId="6780" X="10214.34" Y="700.5534" Z="1360.597" />
@@ -363,14 +359,9 @@
   <RunTo X="10007.8" Y="1077.952" Z="1326.506" />
   <RunTo X="10021.87" Y="1052.533" Z="1330.543" />
   <If Condition="((HasQuest(13946)) &amp;&amp; (!IsQuestCompleted(13946)))" >
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
     <While Condition="!IsQuestCompleted(13946)" >
 	    <CustomBehavior File="UseItemTargetLocation" QuestId="13946" MobId1="2002" MobId2="2003" MobId3="2005" ItemId="46716" UseType="PointToObject" Range="30" />
     </While>
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlok)">
-	    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	  </If>
   </If>
 </If>
 <Objective QuestName="Twisted Hatred" QuestId="932" Type="CollectItem" ItemId="5221" CollectCount="1" />
