@@ -460,10 +460,6 @@
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
 	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
 	<CustomBehavior File="Message" Text="Compiling Dread Wastes (89-90)" LogColor="Green" />
   <!-- LVL 89-->
 <If Condition="!HasQuest(31001) &amp;&amp; !IsQuestCompleted(31001)" >
@@ -471,7 +467,6 @@
     <CustomBehavior File="FlyTo" X="609.7953" Y="2126.61" Z="367.7319" />
     <CustomBehavior File="ForcedDismount" />
   <Else>
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
     <RunTo X="1436.687" Y="2799.713" Z="302.011" />
     <RunTo X="1345.231" Y="2436.406" Z="330.6844" />
 	<CustomBehavior File="NoCombatMoveTo" X="1236.801" Y="2441.08" Z="315.4126" />
@@ -535,15 +530,8 @@
 <PickUp QuestName="Wakening Sickness" QuestId="31005" GiverName="Kil'ruk the Wind-Reaver" GiverId="62202" X="501.6337" Y="2382.434" Z="243.0661" />
 <PickUp QuestName="Ancient Vengeance" QuestId="31676" GiverName="Kil'ruk the Wind-Reaver" GiverId="62202" X="501.6337" Y="2382.434" Z="243.0661" />
 <Objective QuestName="Wakening Sickness" QuestId="31005" Type="CollectItem" ItemId="83075" CollectCount="100" />
-<If Condition="HasQuest(31676) &amp;&amp; !IsQuestCompleted(31676)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <Objective QuestName="Ancient Vengeance" QuestId="31676" Type="KillMob" MobId="65452" KillCount="6" />
 <If Condition="HasQuest(31676) &amp;&amp; IsQuestCompleted(31676)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="495.1936" Y="2380.975" Z="243.0666" />
     <CustomBehavior File="ForcedDismount" />
@@ -579,10 +567,7 @@
   <CustomBehavior File="CompleteLogQuest" QuestId="31009" /> <!--<PickUp QuestName="In Her Clutch" QuestId="31010"-->
 </While>
 <If Condition="HasQuest(31008) &amp;&amp; !IsQuestCompleted(31008)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
+	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <If Condition="HasQuest(31010) &amp;&amp; !IsQuestCompleted(31010)" >
   <CustomBehavior File="InteractWith" MobId="214674" ObjectType="GameObject" WaitTime="1000" X="-63.3816" Y="3742.277" Z="155.5577" />
@@ -598,7 +583,6 @@
 <Objective QuestName="The Dread Clutches" QuestId="31007" Type="KillMob" MobId="64559" KillCount="6" />
 <Objective QuestName="Not Fit to Swarm" QuestId="31660" Type="KillMob" MobId="62582" KillCount="30" />
 <If Condition="HasQuest(31660) &amp;&amp; IsQuestCompleted(31660)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="194.0098" Y="3203.92" Z="214.1174" />
     <CustomBehavior File="ForcedDismount" />
@@ -614,7 +598,6 @@
 <PickUp QuestName="Citizens of a New Empire" QuestId="31107" GiverName="Malik the Unscathed" GiverId="62774" X="150.7555" Y="3192.795" Z="214.7607" />
 <PickUp QuestName="The Dreadsworn" QuestId="31689" GiverName="Malik the Unscathed" GiverId="62774" X="150.7555" Y="3192.795" Z="214.7607" />
 <If Condition="HasQuest(31066) &amp;&amp; !IsQuestCompleted(31066)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="664.932" Y="2906.74" Z="229.4419" />
     <CustomBehavior File="ForcedDismount" />
@@ -642,7 +625,6 @@
 </If>
 <Objective QuestName="The Dreadsworn" QuestId="31689" Type="KillMob" MobId="62813" KillCount="6" />
 <If Condition="HasQuest(31689) &amp;&amp; IsQuestCompleted(31689)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="194.0098" Y="3203.92" Z="214.1174" />
     <CustomBehavior File="ForcedDismount" />
@@ -668,7 +650,6 @@
 <TurnIn QuestName="Concentrated Fear" QuestId="31108" TurnInName="Ambersmith Zikk" TurnInId="64599" X="147.875" Y="3194.917" Z="214.7612" />
 <PickUp QuestName="Amber Is Life" QuestId="31019" GiverName="Kil'ruk the Wind-Reaver" GiverId="62538" X="137.092" Y="3192.54" Z="214.7607" />
 <If Condition="HasQuest(31019) &amp;&amp; !IsQuestCompleted(31019)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(1159131) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="664.932" Y="2906.74" Z="229.4419" />
     <CustomBehavior File="ForcedDismount" />
@@ -694,31 +675,13 @@
   <PickUp QuestName="Relics of the Swarm" QuestId="31023" GiverName="Strange Relic" GiverId="82870" GiverType="Item" />
 </If>
 <Objective QuestName="Relics of the Swarm" QuestId="31023" Type="CollectItem" ItemId="82867" CollectCount="8" />
-<If Condition="HasQuest(31019) &amp;&amp; !IsQuestCompleted(31019)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <Objective QuestName="Amber Is Life" QuestId="31019" Type="KillMob" MobId="61970" KillCount="7" />
-<If Condition="HasQuest(31019) &amp;&amp; IsQuestCompleted(31019)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <Objective QuestName="Amber Is Life" QuestId="31019" Type="KillMob" MobId="63179" KillCount="1" />
 <TurnIn QuestName="Amber Is Life" QuestId="31019" TurnInName="Ancient Amber Chunk" TurnInId="65354" X="-916.1424" Y="2559.902" Z="103.8415" />
 <PickUp QuestName="Feeding the Beast" QuestId="31020" GiverName="Klaxxi Warrior" GiverId="62232" X="-920.8466" Y="2553.423" Z="104.0305" />
 <PickUp QuestName="Living Amber" QuestId="31021" GiverName="Klaxxi Warrior" GiverId="62232" X="-920.8466" Y="2553.423" Z="104.0305" />
 <Objective QuestName="Living Amber" QuestId="31021" Type="CollectItem" ItemId="82864" CollectCount="9" />
-<If Condition="HasQuest(31020) &amp;&amp; !IsQuestCompleted(31020)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <Objective QuestName="Feeding the Beast" QuestId="31020" Type="KillMob" MobId="62023" KillCount="8" />
-<If Condition="HasQuest(31020) &amp;&amp; IsQuestCompleted(31020)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <If Condition="HasQuest(31021) &amp;&amp; !IsQuestCompleted(31021)" >
   <While Condition="!IsQuestCompleted(31021)" >
 	  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(82864)" WaitTime="1000" />
@@ -768,15 +731,8 @@
 <PickUp QuestName="Crime and Punishment" QuestId="31088" GiverName="Kor'ik" GiverId="65365" X="-354.5278" Y="3564.455" Z="39.85485" />
 <PickUp QuestName="Better With Age" QuestId="31090" GiverName="Kor'ik" GiverId="65365" X="-354.5278" Y="3564.455" Z="39.85485" />
 <Objective QuestName="Better With Age" QuestId="31090" Type="CollectItem" ItemId="85159" CollectCount="7" />
-<If Condition="HasQuest(31088) &amp;&amp; !IsQuestCompleted(31088)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <Objective QuestName="Crime and Punishment" QuestId="31088" Type="KillMob" MobId="63206" KillCount="8" />
 <If Condition="HasQuest(31088) &amp;&amp; IsQuestCompleted(31088)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="-496.9607" Y="3676.208" Z="73.05301" />
     <CustomBehavior File="ForcedDismount" />
@@ -871,15 +827,10 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <RunTo X="846.631" Y="3266.971" Z="217.8269" />
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
 </If>
 <PickUp QuestName="Sacred Recipe" QuestId="31068" GiverName="Scroll of Auspice" GiverId="212389" GiverType="GameObject" X="969.9634" Y="3296.714" Z="188.6823" />
 <Objective QuestName="The Heavens Hum With War" QuestId="31067" Type="KillMob" MobId="62843" KillCount="1" />
 <If Condition="HasQuest(31067) &amp;&amp; IsQuestCompleted(31067)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <RunTo X="846.631" Y="3266.971" Z="217.8269" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="973.9484" Y="3430.486" Z="256.5308" />
@@ -909,7 +860,6 @@
 </If>
 <TurnIn QuestName="Fate of the Stormstouts" QuestId="31129" TurnInName="Chen Stormstout" TurnInId="62779" X="986.7361" Y="3439.592" Z="257.0704" />
 <If Condition="!HasQuest(31077) &amp;&amp; !IsQuestCompleted(31077)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="683.0889" Y="3247.346" Z="212.5248" />
     <CustomBehavior File="ForcedDismount" />
@@ -917,10 +867,7 @@
 </If>
 <PickUp QuestName="Evie Stormstout" QuestId="31077" GiverName="Chen Stormstout" GiverId="67138" X="685.8542" Y="3243.859" Z="212.6769" />
 <If Condition="HasQuest(31070) &amp;&amp; !IsQuestCompleted(31070)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
+	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
 </If>
 <Objective QuestName="I Bring Us Great Shame" QuestId="31071" Type="CollectItem" ItemId="83781" CollectCount="1" />
 <Objective QuestName="I Bring Us Great Shame" QuestId="31071" Type="CollectItem" ItemId="83783" CollectCount="1" />
@@ -940,7 +887,6 @@
 <Objective QuestName="Daggers of the Great Ones" QuestId="31070" Type="CollectItem" ItemId="84107" CollectCount="3" />
 <Objective QuestName="Bound With Shade" QuestId="31069" Type="KillMob" MobId="62817" KillCount="100" />
 <If Condition="HasQuest(31069) &amp;&amp; IsQuestCompleted(31069)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="-492.895" Y="3674.739" Z="73.10544" />
     <CustomBehavior File="ForcedDismount" />
@@ -954,7 +900,6 @@
 <PickUp QuestName="Bound With Wood" QuestId="31073" GiverName="Sapmaster Vu" GiverId="62666" X="1010.054" Y="3398.856" Z="256.699" />
 <PickUp QuestName="Kor'thik Aggression" QuestId="31133" GiverName="Defender Azzo" GiverId="63218" X="972.6389" Y="3453.524" Z="256.4046" />
 <If Condition="HasQuest(31077) &amp;&amp; !IsQuestCompleted(31077)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="1049.658" Y="3453.97" Z="240.325" />
     <CustomBehavior File="ForcedDismount" />
@@ -965,7 +910,6 @@
 <TurnIn QuestName="Evie Stormstout" QuestId="31077" TurnInName="Chen Stormstout" TurnInId="67138" X="1052.717" Y="3453.72" Z="240.3448" />
 <PickUp QuestName="Han Stormstout" QuestId="31078" GiverName="Chen Stormstout" GiverId="67138" X="1052.717" Y="3453.72" Z="240.3448" />
 <If Condition="HasQuest(31074) &amp;&amp; !IsQuestCompleted(31074)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="852.7769" Y="3741.45" Z="312.9586" />
     <CustomBehavior File="ForcedDismount" />
@@ -984,7 +928,6 @@
   <RunTo X="920.658" Y="3835.153" Z="287.8171" />
 </If>
 <If Condition="HasQuest(31078) &amp;&amp; !IsQuestCompleted(31078)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="816.3584" Y="3608.022" Z="244.1529" />
     <CustomBehavior File="ForcedDismount" />
@@ -1012,16 +955,9 @@
     <CustomBehavior File="InteractWith" QuestId="31073" MobId="62876" Loot="True" WaitForNpcs="False" CollectionDistance="1000" X="816.5698" Y="3654.993" Z="284.742" />
     <CustomBehavior File="InteractWith" QuestId="31073" MobId="62876" Loot="True" WaitForNpcs="False" CollectionDistance="1000" X="754.5103" Y="3680.135" Z="287.0271" />
   </While>
-<If Condition="HasQuest(31133) &amp;&amp; !IsQuestCompleted(31133)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 </If>
 <Objective QuestName="Kor'thik Aggression" QuestId="31133" Type="KillMob" MobId="62756" KillCount="17" />
 <If Condition="HasQuest(31133) &amp;&amp; IsQuestCompleted(31133)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo"  X="-492.895" Y="3674.739" Z="73.10544" />
     <CustomBehavior File="ForcedDismount" />
@@ -1032,7 +968,6 @@
 <TurnIn QuestName="Bound With Wood" QuestId="31073" TurnInName="Sapmaster Vu" TurnInId="62666" X="1010.054" Y="3398.856" Z="256.699" />
 <PickUp QuestName="Sunset Kings" QuestId="31075" GiverName="Sapmaster Vu" GiverId="62666" X="1010.054" Y="3398.856" Z="256.699" />
 <If Condition="HasQuest(31075)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="800.3093" Y="4094.774" Z="211.6939" />
     <CustomBehavior File="ForcedDismount" />
@@ -1091,16 +1026,9 @@
 </If>
 <Objective QuestName="Incantations Fae and Primal" QuestId="31081" Type="KillMob" MobId="62766" KillCount="1" />
 <Objective QuestName="Incantations Fae and Primal" QuestId="31081" Type="KillMob" MobId="62765" KillCount="1" />
-<If Condition="HasQuest(31079) &amp;&amp; !IsQuestCompleted(31079)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
-</If>
 <Objective QuestName="The Horror Comes A-Rising" QuestId="31079" Type="KillMob" MobId="63007" KillCount="2" />
 <Objective QuestName="The Horror Comes A-Rising" QuestId="31079" Type="KillMob" MobId="65404" KillCount="7" />
 <If Condition="HasQuest(31079) &amp;&amp; IsQuestCompleted(31079)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="800.3093" Y="4094.774" Z="211.6939" />
     <CustomBehavior File="ForcedDismount" />
@@ -1122,7 +1050,6 @@
 <PickUp QuestName="Fires and Fears of Old" QuestId="31085" GiverName="Lya of Ten Songs" GiverId="62667" X="805.1528" Y="4089.72" Z="212.0223" />
 <PickUp QuestName="Blood of Ancients" QuestId="31086" GiverName="Sapmaster Vu" GiverId="62666" X="803.5191" Y="4096.126" Z="212.2342" />
 <If Condition="HasQuest(31086) &amp;&amp; !IsQuestCompleted(31086)" >
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >
     <CustomBehavior File="FlyTo" X="327.5637" Y="4520.044" Z="186.974" />
     <CustomBehavior File="ForcedDismount" />
@@ -1143,7 +1070,6 @@
   <RunTo X="268.717" Y="4494.966" Z="189.3072" />
   <RunTo X="214.2932" Y="4395.234" Z="155.0907" />
   <CustomBehavior File="UseItemOn" QuestId="31085" MobId="62773" ItemId="84771" X="207.8194" Y="4391.526" Z="158.7596" />
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="50" />
   <CustomBehavior File="InteractWith" MobId="63103" X="222.7674" Y="4361.93" Z="155.9948" />
   <CustomBehavior File="InteractWith" MobId="63102" X="191.1719" Y="4361.47" Z="156.055" />
   <CustomBehavior File="InteractWith" MobId="63104" X="169.7014" Y="4389.221" Z="156.0045" />
@@ -1315,10 +1241,6 @@
     <CustomBehavior File="InteractWith" QuestId="31187" MobId="213508" ObjectType="GameObject"  WaitForNpcs="False" CollectionDistance="1000" X="-1425.849" Y="3965.591" Z="-44.87836" />
     <CustomBehavior File="InteractWith" QuestId="31187" MobId="213508" ObjectType="GameObject"  WaitForNpcs="False" CollectionDistance="1000" X="-1418.194" Y="4036.503" Z="-44.24463" />
   </While>
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-	</If>
 </If>
 <If Condition="HasQuest(31186) &amp;&amp; !IsQuestCompleted(31186)" >
   <While Condition="IsQuestCompleted(31186)" >
@@ -1370,7 +1292,7 @@
   </If>
   <CustomBehavior File="AscendInWater" />
   <TurnIn QuestName="Dog Food" QuestId="31186" TurnInName="Dog" TurnInId="63955" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" PullDistance="1" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"  />
 </If>
 <If Condition="HasQuest(31188) &amp;&amp; IsQuestCompleted(31188)" >
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >

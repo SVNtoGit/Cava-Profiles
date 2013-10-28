@@ -191,11 +191,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" />
-<CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-<If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-</If>
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
 <!--# # # Level 10.7 # # # -->
 <CustomBehavior File="Message" Text="Compiling Westfall Map Zone" LogColor="Aquamarine" />
 <If Condition="!HasQuest(28562) &amp;&amp; !IsQuestCompleted(28562) &amp;&amp; !HasQuest(26378) &amp;&amp; !IsQuestCompleted(26378)" >
@@ -226,9 +222,6 @@
 <PickUp QuestName="Hot On the Trail: Murlocs" QuestId="26214" GiverName="Lieutenant Horatio Laine" GiverId="42308" X="-9849.855" Y="914.9617" Z="30.26962" />
 <Objective QuestName="Hot On the Trail: The Riverpaw Clan" QuestId="26213" Type="CollectItem" ItemId="57755" CollectCount="1" />
 <Objective QuestName="Hot On the Trail: Murlocs" QuestId="26214" Type="CollectItem" ItemId="57756" CollectCount="1" />
-<If Condition="HasQuest(26214) &amp;&amp; IsQuestCompleted(26214)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Hot On the Trail: The Riverpaw Clan" QuestId="26213" TurnInName="Lieutenant Horatio Laine" TurnInId="42308" X="-9849.855" Y="914.9617" Z="30.26962" />
 <TurnIn QuestName="Hot On the Trail: Murlocs" QuestId="26214" TurnInName="Lieutenant Horatio Laine" TurnInId="42308" X="-9849.855" Y="914.9617" Z="30.26962" />
 <PickUp QuestName="Meet Two-Shoed Lou" QuestId="26215" GiverName="Lieutenant Horatio Laine" GiverId="42308" X="-9849.855" Y="914.9617" Z="30.26962" />
@@ -241,16 +234,9 @@
 <PickUp QuestName="Livin' the Life" QuestId="26228" GiverName="Two-Shoed Lou" GiverId="42405" X="-9852.321" Y="1278.76" Z="40.91533" />
 <PickUp QuestName="&quot;I TAKE Candle!&quot;" QuestId="26229" GiverName="Jimb &quot;Candles&quot; McHannigan" GiverId="42498" X="-9857.424" Y="1281.175" Z="41.00177" />
 <PickUp QuestName="Feast or Famine" QuestId="26230" GiverName="Mama Celeste" GiverId="42497" X="-9846.435" Y="1282.747" Z="41.8873" />
-<If Condition="HasQuest(26230) &amp;&amp; !IsQuestCompleted(26230)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Feast or Famine" QuestId="26230" Type="CollectItem" ItemId="57789" CollectCount="5" />
 <Objective QuestName="Feast or Famine" QuestId="26230" Type="CollectItem" ItemId="57787" CollectCount="6" />
 <If Condition="HasQuest(26228) &amp;&amp; !IsQuestCompleted(26228)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="NoCombatMoveTo" X="-9975.884" Y="1417.928" Z="51.9869" />
   <While Condition="!IsQuestCompleted(26228)" >
     <RunTo QuestId="26228" X="-9851.079" Y="1390.783" Z="38.74532" />
@@ -258,26 +244,16 @@
 	<CustomBehavior File="WaitTimer" QuestId="26228" WaitTime="90000"/>
   </While>
 </If>
-<If Condition="HasQuest(26229) &amp;&amp; !IsQuestCompleted(26229)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="&quot;I TAKE Candle!&quot;" QuestId="26229" Type="KillMob" MobId="1236" KillCount="12" />
-<If Condition="HasQuest(26229) &amp;&amp; IsQuestCompleted(26229)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="&quot;I TAKE Candle!&quot;" QuestId="26229" TurnInName="Jimb &quot;Candles&quot; McHannigan" TurnInId="42498" X="-9857.424" Y="1281.175" Z="41.00177" />
 <TurnIn QuestName="Feast or Famine" QuestId="26230" TurnInName="Mama Celeste" TurnInId="42497" X="-9846.435" Y="1282.747" Z="41.8873" />
 <TurnIn QuestName="Livin' the Life" QuestId="26228" TurnInName="Two-Shoed Lou" TurnInId="42405" X="-9852.321" Y="1278.76" Z="40.91533" />
 <PickUp QuestName="Lou's Parting Thoughts" QuestId="26232" GiverName="Two-Shoed Lou" GiverId="42405" X="-9852.321" Y="1278.76" Z="40.91533" />
 <If Condition="HasQuest(26232) &amp;&amp; !IsQuestCompleted(26232)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <While Condition="!IsQuestCompleted(26232)" >
     <RunTo QuestId="26232" X="-9861.432" Y="1333.309" Z="41.90343" />
 	<CustomBehavior File="WaitTimer" QuestId="26232" WaitTime="40000"/>
-	<CustomBehavior File="Cava\CavaSettings" QuestId="26232" PullDistance="25" />
+	<CustomBehavior File="Cava\CavaSettings" QuestId="26232"  />
 	<RunTo QuestId="26232" X="-9852.887" Y="1275.882" Z="40.95193" />
   </While>
 </If>
@@ -327,7 +303,6 @@
   <CustomBehavior File="MyCTM" X="-10127.87" Y="1054.193" Z="36.24007" />
 </If>
 <!--<If Condition="HasQuest(26257) &amp;&amp; !IsQuestCompleted(26257)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <While Condition="!IsQuestCompleted(26257)">
     <If Condition="!Me.IsOnTransport" >
       <RunTo X="-10186.77" Y="1283.39" Z="36.6497" />
@@ -370,17 +345,10 @@
 	<UseItem QuestId="26271" ItemId="57991" X="-10716.31" Y="1162.651" Z="35.11309" />
   </While>
 </If>
-<If Condition="HasQuest(26286) &amp;&amp; !IsQuestCompleted(26286)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="In Defense of Westfall" QuestId="26286" Type="CollectItem" ItemId="58111" CollectCount="1" />
 <Objective QuestName="The Westfall Brigade" QuestId="26287" Type="KillMob" MobId="42652" KillCount="12" />
 <If Condition="HasQuest(26286) &amp;&amp; IsQuestCompleted(26286)" >
   <CustomBehavior File="NoCombatMoveTo" X="-10508.79" Y="1045.233" Z="60.51798" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 13 # # # -->
 <TurnIn QuestName="In Defense of Westfall" QuestId="26286" TurnInName="Marshal Gryan Stoutmantle" TurnInId="234" X="-10508.79" Y="1045.233" Z="60.51798" />
@@ -388,24 +356,16 @@
 <PickUp QuestName="Jango Spothide" QuestId="26288" GiverName="Captain Danuvin" GiverId="821" X="-10509.97" Y="1040.674" Z="60.51799" />
 <TurnIn QuestName="Feeding the Hungry and the Hopeless" QuestId="26271" TurnInName="Hope Saldean" TurnInId="42575" X="-10499.07" Y="1022.682" Z="60.52688" />
 <PickUp QuestName="Find Agent Kearnen" QuestId="26289" GiverName="Marshal Gryan Stoutmantle" GiverId="234" X="-10508.79" Y="1045.233" Z="60.51798" />
-<If Condition="HasQuest(26288) &amp;&amp; !IsQuestCompleted(26288)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="42653" KillCount="1" />
 <Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="453" KillCount="5" />
 <Objective QuestName="Jango Spothide" QuestId="26288" Type="KillMob" MobId="98" KillCount="5" />
 <If Condition="HasQuest(26289)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="NoCombatMoveTo" X="-11150.43" Y="624.2476" Z="42.54203" />
 </If>
 <TurnIn QuestName="Find Agent Kearnen" QuestId="26289" TurnInName="Agent Kearnen" TurnInId="7024" X="-11042.13" Y="625.1042" Z="36.90501" />
 <PickUp QuestName="Secrets of the Tower" QuestId="26290" GiverName="Agent Kearnen" GiverId="7024" X="-11042.13" Y="625.1042" Z="36.90501" />
 <If Condition="HasQuest(26290) &amp;&amp; !IsQuestCompleted(26290)" >
   <While Condition="HasQuest(26290) &amp;&amp; !IsQuestCompleted(26290)" >
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 	<CustomBehavior File="NoCombatMoveTo" X="-11123.45" Y="575.9608" Z="33.79729" />
 	<CustomBehavior File="WaitTimer" WaitTime="2000"/>
 	<CustomBehavior File="NoCombatMoveTo" X="-11124.63" Y="573.5479" Z="35.05834" />

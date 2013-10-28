@@ -164,7 +164,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Undead Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" LootChests="False" />
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="Fresh out of the Grave" QuestId="24959" GiverName="Agatha" GiverId="49044" X="1700.2" Y="1703.361" Z="137.1976" />
 <TurnIn QuestName="Fresh out of the Grave" QuestId="24959" TurnInName="Undertaker Mordo" TurnInId="1568" X="1689.712" Y="1674.793" Z="135.5913" />
@@ -188,14 +188,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="49230" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1753.845" Y="1640.663" Z="117.5054" />
   </While>
 </If>
-<If Condition="HasQuest(26799) &amp;&amp; !IsQuestCompleted(26799)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="Those That Couldn't Be Saved" QuestId="26799" Type="KillMob" MobId="1501" KillCount="6"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="Those That Couldn't Be Saved" QuestId="26799" Type="KillMob" MobId="1501" KillCount="6"/>
 <TurnIn QuestName="Those That Couldn't Be Saved" QuestId="26799" TurnInId="1568" GiverName="Undertaker Mordo" X="1689.712" Y="1674.793" Z="135.5913" />
 <!--# # # Level 2 # # # -->
 <TurnIn QuestName="The Wakening" QuestId="24960" TurnInId="2307" TurnInName="Caretaker Caice" X="1685.67" Y="1647.569" Z="137.2404" />
@@ -203,14 +196,7 @@
 <TurnIn QuestName="Beyond the Graves" QuestId="25089" TurnInId="1740" TurnInName="Deathguard Saltain" X="1863.524" Y="1602.818" Z="94.52253" />
 <PickUp QuestName="Recruitment" QuestId="26800" GiverId="1740" GiverName="Deathguard Saltain" X="1863.524" Y="1602.818" Z="94.52253" />
 <PickUp QuestName="Scourge on our Perimeter" QuestId="26801" GiverId="1569" GiverName="Shadow Priest Sarvis" X="1843.317" Y="1639.905" Z="97.62814" />
-<If Condition="HasQuest(26801) &amp;&amp; !IsQuestCompleted(26801)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="Scourge on our Perimeter" QuestId="26801" Type="KillMob" MobId="1890" KillCount="8"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="Scourge on our Perimeter" QuestId="26801" Type="KillMob" MobId="1890" KillCount="8"/>
 <If Condition="HasQuest(26800) &amp;&amp; !IsQuestCompleted(26800)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26800" NumOfTimes="1000" MobId="49340" MobState="Dead" WaitTime="2500" Range="6" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
@@ -317,40 +303,19 @@
 <PickUp QuestName="The Executor In the Field" QuestId="28672" GiverId="1661" GiverName="Novice Elreth" X="1847.73" Y="1638.654" Z="96.93375" />
 <TurnIn QuestName="The Executor In the Field" QuestId="28672" TurnInId="1570" TurnInName="Executor Arren" X="1996.085" Y="1543.51" Z="77.99786" />
 <PickUp QuestName="The Damned" QuestId="26802" GiverId="1570" GiverName="Executor Arren" X="1996.085" Y="1543.51" Z="77.99786" />
-<If Condition="HasQuest(26802) &amp;&amp; !IsQuestCompleted(26802)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="The Damned" QuestId="26802" Type="CollectItem" ItemId="3265" CollectCount="4"/>
-  <Objective QuestName="The Damned" QuestId="26802" Type="CollectItem" ItemId="3264" CollectCount="4"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="The Damned" QuestId="26802" Type="CollectItem" ItemId="3265" CollectCount="4"/>
+<Objective QuestName="The Damned" QuestId="26802" Type="CollectItem" ItemId="3264" CollectCount="4"/>
 <TurnIn QuestName="The Damned" QuestId="26802" TurnInId="1570" TurnInName="Executor Arren" X="1996.085" Y="1543.51" Z="77.99786" />
 <PickUp QuestName="Night Web's Hollow" QuestId="24973" GiverName="Executor Arren" GiverId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
-<If Condition="HasQuest(24973) &amp;&amp; !IsQuestCompleted(24973)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1504" KillCount="8"/>
-  <!--# # # Level 4 # # # -->
-  <Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1505" KillCount="5"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1504" KillCount="8"/>
+<!--# # # Level 4 # # # -->
+<Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1505" KillCount="5"/>
 <TurnIn QuestName="Night Web's Hollow" QuestId="24973" TurnInName="Executor Arren" TurnInId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
 <PickUp QuestName="No Better Than the Zombies" QuestId="24970" GiverName="Executor Arren" GiverId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
 <TurnIn QuestName="No Better Than the Zombies" QuestId="24970" TurnInName="Darnell" TurnInId="49425" X="1962.828" Y="1417.599" Z="67.37946" />
 <PickUp QuestName="Assault on the Rotbrain Encampment" QuestId="24971" GiverName="Darnell" GiverId="49425" X="1962.828" Y="1417.599" Z="67.37946" />
-<If Condition="HasQuest(24971) &amp;&amp; !IsQuestCompleted(24971)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49424" KillCount="1"/>
-  <Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49422" KillCount="8"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49424" KillCount="1"/>
+<Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49422" KillCount="8"/>
 <If Condition="HasQuest(24971)">
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />

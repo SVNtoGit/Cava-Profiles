@@ -149,7 +149,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Orc Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="Your Place In The World" QuestId="25152" GiverName="Kaltunk" GiverId="10176" X="-615.4236" Y="-4251.795" Z="38.95591" />
 <TurnIn QuestName="Your Place In The World" QuestId="25152" TurnInName="Gornek" TurnInId="3143" X="-597.7361" Y="-4248.255" Z="38.9561" />
@@ -159,12 +159,7 @@
 </If>
 <PickUp QuestName="Cutting Teeth" QuestId="25126" GiverName="Gornek" GiverId="3143" X="-597.7361" Y="-4248.255" Z="38.9561" />
 <If Condition="HasQuest(25126) &amp;&amp; !IsQuestCompleted(25126)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Cutting Teeth" QuestId="25126" Type="KillMob" MobId="3098" KillCount="6" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Cutting Teeth" QuestId="25126" TurnInName="Gornek" TurnInId="3143" X="-597.7361" Y="-4248.255" Z="38.9561" />
 <!--# # # Level 2 # # # -->
@@ -202,12 +197,7 @@
   <PickUp QuestName="Calligraphed Parchment" QuestId="31156" GiverName="Gornek" GiverId="3143" X="-597.7361" Y="-4248.255" Z="38.9561" />
 </If>
 <If Condition="HasQuest(25172) &amp;&amp; !IsQuestCompleted(25172)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Invaders in Our Home" QuestId="25172" Type="KillMob" MobId="39317" KillCount="7" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Invaders in Our Home" QuestId="25172" TurnInName="Gornek" TurnInId="3143" X="-597.7361" Y="-4248.255" Z="38.9561" />
 <If Condition="!HasQuest(25127) &amp;&amp; !IsQuestCompleted(25127) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
@@ -226,21 +216,11 @@
 <Objective QuestName="Galgar's Cactus Apple Surprise" QuestId="25136" Type="CollectItem" ItemId="11583" CollectCount="6" />
 <!--# # # Level 3 # # # -->
 <If Condition="HasQuest(25127) &amp;&amp; !IsQuestCompleted(25127)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Sting of the Scorpid" QuestId="25127" Type="CollectItem" ItemId="4862" CollectCount="8"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <PickUp QuestName="Sarkoth" QuestId="25129" GiverName="Hana'zua" GiverId="3287" X="-397.761" Y="-4108.986" Z="50.20467" />
 <If Condition="HasQuest(25129) &amp;&amp; !IsQuestCompleted(25129)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Sarkoth" QuestId="25129" Type="CollectItem" ItemId="4905" CollectCount="1"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(25127)" >
   <RunTo X="-585.2797" Y="-4190.137" Z="73.46558" />
@@ -351,12 +331,7 @@
   </While>
 </If>
 <If Condition="HasQuest(25131) &amp;&amp; !IsQuestCompleted(25131)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Vile Familiars" QuestId="25131" Type="KillMob" MobId="3101" KillCount="8"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Hana'zua" QuestId="25128" TurnInName="Hana'zua" TurnInId="3287" X="-397.761" Y="-4108.986" Z="50.20467" />
 <TurnIn QuestName="Sarkoth" QuestId="25129" TurnInName="Hana'zua" TurnInId="3287" X="-397.761" Y="-4108.986" Z="50.20467" />
@@ -389,21 +364,11 @@
 <PickUp QuestName="Burning Blade Medallion" QuestId="25132" GiverName="Zureetha Fargaze" GiverId="3145" X="-570.0608" Y="-4259.88" Z="38.5972" />
 <PickUp QuestName="Thazz'ril's Pick" QuestId="25135" GiverName="Foreman Thazz'ril" GiverId="11378" X="-567.868" Y="-4264.465" Z="38.8359" />
 <If Condition="HasQuest(25132) &amp;&amp; !IsQuestCompleted(25132)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Burning Blade Medallion" QuestId="25132" Type="KillMob" MobId="3102" KillCount="7" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <Objective QuestName="Thazz'ril's Pick" QuestId="25135" Type="CollectItem" ItemId="16332" CollectCount="1" />
 <If Condition="HasQuest(25132) &amp;&amp; !IsQuestCompleted(25132)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Burning Blade Medallion" QuestId="25132" Type="CollectItem" ItemId="4859" CollectCount="1" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <!--# # # Level 5 # # # -->
 <If Condition="HasQuest(25135)">

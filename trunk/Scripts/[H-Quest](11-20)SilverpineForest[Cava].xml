@@ -484,10 +484,7 @@
 <CustomBehavior File="Message" Text="Compiling Silverpine Forest Quests (11-20)" LogColor="Aquamarine" />
 <!--# # # Level 11.3 # # # -->
 <If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290)">
-  <CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" LootChests="False" />
-</If>
-<If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
+  <CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 </If>
 <If Condition="!HasQuest(26965) &amp;&amp; !IsQuestCompleted(26965)">
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -645,6 +642,7 @@
   <PickUp QuestName="Deeper into Darkness" QuestId="27094" GiverName="Warlord Torok" GiverId="44917" X="1070.59" Y="1602.1" Z="27.99906" />
   -->
 </If>
+
 <If Condition="HasQuest(27094) &amp;&amp; !IsQuestCompleted(27094)">
   <RunTo X="1421.773" Y="1940.224" Z="9.277027" />
   <CustomBehavior File="Cava\PullThings" QuestId="27094" MobId="44906" MobState="Alive" PullMob="True" CollectUntil="QuestComplete" >
@@ -977,10 +975,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="25" LootChests="False" DrinkAmount="20" FoodAmount="20"/>
-<If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-</If>
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="20" FoodAmount="20"/>
 <TurnIn QuestName="To Forsaken Forward Command" QuestId="27290" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="In Time, All Will Be Revealed" QuestId="27342" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="Losing Ground" QuestId="27333" GiverName="Forward Commander Onslaught" GiverId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
@@ -1916,14 +1911,9 @@
 </If>
 <!--# # # Level 19 # # # -->
 <If Condition="HasQuest(27518) &amp;&amp; !IsQuestCompleted(27518)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="5" />
   <While Condition="!IsQuestCompleted(27518)">
     <CustomBehavior File="InteractWith" QuestId="27518" NonCompeteDistance="0" MobId="2120" MobState="Alive" WaitTime="3000" X="-135.444" Y="1071.23" Z="66.07559" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
 </If>
 <TurnIn QuestName="A Wolf in Bear's Clothing" QuestId="27510" TurnInName="High Warlord Cromush" TurnInId="45631" X="-213.4528" Y="1266.518" Z="46.57634" />
 <TurnIn QuestName="Transdimensional Warfare: Chapter III" QuestId="27518" TurnInName="Lady Sylvanas Windrunner" TurnInId="45617" X="-153.325" Y="1270.27" Z="51.46418" />

@@ -72,7 +72,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="False" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="False" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -109,10 +109,6 @@
 </If>
 <PickUp QuestName="The Grimtotem are Coming" QuestId="25487" GiverName="Kanati Greycloud" GiverId="39895" X="-4295.639" Y="-923.2587" Z="80.31674" />
 <If Condition="HasQuest(25487) &amp;&amp; !IsQuestCompleted(25487)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
     <SetGrindArea>
     <GrindArea>
     <Factions>2246</Factions>
@@ -131,7 +127,6 @@
     </GrindArea>
 	</SetGrindArea>
 	<GrindTo Condition="IsQuestCompleted(25487)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="The Grimtotem are Coming" QuestId="25487" TurnInName="Motega Firemane" TurnInId="39963" X="-4216.221" Y="-897.434" Z="0.2626123" />
 <PickUp QuestName="Two If By Boat" QuestId="25489" GiverName="Motega Firemane" GiverId="39963" X="-4216.221" Y="-897.434" Z="0.2626123" />
@@ -275,10 +270,7 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526) &amp;&amp; !HasItem(54821)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="25526" MobId="40449" MobState="Alive" CollectItemCount="1" CollectItemId="54821" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
       <Hotspot X="-6181.03" Y="-3954.418" Z="-43.98534" />
       <Hotspot X="-6203.04" Y="-3988.46" Z="-44.54507" />
@@ -290,7 +282,7 @@
       <Hotspot X="-6187.674" Y="-3855.237" Z="-51.36177" />
       <Hotspot X="-6167.805" Y="-3890.108" Z="-48.96612" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(25526)" >
@@ -464,10 +456,7 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(28045) &amp;&amp; !IsQuestCompleted(28045)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="28045" MobId="47388" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-6472.009" Y="-3551.709" Z="-40.092269" />
       <Hotspot X="-6433.826" Y="-3565.657" Z="-40.057682" />
@@ -485,7 +474,6 @@
       <Hotspot X="-6536.336" Y="-3564.768" Z="-40.057683" />
       <Hotspot X="-6496.221" Y="-3569.227" Z="-40.057672" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(28045)" >
@@ -536,12 +524,6 @@
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="Sunken Treasure" QuestId="25610" GiverName="Synge" GiverId="40888" X="-6293.77" Y="-4467.38" Z="87.87717" />
-<If Condition="(HasQuest(25586) &amp;&amp; !IsQuestCompleted(25586)) || (HasQuest(25589) &amp;&amp; !IsQuestCompleted(25589))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-</If>
 <If Condition="HasQuest(25586) &amp;&amp; !IsQuestCompleted(25586)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25586" MobId="40869" IgnoreCombat="True" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
@@ -594,9 +576,6 @@
       <Hotspot X="-6388.899" Y="-4415.72" Z="88.51127" />
     </HuntingGrounds>
   </CustomBehavior>
-</If>
-<If Condition="(HasQuest(25586) &amp;&amp; IsQuestCompleted(25586)) || (HasQuest(25589) &amp;&amp; IsQuestCompleted(25589))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="A Little Payback" QuestId="25589" TurnInName="Rugfizzle" TurnInId="40595" X="-6126.88" Y="-3875.53" Z="6.169012" />
 <TurnIn QuestName="Quiet the Cannons" QuestId="25586" TurnInName="Razzeric" TurnInId="40487" X="-6151.872" Y="-3829.818" Z="26.17706" />

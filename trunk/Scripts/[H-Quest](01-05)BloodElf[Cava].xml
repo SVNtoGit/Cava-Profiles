@@ -207,16 +207,11 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Blood Elf Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="Reclaiming Sunstrider Isle" QuestId="8325" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <If Condition="HasQuest(8325) &amp;&amp; !IsQuestCompleted(8325)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Reclaiming Sunstrider Isle" QuestId="8325" Type="KillMob" MobId="15274" KillCount="6"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Reclaiming Sunstrider Isle" QuestId="8325" TurnInId="15278" TurnInName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <PickUp QuestName="Unfortunate Measures" QuestId="8326" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
@@ -258,26 +253,12 @@
     SpellId1="28730" SpellId2="50613" SpellId3="80483" SpellId4="129597" SpellId5="25046" SpellId6="69179" X="10379.94" Y="-6283.283" Z="25.71898" />
 </If>
 <!--# # # Level 2 # # # -->
-<If Condition="HasQuest(8326) &amp;&amp; !IsQuestCompleted(8326)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="Unfortunate Measures" QuestId="8326" Type="CollectItem" ItemId="20797" CollectCount="8"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="Unfortunate Measures" QuestId="8326" Type="CollectItem" ItemId="20797" CollectCount="8"/>
 <Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20471" CollectCount="1"/>
 <Objective QuestName="The Shrine of Dath'Remar" QuestId="8345" Type="UseObject" ObjectId="180516" UseCount="1"/>
 <Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20470" CollectCount="1"/>
 <Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20472" CollectCount="1"/>
-<If Condition="HasQuest(8336) &amp;&amp; !IsQuestCompleted(8336)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
-  <Objective QuestName="A Fistful of Slivers" QuestId="8336" Type="CollectItem" ItemId="20482" CollectCount="6"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
+<Objective QuestName="A Fistful of Slivers" QuestId="8336" Type="CollectItem" ItemId="20482" CollectCount="6"/>
 <TurnIn QuestName="Unfortunate Measures" QuestId="8326" TurnInId="15278" TurnInName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <!--# # # Level 3 # # # -->
 <PickUp QuestName="Report to Lanthan Perilon" QuestId="8327" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
@@ -393,10 +374,6 @@
 </If>
 <PickUp QuestName="Aggression" QuestId="8334" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <If Condition="!IsObjectiveComplete(1, 8334) &amp;&amp; !IsObjectiveComplete(2, 8334)" >
     <SetGrindArea>
     <GrindArea>
@@ -419,7 +396,6 @@
   </If>
   <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Tender" MobId="15271" KillCount="7"/>
   <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Feral Tender" MobId="15294" KillCount="7"/>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Aggression" QuestId="8334" TurnInName="Lanthan Perilon" TurnInId="15281" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
@@ -439,10 +415,6 @@
 </If>
 <PickUp QuestName="Felendren the Banished" QuestId="8335" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="(HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335))|| (!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; !HasItem(20483))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance))">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <RunTo X="10152.22" Y="-6006.758" Z="110.1539" />
 </If>
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="CollectItem" ItemId="20799" CollectCount="1" X="10130.96" Y="-5994.089" Z="110.1553"/>
@@ -463,7 +435,6 @@
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="KillMob" Name="Tainted Arcane Wraith" MobId="15298" KillCount="2" />
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="KillMob" Name="Arcane Wraith" MobId="15273" KillCount="8" />
 <If Condition="HasQuest(8335) &amp;&amp; IsQuestCompleted(8335)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>

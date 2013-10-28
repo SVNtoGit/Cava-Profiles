@@ -312,7 +312,7 @@
   Please move your char to: AZUREMYST ISLE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 <CustomBehavior File="Message" Text="Compiling Azuremyst Isle Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 5.43 # # # -->
 <PickUp QuestName="Word from Azure Watch" QuestId="9314" GiverName="Aeun" GiverId="16554" X="-4260.659" Y="-13125.38" Z="37.05204" />
@@ -345,10 +345,7 @@
 <TurnIn QuestName="Travel to Azure Watch" QuestId="9313" TurnInName="Technician Dyvuun" TurnInId="16551" X="-4157.076" Y="-12480.39" Z="45.20453" />
 <TurnIn QuestName="Word from Azure Watch" QuestId="9314" TurnInName="Caregiver Chellan" TurnInId="16553" X="-4127.806" Y="-12467.68" Z="44.08618" />
 <If Condition="HasQuest(9454) &amp;&amp; !IsQuestCompleted(9454) &amp;&amp; HasQuest(9463) &amp;&amp; !IsQuestCompleted(9463)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <SetGrindArea>
   <GrindArea>
   <Factions>7</Factions>
@@ -366,7 +363,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(9454) || IsQuestCompleted(9463)" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <Objective QuestName="The Great Moongraze Hunt" QuestId="9454" Type="CollectItem" ItemId="23676" CollectCount="6" />
 <Objective QuestName="Medicinal Purpose" QuestId="9463" Type="CollectItem" ItemId="23685" CollectCount="8" />
@@ -382,16 +379,7 @@
 </If>
 <PickUp QuestName="A Small Start" QuestId="9506" GiverName="Admiral Odesyus" GiverId="17240" X="-4699.569" Y="-12414.81" Z="11.56222" />
 <PickUp QuestName="Cookie's Jumbo Gumbo" QuestId="9512" GiverName="&quot;Cookie&quot; McWeaksauce" GiverId="17246" X="-4708.59" Y="-12400.26" Z="11.88088" />
-<If Condition="HasQuest(9512) &amp;&amp; !IsQuestCompleted(9512)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Cookie's Jumbo Gumbo" QuestId="9512" Type="CollectItem" ItemId="23757" CollectCount="6" />
-<If Condition="HasQuest(9512) &amp;&amp; IsQuestCompleted(9512)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Cookie's Jumbo Gumbo" QuestId="9512" TurnInName="&quot;Cookie&quot; McWeaksauce" TurnInId="17246" X="-4708.59" Y="-12400.26" Z="11.88088" />
 <PickUp QuestName="Reclaiming the Ruins" QuestId="9513" GiverName="Priestess Kyleen Il'dinare" GiverId="17241" X="-4701.663" Y="-12418.53" Z="11.62819" />
 <PickUp QuestName="Precious and Fragile Things Need Special Handling" QuestId="9523" GiverName="Archaeologist Adamant Ironheart" GiverId="17242" X="-4693.811" Y="-12423.14" Z="11.87352" />
@@ -413,10 +401,7 @@
 </If>
 <Objective QuestName="Precious and Fragile Things Need Special Handling" QuestId="9523" Type="CollectItem" ItemId="23779" CollectCount="8" />
 <If Condition="!HasQuest(9514) &amp;&amp; !IsQuestCompleted(9514)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <SetGrindArea>
   <GrindArea>
   <Factions>7</Factions>
@@ -435,18 +420,9 @@
   <PickUp QuestName="Rune Covered Tablet" QuestId="9514" GiverType="Item" GiverId="23759" />
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
-<If Condition="!HasQuest(9513) &amp;&amp; !IsQuestCompleted(9513)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Reclaiming the Ruins" QuestId="9513" Type="KillMob" MobId="17194" KillCount="5" />
 <Objective QuestName="Reclaiming the Ruins" QuestId="9513" Type="KillMob" MobId="17193" KillCount="5" />
 <Objective QuestName="Reclaiming the Ruins" QuestId="9513" Type="KillMob" MobId="17195" KillCount="5" />
-<If Condition="!HasQuest(9513) &amp;&amp; IsQuestCompleted(9513)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <If Condition="HasQuest(9531) &amp;&amp; !IsQuestCompleted(9531)" >
   <RunTo X="-5082.995" Y="-11252.51" Z="0.574077" />
   <UseItem QuestId="9531" ItemId="23792" X="-5082.995" Y="-11252.51" Z="0.574077" />
@@ -477,10 +453,6 @@
 <PickUp QuestName="An Alternative Alternative" QuestId="9473" GiverName="Daedal" GiverId="17215" X="-4191.154" Y="-12470" Z="45.57274" />
 <PickUp QuestName="The Great Moongraze Hunt" QuestId="10324" GiverName="Acteon" GiverId="17110" X="-4203.647" Y="-12526.49" Z="45.44647" />
 <If Condition="!HasQuest(9455) &amp;&amp; !IsQuestCompleted(9455)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <SetGrindArea>
   <GrindArea>
@@ -497,16 +469,7 @@
   <PickUp QuestName="Strange Findings" QuestId="9455" GiverType="Item" GiverId="23678" />
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
-<If Condition="HasQuest(10324) &amp;&amp; !IsQuestCompleted(10324)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="The Great Moongraze Hunt" QuestId="10324" Type="CollectItem" ItemId="23677" CollectCount="6" />
-<If Condition="HasQuest(10324) &amp;&amp; IsQuestCompleted(10324)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <Objective QuestName="An Alternative Alternative" QuestId="9473" Type="CollectItem" ItemId="23692" CollectCount="5" />
 <TurnIn QuestName="The Great Moongraze Hunt" QuestId="10324" TurnInName="Acteon" TurnInId="17110" X="-4203.647" Y="-12526.49" Z="45.44647" />
 <TurnIn QuestName="An Alternative Alternative" QuestId="9473" TurnInName="Daedal" TurnInId="17215" X="-4191.154" Y="-12470" Z="45.57274" />
@@ -663,23 +626,8 @@
 <If Condition="HasQuest(9528) &amp;&amp; !IsQuestCompleted(9528)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
-<If Condition="HasQuest(9528) &amp;&amp; !IsQuestCompleted(9528)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <CustomBehavior File="Escort" QuestId="9528" MobId="17312" X="-4781.365" Y="-11054.62" Z="2.393394" />
-<If Condition="HasQuest(9527) &amp;&amp; !IsQuestCompleted(9527)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="All That Remains" QuestId="9527" Type="CollectItem" ItemId="23789" CollectCount="1" />
-<If Condition="HasQuest(9527) &amp;&amp; IsQuestCompleted(9527)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="All That Remains" QuestId="9527" TurnInName="Cowlen" TurnInId="17311" X="-5357.789" Y="-11175.35" Z="6.403854" />
 <TurnIn QuestName="Escort" QuestId="9528" TurnInName="Cowlen" TurnInId="17311" X="-5357.789" Y="-11175.35" Z="6.403854" />
 <!--# # # Level 10 # # # -->
@@ -870,16 +818,7 @@
 <PickUp QuestName="Beasts of the Apocalypse!" QuestId="9560" GiverName="Moordo" GiverId="17442" X="-3442.679" Y="-12322.2" Z="14.11756" />
 <PickUp QuestName="Murlocs... Why Here? Why Now?" QuestId="9562" GiverName="Gurf" GiverId="17441" X="-3431.17" Y="-12316.51" Z="14.1961" />
 <TurnIn QuestName="Stillpine Hold" QuestId="9559" TurnInName="High Chief Stillpine" TurnInId="17440" X="-3353.364" Y="-12400.46" Z="25.81135" />
-<If Condition="HasQuest(9560) &amp;&amp; !IsQuestCompleted(9560)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Beasts of the Apocalypse!" QuestId="9560" Type="CollectItem" ItemId="23845" CollectCount="8" />
-<If Condition="HasQuest(9560) &amp;&amp; IsQuestCompleted(9560)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <If Condition="HasQuest(9562) &amp;&amp; !IsQuestCompleted(9562)" >
   <RunTo X="-3270.379" Y="-12618.44" Z="38.26158" />
   <RunTo X="-3134.509" Y="-12540.65" Z="38.49178" />
@@ -912,16 +851,7 @@
 </If>
 <TurnIn QuestName="Search Stillpine Hold" QuestId="9565" TurnInName="Blood Crystal" TurnInId="181748" X="-3106.316" Y="-12557.15" Z="-0.9183428" />
 <PickUp QuestName="Blood Crystals" QuestId="9566" GiverName="Blood Crystal" GiverId="181748" X="-3106.316" Y="-12557.15" Z="-0.9183428" />
-<If Condition="HasQuest(9573) &amp;&amp; !IsQuestCompleted(9573)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Chieftain Oomooroo" QuestId="9573" Type="KillMob" MobId="17189" KillCount="9" />
-<If Condition="HasQuest(9573) &amp;&amp; IsQuestCompleted(9573)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Blood Crystals" QuestId="9566" TurnInName="High Chief Stillpine" TurnInId="17440" X="-3353.364" Y="-12400.46" Z="25.81137" />
 <TurnIn QuestName="Chieftain Oomooroo" QuestId="9573" TurnInName="Stillpine the Younger" TurnInId="17445" X="-3368.172" Y="-12409.44" Z="23.97462" />
 <PickUp QuestName="The Kurken is Lurkin'" QuestId="9570" GiverName="Kurz the Revelator" GiverId="17443" X="-3398.186" Y="-12412.12" Z="19.03279" />

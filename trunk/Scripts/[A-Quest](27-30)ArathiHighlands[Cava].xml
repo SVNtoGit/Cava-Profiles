@@ -252,7 +252,7 @@
   Please move your char to: ARATHI HIGHLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="6898" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -312,15 +312,8 @@
  <RunTo X="-1160.923" Y="-3367.629" Z="26.50367" />
  <RunTo X="-1151.259" Y="-3541.16" Z="50.3428" />
  <RunTo X="-1102.816" Y="-3718.263" Z="85.41904" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
 </If>
 <Objective QuestName="The Princess Trapped" QuestId="26039" Type="CollectItem" ItemId="4435" CollectCount="12" />
-<If Condition="HasQuest(26039) &amp;&amp; IsQuestCompleted(26039)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <!--# # # Level 28 # # # -->
 <TurnIn QuestName="The Princess Trapped" QuestId="26039" TurnInName="Iridescent Shards" TurnInId="2701" TurnInType="GameObject" X="-875.635" Y="-3903.071" Z="142.6315" />
 <If Condition="!HasQuest(26041) &amp;&amp; !IsQuestCompleted(26041)">
@@ -334,21 +327,15 @@
 <If Condition="HasQuest(26041) &amp;&amp; !IsQuestCompleted(26041)">
   <If Condition="!IsObjectiveComplete(2, 26041)" >
     <RunTo X="-935.9794" Y="-3317.182" Z="70.46614" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-    </If>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
     <Objective QuestName="Stones of Binding" QuestId="26041" Type="CollectItem" ItemId="4484" CollectCount="1" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
   </If>
   <If Condition="!IsObjectiveComplete(3, 26041)" >
     <RunTo X="-1278.78" Y="-2800.76" Z="49.57743" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-    </If>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
     <Objective QuestName="Stones of Binding" QuestId="26041" Type="CollectItem" ItemId="4485" CollectCount="1" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False"/>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False"/>
   </If>
 </If>
 <TurnIn QuestName="Quae and Kinelory" QuestId="26113" TurnInName="Quae" TurnInId="2712" X="-1425.679" Y="-3033.319" Z="32.80085" />
@@ -370,7 +357,6 @@
 <!--<If Condition="!HasQuest(26117) &amp;&amp; !IsQuestCompleted(26117)">
   <While Condition="!HasQuest(26117)">
     <If Condition="!HasQuest(26116) &amp;&amp; !IsQuestCompleted(26116)">
-      <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
       <RunTo X="-1425.855" Y="-3037.161" Z="32.50045" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2713" X="-1427.404" Y="-3035.176" Z="32.18531" />
       <While Condition="HasQuestAvailable(2713)" >
@@ -383,7 +369,6 @@
       </While>
     </If>
     <If Condition="HasQuest(26116) &amp;&amp; !IsQuestCompleted(26116)">
-      <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
       <CustomBehavior File="Escort" QuestId="26116" MobId="2713" X="-1417.756" Y="-3046.3" Z="36.10403" />
     </If>
     <If Condition="HasQuest(26116) &amp;&amp; IsQuestCompleted(26116)">
@@ -402,15 +387,12 @@
 <If Condition="HasQuest(26035) &amp;&amp; !IsQuestCompleted(26035)">
   <RunTo X="-1405.586" Y="-3156.521" Z="41.91244" />
   <RunTo X="-1564.914" Y="-3258.298" Z="27.54041" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" KillBetweenHotspots="True"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" KillBetweenHotspots="True"/>
 </If>
 <Objective QuestName="Worth Its Weight in Gold" QuestId="26035" Type="CollectItem" ItemId="4522" CollectCount="4" />
 <Objective QuestName="Worth Its Weight in Gold" QuestId="26035" Type="CollectItem" ItemId="4503" CollectCount="10" />
 <If Condition="HasQuest(26035) &amp;&amp; IsQuestCompleted(26035)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" KillBetweenHotspots="False"/>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" KillBetweenHotspots="False"/>
 </If>
 <TurnIn QuestName="Worth Its Weight in Gold" QuestId="26035" TurnInName="Skuerto" TurnInId="2789" X="-1281.153" Y="-2529.644" Z="21.52105" />
 <PickUp QuestName="Wand over Fist" QuestId="26036" GiverName="Skuerto" GiverId="2789" X="-1281.153" Y="-2529.644" Z="21.52105" />
@@ -423,28 +405,19 @@
 <If Condition="HasQuest(26041) &amp;&amp; !IsQuestCompleted(26041)">
   <If Condition="!IsObjectiveComplete(1, 26041)" >
     <RunTo X="-930.1475" Y="-1834.306" Z="56.05046" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-    </If>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
     <Objective QuestName="Stones of Binding" QuestId="26041" Type="CollectItem" ItemId="4483" CollectCount="1" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
   </If>
 </If>
 <If Condition="HasQuest(26041) &amp;&amp; IsQuestCompleted(26041)">
   <RunTo X="-1463.15" Y="-2270.605" Z="53.02412" />
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-    </If>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
 </If>
 <TurnIn QuestName="Stones of Binding" QuestId="26041" TurnInName="Stone of Inner Binding" TurnInId="2702" TurnInType="GameObject" X="-1508.396" Y="-2170.288" Z="17.26832" />
 <PickUp QuestName="Breaking the Keystone" QuestId="26042" GiverName="Stone of Inner Binding" GiverId="2702" GiverType="GameObject" X="-1508.396" Y="-2170.288" Z="17.26832" />
 <If Condition="(Me.Level &lt; 29 )">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
   <RunTo X="-1813.809" Y="-2719.123" Z="59.93827" />
   <SetGrindArea>
   <GrindArea>
@@ -465,14 +438,11 @@
   <GrindTo Level="29" />
 </If>
 <If Condition="HasQuest(26036) &amp;&amp; !IsQuestCompleted(26036)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-    <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	  <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-    </If>
+    <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
 </If>
 <Objective QuestName="Wand over Fist" QuestId="26036" Type="CollectItem" ItemId="4525" CollectCount="1" />
 <If Condition="HasQuest(26036) &amp;&amp; IsQuestCompleted(26036)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>
@@ -483,7 +453,7 @@
 </If>
 <PickUp QuestName="Trelane's Defenses" QuestId="26037" GiverName="Skuerto" GiverId="2789" X="-1281.153" Y="-2529.644" Z="21.52105" />
 <If Condition="HasQuest(26042) &amp;&amp; !IsQuestCompleted(26042)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" LootMobs="True" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="True" />
   <RunTo X="-1655.137" Y="-2654.666" Z="41.04195" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <While Condition="!IsQuestCompleted(26042)">
@@ -496,21 +466,15 @@
 </If>
 <If Condition="HasQuest(26042) &amp;&amp; IsQuestCompleted(26042)">
   <RunTo X="-1463.15" Y="-2270.605" Z="53.02412" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
   <TurnIn QuestName="Breaking the Keystone" QuestId="26042" TurnInName="Keystone" TurnInId="2688" TurnInType="GameObject" X="-1526.257" Y="-2165.491" Z="17.9056" />/>
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2763" WaitForNpcs="False" X="-1529.569" Y="-2167.87" Z="17.62176" />
 </If>
 <PickUp QuestName="Myzrael's Tale" QuestId="26346" GiverName="Stone of Inner Binding" GiverId="2702" GiverType="GameObject" X="-1508.396" Y="-2170.288" Z="17.26832" />
 <If Condition="HasQuest(26037) &amp;&amp; !IsQuestCompleted(26037)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
   <RunTo X="-1548.901" Y="-1804.631" Z="67.40051" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
 </If>
 <Objective QuestName="Trelane's Defenses" QuestId="26037" Type="CollectItem" ItemId="4527" CollectCount="1" />
 <TurnIn QuestName="Trelane's Defenses" QuestId="26037" TurnInName="Apprentice Kryten" TurnInId="41983" X="-1746.892" Y="-1581.392" Z="52.46044" />
@@ -519,10 +483,7 @@
 <Objective QuestName="Attack on the Tower" QuestId="26038" Type="CollectItem" ItemId="4532" CollectCount="1" />
 <Objective QuestName="Attack on the Tower" QuestId="26038" Type="CollectItem" ItemId="4531" CollectCount="1" />
 <If Condition="Me.LevelFraction &lt; 29.82">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" KillBetweenHotspots="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
   <SetGrindArea>
   <GrindArea>
   <Factions>45</Factions>
@@ -541,10 +502,10 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="Me.LevelFraction &gt;=29.82" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
 </If>
 <If Condition="HasQuest(26038) &amp;&amp; IsQuestCompleted(26038)">
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" KillBetweenHotspots="False" />
+  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>

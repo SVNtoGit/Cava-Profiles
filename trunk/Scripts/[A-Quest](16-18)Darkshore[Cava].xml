@@ -131,7 +131,7 @@
   Please move your char to: DARKSHORE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
@@ -173,10 +173,7 @@
 </If>
 <Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32990" KillCount="1" />
 <If Condition="HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <While Condition="!IsQuestCompleted(13542)" >
     <If Condition="GetItemCount(44868) &lt; 8" >
       <SetGrindArea>
@@ -209,15 +206,12 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(44868)" WaitTime="1000" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <TurnIn QuestName="Coaxing the Spirits" QuestId="13547" TurnInName="Yalda" TurnInId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
 <PickUp QuestName="Call Down the Thunder" QuestId="13558" GiverName="Yalda" GiverId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
 <If Condition="HasQuest(13558) &amp;&amp; !IsQuestCompleted(13558)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <While Condition="!IsQuestCompleted(13558)" >
     <RunTo X="6446.367" Y="629.8206" Z="22.03401" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
@@ -230,7 +224,7 @@
       <PickUp QuestName="Call Down the Thunder" QuestId="13558" GiverName="Yalda" GiverId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <PickUp QuestName="The Last Refugee" QuestId="13605" GiverName="Archaeologist Hollee" GiverId="33232" X="6393.328" Y="522.533" Z="32.52357" />
 <If Condition="HasQuest(13605) &amp;&amp; !IsQuestCompleted(13605)" >
@@ -292,30 +286,16 @@
 <PickUp QuestName="Soothing the Elements" QuestId="13580" GiverName="Elder Brownpaw" GiverId="33117" X="5788.352" Y="369.901" Z="11.39828" />
 <If Condition="HasQuest(13580) &amp;&amp; !IsQuestCompleted(13580)" >
   <RunTo X="5532.611" Y="451.6752" Z="34.01668" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
   <While Condition="!IsQuestCompleted(13580)" >
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46546)" WaitTime="1000" />
     <CustomBehavior File="DefendObject" QuestId="13580" ObjectId="34367" X="5532.698" Y="453.6733" Z="32.54021" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <TurnIn QuestName="Soothing the Elements" QuestId="13580" TurnInName="Elder Brownpaw" TurnInId="33117" X="5788.352" Y="369.901" Z="11.39828" />
 <PickUp QuestName="The Blackwood Pledge" QuestId="13581" GiverName="Elder Brownpaw" GiverId="33117" X="5788.352" Y="369.901" Z="11.39828" />
 <TurnIn QuestName="Protector of Ameth'Aran" QuestId="13579" TurnInName="Selenn" TurnInId="33112" X="5776.278" Y="143.6117" Z="27.58869" />
 <PickUp QuestName="Calming the Earth" QuestId="13584" GiverName="Selenn" GiverId="33112" X="5776.278" Y="143.6117" Z="27.58869" />
-<If Condition="HasQuest(13584) &amp;&amp; !IsQuestCompleted(13584)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
-	<CustomBehavior File="Cava\CavaSettings" PullDistance="35" />
-  </If>
-</If>
 <Objective QuestName="Calming the Earth" QuestId="13584" Type="KillMob" MobId="33083" KillCount="8" />
-<If Condition="HasQuest(13584) &amp;&amp; IsQuestCompleted(13584)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
-</If>
 <TurnIn QuestName="Calming the Earth" QuestId="13584" TurnInName="Selenn" TurnInId="33112" X="5776.278" Y="143.6117" Z="27.58869" />
 <!--# # # Level 18 # # # -->
 <PickUp QuestName="Sworn to Protect" QuestId="13585" GiverName="Selenn" GiverId="33112" X="5776.278" Y="143.6117" Z="27.58869" />

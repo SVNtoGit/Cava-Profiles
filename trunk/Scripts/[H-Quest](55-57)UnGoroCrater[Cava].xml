@@ -684,7 +684,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Un'Guro Crate (55-57)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False" PullDistance="1" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -727,12 +727,7 @@
 </If>
 <Objective QuestName="The Fare of Lar'korwi" QuestId="24731" Type="CollectItem" ItemId="11504" CollectCount="1" />
 <If Condition="HasQuest(24719) &amp;&amp; !IsQuestCompleted(24719)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
   <Objective QuestName="Claws of White" QuestId="24719" Type="CollectItem" ItemId="11477" CollectCount="5" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" />
 </If>
 <If Condition="HasQuest(24719)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
@@ -742,10 +737,7 @@
 <TurnIn QuestName="The Fare of Lar'korwi" QuestId="24731" TurnInName="Torwa Pathfinder" TurnInId="9619" X="-7855.455" Y="-2102.509" Z="-267.0052" />
 <PickUp QuestName="The Scent of Lar'korwi" QuestId="24732" GiverName="Torwa Pathfinder" GiverId="9619" X="-7855.455" Y="-2102.509" Z="-267.0052" />
 <If Condition="HasQuest(24732) &amp;&amp; !IsQuestCompleted(24732)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True" />
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <While Condition="!IsQuestCompleted(24732)" >
     <RunTo QuestId="24732" X="-7448.175" Y="-2111.797" Z="-271.3316" />
     <CustomBehavior File="InteractWith" QuestId="24732" MobId="195022" NumOfTimes="1" CollectionDistance="1000" />
@@ -760,7 +752,7 @@
     <CustomBehavior File="InteractWith" QuestId="24732" MobId="195022" NumOfTimes="1" CollectionDistance="1000" />
     <CustomBehavior File="WaitTimer" QuestId="24732" WaitTime="6000" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
 <If Condition="HasQuest(24686) &amp;&amp; !IsQuestCompleted(24686)" >
   <CustomBehavior File="InteractWith" QuestId="24686" MobId="38202" NumOfTimes="1000" InteractByUsingItemId="50441" CollectionDistance="1000" >
@@ -823,26 +815,20 @@
 <If Condition="HasQuest(24733) &amp;&amp; !IsQuestCompleted(24733)" >
   <RunTo X="-6976.389" Y="-2059.768" Z="-271.3834" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(11568)" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" LootMobs="True"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
   <While Condition="!IsQuestCompleted(24733)" >
     <CustomBehavior File="InteractWith" QuestId="24733" WaitTime="1000" NonCompeteDistance="0" MobId="169217" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-6976.389" Y="-2059.768" Z="-271.3834" />
     <CustomBehavior File="Misc\RunLua" QuestId="24733" Lua="UseItemByName(11569)" WaitTime="1000" />
     <CustomBehavior File="Misc\RunLua" QuestId="24733" Lua="UseItemByName(11570)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="9000" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" LootMobs="Original"/>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
 </If>
 <PickUp QuestName="Is This Stuff Still Good?" QuestId="24865" GiverName="Crate of Foodstuffs" GiverId="161526" GiverType="GameObject" X="-6864.786" Y="-2003.22" Z="-271.967" />
 <TurnIn QuestName="Flowing to the North" QuestId="24689" TurnInName="Ithis Moonwarden" TurnInId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <PickUp QuestName="Bouquets of Death" QuestId="24687" GiverName="Ithis Moonwarden" GiverId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <If Condition="HasQuest(24687) &amp;&amp; !IsQuestCompleted(24687)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <CustomBehavior File="Cava\PullThings" PullMob="True" QuestId="24687" MobId="38213" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-7154.958" Y="-2284.508" Z="-268.1763" />
     <Hotspot X="-7115.22" Y="-2273.248" Z="-266.4176" />
@@ -855,15 +841,12 @@
     <Hotspot X="-6939.734" Y="-2104.149" Z="-271.5825" />
     <Hotspot X="-6939.126" Y="-2063.89" Z="-271.4555" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <TurnIn QuestName="Bouquets of Death" QuestId="24687" TurnInName="Ithis Moonwarden" TurnInId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <PickUp QuestName="Aberrant Flora" QuestId="24855" GiverName="Ithis Moonwarden" GiverId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <If Condition="HasQuest(24855) &amp;&amp; !IsQuestCompleted(24855)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <CustomBehavior File="CollectThings" QuestId="24855" MobId1="6511" MobId2="6510" MobId3="6509" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-6880.635" Y="-2127.541" Z="-272.5633" />
       <Hotspot X="-6860.05" Y="-2162.652" Z="-267.9535" />
@@ -884,7 +867,7 @@
       <Hotspot X="-6883.33" Y="-2049.444" Z="-271.1978" />
       <Hotspot X="-6890.042" Y="-2090.207" Z="-272.1216" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <TurnIn QuestName="Aberrant Flora" QuestId="24855" TurnInName="Ithis Moonwarden" TurnInId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
 <PickUp QuestName="The Eastern Pylon" QuestId="24721" GiverName="Ithis Moonwarden" GiverId="38263" X="-7159.061" Y="-2294.832" Z="-268.1794" />
@@ -925,12 +908,9 @@
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
 </If>
 <If Condition="HasQuest(24740) &amp;&amp; !IsQuestCompleted(24740)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <Objective QuestName="Volcanic Activity" QuestId="24740" Type="CollectItem" ItemId="11829" CollectCount="9" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <TurnIn QuestName="Volcanic Activity" QuestId="24740" TurnInName="Williden Marshal" TurnInId="9270" X="-7501.733" Y="-1504.569" Z="-266.2425" />
 <PickUp QuestName="Blazerunner" QuestId="24690" GiverName="Williden Marshal" GiverId="9270" X="-7501.733" Y="-1504.569" Z="-266.2425" />
@@ -958,9 +938,8 @@
 <!--<PickUp QuestName="A Little Help From My Friends" QuestId="24735" GiverName="Ringo" GiverId="9999" X="-7195.259" Y="-1389.547" Z="-231.3248" />
 <If Condition="HasQuest(24735) &amp;&amp; !IsQuestCompleted(24735)" >
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25" UseMount="False"/>
+  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
   </If>
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(24735)" >
@@ -1067,7 +1046,7 @@
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1" UseMount="True" />/>
+  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" />/>
 </If>
 <TurnIn QuestName="A Little Help From My Friends" QuestId="24735" TurnInName="Spraggle Frock" TurnInId="9997" X="-7512.159" Y="-1506.016" Z="-265.5514" />-->
 <TurnIn QuestName="Blazerunner" QuestId="24690" TurnInName="Williden Marshal" TurnInId="9270" X="-7501.733" Y="-1504.569" Z="-266.2425" />
@@ -1089,10 +1068,7 @@
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
 </If>
 <If Condition="(HasQuest(24691) &amp;&amp; !IsQuestCompleted(24691)) || (HasQuest(24692) &amp;&amp; !IsQuestCompleted(24692))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <Objective QuestName="The Fledgling Colossus" QuestId="24692" Type="KillMob" MobId="38305" KillCount="1" />
 <If Condition="HasQuest(24691)" >
@@ -1100,7 +1076,7 @@
 </If>
 <Objective QuestName="Peculiar Delicacies" QuestId="24691" Type="CollectItem" ItemId="50371" CollectCount="96" />
 <If Condition="HasQuest(24691) || HasQuest(24692)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <PickUp QuestName="An Abandoned Research Camp" QuestId="24866" GiverName="Research Equipment" GiverId="161521" GiverType="GameObject" X="-7597.839" Y="-890.8698" Z="-271.784" />
 <Objective QuestName="Crystals of Power" QuestId="24720" Type="CollectItem" ItemId="11186" CollectCount="7" />
@@ -1138,19 +1114,13 @@
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
 </If>
 <If Condition="HasQuest(24736) &amp;&amp; !IsQuestCompleted(24736)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <Objective QuestName="Shizzle's Flyer" QuestId="24736" Type="CollectItem" ItemId="11831" CollectCount="35" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <Objective QuestName="Hard to Harvest" QuestId="24700" Type="CollectItem" ItemId="50258" CollectCount="4" />
 <If Condition="HasQuest(24737) &amp;&amp; !IsQuestCompleted(24737)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <While Condition="!IsQuestCompleted(24737)" >
     <CustomBehavior File="InteractWith" QuestId="24737" MobId1="6518" MobId2="6519" MobState="Dead" NumOfTimes="1000"
       InteractByUsingItemId="50742" CollectionDistance="1000" >
@@ -1183,7 +1153,7 @@
       </HuntingGrounds>
     </CustomBehavior>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <Objective QuestName="Marshal's Refuse" QuestId="24701" Type="CollectItem" ItemId="50443" CollectCount="10" />
 <TurnIn QuestName="Super Sticky" QuestId="24737" TurnInName="Tara" TurnInId="38276" X="-6987.277" Y="-1060.164" Z="-267.3109" />
@@ -1205,10 +1175,7 @@
 <PickUp QuestName="The Apes of Un'Goro" QuestId="24717" GiverName="Gremix" GiverId="38275" X="-6988.705" Y="-1063.257" Z="-268.9267" />
 <PickUp QuestName="Chasing A-Me 01" QuestId="24714" GiverName="Karna Remtravel" GiverId="9618" X="-6976.163" Y="-1073.955" Z="-269.5275" />
 <If Condition="HasQuest(24699) &amp;&amp; !IsQuestCompleted(24699)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <While Condition="!IsQuestCompleted(24699)" >
     <CustomBehavior File="InteractWith" QuestId="24699" MobId="38307" MobState="Dead" NumOfTimes="1000"
       InteractByUsingItemId="50746" CollectionDistance="1000" >
@@ -1224,7 +1191,7 @@
       </HuntingGrounds>
     </CustomBehavior>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <If Condition="HasQuest(24717) &amp;&amp; !IsQuestCompleted(24717)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
@@ -1250,10 +1217,7 @@
 <!--<PickUp QuestName="The Mighty U'cha" QuestId="24718" GiverName="" GiverId="" />-->
 </If>
 <If Condition="(HasQuest(24717) &amp;&amp; !IsQuestCompleted(24717)) || (HasQuest(24718) &amp;&amp; !IsQuestCompleted(24718))" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <If Condition="HasQuest(24717) &amp;&amp; IsQuestCompleted(24717)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
@@ -1266,7 +1230,7 @@
 </If>
 <Objective QuestName="The Apes of Un'Goro" QuestId="24717" Type="CollectItem" ItemId="11480" CollectCount="2" />
 <If Condition="HasQuest(24717) || HasQuest(24718)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <TurnIn QuestName="Serving A-Me 01" QuestId="24926" TurnInName="Karna Remtravel" TurnInId="9618" X="-6976.163" Y="-1073.955" Z="-269.5275" />
 <TurnIn QuestName="The Apes of Un'Goro" QuestId="24717" TurnInName="Gremix" TurnInId="38275" X="-6988.705" Y="-1063.257" Z="-268.9267" />
@@ -1351,12 +1315,9 @@
   </While>
 </If>
 <If Condition="HasQuest(24730) &amp;&amp; !IsQuestCompleted(24730)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <Objective QuestName="Roll the Bones" QuestId="24730" Type="CollectItem" ItemId="11114" CollectCount="8" />
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <If Condition="HasQuest(24705) &amp;&amp; !IsQuestCompleted(24705)" >
   <While Condition="!IsObjectiveComplete(2, 24705)" >
@@ -1373,10 +1334,7 @@
   </While>
 </If>
 <If Condition="HasQuest(24704) &amp;&amp; !IsQuestCompleted(24704)" >
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="25"/>
-  <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
-    <CustomBehavior File="Cava\CavaSettings" PullDistance="40" />
-  </If>
+  <CustomBehavior File="Cava\CavaSettings" />
   <CustomBehavior File="CollectThings" QuestId="24704" MobId1="9164" MobId2="9167" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-7433.257" Y="-811.1748" Z="-272.9619" />
       <Hotspot X="-7469.892" Y="-794.9744" Z="-269.0294" />
@@ -1423,7 +1381,7 @@
       <Hotspot X="-7466.473" Y="-870.7603" Z="-266.12" />
       <Hotspot X="-7458.907" Y="-831.4304" Z="-271.3628" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" PullDistance="1"/>
+  <CustomBehavior File="Cava\CavaSettings" />
 </If>
 <If Condition="HasQuest(24704) &amp;&amp; IsQuestCompleted(24704)" >
   <While Condition="HasQuest(24704)" >
