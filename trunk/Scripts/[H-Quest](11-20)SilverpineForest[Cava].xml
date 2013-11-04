@@ -484,7 +484,7 @@
 <CustomBehavior File="Message" Text="Compiling Silverpine Forest Quests (11-20)" LogColor="Aquamarine" />
 <!--# # # Level 11.3 # # # -->
 <If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290)">
-  <CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
+  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" />
 </If>
 <If Condition="!HasQuest(26965) &amp;&amp; !IsQuestCompleted(26965)">
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -975,7 +975,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="20" FoodAmount="20"/>
+<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="20" FoodAmount="20"/>
 <TurnIn QuestName="To Forsaken Forward Command" QuestId="27290" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="In Time, All Will Be Revealed" QuestId="27342" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="Losing Ground" QuestId="27333" GiverName="Forward Commander Onslaught" GiverId="45315" X="-916.026" Y="1629.5" Z="68.35623" />

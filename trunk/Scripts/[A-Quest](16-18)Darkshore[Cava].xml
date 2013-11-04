@@ -131,7 +131,7 @@
   Please move your char to: DARKSHORE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />

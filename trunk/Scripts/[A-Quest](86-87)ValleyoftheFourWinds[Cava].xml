@@ -585,7 +585,7 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
 	<CustomBehavior File="Message" Text="Compiling Valley of the Four Winds (86-87)" LogColor="Green" />
   <!-- LVL 86 -->
 <If Condition="!HasQuest(29907) &amp;&amp; !IsQuestCompleted(29907)" >
@@ -598,7 +598,6 @@
   <TurnIn QuestName="His Name Was... Stormstout" QuestId="32019" TurnInId="56133" TurnInName="Chen Stormstout" X="517.3177" Y="-693.7483" Z="247.2532" />
 </If>
 <PickUp QuestName="Chen and Li Li" QuestId="29907" GiverName="Chen Stormstout" GiverId="56133" X="542.2708" Y="-608.9965" Z="262.0968" />
-<If Condition="HasQuest(29907) &amp;&amp; !IsQuestCompleted(29907)" >
 <TurnIn QuestName="Chen and Li Li" QuestId="29907" TurnInName="Pang Thunderfoot" TurnInId="56204" X="545.8316" Y="-606.1146" Z="263.3707" />
 <PickUp QuestName="A Seemingly Endless Nuisance" QuestId="29908" GiverName="Pang Thunderfoot" GiverId="56204" X="545.8316" Y="-606.1146" Z="263.3707" />
 <PickUp QuestName="A Poor Grasp of the Basics" QuestId="29877" GiverName="Muno the Farmhand" GiverId="56440" X="540.1441" Y="-566.934" Z="260.0628" />
