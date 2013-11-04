@@ -966,7 +966,9 @@
 </If>
 <PickUp QuestName="To Forsaken Forward Command" QuestId="27290" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="500.622" Y="1564.54" Z="128.2624" />
 <If Condition="HasQuest(27290)">
+  <DisableBehavior Name="Combat" />
   <CustomBehavior File="WaitTimer" WaitTime="70000" />
+  <EnableBehavior Name="Combat" />
   <RunTo X="-908.3533" Y="1637.583" Z="68.33718" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45479" MobState="Alive" X="-905.708" Y="1637.5" Z="68.24181" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
