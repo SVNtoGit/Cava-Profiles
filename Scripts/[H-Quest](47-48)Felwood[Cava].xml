@@ -179,7 +179,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Felwood Quests (47-48)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -225,7 +225,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" FindVendorsAutomatically="False" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="A Talking Totem" QuestId="28100" GiverName="Grazle" GiverId="11554" X="3986.96" Y="-1318.72" Z="245.765" />
 <PickUp QuestName="The Corruption of the Jadefire" QuestId="27997" GiverName="Tenell Leafrunner" GiverId="10923" X="3984.37" Y="-1301.71" Z="244.3052" />
 <PickUp QuestName="Culling the Corrupted" QuestId="28148" GiverName="Taronn Redfeather" GiverId="10921" X="3998.68" Y="-1288.68" Z="245.7322" />

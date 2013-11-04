@@ -1406,7 +1406,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32235" FlyingMountName="32235" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32235" FlyingMountName="32235" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1451,7 +1451,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseFlightPaths="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32243" FlyingMountName="32243" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32243" FlyingMountName="32243" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3483">
@@ -1636,7 +1636,7 @@
     <While Condition="!IsQuestCompleted(10146)">
       <RunTo X="-671.6398" Y="1855.097" Z="66.90812" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="Cava\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10146" MobId="19409" />
+      <CustomBehavior File="SpecificQuests\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10146" />
     </While>
   </If>
   <TurnIn QuestName="Mission: The Murketh and Shaadraz Gateways" QuestId="10146" TurnInName="Forward Commander Kingston" TurnInId="19310" X="-680.1464" Y="1855.198" Z="66.90966" />
@@ -1898,7 +1898,7 @@
     <While Condition="!IsQuestCompleted(10129)">
       <RunTo X="-24.25437" Y="2129.459" Z="112.7346" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="Cava\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10129" MobId="19401" />
+      <CustomBehavior File="SpecificQuests\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10129" />
     </While>
   </If>
   <TurnIn QuestName="Mission: Gateways Murketh and Shaadraz" QuestId="10129" TurnInName="Forward Commander To'arch" TurnInId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
