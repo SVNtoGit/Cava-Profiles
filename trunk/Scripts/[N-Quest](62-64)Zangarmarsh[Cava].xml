@@ -2532,7 +2532,36 @@
 <TurnIn QuestName="Sporeggar" QuestId="9919" TurnInName="Msshi'fn" TurnInId="17924" X="189.901" Y="8485.713" Z="26.94084" />
 <PickUp QuestName="Now That We're Friends..." QuestId="9726" GiverName="Gzhun'tt" GiverId="17856" X="258.0556" Y="8492.625" Z="23.60706" />
 <PickUp QuestName="Fertile Spores" QuestId="9806" GiverName="Gshaff" GiverId="17925" X="280.2096" Y="8512.685" Z="24.21214" />
+<!--
 <Objective QuestName="Fertile Spores" QuestId="9806" Type="CollectItem" ItemId="24449" CollectCount="6" />
+-->
+<If Condition="HasQuest(9806) &amp;&amp; !IsQuestCompleted(9806) &amp;&amp; GetItemCount(24449) &lt; 6">
+  <CustomBehavior File="FlyTo" X="-2.125742" Y="7715.329" Z="23.06316" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <CustomBehavior File="CollectThings" MobId1="18129"  MobId2="18134"  MobId3="18128" MobState="Alive" CollectItemCount="6" CollectItemId="24449" HuntingGroundRadius="200" >
+    <Hotspot X="-2.125742" Y="7715.329" Z="23.06316" />
+    <Hotspot X="-11.64339" Y="7676.111" Z="23.15901" />
+    <Hotspot X="-20.7406" Y="7637.265" Z="17.37564" />
+    <Hotspot X="-36.15263" Y="7599.99" Z="17.36857" />
+    <Hotspot X="-73.97908" Y="7615.362" Z="19.82532" />
+    <Hotspot X="-96.25481" Y="7649.116" Z="20.29288" />
+    <Hotspot X="-133.5633" Y="7664.927" Z="17.31779" />
+    <Hotspot X="-165.4205" Y="7639.131" Z="18.65687" />
+    <Hotspot X="-185.0083" Y="7603.853" Z="23.6167" />
+    <Hotspot X="-196.1617" Y="7643.013" Z="17.61524" />
+    <Hotspot X="-180.6972" Y="7679.92" Z="17.78072" />
+    <Hotspot X="-175.1285" Y="7720.416" Z="22.33226" />
+    <Hotspot X="-171.744" Y="7760.698" Z="22.9163" />
+    <Hotspot X="-138.3456" Y="7783.427" Z="22.78383" />
+    <Hotspot X="-101.9881" Y="7766.787" Z="21.4803" />
+    <Hotspot X="-66.30475" Y="7748.281" Z="21.0986" />
+    <Hotspot X="-29.37537" Y="7732.745" Z="21.89485" />
+  </CustomBehavior>
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <CustomBehavior File="FlyTo" X="206.931" Y="8502.303" Z="24.40442" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
 <If Condition="HasQuest(9806)">
   <TurnIn QuestName="Fertile Spores" QuestId="9806" TurnInName="Gshaff" TurnInId="17925" X="280.2096" Y="8512.685" Z="24.21214" />
   <RunTo X="243.8941" Y="8498.354" Z="23.35109" />
