@@ -450,7 +450,8 @@
 <PickUp QuestName="Enemy of the Horde: Marshal Paltrow" QuestId="26011" GiverName="Spy-Mistress Anara" GiverId="40903" X="914.0989" Y="22.22222" Z="95.84534" />
 <Objective QuestName="Enemy of the Horde: Marshal Paltrow" QuestId="26011" Type="KillMob" MobId="41937" KillCount="1" />
 <If Condition="HasQuest(26010) &amp;&amp; !IsQuestCompleted(26010)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26010" MobId="203431" ObjectType="GameObject" NumOfTimes="1000" InteractByUsingItemId="56473" CollectionDistance="1000" Range="8" WaitTime="8" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26010" MobId="203431" NumOfTimes="1000" PreInteractMountStrategy="Dismount"
+    InteractByUsingItemId="56473" CollectionDistance="1000" IgnoreLoSToTarget="True" MinRange="6" Range="9" >
     <HuntingGrounds>
       <Hotspot X="759.7139" Y="270.4472" Z="23.25467" />
       <Hotspot X="776.6462" Y="233.2279" Z="25.01508" />
