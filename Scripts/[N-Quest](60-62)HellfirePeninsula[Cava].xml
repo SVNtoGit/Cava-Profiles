@@ -1406,7 +1406,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32235" FlyingMountName="32235" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32235" FlyingMountName="32235" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1451,7 +1451,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32243" FlyingMountName="32243" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" MountName="32243" FlyingMountName="32243" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3483">
@@ -1600,7 +1600,7 @@
       <Hotspot X="-551.5626" Y="1824.619" Z="66.48032" />
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(2, 10144)">
-        <CustomBehavior File="InteractWith" MobId="184415" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-547.8168" Y="1783.671" Z="58.62281" />
+        <CustomBehavior File="InteractWith" MobId="184415" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-547.8168" Y="1783.671" Z="58.62281" />
       </While>
     </If>
     <If Condition="!IsObjectiveComplete(1, 10144)">
@@ -1620,7 +1620,7 @@
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(1, 10144)">
         <RunTo X="-419.0578" Y="1848.069" Z="80.9203" />
-        <CustomBehavior File="InteractWith" MobId="184414" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-419.0578" Y="1848.069" Z="80.9203" />
+        <CustomBehavior File="InteractWith" MobId="184414" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-419.0578" Y="1848.069" Z="80.9203" />
       </While>
     </If>
     <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
@@ -1858,7 +1858,7 @@
       <Hotspot X="-551.5626" Y="1824.619" Z="66.48032" />
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(1, 10208)">
-        <CustomBehavior File="InteractWith" MobId="184290" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-85.41621" Y="1882.359" Z="74.90538" />
+        <CustomBehavior File="InteractWith" MobId="184290" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-85.41621" Y="1882.359" Z="74.90538" />
       </While>
     </If>
     <If Condition="!IsObjectiveComplete(2, 10208)">
@@ -1883,10 +1883,10 @@
       <Hotspot X="91.22768" Y="1713.46" Z="42.887" />
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(2, 10208)">
-        <CustomBehavior File="InteractWith" MobId="184289" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
+        <CustomBehavior File="InteractWith" MobId="184289" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
       </While>
     </If>
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
   </If>
   <If Condition="HasQuest(10208)">
     <CustomBehavior File="FlyTo" X="-36.4824" Y="2136.69" Z="110.283" />

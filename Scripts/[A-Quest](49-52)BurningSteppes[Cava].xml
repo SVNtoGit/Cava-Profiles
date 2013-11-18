@@ -312,7 +312,7 @@
   Please move your char to: BURNING STEPPES\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   <CustomBehavior File="Cava\CavaSettings" MountName="23240" />
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -2099,7 +2099,7 @@
     <CustomBehavior File="UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8236.797" Y="-2708.298" Z="135.2648" />
   </While>
   <CustomBehavior File="Cava\CavaSettings" Preset="UserOriginal" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" LootChests="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
 </If>
 <If Condition="HasQuest(28415) &amp;&amp; !IsQuestCompleted(28415) &amp;&amp; HasQuest(28312) &amp;&amp; !IsQuestCompleted(28312)" >
   <While Condition="!IsQuestCompleted(28415) &amp;&amp; !IsQuestCompleted(28312)" >
