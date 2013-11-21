@@ -3527,7 +3527,8 @@
 <If Condition="HasQuest(9931) &amp;&amp; !IsQuestCompleted(9931)">
   <CustomBehavior File="FlyTo" X="-819.2546" Y="7592.354" Z="49.19886" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="InteractWith" QuestId="9931" MobId1="18064"  MobId2="17138" MobState="Dead" InteractByUsingItemId="25555" WaitTime="7000" NumOfTimes="1000" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" QuestId="9931" MobId1="18064"  MobId2="17138" MobState="Dead" InteractByUsingItemId="25555"
+    PreInteractMountStrategy="Dismount" WaitTime="7000" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds >
       <Hotspot X="-819.2546" Y="7592.354" Z="49.19886" />
       <Hotspot X="-819.2546" Y="7592.354" Z="49.19886" />
