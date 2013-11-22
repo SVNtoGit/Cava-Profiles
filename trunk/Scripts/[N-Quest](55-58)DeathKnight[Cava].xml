@@ -771,7 +771,7 @@
 <If Condition="HasQuest(13165)" >
   <CustomBehavior File="Misc\RunLua" Lua = "CastSpellByID(50977)" />
   <CustomBehavior File="WaitTimer" WaitTime="10000" />
-  <CustomBehavior File="InteractWith" MobId="190942" ObjectType="GameObject" X="2261.751" Y="-5285.169" Z="81.79683" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190942" X="2261.751" Y="-5285.169" Z="81.79683" />
 </If>
 <TurnIn QuestName="Taking Back Acherus" QuestId="13165" TurnInName="Highlord Darion Mograine" TurnInId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
 <DisableRepair />
@@ -779,10 +779,12 @@
 <Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31099" KillCount="1" />
 <Objective QuestName="The Battle For The Ebon Hold" QuestId="13166" Type="KillMob" MobId="31100" KillCount="10" />
 <TurnIn QuestName="The Battle For The Ebon Hold" QuestId="13166" TurnInName="Highlord Darion Mograine" TurnInId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
+<DisableBehavior Name="Combat" />
+<CustomBehavior File="UserSettings" PullDistance="0" />
 <If Condition="Me.IsAlliance" >
   <PickUp QuestName="Where Kings Walk" QuestId="13188" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
   <If Condition="HasQuest(13188) &amp;&amp; Me.ZoneId == 139" >
-    <CustomBehavior File="InteractWith" MobId="193053" X="2324.879" Y="-5659.905" Z="382.2406" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="193053" X="2324.879" Y="-5659.905" Z="382.2406" />
 	<CustomBehavior File="WaitTimer" WaitTime="20000" />
   </If>
   <If Condition="HasQuest(13188)" >
@@ -791,6 +793,8 @@
     <RunTo X="-10915.95" Y="-3394.028" Z="81.71524" />
     <EnableRepair />
   </If>
+  <EnableBehavior Name="Combat" />
+  <CustomBehavior File="UserSettings" PullDistance="Original" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](58-60)BlastedLands[Cava]" />
 <Else>
   <PickUp QuestName="Warchief's Blessing" QuestId="13189" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
@@ -805,8 +809,10 @@
     <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
     <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
     <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
-    <CustomBehavior File="InteractWith" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
     <EnableRepair />
+    <EnableBehavior Name="Combat" />
+    <CustomBehavior File="UserSettings" PullDistance="Original" />
     <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](57-60)BlastedLands[Cava]" />
   </If>
   </Else>
