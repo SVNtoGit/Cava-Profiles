@@ -360,9 +360,9 @@ HORDE      HORDE      HORDE      HORDE
 	</If>
     <If Condition="Mount.FlyingMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 50">
       <CustomBehavior File="Message" Text="Continuing Mount Procedures. Going to Buy : 1 FLY MOUNT. Please do not stop bot." LogColor="Aquamarine" />
-      <CustomBehavior File="InteractWith" MobId="44918" NonCompeteDistance="0" InteractByBuyingItemId="25470" X="1806.94" Y="-4340.67" Z="102.0508" />
+      <CustomBehavior File="InteractWith" MobId="44918" NonCompeteDistance="0" InteractByBuyingItemId="25474" X="1806.94" Y="-4340.67" Z="102.0508" />
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
-      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(25470)" />
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(25474)" />
     </If>
     <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 224">
       <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
