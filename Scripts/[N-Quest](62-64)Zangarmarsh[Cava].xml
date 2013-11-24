@@ -1364,6 +1364,56 @@
     </Hotspots>
   </Objective>
 </Quest>
+<Quest Id="10123" Name="Felspark Ravine">
+  <Objective Type="KillMob" MobId="19434" KillCount="1">
+    <Hotspots>
+      <Hotspot X="-411.5876" Y="2161.331" Z="81.32398" />
+      <Hotspot X="-421.607" Y="2122.793" Z="86.53435" />
+      <Hotspot X="-435.8101" Y="2085.173" Z="90.77982" />
+      <Hotspot X="-462.1844" Y="2054.483" Z="93.1848" />
+      <Hotspot X="-499.2285" Y="2038.95" Z="82.7354" />
+      <Hotspot X="-539.0034" Y="2037.907" Z="93.21216" />
+      <Hotspot X="-553.0029" Y="2076.526" Z="97.4907" />
+      <Hotspot X="-550.7732" Y="2116.352" Z="93.60063" />
+      <Hotspot X="-536.3911" Y="2153.985" Z="88.92631" />
+      <Hotspot X="-503.2599" Y="2164.531" Z="66.92137" />
+      <Hotspot X="-463.4132" Y="2171.375" Z="70.79603" />
+      <Hotspot X="-432.3537" Y="2148.165" Z="84.55306" />
+	</Hotspots>
+  </Objective>
+  <Objective Type="KillMob" MobId="19136" KillCount="4">
+    <Hotspots>
+      <Hotspot X="-411.5876" Y="2161.331" Z="81.32398" />
+      <Hotspot X="-421.607" Y="2122.793" Z="86.53435" />
+      <Hotspot X="-435.8101" Y="2085.173" Z="90.77982" />
+      <Hotspot X="-462.1844" Y="2054.483" Z="93.1848" />
+      <Hotspot X="-499.2285" Y="2038.95" Z="82.7354" />
+      <Hotspot X="-539.0034" Y="2037.907" Z="93.21216" />
+      <Hotspot X="-553.0029" Y="2076.526" Z="97.4907" />
+      <Hotspot X="-550.7732" Y="2116.352" Z="93.60063" />
+      <Hotspot X="-536.3911" Y="2153.985" Z="88.92631" />
+      <Hotspot X="-503.2599" Y="2164.531" Z="66.92137" />
+      <Hotspot X="-463.4132" Y="2171.375" Z="70.79603" />
+      <Hotspot X="-432.3537" Y="2148.165" Z="84.55306" />
+	</Hotspots>
+  </Objective>
+  <Objective Type="KillMob" MobId="19261" KillCount="6">
+    <Hotspots>
+      <Hotspot X="-411.5876" Y="2161.331" Z="81.32398" />
+      <Hotspot X="-421.607" Y="2122.793" Z="86.53435" />
+      <Hotspot X="-435.8101" Y="2085.173" Z="90.77982" />
+      <Hotspot X="-462.1844" Y="2054.483" Z="93.1848" />
+      <Hotspot X="-499.2285" Y="2038.95" Z="82.7354" />
+      <Hotspot X="-539.0034" Y="2037.907" Z="93.21216" />
+      <Hotspot X="-553.0029" Y="2076.526" Z="97.4907" />
+      <Hotspot X="-550.7732" Y="2116.352" Z="93.60063" />
+      <Hotspot X="-536.3911" Y="2153.985" Z="88.92631" />
+      <Hotspot X="-503.2599" Y="2164.531" Z="66.92137" />
+      <Hotspot X="-463.4132" Y="2171.375" Z="70.79603" />
+      <Hotspot X="-432.3537" Y="2148.165" Z="84.55306" />
+	</Hotspots>
+  </Objective>
+</Quest>
 
 
 
@@ -1912,10 +1962,130 @@
     <CustomBehavior File="FlyTo" X="91.1998" Y="5212.904" Z="23.04612" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="TaxiRide" MobId="20762" MobState="Alive" TaxiNumber="1" />
-    <RunTo X="228.5" Y="2633.57" Z="87.66666" />
-    <RunTo X="171.7351" Y="2667.017" Z="86.32259" />
+    <If Condition="!HasQuest(10121) &amp;&amp; !IsQuestCompleted(10121)">
+      <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="171.7351" Y="2667.017" Z="86.32259" />
+      <CustomBehavior File="ForcedDismount" />
+      <PickUp QuestName="Eradicate the Burning Legion" QuestId="10121" GiverName="Nazgrel" GiverId="3230" X="242.9973" Y="2698.199" Z="89.75937" />
+    </If>
+    <If Condition="HasQuest(10121)">
+      <CustomBehavior File="FlyTo" X="62.13515" Y="2539.153" Z="64.56563" />
+      <CustomBehavior File="ForcedDismount" />
+      <TurnIn QuestName="Eradicate the Burning Legion" QuestId="10121" TurnInName="Sergeant Shatterskull" TurnInId="19256" X="59.31825" Y="2545.312" Z="64.79259" />
+    </If>
+    <If Condition="!HasQuest(10123) &amp;&amp; !IsQuestCompleted(10123)">
+      <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="62.13515" Y="2539.153" Z="64.56563" />
+      <CustomBehavior File="ForcedDismount" />
+      <PickUp QuestName="Felspark Ravine" QuestId="10123" GiverName="Sergeant Shatterskull" GiverId="19256" X="59.31825" Y="2545.312" Z="64.79259" />
+    </If>
+    <If Condition="HasQuest(10123) &amp;&amp; !IsQuestCompleted(10123)">
+      <CustomBehavior File="FlyTo" X="-408.3183" Y="2160.336" Z="81.03165" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="True" />
+      <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19434" KillCount="1" />
+      <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19136" KillCount="4" />
+      <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19261" KillCount="6" />
+      <CustomBehavior File="Cava\CavaSettings"  GroundMountFarmingMode="False"/>
+    </If>
+    <If Condition="HasQuest(10123)">
+      <CustomBehavior File="FlyTo" X="62.13515" Y="2539.153" Z="64.56563" />
+      <CustomBehavior File="ForcedDismount" />
+      <TurnIn QuestName="Felspark Ravine" QuestId="10123" TurnInName="Sergeant Shatterskull" TurnInId="19256" X="59.31825" Y="2545.312" Z="64.79259" />
+    </If>
+    <If Condition="!HasQuest(10124) &amp;&amp; !IsQuestCompleted(10124)">
+      <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="62.13515" Y="2539.153" Z="64.56563" />
+      <CustomBehavior File="ForcedDismount" />
+      <PickUp QuestName="Forward Base: Reaver's Fall" QuestId="10124" GiverName="Sergeant Shatterskull" GiverId="19256" X="59.31825" Y="2545.312" Z="64.79259" />
+    </If>
+    <If Condition="HasQuest(10124)">
+      <CustomBehavior File="FlyTo" X="-19.69407" Y="2139.707" Z="113.9029" />
+      <CustomBehavior File="ForcedDismount" />
+      <TurnIn QuestName="Forward Base: Reaver's Fall" QuestId="10124" TurnInName="Forward Commander To'arch" TurnInId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
+    </If>
+    <If Condition="!HasQuest(10208) &amp;&amp; !IsQuestCompleted(10208)">
+      <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="-19.69407" Y="2139.707" Z="113.9029" />
+      <CustomBehavior File="ForcedDismount" />
+      <PickUp QuestName="Disrupt Their Reinforcements" QuestId="10208" GiverName="Forward Commander To'arch" GiverId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
+    </If>
+    <If Condition="HasQuest(10208) &amp;&amp; !IsQuestCompleted(10208)">
+      <RunTo X="-35.45311" Y="2119.091" Z="109.9471" />
+      <CustomBehavior File="FlyTo" X="147.0495" Y="1751.861" Z="40.77323" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+      <If Condition="!IsObjectiveComplete(1, 10208)">
+        <CustomBehavior File="CollectThings" QuestId="10208" MobState="Alive" MobId="19190" MobId2="18975" MobId3="16950" MobId4="8981" CollectItemCount="4" CollectItemId="28513" HuntingGroundRadius="55" >
+          <Hotspot X="-562.874" Y="1818.086" Z="66.97377" />
+          <Hotspot X="-575.6792" Y="1780.112" Z="63.44177" />
+          <Hotspot X="-544.3271" Y="1756.831" Z="53.0574" />
+          <Hotspot X="-515.2232" Y="1784.41" Z="53.58567" />
+          <Hotspot X="-476.8049" Y="1799.656" Z="55.32697" />
+          <Hotspot X="-441.7426" Y="1815.21" Z="66.68574" />
+          <Hotspot X="-405.9268" Y="1830.912" Z="76.12213" />
+          <Hotspot X="-401.6239" Y="1868.077" Z="90.62611" />
+          <Hotspot X="-441.8308" Y="1872.718" Z="84.9763" />
+          <Hotspot X="-480.4552" Y="1862.81" Z="77.54446" />
+          <Hotspot X="-517.0122" Y="1844.923" Z="69.22552" />
+          <Hotspot X="-551.5626" Y="1824.619" Z="66.48032" />
+        </CustomBehavior>
+        <While Condition="!IsObjectiveComplete(1, 10208)">
+          <CustomBehavior File="InteractWith" MobId="184290" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-85.41621" Y="1882.359" Z="74.90538" />
+        </While>
+      </If>
+      <If Condition="!IsObjectiveComplete(2, 10208)">
+        <CustomBehavior File="CollectThings" QuestId="10208" MobState="Alive" MobId="19190" MobId2="18975" MobId3="16950" MobId4="8981" CollectItemCount="4" CollectItemId="28513" HuntingGroundRadius="55" >
+          <Hotspot X="147.0495" Y="1751.861" Z="40.77323" />
+          <Hotspot X="111.7108" Y="1771.246" Z="44.72611" />
+          <Hotspot X="75.59062" Y="1789.441" Z="47.62614" />
+          <Hotspot X="37.84632" Y="1802.193" Z="53.85005" />
+          <Hotspot X="8.490509" Y="1829.084" Z="60.85899" />
+          <Hotspot X="2.627239" Y="1868.79" Z="55.43795" />
+          <Hotspot X="-26.44952" Y="1895.052" Z="63.53194" />
+          <Hotspot X="-62.99516" Y="1911.953" Z="71.12891" />
+          <Hotspot X="-102.368" Y="1912.786" Z="78.20713" />
+          <Hotspot X="-112.3088" Y="1873.251" Z="78.96518" />
+          <Hotspot X="-78.70332" Y="1851.901" Z="69.61456" />
+          <Hotspot X="-39.3198" Y="1860.299" Z="62.7275" />
+          <Hotspot X="-0.3415365" Y="1868.523" Z="55.90698" />
+          <Hotspot X="38.15242" Y="1857.223" Z="47.83485" />
+          <Hotspot X="56.96881" Y="1820.624" Z="45.658" />
+          <Hotspot X="62.98366" Y="1780.87" Z="48.15319" />
+          <Hotspot X="61.88527" Y="1740.603" Z="45.53067" />
+          <Hotspot X="91.22768" Y="1713.46" Z="42.887" />
+        </CustomBehavior>
+        <While Condition="!IsObjectiveComplete(2, 10208)">
+          <CustomBehavior File="InteractWith" MobId="184289" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
+        </While>
+      </If>
+      <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+    </If>
+    <If Condition="HasQuest(10208)">
+      <CustomBehavior File="FlyTo" X="-36.4824" Y="2136.69" Z="110.283" />
+      <CustomBehavior File="ForcedDismount" />
+      <TurnIn QuestName="Disrupt Their Reinforcements" QuestId="10208" TurnInName="Forward Commander To'arch" TurnInId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
+    </If>
+    <If Condition="!HasQuest(10129) &amp;&amp; !IsQuestCompleted(10129)">
+      <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="-19.69407" Y="2139.707" Z="113.9029" />
+      <CustomBehavior File="ForcedDismount" />
+      <PickUp QuestName="Mission: Gateways Murketh and Shaadraz" QuestId="10129" GiverName="Forward Commander To'arch" GiverId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
+    </If>
+    <If Condition="HasQuest(10129) &amp;&amp; !IsQuestCompleted(10129)">
+      <While Condition="!IsQuestCompleted(10129)">
+        <RunTo X="-24.25437" Y="2129.459" Z="112.7346" />
+        <CustomBehavior File="ForcedDismount" />
+        <CustomBehavior File="SpecificQuests\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10129" />
+      </While>
+    </If>
+    <If Condition="HasQuest(10208)">
+      <TurnIn QuestName="Mission: Gateways Murketh and Shaadraz" QuestId="10129" TurnInName="Forward Commander To'arch" TurnInId="19273" X="-19.84473" Y="2136.615" Z="113.9848" />
+    </If>
     <If Condition="!HasQuest(9400) &amp;&amp; !IsQuestCompleted(9400)">
       <CustomBehavior File="Message" Text="Questing in HELLFIRE PENINSULA for Reputation, Please do not stop bot" LogColor="Aquamarine" />
+      <CustomBehavior File="FlyTo" X="171.7351" Y="2667.017" Z="86.32259" />
+      <CustomBehavior File="ForcedDismount" />
       <PickUp QuestName="The Assassin" QuestId="9400" GiverName="Nazgrel" GiverId="3230" X="242.9973" Y="2698.199" Z="89.75941" />
     </If>
     <If Condition="HasQuest(9400)">
