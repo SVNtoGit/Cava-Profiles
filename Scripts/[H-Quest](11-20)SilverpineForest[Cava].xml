@@ -675,15 +675,17 @@
   <PickUp QuestName="No Escape" QuestId="27099" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
 </If>
 <If Condition="HasQuest(27099) &amp;&amp; !IsQuestCompleted(27099)">
-  <RunTo X="999.382" Y="671.2103" Z="69.79686" />
-  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-  <RunTo X="999.382" Y="671.2103" Z="69.79686" />
-  <CustomBehavior File="MyCTM" X="991.6192" Y="671.16" Z="70.91929" />
-  <CustomBehavior File="WaitTimer" WaitTime="2000" />
-  <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart(GetTime()*1000 + 1000);" />
-  <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStop(GetTime()*1000 + 1000);" />
-  <CustomBehavior File="WaitTimer" WaitTime="135000" />
+  <While Condition="!IsQuestCompleted(27099)">
+    <RunTo X="999.382" Y="671.2103" Z="69.79686" />
+    <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    <RunTo X="999.382" Y="671.2103" Z="69.79686" />
+    <CustomBehavior File="MyCTM" X="991.6192" Y="671.16" Z="70.91929" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+    <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStart(GetTime()*1000 + 1000);" />
+    <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    <CustomBehavior File="Misc\RunLua" Lua="MoveForwardStop(GetTime()*1000 + 1000);" />
+    <CustomBehavior File="WaitTimer" WaitTime="135000" />
+  </While>
 </If>
 <TurnIn QuestName="No Escape" QuestId="27099" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
 <PickUp QuestName="Lordaeron" QuestId="27098" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
