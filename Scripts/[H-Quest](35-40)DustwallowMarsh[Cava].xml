@@ -404,6 +404,27 @@
 	</Hotspots>
   </Objective>
 </Quest>
+<Quest Id="27183" Name="Marsh Frog Legs">
+  <Objective Type="CollectItem" ItemId="33202" CollectCount="10">
+    <CollectFrom>
+      <Mob Name="Giant Marsh Frog" Id="23979"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="-2939.012" Y="-3883.433" Z="34.86161" />
+      <Hotspot X="-2909.818" Y="-3911.979" Z="38.03432" />
+      <Hotspot X="-2933.33" Y="-3944.725" Z="39.33446" />
+      <Hotspot X="-2949.098" Y="-3980.885" Z="31.84871" />
+      <Hotspot X="-2989.124" Y="-3988.209" Z="39.29966" />
+      <Hotspot X="-3029.318" Y="-3983.799" Z="34.13336" />
+      <Hotspot X="-3068.972" Y="-3979.34" Z="39.35044" />
+      <Hotspot X="-3064.234" Y="-3940.283" Z="30.51923" />
+      <Hotspot X="-3029.056" Y="-3919.691" Z="35.8606" />
+      <Hotspot X="-2992.821" Y="-3902.691" Z="28.52308" />
+      <Hotspot X="-2975.743" Y="-3865.12" Z="28.54964" />
+      <Hotspot X="-2935.093" Y="-3861.285" Z="29.0013" />
+    </Hotspots>
+  </Objective>
+</Quest>
 
 
 <!-- ################################### End of Quest Overrides #################################################################### -->
@@ -636,8 +657,8 @@
 <PickUp QuestName="Marsh Frog Legs" QuestId="27183" GiverName="&quot;Swamp Eye&quot; Jarl" GiverId="4792" X="-2952.756" Y="-3885.405" Z="34.22612" />
 <PickUp QuestName="What's Haunting Witch Hill?" QuestId="27188" GiverName="Mordant Grimsby" GiverId="23843" X="-2948.356" Y="-3893.17" Z="35.05546" />
 <PickUp QuestName="The Lost Report" QuestId="27244" GiverName="Loose Dirt" GiverType="GameObject" GiverId="20985" X="-2940.664" Y="-3884.77" Z="35.00951" />
-<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+<!--<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="CollectThings" QuestId="27183" MobId="23979" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-2939.012" Y="-3883.433" Z="34.86161" />
     <Hotspot X="-2909.818" Y="-3911.979" Z="38.03432" />
@@ -653,6 +674,10 @@
     <Hotspot X="-2935.093" Y="-3861.285" Z="29.0013" />
   </CustomBehavior>
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+</If> -->
+<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
+  <RunTo X="-2939.012" Y="-3883.433" Z="34.86161" />
+  <Objective QuestName="Marsh Frog Legs" QuestId="27183" Type="CollectItem" ItemId="33202" CollectCount="10" />
 </If>
 <If Condition="HasQuest(27188) &amp;&amp; !IsQuestCompleted(27188)" >
   <SetGrindArea>
