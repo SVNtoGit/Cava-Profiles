@@ -989,7 +989,28 @@
     <CustomBehavior File="InteractWith" QuestId="27345" NonCompeteDistance="0" MobId="205363" X="-991.7174" Y="1999.604" Z="23.98579" />
   </While>
 </If>
+<If Condition="HasQuest(27333) &amp;&amp; !IsQuestCompleted(27333)">
+  <CustomBehavior File="KillUntilComplete" QuestId="27333" MobId="45292" X="-991.4655" Y="1741.362" Z="59.33619" />
+<!--
+  <CustomBehavior File="Cava\PullMobs" QuestId="27333" MobId="45292" CollectUntil="QuestComplete" MobState="Alive">
+      <Hotspot X="-1073.109" Y="1784.505" Z="46.35232" />
+      <Hotspot X="-1087.672" Y="1747.021" Z="45.2307" />
+      <Hotspot X="-1054.007" Y="1724.769" Z="48.26519" />
+      <Hotspot X="-1015.617" Y="1727.841" Z="59.74194" />
+      <Hotspot X="-975.4804" Y="1734.884" Z="59.51847" />
+      <Hotspot X="-937.2706" Y="1720.888" Z="64.95889" />
+      <Hotspot X="-900.1396" Y="1705.711" Z="65.27158" />
+      <Hotspot X="-859.4742" Y="1701.767" Z="69.44185" />
+      <Hotspot X="-852.2116" Y="1741.114" Z="67.67348" />
+      <Hotspot X="-883.3715" Y="1767.194" Z="62.89899" />
+      <Hotspot X="-920.8823" Y="1783.113" Z="61.48929" />
+      <Hotspot X="-960.1265" Y="1792.263" Z="59.00792" />
+      <Hotspot X="-999.8904" Y="1796.108" Z="51.66116" />
+      <Hotspot X="-1039.879" Y="1795.163" Z="47.6087" />
+  </CustomBehavior>
 <Objective QuestName="Losing Ground" QuestId="27333" Type="KillMob" MobId="45292" KillCount="12" />
+-->
+</If>
 <TurnIn QuestName="Losing Ground" QuestId="27333" TurnInName="Forward Commander Onslaught" TurnInId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 <TurnIn QuestName="The F.C.D." QuestId="27345" TurnInName="Forward Commander Onslaught" TurnInId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 <If Condition="HasQuest(27342) &amp;&amp; !IsQuestCompleted(27342)">
@@ -1294,9 +1315,27 @@
 </If>
 <TurnIn QuestName="A Man Named Godfrey" QuestId="27406" TurnInName="Deathstalker Commander Belmont" TurnInId="45474" X="-1155.172" Y="1136.166" Z="24.28254" />
 <!--# # # Level 17 # # # -->
-<PickUp QuestName="The Great Escape" QuestId="27438" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-2122.48" Y="930.821" Z="1.083134" />
 <If Condition="HasQuest(27438) &amp;&amp; !IsQuestCompleted(27438)">
-  <CustomBehavior File="WaitTimer" QuestId="27438" WaitTime="135000" />
+  <CustomBehavior File="AbandonQuest" QuestId="27438" />
+  <CustomBehavior File="WaitTimer" WaitTime="4000" />
+</If>
+<If Condition="!HasQuest(27438) &amp;&amp; !IsQuestCompleted(27438)">
+  <PickUp QuestName="The Great Escape" QuestId="27438" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-2122.48" Y="930.821" Z="1.083134" />
+  <While Condition="!IsQuestCompleted(27438)">
+    <CustomBehavior File="WaitTimer" WaitTime="5000" />
+    <If Condition="!Me.IsOnTransport" >
+      <CustomBehavior File="AbandonQuest" QuestId="27438" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+    <If Condition="HasQuest(27438) &amp;&amp; !IsQuestCompleted(27438)">
+      <CustomBehavior File="WaitTimer" QuestId="27438" WaitTime="130000" />
+    </If>
+    <If Condition="HasQuest(27438) &amp;&amp; !IsQuestCompleted(27438)">
+      <CustomBehavior File="AbandonQuest" QuestId="27438" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+    <PickUp QuestName="The Great Escape" QuestId="27438" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-2122.48" Y="930.821" Z="1.083134" />
+  </While>
 </If>
 <If Condition="HasQuest(27438)">
   <RunTo X="-117.489" Y="1310.357" Z="56.74168" />
