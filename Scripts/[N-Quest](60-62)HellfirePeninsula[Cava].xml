@@ -1461,6 +1461,12 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Hellfire Peninsula Map Zone" LogColor="Aquamarine" />
+<If Condition="HasQuest(10119)">
+  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32333" />
+</If>
+<If Condition="HasQuest(9407)">
+  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32446" />
+</If>
 <If Condition="Me.IsAlliance" >
   <!--# # # Level 60 # # # -->
   <PickUp QuestName="Arrival in Outland" QuestId="10288" GiverName="Commander Duron" GiverId="19229" X="-266.3687" Y="1028.86" Z="54.32333" />
@@ -2193,7 +2199,7 @@
       </If>
       <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 21306 &amp;&amp; u.Distance &lt;= 200))" >
       </While>-->
-      <CustomBehavior File="InteractWith" QuestId="10538" InteractBlacklistTimeInSeconds="1" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="1" MobId="184715" X="-973.1046" Y="2177.329" Z="15.30203" />
+      <CustomBehavior File="InteractWith" Range="10" QuestId="10538" InteractBlacklistTimeInSeconds="1" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="1" MobId="184715" X="-973.1046" Y="2177.329" Z="15.30203" />
 	</While>
 
 
@@ -2916,9 +2922,6 @@
   </If>
   <TurnIn QuestName="Helping the Cenarion Post" QuestId="10442" TurnInName="Thiah Redmane" TurnInId="16991" X="-312.4847" Y="4728.767" Z="17.22963" />
 </If>
-
-
-
 <TurnIn QuestName="Missing Missive" QuestId="9373" TurnInName="Thiah Redmane" TurnInId="16991" X="-312.4847" Y="4728.767" Z="17.22963" />
 <PickUp QuestName="Demonic Contamination" QuestId="9372" GiverName="Thiah Redmane" GiverId="16991" X="-312.4847" Y="4728.767" Z="17.22963" />
 <Objective QuestName="Demonic Contamination" QuestId="9372" Type="CollectItem" ItemId="23336" CollectCount="6" />
@@ -2932,7 +2935,7 @@
   <CustomBehavior File="FlyTo" X="-388.6131" Y="4610.243" Z="33.48331" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(10255)">
-    <CustomBehavior File="CombatUseItemOn" QuestId="10255" MobId="16880" ItemId="23337" MaxRange="3" MobHpPercentLeft="100" X="-353.7725" Y="4635.455" Z="30.28903" />
+    <CustomBehavior File="CombatUseItemOnV2" QuestId="10255" ItemId="23337" MobId="16880" UseWhenMobHasHealthPercent="100" MaxRangeToUseItem="3" WaitTimeAfterItemUse="500" X="-353.7725" Y="4635.455" Z="30.28903" />
   </While>
   <CustomBehavior File="FlyTo" X="-316.7616" Y="4726.531" Z="17.73468" />
   <CustomBehavior File="ForcedDismount" />
