@@ -432,7 +432,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Felwood Quests (48-51)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" FindVendorsAutomatically="False" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   <CustomBehavior File="Cava\CavaSettings" MountName="34795" />
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -504,9 +504,10 @@
 <PickUp QuestName="Hazzard Disposal" QuestId="28213" GiverName="Kelnir Leafsong" GiverId="47696" X="5220.6" Y="-704.363" Z="344.0027" />
 <PickUp QuestName="Cleanup at Bloodvenom Post" QuestId="28214" GiverName="Altsoba Ragetotem" GiverId="47692" X="5218.87" Y="-703.203" Z="343.723" />
 <If Condition="HasQuest(28213) &amp;&amp; !IsQuestCompleted(28213)">
+  <RunTo X="5101.9" Y="-358.8959" Z="357.1791" />
   <While Condition="!IsQuestCompleted(28213)">
-    <RunTo X="5103.036" Y="-359.206" Z="357.1819" />
-    <CustomBehavior File="CombatUseItemOn" ItemId="63284" MobId="47679" MobHpPercentLeft="100" MaxRange="10" X="5103.036" Y="-359.206" Z="357.1819" />
+    <CustomBehavior File="InteractWith" QuestId="28213" MobId="47679" MobHpPercentLeft="100" MobState="Alive" InteractByUsingItemId="63284"
+      PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="16" X="5102.24" Y="-358.321" Z="357.1809" />
   </While>
 </If>
 <Objective QuestName="Cleanup at Bloodvenom Post" QuestId="28214" Type="KillMob" MobId="47675" KillCount="6" />
