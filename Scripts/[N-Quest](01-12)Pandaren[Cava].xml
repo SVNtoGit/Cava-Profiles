@@ -561,16 +561,32 @@
 </If>
 <TurnIn QuestName="The Way of the Tushui" QuestId="29414" TurnInName="Master Shang Xi" TurnInId="54608" X="1168.255" Y="3442.328" Z="104.6883" />
 <PickUp QuestName="Ji of the Huojin" QuestId="29522" GiverName="Master Shang Xi" GiverId="54608" X="1168.255" Y="3442.328" Z="104.6883" />
-<TurnIn QuestName="Ji of the Huojin" QuestId="29522" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<PickUp QuestName="The Way of the Huojin" QuestId="29417" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<Objective QuestName="The Way of the Huojin" QuestId="29417" Type="KillMob" MobId="54131" KillCount="8" />
+<If Condition="HasQuest(29522)" >
+  <DisableBehavior Name="Pull" />
+  <CustomBehavior File="NoCombatMoveTo" X="1405.112" Y="3635.967" Z="83.73487" />
+  <TurnIn QuestName="Ji of the Huojin" QuestId="29522" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+</If>
+<If Condition="!HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417)" >
+  <DisableBehavior Name="Pull" />
+  <PickUp QuestName="The Way of the Huojin" QuestId="29417" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+</If>
+<If Condition="HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417)" >
+  <CustomBehavior File="CollectThings" QuestId="29417" MobId="54131" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
+    <Hotspot X="1405.899" Y="3636.341" Z="83.64842" />
+    <Hotspot X="1415.23" Y="3675.246" Z="78.77971" />
+    <Hotspot X="1417.477" Y="3715.285" Z="79.79829" />
+  </CustomBehavior>
+  <DisableBehavior Name="Pull" />
+<!--<Objective QuestName="The Way of the Huojin" QuestId="29417" Type="KillMob" MobId="54131" KillCount="8" />-->
+</If>
 <TurnIn QuestName="The Way of the Huojin" QuestId="29417" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
 <PickUp QuestName="Kindling the Fire" QuestId="29418" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
 <PickUp QuestName="Fanning the Flames" QuestId="29523" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
 <If Condition="HasQuest(29523) &amp;&amp; !IsQuestCompleted(29523)" >
-  <CustomBehavior File="NoCombatMoveTo" X="1314.028" Y="3600.681" Z="88.90967" />
+  <DisableBehavior Name="Pull" />
+  <RunTo X="1314.028" Y="3600.681" Z="88.90967" />
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
-  <CustomBehavior File="NoCombatMoveTo" X="1229.573" Y="3714.677" Z="94.38698" />
+  <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
   <While Condition="!IsQuestCompleted(29523)" >
     <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(72109)" WaitTime="1000" />
@@ -584,11 +600,8 @@
 <TurnIn QuestName="Fanning the Flames" QuestId="29523" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
 <PickUp QuestName="The Spirit's Guardian" QuestId="29420" GiverName="Master Shang Xi" GiverId="54609" X="1403.391" Y="3636.197" Z="83.8237" />
 <If Condition="HasQuest(29420)" >
-  <CustomBehavior File="NoCombatMoveTo" X="1413.362" Y="3649.675" Z="82.18867" />
-  <CustomBehavior File="NoCombatMoveTo" X="1418.129" Y="3741.931" Z="83.36149" />
-  <CustomBehavior File="NoCombatMoveTo" X="1366.072" Y="3805.234" Z="87.09541" />
-  <CustomBehavior File="NoCombatMoveTo" X="1330.203" Y="3847.482" Z="91.90031" />
-  <CustomBehavior File="NoCombatMoveTo" X="1349.843" Y="3890.408" Z="95.12583" />
+  <RunTo X="1349.843" Y="3890.408" Z="95.12583" />
+  <EnableBehavior Name="Pull" />
 </If>
 <TurnIn QuestName="The Spirit's Guardian" QuestId="29420" TurnInName="Master Li Fei" TurnInId="54135" X="1331.776" Y="3942.804" Z="110.5224" />
 <PickUp QuestName="The Challenger's Fires" QuestId="29664" GiverName="Master Li Fei" GiverId="54135" X="1331.776" Y="3942.804" Z="110.5224" />
@@ -635,10 +648,6 @@
 <PickUp QuestName="The Lesson of Dry Fur" QuestId="29661" GiverName="Aysa Cloudsinger" GiverId="54975" X="1027.401" Y="3227.353" Z="115.1725" />
 <PickUp QuestName="The Lesson of the Balanced Rock" QuestId="29663" GiverName="Aysa Cloudsinger" GiverId="54975" X="1027.401" Y="3227.353" Z="115.1725" />
 <If Condition="HasQuest(29663) &amp;&amp; !IsQuestCompleted(29663)" >
-  <CustomBehavior File="Cava\CavaSettings" LogoutForInactivity="False" />
-  <RunTo X="959.319" Y="3206.473" Z="119.0321" />
-  <CustomBehavior File="MyCTM" X="928.6374" Y="3201.776" Z="108.2726" />
-  <RunTo X="935.0723" Y="3206.091" Z="108.2724" />
   <CustomBehavior File="SpecificQuests\29663-PandaStarter-TheLessonoftheBalancedRock" />
 </If>
 <If Condition="HasQuest(29661) &amp;&amp; !IsQuestCompleted(29661)" >
@@ -687,7 +696,7 @@
 </If>
 <If Condition="HasQuest(29679) &amp;&amp; !IsQuestCompleted(29679)" >
   <While Condition="!IsQuestCompleted(29679)" >
-    <CustomBehavior File="InteractWith"  QuestId="29679" NonCompeteDistance="0" MobId="60488" />
+    <CustomBehavior File="InteractWith" QuestId="29679" NonCompeteDistance="0" MobId="60488" Range="3"/>
   </While>
 </If>
 <TurnIn QuestName="A New Friend" QuestId="29679" TurnInName="Aysa Cloudsinger" TurnInId="54975" X="1086.083" Y="2847.487" Z="92.64539" />
