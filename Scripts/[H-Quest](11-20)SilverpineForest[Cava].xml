@@ -472,7 +472,7 @@
     </Else>
   </If>
 </If>
-<If Condition="Me.Level &gt;= 200">
+<If Condition="Me.Level &gt;= 20">
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 130 &amp;&amp; Me.ZoneId != 4706 &amp;&amp; Me.ZoneId != 267">
@@ -810,7 +810,7 @@
 </If>
 <TurnIn QuestName="Honor the Dead" QuestId="27180" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2624" />
 <TurnIn QuestName="Nowhere to Run" QuestId="27195" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2624" />
-<If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="478.761" Y="1538.956" Z="130.8325" />
   <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
@@ -1037,7 +1037,7 @@
   </While>
 </If>
 <TurnIn QuestName="In Time, All Will Be Revealed" QuestId="27342" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
-<If Condition="!HasQuest(27349) &amp;&amp; !IsQuestCompleted(27349) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(27349) &amp;&amp; !IsQuestCompleted(27349) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-909.1154" Y="1637.844" Z="68.34979" />
   <CustomBehavior File="TaxiRide" MobId="45479" DestName="Brill"/>
@@ -1356,7 +1356,7 @@
   </While>
 </If>
 <TurnIn QuestName="Rise, Godfrey" QuestId="27472" TurnInName="Lady Sylvanas Windrunner" TurnInId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
-<If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-117.489" Y="1310.357" Z="56.74168" />
   <CustomBehavior File="TaxiRide" MobId="46552" DestName="Brill"/>
@@ -1541,7 +1541,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="SetHearthstone" MobId="6739" AreaId="228" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
 </If>
-<If Condition="!HasQuest(27478) &amp;&amp; !IsQuestCompleted(27478) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(27478) &amp;&amp; !IsQuestCompleted(27478) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
   <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
@@ -1708,6 +1708,7 @@
   </If>
 </If>
 <If Condition="!HasQuest(27480) &amp;&amp; !IsQuestCompleted(27480) &amp;&amp; !HasItem(61310)">
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   <CustomBehavior File="CollectThings" MobId="45728" MobState="Alive" CollectItemCount="1" CollectItemId="61310" HuntingGroundRadius="200" CollectUntil="RequiredCountReached">
     <Hotspot X="184.234" Y="442.7271" Z="-5.200301" />
     <Hotspot X="210.1897" Y="324.3748" Z="-15.57094" />
@@ -1760,7 +1761,7 @@
 <TurnIn QuestName="Relios the Relic Keeper" QuestId="27478" TurnInName="Dalar Dawnweaver" TurnInId="1938" X="456.391" Y="1472.7" Z="124.9997" />
 <TurnIn QuestName="Practical Vengeance" QuestId="27483" TurnInName="Dalar Dawnweaver" TurnInId="1938" X="456.391" Y="1472.7" Z="124.9997" />
 <TurnIn QuestName="Ley Energies" QuestId="27480" TurnInName="Dalar Dawnweaver" TurnInId="1938" X="456.391" Y="1472.7" Z="124.9997" />
-<If Condition="!HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
   <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
@@ -1917,7 +1918,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](20-20)Azshara[Cava]" />
 </If>
 <PickUp QuestName="Only One May Enter" QuestId="27484" GiverName="Dalar Dawnweaver" GiverId="1938" X="456.391" Y="1472.7" Z="124.9997" />
-<If Condition="HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 20">
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
   <CustomBehavior File="TaxiRide" MobId="2226" DestName="The Forsaken Front"/>
   <RunTo X="-114.142" Y="1312.32" Z="56.7416" />
@@ -1969,7 +1970,7 @@
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
   </While>
 </If>
-<If Condition="!HasQuest(27547) &amp;&amp; !IsQuestCompleted(27547) &amp;&amp; Me.Level &gt;= 200">
+<If Condition="!HasQuest(27547) &amp;&amp; !IsQuestCompleted(27547) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
   <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
