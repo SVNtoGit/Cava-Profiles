@@ -823,10 +823,10 @@
 </If>
 <If Condition="HasQuest(27392) &amp;&amp; !IsQuestCompleted(27392)" >
   <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
-  <RunTo X="1462.461" Y="-3841.666" Z="116.8665" />
-  <RunTo X="1455.857" Y="-3909.233" Z="136.4641" />
+    <RunTo X="1462.809" Y="-3827.552" Z="114.0675" />
+    <RunTo X="1467.522" Y="-3882.057" Z="125.2929" />
   <CustomBehavior File="CollectThings" QuestId="27392" MobId="45450" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1455.857" Y="-3909.233" Z="136.4641" />
+    <Hotspot X="1451.53" Y="-3911.31" Z="137.2836" />
   </CustomBehavior>
   <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
 </If>
@@ -1264,7 +1264,7 @@
 </If>
 <If Condition="HasQuest(27456) &amp;&amp; !IsQuestCompleted(27456)">
   <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
-  <CustomBehavior File="CollectThings" QuestId="27456" MobId1="8603" MobId2="8605" MobState="Alive" CollectItemCount="15" CollectItemId="13853" HuntingGroundRadius="200" >
+  <CustomBehavior File="Cava\PullMobs" QuestId="27456" PullMob="True" MobId1="8603" MobId2="8605" MobState="Alive" CollectItemCount="15" CollectItemId="13853" HuntingGroundRadius="200" >
     <Hotspot X="2134.434" Y="-5194.059" Z="77.73852" />
     <Hotspot X="2110.204" Y="-5160.642" Z="78.1491" />
     <Hotspot X="2077.159" Y="-5136.557" Z="82.82204" />
