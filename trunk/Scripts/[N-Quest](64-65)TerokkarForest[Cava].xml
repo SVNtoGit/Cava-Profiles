@@ -1580,16 +1580,20 @@
   <If Condition="!IsObjectiveComplete(1, 10847)">
     <CustomBehavior File="FlyTo" X="-1589.872" Y="4382.911" Z="34.97273" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <UseMount Value="false" />
+    <RunTo X="-1701.307" Y="4380.521" Z="52.64868" />
     <Objective QuestName="The Eyes of Skettis" QuestId="10847" Type="CollectItem" ItemId="25638" CollectCount="1" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <RunTo X="-1657.918" Y="4404.031" Z="45.40342" />
+    <UseMount Value="true" />
   </If>
   <If Condition="!IsObjectiveComplete(2, 10847)">
-    <CustomBehavior File="FlyTo" X="-1824.587" Y="3979.469" Z="48.14524" />
-    <CustomBehavior File="FlyTo" X="-1831.562" Y="3954.027" Z="46.55114" />
+    <CustomBehavior File="FlyTo" X="-1934.697" Y="3860.733" Z="-1.092962" />
     <CustomBehavior File="ForcedDismount" />
+    <UseMount Value="false" />
+    <RunTo X="-1828.662" Y="3954.654" Z="46.55563" />
     <Objective QuestName="The Eyes of Skettis" QuestId="10847" Type="CollectItem" ItemId="25642" CollectCount="1" />
-    <RunTo X="-1832.458" Y="3959.662" Z="46.56168" />
+    <RunTo X="-1863.968" Y="3905.651" Z="38.75685" />
+    <UseMount Value="true" />
   </If>
 </If>
 <If Condition="HasQuest(10847)">
@@ -1742,7 +1746,7 @@
     </If>
     <While Condition="HasQuest(10852) &amp;&amp; !IsQuestCompleted(10852) &amp;&amp; HasItem(31655)" >
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" MovementBy="NavigatorPreferred" QuestId="10852" MobId="22314" Range="8" NotMoving="True" CollectionDistance="2000" X="-2514.459" Y="5441.912" Z="0.04761513" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MovementBy="NavigatorPreferred" QuestId="10852" MobId1="185202" MobId2="185203" MobId3="185204" MobId4="155205" ObjectType="GameObject" CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-2514.459" Y="5441.912" Z="0.04761513" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MovementBy="NavigatorPreferred" QuestId="10852" MobId1="185202" MobId2="185203" MobId3="185204" MobId4="185205" ObjectType="GameObject" CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-2514.459" Y="5441.912" Z="0.04761513" />
       <If Condition="GetItemCount(31655) &gt;= 1" >
         <CustomBehavior File="WaitTimer" QuestId="10852" WaitTime="15000" />
       </If>
@@ -2030,41 +2034,36 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsObjectiveComplete(1, 10840) || IsObjectiveComplete(2, 10840)" />
-</If>
-<Objective QuestName="The Tomb of Lights" QuestId="10840" Type="KillMob" MobId="21370" KillCount="10" />
-<Objective QuestName="The Tomb of Lights" QuestId="10840" Type="KillMob" MobId="21368" KillCount="10" />
-<If Condition="HasQuest(10840) &amp;&amp; IsQuestCompleted(10840)" >
-  <If Condition="!CanFly() &amp;&amp; HasQuest(10874) &amp;&amp; !IsQuestCompleted(10874)">
-    <RunTo X="-2995.579" Y="4545.104" Z="-21.71549" />
-  </If>
+  <Objective QuestName="The Tomb of Lights" QuestId="10840" Type="KillMob" MobId="21370" KillCount="10" />
+  <Objective QuestName="The Tomb of Lights" QuestId="10840" Type="KillMob" MobId="21368" KillCount="10" />
+  <RunTo X="-2995.579" Y="4545.104" Z="-21.71549" />
 </If>
 <If Condition="HasQuest(10874) &amp;&amp; !IsQuestCompleted(10874)" >
-    <CustomBehavior File="FlyTo" X="-3628.039" Y="4076.332" Z="54.28759" />
-    <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="FlyTo" X="-3628.039" Y="4076.332" Z="54.28759" />
+  <CustomBehavior File="ForcedDismount" />
   <If Condition="!IsObjectiveComplete(1, 10874)" >
     <RunTo X="-3411.573" Y="4091.56" Z="62.65937" />
   </If>
   <While Condition="!IsObjectiveComplete(1, 10874)" >
-    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185216" X="-3423.222" Y="4105.196" Z="62.67807" />
+    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185216" X="-3423.222" Y="4105.196" Z="62.67807" />
   </While>
   <If Condition="!IsObjectiveComplete(2, 10874)" >
     <RunTo X="-3509.417" Y="4082.14" Z="92.93889" />
   </If>
   <While Condition="!IsObjectiveComplete(2, 10874)" >
-    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185217" X="-3511.869" Y="4081.113" Z="93.51105" />
+    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185217" X="-3511.869" Y="4081.113" Z="93.51105" />
   </While>
   <If Condition="!IsObjectiveComplete(4, 10874)" >
-    <CustomBehavior File="FlyTo" X="-3628.039" Y="4076.332" Z="54.28759" />
     <RunTo X="-3604.634" Y="4050.653" Z="111.9814" />
   </If>
   <While Condition="!IsObjectiveComplete(4, 10874)" >
-    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185219" X="-3511.869" Y="4081.113" Z="93.51105" />
+    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185219" X="-3511.869" Y="4081.113" Z="93.51105" />
   </While>
   <If Condition="!IsObjectiveComplete(3, 10874)" >
     <RunTo X="-3495.328" Y="4015.074" Z="113.1137" />
   </If>
   <While Condition="!IsObjectiveComplete(3, 10874)" >
-    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185218" X="-3511.869" Y="4081.113" Z="93.51105" />
+    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185218" X="-3511.869" Y="4081.113" Z="93.51105" />
   </While>
   <RunTo X="-3628.039" Y="4076.332" Z="54.28759" />
 </If>
