@@ -437,7 +437,7 @@
   <RunTo X="-7092.517" Y="-3908.433" Z="11.24682" />
   <CustomBehavior File="RunMacro" Macro="/cancelform" />
   <CustomBehavior File="ForcedDismount" />
-
+  <DisableBehavior Name="Combat" />
 <!--  <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="40604" X="-7092.517" Y="-3908.433" Z="11.24682" />
 
 
@@ -449,7 +449,14 @@
   
   <CustomBehavior File="SpecificQuests\24910-Tanaris-RocketRescue" />
 </If>
-<TurnIn QuestName="Rocket Rescue" QuestId="24910" TurnInName="Megs Dreadshredder" TurnInId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+<If Condition="HasQuest(24910)" >
+  <If Condition="Me.IsOnTransport" >
+    <CustomBehavior File="Misc\RunLua" Lua= "VehicleExit()" />
+  </If>
+  <EnableBehavior Name="Combat" />
+  <RunTo X="-7211.632" Y="-3757.743" Z="9.190154" />
+  <TurnIn QuestName="Rocket Rescue" QuestId="24910" TurnInName="Megs Dreadshredder" TurnInId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
+</If>
 <If Condition="!HasQuest(24947) &amp;&amp; !IsQuestCompleted(24947) &amp;&amp; Me.LevelFraction &gt;= 47.55">
   <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
