@@ -1144,99 +1144,23 @@
 <Objective QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" Type="CollectItem" ItemId="5835" CollectCount="1" />
 <Objective QuestName="Banner of the Stonemaul" QuestId="27408" Type="Collect" CollectCount="1" ItemId="33086" />
 <Objective QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" Type="CollectItem" ItemId="5836" CollectCount="1" />
-<If Condition="HasQuest(1168) &amp;&amp; !IsQuestCompleted(1168)" >
-  <While Condition="!IsObjectiveComplete(3, 1168)" >
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4346.631" Y="-2990.993" Z="32.43918" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4386.152" Y="-2996.354" Z="29.22396" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4422.398" Y="-2979.122" Z="27.79028" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4431.141" Y="-2940.172" Z="23.39896" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4449.97" Y="-2904.878" Z="20.4632" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4424.513" Y="-2935.737" Z="23.93255" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4386.808" Y="-2950.331" Z="24.53487" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409) &amp;&amp; !IsObjectiveComplete(3, 1168)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId="4328" MobHpPercentLeft="90" X="-4370.117" Y="-3207.467" Z="34.73565" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4328" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <Objective QuestName="Army of the Black Dragon" QuestId="1168" Type="KillMob" MobId="4328" KillCount="5" />
-  </While>
-</If>
 <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409)" >
   <While Condition="!IsQuestCompleted(27409)" >
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4346.631" Y="-2990.993" Z="32.43918" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4328" MobId2="4331" MobHpPercentLeft="90" X="-4386.152" Y="-2996.354" Z="29.22396" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4328" MobId2="4331" MobHpPercentLeft="90" X="-4422.398" Y="-2979.122" Z="27.79028" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4328" MobId2="4331" MobHpPercentLeft="90" X="-4431.141" Y="-2940.172" Z="23.39896" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4328" MobId2="4331" MobHpPercentLeft="90" X="-4449.97" Y="-2904.878" Z="20.4632" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4424.513" Y="-2935.737" Z="23.93255" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4386.808" Y="-2950.331" Z="24.53487" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4351.343" Y="-3028.569" Z="33.76854" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4324.805" Y="-3058.591" Z="32.11124" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4338.609" Y="-3309.877" Z="34.27548" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4323.421" Y="-3271.691" Z="35.81947" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4338.713" Y="-3233.437" Z="34.56892" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
-    <If Condition="!IsQuestCompleted(27409)">
-      <CustomBehavior File="CombatUseItemOn" ItemId="33088" MobId1="4329" MobId2="4331" MobHpPercentLeft="90" X="-4370.117" Y="-3207.467" Z="34.73565" />  -->
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" WaitForNpcs="False" />
-    </If>
+    <CustomBehavior File="InteractWith" QuestId="27409" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+      <HuntingGrounds>
+        <Hotspot X="-4346.631" Y="-2990.993" Z="32.43918" />
+        <Hotspot X="-4386.152" Y="-2996.354" Z="29.22396" />
+        <Hotspot X="-4422.398" Y="-2979.122" Z="27.79028" />
+        <Hotspot X="-4431.141" Y="-2940.172" Z="23.39896" />
+        <Hotspot X="-4449.97" Y="-2904.878" Z="20.4632" />
+        <Hotspot X="-4424.513" Y="-2935.737" Z="23.93255" />
+        <Hotspot X="-4386.808" Y="-2950.331" Z="24.53487" />
+        <Hotspot X="-4370.117" Y="-3207.467" Z="34.73565" />
+      </HuntingGrounds>
+    </CustomBehavior>
   </While>
 </If>
+<Objective QuestName="Army of the Black Dragon" QuestId="1168" Type="KillMob" MobId="4328" KillCount="5" />
 <Objective QuestName="Army of the Black Dragon" QuestId="1168" Type="KillMob" MobId="4329" KillCount="10" />
 <Objective QuestName="Army of the Black Dragon" QuestId="1168" Type="KillMob" MobId="4331" KillCount="10" />
 <Objective QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" Type="CollectItem" ItemId="5834" CollectCount="1" />
