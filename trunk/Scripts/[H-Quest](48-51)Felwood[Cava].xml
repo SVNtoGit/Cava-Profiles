@@ -793,7 +793,7 @@
     <CustomBehavior File="CollectThings" MobId1="47923" MobId2="47917" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="1" MobState="Alive" >
       <Hotspot X="6439.576" Y="-946.642" Z="423.1492" />
     </CustomBehavior>
-    <CustomBehavior File="WaitTimer" WaitTime="70000" />
+    <CustomBehavior File="WaitTimer" QuestId="28257" WaitTime="70000" />
     <If Condition="!IsQuestCompleted(28257)">
       <CustomBehavior File="AbandonQuest" QuestId="28257" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -816,26 +816,20 @@
   <RunTo X="6576.189" Y="-1005.861" Z="460.2069" />
   <While Condition="!IsQuestCompleted(28261)">
     <If Condition="!Me.HasAura(89152)" >
+      <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63419)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </If>
     <While Condition="!Me.HasAura(89152)" >
-      <RunTo X="6576.189" Y="-1005.861" Z="460.2069" />
+      <RunTo X="6488.852" Y="-824.8346" Z="474.2901" />
+      <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63419)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </While>
-    <CustomBehavior File="InteractWith" QuestId="28261" MobId="48154" MobState="Alive" CollectionDistance="1000" >
-      <HuntingGrounds WaypointVisitStrategy="Random" >
-      <Hotspot X="6596.695" Y="-879.0928" Z="474.095" />
-      <Hotspot X="6572.603" Y="-847.1129" Z="473.3822" />
-      <Hotspot X="6534.563" Y="-833.7231" Z="474.5768" />
-      <Hotspot X="6495.088" Y="-825.8958" Z="473.7718" />
-      <Hotspot X="6460.129" Y="-804.6471" Z="473.9159" />
-      <Hotspot X="6428.404" Y="-780.3223" Z="472.4674" />
-      </HuntingGrounds>
-    </CustomBehavior>
+    <CustomBehavior File="InteractWith" QuestId="28261" MobId="48154" MobState="Alive" CollectionDistance="1000" WaitForNpcs="False" X="6488.852" Y="-824.8346" Z="474.2901" />
   </While>
 </If>
+<CustomBehavior File="Halt"/>
 <If Condition="HasQuest(28261)" >
    <While Condition="HasQuest(28261)" >
     <CustomBehavior File="CompleteLogQuest" QuestId="28261" /><!--<PickUp QuestName="Navarax's Gambit" QuestId="28264"-->
