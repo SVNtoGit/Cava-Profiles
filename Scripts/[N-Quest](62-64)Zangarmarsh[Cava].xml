@@ -1517,7 +1517,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="SetHearthstone" MobId="18907" X="-174.478" Y="5529.211" Z="29.40746" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="18907" X="-174.478" Y="5529.211" Z="29.40746" />
 </If>
 <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="Plants of Zangarmarsh" QuestId="9802" GiverName="Lauranna Thar'well" GiverId="17909" X="-215.5434" Y="5437.267" Z="21.42747" />
@@ -2518,7 +2518,7 @@
   <PickUp QuestName="Stinging the Stingers" QuestId="9841" GiverName="Gambarinka" GiverId="18015" X="286.3947" Y="7884.893" Z="26.89296" />
   <If Condition="HasQuest(9775)">
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-    <CustomBehavior File="SetHearthstone" MobId="18245" X="228.1627" Y="7933.877" Z="25.07795" />
+    <CustomBehavior File="Cava\SetHearthstone" MobId="18245" X="228.1627" Y="7933.877" Z="25.07795" />
   </If>
   <TurnIn QuestName="Report to Shadow Hunter Denjai" QuestId="9775" TurnInName="Shadow Hunter Denjai" TurnInId="18013" X="229.6873" Y="7929.756" Z="41.11319" />
   <If Condition="!HasQuest(9846) &amp;&amp; !IsQuestCompleted(9846)">
@@ -2857,7 +2857,7 @@
     <PickUp QuestName="A Message to Telaar" QuestId="9792" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
   </If>
   <If Condition="!HasQuest(9830) &amp;&amp; !IsQuestCompleted(9830)">
-    <CustomBehavior File="SetHearthstone" MobId="18908" X="1056.379" Y="7370.99" Z="39.58428" />
+    <CustomBehavior File="Cava\SetHearthstone" MobId="18908" X="1056.379" Y="7370.99" Z="39.58428" />
   </If>
   <PickUp QuestName="Stinger Venom" QuestId="9830" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />
   <PickUp QuestName="Lines of Communication" QuestId="9833" GiverName="Puluu" GiverId="18009" X="974.8629" Y="7421.645" Z="31.90633" />

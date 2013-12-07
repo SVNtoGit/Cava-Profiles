@@ -337,7 +337,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="SetHearthstone" MobId="43606" X="3360.08" Y="950.816" Z="7.404392" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="43606" X="3360.08" Y="950.816" Z="7.404392" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="3770" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="1205" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
 </If>
@@ -532,7 +532,7 @@
   <!--The mor'shan Ramparts FP-->
   <RunTo X="3048.966" Y="-497.2178" Z="205.64" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" X="3050.128" Y="-496.0035" Z="205.6399" />
-  <CustomBehavior File="SetHearthstone" MobId="43624" X="3051.23" Y="-526.09" Z="205.6392" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="43624" X="3051.23" Y="-526.09" Z="205.6392" />
 </If>
 <PickUp QuestName="Troll Charm" QuestId="6462" GiverName="Mitsuwa" GiverId="12721" X="3044.002" Y="-542.4948" Z="205.6395" />
 <TurnIn QuestName="Tweedle's Dumb" QuestId="13936" TurnInName="Tweedle" TurnInId="34395" X="2986.986" Y="-489.9983" Z="198.6281" />
@@ -690,7 +690,7 @@
 <PickUp QuestName="Mass Production" QuestId="13977" GiverName="Flooz" GiverId="34569" X="2088.207" Y="-1181.002" Z="101.7624" />
 <If Condition="!HasQuest(25) &amp;&amp; !IsQuestCompleted(25)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="SetHearthstone" MobId="43633" X="2091.67" Y="-1208.05" Z="101.7937" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="43633" X="2091.67" Y="-1208.05" Z="101.7937" />
   <PickUp QuestName="Simmer Down Now" QuestId="25" GiverName="Captain Tarkan" GiverId="34559" X="2075.384" Y="-1190.809" Z="100.9863" />
   <RunTo X="2073.166" Y="-1161.186" Z="94.98384" />
   <CustomBehavior File="MyCTM" X="2009.972" Y="-1114.522" Z="94.5151" />

@@ -548,7 +548,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="SetHearthstone" MobId="45496" X="1097.57" Y="1587.29" Z="28.53053" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="45496" X="1097.57" Y="1587.29" Z="28.53053" />
 </If>
 <TurnIn QuestName="The Warchief's Fleet" QuestId="27065" TurnInName="Admiral Hatchet" TurnInId="44916" X="1068.75" Y="1601.3" Z="28.00162" />
 <PickUp QuestName="Steel Thunder" QuestId="27069" GiverName="Admiral Hatchet" GiverId="44916" X="1068.75" Y="1601.3" Z="28.00162" />
@@ -697,7 +697,7 @@
 <If Condition="!HasQuest(27226) &amp;&amp; !IsQuestCompleted(27226)">
   <RunTo X="479.3072" Y="1542.345" Z="130.4013" />
   <CustomBehavior File="InteractWith" MobId="2226"  NonCompeteDistance="0" MobState="Alive" X="477.035" Y="1542.86" Z="130.544" />
-  <CustomBehavior File="SetHearthstone" MobId="6739" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
+  <CustomBehavior File="Cava\SetHearthstone" MobId="6739" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
 </If>
 <PickUp QuestName="Hair of the Dog" QuestId="27226" GiverName="Warlord Torok" GiverId="44917" X="493.005" Y="1528.26" Z="130.3365" />
 <PickUp QuestName="Reinforcements from Fenris" QuestId="27231" GiverName="Admiral Hatchet" GiverId="44916" X="492.161" Y="1526.04" Z="130.7133" />
@@ -1539,7 +1539,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="SetHearthstone" MobId="6739" AreaId="228" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
+  <CustomBehavior File="Cava\SetHearthstone" MobId="6739" AreaId="228" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
 </If>
 <If Condition="!HasQuest(27478) &amp;&amp; !IsQuestCompleted(27478) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />

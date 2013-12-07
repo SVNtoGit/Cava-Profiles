@@ -212,7 +212,7 @@
 <!--# # # Level 13.94 # # # -->
 <If Condition="!HasQuest(26843) &amp;&amp; !IsQuestCompleted(26843)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-  <CustomBehavior File="SetHearthstone" MobId="6734" X="-5377.913" Y="-2973.908" Z="323.1692" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="6734" X="-5377.913" Y="-2973.908" Z="323.1692" />
 </If>
 <If Condition="HasQuest(26176)">
   <TurnIn QuestName="Stormpike's Orders" QuestId="13636" TurnInName="Mountaineer Stormpike" TurnInId="1343" X="-4817.901" Y="-2695.613" Z="326.655" />
@@ -289,7 +289,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="SetHearthstone" MobId="6734" X="-5377.913" Y="-2973.908" Z="323.1692" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="6734" X="-5377.913" Y="-2973.908" Z="323.1692" />
 </If>
 <If Condition="(Me.LevelFraction &gt;= 16.66 )">
   <RunTo X="-5663.654" Y="-4262.426" Z="407.0248" />
