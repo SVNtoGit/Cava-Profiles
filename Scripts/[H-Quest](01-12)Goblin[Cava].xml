@@ -1190,18 +1190,22 @@ step
 <TurnIn QuestName="Get to the Gyrochoppa!" QuestId="14241" TurnInName="Gyrochoppa" TurnInId="36127" X="849.0469" Y="3334.667" Z="6.826744" />
 <PickUp QuestName="Precious Cargo" QuestId="14242" GiverName="Gyrochoppa" GiverId="36127" X="849.0469" Y="3334.667" Z="6.826744" />
 <If Condition="HasQuest(14242)" >
+  <DisableBehavior Name="Pull" />
   <CustomBehavior File="WaitTimer" WaitTime="21000" />
   <RunTo X="991.7805" Y="3848.961" Z="3.229805" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14242" MobId="36145" NumOfTimes="1" CollectionDistance="10" X="993.2761" Y="3852.146" Z="3.22851" />
   <RunTo X="979.8125" Y="3836.643" Z="3.230398" />
   <RunTo X="991.7805" Y="3848.961" Z="3.229805" />
 </If>
-
+<If Condition="!HasQuest(14244) &amp;&amp; !IsQuestCompleted(14244)" >
+  <DisableBehavior Name="Pull" />
+</If>
 <TurnIn QuestName="Precious Cargo" QuestId="14242" TurnInName="Thrall" TurnInId="36145" X="993.2761" Y="3852.146" Z="3.22851" />
 <PickUp QuestName="Meet Me Up Top" QuestId="14326" GiverName="Thrall" GiverId="36145" X="993.2761" Y="3852.146" Z="3.22851" />
 <TurnIn QuestName="Meet Me Up Top" QuestId="14326" TurnInName="Thrall" TurnInId="36161" X="980.9236" Y="3823.163" Z="11.18745" />
 <PickUp QuestName="Warchief's Revenge" QuestId="14243" GiverName="Thrall" GiverId="36161" X="980.9236" Y="3823.163" Z="11.18745" />
 <If Condition="HasQuest(14243) &amp;&amp; !IsQuestCompleted(14243)" >
+  <DisableBehavior Name="Combat" />
   <While Condition="(!Me.IsOnTransport)" >
     <CustomBehavior File="AbandonQuest" QuestId="14243" />
     <CustomBehavior File="WaitTimer" WaitTime="5000" />
@@ -1211,6 +1215,7 @@ step
   <CustomBehavior File="Cava\14243-fixed-LostIsles-WarchiefsRevenge" />
   <While Condition="(Me.IsOnTransport)" >
   </While>
+  <EnableBehavior Name="Combat" />
 </If>
 <TurnIn QuestName="Warchief's Revenge" QuestId="14243" TurnInName="Thrall" TurnInId="36188" X="872.7222" Y="2761.36" Z="119.2013" />
 <PickUp QuestName="Farewell, For Now" QuestId="14445" GiverName="Thrall" GiverId="36188" X="872.7222" Y="2761.36" Z="119.2013" />
@@ -1220,12 +1225,14 @@ step
   <RunTo X="874.6925" Y="2746.245" Z="122.2179" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14244" MobId="196439" GossipOptions="1" ObjectType="GameObject" X="874.6925" Y="2746.245" Z="122.2179" />
   <CustomBehavior File="WaitTimer" WaitTime="15000" />
+  <EnableBehavior Name="Pull" />
 </If>
 <TurnIn QuestName="Up, Up &amp; Away!" QuestId="14244" TurnInName="Foreman Dampwick" TurnInId="36470" X="943.8055" Y="2372.589" Z="5.521392" />
 <PickUp QuestName="It's a Town-In-A-Box" QuestId="14245" GiverName="Foreman Dampwick" GiverId="36470" X="943.8055" Y="2372.589" Z="5.521392" />
 <If Condition="HasQuest(14245) &amp;&amp; !IsQuestCompleted(14245)" >
   <RunTo X="913.707" Y="2331.718" Z="10.54969" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14245" MobId="201938" ObjectType="GameObject" X="913.707" Y="2331.718" Z="10.54969" />
+  <CustomBehavior File="WaitTimer" WaitTime="20000" />
 </If>
 <TurnIn QuestName="It's a Town-In-A-Box" QuestId="14245" TurnInName="Foreman Dampwick" TurnInId="36471" X="932.1511" Y="2335.478" Z="4.977395" />
 <If Condition="!HasQuest(27139) &amp;&amp; !IsQuestCompleted(27139)" >
@@ -1638,7 +1645,10 @@ step
 <PickUp QuestName="Volcanoth!" QuestId="24958" GiverName="Hobart Grapplehammer" GiverId="38120" X="1483.085" Y="1271.307" Z="106.7784" />
 <If Condition="HasQuest(24958) &amp;&amp; !IsQuestCompleted(24958)" >
   <RunTo X="1274.416" Y="1169.313" Z="117.9313" />
+  <!--
   <CustomBehavior File="CombatUseItemOn" QuestId="24958" MobId="38855" ItemId="52043" MobHpPercentLeft="100" UseOnce="False" WaitTime="1100" MaxRange="60" X="1217.207" Y="1148.594" Z="117.9233" />
+  -->
+		<CustomBehavior File="SpecificQuests\24958-LostIsles-Volcanoth" />
 </If>
 <TurnIn QuestName="Volcanoth!" QuestId="24958" TurnInName="Sassy Hardwrench" TurnInId="38928" X="1163.548" Y="1093.889" Z="123.2515" />
 <PickUp QuestName="Old Friends" QuestId="25023" GiverName="Sassy Hardwrench" GiverId="38928" X="1163.548" Y="1093.889" Z="123.2515" />
@@ -1750,7 +1760,7 @@ step
       <Hotspot X="1832.906" Y="1888.834" Z="173.8305" />
       <Hotspot X="1799.441" Y="1911.166" Z="172.5562" />
     </CustomBehavior>
-	<CustomBehavior File="UseItemOn" QuestId="25122" MobId="38746" MobState="Alive" ItemId="52484" Range="5" X="1913.413" Y="1807.932" Z="170.1178" />
+    <CustomBehavior File="InteractWith" QuestId="25122" InteractByUsingItemId="52484" MobId="38746" MobState="Alive" Range="5" WaitTime="1500" X="1913.413" Y="1807.932" Z="170.1178" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 25122)">
     <CustomBehavior File="CollectThings" ObjectId="202553" CollectItemCount="1" CollectItemId="52484" HuntingGroundRadius="200" >
@@ -1766,7 +1776,7 @@ step
       <Hotspot X="1832.906" Y="1888.834" Z="173.8305" />
       <Hotspot X="1799.441" Y="1911.166" Z="172.5562" />
     </CustomBehavior>
-	<CustomBehavior File="UseItemOn" QuestId="25122" MobId="38647" MobState="Alive" ItemId="52484" Range="5" X="1826.609" Y="1809.67" Z="173.244" />
+    <CustomBehavior File="InteractWith" QuestId="25122" InteractByUsingItemId="52484" MobId="38647" MobState="Alive" Range="5" WaitTime="1500" X="1826.609" Y="1809.67" Z="173.244" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 25122)">
     <CustomBehavior File="CollectThings" ObjectId="202553" CollectItemCount="1" CollectItemId="52484" HuntingGroundRadius="200" >
@@ -1782,7 +1792,7 @@ step
       <Hotspot X="1832.906" Y="1888.834" Z="173.8305" />
       <Hotspot X="1799.441" Y="1911.166" Z="172.5562" />
     </CustomBehavior>
-	<CustomBehavior File="UseItemOn" QuestId="25122" MobId="38441" MobState="Alive" ItemId="52484" Range="5" X="1763.078" Y="1810.266" Z="171.6502" />
+    <CustomBehavior File="InteractWith" QuestId="25122" InteractByUsingItemId="52484" MobId="38441" MobState="Alive" Range="5" WaitTime="1500" X="1763.078" Y="1810.266" Z="171.6502" />
   </While>
   <While Condition="!IsObjectiveComplete(4, 25122)">
     <CustomBehavior File="CollectThings" ObjectId="202553" CollectItemCount="1" CollectItemId="52484" HuntingGroundRadius="200" >
@@ -1798,7 +1808,7 @@ step
       <Hotspot X="1832.906" Y="1888.834" Z="173.8305" />
       <Hotspot X="1799.441" Y="1911.166" Z="172.5562" />
     </CustomBehavior>
-	<CustomBehavior File="UseItemOn" QuestId="25122" MobId1="38745" MobId2="38409" MobState="Alive" ItemId="52484" Range="5" X="1802.853" Y="1917.696" Z="172.885" />
+    <CustomBehavior File="InteractWith" QuestId="25122" InteractByUsingItemId="52484" MobId="38745" MobState="Alive" Range="5" WaitTime="1500" X="1802.853" Y="1917.696" Z="172.885" />
   </While>
 </If>
 <TurnIn QuestName="Morale Boost" QuestId="25122" TurnInName="Assistant Greely" TurnInId="39199" />
@@ -1834,10 +1844,30 @@ step
   <CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
 <!--MALE <PickUp QuestName="What Kind of Name is Chip, Anyway?" QuestId="25203" GiverName="Ace" GiverId="38441" />-->
 </While>
+<If Condition="HasQuest(25204) &amp;&amp; !IsQuestCompleted(25204)" >
+  <While Condition="!IsObjectiveComplete(1, 25204)" >
+    <RunTo X="2465.369" Y="2089.752" Z="14.6073" />
+    <CustomBehavior File="InteractWith" QuestId="25204" QuestObjectiveIndex="1" MobId="202609" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" X="2465.369" Y="2089.752" Z="14.6073" />
+  </While>
+  <While Condition="!IsObjectiveComplete(3, 25204)" >
+    <RunTo X="2484.281" Y="2101.4" Z="15.73711" />
+    <CustomBehavior File="InteractWith" QuestId="25204" QuestObjectiveIndex="3" MobId="202611" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" X="2484.281" Y="2101.4" Z="15.73711" />
+  </While>
+  <While Condition="!IsObjectiveComplete(2, 25204)" >
+    <RunTo X="2525.77" Y="2116.209" Z="16.47875" />
+    <CustomBehavior File="InteractWith" QuestId="25204" QuestObjectiveIndex="2" MobId="202610" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" X="2525.77" Y="2116.209" Z="16.47875" />
+  </While>
+  <While Condition="!IsObjectiveComplete(4, 25204)" >
+    <RunTo X="2499.28" Y="2129.429" Z="14.8807" />
+    <CustomBehavior File="InteractWith" QuestId="25204" QuestObjectiveIndex="4" MobId="202612" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="5" X="2499.28" Y="2129.429" Z="14.8807" />
+  </While>
+<!--
 <Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202609" UseCount="1" />
 <Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202611" UseCount="1" />
 <Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202610" UseCount="1" />
 <Objective QuestName="Release the Valves" QuestId="25204" Type="UseObject" ObjectId="202612" UseCount="1" />
+-->
+</If>
 <If Condition="HasQuest(25203) &amp;&amp; !IsQuestCompleted(25203)" >
   <Objective QuestName="What Kind of Name is Chip, Anyway?" QuestId="25203" Type="KillMob" MobId="39363" KillCount="1" />
 </If>
