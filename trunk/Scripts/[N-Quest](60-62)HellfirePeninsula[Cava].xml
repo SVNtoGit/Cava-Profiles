@@ -1512,7 +1512,7 @@
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
     <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="SetHearthstone" MobId="16826" X="-708.8713" Y="2739.131" Z="94.7336" />
+    <CustomBehavior File="Cava\SetHearthstone" MobId="16826" X="-708.8713" Y="2739.131" Z="94.7336" />
   </If>
   <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Force Commander Danath" QuestId="10254" GiverName="Marshal Isildor" GiverId="19308" X="-681.0013" Y="2719.797" Z="94.38376" />
@@ -1808,7 +1808,7 @@
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-    <CustomBehavior File="SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
+    <CustomBehavior File="Cava\SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
   </If>
   <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Report to Nazgrel" QuestId="10291" GiverName="General Krakork" GiverId="19255" X="212.7652" Y="2653.919" Z="88.0172" />
@@ -2460,7 +2460,7 @@
   <PickUp QuestName="Cruel Taskmasters" QuestId="9399" GiverName="Ikan" GiverId="16799" X="96.1441" Y="4347.313" Z="102.2744" />
   <PickUp QuestName="Deadly Predators" QuestId="9398" GiverName="Scout Vanura" GiverId="16797" X="165.886" Y="4334.553" Z="111.6543" />
   <If Condition="HasQuest(10093)">
-    <CustomBehavior File="SetHearthstone" MobId="18906" X="229.118" Y="4333.729" Z="119.0834" />
+    <CustomBehavior File="Cava\SetHearthstone" MobId="18906" X="229.118" Y="4333.729" Z="119.0834" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </If>
   <TurnIn QuestName="The Temple of Telhamat" QuestId="10093" TurnInName="Amaan the Wise" TurnInId="16796" X="222.8037" Y="4330.038" Z="119.0834" />
