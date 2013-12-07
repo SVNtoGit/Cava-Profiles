@@ -546,6 +546,9 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](49-52)BurningSteppes[Cava]" />
 </If>
 <PickUp QuestName="Lunk's Task" QuestId="27956" GiverName="Lunk" GiverId="47269" X="-6892.28" Y="-1860.73" Z="251.0352" />
+<If Condition="HasQuest(28512)">
+  <TurnIn QuestName="To the Aid of the Thorium Brotherhood" QuestId="28512" TurnInName="Jack Rockleg" TurnInId="47266" X="-6893.81" Y="-1853.1" Z="250.6843" />
+</If>
 <PickUp QuestName="A New Master... But Who?" QuestId="27963" GiverName="Jack Rockleg" GiverId="47266" X="-6893.81" Y="-1853.1" Z="250.6842" />
 <If Condition="!HasQuest(27960) &amp;&amp; !IsQuestCompleted(27960)">
   <RunTo X="-6905.343" Y="-1775.813" Z="240.7436" />
@@ -731,12 +734,12 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 </If>
-<TurnIn QuestName="Thorium Point: The Seat of the Brotherhood" QuestId="27965" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.8645" />
+<TurnIn QuestName="Thorium Point: The Seat of the Brotherhood" QuestId="27965" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <If Condition="(Me.LevelFraction &gt;= 49.55 )">
   <RunTo X="-8094.291" Y="-1019.495" Z="132.4989" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](49-52)BurningSteppes[Cava]" />
 </If>
-<PickUp QuestName="Rasha'krak" QuestId="28099" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.8645" />
+<PickUp QuestName="Rasha'krak" QuestId="28099" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <PickUp QuestName="The Spiders Have to Go" QuestId="27980" GiverName="Lookout Captain Lolo Longstriker" GiverId="14634" X="-6495.11" Y="-1164.92" Z="309.1934" />
 <PickUp QuestName="Curse These Fat Fingers" QuestId="27976" GiverName="Hansel Heavyhands" GiverId="14627" X="-6514.44" Y="-1181.33" Z="309.2555" />
 <PickUp QuestName="Heat That Just Don't Quit" QuestId="27981" GiverName="Hansel Heavyhands" GiverId="14627" X="-6514.44" Y="-1181.33" Z="309.2555" />
@@ -843,7 +846,7 @@
 <TurnIn QuestName="The Spiders Have to Go" QuestId="27980" TurnInName="Lookout Captain Lolo Longstriker" TurnInId="14634" X="-6495.11" Y="-1164.92" Z="309.1934" />
 <!--# # # Level 48 # # # -->
 <If Condition="HasQuest(28099)" >
-  <TurnIn QuestName="Rasha'krak" QuestId="28099" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.8645" />
+  <TurnIn QuestName="Rasha'krak" QuestId="28099" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
 </If>
 <If Condition="(Me.LevelFraction &gt;= 49.55 )">
@@ -975,12 +978,12 @@
     <Vendor Name="Master Smith Burninate" Entry="14624" Type="Repair" X="-6526.64" Y="-1185.78" Z="309.2666" />
   </Vendors></SetVendor>
 </If>
-<TurnIn QuestName="The Mountain-Lord's Support" QuestId="28035" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.8638" />
+<TurnIn QuestName="The Mountain-Lord's Support" QuestId="28035" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <If Condition="(Me.LevelFraction &gt;= 49.55 )">
   <RunTo X="-8094.291" Y="-1019.495" Z="132.4989" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](49-52)BurningSteppes[Cava]" />
 </If>
-<PickUp QuestName="Operation: Stir the Cauldron" QuestId="28052" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.8638" />
+<PickUp QuestName="Operation: Stir the Cauldron" QuestId="28052" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <If Condition="HasQuest(28052) &amp;&amp; !IsQuestCompleted(28052)" >
   <While Condition="!IsQuestCompleted(28052)" >
     <If Condition="!Me.IsOnTransport" >
@@ -1079,10 +1082,11 @@
   <RunTo X="-6720.373" Y="-1381.753" Z="209.9501" />
   <CustomBehavior File="MyCTM" X="-6714.228" Y="-1404.103" Z="182.9972" />
 </If>
-<TurnIn QuestName="Twisted Twilight Ties" QuestId="28060" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6680.89" Y="-1438.68" Z="168.4237" />
-<PickUp QuestName="From Whence He Came" QuestId="28062" GiverName="Overseer Oilfist" GiverId="14625" X="-6680.89" Y="-1438.68" Z="168.4237" />
-<PickUp QuestName="Minions of Calcinder" QuestId="28061" GiverName="Overseer Oilfist" GiverId="14625" X="-6680.89" Y="-1438.68" Z="168.4237" />
-<PickUp QuestName="Mouton Flamestar" QuestId="28514" GiverName="Overseer Oilfist" GiverId="14625" X="-6680.89" Y="-1438.68" Z="168.4237" />
+<TurnIn QuestName="Twisted Twilight Ties" QuestId="28060" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
+<PickUp QuestName="From Whence He Came" QuestId="28062" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
+<PickUp QuestName="Minions of Calcinder" QuestId="28061" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
+<CustomBehavior File="Halt"/>
+<PickUp QuestName="Mouton Flamestar" QuestId="28514" GiverName="Overseer Oilfist" GiverId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <If Condition="HasQuest(28061) &amp;&amp; !IsQuestCompleted(28061)" >
 </If>
 <Objective QuestName="Minions of Calcinder" QuestId="28061" Type="KillMob" MobId="47463" KillCount="6" />
@@ -1110,7 +1114,7 @@
   </While>
 </If>
 <If Condition="HasQuest(28064)" >
-  <TurnIn QuestName="Welcome to the Brotherhood" QuestId="28064" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.8638" />
+  <TurnIn QuestName="Welcome to the Brotherhood" QuestId="28064" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 </If>
 <If Condition="HasQuest(28514)" >
   <RunTo X="-8094.291" Y="-1019.495" Z="132.4989" />
