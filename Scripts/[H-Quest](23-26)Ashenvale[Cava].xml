@@ -312,7 +312,7 @@
     </Else>
   </If>
 </If>
-<If Condition="Me.LevelFraction &gt;= 260.46">
+<If Condition="Me.LevelFraction &gt;= 26.46">
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 331">
@@ -475,7 +475,7 @@
   </While>
 </If>
 <TurnIn QuestName="Naga at the Zoram Strand" QuestId="6442" TurnInName="Marukai" TurnInId="12719" X="3312.5" Y="969.976" Z="9.872747" />
-<If Condition="Me.LevelFraction &gt;= 260.46">
+<If Condition="Me.LevelFraction &gt;= 26.46">
   <RunTo X="1531.082" Y="-479.9166" Z="55.88746" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](26-31)StonetalonMountains[Cava]" />
 </If>
@@ -509,7 +509,7 @@
 <TurnIn QuestName="Keep the Fires Burning" QuestId="13890" TurnInName="Commander Grimfang" TurnInId="34122" X="3372.425" Y="1003.393" Z="4.718608" />
 <PickUp QuestName="Before You Go..." QuestId="13920" GiverName="Commander Grimfang" GiverId="34122" X="3372.425" Y="1003.393" Z="4.718608" />
 <TurnIn QuestName="Vorsha the Lasher" QuestId="6641" TurnInName="Warsong Runner" TurnInId="12863" X="3321.844" Y="981.64" Z="9.620334" />
-<If Condition="Me.LevelFraction &gt;= 260.46">
+<If Condition="Me.LevelFraction &gt;= 26.46">
   <RunTo X="1531.082" Y="-479.9166" Z="55.88746" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](26-31)StonetalonMountains[Cava]" />
 </If>
@@ -517,7 +517,7 @@
   <Objective QuestName="Before You Go..." QuestId="13920" Type="CollectItem" ItemId="46392" CollectCount="5" />
 </If>
 <TurnIn QuestName="Before You Go..." QuestId="13920" TurnInName="Commander Grimfang" TurnInId="34122" X="3372.425" Y="1003.393" Z="4.718608" />
-<If Condition="Me.LevelFraction &gt;= 260.46">
+<If Condition="Me.LevelFraction &gt;= 26.46">
   <RunTo X="1531.082" Y="-479.9166" Z="55.88746" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](26-31)StonetalonMountains[Cava]" />
 </If>
@@ -665,14 +665,19 @@
 <TurnIn QuestName="Put Out The Fire" QuestId="13884" TurnInName="Arctanus" TurnInId="34292" X="2492.703" Y="-1303.599" Z="135.034" />
 <PickUp QuestName="Vortex" QuestId="13888" GiverName="The Vortex" GiverId="34289" X="2490.533" Y="-1317.807" Z="137.2946" />
 <If Condition="HasQuest(13888) &amp;&amp; !IsQuestCompleted(13888)" >
-  <While Condition="!Me.IsOnTransport" >
-    <RunTo X="2494.426" Y="-1314.698" Z="135.0329" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34289"  GossipOptions="1" WaitTime="1000" X="2490.533" Y="-1317.807" Z="137.2946" />
-  </While>
-  <CustomBehavior File="Cava\13888-Ashenvale-qVortex" />
-  <While Condition="Me.IsOnTransport" >
+  <While Condition="!IsQuestCompleted(13888)" >
+    <While Condition="!Me.IsOnTransport" >
+      <RunTo X="2494.426" Y="-1314.698" Z="135.0329" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34289"  GossipOptions="1" WaitTime="1000" X="2490.533" Y="-1317.807" Z="137.2946" />
+    </While>
+    <DisableBehavior Name="Combat" />
+    <CustomBehavior File="Cava\13888-Ashenvale-qVortex" />
+    <EnableBehavior Name="Combat" />
+    <While Condition="Me.IsOnTransport" >
+    </While>
   </While>
 </If>
+<CustomBehavior File="Halt"/>
 <TurnIn QuestName="Vortex" QuestId="13888" TurnInName="Stickwad" TurnInId="34512" X="2501.031" Y="-1303.748" Z="135.0333" />
 <!--# # # Level 25 # # # -->
 <If Condition="Me.LevelFraction &gt;= 26.46">
