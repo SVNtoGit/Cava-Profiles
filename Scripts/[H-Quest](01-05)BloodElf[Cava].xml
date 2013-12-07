@@ -373,30 +373,8 @@
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </If>
 <PickUp QuestName="Aggression" QuestId="8334" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
-<If Condition="HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334)" >
-  <If Condition="!IsObjectiveComplete(1, 8334) &amp;&amp; !IsObjectiveComplete(2, 8334)" >
-    <SetGrindArea>
-    <GrindArea>
-    <Factions>7</Factions>
-	<Hotspots>
-      <Hotspot X="10265.37" Y="-6169.216" Z="20.98415" />
-      <Hotspot X="10271.16" Y="-6128.949" Z="21.82195" />
-      <Hotspot X="10284.89" Y="-6090.652" Z="25.1322" />
-      <Hotspot X="10244.87" Y="-6085.7" Z="23.72933" />
-      <Hotspot X="10217.22" Y="-6114.375" Z="18.10981" />
-      <Hotspot X="10191.39" Y="-6145.687" Z="19.57169" />
-      <Hotspot X="10171.23" Y="-6180.568" Z="21.02888" />
-      <Hotspot X="10138.67" Y="-6204.071" Z="16.46646" />
-      <Hotspot X="10177.97" Y="-6196.529" Z="19.70378" />
-      <Hotspot X="10207.92" Y="-6168.92" Z="19.17867" />
-    </Hotspots>
-    </GrindArea>
-    </SetGrindArea>
-    <GrindTo Condition="IsObjectiveComplete(1, 8334) || IsObjectiveComplete(2, 8334)" />
-  </If>
-  <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Tender" MobId="15271" KillCount="7"/>
-  <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Feral Tender" MobId="15294" KillCount="7"/>
-</If>
+<Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Tender" MobId="15271" KillCount="7"/>
+<Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Feral Tender" MobId="15294" KillCount="7"/>
 <TurnIn QuestName="Aggression" QuestId="8334" TurnInName="Lanthan Perilon" TurnInId="15281" X="10302.25" Y="-6229.303" Z="26.62198" />
 <If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
 <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
