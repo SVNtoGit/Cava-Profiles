@@ -595,6 +595,7 @@
 <TurnIn QuestName="The Replacements" QuestId="24488" TurnInName="Coach Crosscheck" TurnInId="37106" X="-8250.009" Y="1469.979" Z="42.80805" />
 <PickUp QuestName="Necessary Roughness" QuestId="24502" GiverName="Coach Crosscheck" GiverId="37106" X="-8250.009" Y="1469.979" Z="42.80805" />
 <If Condition="HasQuest(24502) &amp;&amp; !IsQuestCompleted(24502)" >
+  <DisableBehavior Name="Combat" />
   <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="48526" X="-8250.91" Y="1484.29" Z="41.4168" />
   <CustomBehavior File="Vehicles\NoControlVehicle" TargetId="37114" NumOfTimes="4" AttackButton="1" MaxRange="100" WaitTime="1500"/>-->
   <CustomBehavior File="EjectVeh" />
@@ -602,6 +603,7 @@
   <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="48526" X="-8250.91" Y="1484.29" Z="41.4168" />
   <CustomBehavior File="Vehicles\NoControlVehicle" TargetId="37114" QuestId="24502" AttackButton="1" MaxRange="100" WaitTime="1500"/>-->
   <CustomBehavior File="EjectVeh" />
+  <EnableBehavior Name="Combat" />
 </If>
 <If Condition="HasQuest(24502)">
   <While Condition="HasQuest(24502)" >
@@ -880,10 +882,12 @@ MALE <PickUp QuestName="The New You" QuestId="14109" GiverName="FBoK Bank Teller
   <Objective QuestName="Robbing Hoods" QuestId="14121" Type="CollectItem" ItemId="47530" CollectCount="12" />
 </If>
 <If Condition="HasQuest(14122) &amp;&amp; !IsQuestCompleted(14122)" >
+  <DisableBehavior Name="Combat" />
   <RunTo X="-8373.546" Y="1727.475" Z="39.94706" />
   <CustomBehavior File="SpecificQuests\14122-Kezan-TheGreatBankHeist" QuestId="14122" />
   <CustomBehavior File="WaitTimer" WaitTime="3000"/>
   <CustomBehavior File="EjectVeh" Eject="True" />
+  <EnableBehavior Name="Combat" />
 </If>
 <If Condition="HasQuest(14123) &amp;&amp; !IsQuestCompleted(14123)" >
   <!--auraid 67435-->
