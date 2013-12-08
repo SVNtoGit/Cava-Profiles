@@ -855,15 +855,15 @@
 <If Condition="HasQuest(31768) &amp;&amp; !IsQuestCompleted(31768)" >
   <While Condition="!IsQuestCompleted(31768)" >
     <RunTo X="3313.451" Y="-775.7024" Z="235.8718" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3349.447" Y="-808.7408" Z="245.9961" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3358.858" Y="-848.1661" Z="245.9961" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3333.254" Y="-879.9469" Z="245.9961" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3301.869" Y="-905.6469" Z="249.4683" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3265.738" Y="-922.0533" Z="257.4446" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3248.813" Y="-958.807" Z="257.4779" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3256.057" Y="-998.2667" Z="257.4444" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3295.863" Y="-989.5014" Z="257.4444" />
-    <CustomBehavior File="UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3219.405" Y="-946.2953" Z="268.2709" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3349.447" Y="-808.7408" Z="245.9961" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3358.858" Y="-848.1661" Z="245.9961" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3333.254" Y="-879.9469" Z="245.9961" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3301.869" Y="-905.6469" Z="249.4683" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3265.738" Y="-922.0533" Z="257.4446" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3248.813" Y="-958.807" Z="257.4779" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3256.057" Y="-998.2667" Z="257.4444" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3295.863" Y="-989.5014" Z="257.4444" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="31768" MobId="66308" ItemId="89605" WaitForNpcs="False" WaitTime="1000" CollectionDistance="1000" Range="15" X="3219.405" Y="-946.2953" Z="268.2709" />
   </While>
 </If>
 <Objective QuestName="Finish Them!" QuestId="31767" Type="KillMob" MobId="66285" KillCount="15" />
@@ -1004,7 +1004,7 @@
     	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31777" MobId="214962" ObjectType="GameObject" X="2517.002" Y="-511.4931" Z="340.8718" />
     </If>
     <While Condition="HasQuest(31777) &amp;&amp; !IsQuestCompleted(31777) &amp;&amp; HasItem(89163)" >
-  		<CustomBehavior File="UseItemOn" QuestId="31777" MobId="65843" ItemId="89163" Range="1000" WaitForNpcs="False" CollectionDistance="1000" X="2517.002" Y="-511.4931" Z="340.8718" />
+  		<CustomBehavior File="Cava\UseItemOn" QuestId="31777" MobId="65843" ItemId="89163" Range="1000" WaitForNpcs="False" CollectionDistance="1000" X="2517.002" Y="-511.4931" Z="340.8718" />
 	    <CustomBehavior File="WaitTimer" WaitTime="6000" />
     </While>
   </While>
@@ -1478,12 +1478,12 @@
 </If>
 <If Condition="HasQuest(29752) &amp;&amp; !IsQuestCompleted(29752)" >
   <While Condition="!IsQuestCompleted(29752)" >
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2963.413" Y="-1452.859" Z="244.1403" />
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2963.413" Y="-1452.859" Z="244.1403" />
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2972.904" Y="-1399.264" Z="244.1403" />
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2969.448" Y="-1361.619" Z="246.2379" />
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2909.332" Y="-1514.186" Z="255.8839" />
-    <CustomBehavior File="UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2856.351" Y="-1475.471" Z="275.5011" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2963.413" Y="-1452.859" Z="244.1403" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2963.413" Y="-1452.859" Z="244.1403" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2972.904" Y="-1399.264" Z="244.1403" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2969.448" Y="-1361.619" Z="246.2379" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2909.332" Y="-1514.186" Z="255.8839" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="29752" MobId="55290" MobState="Alive" ItemId="74771" NumOfTimes="1" WaitTime="4000" CollectionDistance="1000" X="2856.351" Y="-1475.471" Z="275.5011" />
   </While>
 </If>
 <Objective QuestName="Vessels of the Spirit" QuestId="29750" Type="CollectItem" ItemId="74763" CollectCount="8" />
@@ -1863,25 +1863,25 @@
 <If Condition="HasQuest(30466) &amp;&amp; !IsQuestCompleted(30466)" >
   <While Condition="!IsQuestCompleted(30466)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30466" MobId="209974" ObjectType="GameObject" X="1449.67" Y="-512.0331" Z="349.0125" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1319.55" Y="-434.374" Z="353.2133" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1352.99" Y="-466.53" Z="355.6394" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1417.337" Y="-479.7415" Z="355.1629" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1471.04" Y="-511.5548" Z="344.6081" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1461.24" Y="-438.3283" Z="353.5052" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1373.423" Y="-419.7416" Z="360.3369" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1445.015" Y="-545.111" Z="353.108" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1467.886" Y="-532.228" Z="344.8664" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1478.568" Y="-443.8408" Z="353.8854" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1421.66" Y="-488.4134" Z="356.0951" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1415.008" Y="-505.9207" Z="357.6683" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1393.521" Y="-436.9876" Z="360.4189" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1346.501" Y="-391.9695" Z="365.6345" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1342.822" Y="-475.034" Z="355.4532" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1333.036" Y="-463.9604" Z="354.9089" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1317.172" Y="-443.7198" Z="355.2307" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1289.054" Y="-444.0026" Z="344.1384" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1335.945" Y="-549.2072" Z="344.9153" />
-    <CustomBehavior File="UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1443.93" Y="-547.1631" Z="353.0489" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1319.55" Y="-434.374" Z="353.2133" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1352.99" Y="-466.53" Z="355.6394" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1417.337" Y="-479.7415" Z="355.1629" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1471.04" Y="-511.5548" Z="344.6081" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1461.24" Y="-438.3283" Z="353.5052" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1373.423" Y="-419.7416" Z="360.3369" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1445.015" Y="-545.111" Z="353.108" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1467.886" Y="-532.228" Z="344.8664" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1478.568" Y="-443.8408" Z="353.8854" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1421.66" Y="-488.4134" Z="356.0951" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1415.008" Y="-505.9207" Z="357.6683" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1393.521" Y="-436.9876" Z="360.4189" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1346.501" Y="-391.9695" Z="365.6345" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1342.822" Y="-475.034" Z="355.4532" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1333.036" Y="-463.9604" Z="354.9089" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1317.172" Y="-443.7198" Z="355.2307" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1289.054" Y="-444.0026" Z="344.1384" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1335.945" Y="-549.2072" Z="344.9153" />
+    <CustomBehavior File="Cava\UseItemOn" QuestId="30466" MobId="59740" MobId2="59296" ItemId="79884" NumOfTimes="2" Range="10" CollectionDistance="10" X="1443.93" Y="-547.1631" Z="353.0489" />
   </While>
 </If>
 <If Condition="HasQuest(30484) &amp;&amp; !IsQuestCompleted(30484)" >
