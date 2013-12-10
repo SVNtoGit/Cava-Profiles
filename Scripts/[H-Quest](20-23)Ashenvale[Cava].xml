@@ -249,9 +249,15 @@
 <PickUp QuestName="Final Report" QuestId="13619" GiverName="Gorat" GiverId="33294" X="1424.913" Y="-1999.623" Z="96.32894" />
 <If Condition="HasQuest(13613) &amp;&amp; !IsQuestCompleted(13613)" >
   <While Condition="!IsQuestCompleted(13613)" >
+<!--
     <CustomBehavior File="Cava\UseItemOn" QuestId="13613" MobId1="33266" MobId2="33440" ItemId="45001" WaitTime="4000" NumOfTimes="1000" CollectionDistance="1000" X="1372.504" Y="-2173.76" Z="92.26099" />
+-->
+   <CustomBehavior File="InteractWith" QuestId="13613" MobId1="33266" MobId2="33440" MobState="Alive" InteractByUsingItemId="45001" ProactiveCombatStrategy="ClearMobsTargetingUs"
+     CollectionDistance="1000" NotMoving="True" Range="9" NumOfTimes="1000" PreInteractMountStrategy="Dismount" X="1372.504" Y="-2173.76" Z="92.26099" />
   </While>
 </If>
+
+
 <Objective QuestName="Empty Quivers" QuestId="13615" Type="CollectItem" ItemId="45004" CollectCount="10" />
 <If Condition="HasQuest(13612) &amp;&amp; !IsQuestCompleted(13612)" >
   <Objective QuestName="Mor'shan Defense" QuestId="13612" Type="KillMob" MobId="33193" KillCount="5" />
@@ -265,20 +271,19 @@
 <TurnIn QuestName="Rescue the Fallen" QuestId="13613" TurnInName="Dinah Halfmoon" TurnInId="33263" X="1206.25" Y="-2235.7" Z="92.71117" />
 <PickUp QuestName="Gorat's Vengeance" QuestId="13621" GiverName="Dinah Halfmoon" GiverId="33263" X="1206.25" Y="-2235.7" Z="92.71117" />
 <If Condition="HasQuest(13621) &amp;&amp; !IsQuestCompleted(13621)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
   <While Condition="!IsQuestCompleted(13621)" >
     <RunTo X="1422.318" Y="-2000.883" Z="96.25249" />
-	<UseItem ItemId="45023" QuestId="13621" X="1422.318" Y="-2000.883" Z="96.25249" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="Misc\RunLua" QuestId="13621" Lua="UseItemByName(45023)" WaitTime="1000" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" />
-    <CustomBehavior File="EscortGroup" QuestId="13621" EscortNpcId="33304" EscortCompleteWhen="QuestCompleteOrFails" />
-    <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    <RunTo X="1513.451" Y="-2093.366" Z="88.64165" />
+    <CustomBehavior File="WaitTimer" QuestId="13621" WaitTime="100000" />
     <If Condition="!IsQuestCompleted(13621)" >
       <CustomBehavior File="AbandonQuest" QuestId="13621" />
       <CustomBehavior File="WaitTimer" WaitTime="5000" />
       <PickUp QuestName="Gorat's Vengeance" QuestId="13621" GiverName="Dinah Halfmoon" GiverId="33263" X="1206.25" Y="-2235.7" Z="92.71117" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" /><!----><!--LootMobs="Original"-->
 </If>
 <TurnIn QuestName="Gorat's Vengeance" QuestId="13621" TurnInName="Kadrak" TurnInId="8582" X="1237.152" Y="-2251.238" Z="92.00629" />
 <If Condition="Me.LevelFraction &gt;= 23.15">
