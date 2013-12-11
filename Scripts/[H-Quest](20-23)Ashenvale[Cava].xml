@@ -312,9 +312,19 @@
     <RunTo X="1200.528" Y="-2260.401" Z="91.75494" />
     <CustomBehavior File="ForcedDismount" />
 	<CustomBehavior File="RunMacro" QuestId="30795" Macro="/cancelform" />
-    <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="33374" X="1195.282" Y="-2258.377" Z="91.67518" />
+    <CustomBehavior File="InteractWith" MobId="33374" MobState="Alive" NotMovin="True" CollectionDistance="20" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8365.76" Y="594.658" Z="97.00068" />
+    <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    <If Condition="(!Me.IsOnTransport)" >
+      <RunTo X="1013.014" Y="-2286.291" Z="91.77092" />
+      <CustomBehavior File="WaitTimer" WaitTime="15000" />
+      <RunTo X="1200.528" Y="-2260.401" Z="91.75494" />
+      <CustomBehavior File="ForcedDismount" />
+	  <CustomBehavior File="RunMacro" QuestId="30795" Macro="/cancelform" />
+      <CustomBehavior File="InteractWith" MobId="33374" MobState="Alive" NotMovin="True" CollectionDistance="20" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8365.76" Y="594.658" Z="97.00068" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
   </While>
-  <CustomBehavior File="WaitTimer" WaitTime="42000" />
+  <CustomBehavior File="WaitTimer" QuestId="13628" WaitTime="38000" />
 </If>
 <TurnIn QuestName="Got Wood?" QuestId="13628" TurnInName="Gorka" TurnInId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 <!--# # # Level 22 # # # -->
