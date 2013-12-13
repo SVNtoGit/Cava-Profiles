@@ -1122,9 +1122,12 @@
 <TurnIn QuestName="Winnoa Pineforest" QuestId="24807" TurnInName="Winnoa Pineforest" TurnInId="37717" X="-2098.389" Y="-1719.424" Z="98.87383" />>
 <PickUp QuestName="Desolation Hold Inspection" QuestId="24577" GiverName="Warlord Bloodhilt" GiverId="37679" X="-2108.87" Y="-1718.785" Z="98.43536" />
 <If Condition="HasQuest(24577) &amp;&amp; !IsQuestCompleted(24577)" >
+  <While Condition="!IsQuestCompleted(24577)" >
     <CustomBehavior File="InteractWith" MobId="37679" GossipOptions="1" MobState="Alive" X="-2108.87" Y="-1718.785" Z="98.43536" />
     <CustomBehavior File="WaitTimer" WaitTime="125000" />
     <CustomBehavior File="InteractWith" MobId="37811" GossipOptions="1 1 1" MobState="Alive" X="-3246.019" Y="-1730.144" Z="92.1137" />
+    <CustomBehavior File="WaitTimer" QuestId="24577" WaitTime="4000" />
+  </While>
 </If>
 <TurnIn QuestName="Desolation Hold Inspection" QuestId="24577" TurnInName="Warlord Gar'dul" TurnInId="37811" X="-3246.019" Y="-1730.144" Z="92.1137" />
 <PickUp QuestName="Changing of the Gar'dul" QuestId="24591" GiverName="Warlord Gar'dul" GiverId="37811" X="-3246.019" Y="-1730.144" Z="92.1137" />
