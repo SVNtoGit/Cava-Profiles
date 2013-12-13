@@ -526,7 +526,14 @@
                (!HasQuest(27255) &amp;&amp; !IsQuestCompleted(27255)) ||
                (!HasQuest(27306) &amp;&amp; !IsQuestCompleted(27306))" >
   <RunTo X="-3146.468" Y="-2888.472" Z="34.13096" />
-  <While Condition="HasQuestAvailable(4926)" >
+  <While Condition="(!HasQuest(26682) &amp;&amp; !IsQuestCompleted(26682)) ||
+               (!HasQuest(25051) &amp;&amp; !IsQuestCompleted(25051)) ||
+               (!HasQuest(27253) &amp;&amp; !IsQuestCompleted(27253)) ||
+               (!HasQuest(27255) &amp;&amp; !IsQuestCompleted(27255)) ||
+               (!HasQuest(27306) &amp;&amp; !IsQuestCompleted(27306))" >
+
+
+    <If Condition="HasQuestAvailable(4926)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4926" KeepTargetSelected="True" X="-3149.238" Y="-2887.008" Z="34.11252" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
@@ -537,6 +544,10 @@
 <PickUp QuestName="The Black Shield" QuestId="27255" GiverName="Krog" GiverId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
 <PickUp QuestName="Talk to Ogron" QuestId="27306" GiverName="Krog" GiverId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
 -->
+    <Else>
+      <CustomBehavior File="WaitTimer" WaitTime="10000" />
+      </Else>
+    </If>
   </While>
 </If>
 <TurnIn QuestName="The Black Shield" QuestId="27255" TurnInName="Do'gol" TurnInId="5087" X="-3111.075" Y="-2892.656" Z="35.03893" />
