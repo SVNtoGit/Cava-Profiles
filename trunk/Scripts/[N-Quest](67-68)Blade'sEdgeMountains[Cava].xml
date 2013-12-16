@@ -15,6 +15,7 @@
   <Blackspot X="3065.717" Y="7099.809" Z="154.028" Radius="0.9" />
   <Blackspot X="3065.605" Y="7100.079" Z="153.8885" Radius="0.9" />
   <Blackspot X="2536.958" Y="6458.845" Z="-3.201976" Radius="4.350209" />
+  <Blackspot X="2533.681" Y="6460.964" Z="-3.746069" Radius="7.325935" />
 </Blackspots>
 
 <Mailboxes>
@@ -1415,10 +1416,12 @@
   </If>
   <If Condition="HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657)">
     <If Condition="!IsObjectiveComplete(1, 10657) &amp;&amp; !IsObjectiveComplete(2, 10657)">
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+      <LootMobs Value="false" />
+      <UseMount Value="false" />
     </If>
     <While Condition="!IsObjectiveComplete(1, 10657) &amp;&amp; !IsObjectiveComplete(2, 10657)">
       <While Condition="!Me.HasAura(37830)" >
+        <CustomBehavior File="ForcedDismount" />
         <CustomBehavior File="Misc\RunLua" WaitTime="10000" NumOfTimes="1" Lua="UseItemByName(30818)" />
       </While>
       <CustomBehavior File="InteractWith" MobId="20749" MovementBy="NavigatorPreferred" MobState="Alive" CollectionDistance="1000" >
@@ -1457,13 +1460,15 @@
       </CustomBehavior>
     </While>
     <CustomBehavior File="RunMacro" Macro="/cancelaura Repolarized Magneto Sphere" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
+    <UseMount Value="false" />
     <Objective QuestName="Ride the Lightning" QuestId="10657" Type="CollectItem" ItemId="30849" CollectCount="5" />
     <While Condition="!IsQuestCompleted(10657)">
       <While Condition="!Me.HasAura(37830)" >
+        <CustomBehavior File="ForcedDismount" />
         <CustomBehavior File="Misc\RunLua" WaitTime="10000" NumOfTimes="1" Lua="UseItemByName(30818)" />
       </While>
-      <CustomBehavior File="InteractWith" MobId="20749" MobState="Alive" CollectionDistance="1000" >
+      <CustomBehavior File="InteractWith" MobId="20749" MobState="Alive" CollectionDistance="1000" MovementBy="NavigatorPreferred">
         <HuntingGrounds>
           <Hotspot X="1768.728" Y="5184.333" Z="265.9362" />
           <Hotspot X="1780.966" Y="5146.019" Z="265.6676" />
@@ -1498,6 +1503,7 @@
         </HuntingGrounds>
       </CustomBehavior>
     </While>
+    <UseMount Value="true" />
     <CustomBehavior File="RunMacro" Macro="/cancelaura Repolarized Magneto Sphere" />
     <CustomBehavior File="FlyTo" X="1762.535" Y="5192.072" Z="343.1736" />
     <CustomBehavior File="FlyTo" X="1768.728" Y="5184.333" Z="265.9362" />
@@ -1743,6 +1749,7 @@
   <If Condition="HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506)">
     <CustomBehavior File="FlyTo" X="1483.94" Y="6579.726" Z="-10.23015" />
     <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
     <CustomBehavior File="CombatUseItemOnV2" QuestId="10506" ItemId="30251" ItemAppliesAuraId="36310" MobId="20058" MaxRangeToUseItem="5"
       UseWhenMobHasHealthPercent="100" UseItemStrategy="UseItemOncePerTarget" WaitTimeAfterItemUse="5000" CollectionDistance="1000" >
       <HuntingGrounds >
@@ -1764,6 +1771,7 @@
       <Hotspot X="1620.52" Y="6428.088" Z="-10.68749" />
       </HuntingGrounds>
     </CustomBehavior>
+    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
   </If>
 <!--
   <If Condition="!HasQuest(10516) &amp;&amp; !IsQuestCompleted(10516)">
@@ -1774,7 +1782,7 @@
   <Objective QuestName="The Trappings of a Vindicator" QuestId="10516" Type="CollectItem" ItemId="30415" CollectCount="1" />
 -->
   <If Condition="(HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512)) || (HasQuest(10504) &amp;&amp; !IsQuestCompleted(10504))">
-    <CustomBehavior File="FlyTo" X="2534.637" Y="6452.14" Z="-3.103959" />
+    <CustomBehavior File="FlyTo" X="2503.129" Y="6431.297" Z="-10.00925" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512)">
@@ -1782,7 +1790,7 @@
     <While Condition="!IsQuestCompleted(10512)">
       <If Condition="HasItem(29443)">
         <CustomBehavior File="InteractWith" MobId1="19998" MobId2="19995" MobId3="21296" MobState="Alive" AuraIdMissingFromMob="35240"
-          InteractByUsingItemId="29443" MinRange="25" Range="40" WaitTime="30000" MovementBy="NavigatorPreferred" CollectionDistance="1000" >
+          InteractByUsingItemId="29443" MinRange="25" Range="40" MovementBy="NavigatorPreferred" CollectionDistance="1000" >
           <HuntingGrounds>
             <Hotspot X="2495.597" Y="6485.357" Z="-6.766351" />
             <Hotspot X="2531.929" Y="6499.461" Z="2.274449" />
@@ -1805,9 +1813,10 @@
             <Hotspot X="2496.146" Y="6539.207" Z="-1.011395" />
           </HuntingGrounds>
         </CustomBehavior>
+        <CustomBehavior File="WaitTimer" WaitTime="30000" />
       <Else>
         <CustomBehavior File="InteractWith" MobId1="19998" MobId2="19995" MobId3="21296" MobState="Alive" AuraIdMissingFromMob="35240"
-          InteractByUsingItemId="30353" MinRange="25" Range="40" WaitTime="30000" MovementBy="NavigatorPreferred" CollectionDistance="1000" >
+          InteractByUsingItemId="30353" MinRange="25" Range="40" MovementBy="NavigatorPreferred" CollectionDistance="1000" >
           <HuntingGrounds>
             <Hotspot X="2495.597" Y="6485.357" Z="-6.766351" />
             <Hotspot X="2531.929" Y="6499.461" Z="2.274449" />
@@ -1830,6 +1839,7 @@
             <Hotspot X="2496.146" Y="6539.207" Z="-1.011395" />
           </HuntingGrounds>
         </CustomBehavior>
+        <CustomBehavior File="WaitTimer" WaitTime="30000" />
         </Else>
       </If>
     </While>

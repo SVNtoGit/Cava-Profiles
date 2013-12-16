@@ -434,20 +434,13 @@
 <PickUp QuestName="Scavengers Scavenged" QuestId="25111" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <!--start Ballon part-->
 <If Condition="HasQuest(24910) &amp;&amp; !IsQuestCompleted(24910)" >
-  <RunTo X="-7092.517" Y="-3908.433" Z="11.24682" />
-  <CustomBehavior File="RunMacro" Macro="/cancelform" />
-  <CustomBehavior File="ForcedDismount" />
-  <DisableBehavior Name="Combat" />
-<!--  <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="40604" X="-7092.517" Y="-3908.433" Z="11.24682" />
-
-
-
-  <CustomBehavior File="LoadProfile" ProfileName="erro" />
-  <While Condition="!Me.IsOnTransport" >
+  <While Condition="!IsQuestCompleted(24910)" >
+    <RunTo X="-7092.517" Y="-3908.433" Z="11.24682" />
+    <CustomBehavior File="RunMacro" Macro="/cancelform" />
+    <CustomBehavior File="ForcedDismount" />
+    <DisableBehavior Name="Combat" />
+    <CustomBehavior File="SpecificQuests\24910-Tanaris-RocketRescue" />
   </While>
-  <CustomBehavior File="WaitTimer" WaitTime="10000" /> -->
-  
-  <CustomBehavior File="SpecificQuests\24910-Tanaris-RocketRescue" />
 </If>
 <If Condition="HasQuest(24910)" >
   <If Condition="Me.IsOnTransport" >
