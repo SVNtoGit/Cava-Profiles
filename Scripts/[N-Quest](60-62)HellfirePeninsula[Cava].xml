@@ -1589,7 +1589,7 @@
   <If Condition="HasQuest(10144) &amp;&amp; !IsQuestCompleted(10144)">
     <CustomBehavior File="FlyTo" X="-584.9208" Y="1842.731" Z="71.80367" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <If Condition="!IsObjectiveComplete(2, 10144)">
       <CustomBehavior File="CollectThings" QuestId="10144" MobState="Alive" MobId="19190" MobId2="18975" MobId3="16950" MobId4="8981" CollectItemCount="4" CollectItemId="28513" HuntingGroundRadius="55" >
       <Hotspot X="-562.874" Y="1818.086" Z="66.97377" />
@@ -1629,7 +1629,7 @@
         <CustomBehavior File="InteractWith" MobId="184414" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-419.0578" Y="1848.069" Z="80.9203" />
       </While>
     </If>
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10144)">
     <RunTo X="-420.9387" Y="1866.368" Z="86.51192" />
@@ -1847,21 +1847,27 @@
     <RunTo X="-35.45311" Y="2119.091" Z="109.9471" />
     <CustomBehavior File="FlyTo" X="147.0495" Y="1751.861" Z="40.77323" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+    <LootMobs Value="true" />
     <If Condition="!IsObjectiveComplete(1, 10208)">
       <CustomBehavior File="CollectThings" QuestId="10208" MobState="Alive" MobId="19190" MobId2="18975" MobId3="16950" MobId4="8981" CollectItemCount="4" CollectItemId="28513" HuntingGroundRadius="55" >
-      <Hotspot X="-562.874" Y="1818.086" Z="66.97377" />
-      <Hotspot X="-575.6792" Y="1780.112" Z="63.44177" />
-      <Hotspot X="-544.3271" Y="1756.831" Z="53.0574" />
-      <Hotspot X="-515.2232" Y="1784.41" Z="53.58567" />
-      <Hotspot X="-476.8049" Y="1799.656" Z="55.32697" />
-      <Hotspot X="-441.7426" Y="1815.21" Z="66.68574" />
-      <Hotspot X="-405.9268" Y="1830.912" Z="76.12213" />
-      <Hotspot X="-401.6239" Y="1868.077" Z="90.62611" />
-      <Hotspot X="-441.8308" Y="1872.718" Z="84.9763" />
-      <Hotspot X="-480.4552" Y="1862.81" Z="77.54446" />
-      <Hotspot X="-517.0122" Y="1844.923" Z="69.22552" />
-      <Hotspot X="-551.5626" Y="1824.619" Z="66.48032" />
+      <Hotspot X="147.0495" Y="1751.861" Z="40.77323" />
+      <Hotspot X="111.7108" Y="1771.246" Z="44.72611" />
+      <Hotspot X="75.59062" Y="1789.441" Z="47.62614" />
+      <Hotspot X="37.84632" Y="1802.193" Z="53.85005" />
+      <Hotspot X="8.490509" Y="1829.084" Z="60.85899" />
+      <Hotspot X="2.627239" Y="1868.79" Z="55.43795" />
+      <Hotspot X="-26.44952" Y="1895.052" Z="63.53194" />
+      <Hotspot X="-62.99516" Y="1911.953" Z="71.12891" />
+      <Hotspot X="-102.368" Y="1912.786" Z="78.20713" />
+      <Hotspot X="-112.3088" Y="1873.251" Z="78.96518" />
+      <Hotspot X="-78.70332" Y="1851.901" Z="69.61456" />
+      <Hotspot X="-39.3198" Y="1860.299" Z="62.7275" />
+      <Hotspot X="-0.3415365" Y="1868.523" Z="55.90698" />
+      <Hotspot X="38.15242" Y="1857.223" Z="47.83485" />
+      <Hotspot X="56.96881" Y="1820.624" Z="45.658" />
+      <Hotspot X="62.98366" Y="1780.87" Z="48.15319" />
+      <Hotspot X="61.88527" Y="1740.603" Z="45.53067" />
+      <Hotspot X="91.22768" Y="1713.46" Z="42.887" />
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(1, 10208)">
         <CustomBehavior File="InteractWith" MobId="184290" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-85.41621" Y="1882.359" Z="74.90538" />
@@ -1892,7 +1898,7 @@
         <CustomBehavior File="InteractWith" MobId="184289" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
       </While>
     </If>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10208)">
     <CustomBehavior File="FlyTo" X="-36.4824" Y="2136.69" Z="110.283" />
@@ -1936,7 +1942,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(10393) &amp;&amp; !IsQuestCompleted(10390) &amp;&amp; !HasItem(29590)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobState="Alive" MobId="20798" CollectItemCount="1" CollectItemId="29590" HuntingGroundRadius="55" >
       <Hotspot X="365.064" Y="2224.538" Z="118.9637" />
       <Hotspot X="375.504" Y="2185.645" Z="118.724" />
@@ -1945,7 +1951,7 @@
       <Hotspot X="447.1835" Y="2198.589" Z="117.4181" />
       <Hotspot X="409.5048" Y="2212.039" Z="117.4681" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(10393) &amp;&amp; !IsQuestCompleted(10393) &amp;&amp; HasItem(29590)">
     <PickUp QuestName="Vile Plans" QuestId="10393" GiverType="Item" GiverId="29590" />
@@ -1991,12 +1997,12 @@
     <RunTo X="180.2885" Y="2658.958" Z="87.64595" />
     <CustomBehavior File="FlyTo" X="-115.9247" Y="2414.009" Z="52.86677" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+    <LootMobs Value="true" />
   </If>
   <Objective QuestName="I Work... For the Horde!" QuestId="10086" Type="CollectItem" ItemId="67419" CollectCount="8" />
   <Objective QuestName="I Work... For the Horde!" QuestId="10086" Type="CollectItem" ItemId="67420" CollectCount="8" />
   <If Condition="HasQuest(10086)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="Bonechewer Blood" QuestId="10450" Type="CollectItem" ItemId="30327" CollectCount="12" />
   <If Condition="HasQuest(10086) || HasQuest(10450)">
@@ -2033,7 +2039,7 @@
     <CustomBehavior File="FlyTo" X="-1215.042" Y="2472.65" Z="49.9085" />
     <CustomBehavior File="ForcedDismount" />
     <If Condition="!HasQuest(10229) &amp;&amp; !IsQuestCompleted(10229) &amp;&amp; !HasItem(28552)">
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <SetGrindArea>
 	  <GrindArea>
@@ -2080,20 +2086,20 @@
 	</SetGrindArea>
 	<GrindTo Condition="IsObjectiveComplete(1, 10220) || IsObjectiveComplete(2, 10220) || IsObjectiveComplete(3, 10220)" />
     <If Condition="!HasQuest(10229) &amp;&amp; !IsQuestCompleted(10229) &amp;&amp; HasItem(28552)">
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <Objective QuestName="Make Them Listen" QuestId="10220" Type="KillMob" MobId="16904" KillCount="12" />
     <If Condition="!HasQuest(10229) &amp;&amp; !IsQuestCompleted(10229) &amp;&amp; HasItem(28552)">
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <Objective QuestName="Make Them Listen" QuestId="10220" Type="KillMob" MobId="16906" KillCount="8" />
     <If Condition="!HasQuest(10229) &amp;&amp; !IsQuestCompleted(10229) &amp;&amp; HasItem(28552)">
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <Objective QuestName="Make Them Listen" QuestId="10220" Type="KillMob" MobId="16905" KillCount="6" />
   </If>
   <If Condition="!HasQuest(10229) &amp;&amp; !IsQuestCompleted(10229) &amp;&amp; !HasItem(28552)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobState="Alive" MobId1="16905" MobId2="16906" MobId3="16904" CollectItemCount="1" CollectItemId="28552" HuntingGroundRadius="55" >
       <Hotspot X="-1197.788" Y="2653.948" Z="10.77202" />
       <Hotspot X="-1228.132" Y="2679.033" Z="1.444061" />
@@ -2329,7 +2335,7 @@
 <TurnIn QuestName="Helboar, the Other White Meat" QuestId="9361" TurnInName="Legassi" TurnInId="19344" X="-1095.947" Y="2996.351" Z="8.190855" />
 <PickUp QuestName="Smooth as Butter" QuestId="9356" GiverName="Legassi" GiverId="19344" X="-1095.947" Y="2996.351" Z="8.190855" />
 <If Condition="HasQuest(9356) &amp;&amp; !IsQuestCompleted(9356)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(10161) &amp;&amp; !IsQuestCompleted(10161)">
   <CustomBehavior File="FlyTo" X="-1064.227" Y="2820.15" Z="-25.08487" />
@@ -2385,7 +2391,7 @@
 	<GrindTo Condition="HasItem(23338)" />
   </If>
   <PickUp QuestName="Missing Missive" QuestId="9373" GiverType="Item" GiverId="23338" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 
 
@@ -3097,7 +3103,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(9396) &amp;&amp; !IsQuestCompleted(9396)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(9397) &amp;&amp; !IsQuestCompleted(9397)">
     <While Condition="!IsQuestCompleted(9397)">
@@ -3113,7 +3119,7 @@
     </While>
   </If>
   <If Condition="HasQuest(9396)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="Magic of the Arakkoa" QuestId="9396" Type="CollectItem" ItemId="23483" CollectCount="4" />
  </If>
@@ -3123,13 +3129,13 @@
 <If Condition="!HasQuest(9418) &amp;&amp; !IsQuestCompleted(9418)">
   <CustomBehavior File="FlyTo" X="-1204.485" Y="4189.135" Z="71.44048" />
   <CustomBehavior File="FlyTo" X="-1215.194" Y="4224.48" Z="40.55063" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!HasItem(23580)">
     <RunTo X="-1141.577" Y="4220.787" Z="53.52201" />
     <CustomBehavior File="InteractWith" MobId="17084" MobState="Alive" NonCompeteDistance="0" Range="15" WaitTime="1000" CollectionDistance="100" X="-1141.577" Y="4220.787" Z="53.52201" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <PickUp QuestName="Avruu's Orb" QuestId="9418" GiverType="Item" GiverId="23580" />
 </If>
 <If Condition="HasQuest(9418)">
