@@ -342,13 +342,15 @@
 <PickUp QuestName="The Search Continues" QuestId="25803" GiverName="Damaged Crate" GiverType="GameObject" GiverId="261" X="-3288.887" Y="-947.9923" Z="9.909934" />
 <TurnIn QuestName="The Search Continues" QuestId="25803" TurnInName="Sealed Barrel" TurnInId="142151" TurnInType="GameObject" X="-3201.878" Y="-953.4223" Z="8.672083" />
 <If Condition="!HasQuest(25804) &amp;&amp; !IsQuestCompleted(25804)" >
-  <While Condition="HasQuestAvailable(142151)" >
-    <CustomBehavior File="InteractWith" MobId="142151" KeepTargetSelected="True" ObjectType="GameObject"  X="1604.366" Y="-1744.601" Z="263.989" />
-    <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
+  <While Condition="!HasQuest(25804)" >
+    <While Condition="HasQuestAvailable(142151)" >
+      <CustomBehavior File="InteractWith" MobId="142151" KeepTargetSelected="True" ObjectType="GameObject"  X="1604.366" Y="-1744.601" Z="263.989" />
+      <CustomBehavior File="WaitTimer" WaitTime="1000" />
+      <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
 <PickUp QuestName="Search More Hovels" QuestId="25804" GiverName="Sealed Barrel" GiverId="142151" GiverType="GameObject" X="-3201.878" Y="-953.4223" Z="8.672083" />
 -->
+    </While>
   </While>
 </If>
 <Objective QuestName="Claws from the Deep" QuestId="25801" Type="CollectItem" ItemId="3618" CollectCount="1" />
