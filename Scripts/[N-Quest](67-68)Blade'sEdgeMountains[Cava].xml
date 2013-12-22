@@ -3099,21 +3099,27 @@ Text="\n
       <GrindTo Condition="Me.HasAura(37642)" />
     </If>
     <If Condition="!IsObjectiveComplete(3, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3732.883" Y="6640.632" Z="133.639" />
-      <CustomBehavior File="WaitTimer" WaitTime="3000" />
+      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <While Condition="!IsObjectiveComplete(3, 10607) &amp;&amp; Me.HasAura(37642)">
+        <RunTo X="3732.359" Y="6639.947" Z="133.6599" />
+        <CustomBehavior File="WaitTimer" WaitTime="3000" />
+      </While>
     </If>
     <If Condition="!IsObjectiveComplete(1, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3773.27" Y="6639.042" Z="149.3388" />
-      <RunTo X="3784.528" Y="6726.438" Z="170.2252" />
-      <CustomBehavior File="WaitTimer" WaitTime="3000" />
-      <CustomBehavior File="FlyTo" X="3767.069" Y="6710.364" Z="169.9571" />
+      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <While Condition="!IsObjectiveComplete(1, 10607) &amp;&amp; Me.HasAura(37642)">
+        <RunTo X="3785.497" Y="6727.599" Z="170.4497" />
+        <CustomBehavior File="WaitTimer" WaitTime="3000" />
+      </While>
+      <RunTo X="3739.521" Y="6669.184" Z="137.5289" />
     </If>
     <If Condition="!IsObjectiveComplete(2, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3618.873" Y="6556.563" Z="157.3282" />
-      <CustomBehavior File="FlyTo" X="3627.785" Y="6542.168" Z="155.0379" />
-      <RunTo X="3627.785" Y="6542.168" Z="155.0379" />
-      <CustomBehavior File="WaitTimer" WaitTime="3000" />
-      <CustomBehavior File="FlyTo" X="3673.27" Y="6517.59" Z="189.8544" />
+      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <While Condition="!IsObjectiveComplete(2, 10607) &amp;&amp; Me.HasAura(37642)">
+        <RunTo X="3626.344" Y="6544.786" Z="154.9798" />
+        <CustomBehavior File="WaitTimer" WaitTime="3000" />
+      </While>
+      <RunTo X="3739.521" Y="6669.184" Z="137.5289" />
     </If>
     <If Condition="!IsObjectiveComplete(4, 10607) &amp;&amp; Me.HasAura(37642)">
       <CustomBehavior File="FlyTo" X="3578.347" Y="6663.851" Z="128.6124" />
