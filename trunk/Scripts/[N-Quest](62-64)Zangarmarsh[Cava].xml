@@ -1535,10 +1535,15 @@
 <If Condition="HasQuest(9802) &amp;&amp; !IsQuestCompleted(9802)">
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
-<If Condition="(HasQuest(9895) &amp;&amp; !IsQuestCompleted(9895)) ||
+<!--<If Condition="(HasQuest(9895) &amp;&amp; !IsQuestCompleted(9895)) ||
                (HasQuest(9747) &amp;&amp; !IsQuestCompleted(9747)) ||
                (!HasQuest(9752) &amp;&amp; !IsQuestCompleted(9752))">
 </If>
+-->
+<If Condition="(HasQuest(9895) &amp;&amp; !IsQuestCompleted(9895)) ||
+               (HasQuest(9747) &amp;&amp; !IsQuestCompleted(9747))">
+</If>
+
 <If Condition="HasQuest(9895) &amp;&amp; !IsQuestCompleted(9895)">
   <CustomBehavior File="FlyTo" X="-454.4048" Y="5332.5" Z="17.60436" />
   <CustomBehavior File="ForcedDismount" />
@@ -1553,7 +1558,7 @@
   <Objective QuestName="The Umbrafen Tribe" QuestId="9747" Type="KillMob" MobId="18079" KillCount="8" />
   <Objective QuestName="The Umbrafen Tribe" QuestId="9747" Type="KillMob" MobId="20115" KillCount="6" />
 </If>
-<If Condition="!HasQuest(9752) &amp;&amp; !IsQuestCompleted(9752)">
+<!--<If Condition="!HasQuest(9752) &amp;&amp; !IsQuestCompleted(9752)">
   <CustomBehavior File="FlyTo" X="-925.3541" Y="5297.105" Z="17.918" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="InteractWith" MobId="17969" NotMoving="True" NonCompeteDistance="30" X="-931.8848" Y="5283.565" Z="23.89818" />
@@ -1578,6 +1583,7 @@
   <CustomBehavior File="FlyTo" X="-217.9632" Y="5433.157" Z="22.12715" />
   <CustomBehavior File="ForcedDismount" />
 </If>
+-->
 <TurnIn QuestName="The Umbrafen Tribe" QuestId="9747" TurnInName="Ikeyen" TurnInId="17956" X="-215.1667" Y="5433.431" Z="21.95523" />
 <PickUp QuestName="A Damp, Dark Place" QuestId="9788" GiverName="Ikeyen" GiverId="17956" X="-215.1667" Y="5433.431" Z="21.95523" />
 <PickUp QuestName="Saving the Sporeloks" QuestId="10096" GiverName="Lauranna Thar'well" GiverId="17909" X="-215.5434" Y="5437.267" Z="21.42746" />
