@@ -1,5 +1,5 @@
 <HBProfile creator="Cava" version="1">
-<Name>[N-Quest] (62-64) Zangarmarsh [Cava] $Rev: 345 $:</Name>
+<Name>[N-Quest] (62-64) Zangarmarsh [Cava] $Rev$</Name>
 
 <MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
 <MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
@@ -2554,6 +2554,7 @@
     <CustomBehavior File="FlyTo" X="-282.7595" Y="7244.243" Z="25.41138" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(9847)">
+      <RunTo X="-282.7595" Y="7244.243" Z="25.41138" />
       <CustomBehavior File="Misc\RunLua" WaitTime="8000" Lua="UseItemByName(24498)" />
     </While>
   </If>
@@ -2848,7 +2849,7 @@
   <If Condition="HasQuest(9708) &amp;&amp; !IsQuestCompleted(9708)">
     <CustomBehavior File="FlyTo" X="1022.562" Y="8045.709" Z="20.77164" />
     <CustomBehavior File="ForcedDismount" />
-    <Objective QuestName="Familiar Fungi" QuestId="9708" Type="CollectItem" ItemId="24238" CollectCount="15" />
+    <Objective Nav="Fly" QuestName="Familiar Fungi" QuestId="9708" Type="CollectItem" ItemId="24238" CollectCount="15" />
   </If>
   <If Condition="HasQuest(9848) &amp;&amp; IsQuestCompleted(9848)">
     <CustomBehavior File="FlyTo" X="975.7306" Y="7401.778" Z="29.54213" />
