@@ -612,7 +612,7 @@
     </Else>
   </If>
 </If>
-<If Condition="Me.LevelFraction &gt;= 110.30">
+<If Condition="Me.LevelFraction &gt;= 11.30">
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 85">
@@ -654,19 +654,23 @@
 <PickUp QuestName="The Scarlet Palisade" QuestId="24980" GiverName="Deathguard Simmer" GiverId="1519" />
 <TurnIn QuestName="Fields of Grief" QuestId="24975" TurnInName="Apothecary Johaan" TurnInId="1518" X="2217.135" Y="1017.366" Z="37.12373" />
 <PickUp QuestName="Variety is the Spice of Death" QuestId="24976" GiverName="Apothecary Johaan" GiverId="1518" X="2217.135" Y="1017.366" Z="37.12373" />
-<!--
-<If Condition="HasQuest(24974)">
-  <RunTo X="2225.063" Y="1011.178" Z="44.42591" />
-  <CustomBehavior File="MyCTM" X="2228.181" Y="1015.64" Z="44.42609" />
-  <CustomBehavior File="MyCTM" X="2224.277" Y="1010.854" Z="44.42609" />
-  <TurnIn QuestName="Ever So Lonely" QuestId="24974" TurnInName="Sedrick Calston" TurnInId="38925" X="2221.394" Y="1011.333" Z="45.25862" />
-</If>
--->
-<Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52067" CollectCount="4" />
-<Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52066" CollectCount="4" />
 <If Condition="HasQuest(24976) &amp;&amp; !IsQuestCompleted(24976)">
-  <CustomBehavior File="InteractWith" QuestId="24976" MobId="38933" NumOfTimes="1000" InteractByLooting="True" NonCompeteDistance="0" CollectionDistance="1000" >
-    <HuntingGrounds WaypointVisitStrategy="Random" >
+  <CustomBehavior File="InteractWith" QuestId="24976" QuestObjectiveIndex="1" MobId="202422" NumOfTimes="1000" NonCompeteDistance="0" CollectionDistance="1000" >
+    <HuntingGrounds>
+      <Hotspot X="2158.006" Y="831.394" Z="30.59422" />
+      <Hotspot X="2144.956" Y="792.9863" Z="30.37889" />
+      <Hotspot X="2181.522" Y="776.7186" Z="30.69724" />
+      <Hotspot X="2221.188" Y="784.9879" Z="30.69728" />
+      <Hotspot X="2243.342" Y="818.3333" Z="30.69731" />
+      <Hotspot X="2205.054" Y="831.7079" Z="30.69724" />
+    </HuntingGrounds>
+  </CustomBehavior>
+<!--
+<Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52067" CollectCount="4" />
+-->
+  <Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52066" CollectCount="4" />
+  <CustomBehavior File="InteractWith" QuestId="24976" QuestObjectiveIndex="3" MobId="38933" NumOfTimes="1000" InteractByLooting="True" NonCompeteDistance="0" CollectionDistance="1000" >
+    <HuntingGrounds>
       <Hotspot X="2572.227" Y="1464.295" Z="-4.508661" />
       <Hotspot X="2605.931" Y="1442.583" Z="-5.103283" />
       <Hotspot X="2636.316" Y="1469.144" Z="-6.525883" />
@@ -818,7 +822,7 @@
 <PickUp QuestName="Garren's Haunt" QuestId="24991" GiverName="Junior Apothecary Holland" GiverId="10665" X="2250.269" Y="316.375" Z="34.81486" />
 <Objective QuestName="Annihilate the Worgen" QuestId="24993" Type="KillMob" MobId="38967" KillCount="5" />
 <TurnIn QuestName="Annihilate the Worgen" QuestId="24993" TurnInName="Executor Zygand" TurnInId="1515" X="2275.082" Y="297.6129" Z="33.64952" />
-<If Condition="HasQuest(24983) &amp;&amp; Me.LevelFraction &gt;= 110.30">
+<If Condition="HasQuest(24983) &amp;&amp; Me.LevelFraction &gt;= 11.30">
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -836,7 +840,7 @@
   <RunTo X="2302.5" Y="279.1147" Z="44.42836" />
   <CustomBehavior File="MyCTM" X="2278.517" Y="284.3423" Z="33.82134" />
 </If>
-<If Condition="HasQuest(24991) &amp;&amp; Me.LevelFraction &gt;= 110.30">
+<If Condition="HasQuest(24991) &amp;&amp; Me.LevelFraction &gt;= 11.30">
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -934,7 +938,7 @@
   <RunTo X="2302.5" Y="279.1147" Z="44.42836" />
   <CustomBehavior File="MyCTM" X="2278.517" Y="284.3423" Z="33.82134" />
 </If>
-<If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.LevelFraction &gt;= 110.30">
+<If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.LevelFraction &gt;= 11.30">
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -958,7 +962,7 @@
   <RunTo X="2302.5" Y="279.1147" Z="44.42836" />
   <CustomBehavior File="MyCTM" X="2278.517" Y="284.3423" Z="33.82134" />
 </If>
-<If Condition="!HasQuest(25056) &amp;&amp; !IsQuestCompleted(25056) &amp;&amp; Me.LevelFraction &gt;= 110.30">
+<If Condition="!HasQuest(25056) &amp;&amp; !IsQuestCompleted(25056) &amp;&amp; Me.LevelFraction &gt;= 11.30">
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
