@@ -137,6 +137,9 @@
 </If>
 
 <!-- Kalimdor -->
+<If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
+  <CustomBehavior File="InteractWith" MobId="209080" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5543.027" Y="-3590.346" Z="1568.018" />
+</If>
 <If Condition="Me.ZoneId == 5695 || Me.ZoneId == 331  || Me.ZoneId == 405 || Me.ZoneId == 15   || Me.ZoneId == 6463 || Me.ZoneId == 361  ||
                Me.ZoneId == 357  || Me.ZoneId == 5733 || Me.ZoneId == 616 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406  ||
                Me.ZoneId == 440  || Me.ZoneId == 457  || Me.ZoneId == 400 || Me.ZoneId == 5034 || Me.ZoneId == 490  || Me.ZoneId == 618  ||
@@ -145,7 +148,6 @@
   <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
 </If>
-
 <!-- Teldrassil (Rut'theran Village) -->
 <If Condition="Me.ZoneId == 141 &amp;&amp; (Me.Z &lt; 100)" >
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
@@ -279,6 +281,9 @@
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </While>
+<If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
+  <CustomBehavior File="InteractWith" MobId="209081" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5503.639" Y="-3628.739" Z="1567.61" />
+</If>
 <If Condition="Me.ZoneId == 331  || Me.ZoneId == 16   || Me.ZoneId == 6452 || Me.ZoneId == 405  || Me.ZoneId == 14  ||
                Me.ZoneId == 15   || Me.ZoneId == 361  || Me.ZoneId == 357  || Me.ZoneId == 493  || Me.ZoneId == 215 ||
                Me.ZoneId == 17   || Me.ZoneId == 1637 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406 ||
