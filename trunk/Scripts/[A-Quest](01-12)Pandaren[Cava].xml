@@ -1232,12 +1232,17 @@
   <If Condition="HasQuest(30989) &amp;&amp; !IsQuestCompleted(30989)" >
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="12000" />
     <RunTo X="-8320.18" Y="288.9598" Z="156.833" />
+<!--
     <CustomBehavior File="InteractWith" QuestId="30989" NonCompeteDistance="0" KeepTargetSelected="True" InteractByGossipOptions="1" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8326" />
+-->
+    <CustomBehavior File="InteractWith" QuestId="30989" NonCompeteDistance="0" KeepTargetSelected="True" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8326" />
+    <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="10000" />
     <CustomBehavior File="KillUntilComplete" QuestId="30989" MobId="61796" X="-8323.161" Y="286.9583" Z="156.8325" />
     <CustomBehavior File="WaitTimer" QuestId="30989" WaitTime="15000" />
   </If>
   <TurnIn QuestName="An Old Pit Fighter" QuestId="30989" TurnInName="King Varian Wrynn" TurnInId="29611" />
+  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="Me.IsHorde" >
   <TurnIn QuestName="A New Fate" QuestId="31450" TurnInName="Ji Firepaw" TurnInId="60570" X="1363.75" Y="-4372.512" Z="26.08051" />
