@@ -409,7 +409,33 @@
 <If Condition="HasItem(55243)" >
   <PickUp QuestName="The Floodsurge Core" QuestId="25736" GiverName="Floodsurge Core" GiverId="55243" GiverType="Item" />
 </If>
+<If Condition="HasQuest(25735) &amp;&amp; !IsQuestCompleted(25735)" >
+  <While Condition="!IsQuestCompleted(25735)" >
+    <CustomBehavior File="InteractWith" QuestId="25735" MobId="203188" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0">
+      <HuntingGrounds>
+      <Hotspot X="-3857.077" Y="-2520" Z="41.34671" />
+      <Hotspot X="-3872.998" Y="-2483.36" Z="38.9965" />
+      <Hotspot X="-3880.715" Y="-2444.999" Z="29.61055" />
+      <Hotspot X="-3861.581" Y="-2409.374" Z="25.99531" />
+      <Hotspot X="-3826.425" Y="-2428.963" Z="26.73435" />
+      <Hotspot X="-3790.372" Y="-2447.072" Z="24.21305" />
+      <Hotspot X="-3810.172" Y="-2411.887" Z="27.07149" />
+      <Hotspot X="-3803.278" Y="-2371.66" Z="29.63136" />
+      <Hotspot X="-3789.041" Y="-2334.117" Z="35.2849" />
+      <Hotspot X="-3791.906" Y="-2294.133" Z="32.97058" />
+      <Hotspot X="-3829.655" Y="-2281.082" Z="36.0104" />
+      <Hotspot X="-3868.437" Y="-2289.698" Z="42.29325" />
+      <Hotspot X="-3907.051" Y="-2278.01" Z="40.04189" />
+      <Hotspot X="-3863.518" Y="-2301.386" Z="42.25836" />
+      <Hotspot X="-3896.671" Y="-2315.889" Z="23.83381" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+<!--
 <Objective QuestName="Incendicite Ore" QuestId="25735" Type="CollectItem" ItemId="55241" CollectCount="8" />
+-->
+</If>
 <!--<Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="4040" KillCount="7" />
 <Objective QuestName="Get Out Of Here, Stalkers" QuestId="25733" Type="KillMob" MobId="1111" KillCount="7" />-->
 <!--# # # Level 21 # # # -->
