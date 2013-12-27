@@ -704,7 +704,7 @@
 <TurnIn QuestName="These Roots Were Made For Stompin'" QuestId="28221" TurnInName="Sapling Protector" TurnInId="48042" X="6221.018" Y="-1153.269" Z="383.4433" />
 <TurnIn QuestName="Singin' in the Sun" QuestId="28222" TurnInName="Sapling Protector" TurnInId="48042" X="6221.018" Y="-1153.269" Z="383.4433" />
 <!--# # # Level 50 # # # -->
-<If Condition="!HasQuest(28222) &amp;&amp; !IsQuestCompleted(28222)">
+<If Condition="!HasQuest(28224) &amp;&amp; !IsQuestCompleted(28224)">
    <PickUp QuestName="The Last Protector" QuestId="28224" GiverName="Flourishing Protector" GiverId="48044" X="6221.018" Y="-1153.269" Z="383.4433" />
 </If>
 <If Condition="HasQuest(28224) &amp;&amp; !IsQuestCompleted(28224)">
@@ -764,8 +764,25 @@
   </While>
 </If>
 <TurnIn QuestName="A Destiny of Flame and Sorrow" QuestId="28218" TurnInName="Feronas Sindweller" TurnInId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
+<If Condition="HasQuest(28256)">
+  <CustomBehavior File="AbandonQuest" QuestId="28256" />
+  <CustomBehavior File="WaitTimer" WaitTime="3000" />
+</If>
 <PickUp QuestName="The Skull of Gul'dan" QuestId="28256" GiverName="Feronas Sindweller" GiverId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
 <If Condition="HasQuest(28256) &amp;&amp; !IsQuestCompleted(28256)">
+  <While Condition="!IsQuestCompleted(28256)">
+    <RunTo QuestId="28256" X="6435.128" Y="-948.1365" Z="423.1476" />
+    <CustomBehavior File="WaitTimer" QuestId="28256" WaitTime="10000" />
+    <CustomBehavior File="EscortGroup" QuestId="28256" EscortNpcId="47735" EscortCompleteWhen="QuestCompleteOrFails" />
+    <CustomBehavior File="WaitTimer" QuestId="28256" WaitTime="4000" />
+    <If Condition="!IsQuestCompleted(28256)" >
+      <CustomBehavior File="AbandonQuest" QuestId="28256" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+      <PickUp QuestName="The Skull of Gul'dan" QuestId="28256" GiverName="Feronas Sindweller" GiverId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
+      <CustomBehavior File="WaitTimer" QuestId="28256" WaitTime="2000" />
+    </If>
+  </While>
+<!--
   <While Condition="!IsQuestCompleted(28256)">
     <CustomBehavior File="WaitTimer" WaitTime="10000" />
     <RunTo X="6435.128" Y="-948.1365" Z="423.1476" />
@@ -779,13 +796,11 @@
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </If>
   </While>
+-->
 </If>
 <TurnIn QuestName="The Skull of Gul'dan" QuestId="28256" TurnInName="Feronas Sindweller" TurnInId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
-
-
 <!--  <CustomBehavior File="LoadProfile" ProfileName="erro" />
 47917 47819        -->
-
 <PickUp QuestName="The Fall of Tichondrius" QuestId="28257" GiverName="Feronas Sindweller" GiverId="47923" X="6423.77" Y="-964.604" Z="423.1496" />
 <If Condition="HasQuest(28257) &amp;&amp; !IsQuestCompleted(28257)">
   <While Condition="!IsQuestCompleted(28257)">

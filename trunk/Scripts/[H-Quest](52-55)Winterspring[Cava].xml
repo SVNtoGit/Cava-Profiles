@@ -614,7 +614,7 @@
 <TurnIn QuestName="Tree Delivery" QuestId="28626" TurnInName="Kilram" TurnInId="11192" X="6779.222" Y="-4669.981" Z="723.8506" />
 <PickUp QuestName="Seril's Boast" QuestId="28627" GiverName="Seril Scourgebane" GiverId="11193" X="6774.549" Y="-4667.743" Z="723.8229" />
 <TurnIn QuestName="Seril's Boast" QuestId="28627" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
-<If Condition="!HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632) &amp;&amp; Me.LevelFraction &gt;= 55.58">
+<If Condition="!HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629) &amp;&amp; Me.LevelFraction &gt;= 55.58">
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
@@ -625,7 +625,9 @@
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](55-57)UnGoroCrater[Cava]" />
 </If>
+<!--
 <PickUp QuestName="Fresh From The Hills" QuestId="28632" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
+-->
 <PickUp QuestName="Are We There, Yeti?" QuestId="28629" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="Echo Three" QuestId="28630" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="The Perfect Horns" QuestId="28631" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
@@ -672,16 +674,19 @@
 <TurnIn QuestName="Are We There, Yeti?" QuestId="28629" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <TurnIn QuestName="The Perfect Horns" QuestId="28631" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="Yetiphobia" QuestId="28722" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
+<!--
 <TurnIn QuestName="Fresh From The Hills" QuestId="28632" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
+
 <PickUp QuestName="Ice Delivery" QuestId="28628" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <TurnIn QuestName="Ice Delivery" QuestId="28628" TurnInName="Seril Scourgebane" TurnInId="11193" X="6774.549" Y="-4667.743" Z="723.8229" />
+-->
 <If Condition="HasQuest(28722) &amp;&amp; !IsQuestCompleted(28722)" >
   <While Condition="!IsQuestCompleted(28722)" >
     <CustomBehavior File="InteractWith" QuestId="28722" MobId="10978" InteractByUsingItemId="12928" Range="20" NotMoving="True" X="6705.608" Y="-4686.181" Z="721.8718" />
   </While>
 </If>
 <TurnIn QuestName="Yetiphobia" QuestId="28722" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
-<If Condition="!HasQuest(28674) &amp;&amp; !IsQuestCompleted(28674) &amp;&amp; Me.LevelFraction &gt;= 55.58">
+<If Condition="!HasQuest(28676) &amp;&amp; !IsQuestCompleted(28676) &amp;&amp; Me.LevelFraction &gt;= 55.58">
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
@@ -692,12 +697,16 @@
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](55-57)UnGoroCrater[Cava]" />
 </If>
+<!--
 <PickUp QuestName="Starfall Village" QuestId="28674" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
+-->
+<!--
 <If Condition="!HasQuest(28847) &amp;&amp; !IsQuestCompleted(28847)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 </If>
 <PickUp QuestName="The Pursuit of Umbranse" QuestId="28847" GiverName="Nymn" GiverId="50366" X="6723.967" Y="-4662.056" Z="720.9702" />
 <TurnIn QuestName="Starfall Village" QuestId="28674" TurnInName="Wynd Nightchaser" TurnInId="11079" X="7111.751" Y="-3985.116" Z="745.6235" />
+-->
 <PickUp QuestName="Exterminators at Work" QuestId="28676" GiverName="Wynd Nightchaser" GiverId="11079" X="7111.751" Y="-3985.116" Z="745.6235" />
 <PickUp QuestName="Out of Harm's Way" QuestId="28701" GiverName="Wynd Nightchaser" GiverId="11079" X="7111.751" Y="-3985.116" Z="745.6235" />
 <TurnIn QuestName="Exterminators at Work" QuestId="28676" TurnInName="Rinno Curtainfire" TurnInId="49407" X="7112.41" Y="-3806.953" Z="734.5289" />
@@ -919,11 +928,13 @@
 <TurnIn QuestName="You Gotta Have Eggs" QuestId="28828" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 <TurnIn QuestName="Shy-Rotam" QuestId="28742" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 <TurnIn QuestName="Ursius" QuestId="28639" TurnInName="Francis Morcott" TurnInId="49436" X="7634.253" Y="-4429.314" Z="623.8746" />
+<!--
 <If Condition="HasQuest(28847)">
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="2255" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 </If>
 <TurnIn QuestName="The Pursuit of Umbranse" QuestId="28847" TurnInName="Haleh" TurnInId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
+-->
 <If Condition="!HasQuest(28837) &amp;&amp; !IsQuestCompleted(28837) &amp;&amp; Me.LevelFraction &gt;= 55.58">
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
