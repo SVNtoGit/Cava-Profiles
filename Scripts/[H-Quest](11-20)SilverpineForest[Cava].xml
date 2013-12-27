@@ -558,31 +558,10 @@
 <TurnIn QuestName="Playing Dirty" QuestId="27082" TurnInName="Apothecary Wormcrud" TurnInId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <PickUp QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" GiverName="Apothecary Wormcrud" GiverId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <If Condition="HasQuest(27088) &amp;&amp; !IsQuestCompleted(27088)">
-  <RunTo X="821.3822" Y="1731.285" Z="22.4601" />
   <While Condition="!IsQuestCompleted(27088)">
     <CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" AuraIdMissingFromMob="83903" MobState="Alive" InteractByUsingItemId="60808"
-    MinRange="25" Range="75" WaitTime="4000" X="821.3822" Y="1731.285" Z="22.4601" />
-      <!--<HuntingGrounds>
-        <Hotspot X="1090.25" Y="1489.505" Z="32.30892" />
-        <Hotspot X="1127.492" Y="1504.723" Z="35.61382" />
-        <Hotspot X="1162.526" Y="1524.371" Z="38.19423" />
-        <Hotspot X="1183.061" Y="1558.624" Z="30.12388" />
-        <Hotspot X="1180.738" Y="1598.387" Z="24.7646" />
-        <Hotspot X="1172.296" Y="1637.785" Z="25.29495" />
-        <Hotspot X="1175.966" Y="1678.668" Z="20.40984" />
-        <Hotspot X="1168.622" Y="1718.75" Z="15.38996" />
-        <Hotspot X="1181.649" Y="1757.295" Z="12.40979" />
-        <Hotspot X="1202.247" Y="1792.207" Z="17.39289" />
-        <Hotspot X="1212.551" Y="1831.862" Z="14.27821" />
-        <Hotspot X="1213.438" Y="1871.872" Z="13.69068" />
-        <Hotspot X="952.9054" Y="1500.616" Z="43.09503" />
-        <Hotspot X="917.6749" Y="1519.298" Z="36.09153" />
-        <Hotspot X="887.4022" Y="1544.936" Z="26.93758" />
-        <Hotspot X="870.5992" Y="1582.566" Z="29.79239" />
-        <Hotspot X="855.334" Y="1619.719" Z="27.96004" />
-      </HuntingGrounds>
-    </CustomBehavior>-->
-    <CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" AuraIdOnMob="83903" MobState="Alive" />
+      MinRange="25" Range="75" WaitTime="5000" ProactiveCombatStrategy="ClearMobsTargetingUs" X="821.3822" Y="1731.285" Z="22.4601" />
+    <CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" AuraIdOnMob="83903" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False"/>
   </While>
 </If>
 <TurnIn QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" TurnInName="Apothecary Wormcrud" TurnInId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
@@ -780,8 +759,15 @@
   <PickUp QuestName="Seek and Destroy" QuestId="27193" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="500.622" Y="1564.54" Z="128.2624" />
 </If>
 <If Condition="HasQuest(27193) &amp;&amp; !IsQuestCompleted(27193)">
-  <RunTo X="142.5726" Y="1528.74" Z="114.9523" />
+  <LootMobs Value="true" />
+  <While Condition="!IsQuestCompleted(27193)">
+    <RunTo QuestId="27193" X="144.241" Y="1526.984" Z="114.9543" />
+    <CustomBehavior File="WaitTimer" QuestId="27193" WaitTime="10000" />
+  </While>
+  <LootMobs Value="null" />
+<!--
   <Objective QuestName="Seek and Destroy" QuestId="27193" Type="CollectItem" ItemId="60867" CollectCount="1" />
+-->
 </If>
 <If Condition="HasQuest(27193)" >
    <While Condition="HasQuest(27193)" >
@@ -808,8 +794,8 @@
     </If>
   </While>
 </If>
-<TurnIn QuestName="Honor the Dead" QuestId="27180" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2624" />
 <TurnIn QuestName="Nowhere to Run" QuestId="27195" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2624" />
+<TurnIn QuestName="Honor the Dead" QuestId="27180" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2624" />
 <If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="478.761" Y="1538.956" Z="130.8325" />
