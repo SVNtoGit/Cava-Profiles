@@ -2039,33 +2039,34 @@
   <RunTo X="-2995.579" Y="4545.104" Z="-21.71549" />
 </If>
 <If Condition="HasQuest(10874) &amp;&amp; !IsQuestCompleted(10874)" >
-  <CustomBehavior File="FlyTo" X="-3628.039" Y="4076.332" Z="54.28759" />
-  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="FlyTo" Land="True" IgnoreIndoors="True" X="-3632.821" Y="4086.047" Z="49.51545" />
+  <UseMount Value="False" />
   <If Condition="!IsObjectiveComplete(1, 10874)" >
     <RunTo X="-3411.573" Y="4091.56" Z="62.65937" />
+    <While Condition="!IsObjectiveComplete(1, 10874)" >
+      <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185216" X="-3423.222" Y="4105.196" Z="62.67807" />
+    </While>
   </If>
-  <While Condition="!IsObjectiveComplete(1, 10874)" >
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185216" X="-3423.222" Y="4105.196" Z="62.67807" />
-  </While>
   <If Condition="!IsObjectiveComplete(2, 10874)" >
     <RunTo X="-3509.417" Y="4082.14" Z="92.93889" />
+    <While Condition="!IsObjectiveComplete(2, 10874)" >
+      <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185217" X="-3511.869" Y="4081.113" Z="93.51105" />
+    </While>
   </If>
-  <While Condition="!IsObjectiveComplete(2, 10874)" >
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185217" X="-3511.869" Y="4081.113" Z="93.51105" />
-  </While>
   <If Condition="!IsObjectiveComplete(4, 10874)" >
     <RunTo X="-3604.634" Y="4050.653" Z="111.9814" />
+    <While Condition="!IsObjectiveComplete(4, 10874)" >
+      <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185219" X="-3511.869" Y="4081.113" Z="93.51105" />
+    </While>
   </If>
-  <While Condition="!IsObjectiveComplete(4, 10874)" >
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185219" X="-3511.869" Y="4081.113" Z="93.51105" />
-  </While>
   <If Condition="!IsObjectiveComplete(3, 10874)" >
     <RunTo X="-3495.328" Y="4015.074" Z="113.1137" />
+    <While Condition="!IsObjectiveComplete(3, 10874)" >
+      <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185218" X="-3511.869" Y="4081.113" Z="93.51105" />
+    </While>
   </If>
-  <While Condition="!IsObjectiveComplete(3, 10874)" >
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" NonCompeteDistance="0" QuestId="10874" MobId="185218" X="-3511.869" Y="4081.113" Z="93.51105" />
-  </While>
-  <RunTo X="-3628.039" Y="4076.332" Z="54.28759" />
+  <RunTo X="-3632.821" Y="4086.047" Z="49.51545" />
+  <UseMount Value="True" />
 </If>
 <If Condition="HasQuest(10840)">
   <CustomBehavior File="FlyTo" X="-2849.89" Y="5047.961" Z="-18.87771" />
@@ -2111,7 +2112,7 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsHorde">
-  <If Condition="!HasQuest(10018) &amp;&amp; !IsQuestCompleted(10018)" >
+  <If Condition="!HasQuest(9993) &amp;&amp; !IsQuestCompleted(9993)" >
     <If Condition="(Me.LevelFraction &gt;= 65.9)">
       <CustomBehavior File="Message" Text="Moving to NAGRAND, Please do not stop bot" LogColor="Aquamarine" />
       <CustomBehavior File="FlyTo" X="-1445.546" Y="6337.685" Z="38.00737" />
@@ -2125,7 +2126,9 @@
       </Else>
     </If>
   </If>
+<!--
   <PickUp QuestName="Vestments of the Wolf Spirit" QuestId="10018" GiverName="Malukaz" GiverId="18384" X="-2671.772" Y="4373.862" Z="35.89537" />
+-->
   <PickUp QuestName="Olemba Seed Oil" QuestId="9993" GiverName="Rakoria" GiverId="18385" X="-2615.734" Y="4376.055" Z="35.45326" />
   <PickUp QuestName="Wanted: Bonelashers Dead!" QuestId="10034" GiverName="Wanted Poster" GiverType="GameObject" GiverId="182588" X="-2627.697" Y="4391.198" Z="34.84501" />
   <If Condition="HasQuest(9796)">
@@ -2401,7 +2404,9 @@
     <Objective QuestName="Olemba Seeds" QuestId="9993" Type="CollectItem" ItemId="25745" CollectCount="30" />
     <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
   </If>
+<!--
   <Objective QuestName="Vestments of the Wolf Spirit" QuestId="10018" Type="CollectItem" ItemId="25812" CollectCount="12" />
+-->
   <Objective QuestName="Magical Disturbances" QuestId="10027" Type="KillMob" MobId="18464" KillCount="10" />
   <If Condition="HasQuest(10000) &amp;&amp; !IsQuestCompleted(10000)" >
     <CustomBehavior File="FlyTo" X="-2818.044" Y="3648.097" Z="-12.04387" />
@@ -2499,9 +2504,10 @@
   <TurnIn QuestName="An Unseen Hand" QuestId="10013" TurnInName="Rokag" TurnInId="18386" X="-2606.738" Y="4439.138" Z="36.09451" />
   <TurnIn QuestName="Magical Disturbances" QuestId="10027" TurnInName="Kurgatok" TurnInId="18383" X="-2644.694" Y="4449.699" Z="36.09399" />
   <TurnIn QuestName="Wanted: Bonelashers Dead!" QuestId="10034" TurnInName="Mawg Grimshot" TurnInId="18705" X="-2651.722" Y="4423.798" Z="36.34694" />
+<!--
   <TurnIn QuestName="Vestments of the Wolf Spirit" QuestId="10018" TurnInName="Malukaz" TurnInId="18384" X="-2671.772" Y="4373.862" Z="35.89537" />
   <PickUp QuestName="Patriarch Ironjaw" QuestId="10023" GiverName="Malukaz" GiverId="18384" X="-2671.772" Y="4373.862" Z="35.89537" />
-  <TurnIn QuestName="What Are These Things?" QuestId="9995" TurnInName="Tooki" TurnInId="18447" X="-2653.607" Y="4381.117" Z="36.21878" />
+-->  <TurnIn QuestName="What Are These Things?" QuestId="9995" TurnInName="Tooki" TurnInId="18447" X="-2653.607" Y="4381.117" Z="36.21878" />
   <PickUp QuestName="Report to Stonebreaker Camp" QuestId="10448" GiverName="Tooki" GiverId="18447" X="-2653.607" Y="4381.117" Z="36.21878" />
   <TurnIn QuestName="Olemba Seed Oil" QuestId="9993" TurnInName="Rakoria" TurnInId="18385" X="-2615.734" Y="4376.055" Z="35.45326" />
   <PickUp QuestName="And Now, the Moment of Truth" QuestId="10201" GiverName="Rakoria" GiverId="18385" X="-2615.734" Y="4376.055" Z="35.45326" />
@@ -2523,18 +2529,19 @@
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](65-67)Nagrand[Cava]" />
   </If>
   <PickUp QuestName="Attack on Firewing Point" QuestId="9997" GiverName="Sergeant Chawni" GiverId="21007" X="-2511.242" Y="3665.24" Z="1.608196" />
-  <If Condition="HasQuest(10023) &amp;&amp; !IsQuestCompleted(10023)" >
+<!--  <If Condition="HasQuest(10023) &amp;&amp; !IsQuestCompleted(10023)" >
     <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
     <CustomBehavior File="FlyTo" X="-2263.141" Y="3591.066" Z="-18.02268" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="CollectThings" QuestId="10023" MobId="18670" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-2188.714" Y="3378.113" Z="-31.82311" />
     </CustomBehavior>
-<!--
+
 <Objective QuestName="Patriarch Ironjaw" QuestId="10023" Type="CollectItem" ItemId="25837" CollectCount="1" />
--->
+
     <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
   </If>
+-->
   <If Condition="HasQuest(9997) &amp;&amp; !IsQuestCompleted(9997)" >
     <SetGrindArea>
     <GrindArea>
@@ -2564,12 +2571,14 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Attack on Firewing Point" QuestId="9997" TurnInName="Sergeant Chawni" TurnInId="21007" X="-2511.242" Y="3665.24" Z="1.608196" />
+<!--
   <If Condition="HasQuest(10023)" >
     <CustomBehavior File="FlyTo" X="-2652.518" Y="4395.864" Z="36.29605" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Patriarch Ironjaw" QuestId="10023" TurnInName="Malukaz" TurnInId="18384" X="-2671.772" Y="4373.862" Z="35.89537" />
     <RunTo X="-2652.518" Y="4395.864" Z="36.29605" />
   </If>
+-->
 </If>
 <!--
                                                                                                                                    |

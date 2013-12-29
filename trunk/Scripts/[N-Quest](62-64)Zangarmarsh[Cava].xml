@@ -1665,17 +1665,6 @@
   <RunTo X="-240.8551" Y="5482.676" Z="23.30687" />
   <CustomBehavior File="Cava\CavaSettings" UseMount="True"/>
 </If>
-<If Condition="!HasQuest(9697) &amp;&amp; !IsQuestCompleted(9697)" >
-  <PickUp QuestName="Watcher Leesa'oh" QuestId="9697" GiverName="Lethyn Moonfire" GiverId="17834" X="-181.3797" Y="5527.087" Z="29.40778" />
-  <While Condition="HasQuestAvailable(17834)" >
-    <CustomBehavior File="InteractWith" MobId="17834" KeepTargetSelected="True" X="-181.3797" Y="5527.087" Z="29.40778" />
-    <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
-    <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
-<!--
-<PickUp QuestName="What's Wrong at Cenarion Thicket?" QuestId="9957" GiverName="" GiverId="" />
--->
-  </While>
-</If>
 <TurnIn QuestName="Disturbance at Umbrafen Lake" QuestId="9716" TurnInName="Ysiel Windsinger" TurnInId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
 <PickUp QuestName="As the Crow Flies" QuestId="9718" GiverName="Ysiel Windsinger" GiverId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
 <If Condition="HasQuest(9718) &amp;&amp; !IsQuestCompleted(9718)" >
@@ -1685,6 +1674,36 @@
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
 </If>
 <TurnIn QuestName="As the Crow Flies" QuestId="9718" TurnInName="Ysiel Windsinger" TurnInId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
+<If Condition="HasFaction(942) &amp;&amp; (GetFactionReputation(942) &lt; 3000)">
+  <While Condition="GetFactionReputation(942) &lt; 3000">
+    <If Condition="GetItemCount(24401) &lt; 10">
+      <CustomBehavior File="FlyTo" X="-806.2661" Y="5923.055" Z="23.43429" />
+      <LootMobs Value="true" />
+      <CustomBehavior File="CollectThings" MobId1="19946" MobId2="19947" CollectUntil="RequiredCountReached" CollectItemCount="10" CollectItemId="24401" HuntingGroundRadius="200" MobState="Alive" >
+      <Hotspot X="-806.2661" Y="5923.055" Z="23.43429" />
+      <Hotspot X="-770.2905" Y="5940.411" Z="21.22055" />
+      <Hotspot X="-730.2741" Y="5937.986" Z="19.30803" />
+      <Hotspot X="-694.6579" Y="5919.349" Z="20.41994" />
+      <Hotspot X="-656.6739" Y="5902.872" Z="17.5638" />
+      <Hotspot X="-617.9261" Y="5889.617" Z="21.79305" />
+      <Hotspot X="-578.6026" Y="5881.303" Z="21.19055" />
+      <Hotspot X="-546.7133" Y="5905.649" Z="19.06562" />
+      <Hotspot X="-573.3093" Y="5936.372" Z="17.65973" />
+      <Hotspot X="-613.4923" Y="5937.502" Z="22.6425" />
+      <Hotspot X="-653.5004" Y="5939.086" Z="22.01768" />
+      <Hotspot X="-693.3506" Y="5946.835" Z="17.53959" />
+      <Hotspot X="-731.5211" Y="5960.796" Z="19.91397" />
+      <Hotspot X="-771.6003" Y="5959.633" Z="17.54596" />
+      <Hotspot X="-802.9172" Y="5934.626" Z="22.25088" />
+      </CustomBehavior>
+      <LootMobs Value="null" />
+    </If>
+    <CustomBehavior File="FlyTo" X="-224.2842" Y="5434.521" Z="21.64192" />
+    <CustomBehavior File="InteractWith" MobId="17909" KeepTargetSelected="True" NonCompeteDistance="0" X="-215.5434" Y="5437.267" Z="21.42744" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteButton" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  </While>
+</If>
 <PickUp QuestName="Balance Must Be Preserved" QuestId="9720" GiverName="Ysiel Windsinger" GiverId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
 <PickUp QuestName="Blessings of the Ancients" QuestId="9785" GiverName="Windcaller Blackhoof" GiverId="18070" X="-234.2691" Y="5434.766" Z="22.42138" />
 <If Condition="HasQuest(9785) &amp;&amp; !IsQuestCompleted(9785)" >
@@ -1713,6 +1732,17 @@
   <TurnIn QuestName="Blessings of the Ancients" QuestId="9785" TurnInName="Windcaller Blackhoof" TurnInId="18070" X="-234.2691" Y="5434.766" Z="22.42138" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
 </If>
+<If Condition="!HasQuest(9697) &amp;&amp; !IsQuestCompleted(9697)" >
+  <PickUp QuestName="Watcher Leesa'oh" QuestId="9697" GiverName="Lethyn Moonfire" GiverId="17834" X="-181.3797" Y="5527.087" Z="29.40778" />
+  <While Condition="HasQuestAvailable(17834)" >
+    <CustomBehavior File="InteractWith" MobId="17834" KeepTargetSelected="True" X="-181.3797" Y="5527.087" Z="29.40778" />
+    <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
+<!--
+<PickUp QuestName="What's Wrong at Cenarion Thicket?" QuestId="9957" GiverName="" GiverId="" />
+-->
+  </While>
+</If>
 <If Condition="HasQuest(9720) &amp;&amp; !IsQuestCompleted(9720)">
   <If Condition="!IsObjectiveComplete(1, 9720)" >
     <CustomBehavior File="FlyTo" X="-766.6529" Y="5912.395" Z="19.03539" />
@@ -1731,6 +1761,7 @@
     </While>
   </If>
 </If>
+
 
 
 

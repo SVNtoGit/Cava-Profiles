@@ -1270,13 +1270,13 @@
 <If Condition="!HasQuest(24704) &amp;&amp; !IsQuestCompleted(24704)" >
   <While Condition="!HasQuest(24704)" >
   <If Condition="!HasQuest(24704)">
-    <CustomBehavior File="InteractWith" MobId="38255" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38255" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </If>
   <If Condition="!HasQuest(24704)">
-    <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1286,13 +1286,13 @@
 <If Condition="!HasQuest(24705) &amp;&amp; !IsQuestCompleted(24705)" >
   <While Condition="!HasQuest(24705)" >
   <If Condition="!HasQuest(24705)">
-    <CustomBehavior File="InteractWith" MobId="38255" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38255" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </If>
   <If Condition="!HasQuest(24705)">
-    <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1304,33 +1304,34 @@
 <PickUp QuestName="Damsels Were Made to be Saved" QuestId="24705" GiverName="" GiverId="" />
 -->
 <If Condition="HasQuest(24705) &amp;&amp; !IsQuestCompleted(24705)" >
-  <If Condition="!IsObjectiveComplete(1, 24705)" >
-    <Objective QuestName="Damsels Were Made to be Saved" QuestId="24705" Type="CollectItem" ItemId="50288" CollectCount="1" />
-  </If>
-  <While Condition="!IsObjectiveComplete(1, 24705)" >
+  <While Condition="!IsObjectiveComplete(1, 24705)">
     <While Condition="!Me.HasAura(71502)" >
-      <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
+      <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
     </While>
-    <CustomBehavior File="InteractWith" MobId="38238" X="-7431.207" Y="-817.8577" Z="-272.8687" />
+    <If Condition="!HasItem(50288)">
+      <CustomBehavior File="InteractWith" QuestId="24705" MobId="202065" NonCompeteDistance="0" X="-7432.564" Y="-815.9017" Z="-272.5652" />
+      <RunTo X="-7404.658" Y="-839.3262" Z="-272.4183" />
+    </If>
+    <RunTo QuestId="24705" X="-7432.564" Y="-815.9017" Z="-272.5652" />
+    <CustomBehavior File="InteractWith" QuestId="24705" MobId="38238" NonCompeteDistance="0" X="-7432.564" Y="-815.9017" Z="-272.5652" />
+    <CustomBehavior File="WaitTimer" QuestId="24705" WaitTime="10000" />
   </While>
 </If>
-<If Condition="HasQuest(24730) &amp;&amp; !IsQuestCompleted(24730)" >
-  <CustomBehavior File="Cava\CavaSettings" />
-  <Objective QuestName="Roll the Bones" QuestId="24730" Type="CollectItem" ItemId="11114" CollectCount="8" />
-  <CustomBehavior File="Cava\CavaSettings" />
-</If>
+<Objective QuestName="Roll the Bones" QuestId="24730" Type="CollectItem" ItemId="11114" CollectCount="8" />
 <If Condition="HasQuest(24705) &amp;&amp; !IsQuestCompleted(24705)" >
   <While Condition="!IsObjectiveComplete(2, 24705)" >
     <While Condition="!Me.HasAura(71502)" >
-      <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
+      <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
     </While>
     <RunTo X="-7201.62" Y="-343.4667" Z="-225.1057" />
+    <CustomBehavior File="WaitTimer" WaitTime="10000" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 24705)" >
     <While Condition="!Me.HasAura(71502)" >
-      <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
+      <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
     </While>
     <RunTo X="-6500.276" Y="-532.3976" Z="-250.3099" />
+    <CustomBehavior File="WaitTimer" WaitTime="10000" />
   </While>
 </If>
 <If Condition="HasQuest(24704) &amp;&amp; !IsQuestCompleted(24704)" >
@@ -1396,13 +1397,13 @@
 <If Condition="!HasQuest(24706) &amp;&amp; !IsQuestCompleted(24706)" >
   <While Condition="!HasQuest(24706)" >
   <If Condition="!HasQuest(24706)">
-    <CustomBehavior File="InteractWith" MobId="38255" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38255" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </If>
   <If Condition="!HasQuest(24706)">
-    <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
+    <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" WaitForNpcs="False" X="-7230.15" Y="-600.1298" Z="-271.0341" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1415,10 +1416,13 @@
 <If Condition="HasQuest(24706) &amp;&amp; !IsQuestCompleted(24706)" >
   <While Condition="!IsQuestCompleted(24706)" >
     <While Condition="!Me.HasAura(71502)" >
-      <CustomBehavior File="InteractWith" MobId="38237" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
+      <CustomBehavior File="InteractWith" MobId="38237" NonCompeteDistance="0" KeepTargetSelected="True" InteractByGossipOptions="1" X="-7228.146" Y="-599.6198" Z="-271.2461" />
     </While>
     <RunTo X="-7288.897" Y="-763.7507" Z="-273.5768" />
-    <CustomBehavior File="InteractWith" QuestId="24706" MobId="38254" MobState="Alive" IgnoreCombat="True" CollectionDistance="1000" X="-7288.897" Y="-763.7507" Z="-273.5768" />
+    <DisableBehavior Name="Combat" />
+    <CustomBehavior File="TargetAndMoveToMob" MobId="38254" TargetOnlyIfHealthPercentAbove="1" MoveWithinMaxRangeOfMob="2" />
+    <CustomBehavior File="WaitTimer" WaitTime="25000" />
+    <EnableBehavior Name="Combat" />
   </While>
 </If>
 <If Condition="HasQuest(24706) &amp;&amp; IsQuestCompleted(24706)" >
@@ -1428,13 +1432,19 @@
 </If>
 <TurnIn QuestName="Roll the Bones" QuestId="24730" TurnInName="Spark Nilminer" TurnInId="9272" X="-7206.978" Y="-645.2934" Z="-233.7018" />
 <PickUp QuestName="The Fossil-Finder 3000" QuestId="24708" GiverName="Spark Nilminer" GiverId="9272" X="-7206.978" Y="-645.2934" Z="-233.7018" />
-<!--15 minutos
+<!--muito tempo 15 min
 <PickUp QuestName="The Ballad of Maximillian" QuestId="24707" GiverName="Maximillian of Northshire" GiverId="38237" X="-7228.146" Y="-599.6198" Z="-271.2461" />
+<If Condition="HasQuest(24707) &amp;&amp; !IsQuestCompleted(24707)" >
+  <While Condition="!IsQuestCompleted(24707)" >
+    <DisableBehavior Name="Combat" />
+    <CustomBehavior File="SpecificQuests\24707-ungoro-theballadofmaximillian"/>
+    <EnableBehavior Name="Combat" />
+  </While>
+
 <Objective QuestName="The Ballad of Maximillian" QuestId="24707" Type="KillMob" MobId="38708" KillCount="1" />
+
+</If>
 <TurnIn QuestName="The Ballad of Maximillian" QuestId="24707" TurnInName="Maximillian of Northshire" TurnInId="38237" X="-7228.146" Y="-599.6198" Z="-271.2461" />
- <Vendor Name="Pimento" Entry="38593" Type="Repair" X="-7905.382" Y="-684.054" Z="-261.756" />
- <Vendor Name="Devilsaur Queen" Entry="38708" Type="Repair" X="-7138.604" Y="-698.9257" Z="-271.6588" />
- 51780   small rock
 -->
 <If Condition="HasQuest(24708) &amp;&amp; !IsQuestCompleted(24708)" >
   <While Condition="!IsQuestCompleted(24708)" >
@@ -1453,7 +1463,7 @@
 <PickUp QuestName="The Western Pylon" QuestId="24723" GiverName="Spark Nilminer" GiverId="9272" X="-7206.978" Y="-645.2934" Z="-233.7018" />
 <If Condition="HasQuest(24723) &amp;&amp; !IsQuestCompleted(24723)" >
   <RunTo X="-7200.42" Y="-327.2742" Z="-230.9178" />
-  <CustomBehavior File="InteractWith" QuestId="24723" MobId="164956" Range="9" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="-7200.42" Y="-327.2742" Z="-230.9178" />
+  <CustomBehavior File="InteractWith" QuestId="24723" NonCompeteDistance="0" MobId="164956" Range="9" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="-7200.42" Y="-327.2742" Z="-230.9178" />
 </If>
 <If Condition="HasQuest(24723)">
   <RunTo X="-6959.598" Y="-1096.386" Z="-272.6503" />

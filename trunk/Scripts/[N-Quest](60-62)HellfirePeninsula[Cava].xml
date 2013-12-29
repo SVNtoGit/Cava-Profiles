@@ -1606,7 +1606,7 @@
       <Hotspot X="-551.5626" Y="1824.619" Z="66.48032" />
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(2, 10144)">
-        <CustomBehavior File="InteractWith" MobId="184415" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-547.8168" Y="1783.671" Z="58.62281" />
+        <CustomBehavior File="InteractWith" MobId="184415" Range="10" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-547.8168" Y="1783.671" Z="58.62281" />
       </While>
     </If>
     <If Condition="!IsObjectiveComplete(1, 10144)">
@@ -1626,7 +1626,7 @@
       </CustomBehavior>
       <While Condition="!IsObjectiveComplete(1, 10144)">
         <RunTo X="-419.0578" Y="1848.069" Z="80.9203" />
-        <CustomBehavior File="InteractWith" MobId="184414" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-419.0578" Y="1848.069" Z="80.9203" />
+        <CustomBehavior File="InteractWith" MobId="184414" Range="10" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-419.0578" Y="1848.069" Z="80.9203" />
       </While>
     </If>
     <LootMobs Value="null" />
@@ -1869,8 +1869,10 @@
       <Hotspot X="61.88527" Y="1740.603" Z="45.53067" />
       <Hotspot X="91.22768" Y="1713.46" Z="42.887" />
       </CustomBehavior>
-      <While Condition="!IsObjectiveComplete(1, 10208)">
-        <CustomBehavior File="InteractWith" MobId="184290" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-85.41621" Y="1882.359" Z="74.90538" />
+      <CustomBehavior File="FlyTo" X="-97.99659" Y="1890.693" Z="76.92221" />
+       <While Condition="!IsObjectiveComplete(1, 10208)">
+        <RunTo X="-83.19663" Y="1881.012" Z="74.39235" />
+        <CustomBehavior File="InteractWith" MobId="184290" Range="10" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-83.19663" Y="1881.012" Z="74.39235" />
       </While>
     </If>
     <If Condition="!IsObjectiveComplete(2, 10208)">
@@ -1894,8 +1896,10 @@
       <Hotspot X="61.88527" Y="1740.603" Z="45.53067" />
       <Hotspot X="91.22768" Y="1713.46" Z="42.887" />
       </CustomBehavior>
+      <CustomBehavior File="FlyTo" X="127.3482" Y="1719.32" Z="40.89312" />
       <While Condition="!IsObjectiveComplete(2, 10208)">
-        <CustomBehavior File="InteractWith" MobId="184289" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
+        <RunTo X="147.8659" Y="1717.175" Z="38.10068" />
+        <CustomBehavior File="InteractWith" MobId="184289" Range="10" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="147.8659" Y="1717.175" Z="38.10068" />
       </While>
     </If>
     <LootMobs Value="null" />
@@ -2200,15 +2204,13 @@
     <CustomBehavior File="FlyTo" X="-973.1046" Y="2177.329" Z="15.30203" />
     <CustomBehavior File="ForcedDismount" />
 	<While Condition="!IsQuestCompleted(10538)">
-<!--      <If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 21306 &amp;&amp; u.Distance &lt;= 200))" >
-        <RunTo QuestId="10538" X="-992.207" Y="2181.532" Z="15.18128" />
-      </If>
       <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 21306 &amp;&amp; u.Distance &lt;= 200))" >
-      </While>-->
+        <RunTo QuestId="10538" X="-992.207" Y="2181.532" Z="15.18128" />
+        <CustomBehavior File="WaitTimer" QuestId="10538" WaitTime="5000" />
+      </While>
+      <CustomBehavior File="InteractWith" Range="10" QuestId="10538" WaitTime="1500" InteractBlacklistTimeInSeconds="1" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="1" MobId="184715" X="-973.1046" Y="2177.329" Z="15.30203" />
       <CustomBehavior File="InteractWith" Range="10" QuestId="10538" InteractBlacklistTimeInSeconds="1" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" NumOfTimes="1" MobId="184715" X="-973.1046" Y="2177.329" Z="15.30203" />
 	</While>
-
-
   </If>
   <If Condition="HasQuest(10809)">
     <CustomBehavior File="FlyTo" X="-1315.845" Y="2378.456" Z="87.8429" />
