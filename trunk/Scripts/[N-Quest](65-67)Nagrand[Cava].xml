@@ -496,15 +496,7 @@
 <Quest Id="9900" Name="Gava'xi">
   <Objective Type="KillMob" MobId="18298" KillCount="1">
     <Hotspots>
-      <Hotspot X="-2633.316" Y="7982.731" Z="-48.40429" />
-      <Hotspot X="-2674.213" Y="7976.586" Z="-46.59371" />
-      <Hotspot X="-2706.776" Y="7953.145" Z="-43.86974" />
-      <Hotspot X="-2719.986" Y="7914.623" Z="-42.28277" />
-      <Hotspot X="-2706.304" Y="7876.653" Z="-44.04041" />
-      <Hotspot X="-2667.162" Y="7888.49" Z="-47.81839" />
-      <Hotspot X="-2633.98" Y="7911.094" Z="-52.7718" />
-      <Hotspot X="-2706.357" Y="7890.219" Z="-41.32985" />
-      <Hotspot X="-2677.47" Y="7915.931" Z="-30.95791" />
+      <Hotspot X="-2668.056" Y="7942.283" Z="-22.57376" />
     </Hotspots>
   </Objective>
 </Quest>
@@ -2164,6 +2156,7 @@
     <CustomBehavior File="FlyTo" X="-1259.992" Y="7134.562" Z="57.27608" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="18808" MobState="Alive" X="-1256.629" Y="7136.169" Z="57.26547" />
+    <RunTo X="-1259.992" Y="7134.562" Z="57.27608" />
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="18913" AreaId="3613" X="-1229.582" Y="7161.333" Z="57.26583" /><!--AreaId="3613"-->
     <PickUp QuestName="Missing Mag'hari Procession" QuestId="9944" GiverName="Matron Drakia" GiverId="18302" X="-1219.452" Y="7165.368" Z="57.26558" />
@@ -3594,12 +3587,15 @@
                                                                                                                                    |
 -->
 <PickUp QuestName="Armaments for Deception" QuestId="9928" GiverName="Lantresor of the Blade" GiverId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
+<!--
 <PickUp QuestName="Ruthless Cunning" QuestId="9927" GiverName="Lantresor of the Blade" GiverId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
-<If Condition="(HasQuest(9928) &amp;&amp; !IsQuestCompleted(9928)) || (HasQuest(9927) &amp;&amp; !IsQuestCompleted(9927))">
+-->
+<If Condition="HasQuest(9928) &amp;&amp; !IsQuestCompleted(9928)">
   <CustomBehavior File="FlyTo" X="-2770.59" Y="6363.496" Z="63.7524" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <Objective QuestName="Armaments for Deception" QuestId="9928" Type="CollectItem" ItemId="25554" CollectCount="10" />
+<!--
 <If Condition="HasQuest(9927) &amp;&amp; !IsQuestCompleted(9927)">
   <CustomBehavior File="InteractWith" QuestId="9927" MobId1="17146"  MobId2="17147" MobId3="17148" MobState="Dead" InteractByUsingItemId="25552"
    WaitTime="7000" NumOfTimes="1000" CollectionDistance="15" >
@@ -3618,13 +3614,16 @@
     </HuntingGrounds>
   </CustomBehavior>
 </If>
+-->
 <If Condition="HasQuest(9928) || HasQuest(9927)">
   <CustomBehavior File="FlyTo" X="-2263.1" Y="6219.961" Z="44.05562" />
   <CustomBehavior File="ForcedDismount" />
 </If>
-<TurnIn QuestName="Ruthless Cunning" QuestId="9927" TurnInName="Lantresor of the Blade" TurnInId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
 <TurnIn QuestName="Armaments for Deception" QuestId="9928" TurnInName="Lantresor of the Blade" TurnInId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
+<!--
+<TurnIn QuestName="Ruthless Cunning" QuestId="9927" TurnInName="Lantresor of the Blade" TurnInId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
 <PickUp QuestName="Returning the Favor" QuestId="9931" GiverName="Lantresor of the Blade" GiverId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
+-->
 <If Condition="HasQuest(9849)">
   <CustomBehavior File="FlyTo" X="-781.6394" Y="6944.226" Z="33.35647" />
   <CustomBehavior File="ForcedDismount" />
@@ -3646,6 +3645,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](67-68)Blade'sEdgeMountains[Cava]" />
   </If>
 </If>
+<!--
 <If Condition="HasQuest(9931) &amp;&amp; !IsQuestCompleted(9931)">
   <CustomBehavior File="FlyTo" X="-819.2546" Y="7592.354" Z="49.19886" />
   <CustomBehavior File="ForcedDismount" />
@@ -3674,6 +3674,7 @@
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="Returning the Favor" QuestId="9931" TurnInName="Lantresor of the Blade" TurnInId="18261" X="-2264.138" Y="6217.799" Z="44.39249" />
 </If>
+-->
 <If Condition="Me.IsAlliance">
   <CustomBehavior File="Message" Text="Moving to BLADE'S EDGE MOUNTAINS, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="973.751" Y="7397.633" Z="29.46703" />
