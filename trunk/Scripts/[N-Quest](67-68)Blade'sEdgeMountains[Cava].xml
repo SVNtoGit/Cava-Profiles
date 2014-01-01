@@ -16,6 +16,7 @@
   <Blackspot X="3065.605" Y="7100.079" Z="153.8885" Radius="0.9" />
   <Blackspot X="2536.958" Y="6458.845" Z="-3.201976" Radius="4.350209" />
   <Blackspot X="2533.681" Y="6460.964" Z="-3.746069" Radius="7.325935" />
+  <Blackspot X="2687.355" Y="6510.013" Z="1.048225" Radius="10" />
 </Blackspots>
 
 <Mailboxes>
@@ -2637,9 +2638,9 @@ turnin 10517
       </GrindArea>
       </SetGrindArea>
       <GrindTo Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 21057 &amp;&amp; u.Distance &lt;= 1000)) || IsQuestCompleted(10867)" />
-      <CustomBehavior File="InteractWith" QuestId="10867" MobId="21057" MobState="Dead" NonCompeteDistance="0" CollectionDistance="1000" X="2822.901" Y="5237.732" Z="264.4786" />
+      <CustomBehavior File="InteractWith" QuestId="10867" MobId="21057" WaitForNpcs="False" MobState="Dead" NonCompeteDistance="0" CollectionDistance="1000" X="2822.901" Y="5237.732" Z="264.4786" />
       <CustomBehavior File="WaitTimer" QuestId="10867" WaitTime="5000" />
-      <CustomBehavior File="InteractWith" QuestId="10867" MobId="185033" NonCompeteDistance="0"/>
+      <CustomBehavior File="InteractWith" QuestId="10867" MobId="185033" WaitForNpcs="False" NonCompeteDistance="0"/>
     </While>
   </If>
   <If Condition="HasQuest(10867)">
