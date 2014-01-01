@@ -2040,6 +2040,7 @@
 </If>
 <If Condition="HasQuest(10874) &amp;&amp; !IsQuestCompleted(10874)" >
   <CustomBehavior File="FlyTo" Land="True" IgnoreIndoors="True" X="-3632.821" Y="4086.047" Z="49.51545" />
+  <DisableBehavior Name="Loot,Pull" />
   <UseMount Value="False" />
   <If Condition="!IsObjectiveComplete(1, 10874)" >
     <RunTo X="-3411.573" Y="4091.56" Z="62.65937" />
@@ -2067,6 +2068,7 @@
   </If>
   <RunTo X="-3632.821" Y="4086.047" Z="49.51545" />
   <UseMount Value="True" />
+  <EnableBehavior Name="Loot,Pull" />
 </If>
 <If Condition="HasQuest(10840)">
   <CustomBehavior File="FlyTo" X="-2849.89" Y="5047.961" Z="-18.87771" />
