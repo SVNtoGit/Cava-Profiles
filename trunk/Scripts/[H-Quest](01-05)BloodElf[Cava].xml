@@ -309,10 +309,12 @@
 <If Condition="(Me.Class == WoWClass.Priest)">
   <TurnIn QuestName="Priest Training" QuestId="8564" TurnInName="Matron Arena" TurnInId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
   <PickUp QuestName="Healing the Wounded" QuestId="10072" GiverName="Matron Arena" GiverId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
-  <While Condition="HasQuest(10072) &amp;&amp; (IsQuestCompleted(10072)" >
+  <While Condition="HasQuest(10072) &amp;&amp; !IsQuestCompleted(10072)" >
     <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10072" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-	<CustomBehavior File="CastSpellOn" QuestId="10072" SpellId="589" MobId="44937" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="10381.8" Y="-6381.9" Z="37.74933" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10072" MobId="44937" WaitTime="1000" InteractByCastingSpellId="589" X="10381.8" Y="-6381.9" Z="37.74933" />
+	<!--
+    <CustomBehavior File="CastSpellOn" QuestId="10072" SpellId="589" MobId="44937" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="10381.8" Y="-6381.9" Z="37.74933" />
+    -->
   </While>
   <TurnIn QuestName="Healing the Wounded" QuestId="10072" TurnInName="Matron Arena" TurnInId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
 </If>
