@@ -347,10 +347,10 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
-<PickUp QuestName="Management Material" QuestId="13640" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
+<!--<PickUp QuestName="Management Material" QuestId="13640" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 <If Condition="HasQuest(13640) &amp;&amp; !IsQuestCompleted(13640)" >
   <While Condition="!IsQuestCompleted(13640)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13640" MobId="33440" GossipOptions="1" MobState="Alive" CollectionDistance="1000" X="1540.204" Y="-2409.932" Z="98.07008" />
+    <CustomBehavior File="InteractWith" QuestId="13640" NonCompeteDistance="0" MobId="33440" GossipOptions="1" MobState="Alive" CollectionDistance="1000" WaitTime="2000" X="1540.204" Y="-2409.932" Z="98.07008" />
     <CustomBehavior File="WaitTimer" QuestId="13640" WaitTime="2000" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13640" MobId="33440" MobState="Alive" WaitForNpcs="False" />
     <CustomBehavior File="WaitTimer" QuestId="13640" WaitTime="2000" />
@@ -358,37 +358,21 @@
     <CustomBehavior File="WaitTimer" QuestId="13640" WaitTime="2000" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13640" MobId="33458" MobState="Alive" WaitForNpcs="False" />
     <CustomBehavior File="WaitTimer" QuestId="13640" WaitTime="6000" />
+    
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13640" MobId="194349" WaitForNpcs="False" Range="6" WaitTime="3000" />
     <CustomBehavior File="WaitTimer" QuestId="13640" WaitTime="2000" />
   </While>
  </If>
 <TurnIn QuestName="Management Material" QuestId="13640" TurnInName="Gorka" TurnInId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
-<If Condition="Me.LevelFraction &gt;= 23.15">
-  <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
-  <!--Sirverwind Refuge FP-->
-  <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
-  <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; HasItem(16305)" >
-    <PickUp QuestName="Sharp" QuestId="2" GiverType="Item" GiverId="16305" />
-  </If>
-  <If Condition="HasQuest(2)" >
-    <TurnIn QuestName="Sharptalon's Claw" QuestId="2" TurnInName="Senani Thunderheart" TurnInId="12696" X="2171.547" Y="-1168.635" Z="95.99638" />
-  </If>
-  <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
-  <!--Hellscream FP-->
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
-  <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
-  <!--Zoram'gar FP-->
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
-</If>
-<PickUp QuestName="Needs a Little Lubrication" QuestId="13651" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
+-->
+<!--<PickUp QuestName="Needs a Little Lubrication" QuestId="13651" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 <If Condition="HasQuest(13651) &amp;&amp; !IsQuestCompleted(13651)" >
   <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
   <Objective QuestName="Needs a Little Lubrication" QuestId="13651" Type="CollectItem" ItemId="45071" CollectCount="5" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/><!----><!--LootMobs="Original"-->
+  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
 </If>
 <TurnIn QuestName="Needs a Little Lubrication" QuestId="13651" TurnInName="Gorka" TurnInId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
+
 <PickUp QuestName="Crisis at Splintertree" QuestId="13653" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 <If Condition="HasQuest(13653) &amp;&amp; !IsQuestCompleted(13653)" >
   <While Condition="!IsQuestCompleted(13653)" >
@@ -406,36 +390,9 @@
   </While>
 </If>
 <TurnIn QuestName="Crisis at Splintertree" QuestId="13653" TurnInName="Kadrak" TurnInId="8582" X="1237.152" Y="-2251.238" Z="92.00626" />
-<If Condition="Me.LevelFraction &gt;= 23.15">
-  <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
-  <!--Sirverwind Refuge FP-->
-  <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
-  <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; HasItem(16305)" >
-    <PickUp QuestName="Sharp" QuestId="2" GiverType="Item" GiverId="16305" />
-  </If>
-  <If Condition="HasQuest(2)" >
-    <TurnIn QuestName="Sharptalon's Claw" QuestId="2" TurnInName="Senani Thunderheart" TurnInId="12696" X="2171.547" Y="-1168.635" Z="95.99638" />
-  </If>
-  <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
-  <!--Hellscream FP-->
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
-  <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
-  <!--Zoram'gar FP-->
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
-</If>
-<If Condition="(!HasQuest(6503) &amp;&amp; !IsQuestCompleted(6503)) || (!HasQuest(26448) &amp;&amp; !IsQuestCompleted(26448))" >
-<!--  <RunTo X="1417.206" Y="-2254.994" Z="89.91197" />
-  <RunTo X="1586.385" Y="-2212.546" Z="93.96905" />
-  <RunTo X="1708.177" Y="-2190.813" Z="90.53454" />
-  <RunTo X="1830.854" Y="-2175.325" Z="96.49615" />
-  <RunTo X="2004.355" Y="-2399.832" Z="88.86693" />
-  <CustomBehavior File="ForcedMount" />
-  <CustomBehavior File="RunLikeHell" AllowCombat="False">
-    <Hotspot X="2323.247" Y="-2537.034" Z="100.6152" />
-  </CustomBehavior> -->
-  <RunTo X="2323.247" Y="-2537.034" Z="100.6152" />
+-->
+<If Condition="!HasQuest(6503) &amp;&amp; !IsQuestCompleted(6503)" >
+  <RunTo X="2306.265" Y="-2522.004" Z="103.8298" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="12196" X="2341.864" Y="-2566.989" Z="103.093" />
 </If>
 <PickUp QuestName="Ashenvale Outrunners" QuestId="6503" GiverName="Kuray'bin" GiverId="12867" X="2333.628" Y="-2541.913" Z="102.0043" />
