@@ -47,6 +47,7 @@
 <Quest Id="26497" Name="Vilebranch Scum">
   <Objective Type="KillMob" MobId="2640" KillCount="5">
     <Hotspots>
+      <Hotspot X="-347.2245" Y="-4214.65" Z="152.0102" />
       <Hotspot X="-336.3906" Y="-4089.913" Z="152.6806" />
       <Hotspot X="-334.6988" Y="-4130.5" Z="152.0197" />
       <Hotspot X="-342.5944" Y="-4170.177" Z="152.0106" />
@@ -56,6 +57,7 @@
   </Objective>
   <Objective Type="KillMob" MobId="2641" KillCount="5">
     <Hotspots>
+      <Hotspot X="-347.2245" Y="-4214.65" Z="152.0102" />
       <Hotspot X="-344.2729" Y="-4209.434" Z="152.0207" />
       <Hotspot X="-342.9955" Y="-4168.204" Z="152.0099" />
       <Hotspot X="-335.8893" Y="-4128.298" Z="152.0111" />
@@ -347,8 +349,10 @@
 <PickUp QuestName="Heads Up" QuestId="26518" GiverName="Doran Steelwing" GiverId="43157" X="-70.0069" Y="-4034.88" Z="122.481" />
 <PickUp QuestName="Faces of Evil" QuestId="26521" GiverName="Fraggar Thundermantle" GiverId="43156" X="-72.1545" Y="-4028.66" Z="122.1784" />
 <PickUp QuestName="All That Skitters" QuestId="26523" GiverName="Fraggar Thundermantle" GiverId="43156" X="-72.1545" Y="-4028.66" Z="122.1784" />
-<If Condition="HasQuest(26523) &amp;&amp; !IsQuestCompleted(26523)" >
+<If Condition="(HasQuest(26523) &amp;&amp; !IsQuestCompleted(26523)) || (HasQuest(26521) &amp;&amp; !IsQuestCompleted(26521)) || (HasQuest(26518) &amp;&amp; !IsQuestCompleted(26518)) || (HasQuest(26497) &amp;&amp; !IsQuestCompleted(26497))" >
   <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+</If>
+<If Condition="HasQuest(26523) &amp;&amp; !IsQuestCompleted(26523)" >
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26523" MobId="42689" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="10">
     <HuntingGrounds WaypointVisitStrategy="InOrder" >
@@ -368,7 +372,6 @@
       <Hotspot X="-221.7064" Y="-4023.347" Z="174.0361" />
     </HuntingGrounds>
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(26521) &amp;&amp; !IsQuestCompleted(26521)" >
   <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
@@ -405,6 +408,9 @@
 <Objective QuestName="Vilebranch Scum" QuestId="26497" Type="KillMob" MobId="2641" KillCount="5" />
 <If Condition="HasQuest(26497) &amp;&amp; IsQuestCompleted(26497)" >
   <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+</If>
+<If Condition="HasQuest(26523) || HasQuest(26521) || HasQuest(26518) || HasQuest(26497)" >
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Vilebranch Scum" QuestId="26497" TurnInName="Doran Steelwing" TurnInId="43157" X="-70.0069" Y="-4034.88" Z="122.481" />
 <TurnIn QuestName="Heads Up" QuestId="26518" TurnInName="Doran Steelwing" TurnInId="43157" X="-70.0069" Y="-4034.88" Z="122.481" />
