@@ -751,9 +751,11 @@
 <If Condition="HasQuest(28218) &amp;&amp; !IsQuestCompleted(28218)">
   <While Condition="!IsQuestCompleted(28218)">
     <CustomBehavior File="WaitTimer" WaitTime="28000" />
+    <RunTo QuestId="28218" X="6435.128" Y="-948.1365" Z="423.1476" />
     <CustomBehavior File="CollectThings" MobId="47733" NonCompeteDistance="1" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="1" MobState="Alive" >
       <Hotspot X="6439.576" Y="-946.642" Z="423.1492" />
     </CustomBehavior>
+    <RunTo QuestId="28218" X="6435.128" Y="-948.1365" Z="423.1476" />
     <CustomBehavior File="WaitTimer" QuestId="28218" WaitTime="40000" />
     <If Condition="!IsQuestCompleted(28218)">
       <CustomBehavior File="AbandonQuest" QuestId="28218" />
@@ -805,9 +807,11 @@
 <If Condition="HasQuest(28257) &amp;&amp; !IsQuestCompleted(28257)">
   <While Condition="!IsQuestCompleted(28257)">
     <CustomBehavior File="WaitTimer" WaitTime="15000" />
+    <RunTo QuestId="28257" X="6435.128" Y="-948.1365" Z="423.1476" />
     <CustomBehavior File="CollectThings" MobId1="47923" MobId2="47917" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="1" MobState="Alive" >
       <Hotspot X="6439.576" Y="-946.642" Z="423.1492" />
     </CustomBehavior>
+    <RunTo QuestId="28257" X="6435.128" Y="-948.1365" Z="423.1476" />
     <CustomBehavior File="WaitTimer" QuestId="28257" WaitTime="70000" />
     <If Condition="!IsQuestCompleted(28257)">
       <CustomBehavior File="AbandonQuest" QuestId="28257" />
