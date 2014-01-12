@@ -665,16 +665,22 @@
 <PickUp QuestName="Raptor Captor" QuestId="27242" GiverName="Sergeant Lukas" GiverId="23723" X="-2840.127" Y="-3424.611" Z="34.70546" />
 <If Condition="HasQuest(27242) &amp;&amp; !IsQuestCompleted(27242)" >
   <While Condition="!IsQuestCompleted(27242)" >
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2733.451" Y="-3450.229" Z="33.19365" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2694.366" Y="-3439.855" Z="33.91886" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2654.682" Y="-3448.01" Z="34.8968" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2626.57" Y="-3477.806" Z="35.09488" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2632.119" Y="-3517.633" Z="36.13672" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2655.219" Y="-3551.076" Z="34.1593" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2691.398" Y="-3568.878" Z="35.36771" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2728.639" Y="-3552.126" Z="33.77974" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2736.653" Y="-3512.663" Z="41.15985" />
-    <CustomBehavior File="CombatUseItemOn" QuestId="27242" ItemId="33069" MobId1="4351" MobId2="4352" MobHpPercentLeft="19" WaitTime="10" X="-2730.977" Y="-3473.055" Z="34.61008" />
+    <CustomBehavior File="CombatUseItemOnV2" QuestId="27242" ItemId="33069" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" UseWhenMobHasHealthPercent="20"
+      MobId1="4351" MobId2="4352" MaxRangeToUseItem="14" UseItemStrategy="UseItemOncePerTargetDontDefend" RecallPetAtMobPercentHealth="50"
+      WaitTimeAfterItemUse="10">
+      <HuntingGrounds>
+        <Hotspot X="-2733.451" Y="-3450.229" Z="33.19365" />
+        <Hotspot X="-2694.366" Y="-3439.855" Z="33.91886" />
+        <Hotspot X="-2654.682" Y="-3448.01" Z="34.8968" />
+        <Hotspot X="-2626.57" Y="-3477.806" Z="35.09488" />
+        <Hotspot X="-2632.119" Y="-3517.633" Z="36.13672" />
+        <Hotspot X="-2655.219" Y="-3551.076" Z="34.1593" />
+        <Hotspot X="-2691.398" Y="-3568.878" Z="35.36771" />
+        <Hotspot X="-2728.639" Y="-3552.126" Z="33.77974" />
+        <Hotspot X="-2736.653" Y="-3512.663" Z="41.15985" />
+        <Hotspot X="-2730.977" Y="-3473.055" Z="34.61008" />
+      </HuntingGrounds>
+    </CustomBehavior>
   </While>
 </If>
 <TurnIn QuestName="Raptor Captor" QuestId="27242" TurnInName="Sergeant Lukas" TurnInId="23723" X="-2840.127" Y="-3424.611" Z="34.70546" />

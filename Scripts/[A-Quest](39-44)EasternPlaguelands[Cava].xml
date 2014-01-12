@@ -669,9 +669,9 @@
 <If Condition="Mount.GroundMounts.Count() &lt;= 0">
   <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
 </If>
-<If Condition="!HasQuest(27527) &amp;&amp; IsQuestCompleted(27527)" >
+<!--<If Condition="!HasQuest(27527) &amp;&amp; IsQuestCompleted(27527)" >
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](44-46)Badlands[Cava]" />
-</If>
+</If>-->
 <If Condition="Me.ZoneId != 139">
   <If Condition="Me.ZoneId != 1519">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
@@ -1556,298 +1556,165 @@
   </If>
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
-    <If Condition="!IsQuestCompleted(27528)" >
-    <CustomBehavior File="InteractWith" QuestId="27528" MobId="45851" MobState="Dead" InteractByUsingItemId="61369" Range="5"
-      WaitForNpcs="False" CollectionDistance="1000" >
-    <HuntingGrounds WaypointVisitStrategy="Random" >
-    <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
-    <Hotspot X="3128.733" Y="-3187.138" Z="159.3822" />
-    <Hotspot X="3158.199" Y="-3158.63" Z="162.0679" />
-    <Hotspot X="3161.668" Y="-3118.333" Z="156.544" />
-    <Hotspot X="3125.706" Y="-3099.828" Z="151.9363" />
-    <Hotspot X="3089.207" Y="-3098.96" Z="132.9208" />
-    <Hotspot X="3051.922" Y="-3114.733" Z="129.5786" />
-    <Hotspot X="3015.234" Y="-3126.334" Z="115.789" />
-    <Hotspot X="2980.688" Y="-3146.847" Z="114.7355" />
-    <Hotspot X="2951.577" Y="-3175.184" Z="114.7365" />
-    <Hotspot X="2946.15" Y="-3215.464" Z="116.4898" />
-    <Hotspot X="2941.194" Y="-3255.561" Z="111.6105" />
-    <Hotspot X="2937.159" Y="-3295.758" Z="119.8608" />
-    <Hotspot X="2935.224" Y="-3337.181" Z="117.535" />
-    <Hotspot X="2942.036" Y="-3377.613" Z="116.7846" />
-    <Hotspot X="2933.736" Y="-3414.48" Z="132.5397" />
-    <Hotspot X="2954.018" Y="-3445.535" Z="148.1735" />
-    <Hotspot X="2957.675" Y="-3486.406" Z="144.8768" />
-    <Hotspot X="2952.247" Y="-3524.264" Z="129.7839" />
-    <Hotspot X="2926.977" Y="-3554.055" Z="117.0255" />
-    <Hotspot X="2922.261" Y="-3594.772" Z="114.9432" />
-    <Hotspot X="2909.316" Y="-3632.632" Z="117.1409" />
-    <Hotspot X="2900.877" Y="-3672.616" Z="117.5746" />
-    <Hotspot X="2887.176" Y="-3710.833" Z="115.826" />
-    <Hotspot X="2899.889" Y="-3749.741" Z="111.7102" />
-    <Hotspot X="2940.617" Y="-3747.008" Z="117.8827" />
-    <Hotspot X="2974.211" Y="-3723.471" Z="124.3287" />
-    <Hotspot X="2984.787" Y="-3684.022" Z="129.6933" />
-    <Hotspot X="2982.442" Y="-3644.272" Z="134.4063" />
-    <Hotspot X="3012.706" Y="-3618.713" Z="141.5407" />
-    <Hotspot X="3043.629" Y="-3597.521" Z="124.5662" />
-    <Hotspot X="3082.061" Y="-3594.566" Z="137.6613" />
-    <Hotspot X="3121.601" Y="-3600.921" Z="131.8731" />
-    <Hotspot X="3138.884" Y="-3637.704" Z="132.4169" />
-    <Hotspot X="3120.32" Y="-3674.565" Z="136.3311" />
-    <Hotspot X="3100.638" Y="-3709.753" Z="131.9631" />
-    <Hotspot X="3106.044" Y="-3749.946" Z="133.2986" />
-    <Hotspot X="3122.417" Y="-3787.466" Z="130.7492" />
-    <Hotspot X="3128.857" Y="-3827.262" Z="128.2144" />
-    <Hotspot X="3159.187" Y="-3853.485" Z="134.7496" />
-    <Hotspot X="3198.879" Y="-3859.795" Z="132.9431" />
-    <Hotspot X="3203.283" Y="-3820.065" Z="136.4028" />
-    <Hotspot X="3192.06" Y="-3780.995" Z="143.638" />
-    <Hotspot X="3183.635" Y="-3742.695" Z="134.6559" />
-    <Hotspot X="3172.735" Y="-3703.207" Z="134.36" />
-    <Hotspot X="3203.279" Y="-3676.707" Z="136.0913" />
-    <Hotspot X="3201.528" Y="-3639.441" Z="154.0338" />
-    <Hotspot X="3197.13" Y="-3599.211" Z="147.6364" />
-    <Hotspot X="3189.367" Y="-3559.037" Z="151.9809" />
-    <Hotspot X="3166.833" Y="-3525.874" Z="156.02" />
-    <Hotspot X="3142.806" Y="-3493.43" Z="157.8686" />
-    <Hotspot X="3134.356" Y="-3452.816" Z="154.7172" />
-    <Hotspot X="3129.559" Y="-3414.683" Z="139.692" />
-    <Hotspot X="3126.292" Y="-3374.056" Z="140.5046" />
-    <Hotspot X="3117.322" Y="-3333.838" Z="141.59" />
-    <Hotspot X="3114.821" Y="-3292.838" Z="142.1114" />
-    <Hotspot X="3107.848" Y="-3252.833" Z="143.5971" />
-    <Hotspot X="3093.291" Y="-3214.464" Z="143.7363" />
-    <Hotspot X="3056.043" Y="-3195.803" Z="145.6542" />
-    <Hotspot X="3016.781" Y="-3207.017" Z="144.2947" />
-    <Hotspot X="3003.53" Y="-3245.721" Z="142.2505" />
-    <Hotspot X="2988.479" Y="-3280.363" Z="124.5904" />
-    <Hotspot X="3010.297" Y="-3313.335" Z="132.5717" />
-    <Hotspot X="3007.378" Y="-3353.038" Z="143.3312" />
-    <Hotspot X="3026.133" Y="-3386.702" Z="154.9652" />
-    <Hotspot X="3050.618" Y="-3419.072" Z="153.5577" />
-    <Hotspot X="3041.949" Y="-3458.538" Z="152.7421" />
+    <CustomBehavior File="InteractWith" QuestId="27528" MobId="45851" MobState="Dead" InteractByUsingItemId="61369" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="14" WaitTime="4000">
+    <HuntingGrounds>
+      <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
+      <Hotspot X="3128.733" Y="-3187.138" Z="159.3822" />
+      <Hotspot X="3158.199" Y="-3158.63" Z="162.0679" />
+      <Hotspot X="3161.668" Y="-3118.333" Z="156.544" />
+      <Hotspot X="3125.706" Y="-3099.828" Z="151.9363" />
+      <Hotspot X="3089.207" Y="-3098.96" Z="132.9208" />
+      <Hotspot X="3051.922" Y="-3114.733" Z="129.5786" />
+      <Hotspot X="3015.234" Y="-3126.334" Z="115.789" />
+      <Hotspot X="2980.688" Y="-3146.847" Z="114.7355" />
+      <Hotspot X="2951.577" Y="-3175.184" Z="114.7365" />
+      <Hotspot X="2946.15" Y="-3215.464" Z="116.4898" />
+      <Hotspot X="2941.194" Y="-3255.561" Z="111.6105" />
+      <Hotspot X="2937.159" Y="-3295.758" Z="119.8608" />
+      <Hotspot X="2935.224" Y="-3337.181" Z="117.535" />
+      <Hotspot X="2942.036" Y="-3377.613" Z="116.7846" />
+      <Hotspot X="2933.736" Y="-3414.48" Z="132.5397" />
+      <Hotspot X="2954.018" Y="-3445.535" Z="148.1735" />
+      <Hotspot X="2957.675" Y="-3486.406" Z="144.8768" />
+      <Hotspot X="2952.247" Y="-3524.264" Z="129.7839" />
+      <Hotspot X="2926.977" Y="-3554.055" Z="117.0255" />
+      <Hotspot X="2922.261" Y="-3594.772" Z="114.9432" />
+      <Hotspot X="2909.316" Y="-3632.632" Z="117.1409" />
+      <Hotspot X="2900.877" Y="-3672.616" Z="117.5746" />
+      <Hotspot X="2887.176" Y="-3710.833" Z="115.826" />
+      <Hotspot X="2899.889" Y="-3749.741" Z="111.7102" />
+      <Hotspot X="2940.617" Y="-3747.008" Z="117.8827" />
+      <Hotspot X="2974.211" Y="-3723.471" Z="124.3287" />
+      <Hotspot X="2984.787" Y="-3684.022" Z="129.6933" />
+      <Hotspot X="2982.442" Y="-3644.272" Z="134.4063" />
+      <Hotspot X="3012.706" Y="-3618.713" Z="141.5407" />
+      <Hotspot X="3043.629" Y="-3597.521" Z="124.5662" />
+      <Hotspot X="3082.061" Y="-3594.566" Z="137.6613" />
+      <Hotspot X="3121.601" Y="-3600.921" Z="131.8731" />
+      <Hotspot X="3138.884" Y="-3637.704" Z="132.4169" />
+      <Hotspot X="3120.32" Y="-3674.565" Z="136.3311" />
+      <Hotspot X="3100.638" Y="-3709.753" Z="131.9631" />
+      <Hotspot X="3106.044" Y="-3749.946" Z="133.2986" />
+      <Hotspot X="3122.417" Y="-3787.466" Z="130.7492" />
+      <Hotspot X="3128.857" Y="-3827.262" Z="128.2144" />
+      <Hotspot X="3159.187" Y="-3853.485" Z="134.7496" />
+      <Hotspot X="3198.879" Y="-3859.795" Z="132.9431" />
+      <Hotspot X="3203.283" Y="-3820.065" Z="136.4028" />
+      <Hotspot X="3192.06" Y="-3780.995" Z="143.638" />
+      <Hotspot X="3183.635" Y="-3742.695" Z="134.6559" />
+      <Hotspot X="3172.735" Y="-3703.207" Z="134.36" />
+      <Hotspot X="3203.279" Y="-3676.707" Z="136.0913" />
+      <Hotspot X="3201.528" Y="-3639.441" Z="154.0338" />
+      <Hotspot X="3197.13" Y="-3599.211" Z="147.6364" />
+      <Hotspot X="3189.367" Y="-3559.037" Z="151.9809" />
+      <Hotspot X="3166.833" Y="-3525.874" Z="156.02" />
+      <Hotspot X="3142.806" Y="-3493.43" Z="157.8686" />
+      <Hotspot X="3134.356" Y="-3452.816" Z="154.7172" />
+      <Hotspot X="3129.559" Y="-3414.683" Z="139.692" />
+      <Hotspot X="3126.292" Y="-3374.056" Z="140.5046" />
+      <Hotspot X="3117.322" Y="-3333.838" Z="141.59" />
+      <Hotspot X="3114.821" Y="-3292.838" Z="142.1114" />
+      <Hotspot X="3107.848" Y="-3252.833" Z="143.5971" />
+      <Hotspot X="3093.291" Y="-3214.464" Z="143.7363" />
+      <Hotspot X="3056.043" Y="-3195.803" Z="145.6542" />
+      <Hotspot X="3016.781" Y="-3207.017" Z="144.2947" />
+      <Hotspot X="3003.53" Y="-3245.721" Z="142.2505" />
+      <Hotspot X="2988.479" Y="-3280.363" Z="124.5904" />
+      <Hotspot X="3010.297" Y="-3313.335" Z="132.5717" />
+      <Hotspot X="3007.378" Y="-3353.038" Z="143.3312" />
+      <Hotspot X="3026.133" Y="-3386.702" Z="154.9652" />
+      <Hotspot X="3050.618" Y="-3419.072" Z="153.5577" />
+      <Hotspot X="3041.949" Y="-3458.538" Z="152.7421" />
     </HuntingGrounds>
     </CustomBehavior>
-    </If>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
+    <CustomBehavior File="InteractWith" QuestId="27529" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
+      NonCompeteDistance="0" MobId="11064" WaitForNpcs="False" />
   </While>
 </If>
 <If Condition="HasQuest(27529) &amp;&amp; !IsQuestCompleted(27529)" >
   <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
     <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
   </If>
-  <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27529)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
-  </If>
   <While Condition="!IsQuestCompleted(27529)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3132.644" Y="-3267.286" Z="154.4213" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3133.712" Y="-3227.204" Z="157.0964" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3158.199" Y="-3158.63" Z="162.0679" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3161.668" Y="-3118.333" Z="156.544" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3125.706" Y="-3099.828" Z="151.9363" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3089.207" Y="-3098.96" Z="132.9208" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3051.922" Y="-3114.733" Z="129.5786" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3015.234" Y="-3126.334" Z="115.789" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2980.688" Y="-3146.847" Z="114.7355" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2951.577" Y="-3175.184" Z="114.7365" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2946.15" Y="-3215.464" Z="116.4898" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2941.194" Y="-3255.561" Z="111.6105" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2937.159" Y="-3295.758" Z="119.8608" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2935.224" Y="-3337.181" Z="117.535" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2942.036" Y="-3377.613" Z="116.7846" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2933.736" Y="-3414.48" Z="132.5397" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2954.018" Y="-3445.535" Z="148.1735" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2957.675" Y="-3486.406" Z="144.8768" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2952.247" Y="-3524.264" Z="129.7839" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2926.977" Y="-3554.055" Z="117.0255" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2922.261" Y="-3594.772" Z="114.9432" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2909.316" Y="-3632.632" Z="117.1409" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2900.877" Y="-3672.616" Z="117.5746" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2887.176" Y="-3710.833" Z="115.826" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2899.889" Y="-3749.741" Z="111.7102" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2940.617" Y="-3747.008" Z="117.8827" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2974.211" Y="-3723.471" Z="124.3287" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2984.787" Y="-3684.022" Z="129.6933" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2982.442" Y="-3644.272" Z="134.4063" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3012.706" Y="-3618.713" Z="141.5407" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3043.629" Y="-3597.521" Z="124.5662" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3082.061" Y="-3594.566" Z="137.6613" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3121.601" Y="-3600.921" Z="131.8731" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3138.884" Y="-3637.704" Z="132.4169" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3120.32" Y="-3674.565" Z="136.3311" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3100.638" Y="-3709.753" Z="131.9631" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3106.044" Y="-3749.946" Z="133.2986" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3122.417" Y="-3787.466" Z="130.7492" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3128.857" Y="-3827.262" Z="128.2144" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3159.187" Y="-3853.485" Z="134.7496" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3198.879" Y="-3859.795" Z="132.9431" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3203.283" Y="-3820.065" Z="136.4028" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3192.06" Y="-3780.995" Z="143.638" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3183.635" Y="-3742.695" Z="134.6559" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3172.735" Y="-3703.207" Z="134.36" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3203.279" Y="-3676.707" Z="136.0913" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3201.528" Y="-3639.441" Z="154.0338" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3197.13" Y="-3599.211" Z="147.6364" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3189.367" Y="-3559.037" Z="151.9809" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3166.833" Y="-3525.874" Z="156.02" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3142.806" Y="-3493.43" Z="157.8686" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3134.356" Y="-3452.816" Z="154.7172" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3129.559" Y="-3414.683" Z="139.692" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3126.292" Y="-3374.056" Z="140.5046" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3117.322" Y="-3333.838" Z="141.59" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3114.821" Y="-3292.838" Z="142.1114" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3107.848" Y="-3252.833" Z="143.5971" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3093.291" Y="-3214.464" Z="143.7363" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3056.043" Y="-3195.803" Z="145.6542" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3016.781" Y="-3207.017" Z="144.2947" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3003.53" Y="-3245.721" Z="142.2505" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="2988.479" Y="-3280.363" Z="124.5904" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3010.297" Y="-3313.335" Z="132.5717" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3007.378" Y="-3353.038" Z="143.3312" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3026.133" Y="-3386.702" Z="154.9652" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3050.618" Y="-3419.072" Z="153.5577" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="8530" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="3041.949" Y="-3458.538" Z="152.7421" />
-    <CustomBehavior File="WaitTimer" QuestId="27529" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27529" MobId="11064" WaitForNpcs="False" />
+    <CustomBehavior File="InteractWith" QuestId="27529" MobId1="8530" MobId2="11064" MobState="Alive" CollectionDistance="1000"
+    PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs">
+    <HuntingGrounds>
+      <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
+      <Hotspot X="3128.733" Y="-3187.138" Z="159.3822" />
+      <Hotspot X="3158.199" Y="-3158.63" Z="162.0679" />
+      <Hotspot X="3161.668" Y="-3118.333" Z="156.544" />
+      <Hotspot X="3125.706" Y="-3099.828" Z="151.9363" />
+      <Hotspot X="3089.207" Y="-3098.96" Z="132.9208" />
+      <Hotspot X="3051.922" Y="-3114.733" Z="129.5786" />
+      <Hotspot X="3015.234" Y="-3126.334" Z="115.789" />
+      <Hotspot X="2980.688" Y="-3146.847" Z="114.7355" />
+      <Hotspot X="2951.577" Y="-3175.184" Z="114.7365" />
+      <Hotspot X="2946.15" Y="-3215.464" Z="116.4898" />
+      <Hotspot X="2941.194" Y="-3255.561" Z="111.6105" />
+      <Hotspot X="2937.159" Y="-3295.758" Z="119.8608" />
+      <Hotspot X="2935.224" Y="-3337.181" Z="117.535" />
+      <Hotspot X="2942.036" Y="-3377.613" Z="116.7846" />
+      <Hotspot X="2933.736" Y="-3414.48" Z="132.5397" />
+      <Hotspot X="2954.018" Y="-3445.535" Z="148.1735" />
+      <Hotspot X="2957.675" Y="-3486.406" Z="144.8768" />
+      <Hotspot X="2952.247" Y="-3524.264" Z="129.7839" />
+      <Hotspot X="2926.977" Y="-3554.055" Z="117.0255" />
+      <Hotspot X="2922.261" Y="-3594.772" Z="114.9432" />
+      <Hotspot X="2909.316" Y="-3632.632" Z="117.1409" />
+      <Hotspot X="2900.877" Y="-3672.616" Z="117.5746" />
+      <Hotspot X="2887.176" Y="-3710.833" Z="115.826" />
+      <Hotspot X="2899.889" Y="-3749.741" Z="111.7102" />
+      <Hotspot X="2940.617" Y="-3747.008" Z="117.8827" />
+      <Hotspot X="2974.211" Y="-3723.471" Z="124.3287" />
+      <Hotspot X="2984.787" Y="-3684.022" Z="129.6933" />
+      <Hotspot X="2982.442" Y="-3644.272" Z="134.4063" />
+      <Hotspot X="3012.706" Y="-3618.713" Z="141.5407" />
+      <Hotspot X="3043.629" Y="-3597.521" Z="124.5662" />
+      <Hotspot X="3082.061" Y="-3594.566" Z="137.6613" />
+      <Hotspot X="3121.601" Y="-3600.921" Z="131.8731" />
+      <Hotspot X="3138.884" Y="-3637.704" Z="132.4169" />
+      <Hotspot X="3120.32" Y="-3674.565" Z="136.3311" />
+      <Hotspot X="3100.638" Y="-3709.753" Z="131.9631" />
+      <Hotspot X="3106.044" Y="-3749.946" Z="133.2986" />
+      <Hotspot X="3122.417" Y="-3787.466" Z="130.7492" />
+      <Hotspot X="3128.857" Y="-3827.262" Z="128.2144" />
+      <Hotspot X="3159.187" Y="-3853.485" Z="134.7496" />
+      <Hotspot X="3198.879" Y="-3859.795" Z="132.9431" />
+      <Hotspot X="3203.283" Y="-3820.065" Z="136.4028" />
+      <Hotspot X="3192.06" Y="-3780.995" Z="143.638" />
+      <Hotspot X="3183.635" Y="-3742.695" Z="134.6559" />
+      <Hotspot X="3172.735" Y="-3703.207" Z="134.36" />
+      <Hotspot X="3203.279" Y="-3676.707" Z="136.0913" />
+      <Hotspot X="3201.528" Y="-3639.441" Z="154.0338" />
+      <Hotspot X="3197.13" Y="-3599.211" Z="147.6364" />
+      <Hotspot X="3189.367" Y="-3559.037" Z="151.9809" />
+      <Hotspot X="3166.833" Y="-3525.874" Z="156.02" />
+      <Hotspot X="3142.806" Y="-3493.43" Z="157.8686" />
+      <Hotspot X="3134.356" Y="-3452.816" Z="154.7172" />
+      <Hotspot X="3129.559" Y="-3414.683" Z="139.692" />
+      <Hotspot X="3126.292" Y="-3374.056" Z="140.5046" />
+      <Hotspot X="3117.322" Y="-3333.838" Z="141.59" />
+      <Hotspot X="3114.821" Y="-3292.838" Z="142.1114" />
+      <Hotspot X="3107.848" Y="-3252.833" Z="143.5971" />
+      <Hotspot X="3093.291" Y="-3214.464" Z="143.7363" />
+      <Hotspot X="3056.043" Y="-3195.803" Z="145.6542" />
+      <Hotspot X="3016.781" Y="-3207.017" Z="144.2947" />
+      <Hotspot X="3003.53" Y="-3245.721" Z="142.2505" />
+      <Hotspot X="2988.479" Y="-3280.363" Z="124.5904" />
+      <Hotspot X="3010.297" Y="-3313.335" Z="132.5717" />
+      <Hotspot X="3007.378" Y="-3353.038" Z="143.3312" />
+      <Hotspot X="3026.133" Y="-3386.702" Z="154.9652" />
+      <Hotspot X="3050.618" Y="-3419.072" Z="153.5577" />
+      <Hotspot X="3041.949" Y="-3458.538" Z="152.7421" />
+    </HuntingGrounds>
+    </CustomBehavior>
   </While>
   <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
 </If>
-  <If Condition="HasQuest(27539)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
-  </If>
+<If Condition="HasQuest(27539)" >
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+</If>
 <Objective QuestName="Add 'em to the Pile" QuestId="27539" Type="CollectItem" ItemId="61372" CollectCount="16" />
 <TurnIn QuestName="Guardians of Stratholme" QuestId="27525" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3007.13" Y="-3438.02" Z="149.7085" />
 <TurnIn QuestName="Scourged Mass" QuestId="27528" TurnInName="Crusader Kevin Frost" TurnInId="45831" X="3143.53" Y="-3402.09" Z="139.7926" />
@@ -1978,13 +1845,8 @@
 
 </If>
 <TurnIn QuestName="Journey's End" QuestId="27527" TurnInName="Fiona" TurnInId="45417" X="2304.17" Y="-5258.89" Z="82.0816" />
-<PickUp QuestName="Fuselight, Ho!" QuestId="27762" GiverName="Gek Nozzlerocket" GiverId="48704" X="2278.151" Y="-5259.874" Z="81.60444" />
-<If Condition="HasQuest(27762)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48708" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="-6651.38" Y="-4746.83" Z="8.326157" />
-  <CustomBehavior File="WaitTimer" WaitTime="295000" />
-  <RunTo X="-6651.53" Y="-4743.961" Z="8.452132" />
-</If>
-<!--<TurnIn QuestName="Fuselight, Ho!" QuestId="27762" TurnInName="Eddie Flofizzle" TurnInId="46650" />-->
+<CustomBehavior File="Message" Text="Moving to BADLANDS, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="-6577.772" Y="-3875.094" Z="390.1204" />
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](44-46)Badlands[Cava]" />
 </QuestOrder>
 </HBProfile>

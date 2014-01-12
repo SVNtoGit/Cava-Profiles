@@ -75,12 +75,12 @@
   </Objective>
 </Quest>
 <Quest Id="24513" Name="Eye for an Eye">
-  <Objective Type="CollectItem" ItemId="49030" CollectCount="15">
+  <Objective Type="CollectItem" ItemId="49771" CollectCount="2">
     <CollectFrom>
       <Mob Name="Captain Peake" Id="37157"/>
     </CollectFrom>
     <Hotspots>
-      <Hotspot X="-493.6007" Y="-1406.918" Z="131.9163" />
+      <Hotspot X="-493.6007" Y="-1406.918" Z="131.9154" />
     </Hotspots>
   </Objective>
 </Quest>
@@ -669,7 +669,10 @@
   <Objective QuestName="Feeding the Fear" QuestId="25284" Type="KillMob" MobId="37160" KillCount="5" />
 </If>
 <PickUp QuestName="Eye for an Eye" QuestId="24513" GiverName="Oltarg" GiverId="37136" X="-482.6267" Y="-1395.486" Z="104.7122" />
-<Objective QuestName="Eye for an Eye" QuestId="24513" Type="CollectItem" ItemId="49771" CollectCount="2" />
+<If Condition="HasQuest(24513) &amp;&amp; !IsQuestCompleted(24513)" >
+  <RunTo X="-490.4295" Y="-1394.778" Z="131.9166" />
+  <Objective QuestName="Eye for an Eye" QuestId="24513" Type="CollectItem" ItemId="49771" CollectCount="2" />
+</If>
 <TurnIn QuestName="Eye for an Eye" QuestId="24513" TurnInName="Oltarg" TurnInId="37136" X="-482.6267" Y="-1395.486" Z="104.7122" />
 <If Condition="(HasQuest(24512) &amp;&amp; IsQuestCompleted(24512)) || (HasQuest(25284) &amp;&amp; IsQuestCompleted(25284))" >
   <If Condition="Me.Z &lt; 140">
@@ -883,6 +886,8 @@
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
+<RunTo QuestId="24546" X="-2464.21" Y="-2308.73" Z="100.34" />
+
 <PickUp QuestName="A Line in the Dirt" QuestId="24546" GiverName="Kirge Sternhorn" GiverId="3418" X="-2094.175" Y="-1728.589" Z="98.65248" />
 <PickUp QuestName="Meet the New Boss" QuestId="24551" GiverName="Tatternack Steelforge" GiverId="3433" X="-2100.576" Y="-1736.955" Z="97.42115" />
 <PickUp QuestName="Lion's Pride" QuestId="24552" GiverName="Jorn Skyseer" GiverId="3387" X="-2127.978" Y="-1721.417" Z="96.89501" />
@@ -890,14 +895,27 @@
 <If Condition="HasQuest(24546) &amp;&amp; !IsQuestCompleted(24546)" >
   <While Condition="!IsQuestCompleted(24546)" >
     <RunTo QuestId="24546" X="-2129.173" Y="-2078.145" Z="99.33595" />
-    <CustomBehavior File="InteractWith" QuestId="24546" MobId="201781" ObjectType="GameObject" X="-2129.173" Y="-2078.145" Z="99.33595" />
-    <CustomBehavior File="WaitTimer" QuestId="24546" WaitTime="12000" />
-	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201744 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
-      <RunTo QuestId="24546" X="-2129.173" Y="-2078.145" Z="99.33595" />
-      <CustomBehavior File="CollectThings" QuestId="24546" MobId="37585" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemId="1" CollectItemCount="1" NonCompeteDistance="1" HuntingGroundRadius="25" >
-        <Hotspot X="-2129.173" Y="-2078.145" Z="99.33595" />
-      </CustomBehavior>
-    </While>
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201781 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
+      <CustomBehavior File="InteractWith" QuestId="24546" MobId="201781" ObjectType="GameObject" X="-2129.173" Y="-2078.145" Z="99.33595" />
+      <CustomBehavior File="WaitTimer" QuestId="24546" WaitTime="12000" />
+	  <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201744 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
+        <RunTo QuestId="24546" X="-2129.173" Y="-2078.145" Z="99.33595" />
+        <CustomBehavior File="CollectThings" QuestId="24546" MobId="37585" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemId="1" CollectItemCount="1" NonCompeteDistance="1" HuntingGroundRadius="25" >
+          <Hotspot X="-2129.173" Y="-2078.145" Z="99.33595" />
+        </CustomBehavior>
+      </While>
+    </If>
+    <RunTo QuestId="24546" X="-2464.21" Y="-2308.73" Z="100.34" />
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201743 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
+      <CustomBehavior File="InteractWith" QuestId="24546" MobId="201743" ObjectType="GameObject" X="-2466.405" Y="-2306.976" Z="100.2301" />
+      <CustomBehavior File="WaitTimer" QuestId="24546" WaitTime="12000" />
+	  <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201744 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
+        <RunTo QuestId="24546" X="-2464.21" Y="-2308.73" Z="100.34" />
+        <CustomBehavior File="CollectThings" QuestId="24546" MobId="37585" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemId="1" CollectItemCount="1" NonCompeteDistance="1" HuntingGroundRadius="25" >
+          <Hotspot X="-2464.21" Y="-2308.73" Z="100.34" />
+        </CustomBehavior>
+      </While>
+    </If>
   </While>
 </If>
 <Objective QuestName="Meet the New Boss" QuestId="24551" Type="CollectItem" ItemId="49850" CollectCount="10" />
