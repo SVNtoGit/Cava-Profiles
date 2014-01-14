@@ -510,7 +510,7 @@
       <CustomAction Code="TreeRoot.Stop();" />-->
       <While Condition="!Me.OnTaxi" IgnoreCanRun="True">
         <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(o =&gt; o.Entry == 3838 &amp;&amp; o.IsAlive ) != null" Timeout="6000000" />
-        <CustomAction Code="var5 = (bool)tryUseTaxi(3838,1);" />
+        <CustomAction Code="var6 = (bool)tryUseTaxi(3838,1);" />
         <CustomAction Code="Thread.Sleep(5000);" />
       </While>
       <CustomAction Code="Thread.Sleep(10000);" />
@@ -529,7 +529,7 @@
         <CustomAction Code="TreeRoot.Stop();" />-->
         <While Condition="!Me.OnTaxi" IgnoreCanRun="True">
           <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(o =&gt; o.Entry == 3841 &amp;&amp; o.IsAlive ) != null" Timeout="6000000" />
-          <CustomAction Code="var5 = (bool)tryUseTaxi(3841,2);" />
+          <CustomAction Code="var6 = (bool)tryUseTaxi(3841,2);" />
           <CustomAction Code="Thread.Sleep(5000);" />
         </While>
         <CustomAction Code="Thread.Sleep(10000);" />
