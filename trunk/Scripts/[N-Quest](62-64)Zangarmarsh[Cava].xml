@@ -2807,7 +2807,7 @@
   <PickUp QuestName="Wanted: Chieftain Mummaki" QuestId="10116" GiverType="GameObject" GiverName="Wanted Poster" GiverId="183284" X="1021.265" Y="7377.457" Z="36.26211" />
   <TurnIn QuestName="The Orebor Harborage" QuestId="9776" TurnInName="Ikuti" TurnInId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
   <PickUp QuestName="Ango'rosh Encroachment" QuestId="9835" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
-  <If Condition="HasQuest(9896)">
+  <If Condition="HasQuest(9786) || HasQuest(9896) || (!HasQuest(9787) &amp;&amp; !IsQuestCompleted(9787)) || (!HasQuest(10115) &amp;&amp; !IsQuestCompleted(10115))">
     <PickUp QuestName="Daggerfen Deviance" QuestId="10115" GiverName="Ikuti" GiverId="18008" X="1024.031" Y="7366.399" Z="36.33611" />
     <RunTo X="965.0959" Y="7398.836" Z="29.1443" />
     <CustomBehavior File="TaxiRide" MobId="22485" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
