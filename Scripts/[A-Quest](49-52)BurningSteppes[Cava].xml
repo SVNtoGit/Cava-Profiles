@@ -2269,47 +2269,49 @@
 <TurnIn QuestName="Locked and Loaded" QuestId="28327" TurnInName="Colonel Troteman" TurnInId="48307" X="-8395.82" Y="-2785.71" Z="194.7978" />
 <PickUp QuestName="Assault on Dreadmaul Rock" QuestId="28320" GiverName="John J. Keeshan" GiverId="48306" X="-8397.45" Y="-2783.04" Z="194.7973" />
 <If Condition="HasQuest(28320) &amp;&amp; !IsQuestCompleted(28320)">
-  <CustomBehavior File="WaitTimer" WaitTime="120000"/>
+  <!--<CustomBehavior File="WaitTimer" WaitTime="120000"/>-->
   <While Condition="!IsQuestCompleted(28320)">
-    <If Condition="(!Me.IsOnTransport)" >
-      <RunTo X="-8234.545" Y="-2631.849" Z="136.7411" />
-    </If>
-    <CustomBehavior File="ToggleCombat" CombatEnabled="False" />
-    <!--<End X="-8260.149" Y="-2689.465" Z="136.1069" />-->
-    <CustomBehavior File="Cava\VehicleCanSelfHeal" QuestId="28320" VehicleId="48434" ItemId="63681" AttackSpellId="90067" HealSpellId="90067" KillNpcId="48432" HealNpcId="48414" >
+    <While Condition="(!Me.IsOnTransport)" >
+      <RunTo QuestId="28320" X="-8266.413" Y="-2691.24" Z="136.8733" />
+      <CustomBehavior File="Misc\RunLua" QuestId="28320" Lua="UseItemByName(63681)" WaitTime="4000" />
+    </While>
+		<DisableBehavior Name="Combat" />
+    <CustomBehavior File="VehicleBehavior" QuestId="28320" AttackButton="1" VehicleId="48434" MobId1="48432" MobId2="40562" VehicleMountId="48434" FireHeight="1" VehicleType="2"
+			StartObjectivePointX="-8029.723" StartObjectivePointY="-2471.34" StartObjectivePointZ="240.468"
+      StartPointX="-8266.413" StartPointY="-2691.24" StartPointZ="136.8733"
+      EndPointX="-8367.126" EndPointY="-2748.941" EndPointZ="198.1083">
       <Start X="-8029.723" Y="-2471.34" Z="240.468" />
-      <End X="-8389.624" Y="-2762.583" Z="198.6792" />
-      <Hop X="-8029.723" Y="-2471.31" Z="240.468" />
-      <Hop X="-7988.826" Y="-2471.769" Z="239.8517" />
-      <Hop X="-7944.727" Y="-2486.482" Z="236.5421" />
-      <Hop X="-7901.236" Y="-2497.231" Z="232.3104" />
-      <Hop X="-7857.909" Y="-2484.465" Z="225.2535" />
-      <Hop X="-7811.587" Y="-2479.247" Z="217.2668" />
-      <Hop X="-7767.284" Y="-2491.26" Z="209.7569" />
-      <Hop X="-7730.152" Y="-2520.476" Z="199.9198" />
-      <Hop X="-7694.97" Y="-2550.425" Z="189.5075" />
-      <Hop X="-7661.112" Y="-2579.059" Z="183.076" />
-      <Hop X="-7651.85" Y="-2625.019" Z="182.3869" />
-      <Hop X="-7649.816" Y="-2672.167" Z="180.8908" />
-      <Hop X="-7650.488" Y="-2719.966" Z="175.5764" />
-      <Hop X="-7653.403" Y="-2767.24" Z="173.9475" />
-      <Hop X="-7665.019" Y="-2812.839" Z="173.3346" />
-      <Hop X="-7692.058" Y="-2851.546" Z="171.337" />
-      <Hop X="-7733.29" Y="-2873.885" Z="171.7413" />
-      <Hop X="-7780.068" Y="-2865.96" Z="174.3689" />
-      <Hop X="-7827.032" Y="-2861.904" Z="177.9074" />
-      <Hop X="-7869.227" Y="-2842.351" Z="179.7841" />
-      <Hop X="-7914.997" Y="-2833.899" Z="181.0155" />
-      <Hop X="-7961.498" Y="-2823.009" Z="183.3095" />
-      <Hop X="-8005.945" Y="-2805.885" Z="185.6139" />
-      <Hop X="-8045.111" Y="-2780.702" Z="187.9945" />
-      <Hop X="-8072.73" Y="-2742.135" Z="190.9234" />
-      <Hop X="-8097.633" Y="-2701.59" Z="193.8337" />
-      <Hop X="-8111.391" Y="-2656.469" Z="195.9686" />
-      <Hop X="-8113.061" Y="-2609.298" Z="196.5209" />
-      <Hop X="-8098.61" Y="-2563.806" Z="195.7688" />
-    </CustomBehavior>
-    <CustomBehavior File="ToggleCombat" CombatEnabled="True" />
+      <Path X="-8029.723" Y="-2471.31" Z="240.468" />
+      <Path X="-7988.826" Y="-2471.769" Z="239.8517" />
+      <Path X="-7944.727" Y="-2486.482" Z="236.5421" />
+      <Path X="-7901.236" Y="-2497.231" Z="232.3104" />
+      <Path X="-7857.909" Y="-2484.465" Z="225.2535" />
+      <Path X="-7811.587" Y="-2479.247" Z="217.2668" />
+      <Path X="-7767.284" Y="-2491.26" Z="209.7569" />
+      <Path X="-7730.152" Y="-2520.476" Z="199.9198" />
+      <Path X="-7694.97" Y="-2550.425" Z="189.5075" />
+      <Path X="-7661.112" Y="-2579.059" Z="183.076" />
+      <Path X="-7651.85" Y="-2625.019" Z="182.3869" />
+      <Path X="-7649.816" Y="-2672.167" Z="180.8908" />
+      <Path X="-7650.488" Y="-2719.966" Z="175.5764" />
+      <Path X="-7653.403" Y="-2767.24" Z="173.9475" />
+      <Path X="-7665.019" Y="-2812.839" Z="173.3346" />
+      <Path X="-7692.058" Y="-2851.546" Z="171.337" />
+      <Path X="-7733.29" Y="-2873.885" Z="171.7413" />
+      <Path X="-7780.068" Y="-2865.96" Z="174.3689" />
+      <Path X="-7827.032" Y="-2861.904" Z="177.9074" />
+      <Path X="-7869.227" Y="-2842.351" Z="179.7841" />
+      <Path X="-7914.997" Y="-2833.899" Z="181.0155" />
+      <Path X="-7961.498" Y="-2823.009" Z="183.3095" />
+      <Path X="-8005.945" Y="-2805.885" Z="185.6139" />
+      <Path X="-8045.111" Y="-2780.702" Z="187.9945" />
+      <Path X="-8072.73" Y="-2742.135" Z="190.9234" />
+      <Path X="-8097.633" Y="-2701.59" Z="193.8337" />
+      <Path X="-8111.391" Y="-2656.469" Z="195.9686" />
+      <Path X="-8113.061" Y="-2609.298" Z="196.5209" />
+      <Path X="-8098.61" Y="-2563.806" Z="195.7688" />		
+		</CustomBehavior>
+    <EnableBehavior Name="Combat" />
     <CustomBehavior File="EjectVeh"/>
   </While>
 </If>
