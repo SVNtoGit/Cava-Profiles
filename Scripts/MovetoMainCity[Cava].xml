@@ -1,7 +1,7 @@
 <HBProfile creator="Cava" >
 <Name>Move to Main City[Cava] $Rev$</Name>
 
-<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
 <MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
 <SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
 
@@ -76,6 +76,19 @@
 <!-- # # # # # # # # # # # # # Alliance Character # # # # # # # # # # # # #-->
 <If Condition="Me.IsAlliance" >
 
+  <!--Cataclysm Side-->
+  <If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
+    <CustomBehavior File="InteractWith" MobId="209080" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5543.027" Y="-3590.346" Z="1568.018" />
+  </If>
+  <If Condition="Me.ZoneId == 5042 &amp;&amp; Me.Level &gt;= 80">
+    <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="836.8948" Y="483.3822" Z="-62.31037" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+    <CustomBehavior File="Misc\RunLua" Lua="Dismount();" />
+    <RunTo X="966.7009" Y="575.5538" Z="-44.35984" />
+    <CustomBehavior File="InteractWith" MobId="205272" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" X="966.7009" Y="575.5538" Z="-44.35984" />
+    <CustomBehavior File="WaitTimer" WaitTime="12000" />
+  </If>
+
   <!--Northrend Side-->
   <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 65  || Me.ZoneId == 394  ||
                  Me.ZoneId == 495  || Me.ZoneId == 4742 || Me.ZoneId == 210 || Me.ZoneId == 3711 ||
@@ -137,9 +150,6 @@
 </If>
 
 <!-- Kalimdor -->
-<If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
-  <CustomBehavior File="InteractWith" MobId="209080" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5543.027" Y="-3590.346" Z="1568.018" />
-</If>
 <If Condition="Me.ZoneId == 5695 || Me.ZoneId == 331  || Me.ZoneId == 405 || Me.ZoneId == 15   || Me.ZoneId == 6463 || Me.ZoneId == 361  ||
                Me.ZoneId == 357  || Me.ZoneId == 5733 || Me.ZoneId == 616 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406  ||
                Me.ZoneId == 440  || Me.ZoneId == 457  || Me.ZoneId == 400 || Me.ZoneId == 5034 || Me.ZoneId == 490  || Me.ZoneId == 618  ||
@@ -223,6 +233,18 @@
 
 
 <If Condition="Me.IsHorde">
+  <!--Cataclysm side-->
+  <If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
+    <CustomBehavior File="InteractWith" MobId="209081" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5503.639" Y="-3628.739" Z="1567.61" />
+  </If>
+  <If Condition="Me.ZoneId == 5042 &amp;&amp; Me.Level &gt;= 80">
+    <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="836.8948" Y="483.3822" Z="-62.31037" />
+    <CustomBehavior File="WaitTimer" WaitTime="2000" />
+    <CustomBehavior File="Misc\RunLua" Lua="Dismount();" />
+    <RunTo X="991.6896" Y="458.5224" Z="-44.29472" />
+    <CustomBehavior File="InteractWith" MobId="205273" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" X="991.6896" Y="458.5224" Z="-44.29472" />
+    <CustomBehavior File="WaitTimer" WaitTime="12000" />
+  </If>
 
   <!--Northrend Side-->
   <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 65  || Me.ZoneId == 394  ||
@@ -281,9 +303,6 @@
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </While>
-<If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
-  <CustomBehavior File="InteractWith" MobId="209081" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5503.639" Y="-3628.739" Z="1567.61" />
-</If>
 <If Condition="Me.ZoneId == 331  || Me.ZoneId == 16   || Me.ZoneId == 6452 || Me.ZoneId == 405  || Me.ZoneId == 14  ||
                Me.ZoneId == 15   || Me.ZoneId == 361  || Me.ZoneId == 357  || Me.ZoneId == 493  || Me.ZoneId == 215 ||
                Me.ZoneId == 17   || Me.ZoneId == 1637 || Me.ZoneId == 1377 || Me.ZoneId == 4709 || Me.ZoneId == 406 ||

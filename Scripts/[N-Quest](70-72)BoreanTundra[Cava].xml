@@ -3261,29 +3261,25 @@
     </While>
   </While>
 </If>
-<If Condition="HasQuest(11946)" >
+<While Condition="HasQuest(11946)" >
   <CustomBehavior File="FlyTo" X="3574.972" Y="6652.38" Z="195.1879" />
   <CustomBehavior File="ForcedDismount" />
-  <While Condition="HasQuest(11946)" >
-    <RunTo X="3574.972" Y="6652.38" Z="195.1879" />
-    <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
-    <While Condition="HasQuestAvailable(26206, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
-      <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
+  <While Condition="HasQuestAvailable(26206, &quot;TurnIn&quot;)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 <!--
 <TurnIn QuestName="Keristrasza" QuestId="11946" TurnInName="Keristrasza" TurnInId="26206" />
 -->
-    </While>
   </While>
-</If>
+</While>
 <If Condition="!HasQuest(11951) &amp;&amp; !IsQuestCompleted(11951)" >
-  <CustomBehavior File="FlyTo" X="3574.972" Y="6652.38" Z="195.1879" />
-  <CustomBehavior File="ForcedDismount" />
   <While Condition="!HasQuest(11951)" >
-    <RunTo X="3574.972" Y="6652.38" Z="195.1879" />
+    <CustomBehavior File="FlyTo" X="3574.972" Y="6652.38" Z="195.1879" />
+    <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -3307,9 +3303,10 @@
 </If>
 <If Condition="HasQuest(11951)" >
   <While Condition="HasQuest(11951)" >
+    <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 <!--
@@ -3322,7 +3319,7 @@
   <While Condition="!HasQuest(11957)" >
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -3336,7 +3333,7 @@
   <While Condition="!IsQuestCompleted(11957)" >
     <While Condition="(Me.Z &lt; 630)" >
       <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
-      <CustomBehavior File="InteractWith" WaitTime="12000" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26206" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" WaitTime="12000" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26206" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
     </While>
     <CustomBehavior File="Misc\RunLua" WaitTime="20000" NumOfTimes="1" Lua="UseItemByName(35690)" />
     <CustomBehavior File="CollectThings" MobId="26232" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="35709">
@@ -3347,9 +3344,10 @@
 </If>
 <If Condition="HasQuest(11957)" >
   <While Condition="HasQuest(11957)" >
+    <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click GossipTitleButton1" />
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <If Condition="(Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Warrior)">
@@ -3373,9 +3371,10 @@
 </If>
 <If Condition="!HasQuest(11967) &amp;&amp; !IsQuestCompleted(11967)" >
   <While Condition="!HasQuest(11967)" >
+    <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26206" KeepTargetSelected="True" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -3387,7 +3386,7 @@
 <If Condition="HasQuest(11967)" >
   <While Condition="(Me.Z &gt; 630)" >
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
-    <CustomBehavior File="InteractWith" WaitTime="15000" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26206" MovementBy="NavigatorPreferred" />
+    <CustomBehavior File="InteractWith" WaitTime="15000" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26206" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
   </While>
 </If>
 <If Condition="HasQuest(11967) || HasQuest(11931)" >
