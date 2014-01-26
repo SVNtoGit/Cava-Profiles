@@ -9,6 +9,7 @@
   <Mob Name="Stonard Grunt" Entry="866" />
 </AvoidMobs>
 <Blackspots>
+  <Blackspot X="-9962.252" Y="-4390.757" Z="-17.25452" Radius="20" Height="150" />
   <Blackspot X="-10079.76" Y="-4302.013" Z="3.592029" Radius="2.224435" />
   <Blackspot X="-10082.85" Y="-4295.354" Z="5.402793" Radius="3.80264" />
   <Blackspot X="-10062.44" Y="-4286.437" Z="5.45428" Radius="0.7920345" />
@@ -515,8 +516,11 @@
 <If Condition="HasQuest(27592) &amp;&amp; !IsQuestCompleted(27592)" >
   <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
 </If>
+<If Condition="(HasQuest(27587) &amp;&amp; !IsQuestCompleted(27587)) || (HasQuest(27592) &amp;&amp; !IsQuestCompleted(27592))" >
+  <UseMount Value="false" />
+  <LootMobs Value="true" />
+</If>
 <If Condition="HasQuest(27587) &amp;&amp; !IsQuestCompleted(27587)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <If Condition="!HasItem(62795) &amp;&amp; !Me.HasAura(88026)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45786" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-9784.71" Y="-3916.3" Z="21.6816" />
   </If>
@@ -544,7 +548,6 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(27592) &amp;&amp; !IsQuestCompleted(27592)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
   <If Condition="!HasItem(62795) &amp;&amp; !Me.HasAura(88026)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45786" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-9784.71" Y="-3916.3" Z="21.6816" />
   </If>
@@ -568,8 +571,10 @@
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
 </If>
-<If Condition="HasQuest(27592) &amp;&amp; IsQuestCompleted(27592)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+<If Condition="HasQuest(27587) || HasQuest(27592)" >
+	<RunTo X="-9690.61" Y="-3930.36" Z="3.464648" />
+  <UseMount Value="true" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Drinks on the Rocks" QuestId="27592" TurnInName="Brono Goodgroove" TurnInId="46010" X="-9688.61" Y="-3928.36" Z="3.464648" />
 <TurnIn QuestName="Maliciously Delicious" QuestId="27587" TurnInName="Trade Baron Silversnap" TurnInId="45786" X="-9784.71" Y="-3916.3" Z="21.68119" />
@@ -670,6 +675,7 @@
   <RunTo X="6886.555" Y="-2288.524" Z="588.7066" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](54-58)Winterspring[Cava]" />
 </If>
+<!--
 <PickUp QuestName="In With a Bang" QuestId="27600" GiverName="Crazy Larry" GiverId="45948" X="-10206.8" Y="-4188.97" Z="22.28571" />
 <If Condition="HasQuest(27600) &amp;&amp; !IsQuestCompleted(27600)" >
   <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
@@ -711,6 +717,7 @@
   <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Baba Bogbrew" QuestId="27740" TurnInName="Baba Bogbrew" TurnInId="46172" X="-10815.4" Y="-3813.71" Z="21.92647" />
+
 <If Condition="(Me.LevelFraction &gt;= 54.7 )">
   <RunTo X="-8639.127" Y="1318.481" Z="5.536827" />
   <CustomBehavior File="UseTransport" TransportId="176310"
@@ -726,6 +733,7 @@
   <RunTo X="6886.555" Y="-2288.524" Z="588.7066" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](54-58)Winterspring[Cava]" />
 </If>
+-->
 <PickUp QuestName="Marshfin Madness" QuestId="27691" GiverName="Baba Bogbrew" GiverId="46172" X="-10815.4" Y="-3813.71" Z="21.92647" />
 <Objective QuestName="Marshfin Madness" QuestId="27691" Type="KillMob" MobId="45967" KillCount="12" />
 <TurnIn QuestName="Marshfin Madness" QuestId="27691" TurnInName="Baba Bogbrew" TurnInId="46172" X="-10815.4" Y="-3813.71" Z="21.92647" />
