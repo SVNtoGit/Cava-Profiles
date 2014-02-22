@@ -1571,10 +1571,10 @@
   <If Condition="HasQuest(12226) &amp;&amp; !IsQuestCompleted(12226)" >
     <CustomBehavior File="FlyTo" X="3518.658" Y="-2704.657" Z="108.9887" />
     <If Condition="HasQuest(12216) &amp;&amp; !IsQuestCompleted(12216)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <Objective Nav="Fly" QuestName="Just Passing Through" QuestId="12226" Type="CollectItem" ItemId="37246" CollectCount="5" />
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective Nav="Fly" QuestName="Take Their Rear!" QuestId="12216" Type="CollectItem" ItemId="37200" CollectCount="8" />
   <If Condition="HasQuest(12216) || HasQuest(12226) || (!HasQuest(12227) &amp;&amp; !IsQuestCompleted(12227))" >
@@ -1655,10 +1655,10 @@
   <If Condition="HasQuest(12436) &amp;&amp; !IsQuestCompleted(12436)" >
     <CustomBehavior File="FlyTo" X="3392.964" Y="-2365.868" Z="124.0783" />
     <If Condition="HasQuest(12175) &amp;&amp; !IsQuestCompleted(12175)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <Objective Nav="Fly" QuestName="Supplemental Income" QuestId="12436" Type="CollectItem" ItemId="37185" CollectCount="5" />
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(12175) &amp;&amp; !IsQuestCompleted(12175)" >
     <CustomBehavior File="FlyTo" X="3189.825" Y="-2412.114" Z="87.35727" />
@@ -1761,11 +1761,11 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(12423) &amp;&amp; !IsQuestCompleted(12423) &amp;&amp; !HasItem(37830)" >
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="27547" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="37830">
       <Hotspot X="3142.056" Y="-3013.306" Z="134.175" />
     </CustomBehavior>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12423) &amp;&amp; !IsQuestCompleted(12423) &amp;&amp; HasItem(37830)" >
     <PickUp QuestName="Mikhail's Journal" GiverType="Item" QuestId="12423" GiverId="37830" />
@@ -1896,11 +1896,11 @@
   <If Condition="!IsObjectiveComplete(1, 12483) || !IsObjectiveComplete(2, 12483)" >
     <CustomBehavior File="FlyTo" X="3627.36" Y="-1755.083" Z="157.5197" />
     <If Condition="!IsObjectiveComplete(1, 12483) || GetItemCount(35799) &lt; 5" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <Objective QuestName="Shimmercap Stew" QuestId="12483" Type="CollectItem" ItemId="35782" CollectCount="5" />
     <Objective QuestName="Shimmercap Stew" QuestId="12483" Type="CollectItem" ItemId="35798" CollectCount="5" />
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
 </If>
 <If Condition="HasQuest(11991)" >
@@ -1947,7 +1947,7 @@
     </If>
     <If Condition="GetItemCount(35799) &lt; 5" >
       <CustomBehavior File="FlyTo" X="3329.501" Y="-1703.993" Z="89.07554" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <CustomBehavior File="CollectThings" MobId1="26447" MobId2="26425" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="35799">
       <Hotspot X="3329.501" Y="-1703.993" Z="89.07554" />
       <Hotspot X="3313.019" Y="-1741.774" Z="87.69884" />
@@ -1961,7 +1961,7 @@
       <Hotspot X="3433.209" Y="-1713.94" Z="97.54823" />
       <Hotspot X="3399.404" Y="-1695.63" Z="85.4381" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <CustomBehavior File="FlyTo" X="3381.811" Y="-1806.777" Z="114.1678" />
     <CustomBehavior File="ForcedDismount" />
@@ -1975,24 +1975,24 @@
 </If>
 <If Condition="(HasQuest(12007) &amp;&amp; !IsQuestCompleted(12007) &amp;&amp; !HasItem(35836)) || (HasQuest(12483) &amp;&amp; !IsQuestCompleted(12483))" >
   <CustomBehavior File="FlyTo" X="4227.446" Y="-1871.315" Z="201.3152" />
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="4185.307" Y="-1863.927" Z="204.4632" />
   <CustomBehavior File="CollectThings" MobId="26544" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="35836">
     <Hotspot X="4186.266" Y="-1871.811" Z="204.4636" />
   </CustomBehavior>
   <Objective Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" Type="CollectItem" ItemId="37087" CollectCount="5" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(12007)" >
   <While Condition="HasQuest(12007)" >
     <While Condition="!HasItem(35836)" >
       <CustomBehavior File="FlyTo" X="4227.446" Y="-1871.315" Z="201.3152" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <RunTo X="4185.307" Y="-1863.927" Z="204.4632" />
       <CustomBehavior File="CollectThings" MobId="26544" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="35836">
         <Hotspot X="4186.266" Y="-1871.811" Z="204.4636" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </While>
     <If Condition="!HasItem(35806)" >
       <CustomBehavior File="FlyTo" X="4256.982" Y="-1981.002" Z="270" />
@@ -2029,12 +2029,12 @@
     </If>
     <While Condition="!HasItem(35836)" >
       <CustomBehavior File="FlyTo" X="4227.446" Y="-1871.315" Z="201.3152" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <RunTo X="4185.307" Y="-1863.927" Z="204.4632" />
       <CustomBehavior File="CollectThings" MobId="26544" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="35836">
         <Hotspot X="4186.266" Y="-1871.811" Z="204.4636" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </While>
     <If Condition="!HasItem(35806)" >
       <CustomBehavior File="FlyTo" X="4256.982" Y="-1981.002" Z="270" />
@@ -2144,7 +2144,7 @@ step
     </If>
     <If Condition="GetItemCount(36743) &lt; 5" >
       <CustomBehavior File="FlyTo" X="4458.937" Y="-3446.683" Z="230.2618" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <CustomBehavior File="CollectThings" MobId1="26704" MobId2="27554" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="36743">
       <Hotspot X="4458.937" Y="-3446.683" Z="230.2618" />
       <Hotspot X="4484.725" Y="-3477.675" Z="226.9332" />
@@ -2155,7 +2155,7 @@ step
       <Hotspot X="4526.34" Y="-3447.584" Z="226.9324" />
       <Hotspot X="4492.218" Y="-3425.178" Z="228.1151" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <CustomBehavior File="FlyTo" X="4520.612" Y="-3475.61" Z="226.9329" />
     <CustomBehavior File="ForcedDismount" />
@@ -2181,7 +2181,7 @@ step
     </If>
     <If Condition="GetItemCount(36743) &lt; 5" >
       <CustomBehavior File="FlyTo" X="4458.937" Y="-3446.683" Z="230.2618" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <CustomBehavior File="CollectThings" MobId1="26704" MobId2="27554" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="36743">
       <Hotspot X="4458.937" Y="-3446.683" Z="230.2618" />
       <Hotspot X="4484.725" Y="-3477.675" Z="226.9332" />
@@ -2192,7 +2192,7 @@ step
       <Hotspot X="4526.34" Y="-3447.584" Z="226.9324" />
       <Hotspot X="4492.218" Y="-3425.178" Z="228.1151" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
     </If>
     <CustomBehavior File="FlyTo" X="4520.612" Y="-3475.61" Z="226.9329" />
     <CustomBehavior File="ForcedDismount" />
@@ -2428,7 +2428,7 @@ step
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(12105) &amp;&amp; !IsQuestCompleted(12105) &amp;&amp; !HasItem(36940)" >
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="27546" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36940">
       <Hotspot X="3179.485" Y="-2978.58" Z="126.4543" />
       <Hotspot X="3149.461" Y="-2951.766" Z="123.9085" />
@@ -2438,7 +2438,7 @@ step
       <Hotspot X="3155.089" Y="-3045.047" Z="126.6352" />
       <Hotspot X="3177.251" Y="-3011.666" Z="129.4944" />
     </CustomBehavior>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12105) &amp;&amp; !IsQuestCompleted(12105) &amp;&amp; HasItem(36940)" >
     <PickUp QuestName="Descent into Darkness" GiverType="Item" QuestId="12105" GiverId="36940" />
@@ -2462,7 +2462,7 @@ step
   <PickUp Nav="Fly" QuestName="A Dark Influence" QuestId="12220" GiverName="Hierophant Thayreen" GiverId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
   <If Condition="(HasQuest(12220) &amp;&amp; !IsQuestCompleted(12220))">
     <If Condition="HasQuest(12219) &amp;&amp; !IsQuestCompleted(12219)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <If Condition="!IsObjectiveComplete(3, 12220)" >
       <CustomBehavior File="FlyTo" X="3887.642" Y="-2611.351" Z="210.3789" />
@@ -2488,7 +2488,7 @@ step
       <RunTo X="3603.193" Y="-3263.036" Z="223.0599" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37173)" WaitTime="1000" />
     </While>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective Nav="Fly" QuestName="The Failed World Tree" QuestId="12219" Type="CollectItem" ItemId="37199" CollectCount="6" />
   <TurnIn Nav="Fly" QuestName="The Failed World Tree" QuestId="12219" TurnInName="Hierophant Thayreen" TurnInId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
@@ -2503,7 +2503,7 @@ step
   <PickUp Nav="Fly" QuestName="Children of Ursoc" QuestId="12247" GiverName="Hierophant Thayreen" GiverId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
   <If Condition="HasQuest(12247) &amp;&amp; !IsQuestCompleted(12247)" >
     <If Condition="HasQuest(12246) &amp;&amp; !IsQuestCompleted(12246)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <If Condition="!IsObjectiveComplete(2, 12247)" >
       <CustomBehavior File="FlyTo" X="3362.38" Y="-4583.854" Z="228.6915" />
@@ -2519,7 +2519,7 @@ step
     <While Condition="!IsObjectiveComplete(1, 12247)" >
       <CustomBehavior File="InteractWith" QuestId="12247" QuestObjectiveIndex="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="27274" GossipOptions="1,1,1" X="3456.389" Y="-3633.821" Z="245.0195" />
     </While>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="A Possible Link" QuestId="12246" Type="CollectItem" ItemId="37251" CollectCount="8" />
   <If Condition="HasQuest(12027) &amp;&amp; !IsQuestCompleted(12027)" >
@@ -2598,7 +2598,7 @@ step
 <If Condition="Me.IsHorde">
   <If Condition="(HasQuest(12213) &amp;&amp; !IsQuestCompleted(12213))">
     <If Condition="HasQuest(12207) &amp;&amp; !IsQuestCompleted(12207)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <If Condition="!IsObjectiveComplete(3, 12213)" >
       <CustomBehavior File="FlyTo" X="3887.642" Y="-2611.351" Z="210.3789" />
@@ -2624,7 +2624,7 @@ step
       <RunTo X="3603.193" Y="-3263.036" Z="223.0599" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(37173)" WaitTime="1000" />
     </While>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective Nav="Fly" QuestName="Vordrassil's Fall" QuestId="12207" Type="CollectItem" ItemId="37199" CollectCount="6" />
   <If Condition="HasQuest(12453) &amp;&amp; !IsQuestCompleted(12453)" >
@@ -2750,7 +2750,7 @@ step
   </If>
   <If Condition="HasQuest(12231) &amp;&amp; !IsQuestCompleted(12231)" >
     <If Condition="HasQuest(12229) &amp;&amp; !IsQuestCompleted(12229)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <If Condition="!IsObjectiveComplete(2, 12231)" >
       <CustomBehavior File="FlyTo" X="3362.38" Y="-4583.854" Z="228.6915" />
@@ -2766,7 +2766,7 @@ step
     <While Condition="!IsObjectiveComplete(1, 12231)" >
       <CustomBehavior File="InteractWith" QuestId="12231" QuestObjectiveIndex="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="27274" GossipOptions="1,1,1" X="3456.389" Y="-3633.821" Z="245.0195" />
     </While>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="A Possible Link" QuestId="12229" Type="CollectItem" ItemId="37251" CollectCount="8" />
   <TurnIn Nav="Fly" QuestName="The Unexpected 'Guest'" QuestId="12195" TurnInName="Tormak the Scarred" TurnInId="27221" X="3852.604" Y="-4536.979" Z="209.2673" />
@@ -2831,7 +2831,7 @@ step
 <!--
   <If Condition="HasQuest(12414) &amp;&amp; !IsQuestCompleted(12414)">
   <While Condition="!IsQuestCompleted(12414)">
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" ObjectId="189983" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="37707">
       <Hotspot X="4378.041" Y="-4291.656" Z="158.5572" />
       <Hotspot X="4337.923" Y="-4291.277" Z="166.6852" />
@@ -2854,7 +2854,7 @@ step
       <Hotspot X="4428.164" Y="-4249.163" Z="162.8563" />
       <Hotspot X="4398.665" Y="-4276.236" Z="159.6721" />
     </CustomBehavior>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
     <While Condition="!Me.IsOnTransport &amp;&amp; HasItem(37707)" >
       <CustomBehavior File="FlyTo" X="4394.127" Y="-4003.777" Z="178.3358" />
       <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
@@ -2949,7 +2949,7 @@ step
   <CustomBehavior File="FlyTo" X="5029.269" Y="-4583.927" Z="288.2558" />
   <Objective QuestName="Raining Down Destruction" QuestId="11982" Type="CollectItem" ItemId="35734" CollectCount="5" />
   <While Condition="!IsQuestCompleted(11982)">
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" ObjectId="188260" CollectUntil="RequiredCountReached" CollectItemCount="3" CollectItemId="35734">
       <Hotspot X="5029.269" Y="-4583.927" Z="288.2558" />
       <Hotspot X="5019.252" Y="-4622.169" Z="294.6992" />
@@ -2966,7 +2966,7 @@ step
       <Hotspot X="5168.937" Y="-4990.178" Z="293.7952" />
       <Hotspot X="5202.775" Y="-4966.878" Z="295.6306" />
     </CustomBehavior>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
     <CustomBehavior File="FlyTo" X="5004.226" Y="-4633.891" Z="291.8737" />
     <CustomBehavior File="ForcedDismount" />
     <If Condition="GetItemCount(35734) &gt; 2 &amp;&amp; !IsQuestCompleted(11982)" >
@@ -3025,7 +3025,7 @@ step
   <PickUp QuestName="The Runic Keystone" QuestId="11988" GiverName="Torthen Deepdig" GiverId="26361" X="4556.245" Y="-4247.67" Z="170.5207" />
   <If Condition="HasQuest(12003) &amp;&amp; !IsQuestCompleted(12003)">
     <If Condition="HasQuest(12003) &amp;&amp; !IsQuestCompleted(12003)" >
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <If Condition="!IsObjectiveComplete(1, 12003)" >
       <CustomBehavior File="FlyTo" X="4749.796" Y="-4423.159" Z="199.0306" />
@@ -3048,7 +3048,7 @@ step
         <RunTo X="4661.081" Y="-4611.662" Z="208.7772" />
       </While>
     </If>
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="The Runic Keystone" QuestId="11988" Type="CollectItem" ItemId="35747" CollectCount="5" />
   <TurnIn Nav="Fly" QuestName="Uncovering the Tunnels" QuestId="12003" TurnInName="Brugar Stoneshear" TurnInId="26226" X="4551.792" Y="-4250.052" Z="170.4935" />
@@ -3129,16 +3129,16 @@ step
 <If Condition="HasQuest(12113) &amp;&amp; !IsQuestCompleted(12113)">
   <CustomBehavior File="FlyTo" X="4315.093" Y="-4985.902" Z="20.48923" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <Objective Nav="Fly" QuestName="Nice to Meat You" QuestId="12113" Type="CollectItem" ItemId="36875" CollectCount="10" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective Nav="Fly" QuestName="Nice to Meat You" QuestId="12113" Type="CollectItem" ItemId="36819" CollectCount="10" />
 </If>
 <If Condition="HasQuest(12114) &amp;&amp; !IsQuestCompleted(12114)">
   <CustomBehavior File="FlyTo" X="4442.226" Y="-4891.297" Z="26.69714" />
   <CustomBehavior File="ForcedDismount" />
   <If Condition="HasQuest(12068) &amp;&amp; !IsQuestCompleted(12068) &amp;&amp; GetItemCount(36758) &lt; 5">
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <If Condition="!IsObjectiveComplete(1, 12114) &amp;&amp; !IsObjectiveComplete(2, 12114)" >
     <SetGrindArea>
@@ -3170,7 +3170,7 @@ step
     <GrindTo Condition="IsObjectiveComplete(1, 12114) || !IsObjectiveComplete(2, 12114)" GoalText="Doing Quest 'Nice to Meat You'" />
     <Objective Nav="Fly" QuestName="Therapy" QuestId="12114" Type="KillMob" MobId="26797" KillCount="10" />
     <Objective Nav="Fly" QuestName="Therapy" QuestId="12114" Type="KillMob" MobId="26795" KillCount="10" />
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
 </If>
 <Objective QuestName="Voices From the Dust" QuestId="12068" Type="CollectItem" ItemId="36758" CollectCount="5" />
@@ -3206,7 +3206,7 @@ step
     </If>
     <If Condition="GetItemCount(36758) &lt; 5" >
       <CustomBehavior File="FlyTo" X="4442.226" Y="-4891.297" Z="26.69714" />
-      <CustomBehavior File="UserSettings" LootMobs="True" />
+      <LootMobs Value="true" />
       <CustomBehavior File="CollectThings" MobId1="26795" MobId2="26797" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="36758">
       <Hotspot X="4442.226" Y="-4891.297" Z="26.69714" />
       <Hotspot X="4479.864" Y="-4873.912" Z="25.30854" />
@@ -3228,7 +3228,7 @@ step
       <Hotspot X="4511.198" Y="-4892.233" Z="39.25517" />
       <Hotspot X="4473.7" Y="-4890.941" Z="25.22799" />
       </CustomBehavior>
-      <CustomBehavior File="UserSettings" LootMobs="Original" />
+      <LootMobs Value="null" />
 <!--
       <Objective QuestName="Voices From the Dust" QuestId="12068" Type="CollectItem" ItemId="36758" CollectCount="5" />
 -->
@@ -3430,12 +3430,12 @@ step
   </If>
   <PickUp Nav="Fly" QuestName="The Perfect Plan" QuestId="12129" GiverName="Raegar Breakbrow" GiverId="26883" X="3814.069" Y="-5157.368" Z="119.2714" />
   <If Condition="(HasQuest(12180) &amp;&amp; !IsQuestCompleted(12180)) || (HasQuest(12129) &amp;&amp; !IsQuestCompleted(12129))">
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(12180) &amp;&amp; !IsQuestCompleted(12180)">
     <CustomBehavior File="FlyTo" X="3648.824" Y="-5098.837" Z="165.0761" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="UserSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <While Condition="!IsQuestCompleted(12180)">
       <If Condition="!HasItem(37013)" >
       <CustomBehavior File="CollectThings" QuestId="12180" MobId1="27177" MobId2="26347" MobId3="26414" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="37013">
@@ -3479,7 +3479,7 @@ step
     </While>
   </If>
   <If Condition="HasQuest(12180) || HasQuest(12129)">
-    <CustomBehavior File="UserSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective Nav="Fly" QuestName="The Perfect Plan" QuestId="12129" Type="CollectItem" ItemId="36849" CollectCount="1" />
   <Objective Nav="Fly" QuestName="The Perfect Plan" QuestId="12129" Type="CollectItem" ItemId="36850" CollectCount="1" />

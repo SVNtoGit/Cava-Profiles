@@ -529,10 +529,10 @@
 <PickUp QuestName="Nowhere To Run And Nowhere To Hide" QuestId="12719" GiverName="Prince Keleseth" GiverId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
 <PickUp QuestName="Lambs To The Slaughter" QuestId="12722" GiverName="Baron Rivendare" GiverId="28910" X="1876.437" Y="-5777.139" Z="85.01876" />
 <If Condition="HasQuest(12716) &amp;&amp; !IsQuestCompleted(12716)" >
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="1" MobId="190937" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1784.615" Y="-5875.238" Z="109.4968" />
   <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="2" MobId="190938" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1811.489" Y="-6002.574" Z="117.6457" />
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective QuestName="The Plaguebringer's Request" QuestId="12716" Type="CollectItem" ItemId="39328" CollectCount="10" />
 </If>
 <If Condition="HasQuest(12719) &amp;&amp; !IsQuestCompleted(12719)" >
@@ -697,13 +697,13 @@
   <RunTo X="1441.85" Y="-5945.563" Z="128.7185" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <CustomBehavior File="MyCTM" X="1443.03" Y="-5974.031" Z="115.7256" />
-  <CustomBehavior File="UserSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(12754)">
     <RunTo QuestId="12754" X="1443.03" Y="-5974.031" Z="115.7256" />
     <CustomBehavior File="Misc\RunLua" QuestId="12754" Lua="UseItemByName(39645)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" QuestId="12754" WaitTime="12000" />
   </While>
-  <CustomBehavior File="UserSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <!--
 <Objective QuestName="Ambush At The Overlook" QuestId="12754" Type="CollectItem" ItemId="39646" CollectCount="1" />
