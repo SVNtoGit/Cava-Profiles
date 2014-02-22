@@ -1689,12 +1689,12 @@
     <Else>
       <RunTo X="-8832.096" Y="550.8102" Z="96.06648" />
       <CustomBehavior File="FlyTo" X="-8297.622" Y="1384.254" Z="5.230162" />
-      <CustomBehavior File="UseTransport" TransportId="190536"
-        WaitAtX="-8295.157" WaitAtY="1406.665" WaitAtZ="4.398641"
-        StandOnX="-8295.016" StandOnY="1422.455" StandOnZ="9.477573"
-        GetOffX="2232.495" GetOffY="5136.332" GetOffZ="5.343471"
-        TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="-0.03592084"
-        TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
+			<CustomBehavior File="UseTransport" TransportId="190536"
+			WaitAtX="-8295.157" WaitAtY="1406.665" WaitAtZ="4.398641"
+			StandOnX="-8295.016" StandOnY="1422.455" StandOnZ="9.477573"
+			GetOffX="2251.188" GetOffY="5187.274" GetOffZ="11.42441"
+			TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="-0.03592084"
+			TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
       <RunTo X="2246.826" Y="5173.555" Z="11.7704" />
       </Else>
     </If>
@@ -2099,11 +2099,11 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="A Diplomatic Mission" QuestId="12141" TurnInName="Karuk" TurnInId="25435" X="1996.483" Y="5853.813" Z="35.94737" />
   </If>
-  <If Condition="!HasQuest(11613) &amp;&amp; !IsQuestCompleted(11613) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11613) &amp;&amp; !IsQuestCompleted(11613) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <!--
@@ -2345,11 +2345,11 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Seek Out Karuk!" QuestId="11662" TurnInName="Karuk" TurnInId="25435" X="1996.483" Y="5853.813" Z="35.94737" />
   </If>
-  <If Condition="!HasQuest(11613) &amp;&amp; !IsQuestCompleted(111613) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11613) &amp;&amp; !IsQuestCompleted(111613) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <!--
@@ -2465,17 +2465,17 @@
   <CustomBehavior File="FlyTo" X="1999.838" Y="5852.147" Z="35.97097" />
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="The Emissary" QuestId="11626" TurnInName="Karuk" TurnInId="25435" X="1996.483" Y="5853.813" Z="35.94737" />
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <If Condition="!HasQuest(11864) &amp;&amp; !IsQuestCompleted(11864)">
@@ -2644,18 +2644,18 @@
 </If>
 <TurnIn QuestName="The Nefarious Clam Master..." QuestId="11872" TurnInName="Hierophant Cenius" TurnInId="25810" X="2779.762" Y="5238.799" Z="38.42977" />
 <TurnIn QuestName="The Culler Cometh" QuestId="11868" TurnInName="Zaza" TurnInId="25811" X="3205.113" Y="5296.917" Z="48.00735" />
-<If Condition="!HasQuest(11612) &amp;&amp; !IsQuestCompleted(11612) &amp;&amp; (Me.Level &gt;= 72)">
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11612) &amp;&amp; !IsQuestCompleted(11612) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <If Condition="!HasQuest(11612) &amp;&amp; !IsQuestCompleted(11612)">
@@ -2861,18 +2861,18 @@
 <If Condition="HasQuest(11575)" >
   <TurnIn QuestName="Nick of Time" QuestId="11575" TurnInName="Librarian Donathan" TurnInId="25262" X="3615.926" Y="5961.459" Z="136.217" />
 </If>
-<If Condition="!HasQuest(11597) &amp;&amp; !IsQuestCompleted(11597) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11597) &amp;&amp; !IsQuestCompleted(11597) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <PickUp QuestName="Prison Break" QuestId="11587" GiverName="Librarian Donathan" GiverId="25262" X="3615.926" Y="5961.459" Z="136.217" />
@@ -3055,18 +3055,18 @@
   <PickUp QuestName="Secrets of the Ancients" QuestId="11910" GiverName="Archmage Berinand" GiverId="25314" X="3575.609" Y="6671.719" Z="195.109" />
   <RunTo X="3583.975" Y="6664.483" Z="195.2309" />
 </If>
-<If Condition="!HasQuest(11918) &amp;&amp; !IsQuestCompleted(11918) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11918) &amp;&amp; !IsQuestCompleted(11918) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <PickUp QuestName="Basic Training" QuestId="11918" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
@@ -3852,11 +3852,11 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsHorde">
-  <If Condition="!HasQuest(11888) &amp;&amp; !IsQuestCompleted(11888) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11888) &amp;&amp; !IsQuestCompleted(11888) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11888) &amp;&amp; !IsQuestCompleted(11888)">
     <CustomBehavior File="FlyTo" X="2919.687" Y="6098.6" Z="77.90588" />
@@ -3873,18 +3873,18 @@
                                                      Neutral                                                                       |
                                                                                                                                    |
 -->
-<If Condition="!HasQuest(11949) &amp;&amp; !IsQuestCompleted(11949) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11949) &amp;&amp; !IsQuestCompleted(11949) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <If Condition="(!HasQuest(11949) &amp;&amp; !IsQuestCompleted(11949)) || (!HasQuest(11945) &amp;&amp; !IsQuestCompleted(11945))">
@@ -3911,18 +3911,18 @@
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="Muahit's Wisdom" QuestId="11950" TurnInName="Elder Muahit" TurnInId="26218" X="2789.396" Y="4696.571" Z="1.861293" />
 </If>
-<If Condition="!HasQuest(11961) &amp;&amp; !IsQuestCompleted(11961) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11961) &amp;&amp; !IsQuestCompleted(11961) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <PickUp QuestName="Spirits Watch Over Us" QuestId="11961" GiverName="Elder Muahit" GiverId="26218" X="2789.396" Y="4696.571" Z="1.861293" />
@@ -3944,18 +3944,18 @@
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="Spirits Watch Over Us" QuestId="11961" TurnInName="Elder Muahit" TurnInId="26218" X="2789.396" Y="4696.571" Z="1.861293" />
 </If>
-<If Condition="!HasQuest(11968) &amp;&amp; !IsQuestCompleted(11968) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11968) &amp;&amp; !IsQuestCompleted(11968) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <PickUp QuestName="The Tides Turn" QuestId="11968" GiverName="Elder Muahit" GiverId="26218" X="2789.396" Y="4696.571" Z="1.861293" />
@@ -3977,11 +3977,11 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Son of Karkut" QuestId="12086" TurnInName="Corporal Venn" TurnInId="26187" X="3113.765" Y="3843.112" Z="22.6714" />
-  <If Condition="!HasQuest(11944) &amp;&amp; !IsQuestCompleted(11944) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11944) &amp;&amp; !IsQuestCompleted(11944) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Surrounded!" QuestId="11944" GiverName="Corporal Venn" GiverId="26187" X="3113.765" Y="3843.112" Z="22.6714" />
   <PickUp QuestName="The Lost Courier" QuestId="12157" GiverName="Private Casey" GiverId="26186" X="3114.168" Y="3834.125" Z="22.76194" />
@@ -4000,20 +4000,20 @@
     <CustomBehavior File="FlyTo" X="3337.703" Y="3690.023" Z="32.43203" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Thassarian, the Death Knight" QuestId="12088" TurnInName="Thassarian" TurnInId="26170" />
-    <If Condition="(Me.Level &gt;= 72)">
+    <If Condition="(Me.LevelFraction &gt;= 72.95)">
       <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
       <RunTo X="3337.703" Y="3690.023" Z="32.43203" />
       <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
     </If>
   </If>
 -->
-  <If Condition="!HasQuest(11956) &amp;&amp; !IsQuestCompleted(11956) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11956) &amp;&amp; !IsQuestCompleted(11956) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11956) &amp;&amp; !IsQuestCompleted(11956)" >
     <CustomBehavior File="FlyTo" X="3379.832" Y="3661.38" Z="21.10922" />
@@ -4037,12 +4037,12 @@
     <CustomBehavior File="FlyTo" X="3379.832" Y="3661.38" Z="21.10922" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Finding the Phylactery" QuestId="11956" TurnInName="Thassarian" TurnInId="26170" X="3295.889" Y="3682.7" Z="32.46844" />
-    <If Condition="(Me.Level &gt;= 72)">
+    <If Condition="(Me.LevelFraction &gt;= 72.95)">
       <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
       <RunTo X="3337.703" Y="3690.023" Z="32.43203" />
       <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
     </If>
   </If>
   <If Condition="!HasQuest(11938) &amp;&amp; !IsQuestCompleted(11938)" >
@@ -4078,12 +4078,12 @@
     <CustomBehavior File="FlyTo" X="3379.832" Y="3661.38" Z="21.10922" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Buying Some Time" QuestId="11938" TurnInName="Thassarian" TurnInId="26170" X="3295.889" Y="3682.7" Z="32.46844" />
-    <If Condition="(Me.Level &gt;= 72)">
+    <If Condition="(Me.LevelFraction &gt;= 72.95)">
       <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
       <RunTo X="3337.703" Y="3690.023" Z="32.43203" />
       <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+      <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
     </If>
   </If>
   <If Condition="!HasQuest(11942) &amp;&amp; !IsQuestCompleted(11942)" >
@@ -4183,11 +4183,11 @@
   <TurnIn QuestName="What's the Matter with the Transmatter?" QuestId="11710" TurnInName="Mordle Cogspinner" TurnInId="25702" X="4182.673" Y="5255.368" Z="26.3769" />
   <PickUp QuestName="Check in With Bixie" QuestId="11692" GiverName="Mordle Cogspinner" GiverId="25702" X="4182.673" Y="5255.368" Z="26.3769" />
   <TurnIn QuestName="Master and Servant" QuestId="11730" TurnInName="Crafty Wobblesprocket" TurnInId="25477" X="4193.229" Y="5216.146" Z="25.23092" />
-  <If Condition="!HasQuest(11713) &amp;&amp; !IsQuestCompleted(11713) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11713) &amp;&amp; !IsQuestCompleted(11713) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Scouting the Sinkholes" QuestId="11713" GiverName="Abner Fizzletorque" GiverId="25780" X="4124.687" Y="5281.649" Z="25.02116" />
   <If Condition="HasQuest(11798) &amp;&amp; !IsQuestCompleted(11798)">
@@ -4352,11 +4352,11 @@
 	  TransportEndX="4183.814" TransportEndY="5281.082" TransportEndZ="26.65747" />
 	<RunTo X="4176.232" Y="5259.959" Z="26.4175" />
   </If>
-  <If Condition="HasQuest(11715) &amp;&amp; !IsQuestCompleted(11715) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="HasQuest(11715) &amp;&amp; !IsQuestCompleted(11715) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="HasQuest(11715) &amp;&amp; !IsQuestCompleted(11715)">
     <CustomBehavior File="FlyTo" X="4006.793" Y="5268.296" Z="13.20219" />
@@ -4395,11 +4395,11 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Fueling the Project" QuestId="11715" TurnInName="Abner Fizzletorque" TurnInId="25780" X="4124.687" Y="5281.649" Z="25.02077" />
   </If>
-  <If Condition="!HasQuest(11718) &amp;&amp; !IsQuestCompleted(11718) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11718) &amp;&amp; !IsQuestCompleted(11718) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="A Bot in Mammoth's Clothing" QuestId="11718" GiverName="Abner Fizzletorque" GiverId="25780" X="4124.687" Y="5281.649" Z="25.02077" />
   <If Condition="HasQuest(11718) &amp;&amp; !IsQuestCompleted(11718)" >
@@ -4444,11 +4444,11 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="A Bot in Mammoth's Clothing" QuestId="11718" TurnInName="Abner Fizzletorque" TurnInId="25780" X="4124.687" Y="5281.649" Z="25.02077" />
   </If>
-  <If Condition="!HasQuest(11723) &amp;&amp; !IsQuestCompleted(11723) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11723) &amp;&amp; !IsQuestCompleted(11723) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Deploy the Shake-n-Quake!" QuestId="11723" GiverName="Abner Fizzletorque" GiverId="25780" X="4124.687" Y="5281.649" Z="25.02077" />
   <If Condition="HasQuest(11723) &amp;&amp; !IsQuestCompleted(11723)">
@@ -4467,11 +4467,11 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Deploy the Shake-n-Quake!" QuestId="11723" TurnInName="Abner Fizzletorque" TurnInId="25780" X="4124.687" Y="5281.649" Z="25.02077" />
   </If>
-  <If Condition="HasQuest(11704) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="HasQuest(11704) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="HasQuest(11704)">
     <CustomBehavior File="FlyTo" X="4361.981" Y="6062.246" Z="0.3052392" />
@@ -4485,11 +4485,11 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsHorde">
-  <If Condition="!HasQuest(10798) &amp;&amp; !IsQuestCompleted(10798) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(10798) &amp;&amp; !IsQuestCompleted(10798) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11887) &amp;&amp; !IsQuestCompleted(11887)">
     <CustomBehavior File="FlyTo" X="3523.169" Y="4879.318" Z="15.48706" />
@@ -4546,11 +4546,11 @@
   <PickUp QuestName="Sage Highmesa is Missing" QuestId="11674" GiverName="Greatmother Taiga" GiverId="25602" X="3480.638" Y="4114.55" Z="18.40129" />
   <PickUp QuestName="Scouting the Sinkholes" QuestId="11684" GiverName="Greatfather Mahan" GiverId="24702" X="3444.197" Y="4128.28" Z="15.40186" />
   <TurnIn QuestName="Ride to Taunka'le Village" QuestId="11888" TurnInName="Sage Earth and Sky" TurnInId="25982" X="3419.095" Y="4117.668" Z="17.29674" />
-  <If Condition="!HasQuest(11890) &amp;&amp; !IsQuestCompleted(11890) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11890) &amp;&amp; !IsQuestCompleted(11890) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11890) &amp;&amp; !IsQuestCompleted(11890)">
     <PickUp QuestName="What Are They Up To?" QuestId="11890" GiverName="Sage Earth and Sky" GiverId="25982" X="3419.095" Y="4117.668" Z="17.29674" />
@@ -4636,11 +4636,11 @@
   <TurnIn QuestName="Load'er Up!" QuestId="11881" TurnInName="Fezzix Geartwist" TurnInId="25849" X="3477.158" Y="4103.965" Z="17.7563" />
   <PickUp QuestName="The Power of the Elements" QuestId="11893" GiverName="Dorain Frosthoof" GiverId="25983" X="3477.563" Y="4096.331" Z="17.54654" />
   <TurnIn QuestName="Scouting the Sinkholes" QuestId="11684" TurnInName="Greatfather Mahan" TurnInId="24702" X="3444.197" Y="4128.28" Z="15.40186" />
-  <If Condition="!HasQuest(11685) &amp;&amp; !IsQuestCompleted(11685) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11685) &amp;&amp; !IsQuestCompleted(11685) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="The Heart of the Elements" QuestId="11685" GiverName="Greatfather Mahan" GiverId="24702" X="3444.197" Y="4128.28" Z="15.40186" />
   <If Condition="HasQuest(11893) &amp;&amp; !IsQuestCompleted(11893)">
@@ -4803,11 +4803,11 @@
     <PickUp QuestName="Weakness to Lightning" QuestId="11896" GiverName="Sage Earth and Sky" GiverId="25982" X="3419.095" Y="4117.668" Z="17.29674" />
     <RunTo X="3438.956" Y="4107.206" Z="15.96851" />
   </If>
-  <If Condition="!HasQuest(11906) &amp;&amp; !IsQuestCompleted(11906) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11906) &amp;&amp; !IsQuestCompleted(11906) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Cleaning Up the Pools" QuestId="11906" GiverName="Iron Eyes" GiverId="26104" X="3451.779" Y="4136.75" Z="15.34585" />
   <If Condition="!HasQuest(11899) &amp;&amp; !IsQuestCompleted(11899)">
@@ -4887,11 +4887,11 @@
     <TurnIn QuestName="Patching Up" QuestId="11894" TurnInName="Fezzix Geartwist" TurnInId="25849" X="3477.158" Y="4103.965" Z="17.75724" />
     <RunTo X="3457.865" Y="4102.188" Z="16.08184" />
   </If>
-  <If Condition="!HasQuest(11628) &amp;&amp; !IsQuestCompleted(11628) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11628) &amp;&amp; !IsQuestCompleted(11628) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11628) &amp;&amp; !IsQuestCompleted(11628)">
     <PickUp QuestName="Shrouds of the Scourge" QuestId="11628" GiverName="Chieftain Wintergale" GiverId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
@@ -4907,12 +4907,12 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Shrouds of the Scourge" QuestId="11628" TurnInName="Chieftain Wintergale" TurnInId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
   </If>
-  <If Condition="!HasQuest(11630) &amp;&amp; !IsQuestCompleted(11630) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11630) &amp;&amp; !IsQuestCompleted(11630) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3457.865" Y="4102.188" Z="16.08184" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11630) &amp;&amp; !IsQuestCompleted(11630)">
     <PickUp QuestName="The Bad Earth" QuestId="11630" GiverName="Chieftain Wintergale" GiverId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
@@ -4928,12 +4928,12 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Bad Earth" QuestId="11630" TurnInName="Chieftain Wintergale" TurnInId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
   </If>
-  <If Condition="!HasQuest(11633) &amp;&amp; !IsQuestCompleted(11633) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11633) &amp;&amp; !IsQuestCompleted(11633) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3457.865" Y="4102.188" Z="16.08184" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11633) &amp;&amp; !IsQuestCompleted(11633)">
     <PickUp QuestName="Blending In" QuestId="11633" GiverName="Chieftain Wintergale" GiverId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
@@ -5015,12 +5015,12 @@ Text="\n
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="Blending In" QuestId="11633" TurnInName="Chieftain Wintergale" TurnInId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
   </If>
-  <If Condition="!HasQuest(11640) &amp;&amp; !IsQuestCompleted(11640) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11640) &amp;&amp; !IsQuestCompleted(11640) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3457.865" Y="4102.188" Z="16.08184" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Words of Power" QuestId="11640" GiverName="Chieftain Wintergale" GiverId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
   <PickUp QuestName="Neutralizing the Cauldrons" QuestId="11647" GiverName="Sage Aeire" GiverId="24709" X="3462.501" Y="4192.29" Z="18.24148" />
@@ -5128,11 +5128,11 @@ Text="\n
     <PickUp QuestName="Defeat the Gearmaster" QuestId="11909" GiverName="Greatmother Taiga" GiverId="25602" X="3480.638" Y="4114.55" Z="18.402" />
     <RunTo X="3463.177" Y="4108.149" Z="15.99622" />
   </If>
-  <If Condition="!HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="!HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706)">
     <CustomBehavior File="FlyTo" X="3524.502" Y="4214.318" Z="12.92142" />
@@ -5267,11 +5267,11 @@ Text="\n
     <TurnIn QuestName="Words of Power" QuestId="11640" TurnInName="Chieftain Wintergale" TurnInId="24703" X="3466.441" Y="4195.977" Z="18.24361" />
     <RunTo X="3458.996" Y="4104.199" Z="16.06201" />
   </If>
-  <If Condition="HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="HasQuest(11706) &amp;&amp; !IsQuestCompleted(11706)">
     <CustomBehavior File="FlyTo" X="3497.008" Y="4538.699" Z="-12.97543" />
@@ -5345,11 +5345,11 @@ Text="\n
     <TurnIn QuestName="Defeat the Gearmaster" QuestId="11909" TurnInName="Greatmother Taiga" TurnInId="25602" X="3480.638" Y="4114.55" Z="18.402" />
     <RunTo X="3455.99" Y="4105.926" Z="15.98107" />
   </If>
-  <If Condition="!HasQuest(11593) &amp;&amp; !IsQuestCompleted(11593) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11593) &amp;&amp; !IsQuestCompleted(11593) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <If Condition="(!HasQuest(11593) &amp;&amp; !IsQuestCompleted(11593)) || (!HasQuest(11594) &amp;&amp; !IsQuestCompleted(11594))">
     <CustomBehavior File="FlyTo" X="4136.853" Y="5788.853" Z="61.67871" />
@@ -5419,11 +5419,11 @@ Text="\n
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Sky Will Know" QuestId="11624" TurnInName="Imperean" TurnInId="25376" X="4538.46" Y="5886.04" Z="62.45085" />
   </If>
-  <If Condition="!HasQuest(11627) &amp;&amp; !IsQuestCompleted(11627) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11627) &amp;&amp; !IsQuestCompleted(11627) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Boiling Point" QuestId="11627" GiverName="Imperean" GiverId="25376" />
   <If Condition="HasQuest(11627) &amp;&amp; !IsQuestCompleted(11627)">
@@ -5466,11 +5466,11 @@ Text="\n
     </While>
   </If>
   <TurnIn QuestName="Vision of Air" QuestId="11631" TurnInName="Spirit Talker Snarlfang" TurnInId="25339" X="4524.214" Y="5672.377" Z="81.37574" />
-  <If Condition="!HasQuest(11635) &amp;&amp; !IsQuestCompleted(11635) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11635) &amp;&amp; !IsQuestCompleted(11635) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
   <PickUp QuestName="Farseer Grimwalker's Spirit" QuestId="11635" GiverName="Spirit Talker Snarlfang" GiverId="25339" X="4524.214" Y="5672.377" Z="81.37574" />
   <If Condition="!HasQuest(11639) &amp;&amp; !IsQuestCompleted(11639)">
@@ -5547,11 +5547,11 @@ Text="\n
     <TurnIn QuestName="Revenge Upon Magmoth" QuestId="11639" TurnInName="Ortrosh" TurnInId="25374" X="4501.083" Y="5723.417" Z="81.31302" />
     <RunTo X="4487.245" Y="5740.958" Z="80.11003" />
   </If>
-  <If Condition="!HasQuest(11571) &amp;&amp; !IsQuestCompleted(11571) &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="!HasQuest(11571) &amp;&amp; !IsQuestCompleted(11571) &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <!--
@@ -5672,18 +5672,18 @@ Text="\n
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="I'm Being Blackmailed By My Cleaner" QuestId="11562" TurnInName="Mrmrglmr" TurnInId="25205" X="4407.047" Y="6149.951" Z="0.7710698" />
 </If>
-<If Condition="!HasQuest(11563) &amp;&amp; !IsQuestCompleted(11563) &amp;&amp; (Me.Level &gt;= 72)" >
-  <If Condition="Me.IsAlliance &amp;&amp; (Me.Level &gt;= 72)">
+<If Condition="!HasQuest(11563) &amp;&amp; !IsQuestCompleted(11563) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+  <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.Level &gt;= 72)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
 <PickUp QuestName="Grmmurggll Mrllggrl Glrggl!!!" QuestId="11563" GiverName="Mrmrglmr" GiverId="25205" X="4407.047" Y="6149.951" Z="0.7710698" />
@@ -5823,7 +5823,7 @@ Text="\n
   <CustomBehavior File="FlyTo" X="3242.96" Y="-666.16" Z="166.7899" />
   <CustomBehavior File="ForcedDismount" />
 </If>
-<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-74)Dragonblight[Cava]" />
+<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
 </QuestOrder>
 <ProtectedItems>
 </ProtectedItems>

@@ -1,0 +1,31 @@
+<HBProfile>
+<Name>Next [Cava] $Rev$</Name>
+<QuestOrder>
+<If Condition="(Me.LevelFraction &gt;= 77.50)">
+
+  <If Condition="!HasQuest(25555) &amp;&amp; IsQuestCompleted(25555) &amp;&amp; Me.LevelFraction &gt;= 82.50">
+    <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="11-armageddoner82-83deepholm" /> 
+  </If>	
+
+  <If Condition="(Me.IsHorde &amp;&amp; !HasQuest(19928) &amp;&amp; IsQuestCompleted(19928)) ||
+                 (Me.IsAlliance &amp;&amp; !HasQuest(12867) &amp;&amp; IsQuestCompleted(12867))">
+    <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="8-armageddoner81-82mounthyjal" /> 
+  </If>
+
+  <If Condition="!HasQuest(13083) &amp;&amp; IsQuestCompleted(13083)">
+    <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="12-armageddoner80-81thestormpeaks" /> 
+  </If>	
+
+  <If Condition="!HasQuest(12621) &amp;&amp; IsQuestCompleted(12621)">
+    <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="7-armageddoner80-81icecrow" /> 
+  </If>
+
+  <If Condition="!HasQuest(13556) &amp;&amp; IsQuestCompleted(13556)">
+    <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="10-armageddoner79-80sholozarbasin" /> 
+  </If>
+
+  <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="9-armageddoner77-79zuldrak" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</QuestOrder>
+</HBProfile>
