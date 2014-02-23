@@ -18,6 +18,7 @@
   <Blackspot X="3164.265" Y="1457.593" Z="150.9778" Radius="5" />
   <Blackspot X="3487.224" Y="-1152.036" Z="111.1653" Radius="150" />
   <Blackspot X="2671.158" Y="875.265" Z="-1.554297" Radius="20" />
+  <Blackspot X="2810.223" Y="-1101.677" Z="-11.31628" Radius="20" />
 </Blackspots>
 
 <Mailboxes>
@@ -1214,11 +1215,6 @@
 	</Hotspots>
   </Objective>
 </Quest>
-
-
-
-
-
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
 <If Condition="!HasSpell(54197) || !HasSpell(90267)">
@@ -2795,7 +2791,7 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsHorde">
-  <If Condition="!HasQuest(11996) &amp;&amp; !IsQuestCompleted(11996)">
+  <If Condition="!HasQuest(11996) &amp;&amp; !IsQuestCompleted(11996) &amp;&amp; !HasQuest(11999) &amp;&amp; !IsQuestCompleted(11999)">
     <CustomBehavior File="FlyTo" X="2789.575" Y="910.2263" Z="22.33928" />
     <CustomBehavior File="ForcedDismount" />
     <RunTo X="2789.575" Y="910.2263" Z="22.33928" />
@@ -3364,6 +3360,7 @@
       <CustomBehavior File="FlyTo" X="3849.684" Y="2314.318" Z="177.1608" />
     </If>
   </If>
+
   <If Condition="HasQuest(12064) || !HasQuest(12069) &amp;&amp; !IsQuestCompleted(12069)" >
     <CustomBehavior File="FlyTo" X="3993.504" Y="2372.667" Z="129.6513" />
     <CustomBehavior File="ForcedDismount" />
@@ -3392,11 +3389,15 @@
         <CustomBehavior File="ForcedDismount" />
       </If>
       <RunTo X="4044.239" Y="2191.407" Z="151.7836" />
-      <CustomBehavior File="InteractWith" QuestId="12069" MobId="188463" Range="5" WaitTime="45000" PreInteractMountStrategy="Dismount" X="4044.239" Y="2191.407" Z="151.7836" />
+      <CustomBehavior File="InteractWith" QuestId="12069" MobId="188463" Range="5" WaitTime="48000" PreInteractMountStrategy="Dismount" X="4044.239" Y="2191.407" Z="151.7836" />
 	  <CustomBehavior File="InteractWith" QuestId="12069" MobId="26608" WaitForNpcs="False" MobState="Alive" PreInteractMountStrategy="Dismount" X="4093.777" Y="2213.104" Z="150.6016" />
+	  <CustomBehavior File="CollectThings" QuestId="12069" MobId="26608" CollectUntil="NoTargetsInArea" CollectItemCount="1"
+	    CollectItemId="1" MobState="Alive" NonCompeteDistance="1">
+		<Hotspot X="4093.777" Y="2213.104" Z="150.6016"/>
+	  </CustomBehavior>
       <CustomBehavior File="WaitTimer" QuestId="12069" WaitTime="10000" />
       <CustomBehavior File="InteractWith" QuestId="12069" MobId="188462" WaitTime="5000" WaitForNpcs="False" Range="8" PreInteractMountStrategy="Dismount" X="4093.777" Y="2213.104" Z="150.6016" />
-      <CustomBehavior File="WaitTimer" QuestId="12069" WaitTime="20000" />
+	  <CustomBehavior File="WaitTimer" QuestId="12069" WaitTime="20000" />
     </While>
   </If>
   <If Condition="HasQuest(12069) || HasQuest(12053) || HasQuest(12053)">
