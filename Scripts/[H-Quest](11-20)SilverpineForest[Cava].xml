@@ -762,6 +762,12 @@
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(27193)">
     <RunTo QuestId="27193" X="144.241" Y="1526.984" Z="114.9543" />
+    <While Condition="Me.HasAura(1784)"><!--Stealth-->
+      <CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff('player',GetSpellInfo(1784))" WaitTime="1000" />
+	</While>
+	<While Condition="Me.HasAura(5215)"><!--Prowl-->
+      <CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff('player',GetSpellInfo(15215))" WaitTime="1000" />
+	</While>
     <CustomBehavior File="WaitTimer" QuestId="27193" WaitTime="10000" />
   </While>
   <LootMobs Value="null" />
