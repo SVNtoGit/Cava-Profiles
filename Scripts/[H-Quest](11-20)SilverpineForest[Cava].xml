@@ -667,9 +667,21 @@
   </While>
 </If>
 <TurnIn QuestName="No Escape" QuestId="27099" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
+<If Condition="HasQuest(27098) &amp;&amp; !IsQuestCompleted(27098)">
+  <CustomBehavior File="AbandonQuest" QuestId="27098" />
+  <CustomBehavior File="WaitTimer" WaitTime="4000" />
+</If>
 <PickUp QuestName="Lordaeron" QuestId="27098" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
 <If Condition="HasQuest(27098)">
-  <CustomBehavior File="WaitTimer" WaitTime="180000" />
+  <While Condition="!IsQuestCompleted(27098)">
+    <CustomBehavior File="WaitTimer" WaitTime="180000" />
+    <If Condition="IsQuestCompleted(27098)">
+      <CustomBehavior File="AbandonQuest" QuestId="27098" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+      <PickUp QuestName="Lordaeron" QuestId="27098" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
 </If>
 <TurnIn QuestName="Lordaeron" QuestId="27098" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="500.622" Y="1564.54" Z="128.2625" />
 <PickUp QuestName="Honor the Dead" QuestId="27180" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="500.622" Y="1564.54" Z="128.2625" />
