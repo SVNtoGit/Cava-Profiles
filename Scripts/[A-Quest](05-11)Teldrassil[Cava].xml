@@ -299,11 +299,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="6736" X="9802.209" Y="982.6077" Z="1313.896" />
   <TurnIn QuestName="Dolanaar Delivery" QuestId="2159" TurnInName="Innkeeper Keldamyr" TurnInId="6736" X="9802.209" Y="982.6077" Z="1313.896" />
 </If>
-<If Condition="HasQuest(28731)">
-  <RunTo X="9794.344" Y="980.6737" Z="1314.884" />
-  <CustomBehavior File="MyCTM" X="9773.124" Y="977.9091" Z="1297.749" />
-  <TurnIn QuestName="Teldrassil: Passing Awareness" QuestId="28731" TurnInName="Corithras Moonrage" TurnInId="3515" X="9736.91" Y="956.0632" Z="1294.111" />
-</If>
+<TurnIn QuestName="Teldrassil: Passing Awareness" QuestId="28731" TurnInName="Corithras Moonrage" TurnInId="3515" X="9736.91" Y="956.0632" Z="1294.111" />
 <PickUp QuestName="Teldrassil: The Refusal of the Aspects" QuestId="929" GiverName="Corithras Moonrage" GiverId="3515" X="9736.91" Y="956.0632" Z="1294.111" />
 <If Condition="((HasQuest(489)) &amp;&amp; (!IsQuestCompleted(489)))" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
