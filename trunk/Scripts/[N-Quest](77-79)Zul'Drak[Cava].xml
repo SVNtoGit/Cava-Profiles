@@ -1888,8 +1888,31 @@
 <If Condition="HasQuest(12514) &amp;&amp; !IsQuestCompleted(12514)">
   <CustomBehavior File="FlyTo" X="5530.244" Y="-2724.259" Z="277.1349" />
   <CustomBehavior File="ForcedDismount" />
-  <Objective Nav="Fly" QuestName="Mushroom Mixer" QuestId="12514" Type="CollectItem" ItemId="38326" CollectCount="10" />
-</If>
+	<!--<Objective Nav="Fly" QuestName="Mushroom Mixer" QuestId="12514" Type="CollectItem" ItemId="38326" CollectCount="10" />-->
+	<While Condition="!IsQuestCompleted(12514)">
+	  <CustomBehavior File="InteractWith" QuestId="12514" MobId="190399" InteractByLooting="True" CollectionDistance="1000"
+		  PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="7">
+			<HuntingGrounds>
+				<Hotspot X="5530.244" Y="-2724.259" Z="277.1349" />
+				<Hotspot X="5500.379" Y="-2753.15" Z="275.1415" />
+				<Hotspot X="5478.834" Y="-2786.972" Z="274.3785" />
+				<Hotspot X="5463.626" Y="-2824.577" Z="274.3784" />
+				<Hotspot X="5488.743" Y="-2857.727" Z="274.3788" />
+				<Hotspot X="5527.22" Y="-2871.01" Z="274.3787" />
+				<Hotspot X="5561.237" Y="-2848.963" Z="274.3785" />
+				<Hotspot X="5599.341" Y="-2833.294" Z="274.3795" />
+				<Hotspot X="5640.606" Y="-2829.137" Z="274.2118" />
+				<Hotspot X="5681.761" Y="-2830.724" Z="273.7601" />
+				<Hotspot X="5721.909" Y="-2825.791" Z="274.4187" />
+				<Hotspot X="5748.078" Y="-2794.562" Z="274.5491" />
+				<Hotspot X="5741.672" Y="-2753.898" Z="276.5832" />
+				<Hotspot X="5707.235" Y="-2733.284" Z="276.5834" />
+				<Hotspot X="5667.039" Y="-2736.218" Z="276.2152" />
+				<Hotspot X="5630.082" Y="-2719.275" Z="276.5838" />
+    	</HuntingGrounds>
+		</CustomBehavior>
+	</While>
+</If>	
 <If Condition="HasQuest(12514) || (!HasQuest(12516) &amp;&amp; !IsQuestCompleted(12516))">
   <CustomBehavior File="FlyTo" X="5491.089" Y="-2625.231" Z="305.8956" />
   <CustomBehavior File="ForcedDismount" />
