@@ -1,40 +1,2972 @@
-<HBProfile creator="Cava" version="1">
-  <Name>[N-Quest] (77-79) Zul'Drak [Cava]</Name>
-  <MinLevel>1</MinLevel>
-  <MaxLevel>91</MaxLevel>
-  <MinDurability>0.2</MinDurability>
-	<MinFreeBagSlots>2</MinFreeBagSlots>
-  <MailGrey>False</MailGrey>
-	<MailWhite>True</MailWhite>
-	<MailGreen>True</MailGreen>
-	<MailBlue>True</MailBlue>
-	<MailPurple>True</MailPurple>
-  <SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
-	<SellGreen>True</SellGreen>
-	<SellBlue>False</SellBlue>
-	<SellPurple>False</SellPurple>
-  <TargetElites>False</TargetElites>
+<HBProfile creator="Cava">
+<Name>[N-Quest] (77-79) Zul'Drak [Cava] $Rev$</Name>
+
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
   
-  <AvoidMobs>
-  </AvoidMobs>
-  <Blackspots>
-  </Blackspots>
+<AvoidMobs>
+</AvoidMobs>
+<Blackspots>
+  <Blackspot X="5151.445" Y="-3034.011" Z="278.5552" Radius="20" />
+	<Blackspot X="5156.954" Y="-1591.637" Z="239.3644" Radius="40"/>
+</Blackspots>
+<Blacklist>
+  <Mob Name="Aidan Steeleye" Id="28800" />
+</Blacklist>
 
-  <Mailboxes>
-  </Mailboxes>
+<Mailboxes>
+</Mailboxes>
 
-  <Vendors>
-  </Vendors>
+<Vendors>
+  <Vendor Nav="Fly" Name="Brady Ironcrock" Entry="28811" Type="Food" X="5154.667" Y="-2202.71" Z="236.5393" />
+  <Vendor Nav="Fly" Name="Noggra" Entry="28792" Type="Food" X="5381.775" Y="-2627.102" Z="303.955" />
+  <Vendor Nav="Fly" Name="Arlen Brighthammer" Entry="28796" Type="Repair" X="5409.303" Y="-2655.896" Z="303.9539" />
+  <Vendor Nav="Fly" Name="Haley Copperturn" Entry="28797" Type="Repair" X="5410.214" Y="-2665.951" Z="303.9545" />
+  <Vendor Nav="Fly" Name="Scabbard" Entry="28871" Type="Repair" X="5198.625" Y="-1314.162" Z="243.1406" />
+  <Vendor Nav="Fly" Name="Engineer Reed" Entry="29688" Type="Repair" X="5542.131" Y="-1859.713" Z="238.2685" />
+  <Vendor Nav="Fly" Name="Ba'kari" Entry="28855" Type="Repair" X="5769.661" Y="-3572.947" Z="387.2391" />
+</Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="12629" Name="You Can Run, But You Can't Hide">
+  <Objective Type="CollectItem" ItemId="38686" CollectCount="5">
+    <CollectFrom>
+      <Mob Name="Putrid Abomination" Id="28564"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5170.971" Y="-1473.298" Z="235.3398" />
+      <Hotspot X="5140.416" Y="-1499.579" Z="234.9338" />
+      <Hotspot X="5106.489" Y="-1520.831" Z="235.9883" />
+      <Hotspot X="5070.411" Y="-1540.223" Z="240.5479" />
+      <Hotspot X="5029.478" Y="-1540.536" Z="240.5095" />
+      <Hotspot X="5025.435" Y="-1580.628" Z="238.4402" />
+      <Hotspot X="5041.533" Y="-1617.245" Z="236.6514" />
+      <Hotspot X="5058.613" Y="-1654.772" Z="238.8712" />
+      <Hotspot X="5077.844" Y="-1690.282" Z="234.7559" />
+      <Hotspot X="5116.148" Y="-1702.466" Z="236.0186" />
+      <Hotspot X="5156.919" Y="-1708.786" Z="235.3221" />
+      <Hotspot X="5197.634" Y="-1707.208" Z="235.2556" />
+      <Hotspot X="5210.286" Y="-1668.491" Z="234.9414" />
+      <Hotspot X="5206.655" Y="-1627.573" Z="235.6125" />
+      <Hotspot X="5166.166" Y="-1622.07" Z="235.4372" />
+      <Hotspot X="5128.294" Y="-1606.072" Z="236.2183" />
+      <Hotspot X="5104.507" Y="-1573.396" Z="238.3359" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12901" Name="Making Something Out Of Nothing">
+  <Objective Type="CollectItem" ItemId="41399" CollectCount="10">
+    <CollectFrom>
+      <GameObject Id="191780" Name="Scourge Scrap Metal" />
+      <GameObject Id="191781" Name="Scourge Scrap Metal" />
+      <GameObject Id="191782" Name="Scourge Scrap Metal" />
+      <GameObject Id="191783" Name="Scourge Scrap Metal" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5689.214" Y="-1388.655" Z="233.962" />
+      <Hotspot X="5648.56" Y="-1390.769" Z="234.4492" />
+      <Hotspot X="5608.469" Y="-1394.15" Z="227.6609" />
+      <Hotspot X="5593.572" Y="-1432.765" Z="229.5139" />
+      <Hotspot X="5607.004" Y="-1470.719" Z="229.6417" />
+      <Hotspot X="5627.351" Y="-1506.751" Z="229.6973" />
+      <Hotspot X="5654.246" Y="-1537.22" Z="228.6042" />
+      <Hotspot X="5688.001" Y="-1560.434" Z="230.3351" />
+      <Hotspot X="5728.145" Y="-1555.129" Z="231.2677" />
+      <Hotspot X="5754.213" Y="-1523.214" Z="230.5069" />
+      <Hotspot X="5793.919" Y="-1517.371" Z="228.7745" />
+      <Hotspot X="5806.281" Y="-1478.913" Z="229.8985" />
+      <Hotspot X="5796.349" Y="-1439.253" Z="232.3782" />
+      <Hotspot X="5781.237" Y="-1401.888" Z="229.6534" />
+      <Hotspot X="5743.441" Y="-1386.85" Z="229.995" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12904" Name="Light Won't Grant Me Vengeance">
+  <Objective Type="KillMob" MobId="29882" KillCount="15">
+    <Hotspots>
+      <Hotspot X="5689.161" Y="-1388.553" Z="233.9558" />
+      <Hotspot X="5653.016" Y="-1407.762" Z="234.4458" />
+      <Hotspot X="5614.243" Y="-1418.826" Z="228.0676" />
+      <Hotspot X="5602.816" Y="-1457.697" Z="230.7581" />
+      <Hotspot X="5621.369" Y="-1493.189" Z="229.9079" />
+      <Hotspot X="5659.144" Y="-1509.906" Z="229.5478" />
+      <Hotspot X="5699.075" Y="-1517.761" Z="234.443" />
+      <Hotspot X="5726.946" Y="-1546.853" Z="229.6031" />
+      <Hotspot X="5744.277" Y="-1582.913" Z="229.0647" />
+      <Hotspot X="5773.424" Y="-1609.995" Z="234.9243" />
+      <Hotspot X="5808.499" Y="-1629.934" Z="235.65" />
+      <Hotspot X="5830.403" Y="-1664.885" Z="238.7164" />
+      <Hotspot X="5868.046" Y="-1679.559" Z="239.5131" />
+      <Hotspot X="5882.874" Y="-1641.512" Z="238.2891" />
+      <Hotspot X="5863.952" Y="-1605.202" Z="236.974" />
+      <Hotspot X="5840.38" Y="-1572.412" Z="236.8836" />
+      <Hotspot X="5810.876" Y="-1545.688" Z="229.9072" />
+      <Hotspot X="5780.895" Y="-1519.107" Z="229.3346" />
+      <Hotspot X="5773.109" Y="-1479.429" Z="232.6353" />
+	</Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12914" Name="Gymer's Salvation">
+  <Objective Type="CollectItem" ItemId="41503" CollectCount="6">
+    <CollectFrom>
+      <Mob Name="Icetouched Earthrager" Id="29436"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5272.973" Y="-1395.397" Z="238.7577" />
+      <Hotspot X="5265.642" Y="-1355.827" Z="238.6807" />
+      <Hotspot X="5259.432" Y="-1314.869" Z="240.5068" />
+      <Hotspot X="5261.385" Y="-1274.849" Z="241.31" />
+      <Hotspot X="5252.652" Y="-1235.352" Z="241.7109" />
+      <Hotspot X="5214.944" Y="-1222.691" Z="250.6236" />
+      <Hotspot X="5173.504" Y="-1223.636" Z="251.8247" />
+      <Hotspot X="5145.522" Y="-1253.437" Z="253.0577" />
+      <Hotspot X="5160.893" Y="-1290.052" Z="245.6096" />
+      <Hotspot X="5163.667" Y="-1331.021" Z="241.2531" />
+      <Hotspot X="5174.824" Y="-1372.367" Z="238.6237" />
+      <Hotspot X="5205.795" Y="-1398.498" Z="236.9925" />
+      <Hotspot X="5245.674" Y="-1395.069" Z="238.2241" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12799" Name="Siphoning the Spirits">
+  <Objective Type="CollectItem" ItemId="40066" CollectCount="5">
+    <CollectFrom>
+      <Mob Name="Lost Drakkari Spirit" Id="29129"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5672.955" Y="-2354.341" Z="287.5274" />
+      <Hotspot X="5639.566" Y="-2377.286" Z="287.5273" />
+      <Hotspot X="5633.831" Y="-2418.488" Z="287.6895" />
+      <Hotspot X="5630.761" Y="-2459.857" Z="287.5253" />
+      <Hotspot X="5633.831" Y="-2500.662" Z="287.5263" />
+      <Hotspot X="5644.601" Y="-2539.45" Z="287.5265" />
+      <Hotspot X="5681.462" Y="-2522.389" Z="287.528" />
+      <Hotspot X="5685.603" Y="-2482.401" Z="287.4021" />
+      <Hotspot X="5685.852" Y="-2441.925" Z="287.5508" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12609" Name="Stocking the Shelves">
+  <Objective Type="CollectItem" ItemId="38610" CollectCount="7">
+    <CollectFrom>
+      <Mob Name="Trapdoor Crawler" Id="28221"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5930.477" Y="-2387.641" Z="292.7937" />
+      <Hotspot X="5891.101" Y="-2398.53" Z="291.9682" />
+      <Hotspot X="5852.414" Y="-2384.68" Z="292.1793" />
+      <Hotspot X="5815.078" Y="-2368.368" Z="291.377" />
+      <Hotspot X="5776.344" Y="-2378.619" Z="290.2026" />
+      <Hotspot X="5764.461" Y="-2416.827" Z="290.8933" />
+      <Hotspot X="5769.761" Y="-2457.884" Z="292.045" />
+      <Hotspot X="5777.7" Y="-2498.162" Z="293.336" />
+      <Hotspot X="5806.974" Y="-2525.579" Z="293.0097" />
+      <Hotspot X="5847.115" Y="-2525.483" Z="294.671" />
+      <Hotspot X="5887.047" Y="-2528.077" Z="292.7537" />
+      <Hotspot X="5927.93" Y="-2526.727" Z="294.4561" />
+      <Hotspot X="5967.791" Y="-2522.262" Z="294.3196" />
+      <Hotspot X="5990.313" Y="-2487.931" Z="292.7258" />
+      <Hotspot X="6002.238" Y="-2448.348" Z="292.8702" />
+      <Hotspot X="6035.64" Y="-2426.026" Z="289.7886" />
+      <Hotspot X="6066.623" Y="-2399.196" Z="291.2675" />
+      <Hotspot X="6062.866" Y="-2358.708" Z="292.573" />
+      <Hotspot X="6022.727" Y="-2358.753" Z="293.6256" />
+      <Hotspot X="5995.982" Y="-2388.84" Z="291.6221" />
+      <Hotspot X="5958.05" Y="-2402.918" Z="294.131" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12610" Name="Clipping Their Wings">
+  <Objective Type="CollectItem" ItemId="38620" CollectCount="7">
+    <CollectFrom>
+      <Mob Name="Zul'Drak Bat" Id="28233"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5930.477" Y="-2387.641" Z="292.7937" />
+      <Hotspot X="5891.101" Y="-2398.53" Z="291.9682" />
+      <Hotspot X="5852.414" Y="-2384.68" Z="292.1793" />
+      <Hotspot X="5815.078" Y="-2368.368" Z="291.377" />
+      <Hotspot X="5776.344" Y="-2378.619" Z="290.2026" />
+      <Hotspot X="5764.461" Y="-2416.827" Z="290.8933" />
+      <Hotspot X="5769.761" Y="-2457.884" Z="292.045" />
+      <Hotspot X="5777.7" Y="-2498.162" Z="293.336" />
+      <Hotspot X="5806.974" Y="-2525.579" Z="293.0097" />
+      <Hotspot X="5847.115" Y="-2525.483" Z="294.671" />
+      <Hotspot X="5887.047" Y="-2528.077" Z="292.7537" />
+      <Hotspot X="5927.93" Y="-2526.727" Z="294.4561" />
+      <Hotspot X="5967.791" Y="-2522.262" Z="294.3196" />
+      <Hotspot X="5990.313" Y="-2487.931" Z="292.7258" />
+      <Hotspot X="6002.238" Y="-2448.348" Z="292.8702" />
+      <Hotspot X="6035.64" Y="-2426.026" Z="289.7886" />
+      <Hotspot X="6066.623" Y="-2399.196" Z="291.2675" />
+      <Hotspot X="6062.866" Y="-2358.708" Z="292.573" />
+      <Hotspot X="6022.727" Y="-2358.753" Z="293.6256" />
+      <Hotspot X="5995.982" Y="-2388.84" Z="291.6221" />
+      <Hotspot X="5958.05" Y="-2402.918" Z="294.131" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12510" Name="Precious Elemental Fluids">
+  <Objective Type="CollectItem" ItemId="38323" CollectCount="3">
+    <CollectFrom>
+      <Mob Name="Crazed Water Spirit" Id="16570"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5262.459" Y="-2668.043" Z="289.3016" />
+      <Hotspot X="5222.194" Y="-2669.515" Z="287.9807" />
+      <Hotspot X="5181.472" Y="-2667.435" Z="288.3556" />
+      <Hotspot X="5142.032" Y="-2675.476" Z="289.5814" />
+      <Hotspot X="5125.412" Y="-2638.562" Z="288.4567" />
+      <Hotspot X="5118.059" Y="-2598.941" Z="288.0417" />
+      <Hotspot X="5078.01" Y="-2602.512" Z="289.7722" />
+      <Hotspot X="5047.683" Y="-2630.63" Z="287.9964" />
+      <Hotspot X="5022.299" Y="-2663.375" Z="287.9088" />
+      <Hotspot X="4999.049" Y="-2696.186" Z="287.2935" />
+      <Hotspot X="4975.268" Y="-2728.361" Z="288.0072" />
+      <Hotspot X="4983.59" Y="-2768.068" Z="287.2737" />
+      <Hotspot X="5004.965" Y="-2801.907" Z="287.7806" />
+      <Hotspot X="5043.806" Y="-2815.226" Z="287.8111" />
+      <Hotspot X="5079.592" Y="-2796.772" Z="288.8446" />
+      <Hotspot X="5115.499" Y="-2775.418" Z="287.9551" />
+      <Hotspot X="5147.731" Y="-2750.357" Z="287.7457" />
+      <Hotspot X="5173.018" Y="-2718.302" Z="286.9648" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12562" Name="The Drakkari Do Not Need Water Elementals!">
+  <Objective Type="KillMob" MobId="28303" KillCount="10">
+    <Hotspots>
+      <Hotspot X="5262.459" Y="-2668.043" Z="289.3016" />
+      <Hotspot X="5222.194" Y="-2669.515" Z="287.9807" />
+      <Hotspot X="5181.472" Y="-2667.435" Z="288.3556" />
+      <Hotspot X="5142.032" Y="-2675.476" Z="289.5814" />
+      <Hotspot X="5125.412" Y="-2638.562" Z="288.4567" />
+      <Hotspot X="5118.059" Y="-2598.941" Z="288.0417" />
+      <Hotspot X="5078.01" Y="-2602.512" Z="289.7722" />
+      <Hotspot X="5047.683" Y="-2630.63" Z="287.9964" />
+      <Hotspot X="5022.299" Y="-2663.375" Z="287.9088" />
+      <Hotspot X="4999.049" Y="-2696.186" Z="287.2935" />
+      <Hotspot X="4975.268" Y="-2728.361" Z="288.0072" />
+      <Hotspot X="4983.59" Y="-2768.068" Z="287.2737" />
+      <Hotspot X="5004.965" Y="-2801.907" Z="287.7806" />
+      <Hotspot X="5043.806" Y="-2815.226" Z="287.8111" />
+      <Hotspot X="5079.592" Y="-2796.772" Z="288.8446" />
+      <Hotspot X="5115.499" Y="-2775.418" Z="287.9551" />
+      <Hotspot X="5147.731" Y="-2750.357" Z="287.7457" />
+      <Hotspot X="5173.018" Y="-2718.302" Z="286.9648" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12514" Name="Mushroom Mixer">
+  <Objective Type="CollectItem" ItemId="38326" CollectCount="10">
+    <CollectFrom>
+      <GameObject Id="190399" Name="Muddlecap Fungus" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5530.244" Y="-2724.259" Z="277.1349" />
+      <Hotspot X="5500.379" Y="-2753.15" Z="275.1415" />
+      <Hotspot X="5478.834" Y="-2786.972" Z="274.3785" />
+      <Hotspot X="5463.626" Y="-2824.577" Z="274.3784" />
+      <Hotspot X="5488.743" Y="-2857.727" Z="274.3788" />
+      <Hotspot X="5527.22" Y="-2871.01" Z="274.3787" />
+      <Hotspot X="5561.237" Y="-2848.963" Z="274.3785" />
+      <Hotspot X="5599.341" Y="-2833.294" Z="274.3795" />
+      <Hotspot X="5640.606" Y="-2829.137" Z="274.2118" />
+      <Hotspot X="5681.761" Y="-2830.724" Z="273.7601" />
+      <Hotspot X="5721.909" Y="-2825.791" Z="274.4187" />
+      <Hotspot X="5748.078" Y="-2794.562" Z="274.5491" />
+      <Hotspot X="5741.672" Y="-2753.898" Z="276.5832" />
+      <Hotspot X="5707.235" Y="-2733.284" Z="276.5834" />
+      <Hotspot X="5667.039" Y="-2736.218" Z="276.2152" />
+      <Hotspot X="5630.082" Y="-2719.275" Z="276.5838" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12553" Name="Skimmer Spinnerets">
+  <Objective Type="CollectItem" ItemId="38514" CollectCount="5">
+    <CollectFrom>
+      <Mob Name="Hath'ar Skimmer" Id="28258"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5156.591" Y="-3509.091" Z="292.1101" />
+      <Hotspot X="5137.631" Y="-3472.438" Z="291.3369" />
+      <Hotspot X="5116.604" Y="-3438.037" Z="291.2662" />
+      <Hotspot X="5084.116" Y="-3414.299" Z="289.3546" />
+      <Hotspot X="5048.291" Y="-3393.009" Z="290.3706" />
+      <Hotspot X="5009.206" Y="-3380.736" Z="290.4107" />
+      <Hotspot X="4974.89" Y="-3359.035" Z="290.2418" />
+      <Hotspot X="4947.929" Y="-3329.193" Z="290.4133" />
+      <Hotspot X="4907.967" Y="-3320.69" Z="289.5232" />
+      <Hotspot X="4870.681" Y="-3335.529" Z="290.4472" />
+      <Hotspot X="4848.433" Y="-3370.353" Z="291.9756" />
+      <Hotspot X="4826.584" Y="-3404.683" Z="293.3569" />
+      <Hotspot X="4848.356" Y="-3439.327" Z="291.6541" />
+      <Hotspot X="4871.485" Y="-3473.825" Z="292.0545" />
+      <Hotspot X="4903.765" Y="-3497.784" Z="294.9369" />
+      <Hotspot X="4942.79" Y="-3485.07" Z="294.2516" />
+      <Hotspot X="4983.485" Y="-3492.882" Z="289.8765" />
+      <Hotspot X="5022.621" Y="-3484.574" Z="287.1403" />
+      <Hotspot X="5062.732" Y="-3491.901" Z="290.8127" />
+      <Hotspot X="5102.122" Y="-3501.703" Z="294.7134" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12552" Name="Death to the Necromagi">
+  <Objective Type="KillMob" MobId="28257" KillCount="8">
+    <Hotspots>
+      <Hotspot X="5156.591" Y="-3509.091" Z="292.1101" />
+      <Hotspot X="5137.631" Y="-3472.438" Z="291.3369" />
+      <Hotspot X="5116.604" Y="-3438.037" Z="291.2662" />
+      <Hotspot X="5084.116" Y="-3414.299" Z="289.3546" />
+      <Hotspot X="5048.291" Y="-3393.009" Z="290.3706" />
+      <Hotspot X="5009.206" Y="-3380.736" Z="290.4107" />
+      <Hotspot X="4974.89" Y="-3359.035" Z="290.2418" />
+      <Hotspot X="4947.929" Y="-3329.193" Z="290.4133" />
+      <Hotspot X="4907.967" Y="-3320.69" Z="289.5232" />
+      <Hotspot X="4870.681" Y="-3335.529" Z="290.4472" />
+      <Hotspot X="4848.433" Y="-3370.353" Z="291.9756" />
+      <Hotspot X="4826.584" Y="-3404.683" Z="293.3569" />
+      <Hotspot X="4848.356" Y="-3439.327" Z="291.6541" />
+      <Hotspot X="4871.485" Y="-3473.825" Z="292.0545" />
+      <Hotspot X="4903.765" Y="-3497.784" Z="294.9369" />
+      <Hotspot X="4942.79" Y="-3485.07" Z="294.2516" />
+      <Hotspot X="4983.485" Y="-3492.882" Z="289.8765" />
+      <Hotspot X="5022.621" Y="-3484.574" Z="287.1403" />
+      <Hotspot X="5062.732" Y="-3491.901" Z="290.8127" />
+      <Hotspot X="5102.122" Y="-3501.703" Z="294.7134" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12606" Name="Cocooned!">
+  <Objective Type="KillMob" MobId="28413" KillCount="3">
+    <Hotspots>
+      <Hotspot X="5304.996" Y="-3401.965" Z="297.4847" />
+      <Hotspot X="5307.172" Y="-3361.643" Z="296.6841" />
+      <Hotspot X="5333.147" Y="-3329.259" Z="296.4479" />
+      <Hotspot X="5366.379" Y="-3306.737" Z="297.4848" />
+      <Hotspot X="5404.369" Y="-3294.123" Z="294.8206" />
+      <Hotspot X="5373.572" Y="-3321.616" Z="297.485" />
+      <Hotspot X="5342.194" Y="-3348.7" Z="297.485" />
+	</Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12583" Name="Crashed Sprayer">
+  <Objective Type="CollectItem" ItemId="38560" CollectCount="1">
+    <CollectFrom>
+      <GameObject Id="190537" Name="Crashed Plague Sprayer" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5151.251" Y="-3043.904" Z="278.5549" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12584" Name="Pure Evil">
+  <Objective Type="CollectItem" ItemId="38562" CollectCount="10">
+    <CollectFrom>
+      <GameObject Id="190540" Name="Chunk of Saronite" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5050.706" Y="-3646.537" Z="296.7033" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12554" Name="Malas the Corrupter">
+  <Objective Type="CollectItem" ItemId="38521" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Malas the Corrupter" Id="28255"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5072.699" Y="-3646.896" Z="397.0796" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12635" Name="Relics of the Snow Leopard Goddess">
+  <Objective Type="CollectItem" ItemId="38677" CollectCount="10">
+    <CollectFrom>
+      <GameObject Id="190633" Name="Har'koan Relic" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5333.954" Y="-3773.506" Z="371.4309" />
+      <Hotspot X="5345.558" Y="-3813.272" Z="371.3462" />
+      <Hotspot X="5377.003" Y="-3838.006" Z="371.3457" />
+      <Hotspot X="5416.73" Y="-3837.622" Z="362.6216" />
+      <Hotspot X="5430.639" Y="-3799.644" Z="361.9615" />
+      <Hotspot X="5444.53" Y="-3761.969" Z="362.8083" />
+      <Hotspot X="5444.556" Y="-3721.233" Z="361.9639" />
+      <Hotspot X="5422.339" Y="-3686.413" Z="361.9618" />
+      <Hotspot X="5392.905" Y="-3658.391" Z="361.9822" />
+      <Hotspot X="5358.187" Y="-3637.953" Z="361.959" />
+      <Hotspot X="5320.599" Y="-3655.53" Z="361.9608" />
+      <Hotspot X="5283.176" Y="-3670.131" Z="362.0856" />
+      <Hotspot X="5252.618" Y="-3696.887" Z="363.3009" />
+      <Hotspot X="5266.602" Y="-3733.554" Z="371.351" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12639" Name="The Frozen Earth">
+  <Objective Type="CollectItem" ItemId="38681" CollectCount="7">
+    <CollectFrom>
+      <Mob Name="Frozen Earth" Id="28411"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5921.618" Y="-3418.235" Z="362.6628" />
+      <Hotspot X="5962.104" Y="-3423.182" Z="361.055" />
+      <Hotspot X="6001.911" Y="-3435.881" Z="366.8395" />
+      <Hotspot X="6039.812" Y="-3455.728" Z="364.2971" />
+      <Hotspot X="6078.988" Y="-3444.796" Z="363.8601" />
+      <Hotspot X="6117.387" Y="-3430.628" Z="368.0763" />
+      <Hotspot X="6156.732" Y="-3420.292" Z="362.3693" />
+      <Hotspot X="6189.528" Y="-3395.581" Z="366.2077" />
+      <Hotspot X="6208.672" Y="-3359.948" Z="366.293" />
+      <Hotspot X="6212.142" Y="-3319.307" Z="363.3353" />
+      <Hotspot X="6206.132" Y="-3278.317" Z="362.4328" />
+      <Hotspot X="6204.417" Y="-3237.517" Z="362.7217" />
+      <Hotspot X="6191.634" Y="-3198.017" Z="366.2708" />
+      <Hotspot X="6175.127" Y="-3161.673" Z="362.6756" />
+      <Hotspot X="6135.85" Y="-3150.47" Z="367.011" />
+      <Hotspot X="6095.906" Y="-3148.46" Z="365.5658" />
+      <Hotspot X="6059.363" Y="-3164.699" Z="369.4002" />
+      <Hotspot X="6020.824" Y="-3174.676" Z="365.2008" />
+      <Hotspot X="5987.86" Y="-3197.952" Z="368.2267" />
+      <Hotspot X="5956.364" Y="-3222.321" Z="362.041" />
+      <Hotspot X="5928.118" Y="-3254.646" Z="360.7517" />
+      <Hotspot X="5912.187" Y="-3292.697" Z="358.9863" />
+      <Hotspot X="5905.638" Y="-3333.587" Z="362.0662" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12640" Name="Sealing the Rifts">
+  <Objective Type="KillMob" MobId="28452" KillCount="7">
+    <Hotspots>
+      <Hotspot X="5921.618" Y="-3418.235" Z="362.6628" />
+      <Hotspot X="5962.104" Y="-3423.182" Z="361.055" />
+      <Hotspot X="6001.911" Y="-3435.881" Z="366.8395" />
+      <Hotspot X="6039.812" Y="-3455.728" Z="364.2971" />
+      <Hotspot X="6078.988" Y="-3444.796" Z="363.8601" />
+      <Hotspot X="6117.387" Y="-3430.628" Z="368.0763" />
+      <Hotspot X="6156.732" Y="-3420.292" Z="362.3693" />
+      <Hotspot X="6189.528" Y="-3395.581" Z="366.2077" />
+      <Hotspot X="6208.672" Y="-3359.948" Z="366.293" />
+      <Hotspot X="6212.142" Y="-3319.307" Z="363.3353" />
+      <Hotspot X="6206.132" Y="-3278.317" Z="362.4328" />
+      <Hotspot X="6204.417" Y="-3237.517" Z="362.7217" />
+      <Hotspot X="6191.634" Y="-3198.017" Z="366.2708" />
+      <Hotspot X="6175.127" Y="-3161.673" Z="362.6756" />
+      <Hotspot X="6135.85" Y="-3150.47" Z="367.011" />
+      <Hotspot X="6095.906" Y="-3148.46" Z="365.5658" />
+      <Hotspot X="6059.363" Y="-3164.699" Z="369.4002" />
+      <Hotspot X="6020.824" Y="-3174.676" Z="365.2008" />
+      <Hotspot X="5987.86" Y="-3197.952" Z="368.2267" />
+      <Hotspot X="5956.364" Y="-3222.321" Z="362.041" />
+      <Hotspot X="5928.118" Y="-3254.646" Z="360.7517" />
+      <Hotspot X="5912.187" Y="-3292.697" Z="358.9863" />
+      <Hotspot X="5905.638" Y="-3333.587" Z="362.0662" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12655" Name="The Blessing of Zim'Rhuk">
+  <Objective Type="CollectItem" ItemId="38551" CollectCount="10">
+    <CollectFrom>
+      <Mob Name="Priest of Rhunok" Id="28417"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="6013.701" Y="-3363.534" Z="352.8619" />
+      <Hotspot X="6053.006" Y="-3376.809" Z="350.3598" />
+      <Hotspot X="6094.056" Y="-3374.46" Z="350.6478" />
+      <Hotspot X="6132.977" Y="-3360.437" Z="350.3524" />
+      <Hotspot X="6149.781" Y="-3324.116" Z="350.8242" />
+      <Hotspot X="6163.321" Y="-3286.057" Z="350.7498" />
+      <Hotspot X="6152.176" Y="-3246.408" Z="350.6165" />
+      <Hotspot X="6117.109" Y="-3224.664" Z="350.3517" />
+      <Hotspot X="6076.073" Y="-3222.272" Z="351.8257" />
+      <Hotspot X="6039.475" Y="-3239.171" Z="350.3517" />
+      <Hotspot X="6024.207" Y="-3277.164" Z="350.3511" />
+      <Hotspot X="6015.373" Y="-3317.621" Z="350.5133" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12650" Name="Plundering Their Own">
+  <Objective Type="CollectItem" ItemId="38700" CollectCount="7">
+    <CollectFrom>
+      <Mob Name="Priest of Rhunok" Id="28417"/>
+      <Mob Name="Drakkari Bear Trapper" Id="28418"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="6013.701" Y="-3363.534" Z="352.8619" />
+      <Hotspot X="6053.006" Y="-3376.809" Z="350.3598" />
+      <Hotspot X="6094.056" Y="-3374.46" Z="350.6478" />
+      <Hotspot X="6132.977" Y="-3360.437" Z="350.3524" />
+      <Hotspot X="6149.781" Y="-3324.116" Z="350.8242" />
+      <Hotspot X="6163.321" Y="-3286.057" Z="350.7498" />
+      <Hotspot X="6152.176" Y="-3246.408" Z="350.6165" />
+      <Hotspot X="6117.109" Y="-3224.664" Z="350.3517" />
+      <Hotspot X="6076.073" Y="-3222.272" Z="351.8257" />
+      <Hotspot X="6039.475" Y="-3239.171" Z="350.3517" />
+      <Hotspot X="6024.207" Y="-3277.164" Z="350.3511" />
+      <Hotspot X="6015.373" Y="-3317.621" Z="350.5133" />
+      <Hotspot X="6342.613" Y="-3285.354" Z="388.7257" />
+      <Hotspot X="6359.877" Y="-3248.447" Z="388.7585" />
+      <Hotspot X="6399.76" Y="-3258.905" Z="392.2636" />
+      <Hotspot X="6438.684" Y="-3267.021" Z="402.7632" />
+      <Hotspot X="6410.096" Y="-3293.109" Z="392.0893" />
+      <Hotspot X="6379.771" Y="-3320.264" Z="389.0045" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12646" Name="My Prophet, My Enemy">
+  <Objective Type="CollectItem" ItemId="38695" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Prophet of Rhunok" Id="28442"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="6085.768" Y="-3300.344" Z="340.0562" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12647" Name="An End to the Suffering">
+  <Objective Type="CollectItem" ItemId="38696" CollectCount="1">
+    <CollectFrom>
+      <Mob Name="Rhunok's Tormentor" Id="28575"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="6477.389" Y="-3265.507" Z="403.7015" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12666" Name="Preparations for the Underworld">
+  <Objective Type="CollectItem" ItemId="39150" CollectCount="8">
+    <CollectFrom>
+      <Mob Name="Claw of Har'koa" Id="28402"/>
+      <Mob Name="Har'koan Subduer" Id="28403"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5328.97" Y="-3778.776" Z="371.3403" />
+      <Hotspot X="5289.458" Y="-3769.438" Z="371.4445" />
+      <Hotspot X="5314.456" Y="-3801.666" Z="371.4576" />
+      <Hotspot X="5351.723" Y="-3819.404" Z="371.745" />
+      <Hotspot X="5383.597" Y="-3843.629" Z="372.7418" />
+      <Hotspot X="5422.817" Y="-3851.269" Z="361.968" />
+      <Hotspot X="5462.138" Y="-3843.232" Z="362.3224" />
+      <Hotspot X="5492.232" Y="-3816" Z="361.0861" />
+      <Hotspot X="5497.049" Y="-3775.84" Z="359.6283" />
+      <Hotspot X="5486.373" Y="-3735.911" Z="361.9647" />
+      <Hotspot X="5466.488" Y="-3700.18" Z="361.9608" />
+      <Hotspot X="5441.357" Y="-3667.977" Z="361.9673" />
+      <Hotspot X="5410.407" Y="-3640.49" Z="361.9891" />
+      <Hotspot X="5370.563" Y="-3632.423" Z="361.9606" />
+      <Hotspot X="5338.506" Y="-3657.986" Z="361.9606" />
+      <Hotspot X="5336.584" Y="-3698.408" Z="361.9631" />
+      <Hotspot X="5357.468" Y="-3732.96" Z="360.0257" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="12672" Name="Setting the Stage">
+  <Objective Type="CollectItem" ItemId="39156" CollectCount="10">
+    <CollectFrom>
+      <GameObject Id="190717" Name="Underworld Power Fragment" />
+      <GameObject Id="190718" Name="Underworld Power Fragment" />
+      <GameObject Id="190719" Name="Underworld Power Fragment" />
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="5713.931" Y="-4294.759" Z="373.9961" />
+      <Hotspot X="5674.793" Y="-4303.06" Z="373.9961" />
+      <Hotspot X="5634.27" Y="-4311.837" Z="373.9962" />
+      <Hotspot X="5600.214" Y="-4334.033" Z="374.0276" />
+      <Hotspot X="5598.365" Y="-4375.484" Z="373.9952" />
+      <Hotspot X="5601.387" Y="-4416.798" Z="373.9952" />
+      <Hotspot X="5617.915" Y="-4452.464" Z="386.1551" />
+      <Hotspot X="5643.115" Y="-4420.291" Z="385.8005" />
+      <Hotspot X="5656.629" Y="-4382.422" Z="385.9584" />
+      <Hotspot X="5696.148" Y="-4372.029" Z="385.8014" />
+      <Hotspot X="5736.741" Y="-4370.82" Z="385.8022" />
+      <Hotspot X="5776.576" Y="-4379.232" Z="386.1016" />
+      <Hotspot X="5797.691" Y="-4413.31" Z="387.3417" />
+      <Hotspot X="5835.765" Y="-4410.037" Z="373.9962" />
+      <Hotspot X="5845.233" Y="-4370.62" Z="373.9954" />
+      <Hotspot X="5830.116" Y="-4333.245" Z="374.6968" />
+      <Hotspot X="5793.984" Y="-4314.642" Z="374.0169" />
+      <Hotspot X="5753.779" Y="-4304.531" Z="373.9953" />
+    </Hotspots>
+  </Objective>
+</Quest>
+<Quest Id="13556" Name="Eggs for Dubra'Jin">
+  <Objective Type="CollectItem" ItemId="44921" CollectCount="12">
+    <CollectFrom>
+      <GameObject Id="194126" Name="Gundrak Raptor Egg" />
+      <Mob Name="Gundrak Raptor" Id="29334"/>
+    </CollectFrom>
+    <Hotspots>
+      <Hotspot X="7025.148" Y="-4162.709" Z="451.7683" />
+      <Hotspot X="7037.792" Y="-4200.734" Z="452.0072" />
+      <Hotspot X="7035.107" Y="-4240.742" Z="449.9509" />
+      <Hotspot X="7038.208" Y="-4281.481" Z="448.2912" />
+      <Hotspot X="7054.334" Y="-4318.259" Z="448.1833" />
+      <Hotspot X="7069.294" Y="-4355.788" Z="452.8066" />
+      <Hotspot X="7078.848" Y="-4395.582" Z="450.719" />
+      <Hotspot X="7045.351" Y="-4373.602" Z="450.4377" />
+      <Hotspot X="7019.535" Y="-4341.107" Z="450.8043" />
+      <Hotspot X="6998.386" Y="-4306.698" Z="448.9272" />
+      <Hotspot X="6966.632" Y="-4283.81" Z="457.2371" />
+      <Hotspot X="6936.487" Y="-4257.95" Z="450.8452" />
+      <Hotspot X="6818.39" Y="-4222.412" Z="453.9469" />
+      <Hotspot X="6782.685" Y="-4242.853" Z="450.7344" />
+      <Hotspot X="6743.949" Y="-4230.189" Z="453.6812" />
+      <Hotspot X="6705.816" Y="-4214.079" Z="457.8214" />
+      <Hotspot X="6668.404" Y="-4199.958" Z="455.4687" />
+      <Hotspot X="6699.972" Y="-4172.942" Z="455.9516" />
+      <Hotspot X="6737.534" Y="-4157.584" Z="462.0983" />
+    </Hotspots>
+  </Objective>
+</Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
-  <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
-  Text="End of Public profiles, \n\n
-  Profile for next maps are in development or test status \n
-  If you have access, Bot will load next Armageddoner profile in 20 seconds! " />
-
-  <CustomBehavior File="LoadProfile" ProfileName="ArmageddonerNext[Cava]" />
-
+<QuestOrder IgnoreCheckPoints="False" >
+<If Condition="!HasSpell(54197) || !HasSpell(90267)">
+  <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
+</If>
+<If Condition="Me.ZoneId == 4395">
+  <If Condition="Me.Z &lt; 475">
+    <CustomBehavior File="FlyTo" X="6034.953" Y="160.4058" Z="358.419" />
+  <Else>
+    <CustomBehavior File="FlyTo" X="5804.372" Y="640.333" Z="914.6644" />
+		<CustomBehavior File="FlyTo" X="5804.358" Y="640.2581" Z="914.111" />
+		<CustomBehavior File="FlyTo" X="5805.005" Y="610.4413" Z="887.3076" />
+		<CustomBehavior File="FlyTo" X="5805.256" Y="579.121" Z="860.0281" />
+		<CustomBehavior File="FlyTo" X="5805.503" Y="548.2258" Z="831.162" />
+		<CustomBehavior File="FlyTo" X="5805.738" Y="518.4569" Z="802.1636" />
+		<CustomBehavior File="FlyTo" X="5805.743" Y="488.2654" Z="772.9061" />
+		<CustomBehavior File="FlyTo" X="5804.893" Y="458.84" Z="742.7893" />
+		<CustomBehavior File="FlyTo" X="5804.932" Y="430.6688" Z="711.3566" />
+		<CustomBehavior File="FlyTo" X="5805.045" Y="402.7174" Z="680.1492" />
+		<CustomBehavior File="FlyTo" X="5805.93" Y="376.2615" Z="647.6179" />
+		<CustomBehavior File="FlyTo" X="5807.039" Y="350.692" Z="614.2637" />
+		<CustomBehavior File="FlyTo" X="5808.125" Y="325.6602" Z="580.4541" />
+		<CustomBehavior File="FlyTo" X="5809.2" Y="300.8581" Z="546.4723" />
+		<CustomBehavior File="FlyTo" X="5810.287" Y="275.7961" Z="512.1344" />
+		<CustomBehavior File="FlyTo" X="5811.357" Y="251.1178" Z="478.3221" />
+		<CustomBehavior File="FlyTo" X="6034.953" Y="160.4058" Z="358.419" />
+		</Else>
+	</If>	
+</If>
+<If Condition="Me.IsAlliance" >
+  <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 4395 || Me.ZoneId == 65 || Me.ZoneId == 394 ||Me.ZoneId == 495  || Me.ZoneId == 4742 || Me.ZoneId == 210 || Me.ZoneId == 3711 || Me.ZoneId == 67 || Me.ZoneId == 4197">
+    <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+    <CustomBehavior File="ForcedDismount" />
+  </If>
+  <If Condition="Me.ZoneId != 66">
+    <If Condition="Me.ZoneId != 1519">
+      <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+    <Else>
+      <RunTo X="-8832.096" Y="550.8102" Z="96.06648" />
+      <CustomBehavior File="FlyTo" X="-8297.622" Y="1384.254" Z="5.230162" />
+      <CustomBehavior File="UseTransport" TransportId="190536"
+        WaitAtX="-8295.157" WaitAtY="1406.665" WaitAtZ="4.398641"
+        StandOnX="-8295.016" StandOnY="1422.455" StandOnZ="9.477573"
+        GetOffX="2251.188" GetOffY="5187.274" GetOffZ="11.42441"
+        TransportStartX="-8288.816" TransportStartY="1424.703" TransportStartZ="-0.03592084"
+        TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
+      <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+      </Else>
+    </If>
+  </If>
+  <CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<Else><!--me is horde-->
+  <If Condition="Me.ZoneId == 3537 || Me.ZoneId == 2817 || Me.ZoneId == 4395 || Me.ZoneId == 65 || Me.ZoneId == 394 ||Me.ZoneId == 495  || Me.ZoneId == 4742 || Me.ZoneId == 210 || Me.ZoneId == 3711 || Me.ZoneId == 67 || Me.ZoneId == 4197">
+    <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+    <CustomBehavior File="ForcedDismount" />
+  </If>
+  <If Condition="Me.ZoneId != 66">
+    <If Condition="Me.ZoneId != 1637">
+      <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+    <Else>
+      <RunTo X="1801.963" Y="-4364.836" Z="102.5372" />
+      <CustomBehavior File="FlyTo" X="1758.99" Y="-4279.586" Z="133.1064" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="UseTransport" TransportId="186238"
+        WaitAtX="1762.089" WaitAtY="-4282.489" WaitAtZ="133.1061"
+        StandOnX="1771.43" StandOnY="-4293.483" StandOnZ="133.1847"
+        GetOffX="2830.638" GetOffY="6179.808" GetOffZ="121.9824"
+        TransportStartX="1775.066" TransportStartY="-4299.745" TransportStartZ="151.0326"
+        TransportEndX="2837.908" TransportEndY="6187.443" TransportEndZ="140.1648" />
+      <RunTo X="2704.027" Y="6078.874" Z="63.7248" />
+      <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+      </Else>
+    </If>
+  </If>
+  <CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  </Else>
+</If>
+<If Condition="Me.ZoneId != 66">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: Zul'Drak\n
+  and start bot." />
+</If>
+<CustomBehavior File="Message" Text="Compiling Zul'Drak" LogColor="Aquamarine" />
+<!--
+                                                                                                                                   |
+                                                     Neutral                                                                       |
+                                                                                                                                   |
+-->
+<If Condition="!HasQuest(12859) &amp;&amp; !IsQuestCompleted(12859)" >
+  <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="28618" MobState="Alive" X="5192.265" Y="-2207.036" Z="239.3991" />
+  <!--Light's Breach-->
+  <CustomBehavior File="FlyTo" X="5522.776" Y="-2672.574" Z="303.9554" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="28623" MobState="Alive" X="5523.68" Y="-2674.972" Z="303.9544" />
+  <!--The Argent Stand-->
+  <CustomBehavior File="ForceSetVendor" DoMail="True" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="28797" WaitTime="1000" CollectionDistance="50" X="5410.214" Y="-2665.951" Z="303.9545" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="28797" WaitTime="1000" CollectionDistance="50" X="5410.214" Y="-2665.951" Z="303.9545" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+  <CustomBehavior File="WaitTimer" WaitTime="1000" />
+  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+  <RunTo X="5462.81" Y="-2636.543" Z="306.5508" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="28791" AreaId="4275" X="5462.965" Y="-2639.05" Z="306.5509" /><!--AreaId="4275"-->
+  <CustomBehavior File="FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
+</If>
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
+<If Condition="HasQuest(12789)" >
+  <TurnIn Nav="Fly" QuestName="Into the Breach!" QuestId="12789" TurnInName="Sergeant Riannah" TurnInId="29137" X="5191.085" Y="-2199.45" Z="239.399" />
+</If>
+<If Condition="HasQuest(12792)" >
+  <TurnIn Nav="Fly" QuestName="Into the Breach!" QuestId="12792" TurnInName="Sergeant Riannah" TurnInId="29137" X="5191.085" Y="-2199.45" Z="239.399" />
+</If>
+<PickUp Nav="Fly" QuestName="This Just In: Fire Still Hot!" QuestId="12859" GiverName="Elder Shaman Moky" GiverId="29733" X="5151.882" Y="-2199.163" Z="236.538" />
+<PickUp Nav="Fly" QuestName="In Search Of Answers" QuestId="12902" GiverName="Crusader Lord Lantinga" GiverId="29687" X="5147.416" Y="-2205.385" Z="236.5399" />
+<PickUp Nav="Fly" QuestName="Trolls Is Gone Crazy!" QuestId="12861" GiverName="Chief Rageclaw" GiverId="29690" X="5150.552" Y="-2206.973" Z="236.55" />
+<PickUp Nav="Fly" QuestName="Wanted: Ragemane's Flipper" QuestId="12857" GiverName="Wanted!" GiverId="191728" GiverType="GameObject" X="5149.444" Y="-2210.628" Z="236.6725" />
+<TurnIn Nav="Fly" QuestName="In Search Of Answers" QuestId="12902" TurnInName="Orders From Drakuru" TurnInId="191766" TurnInType="GameObject" X="4875.648" Y="-2341.842" Z="236.3115" />
+<PickUp Nav="Fly" QuestName="Orders From Drakuru" QuestId="12883" GiverName="Orders From Drakuru" GiverId="191766" GiverType="GameObject" X="4875.648" Y="-2341.842" Z="236.3115" />
+<If Condition="HasQuest(12861) &amp;&amp; !IsQuestCompleted(12861)" >
+  <LootMobs Value="true" />
+</If>
+<If Condition="HasQuest(12859) &amp;&amp; !IsQuestCompleted(12859)" >
+  <While Condition="!IsQuestCompleted(12859)" >
+   <CustomBehavior File="InteractWith" QuestId="12859" MobId="29692" InteractByUsingItemId="41131" CollectionDistance="1000" IgnoreLoSToTarget="True"
+     PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="25" WaitTime="1500" AuraIdOnMob="55049" MovementBy="NavigatorPreferred">
+      <HuntingGrounds>
+       <Hotspot X="4978.145" Y="-2305.477" Z="245.8349" />
+       <Hotspot X="4966.485" Y="-2344.328" Z="245.0992" />
+       <Hotspot X="4939.958" Y="-2375.108" Z="240.984" />
+       <Hotspot X="4899.683" Y="-2379.165" Z="234.3717" />
+       <Hotspot X="4859.32" Y="-2376.095" Z="234.3325" />
+       <Hotspot X="4822.685" Y="-2359.586" Z="237.1865" />
+       <Hotspot X="4818.522" Y="-2319.959" Z="243.6874" />
+       <Hotspot X="4848.267" Y="-2290.423" Z="245.2289" />
+       <Hotspot X="4883.42" Y="-2270.571" Z="244.6273" />
+       <Hotspot X="4917.801" Y="-2291.273" Z="243.5848" />
+     </HuntingGrounds>
+   </CustomBehavior>
+   <CustomBehavior File="Misc\RunLua" QuestId="12859" Lua="UseItemByName(41131)" WaitTime="500" />
+   <CustomBehavior File="Misc\RunLua" QuestId="12859" Lua="UseItemByName(41131)" WaitTime="500" />
+   <CustomBehavior File="Misc\RunLua" QuestId="12859" Lua="UseItemByName(41131)" WaitTime="500" />
+   <CustomBehavior File="Misc\RunLua" QuestId="12859" Lua="UseItemByName(41131)" WaitTime="500" />
+   <CustomBehavior File="Misc\RunLua" QuestId="12859" Lua="UseItemByName(41131)" WaitTime="500" />
+  </While>
+</If>
+<If Condition="HasQuest(12861) &amp;&amp; !IsQuestCompleted(12861)" >
+  <While Condition="!IsQuestCompleted(12861)" >
+    <If Condition="!IsQuestCompleted(12861) &amp;&amp; !HasItem(41161)" >
+      <CustomBehavior File="CollectThings" MobId1="29656" MobId2="29697" MobId3="29654" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="41161">
+        <Hotspot X="4968.648" Y="-2367.363" Z="244.2257" />
+        <Hotspot X="4929.807" Y="-2377.634" Z="238.6576" />
+        <Hotspot X="4890.131" Y="-2380.026" Z="233.5103" />
+        <Hotspot X="4853.173" Y="-2364.044" Z="234.8391" />
+        <Hotspot X="4862.779" Y="-2325.467" Z="239.6854" />
+        <Hotspot X="4867.434" Y="-2285.622" Z="244.2836" />
+        <Hotspot X="4908.849" Y="-2287.717" Z="243.8184" />
+        <Hotspot X="4949.619" Y="-2293.707" Z="243.3012" />
+      </CustomBehavior>
+    </If>
+    <If Condition="!IsQuestCompleted(12861) &amp;&amp; HasItem(41161)" >
+      <CustomBehavior File="InteractWith" MobId="29686" CollectionDistance="1000" MobState="Alive" NotMoving="True" AuraIdOnMob="55009"
+        PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+        <HuntingGrounds>
+          <Hotspot X="4968.648" Y="-2367.363" Z="244.2257" />
+          <Hotspot X="4929.807" Y="-2377.634" Z="238.6576" />
+          <Hotspot X="4890.131" Y="-2380.026" Z="233.5103" />
+          <Hotspot X="4853.173" Y="-2364.044" Z="234.8391" />
+          <Hotspot X="4862.779" Y="-2325.467" Z="239.6854" />
+          <Hotspot X="4867.434" Y="-2285.622" Z="244.2836" />
+          <Hotspot X="4908.849" Y="-2287.717" Z="243.8184" />
+          <Hotspot X="4949.619" Y="-2293.707" Z="243.3012" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(41161)" WaitTime="1000" />
+    <CustomBehavior File="WaitTimer" WaitTime="4000" />
+  </While>
+</If>
+<If Condition="HasQuest(12861)" >
+  <LootMobs Value="null" />
+</If>
+<If Condition="HasQuest(12857) &amp;&amp; !IsQuestCompleted(12857)" >
+  <CustomBehavior File="FlyTo" X="4861.915" Y="-2505.004" Z="243.9776" />
+  <CustomBehavior File="ForcedDismount" />
+  <LootMobs Value="true" />
+  <CustomBehavior File="CollectThings" QuestId="12857" MobId="29664" CollectUntil="QuestComplete" >
+    <Hotspot X="4859.556" Y="-2539.332" Z="228.8991" />
+  </CustomBehavior>
+  <LootMobs Value="null" />
+</If>
+<TurnIn Nav="Fly" QuestName="Orders From Drakuru" QuestId="12883" TurnInName="Crusader Lord Lantinga" TurnInId="29687" X="5147.416" Y="-2205.385" Z="236.5399" />
+<PickUp Nav="Fly" QuestName="The Ebon Watch" QuestId="12884" GiverName="Crusader Lord Lantinga" GiverId="29687" X="5147.416" Y="-2205.385" Z="236.5399" />
+<PickUp Nav="Fly" QuestName="Crusader Forward Camp" QuestId="12894" GiverName="Crusader Lord Lantinga" GiverId="29687" X="5147.416" Y="-2205.385" Z="236.5399" />
+<TurnIn Nav="Fly" QuestName="This Just In: Fire Still Hot!" QuestId="12859" TurnInName="Elder Shaman Moky" TurnInId="29733" X="5151.882" Y="-2199.163" Z="236.538" />
+<TurnIn Nav="Fly" QuestName="Trolls Is Gone Crazy!" QuestId="12861" TurnInName="Chief Rageclaw" TurnInId="29690" X="5150.552" Y="-2206.973" Z="236.55" />
+<TurnIn Nav="Fly" QuestName="Wanted: Ragemane's Flipper" QuestId="12857" TurnInName="Chief Rageclaw" TurnInId="29690" X="5150.552" Y="-2206.973" Z="236.55" />
+<If Condition="HasQuest(12884)" >
+  <CustomBehavior File="FlyTo" X="5217.726" Y="-1303.021" Z="242.1256" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="28615" MobState="Alive" X="5218.966" Y="-1299.122" Z="242.2663" />
+<!--Ebon Watch-->
+</If>
+<TurnIn Nav="Fly" QuestName="The Ebon Watch" QuestId="12884" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+<If Condition="!HasQuest(12630) &amp;&amp; !IsQuestCompleted(12630) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Kickin' Nass and Takin' Manes" QuestId="12630" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+<If Condition="(!HasQuest(12631) &amp;&amp; !IsQuestCompleted(12631)) || (!HasQuest(12633) &amp;&amp; !IsQuestCompleted(12633))">
+  <LootMobs Value="true" />
+</If>
+<If Condition="HasQuest(12630) &amp;&amp; !IsQuestCompleted(12630)">
+  <CustomBehavior File="FlyTo" X="5274.85" Y="-1419.536" Z="238.589" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12630)">
+    <If Condition="!Me.HasAura(61438)">
+      <CustomBehavior File="FlyTo" X="5214.977" Y="-1304.662" Z="242.1371" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28518" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" X="5211.838" Y="-1302.073" Z="242.403" />
+    </If>
+<!--    <CustomBehavior File="InteractWith" MobId="28519" MobState="Alive" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+    <HuntingGrounds>
+      <Hotspot X="5274.85" Y="-1419.536" Z="238.589" />
+      <Hotspot X="5256.935" Y="-1455.682" Z="236.9793" />
+      <Hotspot X="5226.141" Y="-1483.198" Z="236.4554" />
+      <Hotspot X="5205.911" Y="-1518.562" Z="237.6425" />
+      <Hotspot X="5241.221" Y="-1537.35" Z="230.7594" />
+      <Hotspot X="5281.77" Y="-1530.107" Z="231.3639" />
+      <Hotspot X="5317.346" Y="-1511.383" Z="234.9523" />
+      <Hotspot X="5341.11" Y="-1479.551" Z="240.1851" />
+      <Hotspot X="5363.98" Y="-1446.843" Z="237.1819" />
+      <Hotspot X="5389.268" Y="-1415.543" Z="236.9549" />
+      <Hotspot X="5406.922" Y="-1379.458" Z="237.6099" />
+      <Hotspot X="5376.206" Y="-1353.259" Z="236.9557" />
+      <Hotspot X="5339.7" Y="-1371.782" Z="238.7745" />
+      <Hotspot X="5312.071" Y="-1401.017" Z="241.7784" />
+    </HuntingGrounds>
+    </CustomBehavior>
+    <CustomBehavior File="InteractWith" MobId="28519" MobState="Dead" InteractByUsingItemId="38659" CollectionDistance="1000"
+    PreInteractMountStrategy="Dismount" InteractBlacklistTimeInSeconds="1000" />
+-->
+  <CustomBehavior File="InteractWith" QuestId="12630" MobId="28519" MobState="Alive" CollectionDistance="1000"
+    PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs">
+    <HuntingGrounds>
+      <Hotspot X="5274.85" Y="-1419.536" Z="238.589" />
+      <Hotspot X="5256.935" Y="-1455.682" Z="236.9793" />
+      <Hotspot X="5226.141" Y="-1483.198" Z="236.4554" />
+      <Hotspot X="5205.911" Y="-1518.562" Z="237.6425" />
+      <Hotspot X="5241.221" Y="-1537.35" Z="230.7594" />
+      <Hotspot X="5281.77" Y="-1530.107" Z="231.3639" />
+      <Hotspot X="5317.346" Y="-1511.383" Z="234.9523" />
+      <Hotspot X="5341.11" Y="-1479.551" Z="240.1851" />
+      <Hotspot X="5363.98" Y="-1446.843" Z="237.1819" />
+      <Hotspot X="5389.268" Y="-1415.543" Z="236.9549" />
+      <Hotspot X="5406.922" Y="-1379.458" Z="237.6099" />
+      <Hotspot X="5376.206" Y="-1353.259" Z="236.9557" />
+      <Hotspot X="5339.7" Y="-1371.782" Z="238.7745" />
+      <Hotspot X="5312.071" Y="-1401.017" Z="241.7784" />
+    </HuntingGrounds>
+    </CustomBehavior>
+    <!--
+    <CustomBehavior File="InteractWith" QuestId="12630" MobId="28519" MobState="Dead" CollectionDistance="20" PreInteractMountStrategy="Dismount" InteractBlacklistTimeInSeconds="1000" />
+    -->
+    <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    <CustomBehavior File="Misc\RunLua" QuestId="12630" Lua="UseItemByName(38659)" WaitTime="1500" />
+  </While>
+</If>
+<If Condition="!HasQuest(12631) &amp;&amp; !IsQuestCompleted(12631) &amp;&amp; !HasQuest(12633) &amp;&amp; !IsQuestCompleted(12633)">
+  <If Condition="!HasItem(38673) || !HasItem(38660)">
+    <SetGrindArea>
+    <GrindArea>
+    <Factions>2068</Factions>
+    <Hotspots>
+      <Hotspot X="5274.85" Y="-1419.536" Z="238.589" />
+      <Hotspot X="5256.935" Y="-1455.682" Z="236.9793" />
+      <Hotspot X="5226.141" Y="-1483.198" Z="236.4554" />
+      <Hotspot X="5205.911" Y="-1518.562" Z="237.6425" />
+      <Hotspot X="5241.221" Y="-1537.35" Z="230.7594" />
+      <Hotspot X="5281.77" Y="-1530.107" Z="231.3639" />
+      <Hotspot X="5317.346" Y="-1511.383" Z="234.9523" />
+      <Hotspot X="5341.11" Y="-1479.551" Z="240.1851" />
+      <Hotspot X="5363.98" Y="-1446.843" Z="237.1819" />
+      <Hotspot X="5389.268" Y="-1415.543" Z="236.9549" />
+      <Hotspot X="5406.922" Y="-1379.458" Z="237.6099" />
+      <Hotspot X="5376.206" Y="-1353.259" Z="236.9557" />
+      <Hotspot X="5339.7" Y="-1371.782" Z="238.7745" />
+      <Hotspot X="5312.071" Y="-1401.017" Z="241.7784" />
+    </Hotspots>
+    </GrindArea>
+    </SetGrindArea>
+    <GrindTo Condition="HasItem(38673) || HasItem(38660)" />
+  </If>
+  <If Condition="!HasQuest(12633) &amp;&amp; !IsQuestCompleted(12633) &amp;&amp; HasItem(38673)" >
+    <PickUp QuestName="Darkness Calling" GiverType="Item" QuestId="12633" GiverId="38673" />
+  </If>
+  <If Condition="!HasQuest(12631) &amp;&amp; !IsQuestCompleted(12631) &amp;&amp; HasItem(38660)" >
+    <PickUp QuestName="An Invitation, of Sorts..." GiverType="Item" QuestId="12631" GiverId="38660" />
+  </If>
+  <LootMobs Value="null" />
+</If>
+<TurnIn Nav="Fly" QuestName="Kickin' Nass and Takin' Manes" QuestId="12630" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+<If Condition="HasQuest(12631)">
+  <TurnIn Nav="Fly" QuestName="An Invitation, of Sorts..." QuestId="12631" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12633)">
+  <TurnIn Nav="Fly" QuestName="Darkness Calling" QuestId="12633" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12795) &amp;&amp; !IsQuestCompleted(12795) &amp;&amp; !HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="!HasQuest(12637) &amp;&amp; !IsQuestCompleted(12637) &amp;&amp; IsQuestCompleted(12631)" >
+ <PickUp QuestName="Near Miss" QuestId="12637" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12638) &amp;&amp; !IsQuestCompleted(12638) &amp;&amp; IsQuestCompleted(12633)" >
+  <PickUp QuestName="Close Call" QuestId="12638" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503)" >
+  <CustomBehavior File="AbandonQuest" QuestId="12503" />
+  <CustomBehavior File="WaitTimer" WaitTime="4000" />
+</If>
+<If Condition="!IsQuestCompleted(12503)" >
+  <PickUp QuestName="Taking a Stand" QuestId="12795" GiverName="Bloodrose Datura" GiverId="28532" X="5203.73" Y="-1313.077" Z="242.7098" />
+</If>
+<If Condition="HasQuest(12637) &amp;&amp; !IsQuestCompleted(12637)" >
+  <While Condition="!IsQuestCompleted(12637)" >
+    <CustomBehavior File="FlyTo" X="5206.208" Y="-1312.17" Z="242.4977" />
+      <CustomBehavior File="InteractWith" QuestId="12637" NonCompeteDistance="0" MobId="28532" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" X="5203.73" Y="-1313.077" Z="242.7098" />
+  </While>
+</If>
+<If Condition="HasQuest(12638) &amp;&amp; !IsQuestCompleted(12638)" >
+  <While Condition="!IsQuestCompleted(12638)" >
+    <CustomBehavior File="FlyTo" X="5206.208" Y="-1312.17" Z="242.4977" />
+      <CustomBehavior File="InteractWith" QuestId="12638" NonCompeteDistance="0" MobId="28532" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" X="5203.73" Y="-1313.077" Z="242.7098" />
+  </While>
+</If>
+<If Condition="HasQuest(12637)">
+  <TurnIn Nav="Fly" QuestName="Near Miss" QuestId="12637" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12638)">
+  <TurnIn Nav="Fly" QuestName="Close Call" QuestId="12638" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12629) &amp;&amp; !IsQuestCompleted(12629) &amp;&amp; IsQuestCompleted(12637)" >
+  <PickUp Nav="Fly" QuestName="You Can Run, But You Can't Hide" QuestId="12629" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12643) &amp;&amp; !IsQuestCompleted(12643) &amp;&amp; IsQuestCompleted(12638)" >
+  <PickUp Nav="Fly" QuestName="Silver Lining" QuestId="12643" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12629) &amp;&amp; !IsQuestCompleted(12629)" >
+  <CustomBehavior File="FlyTo" X="5170.971" Y="-1473.298" Z="235.3398" />
+  <CustomBehavior File="ForcedDismount" />
+  <LootMobs Value="true" />
+  <CustomBehavior File="InteractWith" QuestId="12629" QuestObjectiveIndex="2" MobId="29856" NumOfTimes="1000" MobState="Alive" InteractByLooting="True" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+    <HuntingGrounds>
+      <Hotspot X="5170.971" Y="-1473.298" Z="235.3398" />
+      <Hotspot X="5140.416" Y="-1499.579" Z="234.9338" />
+      <Hotspot X="5106.489" Y="-1520.831" Z="235.9883" />
+      <Hotspot X="5070.411" Y="-1540.223" Z="240.5479" />
+      <Hotspot X="5029.478" Y="-1540.536" Z="240.5095" />
+      <Hotspot X="5025.435" Y="-1580.628" Z="238.4402" />
+      <Hotspot X="5041.533" Y="-1617.245" Z="236.6514" />
+      <Hotspot X="5058.613" Y="-1654.772" Z="238.8712" />
+      <Hotspot X="5077.844" Y="-1690.282" Z="234.7559" />
+      <Hotspot X="5116.148" Y="-1702.466" Z="236.0186" />
+      <Hotspot X="5156.919" Y="-1708.786" Z="235.3221" />
+      <Hotspot X="5197.634" Y="-1707.208" Z="235.2556" />
+      <Hotspot X="5210.286" Y="-1668.491" Z="234.9414" />
+      <Hotspot X="5206.655" Y="-1627.573" Z="235.6125" />
+      <Hotspot X="5166.166" Y="-1622.07" Z="235.4372" />
+      <Hotspot X="5128.294" Y="-1606.072" Z="236.2183" />
+      <Hotspot X="5104.507" Y="-1573.396" Z="238.3359" />
+    </HuntingGrounds>
+  </CustomBehavior>
+  <LootMobs Value="null" />
+  <Objective QuestName="You Can Run, But You Can't Hide" QuestId="12629" Type="CollectItem" ItemId="38686" CollectCount="5" />
+</If>
+<If Condition="HasQuest(12643) &amp;&amp; !IsQuestCompleted(12643)" >
+  <CustomBehavior File="FlyTo" X="5170.971" Y="-1473.298" Z="235.3398" />
+  <CustomBehavior File="ForcedDismount" />
+  <LootMobs Value="true" />
+  <CustomBehavior File="InteractWith" QuestId="12643" QuestObjectiveIndex="2" MobId="29856" NumOfTimes="1000" MobState="Alive" InteractByLooting="True" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+    <HuntingGrounds>
+      <Hotspot X="5170.971" Y="-1473.298" Z="235.3398" />
+      <Hotspot X="5140.416" Y="-1499.579" Z="234.9338" />
+      <Hotspot X="5106.489" Y="-1520.831" Z="235.9883" />
+      <Hotspot X="5070.411" Y="-1540.223" Z="240.5479" />
+      <Hotspot X="5029.478" Y="-1540.536" Z="240.5095" />
+      <Hotspot X="5025.435" Y="-1580.628" Z="238.4402" />
+      <Hotspot X="5041.533" Y="-1617.245" Z="236.6514" />
+      <Hotspot X="5058.613" Y="-1654.772" Z="238.8712" />
+      <Hotspot X="5077.844" Y="-1690.282" Z="234.7559" />
+      <Hotspot X="5116.148" Y="-1702.466" Z="236.0186" />
+      <Hotspot X="5156.919" Y="-1708.786" Z="235.3221" />
+      <Hotspot X="5197.634" Y="-1707.208" Z="235.2556" />
+      <Hotspot X="5210.286" Y="-1668.491" Z="234.9414" />
+      <Hotspot X="5206.655" Y="-1627.573" Z="235.6125" />
+      <Hotspot X="5166.166" Y="-1622.07" Z="235.4372" />
+      <Hotspot X="5128.294" Y="-1606.072" Z="236.2183" />
+      <Hotspot X="5104.507" Y="-1573.396" Z="238.3359" />
+    </HuntingGrounds>
+  </CustomBehavior>
+  <LootMobs Value="null" />
+  <Objective QuestName="Silver Lining" QuestId="12643" Type="CollectItem" ItemId="38686" CollectCount="5" />
+</If>
+<If Condition="HasQuest(12629)">
+  <TurnIn Nav="Fly" QuestName="You Can Run, But You Can't Hide" QuestId="12629" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12643)">
+  <TurnIn Nav="Fly" QuestName="Silver Lining" QuestId="12643" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12903) &amp;&amp; !IsQuestCompleted(12903)" >
+  <CustomBehavior File="FlyTo" X="5522.776" Y="-2672.574" Z="303.9554" />
+  <CustomBehavior File="ForceSetVendor" DoMail="True" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="28797" WaitTime="1000" CollectionDistance="50" X="5410.214" Y="-2665.951" Z="303.9545" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="28797" WaitTime="1000" CollectionDistance="50" X="5410.214" Y="-2665.951" Z="303.9545" />
+  <CustomBehavior File="FlyTo" X="5217.726" Y="-1303.021" Z="242.1256" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<!--
+<If Condition="!HasQuest(12648) &amp;&amp; !IsQuestCompleted(12648) &amp;&amp; IsQuestCompleted(12629)" >
+  <PickUp Nav="Fly" QuestName="Dressing Down" QuestId="12648" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="!HasQuest(12649) &amp;&amp; !IsQuestCompleted(12649) &amp;&amp; IsQuestCompleted(12643)" >
+  <PickUp Nav="Fly" QuestName="Suit Up!" QuestId="12649" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="(HasQuest(12648) &amp;&amp; !IsQuestCompleted(12648)) || (!HasQuest(12652) &amp;&amp; !IsQuestCompleted(12652))" >
+  <CustomBehavior File="FlyTo" X="5123.879" Y="-1609.438" Z="236.0145" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="1500" />
+  </While>
+</If>
+<If Condition="!HasQuest(12652) &amp;&amp; !IsQuestCompleted(12652)" >
+  <While Condition="!IsQuestCompleted(12652)" >
+    <If Condition="Me.HasAura(51966)">
+      <PickUp QuestName="Feedin' Da Goolz" QuestId="12652" GiverName="Gristlegut" GiverId="28589" X="5156.954" Y="-1591.637" Z="239.3645" />
+    </If>
+    <If Condition="!Me.HasAura(51966)">
+      <RunTo X="5123.879" Y="-1609.438" Z="236.0145" />
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="1500" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12648) &amp;&amp; !IsQuestCompleted(12648)" >
+  <While Condition="!IsQuestCompleted(12648) " >
+    <If Condition="Me.HasAura(51966)">
+      <CustomBehavior File="InteractWith" MobId="28589" MobState="Alive" NonCompeteDistance="0" InteractByBuyingItemId="38698" MovementBy="NavigatorPreferred"
+      InteractBlacklistTimeInSeconds="1" InteractByGossipOptions="1" X="5156.954" Y="-1591.637" Z="239.3645" />
+    </If>
+    <If Condition="!Me.HasAura(51966)">
+      <RunTo X="5123.879" Y="-1609.438" Z="236.0145" />
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="1500" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12649) &amp;&amp; !IsQuestCompleted(12649)" >
+  <While Condition="!IsQuestCompleted(12649) " >
+    <If Condition="Me.HasAura(51966)">
+      <CustomBehavior File="InteractWith" MobId="28589" MobState="Alive" NonCompeteDistance="0" InteractByBuyingItemId="38698" MovementBy="NavigatorPreferred"
+      InteractBlacklistTimeInSeconds="1" InteractByGossipOptions="1" X="5156.954" Y="-1591.637" Z="239.3645" />
+    </If>
+    <If Condition="!Me.HasAura(51966)">
+      <RunTo X="5123.879" Y="-1609.438" Z="236.0145" />
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="1500" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12648)" >
+  <RunTo X="5110.141" Y="-1505.888" Z="235.1812" />
+  <If Condition="Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+  </If>
+  <TurnIn Nav="Fly" QuestName="Dressing Down" QuestId="12648" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<If Condition="HasQuest(12649)" >
+  <RunTo X="5110.141" Y="-1505.888" Z="235.1812" />
+  <If Condition="Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+  </If>
+  <TurnIn Nav="Fly" QuestName="Suit Up!" QuestId="12649" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+</If>
+<PickUp Nav="Fly" QuestName="Infiltrating Voltarus" QuestId="12661" GiverName="Stefan Vadu" GiverId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+<If Condition="HasQuest(12652) &amp;&amp; !IsQuestCompleted(12652)" >
+  <CustomBehavior File="FlyTo" X="5190.68" Y="-1721.711" Z="235.1701" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12652)" >
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <If Condition="Me.HasAura(51966)">
+      <CustomBehavior File="InteractWith" MobId="28565" MobState="Alive" InteractByUsingItemId="38701" CollectionDistance="1000" Range="20" WaitTime="10000">
+        <HuntingGrounds>
+          <Hotspot X="5190.68" Y="-1721.711" Z="235.1701" />
+          <Hotspot X="5225.542" Y="-1702.069" Z="235.3417" />
+          <Hotspot X="5232.278" Y="-1662.287" Z="235.1184" />
+          <Hotspot X="5219.435" Y="-1623.024" Z="236.9013" />
+          <Hotspot X="5181.983" Y="-1606.431" Z="236.4065" />
+          <Hotspot X="5142.425" Y="-1612.976" Z="236.4583" />
+          <Hotspot X="5101.72" Y="-1619.833" Z="233.7954" />
+          <Hotspot X="5074.184" Y="-1650.168" Z="235.9619" />
+          <Hotspot X="5082.705" Y="-1689.432" Z="233.9729" />
+          <Hotspot X="5112.597" Y="-1716.63" Z="237.0706" />
+          <Hotspot X="5149.994" Y="-1732.821" Z="235.5732" />
+        </HuntingGrounds>
+      </CustomBehavior>
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12652)" >
+  <RunTo X="5123.879" Y="-1609.438" Z="236.0145" />
+  <If Condition="Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+  </If>
+  <While Condition="!Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+  </While>
+  <TurnIn QuestName="Feedin' Da Goolz" QuestId="12652" TurnInName="Gristlegut" TurnInId="28589" X="5156.954" Y="-1591.637" Z="239.3645" />
+  <RunTo X="5123.879" Y="-1609.438" Z="236.0145" />
+  <If Condition="Me.HasAura(51966)">
+    <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+  </If>
+</If>
+-->
+<TurnIn Nav="Fly" QuestName="Crusader Forward Camp" QuestId="12894" TurnInName="Crusader MacKellar" TurnInId="29689" X="5539.375" Y="-1862.18" Z="238.2685" />
+<If Condition="!HasQuest(12903) &amp;&amp; !IsQuestCompleted(12903) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="That's What Friends Are For..." QuestId="12903" GiverName="Crusader MacKellar" GiverId="29689" X="5539.375" Y="-1862.18" Z="238.2685" />
+<PickUp Nav="Fly" QuestName="Making Something Out Of Nothing" QuestId="12901" GiverName="Engineer Reed" GiverId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<PickUp Nav="Fly" QuestName="Light Won't Grant Me Vengeance" QuestId="12904" GiverName="Gerk" GiverId="29455" X="5753.119" Y="-1481.068" Z="236.3463" />
+<If Condition="HasQuest(12903) &amp;&amp; !IsQuestCompleted(12903)" >
+  <While Condition="!IsObjectiveComplete(2, 12903)" >
+    <CustomBehavior File="FlyTo" X="5750.838" Y="-1478.669" Z="234.2311" />
+    <CustomBehavior File="ForcedDismount" />
+    <RunTo X="5750.838" Y="-1478.669" Z="234.2311" />
+    <CustomBehavior File="InteractWith" QuestId="12903" QuestObjectiveIndex="2" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="29455" X="5753.119" Y="-1481.068" Z="236.3463" />
+  </While>
+  <While Condition="!IsObjectiveComplete(3, 12903)" >
+    <CustomBehavior File="FlyTo" X="5691.181" Y="-1385.297" Z="233.2191" />
+    <CustomBehavior File="ForcedDismount" />
+    <RunTo X="5691.181" Y="-1385.297" Z="233.2191" />
+    <CustomBehavior File="InteractWith" QuestId="12903" QuestObjectiveIndex="3" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="29454" X="5690.98" Y="-1382.483" Z="234.6943" />
+  </While>
+</If>
+<If Condition="(HasQuest(12901) &amp;&amp; !IsQuestCompleted(12901)) || (HasQuest(12904) &amp;&amp; !IsQuestCompleted(12904))" >
+  <CustomBehavior File="FlyTo" X="5689.214" Y="-1388.655" Z="233.962" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<Objective Nav="Fly" QuestName="Making Something Out Of Nothing" QuestId="12901" Type="CollectItem" ItemId="41399" CollectCount="10" />
+<Objective Nav="Fly" QuestName="Light Won't Grant Me Vengeance" QuestId="12904" Type="KillMob" MobId="29882" KillCount="15" />
+<TurnIn Nav="Fly" QuestName="Light Won't Grant Me Vengeance" QuestId="12904" TurnInName="Gerk" TurnInId="29455" X="5753.119" Y="-1481.068" Z="236.3463" />
+<If Condition="!HasQuest(12912) &amp;&amp; !IsQuestCompleted(12912) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="!HasQuest(12912) &amp;&amp; !IsQuestCompleted(12912)">
+  <CustomBehavior File="FlyTo" X="5778.634" Y="-1565.211" Z="233.0714" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="HasQuestAvailable(29647)" >
+    <CustomBehavior File="InteractWith" Range="12" NonCompeteDistance="0" MobId="29647" KeepTargetSelected="True" X="5796.48" Y="-1594.164" Z="234.4117" />
+    <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
+<!--
+  <PickUp QuestName="A Great Storm Approaches" QuestId="12912" GiverName="Gymer" GiverId="29647" X="5796.48" Y="-1594.164" Z="234.4117" />
+-->
+  </While>
+</If>
+<If Condition="HasQuest(12903) &amp;&amp; !IsQuestCompleted(12903)" >
+  <While Condition="!IsObjectiveComplete(1, 12903)" >
+    <CustomBehavior File="FlyTo" X="5949.94" Y="-1848.601" Z="248.3092" />
+    <CustomBehavior File="ForcedDismount" />
+    <RunTo X="5949.94" Y="-1848.601" Z="248.3092" />
+    <CustomBehavior File="InteractWith" QuestId="12903" QuestObjectiveIndex="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="29468" X="5950.653" Y="-1851.121" Z="248.3922" />
+  </While>
+</If>
+<!--
+<If Condition="!HasQuest(12663) &amp;&amp; !IsQuestCompleted(12663) &amp;&amp; !HasQuest(12664) &amp;&amp; !IsQuestCompleted(12664)" >
+  <CustomBehavior File="FlyTo" X="6150.85" Y="-2016.613" Z="241.3197" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!HasQuest(12663) &amp;&amp; !HasQuest(12664)" >
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <While Condition="Me.HasAura(51966) &amp;&amp; (Me.Z &lt; 400)">
+      <RunTo X="6175.378" Y="-2017.295" Z="245.0765" />
+      <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+    <If Condition="Me.Z &lt; 400">
+      <RunTo X="6165.63" Y="-2001.19" Z="408.168" />
+      <If Condition="Me.HasAura(51966)">
+        <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+      </If>
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <If Condition="Me.HasAura(51966) &amp;&amp; (Me.Z &gt; 400)">
+      <If Condition="IsQuestCompleted(12238)" >
+        <PickUp QuestName="Reunited" QuestId="12663" GiverName="Overlord Drakuru" GiverId="28503" X="6131.875" Y="-1951.968" Z="417.695" />
+      </If>
+      <If Condition="!IsQuestCompleted(12238)" >
+        <PickUp QuestName="Dark Horizon" QuestId="12664" GiverName="Overlord Drakuru" GiverId="28503" X="6131.875" Y="-1951.968" Z="417.695" />
+      </If>
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12663) &amp;&amp; !IsQuestCompleted(12663) &amp;&amp; (Me.Z &lt; 400)" >
+  <CustomBehavior File="FlyTo" X="6150.85" Y="-2016.613" Z="241.3197" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="Me.Z &lt; 400">
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <While Condition="Me.HasAura(51966) &amp;&amp; (Me.Z &lt; 400)">
+      <RunTo X="6175.378" Y="-2017.295" Z="245.0765" />
+      <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+    <If Condition="Me.Z &lt; 400">
+      <RunTo X="6165.63" Y="-2001.19" Z="408.168" />
+      <If Condition="Me.HasAura(51966)">
+        <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+      </If>
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12664) &amp;&amp; !IsQuestCompleted(12664) &amp;&amp; (Me.Z &lt; 400)" >
+  <CustomBehavior File="FlyTo" X="6150.85" Y="-2016.613" Z="241.3197" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="Me.Z &lt; 400">
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <While Condition="Me.HasAura(51966) &amp;&amp; (Me.Z &lt; 400)">
+      <RunTo X="6175.378" Y="-2017.295" Z="245.0765" />
+      <CustomBehavior File="WaitTimer" WaitTime="6000" />
+    </While>
+    <If Condition="Me.Z &lt; 400">
+      <RunTo X="6165.63" Y="-2001.19" Z="408.168" />
+      <If Condition="Me.HasAura(51966)">
+        <CustomBehavior File="Misc\RunLua" Lua="local auras = {51966}; for k,v in pairs(auras) do local _ = GetSpellInfo(v);CancelUnitBuff(&quot;player&quot;,_);end" WaitTime="1500" />
+      </If>
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12663) &amp;&amp; !IsQuestCompleted(12663)" >
+  <While Condition="!IsQuestCompleted(12663)" >
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <If Condition="Me.HasAura(51966)">
+      <RunTo X="6072.449" Y="-2090.59" Z="422.9315" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28666" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="6074.341" Y="-2090.912" Z="422.9296" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12664) &amp;&amp; !IsQuestCompleted(12664)" >
+  <While Condition="!IsQuestCompleted(12664)" >
+    <While Condition="!Me.HasAura(51966)">
+      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(38699)" WaitTime="4000" />
+    </While>
+    <If Condition="Me.HasAura(51966)">
+      <RunTo X="6072.449" Y="-2090.59" Z="422.9315" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28666" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="6074.341" Y="-2090.912" Z="422.9296" />
+      <CustomBehavior File="WaitTimer" WaitTime="4000" />
+    </If>
+  </While>
+</If>
+<Objective QuestName="Dark Horizon" QuestId="12664" Type="KillMob" MobId="28663" KillCount="1" />
+<TurnIn QuestName="Dark Horizon" QuestId="12664" TurnInName="Overlord Drakuru" TurnInId="28503" />
+<TurnIn Nav="Fly" QuestName="Infiltrating Voltarus" QuestId="12661" TurnInName="Stefan Vadu" TurnInId="28518" X="5211.838" Y="-1302.073" Z="242.4027" />
+-->
+<TurnIn Nav="Fly" QuestName="Making Something Out Of Nothing" QuestId="12901" TurnInName="Engineer Reed" TurnInId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<TurnIn Nav="Fly" QuestName="A Great Storm Approaches" QuestId="12912" TurnInName="Engineer Reed" TurnInId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<PickUp Nav="Fly" QuestName="Gymer's Salvation" QuestId="12914" GiverName="Engineer Reed" GiverId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<TurnIn Nav="Fly" QuestName="That's What Friends Are For..." QuestId="12903" TurnInName="Crusader MacKellar" TurnInId="29689" X="5539.375" Y="-1862.18" Z="238.2685" />
+<If Condition="HasQuest(12914) &amp;&amp; !IsQuestCompleted(12914) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="HasQuest(12914) &amp;&amp; !IsQuestCompleted(12914)" >
+  <If Condition="!IsObjectiveComplete(2, 12914)" >
+    <CustomBehavior File="FlyTo" X="5272.973" Y="-1395.397" Z="238.7577" />
+    <CustomBehavior File="ForcedDismount" />
+    <Objective QuestName="Gymer's Salvation" QuestId="12914" Type="CollectItem" ItemId="41503" CollectCount="6" />
+  </If>
+  <CustomBehavior File="FlyTo" QuestId="12914" X="5595.267" Y="-1867.366" Z="235.2527" />
+  <CustomBehavior File="ForcedDismount" QuestId="12914" />
+  <While Condition="!IsQuestCompleted(12914)" >
+    <LootMobs Value="true" />
+    <CustomBehavior File="Cava\PullMobs" QuestId="12914" MobId="29646" CollectUntil="QuestComplete" MobState="Alive" PullMob="True" >
+      <Hotspot X="5595.267" Y="-1867.366" Z="235.2527" />
+      <Hotspot X="5593.833" Y="-1907.969" Z="235.5294" />
+      <Hotspot X="5589.019" Y="-1947.448" Z="242.0242" />
+      <Hotspot X="5586.404" Y="-1987.565" Z="240.1616" />
+      <Hotspot X="5581.817" Y="-2028.782" Z="240.3495" />
+      <Hotspot X="5578.163" Y="-2068.855" Z="243.6479" />
+      <Hotspot X="5589.306" Y="-2107.893" Z="237.2119" />
+      <Hotspot X="5613.691" Y="-2139.903" Z="234.7803" />
+      <Hotspot X="5653.438" Y="-2134.906" Z="234.6996" />
+      <Hotspot X="5664.304" Y="-2096.377" Z="237.5509" />
+      <Hotspot X="5663.701" Y="-2054.942" Z="240.1804" />
+      <Hotspot X="5663.067" Y="-2014.827" Z="244.9847" />
+      <Hotspot X="5658.221" Y="-1975.097" Z="244.5869" />
+      <Hotspot X="5661.004" Y="-1935.636" Z="236.3752" />
+      <Hotspot X="5693.373" Y="-1912.676" Z="242.9824" />
+      <Hotspot X="5727.125" Y="-1891.063" Z="243.0568" />
+      <Hotspot X="5755.882" Y="-1863.204" Z="241.9213" />
+      <Hotspot X="5779.982" Y="-1831.261" Z="241.3219" />
+      <Hotspot X="5791.59" Y="-1793.011" Z="236.3268" />
+      <Hotspot X="5784.215" Y="-1753.264" Z="239.0863" />
+      <Hotspot X="5749.245" Y="-1731.409" Z="238.9091" />
+      <Hotspot X="5711.654" Y="-1713.479" Z="241.4507" />
+      <Hotspot X="5671.955" Y="-1703.248" Z="245.7292" />
+      <Hotspot X="5633.919" Y="-1715.165" Z="239.2676" />
+      <Hotspot X="5605.024" Y="-1744.62" Z="238.6446" />
+      <Hotspot X="5596.154" Y="-1784.87" Z="236.3185" />
+      <Hotspot X="5607.753" Y="-1823.37" Z="240.0313" />
+    </CustomBehavior>
+  </While>
+  <LootMobs Value="null" />
+</If>
+<TurnIn Nav="Fly" QuestName="Gymer's Salvation" QuestId="12914" TurnInName="Engineer Reed" TurnInId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<PickUp Nav="Fly" QuestName="Our Only Hope" QuestId="12916" GiverName="Engineer Reed" GiverId="29688" X="5542.131" Y="-1859.713" Z="238.2685" />
+<If Condition="HasQuest(12916) &amp;&amp; !IsQuestCompleted(12916)" >
+  <CustomBehavior File="FlyTo" X="5779.326" Y="-1597.058" Z="234.5167" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12916)" >
+    <CustomBehavior File="InteractWith" QuestId="12916" MobId="191548" NonCompeteDistance="0" Range="20" InteractBlacklistTimeInSeconds="1" PreInteractMountStrategy="Dismount" WaitTime="3000" X="5779.326" Y="-1597.058" Z="234.5167" />
+  </While>
+</If>
+<If Condition="HasQuest(12916)">
+  <CustomBehavior File="FlyTo" X="5778.634" Y="-1565.211" Z="233.0714" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="HasQuestAvailable(29647, &quot;TurnIn&quot;)" >
+    <CustomBehavior File="InteractWith" Range="12" NonCompeteDistance="0" MobId="29647" KeepTargetSelected="True" WaitForNpcs="False"/>
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+<!--
+  <TurnIn QuestName="Our Only Hope" QuestId="12916" TurnInName="Gymer" TurnInId="29647" X="5796.48" Y="-1594.164" Z="234.4118" />
+-->
+  </While>
+</If>
+<If Condition="HasQuest(12795)|| !HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503) || !HasQuest(12740) &amp;&amp; !IsQuestCompleted(12740) || !HasQuest(12565) &amp;&amp; !IsQuestCompleted(12565)" >
+  <CustomBehavior File="FlyTo" X="5444.469" Y="-2571.834" Z="303.9551" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12795)" >
+  <TurnIn Nav="Fly" QuestName="Taking a Stand" QuestId="12795" TurnInName="Commander Falstaav" TurnInId="28059" X="5439.528" Y="-2568.736" Z="303.9543" />
+</If>
+<If Condition="!HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Defend the Stand" QuestId="12503" GiverName="Commander Falstaav" GiverId="28059" X="5439.528" Y="-2568.736" Z="303.9543" />
+<PickUp Nav="Fly" QuestName="Parachutes for the Argent Crusade" QuestId="12740" GiverName="Commander Falstaav" GiverId="28059" X="5439.528" Y="-2568.736" Z="303.9538" />
+<PickUp QuestName="The Blessing of Zim'Abwa" QuestId="12565" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9693" />
+<If Condition="(HasQuest(12740) &amp;&amp; !IsQuestCompleted(12740)) || (HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503))">
+  <CustomBehavior File="FlyTo" X="5417.535" Y="-2523.407" Z="292.0942" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12565) &amp;&amp; !IsQuestCompleted(12565)" >
+  <LootMobs Value="true" />
+</If>
+<If Condition="HasQuest(12740) &amp;&amp; !IsQuestCompleted(12740)" >
+  <While Condition="!IsQuestCompleted(12740)" >
+    <CustomBehavior File="InteractWith" QuestId="12740" MobId1="28028" MobId2="28029" NumOfTimes="1000" AuraIdMissingFromMob="53031" MobState="Alive" WaitTime="5000"
+      InteractByUsingItemId="39615" PreInteractMountStrategy="Dismount"  ProactiveCombatStrategy="ClearMobsTargetingUs" Range="39" >
+      <HuntingGrounds>
+        <Hotspot X="5417.535" Y="-2523.407" Z="292.0942" />
+        <Hotspot X="5391.09" Y="-2492.29" Z="292.4188" />
+        <Hotspot X="5383.711" Y="-2452.5" Z="292.4188" />
+        <Hotspot X="5419.265" Y="-2433.737" Z="292.4188" />
+        <Hotspot X="5458.775" Y="-2424.632" Z="292.42" />
+        <Hotspot X="5489.546" Y="-2450.337" Z="292.4191" />
+        <Hotspot X="5490.188" Y="-2490.678" Z="292.4191" />
+        <Hotspot X="5461.322" Y="-2519.311" Z="293.126" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12503) &amp;&amp; !IsQuestCompleted(12503)" >
+  <While Condition="!IsQuestCompleted(12503)" >
+    <CustomBehavior File="Cava\PullMobs" QuestId="12503" MobId1="28022" MobId2="28026" MobId3="28246" MobId4="28669" MobId5="28023" MobId6="28162" MobId7="29856"
+      CollectUntil="QuestComplete" MobState="Alive" PullMob="True">
+      <Hotspot X="5417.535" Y="-2523.407" Z="292.0942" />
+      <Hotspot X="5391.09" Y="-2492.29" Z="292.4188" />
+      <Hotspot X="5383.711" Y="-2452.5" Z="292.4188" />
+      <Hotspot X="5419.265" Y="-2433.737" Z="292.4188" />
+      <Hotspot X="5458.775" Y="-2424.632" Z="292.42" />
+      <Hotspot X="5489.546" Y="-2450.337" Z="292.4191" />
+      <Hotspot X="5490.188" Y="-2490.678" Z="292.4191" />
+      <Hotspot X="5461.322" Y="-2519.311" Z="293.126" />
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12565) &amp;&amp; !IsQuestCompleted(12565)" >
+  <While Condition="!IsQuestCompleted(12565)" >
+    <CustomBehavior File="Cava\PullMobs" QuestId="12565" MobId1="28022" MobId2="28026" MobId3="28246" MobId4="28669" MobId5="28023" MobId6="28162" MobId7="29856"
+      CollectUntil="QuestComplete" MobState="Alive" PullMob="True">
+      <Hotspot X="5417.535" Y="-2523.407" Z="292.0942" />
+      <Hotspot X="5391.09" Y="-2492.29" Z="292.4188" />
+      <Hotspot X="5383.711" Y="-2452.5" Z="292.4188" />
+      <Hotspot X="5419.265" Y="-2433.737" Z="292.4188" />
+      <Hotspot X="5458.775" Y="-2424.632" Z="292.42" />
+      <Hotspot X="5489.546" Y="-2450.337" Z="292.4191" />
+      <Hotspot X="5490.188" Y="-2490.678" Z="292.4191" />
+      <Hotspot X="5461.322" Y="-2519.311" Z="293.126" />
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12565)" >
+  <LootMobs Value="null" />
+</If>
+<If Condition="HasQuest(12565)">
+  <CustomBehavior File="FlyTo" X="5260.63" Y="-2432.785" Z="290.0511" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="HasQuestAvailable(190535, &quot;TurnIn&quot;)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190535" KeepTargetSelected="True" Range="15"/>
+    <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  </While>
+<!--
+  <TurnIn Nav="Fly" QuestName="The Blessing of Zim'Abwa" QuestId="12565" TurnInName="Zim'Abwa" TurnInId="190535" TurnInType="GameObject" X="5256.412" Y="-2432.449" Z="290.051" />
+-->
+</If>
+<If Condition="HasQuest(12503)|| HasQuest(12740) || !HasQuest(12505) &amp;&amp; !IsQuestCompleted(12505) || !HasQuest(12596) &amp;&amp; !IsQuestCompleted(12596) || !HasQuest(12506) &amp;&amp; !IsQuestCompleted(12506)" >
+  <CustomBehavior File="FlyTo" X="5444.469" Y="-2571.834" Z="303.9551" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn Nav="Fly" QuestName="Defend the Stand" QuestId="12503" TurnInName="Commander Falstaav" TurnInId="28059" X="5439.528" Y="-2568.736" Z="303.9543" />
+<TurnIn Nav="Fly" QuestName="Parachutes for the Argent Crusade" QuestId="12740" TurnInName="Commander Falstaav" TurnInId="28059" X="5439.528" Y="-2568.736" Z="303.9538" />
+<If Condition="!HasQuest(12505) &amp;&amp; !IsQuestCompleted(12505) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="New Orders for Sergeant Stackhammer" QuestId="12505" GiverName="Commander Kunz" GiverId="28039" X="5450.915" Y="-2610.926" Z="306.9102" />
+<PickUp QuestName="Pa'Troll" QuestId="12596" GiverName="Commander Kunz" GiverId="28039" X="5450.915" Y="-2610.926" Z="306.9102" />
+<PickUp QuestName="Trouble at the Altar of Sseratus" QuestId="12506" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12799) &amp;&amp; !IsQuestCompleted(12799) || !HasQuest(12557) &amp;&amp; !IsQuestCompleted(12557)" >
+  <CustomBehavior File="FlyTo" X="5929.001" Y="-2395.079" Z="292.7928" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<PickUp QuestName="Siphoning the Spirits" QuestId="12799" GiverName="Captain Arnath" GiverId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<PickUp QuestName="Lab Work" QuestId="12557" GiverName="Alchemist Finklestein" GiverId="28205" X="5934.017" Y="-2348.896" Z="293.8419" />
+<If Condition="HasQuest(12557)" >
+  <While Condition="HasQuest(12557)">
+    <If Condition="!HasItem(38386)">
+      <!--Muddy Mire Maggot-->
+      <RunTo X="5953.439" Y="-2341.615" Z="293.8399" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190478" Range="7" CollectionDistance="15" X="5953.439" Y="-2341.615" Z="293.8399" />
+    </If>
+    <If Condition="!HasItem(38389)">
+      <!--Withered Batwing-->
+      <RunTo X="5952.798" Y="-2345.506" Z="293.8417" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190473" Range="7" CollectionDistance="15" X="5952.798" Y="-2345.506" Z="293.8417" />
+    </If>
+    <If Condition="!HasItem(38346)">
+      <!--Amberseed-->
+      <RunTo X="5952.798" Y="-2345.506" Z="293.8417" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190459" Range="7" CollectionDistance="15" X="5952.798" Y="-2345.506" Z="293.8417" />
+    </If>
+    <If Condition="!HasItem(38346)">
+      <!--Chilled Serpent Mucus-->
+      <RunTo X="5891.366" Y="-2350.835" Z="293.8396" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190462" Range="7" CollectionDistance="15" X="5891.366" Y="-2350.835" Z="293.8396" />
+    </If>
+    <If Condition="HasQuestAvailable(28205, &quot;TurnIn&quot;)" >
+      <RunTo X="5933.479" Y="-2351.734" Z="293.8398" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28205" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+    </If>
+  </While>
+</If>
+<If Condition="HasQuest(12799) &amp;&amp; !IsQuestCompleted(12799)" >
+  <CustomBehavior File="FlyTo" X="5672.955" Y="-2354.341" Z="287.5274" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective Nav="Fly" QuestName="Siphoning the Spirits" QuestId="12799" Type="CollectItem" ItemId="40066" CollectCount="5" />
+</If>
+<If Condition="HasQuest(12799) || (!HasQuest(12609) &amp;&amp; !IsQuestCompleted(12609)) || (!HasQuest(12610) &amp;&amp; !IsQuestCompleted(12610))" >
+  <CustomBehavior File="FlyTo" X="5929.001" Y="-2395.079" Z="292.7928" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Siphoning the Spirits" QuestId="12799" TurnInName="Captain Arnath" TurnInId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<If Condition="!HasQuest(12609) &amp;&amp; !IsQuestCompleted(12609) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Stocking the Shelves" QuestId="12609" GiverName="Captain Arnath" GiverId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<PickUp QuestName="Clipping Their Wings" QuestId="12610" GiverName="Captain Arnath" GiverId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<If Condition="(HasQuest(12609) &amp;&amp; !IsQuestCompleted(12609)) || (HasQuest(12610) &amp;&amp; !IsQuestCompleted(12610))">
+  <CustomBehavior File="FlyTo" X="5929.001" Y="-2395.079" Z="292.7928" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12609) &amp;&amp; !IsQuestCompleted(12609) &amp;&amp; HasQuest(12610) &amp;&amp; !IsQuestCompleted(12610)">
+  <LootMobs Value="true" />
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>16 190</Factions>
+    <Hotspots>
+      <Hotspot X="5930.477" Y="-2387.641" Z="292.7937" />
+      <Hotspot X="5891.101" Y="-2398.53" Z="291.9682" />
+      <Hotspot X="5852.414" Y="-2384.68" Z="292.1793" />
+      <Hotspot X="5815.078" Y="-2368.368" Z="291.377" />
+      <Hotspot X="5776.344" Y="-2378.619" Z="290.2026" />
+      <Hotspot X="5764.461" Y="-2416.827" Z="290.8933" />
+      <Hotspot X="5769.761" Y="-2457.884" Z="292.045" />
+      <Hotspot X="5777.7" Y="-2498.162" Z="293.336" />
+      <Hotspot X="5806.974" Y="-2525.579" Z="293.0097" />
+      <Hotspot X="5847.115" Y="-2525.483" Z="294.671" />
+      <Hotspot X="5887.047" Y="-2528.077" Z="292.7537" />
+      <Hotspot X="5927.93" Y="-2526.727" Z="294.4561" />
+      <Hotspot X="5967.791" Y="-2522.262" Z="294.3196" />
+      <Hotspot X="5990.313" Y="-2487.931" Z="292.7258" />
+      <Hotspot X="6002.238" Y="-2448.348" Z="292.8702" />
+      <Hotspot X="6035.64" Y="-2426.026" Z="289.7886" />
+      <Hotspot X="6066.623" Y="-2399.196" Z="291.2675" />
+      <Hotspot X="6062.866" Y="-2358.708" Z="292.573" />
+      <Hotspot X="6022.727" Y="-2358.753" Z="293.6256" />
+      <Hotspot X="5995.982" Y="-2388.84" Z="291.6221" />
+      <Hotspot X="5958.05" Y="-2402.918" Z="294.131" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(12609) || IsQuestCompleted(12610)" />
+  <LootMobs Value="null" />
+</If>
+<Objective Nav="Fly" QuestName="Stocking the Shelves" QuestId="12609" Type="CollectItem" ItemId="38610" CollectCount="7" />
+<Objective Nav="Fly" QuestName="Clipping Their Wings" QuestId="12610" Type="CollectItem" ItemId="38620" CollectCount="7" />
+<If Condition="HasQuest(12609) || HasQuest(12610)" >
+  <CustomBehavior File="FlyTo" X="5929.001" Y="-2395.079" Z="292.7928" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Stocking the Shelves" QuestId="12609" TurnInName="Captain Arnath" TurnInId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<TurnIn QuestName="Clipping Their Wings" QuestId="12610" TurnInName="Captain Arnath" TurnInId="28045" X="5929.838" Y="-2378.663" Z="293.8416" />
+<TurnIn Nav="Fly" QuestName="New Orders for Sergeant Stackhammer" QuestId="12505" TurnInName="Sergeant Stackhammer" TurnInId="28056" X="6064.469" Y="-2617.681" Z="302.8758" />
+<If Condition="!HasQuest(12504) &amp;&amp; !IsQuestCompleted(12504) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Argent Crusade, We Are Leaving!" QuestId="12504" GiverName="Sergeant Stackhammer" GiverId="28056" X="6064.469" Y="-2617.681" Z="302.8758" />
+<PickUp Nav="Fly" QuestName="Mopping Up" QuestId="12508" GiverName="Corporal Maga" GiverId="28099" X="6063.872" Y="-2615.709" Z="302.7641" />
+<If Condition="(HasQuest(12504) &amp;&amp; !IsQuestCompleted(12504)) || (HasQuest(12508) &amp;&amp; !IsQuestCompleted(12508)) || (!HasQuest(12507) &amp;&amp; !IsQuestCompleted(12507))">
+  <CustomBehavior File="FlyTo" X="6133.174" Y="-2638.674" Z="290.9261" />
+</If>
+<If Condition="!HasQuest(12507) &amp;&amp; !IsQuestCompleted(12507) &amp;&amp; !HasItem(38321)">
+  <LootMobs Value="true" />
+</If>
+<If Condition="HasQuest(12504) &amp;&amp; !IsQuestCompleted(12504)">
+  <While Condition="!IsQuestCompleted(12504)">
+    <CustomBehavior File="InteractWith" QuestId="12504" MobId="28041" InteractBlacklistTimeInSeconds="1000" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" NumOfTimes="1000" GossipOptions="1" CollectionDistance="200">
+      <HuntingGrounds>
+        <Hotspot X="6133.174" Y="-2638.674" Z="290.9261" />
+        <Hotspot X="6163.198" Y="-2666.103" Z="290.9261" />
+        <Hotspot X="6203.141" Y="-2670.925" Z="290.9254" />
+        <Hotspot X="6208.212" Y="-2630.537" Z="293.1629" />
+        <Hotspot X="6203.209" Y="-2590.803" Z="290.9255" />
+        <Hotspot X="6194.637" Y="-2551.216" Z="291.0854" />
+        <Hotspot X="6171.775" Y="-2522.779" Z="308.8121" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12508) &amp;&amp; !IsQuestCompleted(12508)" >
+  <While Condition="!IsQuestCompleted(12508)" >
+    <CustomBehavior File="CollectThings" QuestId="12508" MobId1="28036" MobId2="28035" MobId3="228034" CollectUntil="QuestComplete" MobState="Alive">
+      <Hotspot X="6133.174" Y="-2638.674" Z="290.9261" />
+      <Hotspot X="6163.198" Y="-2666.103" Z="290.9261" />
+      <Hotspot X="6203.141" Y="-2670.925" Z="290.9254" />
+      <Hotspot X="6208.212" Y="-2630.537" Z="293.1629" />
+      <Hotspot X="6203.209" Y="-2590.803" Z="290.9255" />
+      <Hotspot X="6194.637" Y="-2551.216" Z="291.0854" />
+      <Hotspot X="6171.775" Y="-2522.779" Z="308.8121" />
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="!HasQuest(12507) &amp;&amp; !IsQuestCompleted(12507) &amp;&amp; !HasItem(38321)">
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>2069</Factions>
+    <Hotspots>
+      <Hotspot X="6133.174" Y="-2638.674" Z="290.9261" />
+      <Hotspot X="6163.198" Y="-2666.103" Z="290.9261" />
+      <Hotspot X="6203.141" Y="-2670.925" Z="290.9254" />
+      <Hotspot X="6208.212" Y="-2630.537" Z="293.1629" />
+      <Hotspot X="6203.209" Y="-2590.803" Z="290.9255" />
+      <Hotspot X="6194.637" Y="-2551.216" Z="291.0854" />
+      <Hotspot X="6171.775" Y="-2522.779" Z="308.8121" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="HasItem(38321)" />
+</If>
+<If Condition="!HasQuest(12507) &amp;&amp; !IsQuestCompleted(12507) &amp;&amp; HasItem(38321)">
+  <PickUp QuestName="Strange Mojo" QuestId="12507" GiverType="Item" GiverId="38321" />
+</If>
+<If Condition="HasQuest(12507)">
+  <LootMobs Value="null" />
+</If>
+<If Condition="HasQuest(12506) &amp;&amp; !IsQuestCompleted(12506)">
+  <CustomBehavior File="FlyTo" X="6315.438" Y="-2621.36" Z="320.0996" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12506)">
+    <RunTo X="6368.95" Y="-2611.531" Z="316.8267" />
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="Argent Crusade, We Are Leaving!" QuestId="12504" TurnInName="Sergeant Stackhammer" TurnInId="28056" X="6064.469" Y="-2617.681" Z="302.8758" />
+<TurnIn Nav="Fly" QuestName="Mopping Up" QuestId="12508" TurnInName="Corporal Maga" TurnInId="28099" X="6063.872" Y="-2615.709" Z="302.7641" />
+<If Condition="HasQuest(12506) || HasQuest(12507) || (!HasQuest(12510) &amp;&amp; !IsQuestCompleted(12510))">
+  <CustomBehavior File="FlyTo" X="5491.089" Y="-2625.231" Z="305.8956" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Trouble at the Altar of Sseratus" QuestId="12506" TurnInName="Hexxer Ubungo" TurnInId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<TurnIn QuestName="Strange Mojo" QuestId="12507" TurnInName="Hexxer Ubungo" TurnInId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12510) &amp;&amp; !IsQuestCompleted(12510) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Precious Elemental Fluids" QuestId="12510" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<PickUp Nav="Fly" QuestName="The Drakkari Do Not Need Water Elementals!" QuestId="12562" GiverName="Sub-Lieutenant Jax" GiverId="28309" X="5373.759" Y="-2606.509" Z="303.9544" />
+<If Condition="(HasQuest(12510) &amp;&amp; !IsQuestCompleted(12510)) || (HasQuest(12562) &amp;&amp; !IsQuestCompleted(12562))">
+  <CustomBehavior File="FlyTo" X="5262.459" Y="-2668.043" Z="289.3016" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12510) &amp;&amp; !IsQuestCompleted(12510)">
+  <LootMobs Value="true" />
+  <While Condition="!IsQuestCompleted(12510)">
+    <If Condition="!HasItem(38324)">
+      <CustomBehavior File="Cava\PullMobs" QuestId="12510" PullMob="True" MobId="16570" MobState="Alive" CollectUntil="RequiredCountReached" CollectItemCount="3" CollectItemId="38323" >
+        <Hotspot X="5262.459" Y="-2668.043" Z="289.3016" />
+        <Hotspot X="5222.194" Y="-2669.515" Z="287.9807" />
+        <Hotspot X="5181.472" Y="-2667.435" Z="288.3556" />
+        <Hotspot X="5142.032" Y="-2675.476" Z="289.5814" />
+        <Hotspot X="5125.412" Y="-2638.562" Z="288.4567" />
+        <Hotspot X="5118.059" Y="-2598.941" Z="288.0417" />
+        <Hotspot X="5078.01" Y="-2602.512" Z="289.7722" />
+        <Hotspot X="5047.683" Y="-2630.63" Z="287.9964" />
+        <Hotspot X="5022.299" Y="-2663.375" Z="287.9088" />
+        <Hotspot X="4999.049" Y="-2696.186" Z="287.2935" />
+        <Hotspot X="4975.268" Y="-2728.361" Z="288.0072" />
+        <Hotspot X="4983.59" Y="-2768.068" Z="287.2737" />
+        <Hotspot X="5004.965" Y="-2801.907" Z="287.7806" />
+        <Hotspot X="5043.806" Y="-2815.226" Z="287.8111" />
+        <Hotspot X="5079.592" Y="-2796.772" Z="288.8446" />
+        <Hotspot X="5115.499" Y="-2775.418" Z="287.9551" />
+        <Hotspot X="5147.731" Y="-2750.357" Z="287.7457" />
+        <Hotspot X="5173.018" Y="-2718.302" Z="286.9648" />
+      </CustomBehavior>
+      <!--
+      <Objective QuestName="Precious Elemental Fluids" QuestId="12510" Type="CollectItem" ItemId="38323" CollectCount="3" />
+      -->
+    </If>
+    <While Condition="!HasItem(38324) &amp;&amp; !IsQuestCompleted(12510)">
+      <CustomBehavior File="ForcedDismount" QuestId="12510" />
+      <CustomBehavior File="WaitTimer" QuestId="12510" WaitTime="1000" />
+      <CustomBehavior File="Misc\RunLua" QuestId="12510" Lua="UseItemByName(38323)" WaitTime="1500" />
+    </While>
+    <If Condition="HasItem(38324) &amp;&amp; !IsQuestCompleted(12510)">
+      <CustomBehavior File="ForcedDismount" QuestId="12510" />
+      <CustomBehavior File="WaitTimer" QuestId="12510" WaitTime="1000" />
+      <CustomBehavior File="Misc\RunLua" QuestId="12510" Lua="UseItemByName(38324)" WaitTime="4000" />
+      <CustomBehavior File="CollectThings" QuestId="12510" MobId="28118" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="38325" />
+    </If>
+    <!--<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="28118" MobState="Alive"/>
+    -->
+    <If Condition="HasItem(38324) &amp;&amp; !IsQuestCompleted(12510)">
+      <CustomBehavior File="FlyTo" QuestId="12510" X="5262.459" Y="-2668.043" Z="289.3016" />
+      <CustomBehavior File="ForcedDismount" QuestId="12510" />
+      <CustomBehavior File="WaitTimer" QuestId="12510" WaitTime="1000" />
+      <CustomBehavior File="Misc\RunLua" QuestId="12510" Lua="UseItemByName(38324)" WaitTime="4000" />
+      <CustomBehavior File="CollectThings" QuestId="12510" MobId="28118" MobState="Alive" CollectUntil="NoTargetsInArea" CollectItemCount="1" CollectItemId="38325" />
+    </If>
+  </While>
+  <LootMobs Value="null" />
+</If>
+<Objective Nav="Fly" QuestName="The Drakkari Do Not Need Water Elementals!" QuestId="12562" Type="KillMob" MobId="28303" KillCount="10" />
+<TurnIn Nav="Fly" QuestName="The Drakkari Do Not Need Water Elementals!" QuestId="12562" TurnInName="Sub-Lieutenant Jax" TurnInId="28309" X="5373.759" Y="-2606.509" Z="303.9544" />
+<If Condition="HasQuest(12510) || (!HasQuest(12514) &amp;&amp; !IsQuestCompleted(12514))">
+  <CustomBehavior File="FlyTo" X="5491.089" Y="-2625.231" Z="305.8956" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Precious Elemental Fluids" QuestId="12510" TurnInName="Hexxer Ubungo" TurnInId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12514) &amp;&amp; !IsQuestCompleted(12514) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Mushroom Mixer" QuestId="12514" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="HasQuest(12514) &amp;&amp; !IsQuestCompleted(12514)">
+  <CustomBehavior File="FlyTo" X="5530.244" Y="-2724.259" Z="277.1349" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective Nav="Fly" QuestName="Mushroom Mixer" QuestId="12514" Type="CollectItem" ItemId="38326" CollectCount="10" />
+</If>
+<If Condition="HasQuest(12514) || (!HasQuest(12516) &amp;&amp; !IsQuestCompleted(12516))">
+  <CustomBehavior File="FlyTo" X="5491.089" Y="-2625.231" Z="305.8956" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Mushroom Mixer" QuestId="12514" TurnInName="Hexxer Ubungo" TurnInId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12516) &amp;&amp; !IsQuestCompleted(12516) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Too Much of a Good Thing" QuestId="12516" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="HasQuest(12516) &amp;&amp; !IsQuestCompleted(12516)">
+  <CustomBehavior File="FlyTo" X="6252.777" Y="-2662.149" Z="302.7475" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12516)">
+    <CustomBehavior File="InteractWith" QuestId="12516" MobId="28068" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs"
+      InteractByUsingItemId="38332" Range="50" PreInteractMountStrategy="Dismount" />
+    <CustomBehavior File="WaitTimer" QuestId="12516" WaitTime="12000" />
+  </While>
+</If>
+<If Condition="HasQuest(12516) || (!HasQuest(12623) &amp;&amp; !IsQuestCompleted(12623))">
+  <CustomBehavior File="FlyTo" X="5491.089" Y="-2625.231" Z="305.8956" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Too Much of a Good Thing" QuestId="12516" TurnInName="Hexxer Ubungo" TurnInId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12599) &amp;&amp; !IsQuestCompleted(12599) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="To the Witch Doctor" QuestId="12623" GiverName="Hexxer Ubungo" GiverId="28062" X="5484.587" Y="-2623.72" Z="306.9694" />
+<If Condition="!HasQuest(12599) &amp;&amp; !IsQuestCompleted(12599)">
+  <CustomBehavior File="FlyTo" X="5458.977" Y="-2887.27" Z="276.5843" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<PickUp QuestName="Creature Comforts" QuestId="12599" GiverName="Captain Grondel" GiverId="28043" X="5541.784" Y="-3004.434" Z="278.3916" />
+<If Condition="HasQuest(12599) &amp;&amp; !IsQuestCompleted(12599)" >
+  <While Condition="!IsQuestCompleted(12599)" >
+    <CustomBehavior File="InteractWith" MobId1="190541" MobId2="190542" MobId3="190543" CollectionDistance="1000"
+       PreInteractMountStrategy="Dismount"  ProactiveCombatStrategy="ClearMobsTargetingUs" Range="6" >
+      <HuntingGrounds>
+        <Hotspot X="5611.301" Y="-2945.229" Z="274.379" />
+        <Hotspot X="5642.811" Y="-2919.561" Z="274.3958" />
+        <Hotspot X="5667.9" Y="-2887.561" Z="274.4247" />
+        <Hotspot X="5696.501" Y="-2858.83" Z="274.4025" />
+        <Hotspot X="5730.145" Y="-2836.466" Z="274.4484" />
+        <Hotspot X="5770.217" Y="-2839.013" Z="274.2167" />
+        <Hotspot X="5772.534" Y="-2798.258" Z="274.4185" />
+        <Hotspot X="5745.511" Y="-2768.157" Z="276.0273" />
+        <Hotspot X="5705.711" Y="-2762.852" Z="276.5845" />
+        <Hotspot X="5665.21" Y="-2760.058" Z="276.5829" />
+        <Hotspot X="5625.073" Y="-2769.172" Z="274.045" />
+        <Hotspot X="5592.114" Y="-2792.771" Z="274.3791" />
+        <Hotspot X="5550.723" Y="-2795.896" Z="274.3799" />
+        <Hotspot X="5510.78" Y="-2799.775" Z="276.4419" />
+        <Hotspot X="5470.494" Y="-2807.636" Z="274.3818" />
+        <Hotspot X="5482.561" Y="-2846.886" Z="274.3787" />
+        <Hotspot X="5515.848" Y="-2870.121" Z="274.4536" />
+        <Hotspot X="5556.015" Y="-2879.387" Z="276.2886" />
+        <Hotspot X="5592.679" Y="-2898.626" Z="274.3796" />
+        <Hotspot X="5608.121" Y="-2936.337" Z="275.8184" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12599)" >
+  <CustomBehavior File="FlyTo" X="5556.813" Y="-2989.607" Z="276.5841" />
+  <CustomBehavior File="ForcedDismount" />
+  <TurnIn QuestName="Creature Comforts" QuestId="12599" TurnInName="Captain Grondel" TurnInId="28043" X="5541.784" Y="-3004.434" Z="278.3916" />
+  <RunTo X="5556.813" Y="-2989.607" Z="276.5841" />
+</If>
+<If Condition="!HasQuest(12597) &amp;&amp; !IsQuestCompleted(12597)">
+  <CustomBehavior File="FlyTo" X="5057.694" Y="-3049.539" Z="293.9318" />
+  <RunTo X="5045.741" Y="-3037.644" Z="293.7881" />
+  <PickUp QuestName="Something for the Pain" QuestId="12597" GiverName="Captain Brandon" GiverId="28042" X="5043.113" Y="-3035.396" Z="293.7873" />
+</If>
+<If Condition="HasQuest(12597) &amp;&amp; !IsQuestCompleted(12597)" >
+  <While Condition="!IsQuestCompleted(12597)" >
+    <CustomBehavior File="InteractWith" MobId="190534" CollectionDistance="1000" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="6" >
+      <HuntingGrounds>
+        <Hotspot X="5021.579" Y="-2864.25" Z="287.8749" />
+        <Hotspot X="5012.435" Y="-2824.618" Z="288.0081" />
+        <Hotspot X="4995.406" Y="-2786.334" Z="288.0224" />
+        <Hotspot X="4979.65" Y="-2748.705" Z="287.7419" />
+        <Hotspot X="4997.623" Y="-2712.743" Z="289.4884" />
+        <Hotspot X="5024.613" Y="-2681.54" Z="287.6787" />
+        <Hotspot X="5065.132" Y="-2688.096" Z="287.8514" />
+        <Hotspot X="5093.708" Y="-2716.521" Z="287.5571" />
+        <Hotspot X="5105.116" Y="-2755.739" Z="287.8622" />
+        <Hotspot X="5089.598" Y="-2793.935" Z="287.6836" />
+        <Hotspot X="5066.994" Y="-2827.089" Z="287.8195" />
+        <Hotspot X="5036.911" Y="-2855.376" Z="287.9414" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12597)">
+  <CustomBehavior File="FlyTo" X="5057.694" Y="-3049.539" Z="293.9318" />
+  <RunTo X="5045.741" Y="-3037.644" Z="293.7881" />
+  <TurnIn QuestName="Something for the Pain" QuestId="12597" TurnInName="Captain Brandon" TurnInId="28042" X="5043.113" Y="-3035.396" Z="293.7873" />
+</If>
+<If Condition="!HasQuest(12598) &amp;&amp; !IsQuestCompleted(12598) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Throwing Down" QuestId="12598" GiverName="Captain Rupert" GiverId="28044" X="5257.315" Y="-3499.963" Z="291.6938" />
+<If Condition="HasQuest(12598) &amp;&amp; !IsQuestCompleted(12598)" >
+  <CustomBehavior File="FlyTo" X="5317.479" Y="-3355.853" Z="297.3548" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12598)" >
+    <CustomBehavior File="InteractWith" QuestId="12598" MobId ="190555" NumOfTimes="1000" InteractByUsingItemId="38574" CollectionDistance="1000"
+      WaitTime="6000" MovementBy="NavigatorPreferred" PreInteractMountStrategy="Dismount">
+      <HuntingGrounds>
+        <Hotspot X="5317.479" Y="-3355.853" Z="297.3548" />
+        <Hotspot X="5292.659" Y="-3325.127" Z="288.7785" />
+        <Hotspot X="5296.807" Y="-3285.115" Z="283.5804" />
+        <Hotspot X="5316.582" Y="-3248.165" Z="278.5556" />
+        <Hotspot X="5353.359" Y="-3231.886" Z="288.1613" />
+        <Hotspot X="5393.016" Y="-3225.258" Z="288.196" />
+        <Hotspot X="5413.773" Y="-3260.058" Z="292.9147" />
+        <Hotspot X="5393.964" Y="-3295.411" Z="297.7978" />
+        <Hotspot X="5366.45" Y="-3325.001" Z="297.4852" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="Throwing Down" QuestId="12598" TurnInName="Captain Rupert" TurnInId="28044" X="5257.315" Y="-3499.963" Z="291.6938" />
+<If Condition="!HasQuest(12606) &amp;&amp; !IsQuestCompleted(12606) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Cocooned!" QuestId="12606" GiverName="Captain Rupert" GiverId="28044" X="5257.315" Y="-3499.963" Z="291.6938" />
+<PickUp Nav="Fly" QuestName="Death to the Necromagi" QuestId="12552" GiverName="Sergeant Moonshard" GiverId="28283" X="5270.296" Y="-3499.598" Z="291.6779" />
+<PickUp Nav="Fly" QuestName="Skimmer Spinnerets" QuestId="12553" GiverName="Specialist Cogwheel" GiverId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<If Condition="(HasQuest(12552) &amp;&amp; !IsQuestCompleted(12552)) || (HasQuest(12553) &amp;&amp; !IsQuestCompleted(12553))">
+  <CustomBehavior File="FlyTo" X="5156.591" Y="-3509.091" Z="292.1101" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<Objective Nav="Fly" QuestName="Skimmer Spinnerets" QuestId="12553" Type="CollectItem" ItemId="38514" CollectCount="5" />
+<Objective Nav="Fly" QuestName="Death to the Necromagi" QuestId="12552" Type="KillMob" MobId="28257" KillCount="8" />
+<TurnIn Nav="Fly" QuestName="Death to the Necromagi" QuestId="12552" TurnInName="Sergeant Moonshard" TurnInId="28283" X="5270.296" Y="-3499.598" Z="291.6779" />
+<PickUp Nav="Fly" QuestName="Malas the Corrupter" QuestId="12554" GiverName="Sergeant Moonshard" GiverId="28283" X="5270.296" Y="-3499.598" Z="291.6779" />
+<TurnIn Nav="Fly" QuestName="Skimmer Spinnerets" QuestId="12553" TurnInName="Specialist Cogwheel" TurnInId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<If Condition="!HasQuest(12583) &amp;&amp; !IsQuestCompleted(12583) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Crashed Sprayer" QuestId="12583" GiverName="Specialist Cogwheel" GiverId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<PickUp Nav="Fly" QuestName="Pure Evil" QuestId="12584" GiverName="Captain Rupert" GiverId="28044" X="5257.315" Y="-3499.963" Z="291.6935" />
+<If Condition="HasQuest(12606) &amp;&amp; !IsQuestCompleted(12606)">
+  <CustomBehavior File="FlyTo" X="5304.996" Y="-3401.965" Z="297.4847" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective QuestName="Cocooned!" QuestId="12606" Type="KillMob" MobId="28415" KillCount="3" />
+</If>
+<If Condition="HasQuest(12583) &amp;&amp; !IsQuestCompleted(12583)">
+  <CustomBehavior File="FlyTo" X="5151.251" Y="-3043.904" Z="278.5549" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective QuestName="Crashed Sprayer" QuestId="12583" Type="CollectItem" ItemId="38560" CollectCount="1" />
+</If>
+<TurnIn Nav="Fly" QuestName="Cocooned!" QuestId="12606" TurnInName="Captain Rupert" TurnInId="28044" X="5257.315" Y="-3499.963" Z="291.6938" />
+<TurnIn Nav="Fly" QuestName="Crashed Sprayer" QuestId="12583" TurnInName="Specialist Cogwheel" TurnInId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<If Condition="!HasQuest(12555) &amp;&amp; !IsQuestCompleted(12555) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="A Tangled Skein" QuestId="12555" GiverName="Specialist Cogwheel" GiverId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<If Condition="HasQuest(12555) &amp;&amp; !IsQuestCompleted(12555)">
+  <CustomBehavior File="FlyTo" X="5169.847" Y="-3518.142" Z="290.9542" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsQuestCompleted(12555)">
+    <CustomBehavior File="InteractWith" QuestId="12555" MobId="28274" NumOfTimes="1000" InteractByUsingItemId="38515" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" Range="30">
+      <HuntingGrounds>
+        <Hotspot X="5169.847" Y="-3518.142" Z="290.9542" />
+        <Hotspot X="5152.204" Y="-3481.516" Z="290.2498" />
+        <Hotspot X="5113.333" Y="-3469.176" Z="293.3909" />
+        <Hotspot X="5081.044" Y="-3445.602" Z="291.9838" />
+        <Hotspot X="5052.782" Y="-3417.245" Z="289.7686" />
+        <Hotspot X="5026.283" Y="-3387.015" Z="290.1801" />
+        <Hotspot X="5000.938" Y="-3356.038" Z="290.6551" />
+        <Hotspot X="4971.126" Y="-3328.636" Z="290.4705" />
+        <Hotspot X="4932.629" Y="-3339.897" Z="290.8693" />
+        <Hotspot X="4910.4" Y="-3374.779" Z="290.8295" />
+        <Hotspot X="4893.268" Y="-3411.42" Z="292.3717" />
+        <Hotspot X="4885.896" Y="-3451.501" Z="291.3372" />
+        <Hotspot X="4909.841" Y="-3485.168" Z="292.6251" />
+        <Hotspot X="4950.448" Y="-3491.848" Z="294.3687" />
+        <Hotspot X="4990.434" Y="-3491.505" Z="288.5783" />
+        <Hotspot X="5030.443" Y="-3489.987" Z="286.2388" />
+        <Hotspot X="5069.997" Y="-3500.528" Z="292.7643" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<If Condition="HasQuest(12584) &amp;&amp; !IsQuestCompleted(12584)">
+  <CustomBehavior File="FlyTo" X="5022.173" Y="-3590.301" Z="292.3643" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective QuestName="Pure Evil" QuestId="12584" Type="CollectItem" ItemId="38562" CollectCount="10" />
+</If>
+<If Condition="HasQuest(12554) &amp;&amp; !IsQuestCompleted(12554)">
+  <CustomBehavior File="FlyTo" X="5105.017" Y="-3519.424" Z="396.3675" />
+  <CustomBehavior File="FlyTo" X="5103.474" Y="-3648.552" Z="393.4716" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective QuestName="Malas the Corrupter" QuestId="12554" Type="CollectItem" ItemId="38521" CollectCount="1" />
+</If>
+<TurnIn Nav="Fly" QuestName="A Tangled Skein" QuestId="12555" TurnInName="Specialist Cogwheel" TurnInId="28284" X="5270.146" Y="-3509.149" Z="291.694" />
+<TurnIn Nav="Fly" QuestName="Malas the Corrupter" QuestId="12554" TurnInName="Sergeant Moonshard" TurnInId="28283" X="5270.296" Y="-3499.598" Z="291.6779" />
+<If Condition="!HasQuest(12565) &amp;&amp; !IsQuestCompleted(12565) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="!IsQuestCompleted(12565) &amp;&amp; (GetItemCount(38551) &lt; 10)">
+  <CustomBehavior File="FlyTo" X="5239.203" Y="-3479.693" Z="289.097" />
+  <CustomBehavior File="ForcedDismount" />
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>2068</Factions>
+    <Hotspots>
+      <Hotspot X="5239.203" Y="-3479.693" Z="289.097" />
+      <Hotspot X="5250.641" Y="-3440.218" Z="288.9839" />
+      <Hotspot X="5268.687" Y="-3404.252" Z="289.0602" />
+      <Hotspot X="5292.716" Y="-3372.744" Z="297.4855" />
+      <Hotspot X="5301.001" Y="-3333.588" Z="295.2975" />
+      <Hotspot X="5283.129" Y="-3298.974" Z="283.6613" />
+      <Hotspot X="5295.449" Y="-3260.637" Z="280.8207" />
+      <Hotspot X="5295.94" Y="-3220.423" Z="278.5562" />
+      <Hotspot X="5333.459" Y="-3234.108" Z="283.6107" />
+      <Hotspot X="5352.995" Y="-3197.566" Z="288.17" />
+      <Hotspot X="5373.72" Y="-3163.284" Z="288.1703" />
+      <Hotspot X="5384.235" Y="-3123.942" Z="288.1703" />
+      <Hotspot X="5352.188" Y="-3097.973" Z="288.1703" />
+      <Hotspot X="5313.571" Y="-3085.716" Z="288.1698" />
+      <Hotspot X="5272.875" Y="-3080.896" Z="285.3341" />
+      <Hotspot X="5233.762" Y="-3069.888" Z="278.5554" />
+      <Hotspot X="5207.47" Y="-3037.747" Z="278.7301" />
+      <Hotspot X="5167.079" Y="-3038.978" Z="278.555" />
+      <Hotspot X="5135.548" Y="-3063.873" Z="278.5557" />
+      <Hotspot X="5104.251" Y="-3091.076" Z="278.555" />
+      <Hotspot X="5074.026" Y="-3117.639" Z="278.5548" />
+      <Hotspot X="5045.798" Y="-3146.597" Z="278.5549" />
+      <Hotspot X="5028.699" Y="-3184.047" Z="278.555" />
+      <Hotspot X="5031.148" Y="-3225.208" Z="278.4812" />
+      <Hotspot X="5059.111" Y="-3254.596" Z="278.5546" />
+      <Hotspot X="5083.867" Y="-3286.271" Z="278.556" />
+      <Hotspot X="5108.599" Y="-3319.752" Z="278.556" />
+      <Hotspot X="5131.313" Y="-3352.744" Z="278.5452" />
+      <Hotspot X="5157.028" Y="-3381.73" Z="289.0787" />
+      <Hotspot X="5180.257" Y="-3416.327" Z="289.0957" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="GetItemCount(38551) &gt;= 10" />
+</If>
+<If Condition="HasQuest(12584)">
+  <CustomBehavior File="FlyTo" X="5407.586" Y="-2633.807" Z="305.3802" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<TurnIn QuestName="Pure Evil" QuestId="12584" TurnInName="Eitrigg" TurnInId="28244" X="5450.147" Y="-2639.065" Z="306.5506" />
+<TurnIn QuestName="Pa'Troll" QuestId="12596" TurnInName="Commander Kunz" TurnInId="28039" X="5450.915" Y="-2610.926" Z="306.9102" />
+<If Condition="HasQuest(12584)">
+  <CustomBehavior File="FlyTo" X="5776.606" Y="-3595.138" Z="386.665" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="28624" MobState="Alive" X="5780.835" Y="-3598.161" Z="387.1559" />
+  <!--Zim'Torga-->
+  <RunTo X="5761.599" Y="-3560.96" Z="386.9527" />
+  <CustomBehavior File="Cava\SetHearthstone" MobId="29583" AreaId="4323" X="5761.111" Y="-3562.792" Z="387.0499" /><!--AreaId="4323"-->
+</If>
+<TurnIn Nav="Fly" QuestName="To the Witch Doctor" QuestId="12623" TurnInName="Witch Doctor Khufu" TurnInId="28479" X="5736.145" Y="-3571.368" Z="386.9122" />
+<If Condition="!HasQuest(12627) &amp;&amp; !IsQuestCompleted(12627) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp QuestName="Breaking Through Jin'Alai" QuestId="12627" GiverName="Witch Doctor Khufu" GiverId="28479" X="5736.145" Y="-3571.368" Z="386.9122" />
+<PickUp Nav="Fly" QuestName="The Blessing of Zim'Torga" QuestId="12615" GiverName="Witch Doctor Khufu" GiverId="28479" X="5736.145" Y="-3571.368" Z="386.9122" />
+<If Condition="!IsQuestCompleted(12615) &amp;&amp; (GetItemCount(38551) &lt; 10)">
+  <CustomBehavior File="FlyTo" X="5239.203" Y="-3479.693" Z="289.097" />
+  <CustomBehavior File="ForcedDismount" />
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>2068</Factions>
+    <Hotspots>
+      <Hotspot X="5239.203" Y="-3479.693" Z="289.097" />
+      <Hotspot X="5250.641" Y="-3440.218" Z="288.9839" />
+      <Hotspot X="5268.687" Y="-3404.252" Z="289.0602" />
+      <Hotspot X="5292.716" Y="-3372.744" Z="297.4855" />
+      <Hotspot X="5301.001" Y="-3333.588" Z="295.2975" />
+      <Hotspot X="5283.129" Y="-3298.974" Z="283.6613" />
+      <Hotspot X="5295.449" Y="-3260.637" Z="280.8207" />
+      <Hotspot X="5295.94" Y="-3220.423" Z="278.5562" />
+      <Hotspot X="5333.459" Y="-3234.108" Z="283.6107" />
+      <Hotspot X="5352.995" Y="-3197.566" Z="288.17" />
+      <Hotspot X="5373.72" Y="-3163.284" Z="288.1703" />
+      <Hotspot X="5384.235" Y="-3123.942" Z="288.1703" />
+      <Hotspot X="5352.188" Y="-3097.973" Z="288.1703" />
+      <Hotspot X="5313.571" Y="-3085.716" Z="288.1698" />
+      <Hotspot X="5272.875" Y="-3080.896" Z="285.3341" />
+      <Hotspot X="5233.762" Y="-3069.888" Z="278.5554" />
+      <Hotspot X="5207.47" Y="-3037.747" Z="278.7301" />
+      <Hotspot X="5167.079" Y="-3038.978" Z="278.555" />
+      <Hotspot X="5135.548" Y="-3063.873" Z="278.5557" />
+      <Hotspot X="5104.251" Y="-3091.076" Z="278.555" />
+      <Hotspot X="5074.026" Y="-3117.639" Z="278.5548" />
+      <Hotspot X="5045.798" Y="-3146.597" Z="278.5549" />
+      <Hotspot X="5028.699" Y="-3184.047" Z="278.555" />
+      <Hotspot X="5031.148" Y="-3225.208" Z="278.4812" />
+      <Hotspot X="5059.111" Y="-3254.596" Z="278.5546" />
+      <Hotspot X="5083.867" Y="-3286.271" Z="278.556" />
+      <Hotspot X="5108.599" Y="-3319.752" Z="278.556" />
+      <Hotspot X="5131.313" Y="-3352.744" Z="278.5452" />
+      <Hotspot X="5157.028" Y="-3381.73" Z="289.0787" />
+      <Hotspot X="5180.257" Y="-3416.327" Z="289.0957" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="GetItemCount(38551) &gt;= 10" />
+</If>
+<If Condition="HasQuest(12615)">
+  <CustomBehavior File="FlyTo" X="5758.594" Y="-3601.411" Z="386.5175" />
+  <CustomBehavior File="ForcedDismount" />
+  <RunTo X="5764.618" Y="-3579.739" Z="386.933" />
+  <While Condition="HasQuestAvailable(190602, &quot;TurnIn&quot;)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190602" KeepTargetSelected="True" Range="7"/>
+    <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  </While>
+<!--
+  <TurnIn QuestName="The Blessing of Zim'Torga" QuestId="12615" TurnInName="Zim'Torga" TurnInId="190602" TurnInType="GameObject" X="5757.236" Y="-3569.067" Z="387.0297" />
+-->
+</If>
+<If Condition="!HasQuest(12622) &amp;&amp; !IsQuestCompleted(12622) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="The Leaders at Jin'Alai" QuestId="12622" GiverName="Scalper Ahunae" GiverId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<If Condition="(HasQuest(12627) &amp;&amp; !IsQuestCompleted(12627)) || (HasQuest(12622) &amp;&amp; !IsQuestCompleted(12622))">
+  <CustomBehavior File="FlyTo" X="5617.951" Y="-3475.298" Z="350.5785" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12627) &amp;&amp; !IsQuestCompleted(12627)">
+  <While Condition="!IsObjectiveComplete(3, 12627)" >
+    <CustomBehavior File="FlyTo" X="5617.951" Y="-3475.298" Z="350.5785" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="InteractWith" QuestId="12627" QuestObjectiveIndex="3" NonCompeteDistance="0" MobId="190619" PreInteractMountStrategy="Dismount" X="5617.951" Y="-3475.298" Z="350.5785" />
+  </While>
+  <While Condition="!IsObjectiveComplete(2, 12627)" >
+    <CustomBehavior File="FlyTo" X="5525.986" Y="-3384.384" Z="350.3283" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="InteractWith" QuestId="12627" QuestObjectiveIndex="2" NonCompeteDistance="0" MobId="190630" PreInteractMountStrategy="Dismount" X="5525.986" Y="-3384.384" Z="350.3283" />
+  </While>
+  <While Condition="!IsObjectiveComplete(1, 12627)" >
+    <CustomBehavior File="FlyTo" X="5495.723" Y="-3454.681" Z="350.3273" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="InteractWith" QuestId="12627" QuestObjectiveIndex="1" NonCompeteDistance="0" MobId="190618" PreInteractMountStrategy="Dismount" X="5495.723" Y="-3454.681" Z="350.3273" />
+  </While>
+  <While Condition="!IsObjectiveComplete(4, 12627)" >
+    <CustomBehavior File="FlyTo" X="5581.722" Y="-3531.194" Z="350.3268" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="InteractWith" QuestId="12627" QuestObjectiveIndex="4" NonCompeteDistance="0" MobId="190620" PreInteractMountStrategy="Dismount" X="5581.722" Y="-3531.194" Z="350.3268" />
+  </While>
+</If>
+<If Condition="HasQuest(12622) &amp;&amp; !IsQuestCompleted(12622)">
+  <While Condition="!IsQuestCompleted(12622)">
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 28494))" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28494" MobState="Alive" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5554.503" Y="-3463.447" Z="350.3272" />
+    </If>
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 190614))" >
+      <CustomBehavior File="InteractWith" QuestId="12622" QuestObjectiveIndex="1" NonCompeteDistance="0" MobId="190614" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5554.503" Y="-3463.447" Z="350.3272" />
+    </If>
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 28495))" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28495" MobState="Alive" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5601.297" Y="-3501.478" Z="350.3284" />
+    </If>
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 190613))" >
+      <CustomBehavior File="InteractWith" QuestId="12622" QuestObjectiveIndex="2" NonCompeteDistance="0" MobId="190613" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5601.297" Y="-3501.478" Z="350.3284" />
+    </If>
+    <If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 28496))" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28496" MobState="Alive" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5508.03" Y="-3418.04" Z="350.7304" />
+    </If>
+	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 190612))" >
+      <CustomBehavior File="InteractWith" QuestId="12622" QuestObjectiveIndex="3" NonCompeteDistance="0" MobId="190612" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitForNpcs="False" X="5508.03" Y="-3418.04" Z="350.7304" />
+    </If>
+    <CustomBehavior File="InteractWith" MobId1="28388" MobId2="28504" MobState="Alive" CollectionDistance="1000" PreInteractMountStrategy="Dismount" >
+      <HuntingGrounds WaypointVisitStrategy="Random">
+        <Hotspot X="5616.281" Y="-3487.613" Z="350.3275" />
+        <Hotspot X="5591.748" Y="-3455.579" Z="350.3275" />
+        <Hotspot X="5563.401" Y="-3425.083" Z="350.3275" />
+        <Hotspot X="5523.158" Y="-3423.904" Z="350.3279" />
+        <Hotspot X="5500.334" Y="-3457.042" Z="350.3279" />
+        <Hotspot X="5528.501" Y="-3485.98" Z="350.3279" />
+        <Hotspot X="5556.597" Y="-3516.382" Z="350.3279" />
+        <Hotspot X="5594.093" Y="-3501.712" Z="350.3279" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="Breaking Through Jin'Alai" QuestId="12627" TurnInName="Witch Doctor Khufu" TurnInId="28479" X="5736.145" Y="-3571.368" Z="386.9122" />
+<PickUp Nav="Fly" QuestName="To Speak With Har'koa" QuestId="12628" GiverName="Witch Doctor Khufu" GiverId="28479" X="5736.145" Y="-3571.368" Z="386.9122" />
+<PickUp Nav="Fly" QuestName="Relics of the Snow Leopard Goddess" QuestId="12635" GiverName="Chronicler To'kini" GiverId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<TurnIn Nav="Fly" QuestName="The Leaders at Jin'Alai" QuestId="12622" TurnInName="Scalper Ahunae" TurnInId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<PickUp Nav="Fly" QuestName="Sealing the Rifts" QuestId="12640" GiverName="Scalper Ahunae" GiverId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<PickUp Nav="Fly" QuestName="The Frozen Earth" QuestId="12639" GiverName="Element-Tamer Dagoda" GiverId="28480" X="5790.663" Y="-3566.083" Z="386.5218" />
+<TurnIn Nav="Fly" QuestName="To Speak With Har'koa" QuestId="12628" TurnInName="Har'koa" TurnInId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="!HasQuest(12632) &amp;&amp; !IsQuestCompleted(12632) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="But First My Offspring" QuestId="12632" GiverName="Har'koa" GiverId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="(HasQuest(12632) &amp;&amp; !IsQuestCompleted(12632)) || (HasQuest(12635) &amp;&amp; !IsQuestCompleted(12635))">
+  <CustomBehavior File="FlyTo" X="5333.954" Y="-3773.506" Z="371.4309" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<Objective Nav="Fly" QuestName="Relics of the Snow Leopard Goddess" QuestId="12635" Type="CollectItem" ItemId="38677" CollectCount="10" />
+<If Condition="HasQuest(12632) &amp;&amp; !IsQuestCompleted(12632)">
+  <While Condition="!IsQuestCompleted(12632)">
+    <CustomBehavior File="InteractWith" QuestId="12632" MobId="28404" NumOfTimes="1000" MobState="Dead" InteractByUsingItemId="38676"
+      CollectionDistance="1000" PreInteractMountStrategy="Dismount" Range="8" InteractBlacklistTimeInSeconds="1000" >
+      <HuntingGrounds>
+        <Hotspot X="5313.592" Y="-3762.506" Z="371.3469" />
+        <Hotspot X="5344.757" Y="-3788.205" Z="371.3459" />
+        <Hotspot X="5354.919" Y="-3827.045" Z="371.4071" />
+        <Hotspot X="5384.851" Y="-3855.076" Z="366.0886" />
+        <Hotspot X="5369.301" Y="-3893.331" Z="362.824" />
+        <Hotspot X="5396.819" Y="-3922.904" Z="361.9936" />
+        <Hotspot X="5435.948" Y="-3913.938" Z="361.0855" />
+        <Hotspot X="5475.04" Y="-3903.41" Z="361.7268" />
+        <Hotspot X="5466.594" Y="-3863.06" Z="362.0124" />
+        <Hotspot X="5467.571" Y="-3821.939" Z="363.4196" />
+        <Hotspot X="5462.08" Y="-3782.22" Z="362.6931" />
+        <Hotspot X="5451.504" Y="-3742.36" Z="362.5454" />
+        <Hotspot X="5452.362" Y="-3702.05" Z="362.6635" />
+        <Hotspot X="5433.854" Y="-3666.339" Z="361.9626" />
+        <Hotspot X="5403.6" Y="-3639.599" Z="361.9655" />
+        <Hotspot X="5363.679" Y="-3629.413" Z="362.0043" />
+        <Hotspot X="5329.501" Y="-3650.603" Z="361.9605" />
+        <Hotspot X="5290.569" Y="-3665.322" Z="362.1575" />
+        <Hotspot X="5258.321" Y="-3690.983" Z="363.1178" />
+        <Hotspot X="5267.09" Y="-3731.894" Z="371.3456" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="But First My Offspring" QuestId="12632" TurnInName="Har'koa" TurnInId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<PickUp Nav="Fly" QuestName="Spirit of Rhunok" QuestId="12642" GiverName="Har'koa" GiverId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<TurnIn Nav="Fly" QuestName="Relics of the Snow Leopard Goddess" QuestId="12635" TurnInName="Chronicler To'kini" TurnInId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<If Condition="!HasQuest(12650) &amp;&amp; !IsQuestCompleted(12650) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Plundering Their Own" QuestId="12650" GiverName="Chronicler To'kini" GiverId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<PickUp Nav="Fly" QuestName="Tails Up" QuestId="13549" GiverName="Chronicler To'kini" GiverId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<PickUp Nav="Fly" QuestName="The Blessing of Zim'Rhuk" QuestId="12655" GiverName="Witch Doctor Khufu" GiverId="28479" X="5736.145" Y="-3571.368" Z="386.9123" />
+<If Condition="(HasQuest(12639) &amp;&amp; !IsQuestCompleted(12639)) || (HasQuest(12640) &amp;&amp; !IsQuestCompleted(12640))">
+  <CustomBehavior File="FlyTo" X="5921.618" Y="-3418.235" Z="362.6628" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12639) &amp;&amp; !IsQuestCompleted(12639) &amp;&amp; HasQuest(12640) &amp;&amp; !IsQuestCompleted(12640)">
+  <LootMobs Value="true" />
+  <SetGrindArea>
+    <GrindArea>
+    <Factions>91 834</Factions>
+    <Hotspots>
+      <Hotspot X="5921.618" Y="-3418.235" Z="362.6628" />
+      <Hotspot X="5962.104" Y="-3423.182" Z="361.055" />
+      <Hotspot X="6001.911" Y="-3435.881" Z="366.8395" />
+      <Hotspot X="6039.812" Y="-3455.728" Z="364.2971" />
+      <Hotspot X="6078.988" Y="-3444.796" Z="363.8601" />
+      <Hotspot X="6117.387" Y="-3430.628" Z="368.0763" />
+      <Hotspot X="6156.732" Y="-3420.292" Z="362.3693" />
+      <Hotspot X="6189.528" Y="-3395.581" Z="366.2077" />
+      <Hotspot X="6208.672" Y="-3359.948" Z="366.293" />
+      <Hotspot X="6212.142" Y="-3319.307" Z="363.3353" />
+      <Hotspot X="6206.132" Y="-3278.317" Z="362.4328" />
+      <Hotspot X="6204.417" Y="-3237.517" Z="362.7217" />
+      <Hotspot X="6191.634" Y="-3198.017" Z="366.2708" />
+      <Hotspot X="6175.127" Y="-3161.673" Z="362.6756" />
+      <Hotspot X="6135.85" Y="-3150.47" Z="367.011" />
+      <Hotspot X="6095.906" Y="-3148.46" Z="365.5658" />
+      <Hotspot X="6059.363" Y="-3164.699" Z="369.4002" />
+      <Hotspot X="6020.824" Y="-3174.676" Z="365.2008" />
+      <Hotspot X="5987.86" Y="-3197.952" Z="368.2267" />
+      <Hotspot X="5956.364" Y="-3222.321" Z="362.041" />
+      <Hotspot X="5928.118" Y="-3254.646" Z="360.7517" />
+      <Hotspot X="5912.187" Y="-3292.697" Z="358.9863" />
+      <Hotspot X="5905.638" Y="-3333.587" Z="362.0662" />
+    </Hotspots>
+    </GrindArea>
+  </SetGrindArea>
+  <GrindTo Condition="IsQuestCompleted(12639) || IsQuestCompleted(12640)" />
+  <LootMobs Value="null" />
+</If>
+<Objective Nav="Fly" QuestName="The Frozen Earth" QuestId="12639" Type="CollectItem" ItemId="38681" CollectCount="7" />
+<Objective Nav="Fly" QuestName="Sealing the Rifts" QuestId="12640" Type="KillMob" MobId="28452" KillCount="7" />
+<If Condition="(HasQuest(12655) &amp;&amp; !IsQuestCompleted(12655)) || (HasQuest(12640) &amp;&amp; !IsQuestCompleted(12640))">
+  <CustomBehavior File="FlyTo" X="6013.701" Y="-3363.534" Z="352.8619" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<Objective Nav="Fly" QuestName="The Blessing of Zim'Rhuk" QuestId="12655" Type="CollectItem" ItemId="38551" CollectCount="10" />
+<Objective Nav="Fly" QuestName="Plundering Their Own" QuestId="12650" Type="CollectItem" ItemId="38700" CollectCount="7" />
+<TurnIn Nav="Fly" QuestName="Spirit of Rhunok" QuestId="12642" TurnInName="Spirit of Rhunok" TurnInId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<If Condition="!HasQuest(12646) &amp;&amp; !IsQuestCompleted(12646) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="My Prophet, My Enemy" QuestId="12646" GiverName="Spirit of Rhunok" GiverId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<If Condition="HasQuest(12646) &amp;&amp; !IsQuestCompleted(12646)">
+  <CustomBehavior File="FlyTo" X="6085.975" Y="-3300.032" Z="349.8091" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective Nav="Fly" QuestName="My Prophet, My Enemy" QuestId="12646" Type="CollectItem" ItemId="38695" CollectCount="1" />
+  <UseMount Value="False" />
+  <RunTo X="6142.882" Y="-3329.926" Z="350.3519" />
+  <UseMount Value="True" />
+</If>
+<TurnIn Nav="Fly" QuestName="My Prophet, My Enemy" QuestId="12646" TurnInName="Spirit of Rhunok" TurnInId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<If Condition="!HasQuest(12647) &amp;&amp; !IsQuestCompleted(12647) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="An End to the Suffering" QuestId="12647" GiverName="Spirit of Rhunok" GiverId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<If Condition="HasQuest(12647) &amp;&amp; !IsQuestCompleted(12647)">
+  <While Condition="!IsQuestCompleted(12647)">
+    <If Condition="!Me.HasAura(51967) &amp;&amp; !IsQuestCompleted(12647)">
+      <CustomBehavior File="FlyTo" X="6380.182" Y="-3266.408" Z="389.0143" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28561" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" X="6369.897" Y="-3265.906" Z="388.9343" />
+    </If>
+    <If Condition="!HasItem(38696) &amp;&amp; Me.HasAura(51967) &amp;&amp; !IsQuestCompleted(12647)">
+      <CustomBehavior File="FlyTo" X="6460.224" Y="-3269.179" Z="402.4869" />
+      <CustomBehavior File="ForcedDismount" />
+      <Objective Nav="Fly" QuestName="An End to the Suffering" QuestId="12647" Type="CollectItem" ItemId="38696" CollectCount="1" />
+    </If>
+    <If Condition="HasItem(38696) &amp;&amp; Me.HasAura(51967) &amp;&amp; !IsQuestCompleted(12647)">
+      <CustomBehavior File="FlyTo" X="6485.263" Y="-3272.126" Z="403.5032" />
+      <CustomBehavior File="ForcedDismount" />
+      <CustomBehavior File="InteractWith" QuestId="12647" MobId="28416" InteractByUsingItemId="38696" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" MobState="Alive" X="6522.061" Y="-3270.406" Z="408.2352" />
+      <CustomBehavior File="WaitTimer" WaitTime="10000" />
+    </If>
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="An End to the Suffering" QuestId="12647" TurnInName="Spirit of Rhunok" TurnInId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<PickUp Nav="Fly" QuestName="Back to Har'koa" QuestId="12653" GiverName="Spirit of Rhunok" GiverId="28561" X="6369.897" Y="-3265.906" Z="388.9343" />
+<If Condition="HasQuest(12655)">
+  <CustomBehavior File="FlyTo" X="6203.766" Y="-3559.123" Z="387.872" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="HasQuestAvailable(190657, &quot;TurnIn&quot;)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190657" KeepTargetSelected="True" Range="15"/>
+    <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
+    <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
+  </While>
+<!--
+  <TurnIn Nav="Fly" QuestName="The Blessing of Zim'Rhuk" QuestId="12655" TurnInName="Zim'Rhuk" TurnInId="190657" TurnInType="GameObject" X="6203.766" Y="-3559.123" Z="387.872" />
+-->
+</If>
+<TurnIn Nav="Fly" QuestName="Sealing the Rifts" QuestId="12640" TurnInName="Scalper Ahunae" TurnInId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<PickUp Nav="Fly" QuestName="Scalps!" QuestId="12659" GiverName="Scalper Ahunae" GiverId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<TurnIn Nav="Fly" QuestName="The Frozen Earth" QuestId="12639" TurnInName="Element-Tamer Dagoda" TurnInId="28480" X="5790.663" Y="-3566.083" Z="386.5218" />
+<PickUp Nav="Fly" QuestName="Bringing Down Heb'Jin" QuestId="12662" GiverName="Element-Tamer Dagoda" GiverId="28480" X="5790.663" Y="-3566.083" Z="386.5218" />
+<TurnIn Nav="Fly" QuestName="Plundering Their Own" QuestId="12650" TurnInName="Chronicler To'kini" TurnInId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<TurnIn Nav="Fly" QuestName="Back to Har'koa" QuestId="12653" TurnInName="Har'koa" TurnInId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="!HasQuest(12665) &amp;&amp; !IsQuestCompleted(12665) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="I Sense a Disturbance" QuestId="12665" GiverName="Har'koa" GiverId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="HasQuest(12665) &amp;&amp; !IsQuestCompleted(126657)">
+  <While Condition="!IsQuestCompleted(12665)">
+    <CustomBehavior File="FlyTo" X="5332.384" Y="-3774.7" Z="371.3427" />
+    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="InteractWith" MobId="28401" InteractByGossipOptions="1" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="5324.316" Y="-3782.084" Z="371.34" />
+    <DisableBehavior Name="Combat" />
+    <CustomBehavior File="WaitTimer" WaitTime="135000" />
+    <EnableBehavior Name="Combat" />
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="I Sense a Disturbance" QuestId="12665" TurnInName="Har'koa" TurnInId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="!HasQuest(12666) &amp;&amp; !IsQuestCompleted(12666) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Preparations for the Underworld" QuestId="12666" GiverName="Har'koa" GiverId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="HasQuest(12666) &amp;&amp; !IsQuestCompleted(12666)">
+  <CustomBehavior File="FlyTo" X="5328.97" Y="-3778.776" Z="371.3403" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective Nav="Fly" QuestName="Preparations for the Underworld" QuestId="12666" Type="CollectItem" ItemId="39150" CollectCount="8" />
+</If>
+<TurnIn Nav="Fly" QuestName="Preparations for the Underworld" QuestId="12666" TurnInName="Har'koa" TurnInId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="!HasQuest(12667) &amp;&amp; !IsQuestCompleted(12667) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Seek the Wind Serpent Goddess" QuestId="12667" GiverName="Har'koa" GiverId="28401" X="5324.316" Y="-3782.084" Z="371.34" />
+<If Condition="HasQuest(13549) &amp;&amp; !IsQuestCompleted(13549)">
+  <CustomBehavior File="FlyTo" X="5398.33" Y="-4099.934" Z="366.2803" />
+  <CustomBehavior File="ForcedDismount" />
+  <While Condition="!IsObjectiveComplete(1, 13549) &amp;&amp; !IsObjectiveComplete(2, 13549)">
+    <CustomBehavior File="InteractWith" MobId1="29327" MobId2="29319" AuraIdMissingFromMob="62248" MobState="Alive" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" Range="39" WaitTime="3000" InteractByUsingItemId="44890">
+      <HuntingGrounds>
+        <Hotspot X="5398.33" Y="-4099.934" Z="366.2803" />
+        <Hotspot X="5370.535" Y="-4130.278" Z="368.0473" />
+        <Hotspot X="5336.066" Y="-4151.257" Z="366.213" />
+        <Hotspot X="5301.128" Y="-4172.739" Z="362.975" />
+        <Hotspot X="5275.824" Y="-4205.555" Z="363.4062" />
+        <Hotspot X="5263.357" Y="-4244.949" Z="363.8699" />
+        <Hotspot X="5250.747" Y="-4281.846" Z="374.4591" />
+        <Hotspot X="5249.833" Y="-4322.479" Z="378.9724" />
+        <Hotspot X="5260.608" Y="-4361.247" Z="383.4574" />
+        <Hotspot X="5282.75" Y="-4394.323" Z="388.5032" />
+        <Hotspot X="5308.828" Y="-4424.363" Z="393.0362" />
+        <Hotspot X="5341.198" Y="-4448.034" Z="392.2172" />
+        <Hotspot X="5381.187" Y="-4456.76" Z="388.7412" />
+        <Hotspot X="5408.23" Y="-4428.748" Z="377.3959" />
+        <Hotspot X="5422.404" Y="-4392.063" Z="369.887" />
+        <Hotspot X="5418.644" Y="-4351.125" Z="368.0614" />
+        <Hotspot X="5446.817" Y="-4320.632" Z="363.3212" />
+        <Hotspot X="5473.68" Y="-4290.283" Z="362.4892" />
+        <Hotspot X="5473.915" Y="-4250.138" Z="363.5118" />
+        <Hotspot X="5455.808" Y="-4213.614" Z="365.578" />
+        <Hotspot X="5436.644" Y="-4178.088" Z="362.2872" />
+      </HuntingGrounds>
+    </CustomBehavior>
+    <CustomBehavior File="InteractWith" MobId1="29327" MobId2="29319" AuraIdOnMob="62248" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" WaitTime="3000" InteractByGossipOptions="1" WaitForNpcs="False" />
+  </While>
+  <While Condition="!IsObjectiveComplete(1, 13549)">
+    <CustomBehavior File="InteractWith" MobId="29327" AuraIdMissingFromMob="62248" MobState="Alive" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" Range="39" WaitTime="3000" InteractByUsingItemId="44890">
+      <HuntingGrounds>
+        <Hotspot X="5398.33" Y="-4099.934" Z="366.2803" />
+        <Hotspot X="5370.535" Y="-4130.278" Z="368.0473" />
+        <Hotspot X="5336.066" Y="-4151.257" Z="366.213" />
+        <Hotspot X="5301.128" Y="-4172.739" Z="362.975" />
+        <Hotspot X="5275.824" Y="-4205.555" Z="363.4062" />
+        <Hotspot X="5263.357" Y="-4244.949" Z="363.8699" />
+        <Hotspot X="5250.747" Y="-4281.846" Z="374.4591" />
+        <Hotspot X="5249.833" Y="-4322.479" Z="378.9724" />
+        <Hotspot X="5260.608" Y="-4361.247" Z="383.4574" />
+        <Hotspot X="5282.75" Y="-4394.323" Z="388.5032" />
+        <Hotspot X="5308.828" Y="-4424.363" Z="393.0362" />
+        <Hotspot X="5341.198" Y="-4448.034" Z="392.2172" />
+        <Hotspot X="5381.187" Y="-4456.76" Z="388.7412" />
+        <Hotspot X="5408.23" Y="-4428.748" Z="377.3959" />
+        <Hotspot X="5422.404" Y="-4392.063" Z="369.887" />
+        <Hotspot X="5418.644" Y="-4351.125" Z="368.0614" />
+        <Hotspot X="5446.817" Y="-4320.632" Z="363.3212" />
+        <Hotspot X="5473.68" Y="-4290.283" Z="362.4892" />
+        <Hotspot X="5473.915" Y="-4250.138" Z="363.5118" />
+        <Hotspot X="5455.808" Y="-4213.614" Z="365.578" />
+        <Hotspot X="5436.644" Y="-4178.088" Z="362.2872" />
+      </HuntingGrounds>
+    </CustomBehavior>
+    <CustomBehavior File="InteractWith" MobId1="29327" AuraIdOnMob="62248" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" WaitTime="3000" InteractByGossipOptions="1" WaitForNpcs="False" />
+  </While>
+  <While Condition="!IsObjectiveComplete(2, 13549)">
+    <CustomBehavior File="InteractWith" MobId="29319" AuraIdMissingFromMob="62248" MobState="Alive" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" Range="39" WaitTime="3000" InteractByUsingItemId="44890">
+      <HuntingGrounds>
+        <Hotspot X="5398.33" Y="-4099.934" Z="366.2803" />
+        <Hotspot X="5370.535" Y="-4130.278" Z="368.0473" />
+        <Hotspot X="5336.066" Y="-4151.257" Z="366.213" />
+        <Hotspot X="5301.128" Y="-4172.739" Z="362.975" />
+        <Hotspot X="5275.824" Y="-4205.555" Z="363.4062" />
+        <Hotspot X="5263.357" Y="-4244.949" Z="363.8699" />
+        <Hotspot X="5250.747" Y="-4281.846" Z="374.4591" />
+        <Hotspot X="5249.833" Y="-4322.479" Z="378.9724" />
+        <Hotspot X="5260.608" Y="-4361.247" Z="383.4574" />
+        <Hotspot X="5282.75" Y="-4394.323" Z="388.5032" />
+        <Hotspot X="5308.828" Y="-4424.363" Z="393.0362" />
+        <Hotspot X="5341.198" Y="-4448.034" Z="392.2172" />
+        <Hotspot X="5381.187" Y="-4456.76" Z="388.7412" />
+        <Hotspot X="5408.23" Y="-4428.748" Z="377.3959" />
+        <Hotspot X="5422.404" Y="-4392.063" Z="369.887" />
+        <Hotspot X="5418.644" Y="-4351.125" Z="368.0614" />
+        <Hotspot X="5446.817" Y="-4320.632" Z="363.3212" />
+        <Hotspot X="5473.68" Y="-4290.283" Z="362.4892" />
+        <Hotspot X="5473.915" Y="-4250.138" Z="363.5118" />
+        <Hotspot X="5455.808" Y="-4213.614" Z="365.578" />
+        <Hotspot X="5436.644" Y="-4178.088" Z="362.2872" />
+      </HuntingGrounds>
+    </CustomBehavior>
+    <CustomBehavior File="InteractWith" MobId1="29319" AuraIdOnMob="62248" CollectionDistance="1000"
+      PreInteractMountStrategy="Dismount" WaitTime="3000" InteractByGossipOptions="1" WaitForNpcs="False" />
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="Seek the Wind Serpent Goddess" QuestId="12667" TurnInName="Quetz'lun's Spirit" TurnInId="28030" X="5717.112" Y="-4364.71" Z="385.8015" />
+<If Condition="!HasQuest(12672) &amp;&amp; !IsQuestCompleted(12672) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<PickUp Nav="Fly" QuestName="Setting the Stage" QuestId="12672" GiverName="Quetz'lun's Spirit" GiverId="28030" X="5717.112" Y="-4364.71" Z="385.8015" />
+<If Condition="HasQuest(12672) &amp;&amp; !IsQuestCompleted(12672)">
+  <CustomBehavior File="FlyTo" X="5713.931" Y="-4294.759" Z="373.9961" />
+  <CustomBehavior File="ForcedDismount" />
+  <Objective Nav="Fly" QuestName="Setting the Stage" QuestId="12672" Type="CollectItem" ItemId="39156" CollectCount="10" />
+</If>
+<TurnIn Nav="Fly" QuestName="Setting the Stage" QuestId="12672" TurnInName="Quetz'lun's Spirit" TurnInId="28030" X="5717.112" Y="-4364.71" Z="385.8015" />
+<If Condition="HasQuest(12659) &amp;&amp; !IsQuestCompleted(12659) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="(HasQuest(12659) &amp;&amp; !IsQuestCompleted(12659)) || (HasQuest(12662) &amp;&amp; !IsQuestCompleted(12662))">
+  <CustomBehavior File="FlyTo" X="5914.023" Y="-3808.316" Z="363.1002" />
+  <CustomBehavior File="ForcedDismount" />
+</If>
+<If Condition="HasQuest(12662) &amp;&amp; !IsQuestCompleted(12662)">
+  <While Condition="!IsQuestCompleted(12662)">
+    <CustomBehavior File="InteractWith" QuestId="12662" MobId="190695" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitForNpcs="False" X="5914.023" Y="-3808.316" Z="363.1002" />
+    <CustomBehavior File="WaitTimer" QuestId="12662" WaitTime="10000" />
+    <CustomBehavior File="InteractWith" QuestId="12662" MobId="28639" MobState="Alive" InteractByUsingItemId="39041" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitForNpcs="False" Range="15" X="5914.023" Y="-3808.316" Z="363.1002" />
+    <CustomBehavior File="WaitTimer" QuestId="12662" WaitTime="10000" />
+  </While>
+</If>
+<If Condition="HasQuest(12659) &amp;&amp; !IsQuestCompleted(12659)">
+  <While Condition="!IsQuestCompleted(12659)">
+    <CustomBehavior File="InteractWith" QuestId="12659" MobId1="28600" MobId2="28465" NumOfTimes="1000" MobState="Dead" InteractByUsingItemId="38731"
+      CollectionDistance="1000" PreInteractMountStrategy="Dismount" >
+      <HuntingGrounds >
+        <Hotspot X="5909.011" Y="-3816.524" Z="362.9003" />
+        <Hotspot X="5928.075" Y="-3780.849" Z="363.6627" />
+        <Hotspot X="5942.755" Y="-3742.362" Z="361.9606" />
+        <Hotspot X="5929.882" Y="-3703.78" Z="362.138" />
+        <Hotspot X="5890.234" Y="-3707.218" Z="367.4695" />
+        <Hotspot X="5858.485" Y="-3732.344" Z="363.6854" />
+        <Hotspot X="5840.053" Y="-3769.659" Z="361.961" />
+        <Hotspot X="5813.934" Y="-3801.58" Z="361.9613" />
+        <Hotspot X="5809.455" Y="-3842.155" Z="361.9613" />
+        <Hotspot X="5839.093" Y="-3870.108" Z="363.1636" />
+        <Hotspot X="5870.281" Y="-3896.089" Z="365.5128" />
+        <Hotspot X="5899.61" Y="-3924.777" Z="367.8809" />
+        <Hotspot X="5907.238" Y="-3885.329" Z="364.1402" />
+        <Hotspot X="5894.679" Y="-3846.479" Z="362.4441" />
+        <Hotspot X="5934.653" Y="-3842.575" Z="369.308" />
+      </HuntingGrounds>
+    </CustomBehavior>
+  </While>
+</If>
+<TurnIn Nav="Fly" QuestName="Bringing Down Heb'Jin" QuestId="12662" TurnInName="Element-Tamer Dagoda" TurnInId="28480" X="5790.663" Y="-3566.083" Z="386.5218" />
+<TurnIn Nav="Fly" QuestName="Scalps!" QuestId="12659" TurnInName="Scalper Ahunae" TurnInId="28484" X="5797.79" Y="-3553.846" Z="390.342" />
+<TurnIn Nav="Fly" QuestName="Tails Up" QuestId="13549" TurnInName="Chronicler To'kini" TurnInId="28527" X="5740.269" Y="-3595.089" Z="386.9413" />
+<If Condition="!HasQuest(13556) &amp;&amp; !IsQuestCompleted(13556) &amp;&amp; (Me.LevelFraction &gt;= 79.25)">
+  <CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+  <CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+  <CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+  <CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+  <CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+  <CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+  <CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+  <CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+  <CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+  <CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+  <CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+  <CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+  <CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+  <CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+  <CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+  <CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
+</If>
+<If Condition="!HasQuest(12659) &amp;&amp; !IsQuestCompleted(12659)">
+  <CustomBehavior File="FlyTo" X="6896.316" Y="-4118.483" Z="467.3551" />
+  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="30569" MobState="Alive" X="6893.54" Y="-4118.871" Z="467.354" />
+  <!--Gundrak-->
+</If>
+<PickUp Nav="Fly" QuestName="Eggs for Dubra'Jin" QuestId="13556" GiverName="Ha'wana" GiverId="33025" X="6970.975" Y="-4094.876" Z="479.3632" />
+<If Condition="HasQuest(13556) &amp;&amp; !IsQuestCompleted(13556)">
+  <CustomBehavior File="FlyTo" X="7025.148" Y="-4162.709" Z="451.7683" />
+  <LootMobs Value="true" />
+  <Objective Nav="Fly" QuestName="Eggs for Dubra'Jin" QuestId="13556" Type="CollectItem" ItemId="44921" CollectCount="12" />
+  <LootMobs Value="null" />
+</If>
+<TurnIn Nav="Fly" QuestName="Eggs for Dubra'Jin" QuestId="13556" TurnInName="Ha'wana" TurnInId="33025" X="6970.975" Y="-4094.876" Z="479.3632" />
+<CustomBehavior File="Message" Text="Moving to DALARAN, Please do not stop bot" LogColor="Aquamarine" />
+<CustomBehavior File="FlyTo" X="5609.234" Y="-69.57605" Z="309.1243" />
+<CustomBehavior File="FlyTo" X="5608.5" Y="-69.60098" Z="309.9998" />
+<CustomBehavior File="FlyTo" X="5615.804" Y="-39.40969" Z="339.1261" />
+<CustomBehavior File="FlyTo" X="5626.157" Y="2.349194" Z="377.123" />
+<CustomBehavior File="FlyTo" X="5633.776" Y="32.84009" Z="404.8797" />
+<CustomBehavior File="FlyTo" X="5640.975" Y="62.26793" Z="431.5781" />
+<CustomBehavior File="FlyTo" X="5653.397" Y="103.5698" Z="469.6455" />
+<CustomBehavior File="FlyTo" X="5666.975" Y="144.5193" Z="507.5489" />
+<CustomBehavior File="FlyTo" X="5682.128" Y="189.0945" Z="540.3492" />
+<CustomBehavior File="FlyTo" X="5698.87" Y="236.5549" Z="568.5257" />
+<CustomBehavior File="FlyTo" X="5716.616" Y="284.7898" Z="594.0646" />
+<CustomBehavior File="FlyTo" X="5741.285" Y="328.6622" Z="621.3776" />
+<CustomBehavior File="FlyTo" X="5766.203" Y="371.3765" Z="650.857" />
+<CustomBehavior File="FlyTo" X="5791.414" Y="413.844" Z="680.1057" />
+<CustomBehavior File="FlyTo" X="5832.874" Y="481.8848" Z="658.2161" />
+<CustomBehavior File="ForcedDismount" />
+<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](79-80)SholazarBasin[Cava]" />
 </QuestOrder>
+<ProtectedItems>
+</ProtectedItems>
 </HBProfile>
+
