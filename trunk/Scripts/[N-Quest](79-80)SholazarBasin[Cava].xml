@@ -1,5 +1,5 @@
 <HBProfile creator="Cava" version="1">
-  <Name>[N-Quest] (83-84) Uldum [Cava] $Rev$</Name>
+  <Name>[N-Quest] (79-80) Sholazar Basin [Cava]</Name>
   <MinLevel>1</MinLevel>
   <MaxLevel>91</MaxLevel>
   <MinDurability>0.2</MinDurability>
@@ -29,8 +29,12 @@
 <!-- ####################################### Quest Overrides ####################################################################### -->
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Profile in development,
-	Please check again later" />
-  <CustomBehavior File="Halt"/>
+	<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
+  Text="End of Public profiles, \n\n
+  Profile for next maps are in development or test status \n
+  If you have access, Bot will load next Armageddoner profile in 20 seconds! " />
+
+  <CustomBehavior File="LoadProfile" ProfileName="ArmageddonerNext[Cava]" />
+
 </QuestOrder>
 </HBProfile>
