@@ -1,6 +1,33 @@
 <HBProfile>
-<Name>Armageddoner Next Uldum[Cava] $Rev$</Name>
+<Name>[N-Quest] (83-84) Uldum [Cava] $Rev$</Name>
 
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
+  
+<AvoidMobs>
+	<Mob Name="Uldum Watcher [PH]" Id="44842" />
+	<Mob Name="Myzerian" Id="48374" />
+	<Mob Name="Unconscious Trooper" Id="46976" />
+	<Mob Name="Myzerian" Id="48444" />
+	<Mob Name="Burly Sea Trooper" Id="46980" />
+</AvoidMobs>
+<Blackspots>
+  <AerialBlackspot Faction="Neutral" MapId="5034" Name="airplane" >
+    <Spot X="7356.129" Y="-1019.667" />
+    <Spot X="-10712.86" Y="1054.495" />
+    <Spot X="-10714.71" Y="1072.148" />
+    <Spot X="-10705.62" Y="1064.79" />
+    <Spot X="-10720.37" Y="1062.46" />
+  </AerialBlackspot>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
+<!-- ####################################### Quest Overrides ####################################################################### -->
 <Quest Id="28105" Name="Kavem the Callous">
   <Objective Type="CollectItem" ItemId="62817" CollectCount="1">
     <CollectFrom>
@@ -686,19 +713,7 @@
     </Hotspots>
   </Objective>
 </Quest>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder>
   <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="88-n-quest83-84uldumcava" /> 
 </QuestOrder>
