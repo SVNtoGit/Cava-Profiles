@@ -333,38 +333,38 @@
 <CustomBehavior File="Message" Text="Compiling Azshara Quests (20-22)" LogColor="Aquamarine" />
 <!--# # # Level 20 # # # -->
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(14428) &amp;&amp; !IsQuestCompleted(14428)" >
   <RunTo X="2955.037" Y="-4970.496" Z="126.1244" />
@@ -381,7 +381,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43217" MobState="Alive" InteractByGossipOptions="3" X="2947.02" Y="-4998.86" Z="165.6512" />
   <CustomBehavior File="WaitTimer" WaitTime="102000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <PickUp QuestName="Amberwind's Journal" QuestId="14428" GiverName="Andorel Sunsworn" GiverId="36596" X="4509.807" Y="-5722.682" Z="104.6739" />
 <PickUp QuestName="The Blackmaw Scar" QuestId="14431" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9374" />
 <If Condition="HasQuest(14431) &amp;&amp; !IsQuestCompleted(14431)" >
@@ -405,16 +405,16 @@
 <PickUp QuestName="A Pale Brew" QuestId="14432" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
 <PickUp QuestName="Diplomacy by Another Means" QuestId="14433" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
 <If Condition="(HasQuest(14432) &amp;&amp; !IsQuestCompleted(14432)) || (HasQuest(14433) &amp;&amp; !IsQuestCompleted(14433))" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="A Pale Brew" QuestId="14432" Type="CollectItem" ItemId="49365" CollectCount="10" />
 <If Condition="HasQuest(14432) &amp;&amp; IsQuestCompleted(14432)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/><!--LootMobs="Original"-->
+  <LootMobs Value="true" /><!--LootMobs="Original"-->
 </If>
 <Objective QuestName="Diplomacy by Another Means" QuestId="14433" Type="CollectItem" ItemId="49366" CollectCount="1" />
 <Objective QuestName="Diplomacy by Another Means" QuestId="14433" Type="CollectItem" ItemId="49367" CollectCount="1" />
 <If Condition="HasQuest(14432) || HasQuest(14433)" >
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/><!----><!--LootMobs="Original"-->
+    <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
 </If>
 <TurnIn QuestName="A Pale Brew" QuestId="14432" TurnInName="Haggrum Bloodfist" TurnInId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
 <TurnIn QuestName="Diplomacy by Another Means" QuestId="14433" TurnInName="Haggrum Bloodfist" TurnInId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />

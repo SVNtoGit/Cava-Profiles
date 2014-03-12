@@ -204,40 +204,40 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <PickUp QuestName="Mor'shan Defense" QuestId="13612" GiverName="Kadrak" GiverId="8582" X="1237.152" Y="-2251.238" Z="92.00631" />
 <PickUp QuestName="Find Gorat!" QuestId="13618" GiverName="Kadrak" GiverId="8582" X="1237.152" Y="-2251.238" Z="92.00631" />
@@ -367,9 +367,9 @@
 -->
 <!--<PickUp QuestName="Needs a Little Lubrication" QuestId="13651" GiverName="Gorka" GiverId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 <If Condition="HasQuest(13651) &amp;&amp; !IsQuestCompleted(13651)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <Objective QuestName="Needs a Little Lubrication" QuestId="13651" Type="CollectItem" ItemId="45071" CollectCount="5" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Needs a Little Lubrication" QuestId="13651" TurnInName="Gorka" TurnInId="33421" X="1580.952" Y="-2505.703" Z="98.00592" />
 
@@ -399,15 +399,15 @@
 <PickUp QuestName="Destroy the Legion" QuestId="26448" GiverName="Valusha" GiverId="17355" X="2362.641" Y="-2519.064" Z="109.004" />
 <PickUp QuestName="Gurtar's Request" QuestId="13875" GiverName="Guardian Gurtar" GiverId="34242" X="2802.91" Y="-3466.646" Z="115.8372" />
 <If Condition="HasQuest(13875) &amp;&amp; !IsQuestCompleted(13875)" >
-  <CustomBehavior File="Cava\CavaSettings" />
+  
   <Objective QuestName="Gurtar's Request" QuestId="13875" Type="CollectItem" ItemId="46315" CollectCount="8" />
   <While Condition="!IsQuestCompleted(13875)" >
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(46316)" WaitTime="1000" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" /><!---->
+  <!---->
 </If>
 <If Condition="HasQuest(26448) &amp;&amp; !IsQuestCompleted(26448)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId1="11697" MobId2="6073" MobId3="6115" MobState="Alive" CollectItemCount="1" CollectItemId="23797" HuntingGroundRadius="200" >
     <Hotspot X="2042.36" Y="-2953.277" Z="107.6699" />
     <Hotspot X="2057.239" Y="-2990.913" Z="110.5939" />
@@ -423,7 +423,7 @@
     <Hotspot X="1972.531" Y="-3023.182" Z="105.4176" />
     <Hotspot X="2013.018" Y="-3027.641" Z="106.5729" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/><!--LootMobs="Original"-->
+  <LootMobs Value="true" /><!--LootMobs="Original"-->
   <CustomBehavior File="CollectThings" QuestId="26448" MobId1="11697" MobId2="6073" MobId3="6115" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="2042.36" Y="-2953.277" Z="107.6699" />
     <Hotspot X="2057.239" Y="-2990.913" Z="110.5939" />
@@ -441,7 +441,7 @@
   </CustomBehavior>
 </If>
 <If Condition="!HasQuest(26447) &amp;&amp; !IsQuestCompleted(26447) &amp;&amp; !HasItem(23797)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId1="11697" MobId2="6073" MobId3="6115" MobState="Alive" CollectItemCount="1" CollectItemId="23797" HuntingGroundRadius="200" >
     <Hotspot X="2042.36" Y="-2953.277" Z="107.6699" />
     <Hotspot X="2057.239" Y="-2990.913" Z="110.5939" />
@@ -457,20 +457,20 @@
     <Hotspot X="1972.531" Y="-3023.182" Z="105.4176" />
     <Hotspot X="2013.018" Y="-3027.641" Z="106.5729" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/><!----><!--LootMobs="Original"-->
+  <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
 </If>
 <If Condition="!HasQuest(26447) &amp;&amp; !IsQuestCompleted(26447) &amp;&amp; HasItem(23797)" >
   <PickUp QuestName="Diabolical Plans" QuestId="26447" GiverType="Item" GiverId="23797" />
 </If>
 <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; !HasItem(16305)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(6503) &amp;&amp; !IsQuestCompleted(6503)" >
   <Objective QuestName="Ashenvale Outrunners" QuestId="6503" Type="KillMob" MobId="12856" KillCount="9" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" /><!----><!--LootMobs="Original"-->
+  <LootMobs Value="null" /><!----><!--LootMobs="Original"-->
 </If>
 <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; !HasItem(16305)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <SetGrindArea>
   <GrindArea>
   <Factions>1097</Factions>
@@ -480,7 +480,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="HasItem(16305)" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/><!----><!--LootMobs="Original"-->
+  <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
 </If>
 <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; HasItem(16305)" >
   <PickUp QuestName="Sharp" QuestId="2" GiverType="Item" GiverId="16305" />

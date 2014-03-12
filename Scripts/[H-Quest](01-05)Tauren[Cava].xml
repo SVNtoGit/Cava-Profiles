@@ -161,7 +161,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Tauren Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="The First Step" QuestId="14449" GiverName="Chief Hawkwind" GiverId="2981" X="-2909.955" Y="-256.526" Z="59.60468" />
 <TurnIn QuestName="The First Step" QuestId="14449" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
@@ -388,7 +388,7 @@
 <PickUp QuestName="Kyle's Gone Missing!" QuestId="11129" GiverName="Ahab Wheathoof" GiverId="23618" X="-2097.517" Y="-430.5395" Z="-6.711194" />
 <If Condition="(HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)) || (HasQuest(761) &amp;&amp; !IsQuestCompleted(761)) || (HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129) &amp;&amp; !HasItem(33009))" >
   <RunTo X="-2097.517" Y="-430.5395" Z="-6.711194" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4759" CollectCount="4" />
 <If Condition="HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129) &amp;&amp; !HasItem(33009)" >
@@ -413,7 +413,7 @@
 <Objective QuestName="Swoop Hunting" QuestId="761" Type="CollectItem" ItemId="4769" CollectCount="8" />
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4758" CollectCount="6" />
 <If Condition="HasQuest(20440) || HasQuest(761) || HasQuest(11129)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Poison Water" QuestId="20440" TurnInName="Mull Thunderhorn" TurnInId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
 <TurnIn QuestName="Swoop Hunting" QuestId="761" TurnInName="Harken Windtotem" TurnInId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />

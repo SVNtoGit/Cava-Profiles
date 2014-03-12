@@ -503,40 +503,40 @@
   Please move your char to: WINTERSPRING\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 54.7 # # # -->
@@ -645,7 +645,7 @@
 <PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <TurnIn QuestName="Strange Life Forces" QuestId="28656" TurnInName="Witch Doctor Mau'ari" TurnInId="10307" X="6396.568" Y="-2541.832" Z="542.0278" />
 <If Condition="HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="28530" MobId1="48767" MobId2="48768" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6693.444" Y="-2970.353" Z="572.6801" />
     <Hotspot X="6699.752" Y="-3010.257" Z="573.3894" />
@@ -664,7 +664,7 @@
     <Hotspot X="6720.028" Y="-2933.25" Z="575.8972" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
 <TurnIn QuestName="Winterfall Runners" QuestId="28469" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -681,7 +681,7 @@
 </If>
 <PickUp QuestName="High Chief Winterfall" QuestId="28470" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <If Condition="HasQuest(28470) &amp;&amp; !IsQuestCompleted(28470)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471)" >
@@ -689,7 +689,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="10738" Loot="True" X="6514.67" Y="-3264.19" Z="574.186" />
   </While>
   <PickUp QuestName="The Final Piece" QuestId="28471" GiverType="Item" GiverName="Crudely-Written Log" GiverId="12842" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <RunTo X="6499.186" Y="-3242.781" Z="572.0284" />
 </If>
 <TurnIn QuestName="High Chief Winterfall" QuestId="28470" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
@@ -838,7 +838,7 @@
 <TurnIn QuestName="Kilram's Boast" QuestId="28624" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Chop Chop" QuestId="28625" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <If Condition="HasQuest(28625) &amp;&amp; !IsQuestCompleted(28625)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="28625" MobId="48952" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6628.797" Y="-4403.601" Z="707.5793" />
     <Hotspot X="6651.103" Y="-4368.908" Z="705.916" />
@@ -864,7 +864,7 @@
     <Hotspot X="6738.497" Y="-4215.281" Z="702.4594" />
     <Hotspot X="6727.959" Y="-4253.877" Z="708.2627" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Chop Chop" QuestId="28625" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Tree Delivery" QuestId="28626" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
@@ -886,17 +886,17 @@
 <PickUp QuestName="Echo Three" QuestId="28630" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="The Perfect Horns" QuestId="28631" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <If Condition="HasQuest(28630)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Echo Three" QuestId="28630" TurnInName="Echo Three" TurnInId="207291" TurnInType="GameObject" X="6532.741" Y="-5115.498" Z="769.7291" />
 <If Condition="HasQuest(28631) &amp;&amp; !IsQuestCompleted(28631)" >
   <CustomBehavior File="WaitTimer" WaitTime="10000" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="EjectVeh" />
 </If>
 <Objective QuestName="The Perfect Horns" QuestId="28631" Type="CollectItem" ItemId="64664" CollectCount="1" />
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(28632)" >
     <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
       <HuntingGrounds>

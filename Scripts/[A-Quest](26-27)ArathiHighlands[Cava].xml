@@ -99,40 +99,40 @@
   Please move your char to: ARATHI HIGHLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(26093) &amp;&amp; !IsQuestCompleted(26093)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
@@ -155,7 +155,7 @@
 <PickUp QuestName="Shakes O'Breen" QuestId="26336" GiverName="Skuerto" GiverId="2789" X="-1281.153" Y="-2529.644" Z="21.52114" />
 <If Condition="HasQuest(26093) &amp;&amp; !IsQuestCompleted(26093)" >
   <RunTo X="-915.7569" Y="-2090.314" Z="47.93302" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <SetGrindArea>
   <GrindArea>
   <Factions>87</Factions>
@@ -176,7 +176,7 @@
 <!--
 <Objective QuestName="Northfold Manor" QuestId="26093" Type="KillMob" MobId="2589" KillCount="10" />
 -->
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="Northfold Manor" QuestId="26093" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
 <If Condition="(Me.LevelFraction &gt;= 27.75 )">
@@ -185,23 +185,23 @@
 <PickUp QuestName="Stromgarde Badges" QuestId="26095" GiverName="Captain Nials" GiverId="2700" X="-1274.687" Y="-2516.632" Z="21.34451" />
 <If Condition="HasQuest(26024) &amp;&amp; !IsQuestCompleted(26024)" >
   <RunTo X="-1547.747" Y="-1805.404" Z="67.30801" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" KillBetweenHotspots="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Wanted!  Marez Cowl" QuestId="26024" Type="CollectItem" ItemId="4515" CollectCount="1" />
 <!--<If Condition="HasQuest(26079) &amp;&amp; !IsQuestCompleted(26079)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" KillBetweenHotspots="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" Type="CollectItem" ItemId="4517" CollectCount="1" />
 <Objective QuestName="Wanted!  Otto and Falconcrest" QuestId="26079" Type="CollectItem" ItemId="4516" CollectCount="1" />
 <If Condition="HasQuest(26079) &amp;&amp; IsQuestCompleted(26079)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" KillBetweenHotspots="False" />
+  <LootMobs Value="null" />
 </If>-->
 <If Condition="HasQuest(26095) &amp;&amp; !IsQuestCompleted(26095)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Stromgarde Badges" QuestId="26095" Type="CollectItem" ItemId="4506" CollectCount="7" />
 <If Condition="(Me.Level &lt; 27 )">
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <SetGrindArea>
   <GrindArea>
   <Factions>87</Factions>
@@ -217,10 +217,10 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Level="27" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <If Condition="HasQuest(26050) &amp;&amp; !IsQuestCompleted(26050)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <PickUp QuestName="Goggle Boggle" QuestId="26050" GiverName="Professor Phizzlethorpe" GiverId="2768" X="-2066.391" Y="-2086.127" Z="8.949064" />
 <If Condition="HasQuest(26050) &amp;&amp; !IsQuestCompleted(26050)" >

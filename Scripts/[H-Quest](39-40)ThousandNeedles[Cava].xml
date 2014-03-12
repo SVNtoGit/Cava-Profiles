@@ -72,40 +72,40 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <PickUp QuestName="The Grimtotem are Coming" QuestId="25487" GiverName="Kanati Greycloud" GiverId="39895" X="-4295.639" Y="-923.2587" Z="80.31674" />
 <If Condition="HasQuest(25487) &amp;&amp; !IsQuestCompleted(25487)" >
@@ -251,7 +251,7 @@
 </If>
 <If Condition="HasQuest(25516) &amp;&amp; !IsQuestCompleted(25516)" >
   <If Condition="HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <CustomBehavior File="CollectThings" QuestId="25516" ObjectId1="202957" ObjectId2="202958" ObjectId3="202959" ObjectId4="202960" ObjectId5="202961" CollectUntil="QuestComplete" HuntingGroundRadius="200">
       <Hotspot X="-6181.03" Y="-3954.418" Z="-43.98534" />
@@ -265,12 +265,12 @@
       <Hotspot X="-6167.805" Y="-3890.108" Z="-48.96612" />
   </CustomBehavior>
   <If Condition="HasQuest(25526) &amp;&amp; IsQuestCompleted(25526)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="true" />
   </If>
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(25526) &amp;&amp; !IsQuestCompleted(25526) &amp;&amp; !HasItem(54821)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="25526" MobId="40449" MobState="Alive" CollectItemCount="1" CollectItemId="54821" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
       <Hotspot X="-6181.03" Y="-3954.418" Z="-43.98534" />
       <Hotspot X="-6203.04" Y="-3988.46" Z="-44.54507" />
@@ -282,7 +282,7 @@
       <Hotspot X="-6187.674" Y="-3855.237" Z="-51.36177" />
       <Hotspot X="-6167.805" Y="-3890.108" Z="-48.96612" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(25526)" >
@@ -431,7 +431,7 @@
 <PickUp QuestName="The Greatest Flavor in the World!" QuestId="28045" GiverName="Brivelthwerp" GiverId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
 <PickUp QuestName="We All Scream for Ice Cream... and then Die!" QuestId="28051" GiverName="Brivelthwerp" GiverId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
 <If Condition="HasQuest(28045) &amp;&amp; !IsQuestCompleted(28045)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28051) &amp;&amp; !IsQuestCompleted(28051)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28051" MobId="47446" NumOfTimes="1000" Nav="CTM" CollectionDistance="1000" >
@@ -456,7 +456,7 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(28045) &amp;&amp; !IsQuestCompleted(28045)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="28045" MobId="47388" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-6472.009" Y="-3551.709" Z="-40.092269" />
       <Hotspot X="-6433.826" Y="-3565.657" Z="-40.057682" />
@@ -477,7 +477,7 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(28045)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="The Greatest Flavor in the World!" QuestId="28045" TurnInName="Brivelthwerp" TurnInId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />
 <TurnIn QuestName="We All Scream for Ice Cream... and then Die!" QuestId="28051" TurnInName="Brivelthwerp" TurnInId="47383" X="-6464.81" Y="-3508.1" Z="1.458646" />

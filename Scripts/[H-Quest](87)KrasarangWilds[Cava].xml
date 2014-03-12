@@ -563,7 +563,7 @@
 
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling Krasarang Wilds (87)" LogColor="Green" />
   <!-- LVL 87 -->
 <If Condition="!HasQuest(30079) &amp;&amp; !IsQuestCompleted(30079)" >
@@ -647,13 +647,13 @@
 <PickUp QuestName="Tears of Pandaria" QuestId="30091" GiverName="Mei Barrelbottom" GiverId="57744" X="-347.9306" Y="-606.9653" Z="127.6742" />
 <PickUp QuestName="Materia Medica" QuestId="30081" GiverName="Ken-Ken" GiverId="56115" X="-330.934" Y="-624.592" Z="119.8942" />
 <If Condition="HasQuest(30081) &amp;&amp; !IsQuestCompleted(30081)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Materia Medica" QuestId="30081" Type="CollectItem" ItemId="78881" CollectCount="4" />
 <Objective QuestName="Materia Medica" QuestId="30081" Type="CollectItem" ItemId="78877" CollectCount="4" />
 <Objective QuestName="Materia Medica" QuestId="30081" Type="CollectItem" ItemId="78880" CollectCount="4" />
 <If Condition="HasQuest(30081) &amp;&amp; IsQuestCompleted(30081)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Tears of Pandaria" QuestId="30091" Type="KillMob" MobId="57649" KillCount="12" />
 <TurnIn QuestName="Materia Medica" QuestId="30081" TurnInName="Ken-Ken" TurnInId="56115" X="-330.934" Y="-624.592" Z="119.8942" />
@@ -671,7 +671,7 @@
 </If>
 <Objective QuestName="Securing the Province" QuestId="30083" Type="KillMob" MobId="58215" KillCount="10" />
 <If Condition="HasQuest(30088) &amp;&amp; !IsQuestCompleted(30088)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+	<LootMobs Value="true" />
  </If>
 <If Condition="HasQuest(30084) &amp;&amp; !IsQuestCompleted(30084)" >
   <While Condition="!IsObjectiveComplete(3, 30084)" >
@@ -689,7 +689,7 @@
 </If>
 <Objective QuestName="Why So Serious?" QuestId="30088" Type="CollectItem" ItemId="78941" CollectCount="18" />
 <If Condition="HasQuest(30088) &amp;&amp; IsQuestCompleted(30088)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+	<LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Why So Serious?" QuestId="30088" TurnInName="Ken-Ken" TurnInId="56115" X="-330.934" Y="-624.592" Z="119.8942" />
 <PickUp QuestName="Apply Directly to the Forehead" QuestId="30089" GiverName="Ken-Ken" GiverId="56115" X="-330.934" Y="-624.592" Z="119.8942" />
@@ -726,12 +726,12 @@
   </While>
 </If>
 <If Condition="HasQuest(30353) &amp;&amp; !IsQuestCompleted(30353)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Crane Mastery" QuestId="30352" Type="KillMob" MobId="58116" KillCount="12" />
 <Objective QuestName="Profit Mastery" QuestId="30353" Type="CollectItem" ItemId="78914" CollectCount="12" />
 <If Condition="HasQuest(30353) &amp;&amp; IsQuestCompleted(30353)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Crane Mastery" QuestId="30352" TurnInName="Daggle Bombstrider" TurnInId="58779" X="-914.507" Y="-222.3872" Z="39.9127" />
 <PickUp QuestName="Crane Mastery: Needlebeak" QuestId="31262" GiverName="Daggle Bombstrider" GiverId="58779" X="-914.507" Y="-222.3872" Z="39.9127" />
@@ -987,12 +987,12 @@ Now choose:\n
 <PickUp QuestName="Thieving Raiders" QuestId="30168" GiverName="Tired Shushen" GiverId="58278" X="-1330.965" Y="1556.962" Z="18.31628" />
 <PickUp QuestName="Raid Leader Slovan" QuestId="30169" GiverName="Tired Shushen" GiverId="58278" X="-1330.965" Y="1556.962" Z="18.31628" />
 <If Condition="HasQuest(30168) &amp;&amp; !IsQuestCompleted(30168)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Raid Leader Slovan" QuestId="30169" Type="KillMob" MobId="58285" KillCount="1" />
 <Objective QuestName="Thieving Raiders" QuestId="30168" Type="CollectItem" ItemId="78958" CollectCount="5" />
 <If Condition="HasQuest(30168) &amp;&amp; IsQuestCompleted(30168)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Thieving Raiders" QuestId="30168" TurnInName="Tired Shushen" TurnInId="58278" X="-1330.965" Y="1556.962" Z="18.31628" />
 <TurnIn QuestName="Raid Leader Slovan" QuestId="30169" TurnInName="Tired Shushen" TurnInId="58278" X="-1330.965" Y="1556.962" Z="18.31628" />
@@ -1080,7 +1080,7 @@ Now choose:\n
 <PickUp QuestName="Particular Plumage" QuestId="30667" GiverName="Tony Tuna" GiverId="60182" X="-2463.476" Y="526.4063" Z="0.6809266" />
 <PickUp QuestName="Sudden, Unexpected Crocolisk Aggression" QuestId="30666" GiverName="Jay Cloudfall" GiverId="60173" X="-2511.872" Y="532.5816" Z="11.45982" />
 <If Condition="HasQuest(30667) &amp;&amp; !IsQuestCompleted(30667)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <If Condition="(Me.Class == WoWClass.Warrior)">
     <While Condition="!IsQuestCompleted(30667)" >
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30667" MobId1="60196" MobId2="60198" MobId3="60200" WaitTime="1" MobState="Alive" WaitForNpcs="False" Range="25" CollectionDistance="1000" X="-2317.169" Y="712.2827" Z="13.03649" />
@@ -1326,7 +1326,7 @@ Now choose:\n
 
 
 <If Condition="HasQuest(30691) &amp;&amp; !IsQuestCompleted(30691)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
   <If Condition="Me.HasAura(115716)" >
     <CustomBehavior File="RunMacro" Macro="/cancelaura Rafting" />
   </If>
@@ -1360,12 +1360,12 @@ Now choose:\n
 -->
 </If>
 <If Condition="HasQuest(30671) &amp;&amp; IsQuestCompleted(30671)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Wisdom Has A Price" QuestId="30671" TurnInName="Wise Ana Wu" TurnInId="60139" X="-2576.373" Y="792.2691" Z="0.08333334" />
 <PickUp QuestName="Balance" QuestId="30672" GiverName="Wise Ana Wu" GiverId="60139" X="-2576.373" Y="792.2691" Z="0.08333334" />
 <If Condition="HasQuest(30672) &amp;&amp; !IsQuestCompleted(30672)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
   <RunTo X="-2770.997" Y="537.9234" Z="3.067091" />
 <!--auto quest
 <PickUp QuestName="Balance Without Violence" QuestId="30674" GiverName="" GiverId="" />

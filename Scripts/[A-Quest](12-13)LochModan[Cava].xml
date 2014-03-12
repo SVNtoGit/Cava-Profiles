@@ -121,7 +121,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Loch Modan Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 12.55 # # # -->
 <If Condition="HasQuest(26176)">
@@ -146,11 +146,11 @@
 <PickUp QuestName="WANTED: The Dark Iron Spy" QuestId="13648" GiverName="Wanted!" GiverId="256" GiverType="GameObject" X="-5341.699" Y="-3021.415" Z="324.1477" />
 <PickUp QuestName="Explorers' League Document (2 of 6)" QuestId="13655" GiverName="Stolen Explorers' League Document" GiverType="GameObject" GiverId="194378" X="-5205.755" Y="-3134.141" Z="296.5685" />
 <If Condition="HasQuest(26842) &amp;&amp; !IsQuestCompleted(26842)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Out of Gnoll-where" QuestId="26842" Type="CollectItem" ItemId="60402" CollectCount="12" />
 <If Condition="HasQuest(26860) &amp;&amp; !IsQuestCompleted(26860)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Thelsamar Blood Sausages" QuestId="26860" Type="CollectItem" ItemId="60497" CollectCount="8" />
 <Objective QuestName="Looking for Lurkers" QuestId="25118" Type="KillMob" MobId="1195" KillCount="8" />

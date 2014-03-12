@@ -538,14 +538,14 @@
   </While>
 </If>
 <If Condition="HasQuest(29424) &amp;&amp; !IsQuestCompleted(29424)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="29424" MobId="54130" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="1412.103" Y="3535.57" Z="86.67779" />
     <Hotspot X="1364.854" Y="3554.427" Z="91.1036" />
     <Hotspot X="1340.29" Y="3513.939" Z="101.5695" />
     <Hotspot X="1238.476" Y="3557.24" Z="102.2682" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Items of Utmost Importance" QuestId="29424" TurnInName="Merchant Lorvo" TurnInId="54943" X="1201.16" Y="3507.858" Z="85.83645" />
 <TurnIn QuestName="The Missing Driver" QuestId="29419" TurnInName="Merchant Lorvo" TurnInId="54943" X="1201.16" Y="3507.858" Z="85.83645" />
@@ -581,7 +581,7 @@
 <If Condition="HasQuest(29523) &amp;&amp; !IsQuestCompleted(29523)" >
   <DisableBehavior Name="Pull" />
   <RunTo X="1314.028" Y="3600.681" Z="88.90967" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
   <While Condition="!IsQuestCompleted(29523)" >
     <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
@@ -589,7 +589,7 @@
     <CustomBehavior File="WaitTimer" WaitTime="8000" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29523" MobId="54631" MobState="Alive" WaitForNpcs="False" X="1230.933" Y="3717.372" Z="93.42289" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Kindling the Fire" QuestId="29418" Type="CollectItem" ItemId="72111" CollectCount="5" />
 <TurnIn QuestName="Kindling the Fire" QuestId="29418" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
@@ -749,7 +749,7 @@
 <PickUp QuestName="Tools of the Enemy" QuestId="29777" GiverName="Elder Shaopai" GiverId="55588" X="1078.806" Y="4130.425" Z="212.5834" />
 <PickUp QuestName="Stronger Than Stone" QuestId="29783" GiverName="Jojo Ironbrow" GiverId="55585" X="1078.087" Y="4180.681" Z="205.8848" />
 <If Condition="(HasQuest(29777) &amp;&amp; !IsQuestCompleted(29777)) || (HasQuest(29778) &amp;&amp; !IsQuestCompleted(29778))" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(29778) &amp;&amp; !IsQuestCompleted(29778)" >
   <While Condition="HasQuest(29778) &amp;&amp; !IsQuestCompleted(29778)" >
@@ -768,15 +768,15 @@
   </While>
 </If>
 <If Condition="HasQuest(29777) || HasQuest(29778)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Stronger Than Stone" QuestId="29783" Type="CollectItem" ItemId="74624" CollectCount="12" />
 <If Condition="HasQuest(29777) &amp;&amp; !IsQuestCompleted(29777)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Tools of the Enemy" QuestId="29777" Type="CollectItem" ItemId="74615" CollectCount="8" />
 <If Condition="HasQuest(29777) &amp;&amp; IsQuestCompleted(29777)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Tools of the Enemy" QuestId="29777" TurnInName="Elder Shaopai" TurnInId="55588" X="1078.806" Y="4130.425" Z="212.5834" />
 <TurnIn QuestName="Stronger Than Stone" QuestId="29783" TurnInName="Jojo Ironbrow" TurnInId="55585" X="1078.087" Y="4180.681" Z="205.8848" />

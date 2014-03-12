@@ -96,7 +96,7 @@
   Please move your char to: REDRIDGE MOUNTAINS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" GroundMountFarmingMode="False" KillBetweenHotspots="True"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="True"  DrinkAmount="0" FoodAmount="0" />
 <CustomBehavior File="Message" Text="Compiling Redridge Mountains Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 16.35 # # # -->
 <!--<If Condition="(Me.Level &gt;= 60 )">
@@ -155,7 +155,7 @@
 <Objective QuestName="Still Assessing the Threat" QuestId="26503" Type="CollectItem" ItemId="58887" CollectCount="1" />
 <Objective QuestName="Still Assessing the Threat" QuestId="26503" Type="CollectItem" ItemId="58889" CollectCount="1" />
 <If Condition="HasQuest(26506) &amp;&amp; !IsQuestCompleted(26506)" >
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+<LootMobs Value="true" />
   <If Condition="!IsObjectiveComplete(3, 26506)" >
     <CustomBehavior File="CollectThings" QuestId="26506" MobId="547" MobState="Alive" CollectItemCount="4" CollectItemId="58893" HuntingGroundRadius="200" >
       <Hotspot X="-9489.111" Y="-2237.329" Z="76.89572" />
@@ -171,7 +171,7 @@
 <Objective QuestName="Franks and Beans" QuestId="26506" Type="CollectItem" ItemId="58891" CollectCount="4" />
 <Objective QuestName="Wanted: Redridge Gnolls" QuestId="26504" Type="KillMob" MobId="423" KillCount="15" />
 <If Condition="HasQuest(26506) &amp;&amp; IsQuestCompleted(26506)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" KillBetweenHotspots="False" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Franks and Beans" QuestId="26506" TurnInName="Darcy Parker" TurnInId="379" X="-9633.35" Y="-1880.43" Z="61.8198" />
 <!-- LVL 16 -->

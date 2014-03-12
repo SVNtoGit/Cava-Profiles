@@ -459,7 +459,7 @@
 
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling Dread Wastes (89-90)" LogColor="Green" />
   <!-- LVL 89-->
 <If Condition="!HasQuest(31001) &amp;&amp; !IsQuestCompleted(31001)" >
@@ -567,7 +567,7 @@
   <CustomBehavior File="CompleteLogQuest" QuestId="31009" /> <!--<PickUp QuestName="In Her Clutch" QuestId="31010"-->
 </While>
 <If Condition="HasQuest(31008) &amp;&amp; !IsQuestCompleted(31008)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(31010) &amp;&amp; !IsQuestCompleted(31010)" >
   <CustomBehavior File="InteractWith" MobId="214674" ObjectType="GameObject" WaitTime="1000" X="-63.3816" Y="3742.277" Z="155.5577" />
@@ -578,7 +578,7 @@
 <PickUp QuestName="A Source of Terrifying Power" QuestId="31661" GiverName="Sha-Haunted Crystal" GiverId="214562" GiverType="GameObject" X="-58.05706" Y="3751.685" Z="155.5583" />
 <Objective QuestName="Amber Arms" QuestId="31008" Type="CollectItem" ItemId="83135" CollectCount="6" />
 <If Condition="HasQuest(31008) &amp;&amp; IsQuestCompleted(31008)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="The Dread Clutches" QuestId="31007" Type="KillMob" MobId="64559" KillCount="6" />
 <Objective QuestName="Not Fit to Swarm" QuestId="31660" Type="KillMob" MobId="62582" KillCount="30" />
@@ -615,13 +615,13 @@
     <RunTo X="664.932" Y="2906.74" Z="229.4419" />
     </Else>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Citizens of a New Empire" QuestId="31107" Type="CollectItem" ItemId="86598" CollectCount="10" />
 <Objective QuestName="A Cry From Darkness" QuestId="31066" Type="KillMob" MobId="62863" KillCount="1" />
 <Objective QuestName="Concentrated Fear" QuestId="31108" Type="CollectItem" ItemId="86616" CollectCount="4" />
 <If Condition="HasQuest(31108) &amp;&amp; IsQuestCompleted(31108)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="The Dreadsworn" QuestId="31689" Type="KillMob" MobId="62813" KillCount="6" />
 <If Condition="HasQuest(31689) &amp;&amp; IsQuestCompleted(31689)" >
@@ -666,7 +666,7 @@
   </If>
 </If>
 <If Condition="!HasQuest(31023) &amp;&amp; !IsQuestCompleted(31023)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!HasItem(82870)" >
     <CustomBehavior File="InteractWith" MobId="61970" WaitForNpcs="False" CollectionDistance="1000" X="-627.5919" Y="2810.881" Z="131.3564" />
   </While>
@@ -867,7 +867,7 @@
 </If>
 <PickUp QuestName="Evie Stormstout" QuestId="31077" GiverName="Chen Stormstout" GiverId="67138" X="685.8542" Y="3243.859" Z="212.6769" />
 <If Condition="HasQuest(31070) &amp;&amp; !IsQuestCompleted(31070)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="I Bring Us Great Shame" QuestId="31071" Type="CollectItem" ItemId="83781" CollectCount="1" />
 <Objective QuestName="I Bring Us Great Shame" QuestId="31071" Type="CollectItem" ItemId="83783" CollectCount="1" />
@@ -882,7 +882,7 @@
 <Objective QuestName="Rending Daggers" QuestId="31072" Type="CollectItem" ItemId="84111" CollectCount="1" />
 <Objective QuestName="Rending Daggers" QuestId="31072" Type="CollectItem" ItemId="84112" CollectCount="1" />
 <If Condition="HasQuest(31072) &amp;&amp; IsQuestCompleted(31072)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Daggers of the Great Ones" QuestId="31070" Type="CollectItem" ItemId="84107" CollectCount="3" />
 <Objective QuestName="Bound With Shade" QuestId="31069" Type="KillMob" MobId="62817" KillCount="100" />
@@ -1128,7 +1128,7 @@
   </If>
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(31181)" >
     <If Condition="GetItemCount(85230) &lt; 2" >
       <CustomBehavior File="CollectThings" QuestId="31181" MobId="63470" CollectItemCount="2" CollectItemId="85230" HuntingGroundRadius="200" Nav="CTM" >
@@ -1159,7 +1159,7 @@
   </While>
 </If>
 <If Condition="HasQuest(31181) &amp;&amp; !IsQuestCompleted(31181)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(31181)" >
     <If Condition="(GetItemCount(85230) &lt; 2)" >
       <SetGrindArea>
@@ -1183,7 +1183,7 @@
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(31181) &amp;&amp; IsQuestCompleted(31181)" >
@@ -1215,7 +1215,7 @@
     </Else>
   </If>
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(85955)" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <PickUp QuestName="Dog Food" QuestId="31186" GiverName="Dog" GiverId="63955" />
 <If Condition="HasQuest(31185) &amp;&amp; !IsQuestCompleted(31185)" >
@@ -1260,7 +1260,7 @@
   </While>
 </If>
 <If Condition="HasQuest(31188) &amp;&amp; !IsQuestCompleted(31188)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(31188)" >
     <If Condition="(GetItemCount(85998) &lt; 1)" >
       <SetGrindArea>
@@ -1286,7 +1286,7 @@
       <CustomBehavior File="Misc\RunLua"  QuestId="31188" Lua="UseItemByName(85998)" WaitTime="1000" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(31186) &amp;&amp; IsQuestCompleted(31186)" >
   <If Condition="!HasQuestAvailable(63955, &quot;TurnIn&quot;)">
@@ -1294,7 +1294,7 @@
   </If>
   <CustomBehavior File="AscendInWater" />
   <TurnIn QuestName="Dog Food" QuestId="31186" TurnInName="Dog" TurnInId="63955" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(31188) &amp;&amp; IsQuestCompleted(31188)" >
   <If Condition="HasSpell(115913) &amp;&amp; CanFly()" >

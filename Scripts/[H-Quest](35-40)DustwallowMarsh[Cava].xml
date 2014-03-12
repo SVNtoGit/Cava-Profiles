@@ -455,43 +455,43 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Dustwallow Marsh Quests (35-40)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 35.85 # # # -->
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <PickUp QuestName="Suspicious Hoofprints" QuestId="27259" GiverName="Suspicious Footprint" GiverType="Object" GiverId="187273"  X="-3700.728" Y="-2533.091" Z="68.84982" />
 <PickUp QuestName="Lieutenant Paval Reethe" QuestId="27260" GiverName="Thermadore Guard Badge" GiverId="21042" X="-3722.256" Y="-2541.004" Z="69.65245" />
 <PickUp QuestName="The Black Shield" QuestId="27254" GiverName="Black Shield" GiverId="20992" X="-3731.866" Y="-2530.715" Z="69.62978" />
@@ -600,7 +600,7 @@
 <PickUp QuestName="Identifying the Brood" QuestId="27414" GiverName="Draz'Zilb" GiverId="4501" X="-3191.32" Y="-2925.545" Z="33.35933" />
 <Objective QuestName="Theramore Spies" QuestId="1201" Type="KillMob" MobId="4834" KillCount="9" />
 <If Condition="HasQuest(27256) &amp;&amp; !IsQuestCompleted(27256)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="SMASH BROODQUEEN" QuestId="27229" Type="CollectItem" ItemId="60883" CollectCount="1" />
 <If Condition="HasQuest(25051) &amp;&amp; !IsQuestCompleted(25051)">
@@ -614,11 +614,11 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(27256) &amp;&amp; IsQuestCompleted(27256)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="The Black Shield" QuestId="27256" Type="CollectItem" ItemId="5959" CollectCount="5" />
 <If Condition="HasQuest(27256)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(26682) &amp;&amp; !IsQuestCompleted(26682)" >
   <SetGrindArea>
@@ -669,7 +669,7 @@
 <PickUp QuestName="What's Haunting Witch Hill?" QuestId="27188" GiverName="Mordant Grimsby" GiverId="23843" X="-2948.356" Y="-3893.17" Z="35.05546" />
 <PickUp QuestName="The Lost Report" QuestId="27244" GiverName="Loose Dirt" GiverType="GameObject" GiverId="20985" X="-2940.664" Y="-3884.77" Z="35.00951" />
 <!--<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27183" MobId="23979" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-2939.012" Y="-3883.433" Z="34.86161" />
     <Hotspot X="-2909.818" Y="-3911.979" Z="38.03432" />
@@ -684,7 +684,7 @@
     <Hotspot X="-2975.743" Y="-3865.12" Z="28.54964" />
     <Hotspot X="-2935.093" Y="-3861.285" Z="29.0013" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If> -->
 <If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
   <RunTo X="-2939.012" Y="-3883.433" Z="34.86161" />
@@ -809,7 +809,7 @@
 </If>
 <PickUp QuestName="Check Up on Tabetha" QuestId="11213" GiverName="Nazeer Bloodpike" GiverId="4791" X="-3106.366" Y="-2823.563" Z="34.45407" />
 <If Condition="HasQuest(27184) &amp;&amp; !IsQuestCompleted(27184)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <SetGrindArea>
   <GrindArea>
   <Factions>22</Factions>
@@ -826,7 +826,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(27184)" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Jarl Needs Eyes" QuestId="27184" TurnInName="&quot;Swamp Eye&quot; Jarl" TurnInId="4792" X="-2952.756" Y="-3885.405" Z="34.22656" />
 <If Condition="Me.Level &gt;= 40">
@@ -875,7 +875,7 @@
 <Objective QuestName="Jarl Needs a Blade" QuestId="27186" Type="CollectItem" ItemId="33110" CollectCount="1" />
 <Objective QuestName="Hungry as an Ogre!" QuestId="27191" Type="CollectItem" ItemId="5847" CollectCount="8" />
 <If Condition="HasQuest(27194) &amp;&amp; !IsQuestCompleted(27194)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <SetGrindArea>
   <GrindArea>
   <Factions>18</Factions>
@@ -897,7 +897,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(27191)" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Hungry as an Ogre!" QuestId="27191" TurnInName="&quot;Swamp Eye&quot; Jarl" TurnInId="4792" X="-2952.756" Y="-3885.405" Z="34.22656" />
 <TurnIn QuestName="Jarl Needs a Blade" QuestId="27186" TurnInName="&quot;Swamp Eye&quot; Jarl" TurnInId="4792" X="-2952.756" Y="-3885.405" Z="34.22656" />

@@ -129,7 +129,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 8.2 # # # -->
 <If Condition="HasQuest(25882)" >
@@ -177,11 +177,11 @@
 <TurnIn QuestName="Rams on the Lam" QuestId="25905" TurnInName="Veron Amberstill" TurnInId="1261" X="-5539.55" Y="-1322.55" Z="398.8654" />
 <If Condition="HasQuest(314) &amp;&amp; !IsQuestCompleted(314)" >
   <RunTo X="-5509.723" Y="-1258.756" Z="438.2372" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="314" MobId="1388" MobState="Alive" CollectItemCount="1" CollectItemId="3627" HuntingGroundRadius="200" >
     <Hotspot X="-5390.682" Y="-1278.785" Z="445.3719" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="Protecting the Herd" QuestId="314" Type="CollectItem" ItemId="3627" CollectCount="1" />
 -->

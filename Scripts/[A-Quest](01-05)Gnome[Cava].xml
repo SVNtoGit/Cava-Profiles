@@ -120,8 +120,9 @@ Also be sure to:\n
   Text="This profile only have quests for Gnome. Auto changing profile." />
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True"  />
-<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="True"  />
+<!--
+
+-->
 <!--# # # Level 1 # # # -->
 <CustomBehavior File="Message" Text="Compiling New Tinkertown Map Zone" LogColor="Aquamarine" />
 <PickUp QuestName="Pinned Down" QuestId="27670" GiverName="Nevin Twistwrench" GiverId="45966" X="-4984.88" Y="875.616" Z="274.3093" />
@@ -315,7 +316,7 @@ Also be sure to:\n
 <PickUp QuestName="Get Me Explosives Back!" QuestId="26285" GiverName="Jessup McCree" GiverId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <PickUp QuestName="Missing in Action" QuestId="26284" GiverName="Jessup McCree" GiverId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <If Condition="HasQuest(26284) &amp;&amp; !IsQuestCompleted(26284)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(26284)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5561.603" Y="524.3511" Z="382.0901" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5561.603" Y="524.3511" Z="382.0901" />
@@ -330,7 +331,7 @@ Also be sure to:\n
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5631.385" Y="460.3712" Z="384.4492" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5631.385" Y="460.3712" Z="384.4492" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Get Me Explosives Back!" QuestId="26285" Type="CollectItem" ItemId="58202" CollectCount="7" />
 <TurnIn QuestName="Get Me Explosives Back!" QuestId="26285" TurnInName="Jessup McCree" TurnInId="42708" X="-5531.19" Y="516.505" Z="388.7751" />

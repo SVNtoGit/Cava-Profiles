@@ -239,40 +239,40 @@
   Please move your char to: FELWOOD\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Felwood Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 48.1 # # # -->
@@ -412,7 +412,7 @@
       <RunTo X="4176.76" Y="-685.3157" Z="282.6908" />
       <UseItem QuestId="28044" ItemId="62920" X="4176.76" Y="-685.3157" Z="282.6908" />
     </If>
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
     <GrindArea>
     <Factions>90</Factions>
@@ -422,7 +422,7 @@
     </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsQuestCompleted(28044) || !Me.HasAura(88438)" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+    <LootMobs Value="null" />
   </While>
 </If>
 <If Condition="HasQuest(28044) &amp;&amp; IsQuestCompleted(28044)">

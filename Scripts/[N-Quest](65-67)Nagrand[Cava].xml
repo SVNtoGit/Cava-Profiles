@@ -1455,7 +1455,7 @@
   and start bot." />
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1495,7 +1495,7 @@
   and start bot." />
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <CustomBehavior File="Message" Text="Compiling Nagrand Map Zone" LogColor="Aquamarine" />
@@ -1548,7 +1548,7 @@
   <If Condition="HasQuest(9835) &amp;&amp; !IsQuestCompleted(9835)">
     <CustomBehavior File="FlyTo" X="1022.562" Y="8045.709" Z="20.77164" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
     <GrindArea>
     <Factions>45</Factions>
@@ -1582,7 +1582,7 @@
     <GrindTo Condition="IsObjectiveComplete(1, 9835) || IsObjectiveComplete(2, 9835)" />
     <Objective QuestName="Ango'rosh Encroachment" QuestId="9835" Type="KillMob" MobId="18118" KillCount="5" />
     <Objective QuestName="Ango'rosh Encroachment" QuestId="9835" Type="KillMob" MobId="18117" KillCount="10" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10116) || HasQuest(9848) || HasQuest(9835) || HasQuest(10115)">
     <CustomBehavior File="FlyTo" X="975.7306" Y="7401.778" Z="29.54213" />
@@ -1636,11 +1636,11 @@
     <If Condition="HasQuest(10123) &amp;&amp; !IsQuestCompleted(10123)">
       <CustomBehavior File="FlyTo" X="-408.3183" Y="2160.336" Z="81.03165" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="True" />
+      
       <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19434" KillCount="1" />
       <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19136" KillCount="4" />
       <Objective QuestName="Felspark Ravine" QuestId="10123" Type="KillMob" MobId="19261" KillCount="6" />
-      <CustomBehavior File="Cava\CavaSettings"  GroundMountFarmingMode="False"/>
+      
     </If>
     <If Condition="HasQuest(10123)">
       <CustomBehavior File="FlyTo" X="62.13515" Y="2539.153" Z="64.56563" />
@@ -1668,7 +1668,7 @@
       <RunTo X="-35.45311" Y="2119.091" Z="109.9471" />
       <CustomBehavior File="FlyTo" X="147.0495" Y="1751.861" Z="40.77323" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+      <LootMobs Value="true" />
       <If Condition="!IsObjectiveComplete(1, 10208)">
         <CustomBehavior File="CollectThings" QuestId="10208" MobState="Alive" MobId="19190" MobId2="18975" MobId3="16950" MobId4="8981" CollectItemCount="4" CollectItemId="28513" HuntingGroundRadius="55" >
           <Hotspot X="-562.874" Y="1818.086" Z="66.97377" />
@@ -1713,7 +1713,7 @@
           <CustomBehavior File="InteractWith" MobId="184289" InteractBlacklistTimeInSeconds="1" MovementBy="NavigatorPreferred" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="149.4466" Y="1717.131" Z="37.89988" />
         </While>
       </If>
-      <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+      <LootMobs Value="true" />
     </If>
     <If Condition="HasQuest(10208)">
       <CustomBehavior File="FlyTo" X="-36.4824" Y="2136.69" Z="110.283" />
@@ -1808,7 +1808,7 @@
 <PickUp QuestName="Clefthoof Mastery" QuestId="9789" GiverName="Hemet Nesingwary" GiverId="18180" X="-1459.696" Y="6341.464" Z="37.24043" />
 <PickUp QuestName="Talbuk Mastery" QuestId="9857" GiverName="Harold Lane" GiverId="18218" X="-1454.637" Y="6352.28" Z="37.24043" />
 <If Condition="!HasQuest(9914) &amp;&amp; !IsQuestCompleted(9914) &amp;&amp; GetItemCount(25463) &lt; 3">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="18334" MobState="Alive" CollectItemCount="3" CollectItemId="25463" HuntingGroundRadius="200" >
       <Hotspot X="-1453.122" Y="6331.194" Z="37.52701" />
       <Hotspot X="-1420.491" Y="6308.267" Z="41.58031" />
@@ -1902,10 +1902,10 @@
       <Hotspot X="-1385.27" Y="6372.617" Z="40.2302" />
       <Hotspot X="-1415.388" Y="6345.832" Z="39.09797" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(9861) &amp;&amp; !IsQuestCompleted(9861) &amp;&amp; !HasItem(24504)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="17158" MobState="Alive" CollectItemCount="1" CollectItemId="24504" HuntingGroundRadius="200" >
       <Hotspot X="-1453.122" Y="6331.194" Z="37.52701" />
       <Hotspot X="-1420.491" Y="6308.267" Z="41.58031" />
@@ -1999,7 +1999,7 @@
       <Hotspot X="-1385.27" Y="6372.617" Z="40.2302" />
       <Hotspot X="-1415.388" Y="6345.832" Z="39.09797" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(9861) &amp;&amp; !IsQuestCompleted(9861) &amp;&amp; HasItem(24504)">
   <PickUp QuestName="The Howling Wind" QuestId="9861" GiverType="Item" GiverId="24504" />
@@ -2244,12 +2244,12 @@
     <CustomBehavior File="FlyTo" X="-677.544" Y="7747.529" Z="106.9788" />
     <CustomBehavior File="ForcedDismount" />
     <If Condition="HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479)">
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9939" Type="KillMob" MobId="18413" KillCount="1" />
   </If>
   <If Condition="(HasQuest(9939) &amp;&amp; !IsQuestCompleted(9939)) &amp;&amp; (HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479))">
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
     <GrindArea>
     <Factions>1693</Factions>
@@ -2277,11 +2277,11 @@
     </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsObjectiveComplete(1, 9939) || IsObjectiveComplete(2, 9939) || IsQuestCompleted(10479)" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(9939) &amp;&amp; !IsQuestCompleted(9939)">
     <If Condition="HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479)">
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
     <SetGrindArea>
     <GrindArea>
@@ -2310,18 +2310,18 @@
     </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsObjectiveComplete(1, 9939) || IsObjectiveComplete(2, 9939)" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+    <LootMobs Value="true" />
   </If>
   <If Condition="(HasQuest(9939) &amp;&amp; !IsQuestCompleted(9939)) || (HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479))">
     <If Condition="HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479)">
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+      <LootMobs Value="true" />
     <Else>
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+      <LootMobs Value="true" />
       </Else>
     </If>
     <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9939" Type="KillMob" MobId="18064" KillCount="5" />
     <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9939" Type="KillMob" MobId="17138" KillCount="5" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10479) &amp;&amp; !IsQuestCompleted(10479)">
     <Objective QuestName="Proving Your Strength" QuestId="10479" Type="CollectItem" ItemId="25433" CollectCount="10" />
@@ -2336,7 +2336,7 @@
   <PickUp QuestName="War on the Warmaul" QuestId="9945" GiverName="Elder Yorley" GiverId="18414" X="-1289.842" Y="8510.744" Z="16.74693" />
   <PickUp QuestName="Finding the Survivors" QuestId="9948" GiverName="Elder Ungriz" GiverId="18415" X="-1291.866" Y="8507.988" Z="16.0807" />
   <If Condition="HasQuest(9948) &amp;&amp; !IsQuestCompleted(9948)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <While Condition="!IsQuestCompleted(9948)" >
       <If Condition="GetItemCount(25604) &lt; 1" >
       <SetGrindArea>
@@ -2390,7 +2390,7 @@
           MobId19="182502" MobId20="182503" MobId21="182504" CollectionDistance="1000" WaitTime="3000" />
       </While>
     </While>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="(HasQuest(9945) &amp;&amp; !IsQuestCompleted(9945)) || (HasQuest(9948) &amp;&amp; !IsQuestCompleted(9948))">
     <CustomBehavior File="FlyTo" X="-1086.823" Y="8718.5" Z="73.51797" />
@@ -2495,15 +2495,15 @@
                  (HasQuest(9865) &amp;&amp; !IsQuestCompleted(9865)) ||
                  (HasQuest(9867) &amp;&amp; !IsQuestCompleted(9867))">
     <CustomBehavior File="FlyTo" X="-1515.399" Y="8545.213" Z="6.983317" />
-    <CustomBehavior File="Cava\CavaSettings" />
+    
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(9863) &amp;&amp; !IsQuestCompleted(9863)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <Objective QuestName="Murkblood Leaders..." QuestId="9867" Type="CollectItem" ItemId="24543" CollectCount="1" />
   <If Condition="HasQuest(9863)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="Vile Idolatry" QuestId="9863" Type="CollectItem" ItemId="24542" CollectCount="10" />
   <Objective QuestName="Once Were Warriors" QuestId="9865" Type="KillMob" MobId="18207" KillCount="20" />
@@ -2594,7 +2594,7 @@
     <RunTo X="-2761.415" Y="7300.421" Z="43.47122" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="18914" X="-2761.415" Y="7300.421" Z="43.47122" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="29451" DrinkName="27860" />
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="29451" DrinkName="27860" />
   <PickUp QuestName="The Ravaged Caravan" QuestId="9956" GiverName="Huntress Kima" GiverId="18416" X="-2603.948" Y="7287.943" Z="19.4873" />
   <PickUp QuestName="The Throne of the Elements" QuestId="9869" GiverName="Elementalist Ioki" GiverId="18233" X="-2491.865" Y="7228.569" Z="16.23876" />
   <PickUp QuestName="Do My Eyes Deceive Me" QuestId="9917" GiverName="Huntress Bintook" GiverId="18353" X="-2556.34" Y="7254.186" Z="15.12059" />
@@ -2882,12 +2882,12 @@
     <CustomBehavior File="FlyTo" X="-677.544" Y="7747.529" Z="106.9788" />
     <CustomBehavior File="ForcedDismount" />
     <If Condition="HasQuest(10476) &amp;&amp; !IsQuestCompleted(10476)">
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+      <LootMobs Value="true" />
     </If>
   </If>
   <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9940" Type="KillMob" MobId="18413" KillCount="1" />
   <If Condition="(HasQuest(9940) &amp;&amp; !IsQuestCompleted(9940)) &amp;&amp; (HasQuest(10476) &amp;&amp; !IsQuestCompleted(10476))">
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
       <GrindArea>
       <Factions>1693</Factions>
@@ -2915,7 +2915,7 @@
       </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsObjectiveComplete(1, 9940) || IsObjectiveComplete(2, 9940) || IsQuestCompleted(10476)" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(9940) &amp;&amp; !IsQuestCompleted(9940)">
     <SetGrindArea>
@@ -2948,16 +2948,16 @@
   </If>
   <If Condition="(HasQuest(9940) &amp;&amp; !IsQuestCompleted(9940)) || (HasQuest(10476) &amp;&amp; !IsQuestCompleted(10476))">
     <If Condition="HasQuest(10476) &amp;&amp; !IsQuestCompleted(10476)">
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+      <LootMobs Value="true" />
     <Else>
-      <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+      <LootMobs Value="true" />
       </Else>
     </If>
   </If>
   <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9940" Type="KillMob" MobId="18064" KillCount="5" />
   <Objective QuestName="Wanted: Zorbo the Advisor" QuestId="9940" Type="KillMob" MobId="17138" KillCount="5" />
   <If Condition="HasQuest(9940)">
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10476) &amp;&amp; !IsQuestCompleted(10476)">
   </If>

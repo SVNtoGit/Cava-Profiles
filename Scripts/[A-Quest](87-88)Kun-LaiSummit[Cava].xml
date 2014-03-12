@@ -954,7 +954,7 @@
 <!--
  ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling Kun-Lai Summit (87-88)" LogColor="Green" />
   <!-- LVL 87.75 -->
 <If Condition="!HasQuest(31286) &amp;&amp; !IsQuestCompleted(31286)" >
@@ -1188,7 +1188,7 @@
 <PickUp QuestName="Deanimate the Reanimated" QuestId="30593" GiverName="Mishka" GiverId="59451" X="2143.707" Y="1481.136" Z="487.8864" />
 <If Condition="HasQuest(30575) &amp;&amp; !IsQuestCompleted(30575)" >
   <RunTo X="2134.741" Y="1451.483" Z="487.8857" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(30575)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30575" MobId="59610" WaitForNpcs="False" X="2152.653" Y="1519.638" Z="492.5468" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30575" MobId="59610" WaitForNpcs="False" X="2192.642" Y="1522.316" Z="499.5606" />
@@ -1227,7 +1227,7 @@
 </If>
 <Objective QuestName="Blue Dwarf Needs Food Badly" QuestId="30583" Type="CollectItem" ItemId="80245" CollectCount="160" />
 <If Condition="HasQuest(30583) &amp;&amp; IsQuestCompleted(30583)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Blue Dwarf Needs Food Badly" QuestId="30583" TurnInName="Sully &quot;The Pickle&quot; McLeary" TurnInId="59450" X="2144.019" Y="1449.528" Z="488.1475" />
 <If Condition="HasQuest(30575) &amp;&amp; IsQuestCompleted(30575)" >
@@ -1355,7 +1355,7 @@ need confirm
 <PickUp QuestName="The Missing Muskpaw" QuestId="30488" GiverName="Lao Muskpaw" GiverId="59353" X="2718.38" Y="380.9351" Z="508.3694" />
 <PickUp QuestName="Fresh Needle Scent" QuestId="30489" GiverName="Lao Muskpaw" GiverId="59353" X="2718.38" Y="380.9351" Z="508.3694" />
 <If Condition="HasQuest(30489) &amp;&amp; !IsQuestCompleted(30489)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <TurnIn QuestName="The Missing Muskpaw" QuestId="30488" TurnInName="Muskpaw Jr." TurnInId="61693" X="2508.27" Y="149.3381" Z="466.5988" />
 <If Condition="!HasQuest(30491) &amp;&amp; !IsQuestCompleted(30491)" >
@@ -1402,7 +1402,7 @@ need confirm
 </If>
 <Objective QuestName="Yakity Yak" QuestId="30587" Type="KillMob" MobId="59335" KillCount="9" />
 <If Condition="!HasQuest(30582) &amp;&amp; !IsQuestCompleted(30582)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
   <If Condition="!HasItem(80241)" >
     <SetGrindArea>
       <GrindArea>
@@ -1519,7 +1519,7 @@ need confirm
 </If>
 <PickUp QuestName="They Stole My Luck!" QuestId="30621" GiverName="Ji-Lu the Lucky" GiverId="59716" X="3106.916" Y="1252.368" Z="655.1705" />
 <If Condition="HasQuest(30621) &amp;&amp; !IsQuestCompleted(30621)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(30601) &amp;&amp; !IsQuestCompleted(30601)" >
   <While Condition="!IsQuestCompleted(30601)" >
@@ -1708,7 +1708,7 @@ need confirm
 <TurnIn QuestName="Lessons from History" QuestId="30801" TurnInName="Image of Lorewalker Cho" TurnInId="61297" />
 <PickUp QuestName="Chasing the Storm" QuestId="30802" GiverName="Image of Lorewalker Cho" GiverId="61297" />
 <If Condition="HasQuest(30802) &amp;&amp; !IsQuestCompleted(30802)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="MyCTM" X="3617.983" Y="1757.315" Z="742.9731" />
   <CustomBehavior File="MyCTM" X="3615.732" Y="1735.655" Z="742.974" />
   <CustomBehavior File="NoCombatMoveTo" X="3620.071" Y="1685.585" Z="742.9739" />
@@ -1721,7 +1721,7 @@ need confirm
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60887" GossipOptions="1" X="3575.159" Y="1217.988" Z="748.7608" />
   </If>
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(81712)" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Chasing the Storm" QuestId="30802" TurnInName="Image of Lorewalker Cho" TurnInId="61297" />
 <PickUp QuestName="Fisherman's Tale" QuestId="30935" GiverName="Image of Lorewalker Cho" GiverId="61297" />
@@ -1773,7 +1773,7 @@ After all fights, turn-in/accept next quest move out and start bot" />
 <PickUp QuestName="Make A Fighter Out of Me" QuestId="30942" GiverName="Shomi" GiverId="61503" X="4337.122" Y="850.9271" Z="107.454" />
 <PickUp QuestName="What's Yours Is Mine" QuestId="30945" GiverName="Steelbender Doshu" GiverId="61496" X="4333.355" Y="873.5955" Z="108.6195" />
 <If Condition="HasQuest(30944) &amp;&amp; !IsQuestCompleted(30944)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(30944) &amp;&amp; !IsQuestCompleted(30944)" >
   <While Condition="!IsQuestCompleted(30944)" >
@@ -1799,15 +1799,15 @@ After all fights, turn-in/accept next quest move out and start bot" />
 -->
 </If>
 <If Condition="HasQuest(30943) &amp;&amp; !IsQuestCompleted(30943)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Handle With Care" QuestId="30943" Type="CollectItem" ItemId="82298" CollectCount="50" />
 <If Condition="HasQuest(30945) &amp;&amp; !IsQuestCompleted(30945)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="What's Yours Is Mine" QuestId="30945" Type="CollectItem" ItemId="82299" CollectCount="6" />
 <If Condition="HasQuest(30945) &amp;&amp; IsQuestCompleted(30945)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(30942) &amp;&amp; !IsQuestCompleted(30942)" >
   <While Condition="!IsQuestCompleted(30942)" >
@@ -1909,13 +1909,13 @@ Turn-in quest and start bot"     />
 <Objective QuestName="By the Falls, For the Fallen" QuestId="30807" Type="CollectItem" ItemId="81269" CollectCount="3" />
 <Objective QuestName="Justice" QuestId="30805" Type="KillMob" MobId="60767" KillCount="1" />
 <If Condition="HasQuest(30806) &amp;&amp; !IsQuestCompleted(30806)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!IsObjectiveComplete(1, 30806)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60437" MobState="Alive" WaitForNpcs="False" CollectionDistance="1000" X="4729.318" Y="1063.349" Z="0.4883557" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60437" MobState="Alive" WaitForNpcs="False" CollectionDistance="1000" X="4685.132" Y="1105.107" Z="6.818406" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60437" MobState="Alive" WaitForNpcs="False" CollectionDistance="1000" X="4627.727" Y="1036.926" Z="12.05283" />
   </While>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
   <While Condition="!IsObjectiveComplete(2, 30806)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="211521" QuestId="30806" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="4735.666" Y="927.1714" Z="16.17522" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="211521" QuestId="30806" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="4728.723" Y="851.9139" Z="16.29435" />
@@ -2214,7 +2214,7 @@ Turn-in quest and start bot"     />
 <PickUp QuestName="Turnabout" QuestId="30670" GiverName="Shado-Master Chong" GiverId="60161" X="1866.205" Y="2055.865" Z="455.6911" />
 <PickUp QuestName="The Defense of Shado-Pan Fallback" QuestId="30665" GiverName="Shado-Master Chong" GiverId="60161" X="1866.205" Y="2055.865" Z="455.6911" />
 <If Condition="HasQuest(30670) &amp;&amp; !IsQuestCompleted(30670)" >  <!--out-->
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 	<RunTo X="1898.575" Y="2054.43" Z="455.6694" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="215381" ObjectType="GameObject" WaitTime="1" X="1902.315" Y="2054.299" Z="455.6709" />
   <RunTo X="1923.246" Y="2054.673" Z="451.024" />
@@ -2233,7 +2233,7 @@ Turn-in quest and start bot"     />
 </If>
 <Objective QuestName="Turnabout" QuestId="30670" Type="CollectItem" ItemId="81713" CollectCount="5" />
 <If Condition="HasQuest(30670) &amp;&amp; IsQuestCompleted(30670)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="The Defense of Shado-Pan Fallback" QuestId="30665" Type="KillMob" MobId="60164" KillCount="15" />
 <If Condition="HasQuest(30670)" > <!--in-->

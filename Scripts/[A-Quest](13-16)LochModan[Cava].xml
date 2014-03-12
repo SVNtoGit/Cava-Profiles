@@ -207,7 +207,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Loch Modan Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 13.94 # # # -->
 <If Condition="!HasQuest(26843) &amp;&amp; !IsQuestCompleted(26843)">
@@ -257,7 +257,7 @@
 <!--# # # Level 15 # # # -->
 <If Condition="HasQuest(26932) &amp;&amp; !IsQuestCompleted(26932)">
   <CustomBehavior File="NoCombatMoveTo" X="-5655.315" Y="-3257.174" Z="310.3832" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"  />
+  <LootMobs Value="true" />
   <CustomBehavior File="Cava\PullMobs" QuestId="26932" PullMob="True" MobId="44184" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-5565.092" Y="-3395.412" Z="282.6703" />
       <Hotspot X="-5585.981" Y="-3361.089" Z="282.3324" />
@@ -274,7 +274,7 @@
 -->
 </If>
 <If Condition="HasQuest(26929) &amp;&amp; !IsQuestCompleted(26929)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="A Load of Croc" QuestId="26929" Type="CollectItem" ItemId="57131" CollectCount="6" />
 <TurnIn QuestName="Buzz Off" QuestId="26932" TurnInName="Mountaineer Kadrell" TurnInId="1340" X="-5344.39" Y="-2960.96" Z="323.8644" />
@@ -355,7 +355,7 @@
 </If>
 <PickUp QuestName="Keep Your Hands Off The Goods!" QuestId="13650" GiverName="Prospector Ironband" GiverId="1344" X="-5701.221" Y="-3795.922" Z="322.5707" />
 <If Condition="HasQuest(26961) &amp;&amp; !IsQuestCompleted(26961)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <PickUp QuestName="Explorers' League Document (4 of 6)" QuestId="13658" GiverName="Stolen Explorers' League Document" GiverType="GameObject" GiverId="194389" X="-5702.366" Y="-3872.964" Z="331.4975" />
 <If Condition="HasQuest(13650) &amp;&amp; !IsQuestCompleted(13650)">
@@ -370,7 +370,7 @@
   </While>
 </If>
 <If Condition="HasQuest(26961) &amp;&amp; !IsQuestCompleted(26961)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Gathering Idols" QuestId="26961" Type="CollectItem" ItemId="2636" CollectCount="8" />
 <TurnIn QuestName="Keep Your Hands Off The Goods!" QuestId="13650" TurnInName="Prospector Ironband" TurnInId="1344" X="-5701.221" Y="-3795.922" Z="322.5707" />

@@ -490,8 +490,9 @@ Also be sure to:\n
   <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
   Text="This profile have some quests particularly writen for race Human. That quests will be ignored."/>
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True"  />
-<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="True"  />
+<!--
+
+-->
 <!--# # # Level 1 # # # -->
 <CustomBehavior File="Message" Text="Compiling Northshire Map Zone" LogColor="Aquamarine" />
 <If Condition="Me.Race != WoWRace.Human" >
@@ -837,7 +838,7 @@ Also be sure to:\n
 <PickUp QuestName="Extinguishing Hope" QuestId="26391" GiverName="Milly Osworth" GiverId="9296" X="-8923.88" Y="-135.8889" Z="81.02888" />
 <If Condition="HasQuest(26391) &amp;&amp; !IsQuestCompleted(26391)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(26391)" >
 	<CustomBehavior File="Cava\UseItemOn" QuestId="26391" MobId="42940" WaitForNpcs="False" ItemId="58362" WaitTime="5000" Range="14" CollectionDistance="1000" X="-9018.247" Y="-333.0823" Z="74.41655" />
 	<CustomBehavior File="Cava\UseItemOn" QuestId="26391" MobId="42940" WaitForNpcs="False" ItemId="58362" WaitTime="5000" Range="14" CollectionDistance="1000" X="-9055.313" Y="-316.4948" Z="73.45457" />
@@ -846,7 +847,7 @@ Also be sure to:\n
   </While>
 </If>
 <If Condition="HasQuest(26391) &amp;&amp; IsQuestCompleted(26391)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Blackrock Invasion" QuestId="26389" Type="CollectItem" ItemId="58361" CollectCount="8" />
 <TurnIn QuestName="Extinguishing Hope" QuestId="26391" TurnInName="Milly Osworth" TurnInId="9296" X="-8923.88" Y="-135.8889" Z="81.02888" />

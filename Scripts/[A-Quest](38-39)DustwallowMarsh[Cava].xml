@@ -154,40 +154,40 @@
   Please move your char to: DUSTWALLOW MARSH\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(27251) &amp;&amp; !IsQuestCompleted(27251)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
@@ -289,7 +289,7 @@
 </If>
 <!--<PickUp QuestName="Thresher Oil" QuestId="27217" GiverName="Babs Fizzletorque" GiverId="23892" X="-3680.205" Y="-4760.722" Z="1.304462" />-->
 <If Condition="HasQuest(27213) &amp;&amp; !IsQuestCompleted(27213)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="-3967.719" Y="-4999.23" Z="3.106955" />
   <RunTo X="-4023.481" Y="-4994.814" Z="12.83748" />
   <RunTo X="-4016.968" Y="-5002.838" Z="7.784717" />
@@ -298,7 +298,7 @@
   </While>
 </If>
 <!--<If Condition="HasQuest(27217) &amp;&amp; !IsQuestCompleted(27217)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27217" MobId="4388" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-3699.655" Y="-4768.863" Z="-1.910259" />
     <Hotspot X="-3730.099" Y="-4742.365" Z="-1.910259" />
@@ -317,7 +317,7 @@
     <Hotspot X="-3732.307" Y="-4760.501" Z="-1.910259" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Thresher Oil" QuestId="27217" TurnInName="Babs Fizzletorque" TurnInId="23892" X="-3680.205" Y="-4760.722" Z="1.304462" />
 <PickUp QuestName="Dastardly Denizens of the Deep" QuestId="27218" GiverName="Babs Fizzletorque" GiverId="23892" X="-3680.205" Y="-4760.722" Z="1.304462" />
@@ -345,7 +345,7 @@
 </If>
 <Objective QuestName="Defias in Dustwallow?" QuestId="27234" Type="CollectItem" ItemId="33037" CollectCount="1" />
 <If Condition="HasQuest(1204) &amp;&amp; !IsQuestCompleted(1204)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="1204" MobId="4397" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-3279.69" Y="-4278.41" Z="3.325081" />
     <Hotspot X="-3319.59" Y="-4285.903" Z="1.312276" />
@@ -386,7 +386,7 @@
     <Hotspot X="-3212.406" Y="-4253.621" Z="1.171233" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="Mudrock Soup and Bugs" QuestId="1204" Type="CollectItem" ItemId="5883" CollectCount="8" />
 -->
@@ -522,7 +522,7 @@
 </If>
 <PickUp QuestName="... and Bugs" QuestId="1258" GiverName="Morgan Stern" GiverId="4794" X="-3738.4" Y="-4558.98" Z="11.89766" />
 <If Condition="HasQuest(1258) &amp;&amp; !IsQuestCompleted(1258)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="1258" MobId="44390" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-3586.767" Y="-4407.468" Z="14.45166" />
     <Hotspot X="-3565.074" Y="-4440.605" Z="8.016482" />
@@ -536,7 +536,7 @@
     <Hotspot X="-3779.422" Y="-4659.629" Z="11.04537" />
     <Hotspot X="-3780.326" Y="-4659.723" Z="11.37439" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="... and Bugs" QuestId="1258" Type="CollectItem" ItemId="5938" CollectCount="12" />
 -->
@@ -558,7 +558,7 @@
 <PickUp QuestName="What's Haunting Witch Hill?" QuestId="27188" GiverName="Mordant Grimsby" GiverId="23843" X="-2948.356" Y="-3893.17" Z="35.05546" />
 <PickUp QuestName="The Orc Report" QuestId="27246" GiverName="Loose Dirt" GiverId="20985" GiverType="GameObject" X="-2940.664" Y="-3884.77" Z="35.00951" />
 <If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27183" MobId="23979" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-2939.012" Y="-3883.433" Z="34.86161" />
     <Hotspot X="-2909.818" Y="-3911.979" Z="38.03432" />
@@ -573,7 +573,7 @@
     <Hotspot X="-2975.743" Y="-3865.12" Z="28.54964" />
     <Hotspot X="-2935.093" Y="-3861.285" Z="29.0013" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="Marsh Frog Legs" QuestId="27183" Type="CollectItem" ItemId="33202" CollectCount="10" />
 -->

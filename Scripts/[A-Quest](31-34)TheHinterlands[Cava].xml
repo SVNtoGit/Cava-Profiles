@@ -302,40 +302,40 @@
   Please move your char to: THE HINTERLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(26497) &amp;&amp; !IsQuestCompleted(26497)">
   <CustomBehavior File="Cava\SetHearthstone" MobId="43699" X="328.227" Y="-4122.65" Z="117.2022" />
@@ -375,7 +375,7 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(26521) &amp;&amp; !IsQuestCompleted(26521)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <While Condition="!IsQuestCompleted(26521)" >
     <CustomBehavior File="Cava\UseItemOn" QuestId="26521" MobId="42704" WaitForNpcs="False" ItemId="58209" WaitTime="3000" Range="5" CollectionDistance="1000" X="-312.6948" Y="-4189.435" Z="140.2505" />
     <CustomBehavior File="Cava\UseItemOn" QuestId="26521" MobId="42704" WaitForNpcs="False" ItemId="58209" WaitTime="3000" Range="5" CollectionDistance="1000" X="-340.4344" Y="-4162.973" Z="152.0158" />
@@ -399,16 +399,16 @@
   </While>
 </If>
 <If Condition="HasQuest(26518) &amp;&amp; !IsQuestCompleted(26518)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Heads Up" QuestId="26518" Type="CollectItem" ItemId="58236" CollectCount="1" />
 <If Condition="HasQuest(26497) &amp;&amp; !IsQuestCompleted(26497)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Vilebranch Scum" QuestId="26497" Type="KillMob" MobId="2640" KillCount="5" />
 <Objective QuestName="Vilebranch Scum" QuestId="26497" Type="KillMob" MobId="2641" KillCount="5" />
 <If Condition="HasQuest(26497) &amp;&amp; IsQuestCompleted(26497)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <If Condition="HasQuest(26523) || HasQuest(26521) || HasQuest(26518) || HasQuest(26497)" >
   <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
@@ -452,12 +452,12 @@
 -->
 </If>
 <If Condition="HasQuest(26516) &amp;&amp; !IsQuestCompleted(26516)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="It's Ours Now" QuestId="26516" Type="KillMob" MobId="2647" KillCount="5" />
 <Objective QuestName="It's Ours Now" QuestId="26516" Type="KillMob" MobId="2646" KillCount="5" />
 <If Condition="HasQuest(26516) &amp;&amp; IsQuestCompleted(26516)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <If Condition="HasQuest(26515) &amp;&amp; !IsQuestCompleted(26515)" >
   <While Condition="!IsQuestCompleted(26515)" >
@@ -473,7 +473,7 @@
 </If>
 <PickUp QuestName="Summit of Fate" QuestId="26517" GiverName="Fraggar Thundermantle" GiverId="43156" X="-72.1545" Y="-4028.66" Z="122.1784" />
 <If Condition="HasQuest(26517) &amp;&amp; !IsQuestCompleted(26517)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43157" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-70.0069" Y="-4034.88" Z="122.481" />
   <CustomBehavior File="WaitTimer" WaitTime="30000" />
   <CustomBehavior File="CollectThings" QuestId="26517" MobId="42857" CollectItemCount="8" CollectItemId="58228" HuntingGroundRadius="200" >
@@ -482,7 +482,7 @@
     <Hotspot X="-534.7846" Y="-3903.694" Z="227.4898" />
     <Hotspot X="-505.246" Y="-3875.051" Z="227.4899" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(26517) &amp;&amp; IsQuestCompleted(26517)" >
   <RunTo X="-537.4567" Y="-3865.408" Z="230.5651" />
@@ -504,12 +504,12 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43157" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-70.0069" Y="-4034.88" Z="122.481" />
   <CustomBehavior File="WaitTimer" WaitTime="30000" />
   <RunTo X="-542.9493" Y="-3857.324" Z="230.5654" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Hunt the Keeper" QuestId="26526" Type="CollectItem" ItemId="58241" CollectCount="1" />
 <Objective QuestName="Venomous Secrets" QuestId="26525" Type="KillMob" MobId="42879" KillCount="8" />
 <If Condition="HasQuest(26525) &amp;&amp; IsQuestCompleted(26525)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
   <RunTo X="-537.4567" Y="-3865.408" Z="230.5651" />
   <RunTo X="-550.081" Y="-3854.857" Z="230.566" />
   <RunTo X="-509.1729" Y="-3816.553" Z="236.9679" />
@@ -532,7 +532,7 @@
 <Objective QuestName="The Highvale Documents" QuestId="27626" Type="CollectItem" ItemId="61974" CollectCount="1" />
 <Objective QuestName="The Highvale Documents" QuestId="27626" Type="CollectItem" ItemId="61972" CollectCount="1" />
 <If Condition="HasQuest(27625) &amp;&amp; !IsQuestCompleted(27625)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <CustomBehavior File="CollectThings" QuestId="27625" MobId="43541" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="282.0921" Y="-2675.381" Z="118.8438" />
     <Hotspot X="243.0529" Y="-2688.761" Z="118.3446" />
@@ -547,7 +547,7 @@
 <!--
 <Objective QuestName="In Defense of Quel'Danil" QuestId="27625" Type="KillMob" MobId="43541" KillCount="16" />
 -->
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="In Defense of Quel'Danil" QuestId="27625" TurnInName="Anchorite Traska" TurnInId="46475" X="375.012" Y="-2812.79" Z="122.5631" />
 <TurnIn QuestName="The Highvale Documents" QuestId="27626" TurnInName="Anchorite Traska" TurnInId="46475" X="375.012" Y="-2812.79" Z="122.5631" />
@@ -578,11 +578,11 @@
 <PickUp QuestName="Starvation Diet" QuestId="26643" GiverName="Gilda Cloudcaller" GiverId="43200" X="258.892" Y="-2756.12" Z="122.5556" />
 <Objective QuestName="The Fang of Shadra" QuestId="26529" Type="CollectItem" ItemId="58281" CollectCount="1" />
 <If Condition="HasQuest(26643) &amp;&amp; !IsQuestCompleted(26643)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Starvation Diet" QuestId="26643" Type="KillMob" MobId="42907" KillCount="6" />
 <If Condition="HasQuest(26643) &amp;&amp; IsQuestCompleted(26643)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="The Fang of Shadra" QuestId="26529" TurnInName="Gilda Cloudcaller" TurnInId="43200" X="258.892" Y="-2756.12" Z="122.5556" />
 <TurnIn QuestName="Starvation Diet" QuestId="26643" TurnInName="Gilda Cloudcaller" TurnInId="43200" X="258.892" Y="-2756.12" Z="122.5556" />

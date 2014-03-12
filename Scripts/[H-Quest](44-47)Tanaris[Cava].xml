@@ -327,40 +327,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Tanaris Quests (44-47)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 44 # # # -->
 <If Condition="!HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
@@ -542,15 +542,15 @@
 <PickUp QuestName="I'm With Scorpid" QuestId="25521" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
 <PickUp QuestName="Blood to Thrive" QuestId="25021" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25521) &amp;&amp; !IsQuestCompleted(25521)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Blood to Thrive" QuestId="25021" Type="CollectItem" ItemId="52064" CollectCount="6" />
 <If Condition="HasQuest(25021)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="I'm With Scorpid" QuestId="25521" Type="CollectItem" ItemId="54856" CollectCount="6" />
 <If Condition="HasQuest(25021) || HasQuest(25521)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Blood to Thrive" QuestId="25021" TurnInName="Mazoga" TurnInId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <PickUp QuestName="Sang'thraze the Deflector" QuestId="25025" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
@@ -697,7 +697,7 @@
   <Objective QuestName="Going Off-Task" QuestId="25534" Type="KillMob" MobId="40593" KillCount="1" />
 </If>
 <If Condition="HasQuest(25541) &amp;&amp; !IsQuestCompleted(25541)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="25541" MobId1="40632" MobId2="40635" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-8152.419" Y="-5276.068" Z="0.8975762" />
       <Hotspot X="-8157.995" Y="-5235.178" Z="3.516941" />
@@ -719,7 +719,7 @@
       <Hotspot X="-8188.07" Y="-5184.88" Z="3.483377" />
       <Hotspot X="-8195.218" Y="-5225.7" Z="1.193607" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Going Off-Task" QuestId="25534" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
 <TurnIn QuestName="Filling Our Pockets" QuestId="25541" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
@@ -858,7 +858,7 @@
 <PickUp QuestName="Chicken of the Desert" QuestId="24933" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
 <PickUp QuestName="Gazer Tag" QuestId="24931" GiverName="Narain Soothfancy" GiverId="11811" X="-8668.307" Y="-4046.204" Z="43.67571" />
 <If Condition="(HasQuest(24931) &amp;&amp; !IsQuestCompleted(24931)) || (HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933))" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(24931) &amp;&amp; !IsQuestCompleted(24931) &amp;&amp; HasQuest(24933) &amp;&amp; !IsQuestCompleted(24933)" >
   <SetGrindArea>
@@ -975,7 +975,7 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(24931) || HasQuest(24933)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Gazer Tag" QuestId="24931" TurnInName="Narain Soothfancy" TurnInId="11811" X="-8668.307" Y="-4046.204" Z="43.67571" />
 <TurnIn QuestName="Chicken of the Desert" QuestId="24933" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />

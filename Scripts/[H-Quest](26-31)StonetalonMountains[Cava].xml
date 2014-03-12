@@ -339,40 +339,40 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--Pre quest needed-->
 <PickUp QuestName="We're Here to Do One Thing, Maybe Two..." QuestId="25945" GiverName="Blood Guard Aldo Rockrain" GiverId="41678" X="2144.821" Y="-1176.224" Z="98.51606" />
@@ -409,7 +409,7 @@
 <TurnIn QuestName="The Missing Blastgineer" QuestId="26001" TurnInName="Blastgineer Fuzzwhistle" TurnInId="40901" X="1177.273" Y="-422.2951" Z="22.02202" />
 <PickUp QuestName="Alliance Attack Plans" QuestId="26002" GiverName="Blastgineer Fuzzwhistle" GiverId="40901" X="1177.273" Y="-422.2951" Z="22.02202" />
 <If Condition="(HasQuest(26002) &amp;&amp; !IsQuestCompleted(26002)) || (HasQuest(26003) &amp;&amp; !IsQuestCompleted(26003))" >
-  <CustomBehavior File="Cava\CavaSettings" />
+  
 </If>
 <Objective QuestName="Alliance Attack Plans" QuestId="26002" Type="CollectItem" ItemId="56469" CollectCount="1" />
 <If Condition="HasQuest(26003) &amp;&amp; !IsQuestCompleted(26003) &amp;&amp; !Me.HasAura(78050)" >

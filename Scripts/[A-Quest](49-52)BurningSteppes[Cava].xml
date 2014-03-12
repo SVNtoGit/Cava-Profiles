@@ -312,40 +312,40 @@
   Please move your char to: BURNING STEPPES\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Burning Steppes Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 49.55 # # # -->
@@ -431,15 +431,15 @@
 </If>-->
 <If Condition="HasQuest(28179) &amp;&amp; !IsQuestCompleted(28179)" >
   <If Condition="HasQuest(28177) &amp;&amp; !IsQuestCompleted(28177)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(28178) &amp;&amp; !IsQuestCompleted(28178)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
 </If>
 <Objective QuestName="Mud Hunter" QuestId="28179" Type="CollectItem" ItemId="63124" CollectCount="9" />
 <If Condition="HasQuest(28177) &amp;&amp; !IsQuestCompleted(28177) &amp;&amp; HasQuest(28178) &amp;&amp; !IsQuestCompleted(28178)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <SetGrindArea>
   <GrindArea>
   <Factions>38 413</Factions>
@@ -476,12 +476,12 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(28177) || IsQuestCompleted(28178)" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="A Future Project" QuestId="28178" Type="CollectItem" ItemId="63136" CollectCount="11" />
 <Objective QuestName="Stocking Up" QuestId="28177" Type="CollectItem" ItemId="63135" CollectCount="5" />
 <If Condition="HasQuest(28177) &amp;&amp; IsQuestCompleted(28177)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Stocking Up" QuestId="28177" TurnInName="John J. Keeshan" TurnInId="47811" X="-8079.33" Y="-1008.72" Z="132.9684" />
 <TurnIn QuestName="A Future Project" QuestId="28178" TurnInName="John J. Keeshan" TurnInId="47811" X="-8079.33" Y="-1008.72" Z="132.9684" />
@@ -495,7 +495,7 @@
 <PickUp QuestName="Warlocks Have the Neatest Stuff" QuestId="28181" GiverName="Gorzeeki Wildeyes" GiverId="14437" X="-7736.61" Y="-729.031" Z="181.9119" />
 <PickUp QuestName="Shadow Boxing" QuestId="28182" GiverName="Gorzeeki Wildeyes" GiverId="14437" X="-7736.61" Y="-729.031" Z="181.9119" />
 <If Condition="HasQuest(28181) &amp;&amp; !IsQuestCompleted(28181)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Shadow Boxing" QuestId="28182" Type="KillMob" MobId="47805" KillCount="1" />
 <If Condition="HasQuest(28181) &amp;&amp; !IsQuestCompleted(28181)" >
@@ -510,7 +510,7 @@
 <Objective QuestName="Warlocks Have the Neatest Stuff" QuestId="28181" Type="CollectItem" ItemId="63133" CollectCount="1" />
 <Objective QuestName="Warlocks Have the Neatest Stuff" QuestId="28181" Type="CollectItem" ItemId="63134" CollectCount="1" />
 <If Condition="HasQuest(28181) &amp;&amp; IsQuestCompleted(28181)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Warlocks Have the Neatest Stuff" QuestId="28181" TurnInName="Gorzeeki Wildeyes" TurnInId="14437" X="-7736.61" Y="-729.031" Z="181.9119" />
 <TurnIn QuestName="Shadow Boxing" QuestId="28182" TurnInName="Gorzeeki Wildeyes" TurnInId="14437" X="-7736.61" Y="-729.031" Z="181.9119" />
@@ -2099,7 +2099,7 @@
     <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8236.797" Y="-2708.298" Z="135.2648" />
   </While>
   <CustomBehavior File="Cava\CavaSettings" Preset="UserOriginal" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
+  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
 </If>
 <If Condition="HasQuest(28415) &amp;&amp; !IsQuestCompleted(28415) &amp;&amp; HasQuest(28312) &amp;&amp; !IsQuestCompleted(28312)" >
   <While Condition="!IsQuestCompleted(28415) &amp;&amp; !IsQuestCompleted(28312)" >
@@ -2322,7 +2322,7 @@
 </If>-->
 <PickUp QuestName="Glory Amidst Chaos" QuestId="28321" GiverName="Colonel Troteman" GiverId="48307" X="-8395.82" Y="-2785.71" Z="194.7973" />
 <If Condition="HasQuest(28321) &amp;&amp; !IsQuestCompleted(28321)">
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <If Condition="!IsObjectiveComplete(3, 28321)">
     <RunTo X="-7977.76" Y="-2676.08" Z="156.9" />
   </If>
@@ -2337,7 +2337,7 @@
   <Objective QuestName="Glory Amidst Chaos" QuestId="28321" Type="KillMob" MobId="48316" KillCount="1" />
 </If>
 <If Condition="HasQuest(28321) &amp;&amp; IsQuestCompleted(28321)">
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="Glory Amidst Chaos" QuestId="28321" TurnInName="Colonel Troteman" TurnInId="48307" X="-8395.82" Y="-2785.71" Z="194.7973" />
 <!--# # # Level 52 # # # -->

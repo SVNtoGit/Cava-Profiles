@@ -119,40 +119,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 51.65 # # # -->
 <If Condition="!HasQuest(28522) &amp;&amp; !IsQuestCompleted(28522)" >
@@ -242,7 +242,7 @@
 <PickUp QuestName="Winterfall Runners" QuestId="28469" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <PickUp QuestName="Scalding Signs" QuestId="28530" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <If Condition="HasQuest(28530) &amp;&amp; !IsQuestCompleted(28530)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="28530" MobId1="48767" MobId2="48768" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6693.444" Y="-2970.353" Z="572.6801" />
     <Hotspot X="6699.752" Y="-3010.257" Z="573.3894" />
@@ -261,7 +261,7 @@
     <Hotspot X="6720.028" Y="-2933.25" Z="575.8972" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Winterfall Runners" QuestId="28469" Type="CollectItem" ItemId="12829" CollectCount="1" />
 <!--# # # Level 52 # # # -->
@@ -274,7 +274,7 @@
 </If>
 <PickUp QuestName="High Chief Winterfall" QuestId="28470" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
@@ -283,7 +283,7 @@
   </While>
 </If>
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; HasItem(12842)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <PickUp QuestName="The Final Piece" QuestId="28471" GiverType="Item" GiverName="Crudely-Written Log" GiverId="12842" />
 </If>
 <TurnIn QuestName="High Chief Winterfall" QuestId="28470" TurnInName="Donova Snowden" TurnInId="9298" X="6395.573" Y="-2536.748" Z="541.535" />

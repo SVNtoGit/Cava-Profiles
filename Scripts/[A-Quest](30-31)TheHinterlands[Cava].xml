@@ -207,40 +207,40 @@
   Please move your char to: THE HINTERLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(26546) &amp;&amp; !IsQuestCompleted(26546)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
@@ -308,7 +308,7 @@
 <PickUp QuestName="Snapjaws, Lad!" QuestId="26485" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.213" />
 <PickUp QuestName="99 Bottles of Booze on the Beach" QuestId="26486" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.213" />
 <If Condition="HasQuest(26483) &amp;&amp; !IsQuestCompleted(26483)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <RunTo X="86.10722" Y="-4346.875" Z="118.37" />
 </If>
 <Objective QuestName="Gan'dranda" QuestId="26483" Type="KillMob" MobId="42609" KillCount="1" />
@@ -322,11 +322,11 @@
     <Hotspot X="116.6908" Y="-4309.9" Z="117.1599" />
     <Hotspot X="97.30265" Y="-4345.406" Z="118.8698" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <If Condition="HasQuest(26485) &amp;&amp; !IsQuestCompleted(26485)" >
   <RunTo X="-114.1853" Y="-4500.412" Z="27.35226" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="26485" MobId="2505" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-90.13332" Y="-4555.643" Z="8.833472" />
       <Hotspot X="-70.66744" Y="-4591.248" Z="12.65366" />
@@ -367,7 +367,7 @@
 -->
 </If>
 <If Condition="HasQuest(26485) &amp;&amp; IsQuestCompleted(26485)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="99 Bottles of Booze on the Beach" QuestId="26486" Type="CollectItem" ItemId="3900" CollectCount="12" />
 <If Condition="HasQuest(26485)">
@@ -387,18 +387,18 @@
 <PickUp QuestName="Prime Slime" QuestId="26490" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.2127" />
 -->
 <If Condition="HasQuest(26492) &amp;&amp; !IsQuestCompleted(26492)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="488.306" Y="-3847.647" Z="108.9968" />
   <Objective QuestName="Skulk Rock Supplies" QuestId="26492" Type="CollectItem" ItemId="57989" CollectCount="5" />
 </If>
 <!--
 <If Condition="HasQuest(26490) &amp;&amp; !IsQuestCompleted(26490)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Prime Slime" QuestId="26490" Type="CollectItem" ItemId="58082" CollectCount="1" />
 -->
 <If Condition="HasQuest(26491) &amp;&amp; !IsQuestCompleted(26491)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Skulk Rock Clean-Up" QuestId="26491" Type="KillMob" MobId="2656" KillCount="10" />
 <!--# # # Level 31 # # # -->

@@ -419,40 +419,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 52.40 # # # -->
 <PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
@@ -581,7 +581,7 @@
 </If>
 <PickUp QuestName="Chop Chop" QuestId="28625" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <If Condition="HasQuest(28625) &amp;&amp; !IsQuestCompleted(28625)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="28625" MobId="48952" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="6628.797" Y="-4403.601" Z="707.5793" />
     <Hotspot X="6651.103" Y="-4368.908" Z="705.916" />
@@ -607,7 +607,7 @@
     <Hotspot X="6738.497" Y="-4215.281" Z="702.4594" />
     <Hotspot X="6727.959" Y="-4253.877" Z="708.2627" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Chop Chop" QuestId="28625" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Tree Delivery" QuestId="28626" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
@@ -632,17 +632,17 @@
 <PickUp QuestName="Echo Three" QuestId="28630" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="The Perfect Horns" QuestId="28631" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Echo Three" QuestId="28630" TurnInName="Echo Three" TurnInId="207291" TurnInType="GameObject" X="6532.741" Y="-5115.498" Z="769.7291" />
 <If Condition="HasQuest(28631) &amp;&amp; !IsQuestCompleted(28631)" >
   <CustomBehavior File="WaitTimer" WaitTime="10000" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="EjectVeh" />
 </If>
 <Objective QuestName="The Perfect Horns" QuestId="28631" Type="CollectItem" ItemId="64664" CollectCount="1" />
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(28632)" >
     <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
       <HuntingGrounds>
@@ -665,7 +665,7 @@
       </HuntingGrounds>
     </CustomBehavior>
   </While>>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >
   <Objective QuestName="Are We There, Yeti?" QuestId="28629" Type="CollectItem" ItemId="12366" CollectCount="10" />

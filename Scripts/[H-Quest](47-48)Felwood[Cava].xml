@@ -179,40 +179,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Felwood Quests (47-48)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 470.55 # # # -->
 <If Condition="!HasQuest(28100) &amp;&amp; !IsQuestCompleted(28100)" >
@@ -225,7 +225,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="A Talking Totem" QuestId="28100" GiverName="Grazle" GiverId="11554" X="3986.96" Y="-1318.72" Z="245.765" />
 <PickUp QuestName="The Corruption of the Jadefire" QuestId="27997" GiverName="Tenell Leafrunner" GiverId="10923" X="3984.37" Y="-1301.71" Z="244.3052" />
 <PickUp QuestName="Culling the Corrupted" QuestId="28148" GiverName="Taronn Redfeather" GiverId="10921" X="3998.68" Y="-1288.68" Z="245.7322" />
@@ -347,7 +347,7 @@
       <RunTo X="4176.76" Y="-685.3157" Z="282.6908" />
       <UseItem QuestId="28044" ItemId="62920" X="4176.76" Y="-685.3157" Z="282.6908" />
     </If>
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
     <GrindArea>
     <Factions>90</Factions>
@@ -357,7 +357,7 @@
     </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsQuestCompleted(28044) || !Me.HasAura(88438)" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+    <LootMobs Value="null" />
   </While>
 </If>
 <If Condition="HasQuest(28044)">
