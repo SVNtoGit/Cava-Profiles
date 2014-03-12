@@ -624,7 +624,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Eastern Plaguelands Quests (40-44)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -1040,7 +1040,8 @@
 <TurnIn QuestName="Honor and Strength" QuestId="27449" TurnInName="Vex'tul" TurnInId="45574" X="2324" Y="-4414.97" Z="95.85357" />
 <If Condition="HasQuest(27450) &amp;&amp; !IsQuestCompleted(27450)">
   <RunTo X="2115.971" Y="-4311.359" Z="75.96283" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="False"/>
+  <CustomBehavior File="UserSettings"   UseMount="False"/>
+<LootMobs Value="true" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="CollectThings" QuestId="27450" MobId="45650" MobState="Alive" CollectItemCount="8" CollectItemId="61292" HuntingGroundRadius="200" >
     <Hotspot X="1973.141" Y="-4304.143" Z="16.93481" />
@@ -1067,7 +1068,8 @@
     <Hotspot X="2070.952" Y="-4331.023" Z="10.81298" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="True" />
+  <CustomBehavior File="UserSettings"   UseMount="True" />
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(27451) &amp;&amp; !IsQuestCompleted(27451)">
   <LootMobs Value="true" />
@@ -1114,7 +1116,7 @@
   <PickUp QuestName="Catalysm" QuestId="27453" GiverName="Betina Bigglezink" GiverId="11035" X="2237.27" Y="-4433.15" Z="111.7315" />
 </If>
 <If Condition="HasQuest(27453) &amp;&amp; !IsQuestCompleted(27453)" >
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(27453)" >
   <CustomBehavior File="CombatUseItemOnV2" QuestId="27453" ItemId="61284" MobId1="8519" MobId2="8520" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
     UseWhenMobHasHealthPercent="25" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000" UseItemStrategy="UseItemOncePerTarget" >
@@ -1138,7 +1140,7 @@
   </CustomBehavior>
   </While>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
 </If>
 <If Condition="HasQuest(27453)" >
    <While Condition="HasQuest(27453)" >
@@ -1219,7 +1221,7 @@
 <Objective QuestName="Smokey and the Bandage" QuestId="27458" Type="CollectItem" ItemId="62028" CollectCount="1" />
 <If Condition="HasQuest(27467) &amp;&amp; !IsQuestCompleted(27467)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="2712.279" Y="-5349.025" Z="164.2282" />
@@ -1236,7 +1238,7 @@
     <Hotspot X="2660.536" Y="-5395.619" Z="157.6154" />
     </HuntingGrounds>
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <Objective QuestName="Argent Call: The Noxious Glade" QuestId="27465" Type="KillMob" MobId="45691" KillCount="8" />
 <Objective QuestName="Argent Call: The Noxious Glade" QuestId="27465" Type="KillMob" MobId="8545" KillCount="16" />

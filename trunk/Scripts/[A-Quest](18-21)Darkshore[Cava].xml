@@ -172,7 +172,7 @@
 </If>
 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
   Text="This profile use special Quest Behaviors, be sure Cava's folder is at right place" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -216,7 +216,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
 <CustomBehavior File="Message" Text="Compiling Darkshore Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 18.55 # # # -->
 <PickUp QuestName="What's Happening to the Blackwood Furbolg?" QuestId="13525" GiverName="Foriel Broadleaf" GiverId="33250" X="4981.893" Y="98.16146" Z="52.57559" />

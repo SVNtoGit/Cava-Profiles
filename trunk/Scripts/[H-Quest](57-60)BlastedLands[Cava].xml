@@ -707,7 +707,8 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<LootMobs Value="true" />
 <PickUp QuestName="Futile Pride" QuestId="25674" GiverName="Okrilla" GiverId="41124" X="-10867.65" Y="-2675.7" Z="9.808718" />
 <If Condition="HasQuest(25674) &amp;&amp; !IsQuestCompleted(25674)" >
   <Objective QuestName="Futile Pride" QuestId="25674" Type="KillMob" MobId="41136" KillCount="1" />
@@ -715,7 +716,7 @@
 <TurnIn QuestName="Futile Pride" QuestId="25674" TurnInName="Okrilla" TurnInId="41124" X="-10867.65" Y="-2675.7" Z="9.808718" />
 <If Condition="!HasQuest(25676) &amp;&amp; !IsQuestCompleted(25676) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
@@ -802,7 +803,7 @@
 <TurnIn QuestName="Mission Complete" QuestId="25682" TurnInName="Okrilla" TurnInId="41124" X="-10867.65" Y="-2675.7" Z="9.808218" />
 <If Condition="!HasQuest(25683) &amp;&amp; !IsQuestCompleted(25683) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
@@ -958,7 +959,7 @@
 <TurnIn QuestName="The First Step" QuestId="25685" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="!HasQuest(25686) &amp;&amp; !IsQuestCompleted(25686) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
     <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
@@ -1007,7 +1008,7 @@
 <TurnIn QuestName="Not Just Any Body" QuestId="25687" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="!HasQuest(25688) &amp;&amp; !IsQuestCompleted(25688) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
     <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
@@ -1054,7 +1055,7 @@
 <TurnIn QuestName="The Altar of Storms" QuestId="25688" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952704" />
 <If Condition="!HasQuest(25689) &amp;&amp; !IsQuestCompleted(25689) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
     <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
@@ -1115,7 +1116,7 @@
 <TurnIn QuestName="Protecting Our Rear" QuestId="25694" TurnInName="Warlord Dar'toon" TurnInId="19254" X="-11817.3" Y="-3187.891" Z="-30.67968" />
 <If Condition="HasQuest(25695) &amp;&amp; !IsQuestCompleted(25695) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
@@ -1149,7 +1150,7 @@
 <TurnIn QuestName="Watching Our Back" QuestId="25695" TurnInName="Warlord Dar'toon" TurnInId="19254" X="-11817.3" Y="-3187.891" Z="-30.67968" />
 <If Condition="!HasQuest(25696) &amp;&amp; !IsQuestCompleted(25696) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
@@ -1189,7 +1190,7 @@
 <TurnIn QuestName="Enhancing the Stone" QuestId="25693" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952949" />
 <If Condition="HasQuest(25697) &amp;&amp; !IsQuestCompleted(25697) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
     <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
@@ -1227,7 +1228,8 @@
 <If Condition="HasQuest(25699) &amp;&amp; !IsQuestCompleted(25699)" >
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" LootMobs="True" />
+  <CustomBehavior File="UserSettings" UseMount="False"  />
+<LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(25699)" >
     <RunTo QuestId="25699" X="-11451.77" Y="-3791.916" Z="4.035245" />
     <CustomBehavior File="MyCTM" QuestId="25699" X="-11446.63" Y="-3799.184" Z="-2.003908" />
@@ -1244,7 +1246,8 @@
     <CustomBehavior File="WaitTimer" QuestId="25699" WaitTime="15000"/>
   </While>
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original" />
+  <CustomBehavior File="UserSettings" UseMount="True"  />
+<LootMobs Value="true" />
 </If>
 <PickUp QuestName="Home... Gone... Naga..." QuestId="25702" GiverName="Salt-Flop" GiverId="41265" X="-11741.48" Y="-3873.863" Z="57.23445" />
 <If Condition="HasQuest(25698) &amp;&amp; !IsQuestCompleted(25698)" >
@@ -1329,7 +1332,7 @@
 <If Condition="HasQuest(25700) &amp;&amp; Me.Level &gt;= 60">
   <TurnIn QuestName="Loramus Thalipedes Awaits" QuestId="25700" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952257" />
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
     <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
@@ -1374,7 +1377,7 @@
 <TurnIn QuestName="How Best to Proceed" QuestId="25718" TurnInName="Elijah Dawnflight" TurnInId="42348" X="-12271.1" Y="-2919.788" Z="97.45673" />
 <If Condition="!HasQuest(25719) &amp;&amp; !IsQuestCompleted(25719) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
@@ -1415,7 +1418,7 @@
 <TurnIn QuestName="Demoniac Vessel" QuestId="25719" TurnInName="Rohan Sunveil" TurnInId="42344" X="-12327.2" Y="-3015.781" Z="88.2174" />
 <If Condition="!HasQuest(25720) &amp;&amp; !IsQuestCompleted(25720) &amp;&amp; Me.Level &gt;= 60">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
@@ -1487,7 +1490,7 @@
 <GrindTo Level="60" />
 <If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />

@@ -327,7 +327,7 @@
   <!--The mor'shan Ramparts FP-->
   <RunTo X="3356.12" Y="1033.364" Z="3.624077" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" X="3349.501" Y="1056.158" Z="2.948934" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43615" WaitTime="1000" CollectionDistance="50" X="3319.01" Y="1040.83" Z="4.05745" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43615" WaitTime="1000" CollectionDistance="50" X="3319.01" Y="1040.83" Z="4.05745" />
@@ -341,7 +341,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="3770" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="1205" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -380,7 +380,8 @@
 <PickUp QuestName="Lousy Pieces of Ship" QuestId="13883" GiverName="Dagrun Ragehammer" GiverId="34303" X="3307.555" Y="1028.819" Z="4.057806" />
 <PickUp QuestName="Keep the Fires Burning" QuestId="13890" GiverName="Commander Grimfang" GiverId="34122" X="3372.425" Y="1003.393" Z="4.718608" />
 <If Condition="HasQuest(6442) &amp;&amp; !IsQuestCompleted(6442)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
+<LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="6442" MobId1="3713" MobId2="3717" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="3441.101" Y="951.8133" Z="5.335787" />
       <Hotspot X="3481.551" Y="961.6319" Z="2.986567" />
@@ -407,7 +408,8 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(13890) &amp;&amp; !IsQuestCompleted(13890)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(13883) &amp;&amp; !IsQuestCompleted(13883)" >
   <CustomBehavior File="CollectThings" QuestId="13883" ObjectId="195012" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
@@ -462,7 +464,8 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(13883) || HasQuest(13890) || HasQuest(6442)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="True"/>
+  <CustomBehavior File="UserSettings"   UseMount="True"/>
+<LootMobs Value="true" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>
@@ -485,7 +488,8 @@
 </If>
 <PickUp QuestName="Vorsha the Lasher" QuestId="6641" GiverName="Muglash" GiverId="12717" X="3358.74" Y="964.2664" Z="7.404234" />
 <If Condition="HasQuest(6641) &amp;&amp; !IsQuestCompleted(6641)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="False" UseMount="False"/>
+  <CustomBehavior File="UserSettings" UseMount="False"/>
+<LootMobs Value="false" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(6641)" >
     <CustomBehavior File="EscortGroup" QuestId="6641" EscortNpcId="12717" EscortCompleteWhen="DestinationReached" EscortCompleteX="3609.234" EscortCompleteY="1146.588" EscortCompleteZ="7.994207" />
@@ -498,7 +502,8 @@
       <PickUp QuestName="Vorsha the Lasher" QuestId="6641" GiverName="Muglash" GiverId="12717" X="3358.74" Y="964.2664" Z="7.404234" />
 	</If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True"/>
+  <CustomBehavior File="UserSettings"  UseMount="True"/>
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(13890) &amp;&amp;!IsQuestCompleted(13890)">
   <While Condition="!IsQuestCompleted(13890)">
@@ -708,7 +713,7 @@
   <PickUp QuestName="The Befouled Element" QuestId="1918" GiverName="Befouled Water Globe" GiverId="16408" GiverType="Item" />
 </If>
 <If Condition="HasQuest(25) &amp;&amp; !IsQuestCompleted(25)" >
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <Objective QuestName="Simmer Down Now" QuestId="25" Type="KillMob" MobId="12759" KillCount="1" />
   <CustomBehavior File="CollectThings" QuestId="25" MobId="3917" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="2036.794" Y="-1124.675" Z="87.42413" />
@@ -726,7 +731,7 @@
     <Hotspot X="2022.799" Y="-1177.434" Z="87.59845" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True"/>
+  <CustomBehavior File="UserSettings"  UseMount="True"/>
 </If>
 <TurnIn QuestName="Mass Production" QuestId="13977" TurnInName="Foreman Jinx" TurnInId="34596" X="2241.028" Y="-961.9531" Z="86.38099" />
 <PickUp QuestName="They're Out There!" QuestId="13980" GiverName="Foreman Jinx" GiverId="34596" X="2241.028" Y="-961.9531" Z="86.38099" />
@@ -738,18 +743,22 @@
     </While>
   </If>
   <If Condition="!HasQuest(23) &amp;&amp; !IsQuestCompleted(23) &amp;&amp; !HasItem(16303)" >
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="False" />
+    <CustomBehavior File="UserSettings"   UseMount="False" />
+<LootMobs Value="true" />
   </If>
   <Objective QuestName="Building Your Own Coffin" QuestId="13983" Type="CollectItem" ItemId="46772" CollectCount="3" />
   <If Condition="HasItem(16303)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True"/>
+    <CustomBehavior File="UserSettings"  UseMount="True"/>
+<LootMobs Value="true" />
   </If>
   <Objective QuestName="Building Your Own Coffin" QuestId="13983" Type="CollectItem" ItemId="46773" CollectCount="3" />
   <If Condition="HasItem(16303)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True"/>
+    <CustomBehavior File="UserSettings" UseMount="True"/>
+<LootMobs Value="true" />
   </If>
   <Objective QuestName="Building Your Own Coffin" QuestId="13983" Type="CollectItem" ItemId="46771" CollectCount="5" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
+<LootMobs Value="true" />
 </If>
 <!--long time to spam mob its wast of time
 <If Condition="!HasQuest(23) &amp;&amp; !IsQuestCompleted(23) &amp;&amp; !HasItem(16303)" >

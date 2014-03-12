@@ -583,7 +583,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Southern Barrens Quests (31-34)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -620,7 +620,8 @@
 </If>
 <!--# # # Level 31.15 # # # -->
 <!--entregar isto antes-->
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<LootMobs Value="true" />
 <If Condition="HasQuest(26069)">
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10437" />
 </If>
@@ -687,7 +688,7 @@
   <!--Hunter's Hill FP-->
   <RunTo X="-796.0659" Y="-1589.256" Z="140.7098" />
   <CustomBehavior File="InteractWith" MobId="39340" MobState="Alive" X="-797.2344" Y="-1592.398" Z="140.6498" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
@@ -697,7 +698,8 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="44270" X="-785.29" Y="-1552.46" Z="140.4068" />
 </If>
 <TurnIn QuestName="Holdout at Hunter's Hill" QuestId="24505" TurnInName="Onatay" TurnInId="37138" X="-801.2656" Y="-1570.007" Z="140.5331" />
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<LootMobs Value="true" />
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
@@ -1170,14 +1172,14 @@
 </If>
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -1298,14 +1300,14 @@
 <TurnIn QuestName="Flightmare" QuestId="24631" TurnInName="Tomusa" TurnInId="37909" X="-3304.807" Y="-1690.12" Z="123.0022" />
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <TurnIn QuestName="Firestone Point" QuestId="24667" TurnInName="Tauna Skychaser" TurnInId="37834" X="-4011.797" Y="-1986.248" Z="92.62724" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
@@ -1326,14 +1328,14 @@
 <TurnIn QuestName="Hearts-is-Hearts" QuestId="24620" TurnInName="Calder Gray" TurnInId="37908" X="-3266.174" Y="-1801.974" Z="103.325" />
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <TurnIn QuestName="Firestone Point" QuestId="24667" TurnInName="Tauna Skychaser" TurnInId="37834" X="-4011.797" Y="-1986.248" Z="92.62724" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
@@ -1342,14 +1344,14 @@
 <Objective QuestName="Smarts-is-Smarts" QuestId="24621" Type="CollectItem" ItemId="49947" CollectCount="1" />
 <TurnIn QuestName="Smarts-is-Smarts" QuestId="24621" TurnInName="Calder Gray" TurnInId="37908" X="-3266.174" Y="-1801.974" Z="103.325" />
 <If Condition="HasQuest(24667)" >
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
 </If>
 <TurnIn QuestName="Firestone Point" QuestId="24667" TurnInName="Tauna Skychaser" TurnInId="37834" X="-4011.797" Y="-1986.248" Z="92.62724" />
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />

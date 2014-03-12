@@ -1282,7 +1282,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1325,7 +1325,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 65 &amp;&amp; Me.ZoneId != 2817 &amp;&amp; Me.ZoneId != 4395">
@@ -1356,7 +1356,7 @@
     <RunTo X="3478.453" Y="2004.42" Z="64.86483" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="27052" AreaId="4158" X="3477.54" Y="2006.678" Z="64.8625" /><!--AreaId="4158"-->
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Rifle the Bodies" QuestId="12000" GiverName="Image of Archmage Modera" GiverId="26673" X="3501.179" Y="2000.576" Z="65.65401" />
   <PickUp QuestName="The Liquid Fire of Elune" QuestId="12166" GiverName="Warden Jodi Moonsong" GiverId="26973" X="3493.888" Y="1990.524" Z="64.86258" />
   <If Condition="HasQuest(12157)" >
@@ -1654,13 +1654,13 @@
   <If Condition="HasQuest(12083) &amp;&amp; !IsQuestCompleted(12083)" >
     <CustomBehavior File="FlyTo" X="2958.064" Y="1832.969" Z="136.4583" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <Objective QuestName="Atop the Woodlands" QuestId="12083" Type="CollectItem" ItemId="36779" CollectCount="1" />
     <While Condition="!IsQuestCompleted(12083)" >
       <RunTo X="2901.846" Y="1823.484" Z="130.2553" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(36779)" WaitTime="8000" />
     </While>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="HasQuest(12092)" >
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
@@ -1718,10 +1718,10 @@
         <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(36815)" WaitTime="8000" />
       </While>
       <CustomBehavior File="AscendInWater" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+      <CustomBehavior File="UserSettings" UseMount="False" />
       <RunTo X="2999.14" Y="1399.38" Z="147.6747" />
       <RunTo X="2961.044" Y="1415.627" Z="149.4726" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+      <CustomBehavior File="UserSettings" UseMount="True" />
     </If>
     <If Condition="!IsObjectiveComplete(2, 12107)" >
       <CustomBehavior File="FlyTo" X="2994.568" Y="568.6087" Z="25.50628" />
@@ -2093,7 +2093,7 @@
     <CustomBehavior File="Cava\SetHearthstone" MobId="27027" AreaId="4186" X="3214.167" Y="-684.0831" Z="167.5366" /><!--AreaId="4186"-->
     <RunTo X="3239.099" Y="-692.6833" Z="166.902" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Blighted Last Rites" QuestId="12206" GiverName="Apothecary Vicky Levine" GiverId="27248" X="3221.876" Y="-691.3698" Z="167.1259" />
   <If Condition="HasQuest(12206) &amp;&amp; !IsQuestCompleted(12206)" >
     <While Condition="!IsQuestCompleted(12206)" >
@@ -2620,7 +2620,7 @@
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(12009) &amp;&amp; !IsQuestCompleted(12009)" >
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="CollectThings" QuestId="12009" MobId="188359" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="2704.653" Y="947.0667" Z="-0.09587966" />
     <Hotspot X="2664.552" Y="943.1344" Z="-0.9502307" />
@@ -2646,7 +2646,7 @@
 </If>
 <If Condition="HasQuest(12009) || HasQuest(12011)" >
   <RunTo X="2708.429" Y="951.061" Z="0.1318647" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Tua'kea's Crab Traps" QuestId="12009" TurnInName="Tua'kea" TurnInId="26245" X="2709.043" Y="952.3436" Z="0.1105075" />
 <TurnIn QuestName="Signs of Big Watery Trouble" QuestId="12011" TurnInName="Tua'kea" TurnInId="26245" X="2709.043" Y="952.3436" Z="0.1105075" />
@@ -2657,7 +2657,7 @@
 <If Condition="HasQuest(12017) &amp;&amp; !IsQuestCompleted(12017)" >
   <CustomBehavior File="FlyTo" X="2650.395" Y="1006.605" Z="6.022943" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(12017)" >
     <CustomBehavior File="MyCTM" QuestId="12017" X="2650.395" Y="1006.605" Z="-24.126" />
     <CustomBehavior File="InteractWith" QuestId="12017" WaitTime="40000" MovementBy="NavigatorPreferred" NonCompeteDistance="0" MobId="188370" InteractByUsingItemId="35838" X="2650.395" Y="1006.605" Z="-24.126" />
@@ -2666,7 +2666,7 @@
 </If>
 <If Condition="HasQuest(12017)" >
   <RunTo X="2708.429" Y="951.061" Z="0.1318647" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Meat on the Hook" QuestId="12017" TurnInName="Tua'kea" TurnInId="26245" X="2709.043" Y="952.3436" Z="0.1105075" />
 <!--<If Condition="HasQuest(12030)" >       works but blacklisted
@@ -3066,7 +3066,7 @@
   <If Condition="(HasQuest(12084) &amp;&amp; !IsQuestCompleted(12084)) || (!HasQuest(12085) &amp;&amp; !IsQuestCompleted(12085) &amp;&amp; !HasItem(36780))" >
     <CustomBehavior File="FlyTo" X="2958.064" Y="1832.969" Z="136.4583" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
   </If>
   <If Condition="!HasQuest(12085) &amp;&amp; !IsQuestCompleted(12085) &amp;&amp; !HasItem(36780)" >
     <LootMobs Value="true" />
@@ -3096,7 +3096,7 @@
     </While>
   </If>
   <If Condition="HasQuest(12084) || HasQuest(12085) || HasQuest(12096) || (!HasQuest(12106) &amp;&amp; !IsQuestCompleted(12106))" >
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
     <CustomBehavior File="FlyTo" X="3841.514" Y="1544.577" Z="89.72555" />
     <CustomBehavior File="ForcedDismount" />
     <If Condition="HasQuest(12084)">
@@ -3126,10 +3126,10 @@
         <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(36815)" WaitTime="8000" />
       </While>
       <CustomBehavior File="AscendInWater" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+      <CustomBehavior File="UserSettings" UseMount="False" />
       <RunTo X="2999.14" Y="1399.38" Z="147.6747" />
       <RunTo X="2961.044" Y="1415.627" Z="149.4726" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+      <CustomBehavior File="UserSettings" UseMount="True" />
     </If>
   </If>
   <Objective Nav="Fly" QuestName="Wanted: Gigantaur" QuestId="12090" Type="KillMob" MobId="26836" KillCount="1" />
@@ -3729,7 +3729,7 @@
   </If>
   <If Condition="HasQuest(12142) &amp;&amp; !IsQuestCompleted(12142)">
     <CustomBehavior File="FlyTo" X="4285.332" Y="-183.8799" Z="68.99077" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <SetGrindArea>
     <GrindArea>
@@ -3760,7 +3760,7 @@
     </GrindArea>
     </SetGrindArea>
     <GrindTo Condition="IsObjectiveComplete(1, 12142) || IsObjectiveComplete(2, 12142)" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
     <If Condition="!IsObjectiveComplete(1, 12142)" >
       <CustomBehavior File="CollectThings" QuestId="12142" MobId1="34788" MobId2="27279" MobId3="27278" MobState="Alive" CollectUntil="QuestComplete" >
       <Hotspot X="4306.752" Y="-307.2975" Z="77.04762" />
@@ -3793,12 +3793,14 @@
   <PickUp Nav="Fly" QuestName="Canyon Chase" QuestId="12143" GiverName="Duane" GiverId="26978" X="4590.211" Y="11.59549" Z="78.32959" />
   <If Condition="!HasQuest(12146) &amp;&amp; !IsQuestCompleted(12146) &amp;&amp; !HasItem(36855)" >
     <CustomBehavior File="FlyTo" X="4506.965" Y="-427.1429" Z="79.81597" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" LootMobs="True" />
+    <CustomBehavior File="UserSettings" UseMount="False"  />
+<LootMobs Value="true" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="CollectThings" MobId="27005" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36855">
       <Hotspot X="4506.965" Y="-427.1429" Z="79.81597" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original" />
+    <CustomBehavior File="UserSettings" UseMount="True"  />
+<LootMobs Value="true" />
   </If>
   <Objective Nav="Fly" QuestName="Canyon Chase" QuestId="12143" Type="KillMob" MobId="27005" KillCount="1" />
   <If Condition="!HasQuest(12146) &amp;&amp; !IsQuestCompleted(12146) &amp;&amp; HasItem(36855)">

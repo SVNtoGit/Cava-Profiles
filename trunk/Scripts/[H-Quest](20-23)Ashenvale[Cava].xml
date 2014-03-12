@@ -204,7 +204,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -423,7 +423,7 @@
     <Hotspot X="1972.531" Y="-3023.182" Z="105.4176" />
     <Hotspot X="2013.018" Y="-3027.641" Z="106.5729" />
   </CustomBehavior>
-  <LootMobs Value="true" /><!--LootMobs="Original"-->
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="26448" MobId1="11697" MobId2="6073" MobId3="6115" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="2042.36" Y="-2953.277" Z="107.6699" />
     <Hotspot X="2057.239" Y="-2990.913" Z="110.5939" />
@@ -457,7 +457,7 @@
     <Hotspot X="1972.531" Y="-3023.182" Z="105.4176" />
     <Hotspot X="2013.018" Y="-3027.641" Z="106.5729" />
   </CustomBehavior>
-  <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
+  <LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(26447) &amp;&amp; !IsQuestCompleted(26447) &amp;&amp; HasItem(23797)" >
   <PickUp QuestName="Diabolical Plans" QuestId="26447" GiverType="Item" GiverId="23797" />
@@ -467,7 +467,7 @@
 </If>
 <If Condition="HasQuest(6503) &amp;&amp; !IsQuestCompleted(6503)" >
   <Objective QuestName="Ashenvale Outrunners" QuestId="6503" Type="KillMob" MobId="12856" KillCount="9" />
-  <LootMobs Value="null" /><!----><!--LootMobs="Original"-->
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; !HasItem(16305)" >
   <LootMobs Value="true" />
@@ -480,7 +480,7 @@
   </GrindArea>
   </SetGrindArea>
   <GrindTo Condition="HasItem(16305)" />
-  <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
+  <LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(2) &amp;&amp; !IsQuestCompleted(2) &amp;&amp; HasItem(16305)" >
   <PickUp QuestName="Sharp" QuestId="2" GiverType="Item" GiverId="16305" />

@@ -101,7 +101,7 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -149,10 +149,10 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
   <RunTo X="-9469.269" Y="-2957.798" Z="12.39528" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 <PickUp QuestName="Ancient Obstacles" QuestId="25420" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="Laying Claim" QuestId="25559" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />
 <PickUp QuestName="Fragments of Language" QuestId="25565" GiverName="Prospector Gunstan" GiverId="40109" X="-9471.816" Y="-2956.134" Z="12.55372" />

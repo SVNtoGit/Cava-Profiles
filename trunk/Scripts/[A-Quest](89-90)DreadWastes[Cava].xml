@@ -1127,7 +1127,7 @@
     </Else>
   </If>
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(31181)" >
     <If Condition="GetItemCount(85230) &lt; 2" >
@@ -1145,7 +1145,8 @@
 	  <CustomBehavior File="InteractWith" QuestId="31181" MobId="213071" ObjectType="GameObject" Range="5" CollectionDistance="1000" Nav="CTM" X="-1466.192" Y="3200.014" Z="-18.57028" />
 	</While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
+<LootMobs Value="true" />
   <CustomBehavior File="AscendInWater" />
 </If>
 <If Condition="HasQuest(31182) &amp;&amp; !IsQuestCompleted(31182)" >

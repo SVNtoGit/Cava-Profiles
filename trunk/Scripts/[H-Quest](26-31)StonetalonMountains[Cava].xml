@@ -330,7 +330,7 @@
 <CustomBehavior File="Message" Text="Compiling Stonetalon Mountains Quests (26-31)" LogColor="Aquamarine" />
 <!--# # # Level 26.46 # # # -->
 <If Condition="!HasQuest(25999) &amp;&amp; !IsQuestCompleted(25999)" >
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
@@ -339,7 +339,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -486,9 +486,9 @@
   </If>
   <Objective QuestName="Dream of a Better Tomorrow" QuestId="26026" Type="CollectItem" ItemId="55222" CollectCount="1" />
   <RunTo X="1683.603" Y="79.54466" Z="136.9462" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <Objective QuestName="Dream of a Better Tomorrow" QuestId="26026" Type="CollectItem" ItemId="55227" CollectCount="1" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True"/>
+  <CustomBehavior File="UserSettings"  UseMount="True"/>
 </If>-->
 <If Condition="HasQuest(26010)" >
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />

@@ -448,7 +448,7 @@
   Please move your char to: SWAMP OF SORROWS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -510,7 +510,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8948" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8948" DrinkName="8766" />
 <PickUp QuestName="Maliciously Delicious" QuestId="27587" GiverName="Trade Baron Silversnap" GiverId="45786" X="-9784.71" Y="-3916.3" Z="21.68119" />
 <PickUp QuestName="Drinks on the Rocks" QuestId="27592" GiverName="Brono Goodgroove" GiverId="46010" X="-9688.61" Y="-3928.36" Z="3.464648" />
 <If Condition="HasQuest(27592) &amp;&amp; !IsQuestCompleted(27592)" >
@@ -681,7 +681,7 @@
   
   <While Condition="!IsQuestCompleted(27600)" >
     <RunTo X="-10171.54" Y="-4175.821" Z="23.00463" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27600" MobId="46245" GossipOptions="1" X="-10168.8" Y="-4177.78" Z="22.68768" />
     <CustomBehavior File="WaitTimer" WaitTime="12000" />
@@ -714,7 +714,7 @@
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46503" GossipOptions="1" WaitTime="1" CollectionDistance="50" X="-10222.9" Y="-4159.35" Z="22.72833" />
   <CustomBehavior File="WaitTimer" WaitTime="20000" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Baba Bogbrew" QuestId="27740" TurnInName="Baba Bogbrew" TurnInId="46172" X="-10815.4" Y="-3813.71" Z="21.92647" />
 

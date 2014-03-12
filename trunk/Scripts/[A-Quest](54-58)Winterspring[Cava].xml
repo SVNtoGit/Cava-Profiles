@@ -503,7 +503,7 @@
   Please move your char to: WINTERSPRING\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -801,7 +801,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](58-60)BlastedLands[Cava]" />
 </If>
 <If Condition="!HasQuest(28609) &amp;&amp; !IsQuestCompleted(28609)">
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -814,7 +814,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="11118" X="6695.151" Y="-4673.041" Z="721.5688" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 <PickUp QuestName="Hammer Time" QuestId="28609" GiverName="Lilith" GiverId="11191" X="6777.164" Y="-4673.712" Z="723.7982" />
 <TurnIn QuestName="Hammer Time" QuestId="28609" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <PickUp QuestName="Rubble Trouble" QuestId="28610" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />

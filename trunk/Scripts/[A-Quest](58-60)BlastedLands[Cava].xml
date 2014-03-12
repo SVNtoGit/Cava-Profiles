@@ -571,7 +571,7 @@
   Please move your char to: BLASTED LANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -613,7 +613,7 @@
 <!--# # # Level 58.15 # # # -->
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -649,14 +649,14 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.50076" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
 <PickUp QuestName="Minor Distractions" QuestId="25710" GiverName="Quartermaster Lungertz" GiverId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <PickUp QuestName="A Closer Look" QuestId="25715" GiverName="Enohar Thunderbrew" GiverId="9540" X="-11038.6" Y="-3444.98" Z="65.79074" />
 <Objective QuestName="Minor Distractions" QuestId="25710" Type="KillMob" MobId="42228" KillCount="1" />
 <TurnIn QuestName="Minor Distractions" QuestId="25710" TurnInName="Quartermaster Lungertz" TurnInId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -700,7 +700,7 @@
 <TurnIn QuestName="Remove Their Arms" QuestId="25713" TurnInName="Buttonwillow McKittrick" TurnInId="42264" X="-10920.8" Y="-3408.44" Z="81.71606" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -807,7 +807,7 @@
 <TurnIn QuestName="Watcher Mahar Ba" QuestId="25714" TurnInName="Watcher Mahar Ba" TurnInId="5385" X="-10994.69" Y="-3507.891" Z="103.1427" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -848,7 +848,7 @@
 <TurnIn QuestName="Attune the Bloodstone" QuestId="26158" TurnInName="Kasim Sharim" TurnInId="42298" X="-11225.13" Y="-3483.986" Z="8.551289" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -964,7 +964,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -990,7 +990,8 @@
 <If Condition="HasQuest(26169) &amp;&amp; !IsQuestCompleted(26169)" >
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" LootMobs="True" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(26169)" >
     <RunTo X="-11451.77" Y="-3791.916" Z="4.035245" />
     <CustomBehavior File="MyCTM" X="-11446.63" Y="-3799.184" Z="-2.003908" />
@@ -1006,7 +1007,8 @@
     <CustomBehavior File="MyCTM" X="-11450.96" Y="-3800.519" Z="0.3807733" />
   </While>
   <RunTo X="-11458.57" Y="-3831.235" Z="-1.938151" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original" />
+  <CustomBehavior File="UserSettings" UseMount="True"  />
+<LootMobs Value="true" />
 <!--
 <Objective QuestName="The Amulet of Grol" QuestId="26169" Type="CollectItem" ItemId="10753" CollectCount="1" />
 -->
@@ -1045,7 +1047,7 @@
 <TurnIn QuestName="Atrocities" QuestId="25703" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1112,7 +1114,7 @@
 <TurnIn QuestName="Time is Short" QuestId="26163" TurnInName="Watcher Grimeo" TurnInId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1166,7 +1168,7 @@
 <TurnIn QuestName="Protecting Our Rear" QuestId="26173" TurnInName="Watch Commander Relthorn Netherwane" TurnInId="16841" X="-11815.21" Y="-3195.544" Z="-30.99932" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1209,7 +1211,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1248,7 +1250,7 @@
 </If>
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1283,7 +1285,7 @@
 <TurnIn QuestName="Wormthorn's Dream" QuestId="26184" TurnInName="Mayor Charlton Connisport" TurnInId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <If Condition="(Me.Level &gt;= 60 )">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1372,7 +1374,7 @@
 <GrindTo Level="60" />
 <If Condition="!HasQuest(10119) &amp;&amp; !IsQuestCompleted(10119)">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />

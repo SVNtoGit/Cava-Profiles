@@ -1348,7 +1348,7 @@ need confirm
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30491" MobId="61874" X="2511.017" Y="146.5156" Z="467.358" />
 </If>
 <If Condition="HasQuest(30491) &amp;&amp; !IsQuestCompleted(30491)" >
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <If Condition="(Me.Class == WoWClass.Druid)">
 	  <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
     Text="You are a druid Class, means because shapeshift, next quest may have some issues.\n
@@ -1379,7 +1379,7 @@ need confirm
     </While>
     </Else>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="!HasQuest(30587) &amp;&amp; !IsQuestCompleted(30587)" >
   <RunTo X="2575.001" Y="463.2113" Z="515.2535" />
@@ -1432,7 +1432,8 @@ need confirm
 <PickUp QuestName="The Fearmaster" QuestId="30804" GiverName="Lao Muskpaw" GiverId="59353" X="2718.38" Y="380.9351" Z="508.3694" />
 <Objective QuestName="The Fearmaster" QuestId="30804" Type="KillMob" MobId="59656" KillCount="1" />
 <If Condition="HasQuest(30804) &amp;&amp; IsQuestCompleted(30804)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="The Fearmaster" QuestId="30804" TurnInName="Lao Muskpaw" TurnInId="59353" X="2718.38" Y="380.9351" Z="508.3694" />
 <PickUp QuestName="Back in Yak" QuestId="30492" GiverName="Muskpaw Jr." GiverId="59354" X="2727.898" Y="371.7795" Z="508.4094" />

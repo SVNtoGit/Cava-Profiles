@@ -1082,7 +1082,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1121,7 +1121,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3703 &amp;&amp; Me.ZoneId != 3519">
@@ -1467,7 +1467,8 @@
 </If>
 <If Condition="HasQuest(10037) &amp;&amp; !IsQuestCompleted(10037)">
   <CustomBehavior File="FlyTo" X="-1361.852" Y="5079.429" Z="-3.010623" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" LootMobs="True"/>
+  <CustomBehavior File="UserSettings" UseMount="False" />
+<LootMobs Value="true" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="CollectThings" QuestId="10037" MobId="18750" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-1364.546" Y="5046.331" Z="-9.731621" />
@@ -1491,7 +1492,8 @@
     <Hotspot X="-1285.998" Y="5021.331" Z="-9.731621" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" LootMobs="Original"/>
+  <CustomBehavior File="UserSettings"  UseMount="True" />
+<LootMobs Value="true" />
 <!--
 <Objective QuestName="Rather Be Fishin'" QuestId="10037" Type="CollectItem" ItemId="25891" CollectCount="8" />
 -->
@@ -1724,7 +1726,7 @@
 <If Condition="HasQuest(10852) &amp;&amp; !IsQuestCompleted(10852)" >
   <CustomBehavior File="FlyTo" X="-2564.119" Y="5327.227" Z="3.670763" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(10852)" >
     <If Condition="GetItemCount(31655) &lt; 1" >
@@ -1763,7 +1765,7 @@
   </While>
 </If>
 <If Condition="HasQuest(10852)">
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
   <LootMobs Value="null" />
   <CustomBehavior File="FlyTo" X="-2849.89" Y="5047.961" Z="-18.87771" />
   <CustomBehavior File="ForcedDismount" />
@@ -2124,7 +2126,7 @@
       <CustomBehavior File="FlyTo" X="-2566.257" Y="4426.669" Z="39.29169" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="InteractWith" MobId="18807" MobState="Alive" NonCompeteDistance="0" X="-2563.186" Y="4426.765" Z="39.3559" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+      <CustomBehavior File="UserSettings" UseMount="False" />
       </Else>
     </If>
   </If>
@@ -2143,7 +2145,7 @@
     <CustomBehavior File="Cava\SetHearthstone" MobId="18957" X="-2621.776" Y="4450.3" Z="36.09362" />
     <PickUp QuestName="Stymying the Arakkoa" QuestId="9987" GiverName="Rokag" GiverId="18386" X="-2606.738" Y="4439.138" Z="36.09451" />
     <RunTo X="-2620.284" Y="4400.337" Z="34.32085" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
 </If>
 <!--

@@ -1458,7 +1458,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1495,7 +1495,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3521">
@@ -1519,16 +1519,16 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="18907" X="-174.478" Y="5529.211" Z="29.40746" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="Plants of Zangarmarsh" QuestId="9802" GiverName="Lauranna Thar'well" GiverId="17909" X="-215.5434" Y="5437.267" Z="21.42747" />
 <PickUp QuestName="The Umbrafen Tribe" QuestId="9747" GiverName="Ikeyen" GiverId="17956" X="-215.1667" Y="5433.431" Z="21.95523" />
 <If Condition="!HasQuest(9728) &amp;&amp; !IsQuestCompleted(9728)">
   <RunTo X="-240.8551" Y="5482.676" Z="23.30687" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False"/>
+  <CustomBehavior File="UserSettings" UseMount="False"/>
   <CustomBehavior File="ForcedDismount" />
   <PickUp QuestName="A Warm Welcome" QuestId="9728" GiverName="Warden Hamoot" GiverId="17858" X="-252.3594" Y="5499.21" Z="66.59902" />
   <RunTo X="-240.8551" Y="5482.676" Z="23.30687" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True"/>
+  <CustomBehavior File="UserSettings" UseMount="True"/>
 </If>
 <PickUp QuestName="The Dying Balance" QuestId="9895" GiverName="Lethyn Moonfire" GiverId="17834" X="-181.3797" Y="5527.087" Z="29.40766" />
 <PickUp QuestName="Disturbance at Umbrafen Lake" QuestId="9716" GiverName="Ysiel Windsinger" GiverId="17841" X="-143.4519" Y="5533.816" Z="31.06598" />
@@ -1659,11 +1659,11 @@
 <TurnIn QuestName="Saving the Sporeloks" QuestId="10096" TurnInName="Lauranna Thar'well" TurnInId="17909" X="-215.5434" Y="5437.267" Z="21.42746" />
 <If Condition="HasQuest(9728)">
   <RunTo X="-240.8551" Y="5482.676" Z="23.30687" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False"/>
+  <CustomBehavior File="UserSettings" UseMount="False"/>
   <CustomBehavior File="ForcedDismount" />
   <TurnIn QuestName="A Warm Welcome" QuestId="9728" TurnInName="Warden Hamoot" TurnInId="17858" X="-252.3594" Y="5499.21" Z="66.59902" />
   <RunTo X="-240.8551" Y="5482.676" Z="23.30687" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True"/>
+  <CustomBehavior File="UserSettings" UseMount="True"/>
 </If>
 <TurnIn QuestName="Disturbance at Umbrafen Lake" QuestId="9716" TurnInName="Ysiel Windsinger" TurnInId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
 <PickUp QuestName="As the Crow Flies" QuestId="9718" GiverName="Ysiel Windsinger" GiverId="17841" X="-143.4519" Y="5533.816" Z="31.06597" />
@@ -1774,7 +1774,7 @@
     <CustomBehavior File="FlyTo" X="269.8312" Y="6053.029" Z="165.9187" />
     <CustomBehavior File="FlyTo" X="268.7228" Y="6043.243" Z="130.2385" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
   </If>
   <PickUp QuestName="The Fate of Tuurem" QuestId="9793" GiverName="Vindicator Idaar" GiverId="18004" X="258.1314" Y="6040.271" Z="131.6135" />
   <PickUp QuestName="The Dead Mire" QuestId="9782" GiverName="Vindicator Idaar" GiverId="18004" X="258.1314" Y="6040.271" Z="131.6135" />
@@ -1785,7 +1785,7 @@
   <PickUp QuestName="Too Many Mouths to Feed" QuestId="9781" GiverName="Haalrun" GiverId="18005" X="329.2669" Y="6066.218" Z="138.4339" />
   <PickUp QuestName="Menacing Marshfangs" QuestId="9791" GiverName="Noraani" GiverId="18006" X="330.8681" Y="6074.517" Z="138.4334" />
   <If Condition="HasQuest(9777) &amp;&amp; !IsQuestCompleted(9777)">
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
     <CustomBehavior File="FlyTo" X="346.3215" Y="5882.231" Z="18.74949" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Fulgor Spores" QuestId="9777" Type="CollectItem" ItemId="24383" CollectCount="6" />
@@ -1808,7 +1808,7 @@
     <CustomBehavior File="FlyTo" X="284.7056" Y="6030.751" Z="171.737" />
     <CustomBehavior File="FlyTo" X="259.9305" Y="6039.391" Z="131.6165" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="258.1314" Y="6040.271" Z="131.6135" />
   </If>
   <TurnIn QuestName="The Dead Mire" QuestId="9782" TurnInName="Vindicator Idaar" TurnInId="18004" X="258.1314" Y="6040.271" Z="131.6135" />
@@ -1827,7 +1827,8 @@
                  (HasQuest(9783) &amp;&amp; !IsQuestCompleted(9783)) ||
                  (HasQuest(9780) &amp;&amp; !IsQuestCompleted(9780)) ||
                  (HasQuest(9781) &amp;&amp; !IsQuestCompleted(9781))">
-    <CustomBehavior File="Cava\CavaSettings"  UseMount="True" LootMobs="True" />
+    <CustomBehavior File="UserSettings"  UseMount="True"  />
+<LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(9783) &amp;&amp; !IsQuestCompleted(9783)">
     <CustomBehavior File="FlyTo" X="572.4193" Y="5535.565" Z="2.027333" />
@@ -1869,7 +1870,7 @@
   </If>
   <If Condition="HasQuest(9780) &amp;&amp; !IsQuestCompleted(9780)">
     <CustomBehavior File="FlyTo" X="-72.79912" Y="5744.208" Z="19.27803" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="CollectThings" QuestId="9780" MobId="18138" MobState="Alive" CollectItemCount="8" CollectItemId="24374" HuntingGroundRadius="200" >
     <Hotspot X="-115.6892" Y="5772.175" Z="17.33675" />
@@ -1921,7 +1922,7 @@
   <If Condition="HasQuest(9781) &amp;&amp; !IsQuestCompleted(9781)">
     <LootMobs Value="true" />
     <CustomBehavior File="FlyTo" X="-414.4908" Y="5845.563" Z="18.52615" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="CollectThings" QuestId="9781" MobId="18213" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-414.4908" Y="5845.563" Z="18.52615" />
@@ -1954,7 +1955,7 @@
       <Hotspot X="-569.1741" Y="5543.833" Z="19.28474" />
     </CustomBehavior>
     <CustomBehavior File="AscendInWater" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
 <!--
 <Objective QuestName="Too Many Mouths to Feed" QuestId="9781" Type="KillMob" MobId="18213" KillCount="10" />
 -->
@@ -1963,7 +1964,8 @@
     <CustomBehavior File="FlyTo" X="179.8259" Y="5978.061" Z="147.9689" />
     <CustomBehavior File="FlyTo" X="272.5698" Y="6047.146" Z="151.0337" />
     <CustomBehavior File="FlyTo" X="259.1345" Y="6040.766" Z="131.6146" />
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="False" />
+    <CustomBehavior File="UserSettings"   UseMount="False" />
+<LootMobs Value="true" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="An Unnatural Drought" QuestId="9783" TurnInName="Vindicator Idaar" TurnInId="18004" X="258.1314" Y="6040.271" Z="131.6135" />
@@ -1976,7 +1978,8 @@
   </If>
   <PickUp QuestName="Diaphanous Wings" QuestId="9790" GiverName="Haalrun" GiverId="18005" X="329.2669" Y="6066.218" Z="138.4339" />
   <If Condition="HasQuest(10355) &amp;&amp; !IsQuestCompleted(10355)">
-    <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="True"/>
+    <CustomBehavior File="UserSettings"   UseMount="True"/>
+<LootMobs Value="true" />
     <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
     </If>
     <CustomBehavior File="FlyTo" X="553.6069" Y="5316.929" Z="-24.79096" />
@@ -2208,7 +2211,7 @@
     <LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(9773) &amp;&amp; !IsQuestCompleted(9773)">
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="CollectThings" QuestId="9773" MobId="18138" MobState="Alive" CollectItemCount="8" CollectItemId="24374" HuntingGroundRadius="200" >
     <Hotspot X="-115.6892" Y="5772.175" Z="17.33675" />
     <Hotspot X="-140.9626" Y="5740.982" Z="17.33675" />
@@ -2255,7 +2258,8 @@
 <Objective QuestName="No More Mushrooms!" QuestId="9773" Type="CollectItem" ItemId="24374" CollectCount="8" />
 -->
     <CustomBehavior File="AscendInWater" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original"/>
+    <CustomBehavior File="UserSettings" UseMount="True" />
+<LootMobs Value="true" />
   </If>
   <If Condition="HasQuest(9774) &amp;&amp; !IsQuestCompleted(9774)">
     <Objective QuestName="Thick Hydra Scales" QuestId="9774" Type="CollectItem" ItemId="24375" CollectCount="12" />
@@ -2263,7 +2267,8 @@
   </If>
   <Objective QuestName="There's No Explanation for Fashion" QuestId="9769" Type="CollectItem" ItemId="24372" CollectCount="8" />
   <If Condition="HasQuest(9769) || HasQuest(9773) || HasQuest(9774)">
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" LootMobs="Original" />
+    <CustomBehavior File="UserSettings" UseMount="True"  />
+<LootMobs Value="true" />
     <CustomBehavior File="FlyTo" X="91.02018" Y="5216.313" Z="23.17874" />
     <CustomBehavior File="ForcedDismount" />
   </If>
@@ -2498,12 +2503,12 @@
   </If>
   <If Condition="HasQuest(9731) &amp;&amp; !IsQuestCompleted(9731)">
     <CustomBehavior File="FlyTo" X="569.3351" Y="6942.12" Z="27.11016" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="MyCTM" X="567.1113" Y="6942.47" Z="-31.55918" />
     <CustomBehavior File="AscendInWater" />
     <RunTo X="541.3874" Y="6923.24" Z="23.01425" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
     <If Condition="HasQuest(9898) &amp;&amp; !IsQuestCompleted(9898)">
     <CustomBehavior File="FlyTo" X="-54.13741" Y="6985.964" Z="19.80171" />
@@ -2911,12 +2916,12 @@
   </If>
   <If Condition="HasQuest(9731) &amp;&amp; !IsQuestCompleted(9731)">
     <CustomBehavior File="FlyTo" X="569.3351" Y="6942.12" Z="27.11016" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="MyCTM" X="567.1113" Y="6942.47" Z="-31.55918" />
     <CustomBehavior File="AscendInWater" />
     <RunTo X="541.3874" Y="6923.24" Z="23.01425" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="HasQuest(9833) &amp;&amp; !IsQuestCompleted(9833)">
     <CustomBehavior File="FlyTo" X="199.1786" Y="7423.254" Z="19.88468" />

@@ -1455,7 +1455,7 @@
   and start bot." />
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1495,7 +1495,7 @@
   and start bot." />
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <CustomBehavior File="Message" Text="Compiling Nagrand Map Zone" LogColor="Aquamarine" />
@@ -2133,7 +2133,7 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(9857) || HasQuest(9789) || HasQuest(9854)">
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True"/>
+  <CustomBehavior File="UserSettings"  UseMount="True"/>
   <CustomBehavior File="FlyTo" X="-1448.997" Y="6343.3" Z="37.44242" />
   <CustomBehavior File="ForcedDismount" />
 </If>
@@ -2452,7 +2452,8 @@
 <If Condition="HasQuest(9815) &amp;&amp; !IsQuestCompleted(9815)">
   <CustomBehavior File="FlyTo" X="-1363.257" Y="7916.099" Z="-97.65565" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" UseMount="False"/>
+  <CustomBehavior File="UserSettings"   UseMount="False"/>
+<LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="9815" MobId="17154" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-1363.264" Y="7932.987" Z="-99.14933" />
       <Hotspot X="-1342.06" Y="7968.041" Z="-100.4457" />
@@ -2480,7 +2481,8 @@
       <Hotspot X="-1436.573" Y="7888.68" Z="-103.1429" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" LootMobs="Original" />
+  <CustomBehavior File="UserSettings"  UseMount="True"  />
+<LootMobs Value="true" />
 <!--
 <Objective QuestName="Muck Diving" QuestId="9815" Type="CollectItem" ItemId="24469" CollectCount="5" />
 -->
@@ -2594,7 +2596,8 @@
     <RunTo X="-2761.415" Y="7300.421" Z="43.47122" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="18914" X="-2761.415" Y="7300.421" Z="43.47122" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="29451" DrinkName="27860" />
+  <CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="29451" DrinkName="27860" />
+<LootMobs Value="true" />
   <PickUp QuestName="The Ravaged Caravan" QuestId="9956" GiverName="Huntress Kima" GiverId="18416" X="-2603.948" Y="7287.943" Z="19.4873" />
   <PickUp QuestName="The Throne of the Elements" QuestId="9869" GiverName="Elementalist Ioki" GiverId="18233" X="-2491.865" Y="7228.569" Z="16.23876" />
   <PickUp QuestName="Do My Eyes Deceive Me" QuestId="9917" GiverName="Huntress Bintook" GiverId="18353" X="-2556.34" Y="7254.186" Z="15.12059" />
@@ -2787,7 +2790,7 @@
 <If Condition="HasQuest(9804) &amp;&amp; !IsQuestCompleted(9804)">
   <CustomBehavior File="FlyTo" X="-896.5244" Y="6985.096" Z="31.97689" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="CollectThings" QuestId="9804" MobId="17153" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-896.5244" Y="6985.096" Z="31.97689" />
@@ -2815,7 +2818,7 @@
 </If>
 <If Condition="HasQuest(9804)">
   <RunTo X="-781.6394" Y="6944.226" Z="33.35647" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
   <TurnIn QuestName="Agitated Spirits of Skysong" QuestId="9804" TurnInName="Elementalist Lo'ap" TurnInId="18073" X="-782.6299" Y="6936.527" Z="32.39404" />
 </If>
 <If Condition="!HasQuest(9805) &amp;&amp; !IsQuestCompleted(9805) &amp;&amp; (Me.LevelFraction &gt;= 67.2) &amp;&amp; Me.IsAlliance">
@@ -3215,7 +3218,7 @@
   <If Condition="HasQuest(10476)">
     <TurnIn QuestName="Fierce Enemies" QuestId="10476" TurnInName="Warden Moi'bff Jill" TurnInId="18408" X="-2568.979" Y="7271.639" Z="15.48032" />
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-    <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+    <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19012" WaitTime="1000" CollectionDistance="50" X="-2541.9" Y="7364.772" Z="6.949484" />
   </If>
 </If>
@@ -3340,13 +3343,13 @@
     <Objective QuestName="Corki's Gone Missing Again!" QuestId="9924" Type="CollectItem" ItemId="25509" CollectCount="1" />
   </If>
   <If Condition="HasQuest(9924) &amp;&amp; !IsQuestCompleted(9924) &amp;&amp; HasItem(25509)">
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="-969.7938" Y="8129.085" Z="-93.53939" />
     <While Condition="!IsQuestCompleted(9924)">
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9924" MobId="182350" ObjectType="GameObject" X="-969.7938" Y="8129.085" Z="-93.53939" />
       <CustomBehavior File="WaitTimer" QuestId="9924" WaitTime="7000" />
     </While>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="HasQuest(9922) &amp;&amp; !IsQuestCompleted(9922)">
     <SetGrindArea>

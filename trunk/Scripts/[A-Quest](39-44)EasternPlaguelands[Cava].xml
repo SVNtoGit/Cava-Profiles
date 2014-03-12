@@ -686,7 +686,7 @@
   Please move your char to: EASTERN PLAGUELANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -741,7 +741,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="16256" X="2295.74" Y="-5336.82" Z="90.75246" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4599" DrinkName="1645" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4599" DrinkName="1645" />
 <CustomBehavior File="Message" Text="Compiling Eastern Plaguelands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 39.2 # # # -->
 <PickUp QuestName="Gidwin Goldbraids" QuestId="27367" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
@@ -1010,7 +1010,7 @@
 </If>
 <TurnIn QuestName="The Trek Continues" QuestId="27448" TurnInName="Fiona" TurnInId="45417" X="2278.03" Y="-4420.79" Z="111.7496" />
 <PickUp QuestName="Boys Will Be Boys" QuestId="27455" GiverName="Fiona" GiverId="45417" X="2278.03" Y="-4420.79" Z="111.7496" />
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
 <If Condition="!HasQuest(27451) &amp;&amp; !IsQuestCompleted(27451)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45451" WaitTime="1000" CollectionDistance="50" X="2262.87" Y="-4463.15" Z="114.2997" />
@@ -1038,7 +1038,8 @@
 <If Condition="HasQuest(27450) &amp;&amp; !IsQuestCompleted(27450)">
   <RunTo X="2115.971" Y="-4311.359" Z="75.96283" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27450" MobId="45650" MobState="Alive" CollectItemCount="8" CollectItemId="61292" HuntingGroundRadius="200" >
     <Hotspot X="1973.141" Y="-4304.143" Z="16.93481" />
     <Hotspot X="2005.02" Y="-4327.125" Z="9.354567" />
@@ -1065,7 +1066,8 @@
     <Hotspot X="2070.952" Y="-4331.023" Z="10.81298" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(27451) &amp;&amp; !IsQuestCompleted(27451)">
   <LootMobs Value="true" />
@@ -1112,7 +1114,7 @@
   <PickUp QuestName="Catalysm" QuestId="27453" GiverName="Betina Bigglezink" GiverId="11035" X="2237.27" Y="-4433.15" Z="111.7315" />
 </If>
 <If Condition="HasQuest(27453) &amp;&amp; !IsQuestCompleted(27453)" >
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(27453)" >
   <CustomBehavior File="CombatUseItemOnV2" QuestId="27453" ItemId="61284" MobId1="8519" MobId2="8520" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
     UseWhenMobHasHealthPercent="25" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000" UseItemStrategy="UseItemOncePerTarget" >
@@ -1136,7 +1138,7 @@
   </CustomBehavior>
   </While>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
 </If>
 <If Condition="HasQuest(27453) &amp;&amp; IsQuestCompleted(27453)" >
    <While Condition="HasQuest(27453)" >
@@ -1196,7 +1198,7 @@
 <Objective QuestName="Smokey and the Bandage" QuestId="27458" Type="CollectItem" ItemId="62028" CollectCount="1" />
 <If Condition="HasQuest(27467) &amp;&amp; !IsQuestCompleted(27467)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False" />
+  <CustomBehavior File="UserSettings"  UseMount="False" />
   <While Condition="!IsQuestCompleted(27467)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" WaitForNpcs="False" CollectionDistance="1000" X="2712.279" Y="-5349.025" Z="164.2282" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" WaitForNpcs="False" CollectionDistance="1000" X="2749.072" Y="-5367.081" Z="157.0765" />
@@ -1211,7 +1213,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" WaitForNpcs="False" CollectionDistance="1000" X="2638.579" Y="-5429.958" Z="157.6996" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" WaitForNpcs="False" CollectionDistance="1000" X="2660.536" Y="-5395.619" Z="157.6154" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <Objective QuestName="Argent Call: The Noxious Glade" QuestId="27465" Type="KillMob" MobId="45691" KillCount="8" />
 <Objective QuestName="Argent Call: The Noxious Glade" QuestId="27465" Type="KillMob" MobId="8545" KillCount="16" />

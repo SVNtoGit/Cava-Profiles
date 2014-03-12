@@ -455,7 +455,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Dustwallow Marsh Quests (35-40)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -491,7 +491,8 @@
   
 </If>
 <!--# # # Level 35.85 # # # -->
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<LootMobs Value="true" />
 <PickUp QuestName="Suspicious Hoofprints" QuestId="27259" GiverName="Suspicious Footprint" GiverType="Object" GiverId="187273"  X="-3700.728" Y="-2533.091" Z="68.84982" />
 <PickUp QuestName="Lieutenant Paval Reethe" QuestId="27260" GiverName="Thermadore Guard Badge" GiverId="21042" X="-3722.256" Y="-2541.004" Z="69.65245" />
 <PickUp QuestName="The Black Shield" QuestId="27254" GiverName="Black Shield" GiverId="20992" X="-3731.866" Y="-2530.715" Z="69.62978" />
@@ -506,7 +507,7 @@
   <!--Brackenwall Village FP-->
   <RunTo X="-3146.776" Y="-2842.301" Z="34.61447" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11899" MobState="Alive" X="-3149.139" Y="-2842.133" Z="34.58207" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
@@ -517,7 +518,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="24208" X="-3165.606" Y="-2911.76" Z="35.05642" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
 </If>
 <PickUp QuestName="SMASH BROODQUEEN" QuestId="27229" GiverName="Wanted Poster" GiverId="205332" X="-3137.888" Y="-2942.186" Z="34.12718" />
 <If Condition="(!HasQuest(26682) &amp;&amp; !IsQuestCompleted(26682)) ||

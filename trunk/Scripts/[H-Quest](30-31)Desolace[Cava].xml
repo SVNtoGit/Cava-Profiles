@@ -603,14 +603,15 @@
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
 </If>
 <If Condition="!HasQuest(14188) &amp;&amp; !IsQuestCompleted(14188)" >
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"   UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<LootMobs Value="true" />
 <PickUp QuestName="Avenge Furien!" QuestId="14188" GiverName="Cerelia" GiverId="35295" X="-430.4236" Y="2227.076" Z="89.06757" />
 <TurnIn QuestName="Avenge Furien!" QuestId="14188" TurnInName="Sorrem" TurnInId="35298" X="-432.5052" Y="2214.288" Z="89.06464" />
 <PickUp QuestName="Translation" QuestId="14189" GiverName="Sorrem" GiverId="35298" X="-432.5052" Y="2214.288" Z="89.06464" />
@@ -844,11 +845,11 @@
 </If>
 <PickUp QuestName="Ethel Rethor" QuestId="14255" GiverName="Cerelia" GiverId="35295" X="-430.4236" Y="2227.076" Z="89.06744" />
 <If Condition="!HasQuest(14223) &amp;&amp; !IsQuestCompleted(14223)" >
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
 </If>
 <PickUp QuestName="Peace of Mind" QuestId="14223" GiverName="Sorrem" GiverId="35298" X="-432.5052" Y="2214.288" Z="89.06448" />
 <If Condition="HasQuest(14223) &amp;&amp; !IsQuestCompleted(14223)" >

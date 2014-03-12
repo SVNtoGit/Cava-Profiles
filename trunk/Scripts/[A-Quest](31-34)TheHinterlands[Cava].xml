@@ -302,7 +302,7 @@
   Please move your char to: THE HINTERLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -351,7 +351,7 @@
 <PickUp QuestName="Faces of Evil" QuestId="26521" GiverName="Fraggar Thundermantle" GiverId="43156" X="-72.1545" Y="-4028.66" Z="122.1784" />
 <PickUp QuestName="All That Skitters" QuestId="26523" GiverName="Fraggar Thundermantle" GiverId="43156" X="-72.1545" Y="-4028.66" Z="122.1784" />
 <If Condition="(HasQuest(26523) &amp;&amp; !IsQuestCompleted(26523)) || (HasQuest(26521) &amp;&amp; !IsQuestCompleted(26521)) || (HasQuest(26518) &amp;&amp; !IsQuestCompleted(26518)) || (HasQuest(26497) &amp;&amp; !IsQuestCompleted(26497))" >
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
 </If>
 <If Condition="HasQuest(26523) &amp;&amp; !IsQuestCompleted(26523)" >
   <CustomBehavior File="ForcedDismount" />
@@ -411,7 +411,7 @@
   
 </If>
 <If Condition="HasQuest(26523) || HasQuest(26521) || HasQuest(26518) || HasQuest(26497)" >
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="Vilebranch Scum" QuestId="26497" TurnInName="Doran Steelwing" TurnInId="43157" X="-70.0069" Y="-4034.88" Z="122.481" />
 <TurnIn QuestName="Heads Up" QuestId="26518" TurnInName="Doran Steelwing" TurnInId="43157" X="-70.0069" Y="-4034.88" Z="122.481" />

@@ -419,7 +419,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -534,7 +534,7 @@
 </If>
 <TurnIn QuestName="Trailing the Spiritspeaker" QuestId="28848" TurnInName="Nymn" TurnInId="50366" X="6723.967" Y="-4662.056" Z="720.9704" />
 <If Condition="!HasQuest(28609) &amp;&amp; !IsQuestCompleted(28609)">
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -546,7 +546,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="11118" X="6695.151" Y="-4673.041" Z="721.5688" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
 </If>
 <If Condition="!HasQuest(28470) &amp;&amp; !IsQuestCompleted(28470) &amp;&amp; Me.LevelFraction &gt;= 55.58">
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />

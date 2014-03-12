@@ -1406,7 +1406,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1451,7 +1451,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3483">
@@ -1514,7 +1514,7 @@
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="16826" X="-708.8713" Y="2739.131" Z="94.7336" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Force Commander Danath" QuestId="10254" GiverName="Marshal Isildor" GiverId="19308" X="-681.0013" Y="2719.797" Z="94.38376" />
   <If Condition="HasQuest(10254)">
     <CustomBehavior File="FlyTo" X="-776.5245" Y="2637.922" Z="107.9348" />
@@ -1810,7 +1810,7 @@
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q &lt; 4 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="16602" X="190.8758" Y="2610.927" Z="87.28393" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Report to Nazgrel" QuestId="10291" GiverName="General Krakork" GiverId="19255" X="212.7652" Y="2653.919" Z="88.0172" />
   <TurnIn QuestName="Report to Nazgrel" QuestId="10291" TurnInName="Nazgrel" TurnInId="3230" X="242.9973" Y="2698.199" Z="89.75937" />
   <PickUp QuestName="Eradicate the Burning Legion" QuestId="10121" GiverName="Nazgrel" GiverId="3230" X="242.9973" Y="2698.199" Z="89.75937" />
@@ -2733,7 +2733,7 @@
     <!--para cima da torre-->
     <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
     <CustomBehavior File="InteractWith" Range="7" MobId="184501" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
@@ -2752,7 +2752,7 @@
     <!--para baixo da torre-->
     <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="HasQuest(9381) &amp;&amp; !IsQuestCompleted(9381)">
     <CustomBehavior File="FlyTo" X="-452.5526" Y="4070.003" Z="68.53501" />
@@ -2793,7 +2793,7 @@
     <!--para cima da torre-->
     <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
     <CustomBehavior File="InteractWith" Range="7" MobId="184501" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
@@ -2806,7 +2806,7 @@
     <!--para baixo da torre-->
     <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="HasQuest(9370) &amp;&amp; !IsQuestCompleted(9370)">
     <CustomBehavior File="FlyTo" X="88.92114" Y="3520.128" Z="60.9496" />
@@ -3082,7 +3082,7 @@
     <!--para cima da torre-->
     <CustomBehavior File="FlyTo" X="-608.8242" Y="4103.473" Z="89.926" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="-592.702" Y="4076.699" Z="94.01121" />
     <CustomBehavior File="InteractWith" Range="7" MobId="184501" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-592.5018" Y="4068.464" Z="143.2584" />
@@ -3090,7 +3090,7 @@
     <!--para baixo da torre-->
     <CustomBehavior File="InteractWith" Range="7" MobId="184500" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-592.702" Y="4076.699" Z="94.01121" />
     <RunTo X="-608.8242" Y="4103.473" Z="89.926" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <If Condition="(HasQuest(9396) &amp;&amp; !IsQuestCompleted(9396)) || (HasQuest(9397) &amp;&amp; !IsQuestCompleted(9397))">
     <CustomBehavior File="FlyTo" X="-612.728" Y="4098.502" Z="155.3216" />
