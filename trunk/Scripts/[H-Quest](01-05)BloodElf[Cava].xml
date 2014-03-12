@@ -207,7 +207,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Blood Elf Quests (1-5)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="Reclaiming Sunstrider Isle" QuestId="8325" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <If Condition="HasQuest(8325) &amp;&amp; !IsQuestCompleted(8325)" >
@@ -399,7 +399,7 @@
 </If>
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="CollectItem" ItemId="20799" CollectCount="1" X="10130.96" Y="-5994.089" Z="110.1553"/>
 <If Condition="!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; !HasItem(20483)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="15298" MobState="Alive" CollectItemCount="1" CollectItemId="20483" HuntingGroundRadius="200" >
     <Hotspot X="10074.03" Y="-6044.311" Z="42.16472" />
     <Hotspot X="10083" Y="-5989.162" Z="63.32516" />
@@ -407,7 +407,7 @@
     <Hotspot X="10169.4" Y="-6011.75" Z="63.57126" />
     <Hotspot X="10131.61" Y="-5994.761" Z="110.1554" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; HasItem(20483)" >
   <PickUp QuestName="Tainted Arcane Sliver" QuestId="8338" GiverName="Tainted Arcane Sliver" GiverId="20483" GiverType="Item" />

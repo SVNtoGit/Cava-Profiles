@@ -129,7 +129,7 @@
 <If Condition="IsQuestCompleted(14465)">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-13)Worgen[Cava]" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Guilneas Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 5 # # # -->
 <PickUp QuestName="Among Humans Again" QuestId="14313" GiverName="Lord Godfrey" GiverId="36170" X="-1839.762" Y="2291.104" Z="42.22679" />
@@ -322,7 +322,7 @@
 <TurnIn QuestName="I Can't Wear This" QuestId="14400" TurnInName="Grandma Wahl" TurnInId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <PickUp QuestName="Grandma's Cat" QuestId="14401" GiverName="Grandma Wahl" GiverId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <If Condition="HasQuest(14401) &amp;&amp; !IsQuestCompleted(14401)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(14401)">
     <RunTo QuestId="14401" X="-2106.718" Y="2335.631" Z="7.345545" />
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36459" X="-2102.93" Y="2333.44" Z="8.443903" />
@@ -330,7 +330,7 @@
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36461" WaitForNpcs="False" MobState="Alive" X="-2102.93" Y="2333.44" Z="8.443903" />
 	<CustomBehavior File="WaitTimer" QuestId="14401" WaitTime="5000"/>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Grandma's Cat" QuestId="14401" TurnInName="Grandma Wahl" TurnInId="36458" X="-2116.892" Y="2416.667" Z="12.18524" />
 <!--# # # Level 8 # # # -->

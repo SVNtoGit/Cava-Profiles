@@ -173,40 +173,40 @@
   Please move your char to: WETLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(25780) &amp;&amp; !IsQuestCompleted(25780)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
@@ -248,7 +248,7 @@
 </If>
 <PickUp QuestName="Cursed to Roam" QuestId="25816" GiverName="First Mate Fitzsimmons" GiverId="1239" X="-3794.61" Y="-842.481" Z="0.8879969" />
 <If Condition="HasQuest(25800) &amp;&amp; !IsQuestCompleted(25800)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="25800" MobId="44116" MobState="Alive" CollectItemCount="5" CollectItemId="56013" HuntingGroundRadius="200" >
       <Hotspot X="-3743.156" Y="-876.3594" Z="-0.3971157" />
       <Hotspot X="-3776.339" Y="-853.7288" Z="-0.3972291" />
@@ -291,7 +291,7 @@
       <Hotspot X="-3685.011" Y="-1009.324" Z="-2.041966" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="When Life Gives You Crabs" QuestId="25800" Type="CollectItem" ItemId="56013" CollectCount="5" />
 -->
@@ -361,7 +361,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <If Condition="HasQuest(25801) &amp;&amp; !IsQuestCompleted(25801)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <SetGrindArea>
   <GrindArea>
   <Factions>18</Factions>
@@ -388,7 +388,7 @@
 <!--
 <Objective QuestName="Claws from the Deep" QuestId="25801" Type="KillMob" MobId="42109" KillCount="12" />
 -->
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="Cursed to Roam" QuestId="25816" TurnInName="First Mate Snellig" TurnInId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="(Me.Level &gt;= 23 )">
@@ -447,7 +447,7 @@
 </If>
 <PickUp QuestName="Lifting the Curse" QuestId="25818" GiverName="First Mate Snellig" GiverId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
 <If Condition="HasQuest(25818) &amp;&amp; !IsQuestCompleted(25818)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="-2839.905" Y="-1011.63" Z="-1.994456" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="AscendInWater" />
@@ -460,7 +460,7 @@
 <!--
 <Objective QuestName="Lifting the Curse" QuestId="25818" Type="CollectItem" ItemId="2629" CollectCount="1" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(25818) &amp;&amp; IsQuestCompleted(25818)" >
   <RunTo X="-2797.252" Y="-1008.325" Z="4.737027" />

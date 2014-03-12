@@ -94,7 +94,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 10.75 # # # -->
 <If Condition="HasQuest(26131)">
@@ -104,7 +104,7 @@
 <TurnIn QuestName="The Lost Pilot" QuestId="26854" TurnInName="A Dwarven Corpse" TurnInId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
 <If Condition="!HasQuest(26855) &amp;&amp; !IsQuestCompleted(26855)">
   <PickUp QuestName="A Pilot's Revenge" QuestId="26855" GiverName="A Dwarven Corpse" GiverId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!HasItem(3183)">
     <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1961" WaitForNpcs="False" MobState="Alive" CollectionDistance="1000" X="-5574.637" Y="-2144.288" Z="400.8333" />
@@ -115,7 +115,7 @@
       <PickUp QuestName="A Pilot's Revenge" QuestId="26855" GiverName="A Dwarven Corpse" GiverId="2059" X="-5578.744" Y="-2154.466" Z="401.5383" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="A Pilot's Revenge" QuestId="26855" TurnInName="Pilot Hammerfoot" TurnInId="1960" X="-5526.553" Y="-2380.059" Z="400.2226" />
 <PickUp QuestName="South Gate Status Report" QuestId="13635" GiverName="Pilot Hammerfoot" GiverId="1960" X="-5526.553" Y="-2380.059" Z="400.2226" />

@@ -98,7 +98,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+<LootMobs Value="true" />
 <!--# # # Level 14.4 # # # -->
 <CustomBehavior File="Message" Text="Compiling Westfall Map Zone" LogColor="Aquamarine" />
 <If Condition="HasQuest(26371)" >
@@ -121,7 +121,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
 <If Condition="HasQuest(26348) &amp;&amp; IsQuestCompleted(26348)" >
-<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+<LootMobs Value="null" />
 </If>
 <If Condition="HasItem(1357)" >
   <PickUp QuestName="Captain Sanders' Hidden Treasure" QuestId="26353" GiverName="Captain Sanders&apos; Treasure Map" GiverType="Item" GiverId="1357" />

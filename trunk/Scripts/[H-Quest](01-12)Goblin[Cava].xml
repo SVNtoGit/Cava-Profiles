@@ -522,7 +522,7 @@
 </If>
 <CustomBehavior File="Message" Text="Compiling Goblin Quests (1-13)" LogColor="Aquamarine" />
 <!--# # # Level 1 # # # -->
-<CustomBehavior File="Cava\CavaSettings" KillBetweenHotspots="False"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="0" FoodAmount="0" />
 <PickUp QuestName="Taking Care of Business" QuestId="14138" GiverName="Sassy Hardwrench" GiverId="34668" X="-8423.816" Y="1366.066" Z="104.675" />
 <TurnIn QuestName="Taking Care of Business" QuestId="14138" TurnInName="Foreman Dampwick" TurnInId="34872" X="-8402.308" Y="1314.974" Z="102.3311" />
 <PickUp QuestName="Trouble in the Mines" QuestId="14075" GiverName="Foreman Dampwick" GiverId="34872" X="-8402.308" Y="1314.974" Z="102.3311" />
@@ -868,12 +868,12 @@ MALE <PickUp QuestName="The New You" QuestId="14109" GiverName="FBoK Bank Teller
 <PickUp QuestName="Robbing Hoods" QuestId="14121" GiverName="Megs Dreadshredder" GiverId="34874" X="-8435.328" Y="1316.877" Z="102.6322" />
 <PickUp QuestName="Liberate the Kaja'mite" QuestId="14124" GiverName="Foreman Dampwick" GiverId="34872" X="-8431.545" Y="1276.95" Z="103.5289" />
 <If Condition="HasQuest(14124) &amp;&amp; !IsQuestCompleted(14124)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(14124)" >
     <CustomBehavior File="UseItemTargetLocation" MobId="195488" ObjectType="GameObject" WaitTime="2000" UseType="ToObject" MinRange="2" Range="5" ItemId="48768" CollectionDistance="200" X="-8464.21" Y="1204.967" Z="42.80505" />
     <CustomBehavior File="CollectThings" QuestId="14124" ObjectId="195492" CollectItemCount="12" CollectItemId="48766" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" X="-8464.21" Y="1204.967" Z="42.80505" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Liberate the Kaja'mite" QuestId="14124" TurnInName="Foreman Dampwick" TurnInId="34872" X="-8431.545" Y="1276.95" Z="103.5289" />
 <If Condition="HasQuest(14121) &amp;&amp; !IsQuestCompleted(14121)">
@@ -1356,7 +1356,7 @@ step
 <TurnIn QuestName="The Biggest Egg Ever" QuestId="24744" TurnInName="Hobart Grapplehammer" TurnInId="38120" X="918.2049" Y="2336.293" Z="3.30333" />
 <PickUp QuestName="Who's Top of the Food Chain Now?" QuestId="24816" GiverName="Hobart Grapplehammer" GiverId="38120" X="918.2049" Y="2336.293" Z="3.30333" />
 <If Condition="HasQuest(24816) &amp;&amp; !IsQuestCompleted(24816)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="24816" MobId="36681" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="965.0837" Y="2416.375" Z="-1.03775" />
     <Hotspot X="984.8453" Y="2451.339" Z="-0.9562088" />
@@ -1382,7 +1382,7 @@ step
     <Hotspot X="838.2812" Y="2419.805" Z="-0.9564899" />
   </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(24816)">
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
@@ -1422,10 +1422,10 @@ step
 <PickUp QuestName="Bilgewater Cartel Represent" QuestId="24858" GiverName="Megs Dreadshredder" GiverId="38432" X="679.2257" Y="2026.58" Z="50.14305" />
 <PickUp QuestName="Naga Hide" QuestId="24859" GiverName="Brett &quot;Coins&quot; McQuid" GiverId="38381" X="676.993" Y="2026.601" Z="49.82937" />
 <If Condition="(HasQuest(24858) &amp;&amp; !IsQuestCompleted(24858)) || (HasQuest(24859) &amp;&amp; !IsQuestCompleted(24859))" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(24858) &amp;&amp; !IsQuestCompleted(24858)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24858" MobId="202133" Range="6" ObjectType="GameObject" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="593.7388" Y="1936.868" Z="11.05975" />
@@ -1447,7 +1447,7 @@ step
       <Hotspot X="574.6096" Y="1910.009" Z="8.92372" />
     </HuntingGrounds>
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Naga Hide" QuestId="24859" Type="CollectItem" ItemId="50437" CollectCount="5" />
 <TurnIn QuestName="Naga Hide" QuestId="24859" TurnInName="Brett &quot;Coins&quot; McQuid" TurnInId="38381" X="676.993" Y="2026.601" Z="49.82937" />
@@ -1667,7 +1667,7 @@ step
 <PickUp QuestName="The Heads of the SI:7" QuestId="25093" GiverName="Aggra" GiverId="39065" X="1575.707" Y="2746.239" Z="82.16084" />
 <PickUp QuestName="Mine Disposal, the Goblin Way" QuestId="25058" GiverName="Sassy Hardwrench" GiverId="38387" X="1619.505" Y="2697.07" Z="88.2114" />
 <If Condition="HasQuest(25058) &amp;&amp; !IsQuestCompleted(25058)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <RunTo X="1703.929" Y="2835.315" Z="24.32444" />
   <CustomBehavior File="MyCTM" X="1650.272" Y="2849.394" Z="8.139843" />
   <While Condition="!IsQuestCompleted(25058)" >
@@ -1680,13 +1680,13 @@ step
   </While>
 </If>
 <If Condition="HasQuest(25093) &amp;&amp; !IsQuestCompleted(25093)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52346" CollectCount="1" />
   <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52349" CollectCount="1" />
   <Objective QuestName="The Heads of the SI:7" QuestId="25093" Type="CollectItem" ItemId="52347" CollectCount="1" />
 </If>
 <If Condition="HasQuest(25024) &amp;&amp; !IsQuestCompleted(25024)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <CustomBehavior File="CollectThings" QuestId="25024" MobId="39069" IgnoreMobsInBlackspots="True" HuntingGroundRadius="200" CollectUntil="QuestComplete" >
       <Hotspot X="2000.811" Y="2871.504" Z="2.814505" />
       <Hotspot X="1966.415" Y="2850.834" Z="1.280911" />
@@ -1705,7 +1705,7 @@ step
 </If>
 <If Condition="HasQuest(25024) || HasQuest(25093) || HasQuest(25058)" >
   <CustomBehavior File="NoCombatMoveTo" X="1668.239" Y="2724.038" Z="82.51826" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Repel the Paratroopers" QuestId="25024" TurnInName="Thrall" TurnInId="38935" X="1582.863" Y="2722.314" Z="83.13716" />
 <TurnIn QuestName="The Heads of the SI:7" QuestId="25093" TurnInName="Aggra" TurnInId="39065" X="1575.707" Y="2746.239" Z="82.16084" />
@@ -1737,7 +1737,7 @@ step
 <PickUp QuestName="Morale Boost" QuestId="25122" GiverName="Assistant Greely" GiverId="39199" X="1778.02" Y="1984.772" Z="172.8799" />
 <PickUp QuestName="Throw It On the Ground!" QuestId="25123" GiverName="Assistant Greely" GiverId="39199" X="1778.02" Y="1984.772" Z="172.8799" />
 <If Condition="HasQuest(25123) &amp;&amp; !IsQuestCompleted(25123)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(25123)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="39194" Range="5" WaitForNpcs="False" X="1919.275" Y="1863.829" Z="173.4558" />
     <CustomBehavior File="WaitTimer" QuestId="25123" WaitTime="2000" />
@@ -1749,7 +1749,7 @@ step
 </If>
 <TurnIn QuestName="Throw It On the Ground!" QuestId="25123" TurnInName="Assistant Greely" TurnInId="39199" />
 <If Condition="HasQuest(25122) &amp;&amp; !IsQuestCompleted(25122)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsObjectiveComplete(3, 25122)">
     <CustomBehavior File="CollectThings" ObjectId="202553" CollectItemCount="1" CollectItemId="52484" HuntingGroundRadius="200" >
       <Hotspot X="1769.3" Y="1983.827" Z="172.7241" />
@@ -1818,7 +1818,7 @@ step
 <TurnIn QuestName="Morale Boost" QuestId="25122" TurnInName="Assistant Greely" TurnInId="39199" />
 <PickUp QuestName="Light at the End of the Tunnel" QuestId="25125" GiverName="Assistant Greely" GiverId="39199" />
 <If Condition="HasQuest(25125)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Light at the End of the Tunnel" QuestId="25125" TurnInName="Mine Cart" TurnInId="39341" X="2058.635" Y="1841.993" Z="139.9283" />
 <PickUp QuestName="Wild Mine Cart Ride" QuestId="25184" GiverName="Mine Cart" GiverId="39341" X="2058.635" Y="1841.993" Z="139.9283" />

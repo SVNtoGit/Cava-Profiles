@@ -173,7 +173,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Guilneas Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 8 # # # -->
 <PickUp QuestName="The King's Observatory" QuestId="14466" GiverName="Queen Mia Greymane" GiverId="36606" X="-1582.83" Y="2554.696" Z="130.2197" />
@@ -471,11 +471,11 @@
 <PickUp QuestName="Last Meal" QuestId="24675" GiverName="Magda Whitewall" GiverId="38143" X="-1366.37" Y="1216.948" Z="35.52562" />
 <Objective QuestName="Last Meal" QuestId="24675" Type="CollectItem" ItemId="50219" CollectCount="10" />
 <If Condition="HasQuest(24674) &amp;&amp; !IsQuestCompleted(24674)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Slaves to No One" QuestId="24674" Type="KillMob" MobId="37802" KillCount="1" />
 <If Condition="HasQuest(24575) &amp;&amp; !IsQuestCompleted(24575)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(24575)" >
     <If Condition="GetItemCount(49881) &lt; 1" >
       <SetGrindArea>
@@ -497,7 +497,7 @@
 	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24575" MobId="201775" CollectionDistance="1000" ObjectType="GameObject" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <!--# # # Level 11 # # # -->
 <TurnIn QuestName="Slaves to No One" QuestId="24674" TurnInName="Marcus" TurnInId="37803" X="-1371.037" Y="1206.225" Z="35.55794" />

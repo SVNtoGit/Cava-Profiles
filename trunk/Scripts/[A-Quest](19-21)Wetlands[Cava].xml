@@ -254,40 +254,40 @@
   Please move your char to: LOCH MODAN\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False"/>
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Loch Modan Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 19.65 # # # -->
@@ -394,17 +394,17 @@
 </If>
 <If Condition="HasQuest(25734) &amp;&amp; !IsQuestCompleted(25734)" >
   <RunTo X="-3967.485" Y="-2368.593" Z="18.20854" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Down In Thelgen Rock" QuestId="25734" Type="CollectItem" ItemId="55242" CollectCount="1" />
 <If Condition="!HasQuest(25736) &amp;&amp; !IsQuestCompleted(25736)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" MobState="Alive"  WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
   <If Condition="!HasItem(55243)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasItem(55243)" >
   <PickUp QuestName="The Floodsurge Core" QuestId="25736" GiverName="Floodsurge Core" GiverId="55243" GiverType="Item" />

@@ -114,7 +114,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 5.4 # # # -->
 <If Condition="HasItem(57540)" >
@@ -144,13 +144,13 @@
 </If>
 <If Condition="((HasQuest(315)) &amp;&amp; (!IsQuestCompleted(315)))">
   <RunTo X="-5265.084" Y="-403.9218" Z="396.2718" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Frostmane Aggression" QuestId="25724" Type="KillMob" MobId="41121" KillCount="5" />
 <Objective QuestName="Frostmane Aggression" QuestId="25724" Type="KillMob" MobId="41122" KillCount="7" />
 <Objective QuestName="The Perfect Stout" QuestId="315" Type="CollectItem" ItemId="2676" CollectCount="7" />
 <If Condition="HasQuest(315)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
@@ -195,7 +195,7 @@
 <!--  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-10)Dun Morogh[Cava]" /> -->
 </If>
 <If Condition="HasQuest(25792) &amp;&amp; !IsQuestCompleted(25792)">
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(25792) &amp;&amp; !IsQuestCompleted(25792)">
   <While Condition="!IsQuestCompleted(25792)">
@@ -205,7 +205,7 @@
   </While>
 </If>
 <If Condition="HasQuest(25792) &amp;&amp; IsQuestCompleted(25792)">
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Operation Recombobulation" QuestId="412" Type="CollectItem" ItemId="3084" CollectCount="8" />
 <TurnIn QuestName="Operation Recombobulation" QuestId="412" TurnInName="Razzle Sprysprocket" TurnInId="1269" X="-5636.52" Y="-471.158" Z="397.769" />

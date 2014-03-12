@@ -172,40 +172,40 @@
 </If>
 <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
   Text="This profile use special Quest Behaviors, be sure Cava's folder is at right place" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
@@ -357,11 +357,11 @@
 <!--# # # Level 20 # # # -->
 <PickUp QuestName="Swamped Secrets" QuestId="13912" GiverName="Jr. Archaeologist Ferd" GiverId="34342" X="4648.129" Y="576.533" Z="22.63353" />
 <If Condition="HasQuest(13912) &amp;&amp; !IsQuestCompleted(13912)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="13912" ObjectId="195054" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="4625.235" Y="625.9769" Z="5.247323" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(13907) &amp;&amp; !IsQuestCompleted(13907)" >
 </If>
@@ -371,7 +371,7 @@
 <TurnIn QuestName="Swamped Secrets" QuestId="13912" TurnInName="Jr. Archaeologist Ferd" TurnInId="34342" X="4648.129" Y="576.533" Z="22.63353" />
 <PickUp QuestName="The Titans' Terminal" QuestId="13918" GiverName="Jr. Archaeologist Ferd" GiverId="34342" X="4648.129" Y="576.533" Z="22.63353" />
 <If Condition="HasQuest(13909) &amp;&amp; !IsQuestCompleted(13909)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
    <CustomBehavior File="CollectThings" QuestId="13909" ObjectId1="195042" ObjectId2="195080" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
      <Hotspot X="4731.358" Y="668.6431" Z="0.1960763" />
      <Hotspot X="4690.517" Y="674.8235" Z="3.772316" />
@@ -392,7 +392,7 @@
      <Hotspot X="4739.871" Y="591.0243" Z="4.486305" />
      <Hotspot X="4725.267" Y="629.2657" Z="1.545726" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(13918) &amp;&amp; !IsQuestCompleted(13918)" >
   <While Condition="!IsQuestCompleted(13918)" >

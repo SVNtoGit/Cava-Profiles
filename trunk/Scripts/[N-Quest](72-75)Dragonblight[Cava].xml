@@ -1282,7 +1282,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1325,7 +1325,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 65 &amp;&amp; Me.ZoneId != 2817 &amp;&amp; Me.ZoneId != 4395">
@@ -1493,11 +1493,11 @@
   </If>
   <If Condition="!HasQuest(12055) &amp;&amp; !IsQuestCompleted(12055) &amp;&amp; !HasItem(36742)" >
     <RunTo X="3410.492" Y="2534.028" Z="59.39033" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="26349" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36742">
       <Hotspot X="3401.724" Y="2532.424" Z="59.39906" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12055) &amp;&amp; !IsQuestCompleted(12055) &amp;&amp; HasItem(36742)" >
     <PickUp QuestName="Goramosh's Strange Device" GiverType="Item" QuestId="12055" GiverId="36742" />
@@ -1585,11 +1585,11 @@
 	<If Condition="!HasQuest(12067) &amp;&amp; !IsQuestCompleted(12067) &amp;&amp; !HasItem(36756)" >
     <CustomBehavior File="FlyTo" X="3149.371" Y="2151.223" Z="24.55444" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="26762" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36756">
       <Hotspot X="3149.371" Y="2151.223" Z="24.55444" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12067) &amp;&amp; !IsQuestCompleted(12067) &amp;&amp; HasItem(36756)" >
     <PickUp QuestName="A Letter for Home" GiverType="Item" QuestId="12067" GiverId="36756" />
@@ -1608,7 +1608,7 @@
   <PickUp QuestName="Strengthen the Ancients" QuestId="12092" GiverName="Sarendryana" GiverId="26837" X="3439.401" Y="2016.047" Z="69.46738" />
   <If Condition="HasQuest(12092) &amp;&amp; !IsQuestCompleted(12092)" >
     <CustomBehavior File="FlyTo" X="3249.163" Y="1815.663" Z="134.6106" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <While Condition="!IsQuestCompleted(12092)" >
       <If Condition="!HasItem(36786)" >
         <CustomBehavior File="InteractWith" QuestId="12092" MobId="26421" MobState="Alive" PreInteractMountStrategy="Dismount" >
@@ -1649,7 +1649,7 @@
 		</CustomBehavior>
       </If>
     </While>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(12083) &amp;&amp; !IsQuestCompleted(12083)" >
     <CustomBehavior File="FlyTo" X="2958.064" Y="1832.969" Z="136.4583" />
@@ -1674,7 +1674,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(12168) &amp;&amp; !IsQuestCompleted(12168) &amp;&amp; !HasItem(36958)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="26319" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36958">
       <Hotspot X="3921.078" Y="2247.874" Z="157.2333" />
       <Hotspot X="3925.473" Y="2207.585" Z="157.2448" />
@@ -1687,7 +1687,7 @@
       <Hotspot X="3858.907" Y="2225.131" Z="120.9827" />
       <Hotspot X="3851.417" Y="2265.702" Z="123.409" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12168) &amp;&amp; !IsQuestCompleted(12168) &amp;&amp; HasItem(36958)" >
     <PickUp QuestName="The Favor of Zangus" GiverType="Item" QuestId="12168" GiverId="36958" />
@@ -1871,7 +1871,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(12269) &amp;&amp; !IsQuestCompleted(12269)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <TurnIn QuestName="The Search for Slinkin" QuestId="12276" TurnInName="Slinkin the Demo-gnome" TurnInId="27412" X="3996.668" Y="-945.0229" Z="105.8067" />
   <PickUp QuestName="Leave Nothing to Chance" QuestId="12277" GiverName="Slinkin the Demo-gnome" GiverId="27412" X="3996.668" Y="-945.0229" Z="105.8067" />
@@ -1882,7 +1882,7 @@
   </If>
   <Objective QuestName="The Bleeding Ore" QuestId="12272" Type="CollectItem" ItemId="37359" CollectCount="10" />
   <If Condition="HasQuest(12269)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <Objective QuestName="Not In Our Mine" QuestId="12269" Type="CollectItem" ItemId="37411" CollectCount="10" />
   <If Condition="HasQuest(12277) || HasQuest(12272) || HasQuest(12269)" >
@@ -2543,7 +2543,7 @@
 </If>
 <PickUp Nav="Fly" QuestName="Planning for the Future" QuestId="11960" GiverName="Trapper Mau'i" GiverId="26228" X="2794.682" Y="920.7621" Z="22.32896" />
 <If Condition="HasQuest(11958) &amp;&amp; !IsQuestCompleted(11958)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(11960) &amp;&amp; !IsQuestCompleted(11960)" >
   <CustomBehavior File="FlyTo" X="3024.935" Y="1021.517" Z="101.4854" />
@@ -2574,7 +2574,7 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(11958)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Let Nothing Go To Waste" QuestId="11958" Type="CollectItem" ItemId="35686" CollectCount="6" />
 <TurnIn Nav="Fly" QuestName="Planning for the Future" QuestId="11960" TurnInName="Trapper Mau'i" TurnInId="26228" X="2794.682" Y="920.7621" Z="22.32896" />
@@ -2890,11 +2890,11 @@
   </If>
   <If Condition="!HasQuest(12059) &amp;&amp; !IsQuestCompleted(12059) &amp;&amp; !HasItem(36746)" >
     <RunTo X="3410.492" Y="2534.028" Z="59.39033" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="26349" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36746">
       <Hotspot X="3401.724" Y="2532.424" Z="59.39906" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12055) &amp;&amp; !IsQuestCompleted(12055) &amp;&amp; HasItem(36746)" >
     <PickUp QuestName="Goramosh's Strange Device" GiverType="Item" QuestId="12059" GiverId="36746" />
@@ -3020,7 +3020,7 @@
   <PickUp Nav="Fly" QuestName="Strengthen the Ancients" QuestId="12096" GiverName="Earthwarden Grife" GiverId="26854" X="3784.8" Y="1579.227" Z="89.97768" />
   <If Condition="HasQuest(12096) &amp;&amp; !IsQuestCompleted(12096)" >
     <CustomBehavior File="FlyTo" X="3249.163" Y="1815.663" Z="134.6106" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <While Condition="!IsQuestCompleted(12096)" >
       <If Condition="!HasItem(36786)" >
         <CustomBehavior File="InteractWith" QuestId="12096" MobId="26421" MobState="Alive" PreInteractMountStrategy="Dismount" >
@@ -3061,7 +3061,7 @@
 		</CustomBehavior>
       </If>
     </While>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="(HasQuest(12084) &amp;&amp; !IsQuestCompleted(12084)) || (!HasQuest(12085) &amp;&amp; !IsQuestCompleted(12085) &amp;&amp; !HasItem(36780))" >
     <CustomBehavior File="FlyTo" X="2958.064" Y="1832.969" Z="136.4583" />
@@ -3069,7 +3069,7 @@
     <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
   </If>
   <If Condition="!HasQuest(12085) &amp;&amp; !IsQuestCompleted(12085) &amp;&amp; !HasItem(36780)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="26815" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36780">
       <Hotspot X="2923.793" Y="1805.138" Z="134.6835" />
       <Hotspot X="2947.958" Y="1772.288" Z="136.0544" />
@@ -3083,7 +3083,7 @@
       <Hotspot X="2942.991" Y="1833.331" Z="133.334" />
       <Hotspot X="2954.01" Y="1794.759" Z="135.7729" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12085) &amp;&amp; !IsQuestCompleted(12085) &amp;&amp; HasItem(36780)" >
     <PickUp QuestName="A Letter for Home" GiverType="Item" QuestId="12085" GiverId="36780" />
@@ -3288,7 +3288,7 @@
   <If Condition="!HasQuest(12057) &amp;&amp; !IsQuestCompleted(12057) &amp;&amp; !HasItem(36744)" >
     <CustomBehavior File="FlyTo" X="3862.769" Y="2054.342" Z="133.1678" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId1="26606" MobId2="26319" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36744">
       <Hotspot X="3862.769" Y="2054.342" Z="133.1678" />
       <Hotspot X="3893.453" Y="2080.976" Z="128.7334" />
@@ -3317,7 +3317,7 @@
       <Hotspot X="3860.25" Y="2200.024" Z="121.3013" />
       <Hotspot X="3875.26" Y="2161.84" Z="122.7892" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12057) &amp;&amp; !IsQuestCompleted(12057) &amp;&amp; HasItem(36744)" >
     <PickUp QuestName="The Flesh-Bound Tome" GiverType="Item" QuestId="12057" GiverId="36744" />
@@ -4166,7 +4166,7 @@
 <If Condition="HasQuest(12046) &amp;&amp; !IsQuestCompleted(12046)">
   <CustomBehavior File="FlyTo" X="4631.482" Y="614.3642" Z="104.8214" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="Cava\PullMobs" PullMob="True" QuestId="12046" MobId1="26467" MobId2="26483" MobState="Alive" CollectUntil="RequiredCountReached" CollectItemCount="12" CollectItemId="36729">
     <Hotspot X="4631.482" Y="614.3642" Z="104.8214" />
     <Hotspot X="4591.432" Y="611.8528" Z="98.12221" />
@@ -4182,7 +4182,7 @@
     <Hotspot X="4690.702" Y="656.861" Z="116.4068" />
     <Hotspot X="4668.675" Y="622.9658" Z="112.7428" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn Nav="Fly" QuestName="Soft Packaging" QuestId="12046" TurnInName="Zivlix" TurnInId="26661" X="4705.633" Y="559.0539" Z="124.0265" />
 <If Condition="!HasQuest(12047) &amp;&amp; !IsQuestCompleted(12047) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
@@ -4588,11 +4588,11 @@
   <If Condition="!HasQuest(12147) &amp;&amp; !IsQuestCompleted(12147) &amp;&amp; !HasItem(36856)" >
     <CustomBehavior File="FlyTo" X="4073.822" Y="1246.091" Z="59.51757" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <CustomBehavior File="CollectThings" MobId="27004" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="36856">
       <Hotspot X="4073.822" Y="1246.091" Z="59.51757" />
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
   <If Condition="!HasQuest(12147) &amp;&amp; !IsQuestCompleted(12147) &amp;&amp; HasItem(36856)" >
     <PickUp QuestName="Disturbing Implications" QuestId="12147" GiverType="Item" GiverId="36856" />

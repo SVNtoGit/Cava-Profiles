@@ -534,7 +534,7 @@
 <!--
  ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling Townlong Steppes (88-89)" LogColor="Green" />
   <!-- LVL 88 -->
 <If Condition="!HasQuest(31286) &amp;&amp; !IsQuestCompleted(31286)" >
@@ -570,7 +570,7 @@
 <PickUp QuestName="Ranger Rescue" QuestId="30774" GiverName="Suna Silentstrike" GiverId="60684" X="2558.747" Y="3216.507" Z="430.1053" />
 <PickUp QuestName="The Exile" QuestId="30775" GiverName="Katak the Defeated" GiverId="60735" X="2589.652" Y="3231.221" Z="423.4907" />
 <If Condition="HasQuest(30774) &amp;&amp; !IsQuestCompleted(30774)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="The Exile" QuestId="30775" Type="KillMob" MobId="60728" KillCount="1" />
 <Objective QuestName="The Exile" QuestId="30775" Type="KillMob" MobId="60725" KillCount="1" />
@@ -611,7 +611,7 @@
   </While>
 </If>
 <If Condition="HasQuest(30774) &amp;&amp; IsQuestCompleted(30774)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Seeing Red" QuestId="30772" Type="KillMob" MobId="60692" KillCount="8" />
 <TurnIn QuestName="The Exile" QuestId="30775" TurnInName="Katak the Defeated" TurnInId="60735" X="2589.652" Y="3231.221" Z="423.4907" />
@@ -927,13 +927,13 @@
 <PickUp QuestName="In the Wrong Hands" QuestId="30897" GiverName="Initiate Chao" GiverId="61880" X="1239.689" Y="3039.38" Z="230.4301" />
 <PickUp QuestName="Thieves and Troublemakers" QuestId="30896" GiverName="Initiate Feng" GiverId="61881" X="1250.998" Y="3032.603" Z="228.6041" />
 <If Condition="HasQuest(30896) &amp;&amp; !IsQuestCompleted(30896)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="In the Wrong Hands" QuestId="30897" Type="CollectItem" ItemId="82783" CollectCount="1" />
 <Objective QuestName="Improvised Ammunition" QuestId="30895" Type="CollectItem" ItemId="82723" CollectCount="16" />
 <Objective QuestName="Thieves and Troublemakers" QuestId="30896" Type="KillMob" MobId="61302" KillCount="10" />
 <If Condition="HasQuest(30896) &amp;&amp; IsQuestCompleted(30896)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Thieves and Troublemakers" QuestId="30896" TurnInName="Initiate Feng" TurnInId="61881" X="1250.998" Y="3032.603" Z="228.6041" />
 <TurnIn QuestName="In the Wrong Hands" QuestId="30897" TurnInName="Initiate Chao" TurnInId="61880" X="1239.689" Y="3039.38" Z="230.4301" />
@@ -1128,16 +1128,16 @@
 <PickUp QuestName="A Proper Poultice" QuestId="30964" GiverName="Provisioner Bamfu" GiverId="61625" X="1827.512" Y="4256.575" Z="149.2775" />
 <If Condition="HasQuest(30964) &amp;&amp; !IsQuestCompleted(30964)" >
   <RunTo X="2253.97" Y="4165.006" Z="196.7661" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="A Proper Poultice" QuestId="30964" Type="CollectItem" ItemId="82389" CollectCount="11" />
 <If Condition="HasQuest(30963) &amp;&amp; !IsQuestCompleted(30963)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="The Field Armorer" QuestId="30963" Type="CollectItem" ItemId="82388" CollectCount="120" />
 <If Condition="HasQuest(30921) &amp;&amp; !IsQuestCompleted(30921)" >
   <RunTo X="2426.358" Y="3670.829" Z="265.2558" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="The Field Armorer" QuestId="30963" Type="CollectItem" ItemId="82388" CollectCount="120" />
 <If Condition="HasQuest(30923) &amp;&amp; !IsQuestCompleted(30923)" >
@@ -1230,7 +1230,7 @@ goto 39.5,61.9
 <TurnIn QuestName="Pick a Yak" QuestId="30930" TurnInName="Bluesaddle" TurnInId="61161" X="2389.215" Y="5045.707" Z="171.946" />
 <If Condition="HasQuest(30925) &amp;&amp; !IsQuestCompleted(30925)" >
   <RunTo X="2719.166" Y="4961.975" Z="157.7888" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock)">
 	</If>
 	<CustomBehavior File="KillUntilComplete" QuestId="30925" MobId1="61518" MobId2="61516" MobId3="61517" X="2770.989" Y="4857.453" Z="154.942" />
@@ -1249,11 +1249,11 @@ goto 39.5,61.9
 	<CustomBehavior File="NoCombatMoveTo" X="2242.598" Y="4735.253" Z="146.6116" />
 	<CustomBehavior File="NoCombatMoveTo" X="2512.387" Y="4968.986" Z="166.2601" />
   <RunTo X="2231.697" Y="5207.361" Z="89.26328" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <!--
 <If Condition="HasQuest(30927) &amp;&amp; !IsQuestCompleted(30927)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
   <While Condition="!IsQuestCompleted(30927)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2224.343" Y="5226.989" Z="89.06761" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2256.359" Y="4909.565" Z="80.38731" />

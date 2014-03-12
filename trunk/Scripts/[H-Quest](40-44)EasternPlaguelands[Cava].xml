@@ -624,40 +624,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Eastern Plaguelands Quests (40-44)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 40 # # # -->
 <If Condition="!HasQuest(27367) &amp;&amp; !IsQuestCompleted(27367)" >
@@ -725,7 +725,7 @@
   <PickUp QuestName="A Gift For Fiona" QuestId="27372" GiverName="Tarenar Sunstrike" GiverId="45429" X="1915.33" Y="-2649.17" Z="60.54036" />
 </If>
 <If Condition="HasQuest(27372) &amp;&amp; !IsQuestCompleted(27372)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27372" MobId1="8596" MobId2="8603" MobState="Alive" CollectItemCount="10" CollectItemId="60986" HuntingGroundRadius="200" >
       <Hotspot X="1914.971" Y="-2823.377" Z="76.28571" />
       <Hotspot X="1879.007" Y="-2804.673" Z="78.46243" />
@@ -760,7 +760,7 @@
       <Hotspot X="2002.984" Y="-2830.746" Z="83.22708" />
       <Hotspot X="1984.161" Y="-2867.857" Z="86.25882" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="A Gift For Fiona" QuestId="27372" TurnInName="Fiona" TurnInId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
 <If Condition="!HasQuest(27373) &amp;&amp; !IsQuestCompleted(27373)" >
@@ -822,13 +822,13 @@
   </While>
 </If>
 <If Condition="HasQuest(27392) &amp;&amp; !IsQuestCompleted(27392)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
     <RunTo X="1462.809" Y="-3827.552" Z="114.0675" />
     <RunTo X="1467.522" Y="-3882.057" Z="125.2929" />
   <CustomBehavior File="CollectThings" QuestId="27392" MobId="45450" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="1451.53" Y="-3911.31" Z="137.2836" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Pamela's Doll" QuestId="27384" TurnInName="Pamela Redpath" TurnInId="10926" X="1452.991" Y="-3596.824" Z="86.98743" />
 <TurnIn QuestName="I'm Not Supposed to Tell You This" QuestId="27392" TurnInName="Pamela Redpath" TurnInId="10926" X="1452.991" Y="-3596.824" Z="86.98743" />
@@ -927,7 +927,7 @@
 <PickUp QuestName="Postponing the Inevitable" QuestId="27420" GiverName="Rayne" GiverId="16135" X="2175.57" Y="-3505.86" Z="126.757" />
 <PickUp QuestName="Amidst Death, Life" QuestId="27421" GiverName="Rayne" GiverId="16135" X="2175.57" Y="-3505.86" Z="126.757" />
 <If Condition="HasQuest(27420) &amp;&amp; !IsQuestCompleted(27420)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(27421) &amp;&amp; !IsQuestCompleted(27421)" >
   <While Condition="!IsObjectiveComplete(2, 27421)" >
@@ -944,7 +944,7 @@
   </While>
 </If>
 <If Condition="HasQuest(27389) &amp;&amp; !IsQuestCompleted(27389)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(27389)" >
     <If Condition="(GetItemCount(13157) &lt; 1)" >
       <SetGrindArea>
@@ -973,14 +973,14 @@
 </If>
 <Objective QuestName="Postponing the Inevitable" QuestId="27420" Type="CollectItem" ItemId="61037" CollectCount="3" />
 <If Condition="HasQuest(27420) &amp;&amp; !IsQuestCompleted(27420)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <While Condition="!IsQuestCompleted(27420)" >
     <RunTo X="2406.412" Y="-3663.811" Z="178.5022" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61038)" WaitTime="1000" />
   </While>
 </If>
 <If Condition="HasQuest(27420)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Postponing the Inevitable" QuestId="27420" TurnInName="Rayne" TurnInId="16135" X="2175.57" Y="-3505.86" Z="126.757" />
 <TurnIn QuestName="Amidst Death, Life" QuestId="27421" TurnInName="Rayne" TurnInId="16135" X="2175.57" Y="-3505.86" Z="126.757" />
@@ -1070,7 +1070,7 @@
   <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" UseMount="True" />
 </If>
 <If Condition="HasQuest(27451) &amp;&amp; !IsQuestCompleted(27451)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="1995.401" Y="-4404.126" Z="73.74377" />
   <While Condition="!IsQuestCompleted(27451)">
     <SetGrindArea>
@@ -1096,7 +1096,7 @@
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(15454)" WaitTime="1000" />
 	<CustomBehavior File="WaitTimer" WaitTime="7000"/>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27451)" >
    <While Condition="HasQuest(27451)" >
@@ -1263,7 +1263,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <If Condition="HasQuest(27456) &amp;&amp; !IsQuestCompleted(27456)">
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="Cava\PullMobs" QuestId="27456" PullMob="True" MobId1="8603" MobId2="8605" MobState="Alive" CollectItemCount="15" CollectItemId="13853" HuntingGroundRadius="200" >
     <Hotspot X="2134.434" Y="-5194.059" Z="77.73852" />
     <Hotspot X="2110.204" Y="-5160.642" Z="78.1491" />
@@ -1293,7 +1293,7 @@
     <Hotspot X="2016.677" Y="-5233.379" Z="83.71097" />
     <Hotspot X="2054.984" Y="-5221.412" Z="81.9619" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="The Brotherhood of Light" QuestId="27459" TurnInName="Archmage Angela Dosantos" TurnInId="16116" X="1692.75" Y="-5215.99" Z="73.95737" />
 <PickUp QuestName="Soft Landing" QuestId="27460" GiverName="Archmage Angela Dosantos" GiverId="16116" X="1692.75" Y="-5215.99" Z="73.95737" />
@@ -1366,9 +1366,9 @@
 <TurnIn QuestName="Befouled No More" QuestId="27617" TurnInName="Archmage Angela Dosantos" TurnInId="16116" X="1679.16" Y="-5354.55" Z="73.61226" />
 <PickUp QuestName="Like Rats" QuestId="27620" GiverName="Archmage Angela Dosantos" GiverId="16116" X="1679.16" Y="-5354.55" Z="73.61226" />
 <If Condition="HasQuest(27620) &amp;&amp; !IsQuestCompleted(27620)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
   <RunTo X="1596.755" Y="-5555.541" Z="111.1713" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
   <While Condition="!IsQuestCompleted(27620)" >
     <RunTo QuestId="27620" X="1596.205" Y="-5565.859" Z="111.1715" />
 	<CustomBehavior File="WaitTimer" QuestId="27620" WaitTime="3000"/>
@@ -1388,7 +1388,7 @@
   </While>
 </If>
 <If Condition="HasQuest(27620)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="2268" />
 </If>
 <TurnIn QuestName="Like Rats" QuestId="27620" TurnInName="Leonid Barthalomew the Revered" TurnInId="11036" X="2305.76" Y="-5335.47" Z="90.75214" />
@@ -1479,7 +1479,7 @@
 </If>
 <!--<Objective QuestName="The Corpulent One" QuestId="27477" Type="KillMob" MobId="11896" KillCount="1" />-->
 <If Condition="HasQuest(27481) &amp;&amp; !IsQuestCompleted(27481)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"  />
+  <LootMobs Value="true" />
   <RunTo X="3404.754" Y="-4967.202" Z="164.6362" />
   <While Condition="!IsQuestCompleted(27481)" >
     <RunTo QuestId="27481" X="3404.754" Y="-4967.202" Z="164.6362" />
@@ -1503,13 +1503,13 @@
   <PickUp QuestName="Into the Flames" QuestId="27482" GiverName="Vex'tul" GiverId="45574" X="2569.906" Y="-4768.837" Z="107.9953" />
 </If>
 <If Condition="HasQuest(27482) &amp;&amp; !IsQuestCompleted(27482)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"  />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(27482)" >
     <RunTo X="3457.936" Y="-5000.058" Z="200.1985" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61316)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27482)" >
    <While Condition="HasQuest(27482)" >
@@ -1517,7 +1517,7 @@
   </While>
 </If>
 <If Condition="HasQuest(27479) &amp;&amp; !IsQuestCompleted(27479)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective QuestName="Righteous Indignation" QuestId="27479" Type="CollectItem" ItemId="61313" CollectCount="30" />
 </If>
 <If Condition="HasQuest(27479)" >
@@ -1630,12 +1630,12 @@
 <PickUp QuestName="Duskwing, Oh How I Hate Thee..." QuestId="27523" GiverName="Corpseburner Tim" GiverId="45816" X="3084.89" Y="-4222.7" Z="90.54771" />
 <If Condition="HasQuest(27523) &amp;&amp; !IsQuestCompleted(27523)" >
   <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(27523)" >
     <RunTo X="2793.918" Y="-4157.089" Z="89.30766" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61334)" WaitTime="10000"/>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Duskwing, Oh How I Hate Thee..." QuestId="27523" TurnInName="Corpseburner Tim" TurnInId="45816" X="3084.89" Y="-4222.7" Z="90.54771" />
 <TurnIn QuestName="Beat it Out of Them" QuestId="27522" TurnInName="Fiona" TurnInId="45417" X="3162.27" Y="-4325.08" Z="132.4073" />
@@ -1667,21 +1667,21 @@
 <PickUp QuestName="Defenders of Darrowshire" QuestId="27529" GiverName="Crusader Kevin Frost" GiverId="45831" X="3143.53" Y="-3402.09" Z="139.7926" />
 <PickUp QuestName="Add 'em to the Pile" QuestId="27539" GiverName="Crusader Kevin Frost" GiverId="45831" X="3143.53" Y="-3402.09" Z="139.7926" />
 <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539) || !HasQuest(27551) &amp;&amp; !IsQuestCompleted(27551)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Guardians of Stratholme" QuestId="27525" Type="KillMob" MobId="45868" KillCount="1" />
 <If Condition="!HasQuest(27551) &amp;&amp; !IsQuestCompleted(27551) &amp;&amp; !HasItem(61378)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId1="45868" MobState="Alive" CollectItemCount="1" CollectItemId="61378" HuntingGroundRadius="200" >
     <Hotspot X="3175.74" Y="-3473.3" Z="167.3954" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>  
 <If Condition="!HasQuest(27551) &amp;&amp; !IsQuestCompleted(27551) &amp;&amp; HasItem(61378)" >
   <PickUp QuestName="The Baroness' Missive" QuestId="27551" GiverId="61378" GiverType="Item" />
 </If>
 <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="The Baroness' Missive" QuestId="27551" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3135.564" Y="-3409.367" Z="139.8979" />
 <PickUp QuestName="Gidwin's Fate Revealed" QuestId="27526" GiverName="Tarenar Sunstrike" GiverId="45729" X="3135.564" Y="-3409.367" Z="139.8979" />
@@ -1694,7 +1694,7 @@
 <Objective QuestName="Guardians of Stratholme" QuestId="27525" Type="KillMob" MobId="45867" KillCount="1" />
 <If Condition="HasQuest(27528) &amp;&amp; !IsQuestCompleted(27528)" >
   <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
@@ -1776,7 +1776,7 @@
 </If>
 <If Condition="HasQuest(27529) &amp;&amp; !IsQuestCompleted(27529)" >
   <If Condition="HasQuest(27539) &amp;&amp; !IsQuestCompleted(27539)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
   </If>
   <While Condition="!IsQuestCompleted(27529)" >
     <CustomBehavior File="InteractWith" QuestId="27529" MobId1="8530" MobId2="11064" MobState="Alive" CollectionDistance="1000"
@@ -1852,10 +1852,10 @@
     </HuntingGrounds>
     </CustomBehavior>
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27539)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Add 'em to the Pile" QuestId="27539" Type="CollectItem" ItemId="61372" CollectCount="16" />
 <TurnIn QuestName="Guardians of Stratholme" QuestId="27525" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3007.13" Y="-3438.02" Z="149.7085" />

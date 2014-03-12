@@ -732,7 +732,7 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling The Jade Forest (85-86)" LogColor="Green" />
   <!-- LVL 85 -->
 <If Condition="!HasQuest(29611) &amp;&amp; !IsQuestCompleted(29611) &amp;&amp; Me.ZoneId != 1637" >
@@ -947,7 +947,7 @@
 <PickUp QuestName="Cryin' My Eyes Out" QuestId="29765" GiverName="Zin'Jun" GiverId="55403" X="2835.941" Y="-722.5833" Z="259.8945" />
 <If Condition="HasQuest(29765) &amp;&amp; !IsQuestCompleted(29765)" >
 	<CustomBehavior File="WaitTimer" WaitTime="10000" />
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <PickUp QuestName="Monstrosity" QuestId="29743" GiverName="Ancient Statue" GiverId="212181" GiverType="GameObject" X="2835.472" Y="-712.212" Z="258.8872" />
 <If Condition="HasQuest(29743) &amp;&amp; !IsQuestCompleted(29743)" >
@@ -972,7 +972,7 @@
 <Objective QuestName="Cryin' My Eyes Out" QuestId="29765" Type="CollectItem" ItemId="74162" CollectCount="1" />
 <Objective QuestName="Cryin' My Eyes Out" QuestId="29765" Type="CollectItem" ItemId="74163" CollectCount="1" />
 <If Condition="HasQuest(29765) &amp;&amp; IsQuestCompleted(29765)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
   <If Condition="HasQuestAvailable(55497, &quot;TurnIn&quot;)" >
     <TurnIn QuestName="Cryin' My Eyes Out" QuestId="29765" TurnInName="Zin'Jun" TurnInId="55497" />
     <PickUp QuestName="Seein' Red" QuestId="29804" GiverName="Zin'Jun" GiverId="55497" />
@@ -1119,14 +1119,14 @@
   <CustomBehavior File="CompleteLogQuest" QuestId="29924" />
 </While>
 <If Condition="!HasQuest(31261) &amp;&amp; !IsQuestCompleted(31261)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!HasItem(85783)" >
 		<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="63809" MobState="Alive" CollectionDistance="1000" X="1731.009" Y="-699.9305" Z="323.9586" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
 		<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="63809" MobState="Dead"  WaitForNpcs="False" CollectionDistance="1000" X="1731.009" Y="-699.9305" Z="323.9586" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <PickUp QuestName="Captain Jack's Dead" QuestId="31261" GiverName="Captain Jack's Head" GiverId="85783" GiverType="Item" />
 <Objective QuestName="Wicked Wikkets" QuestId="31241" Type="CollectItem" ItemId="85784" CollectCount="6" />
@@ -1169,7 +1169,7 @@
 <PickUp QuestName="Boom Bait" QuestId="29939" GiverName="Rivett Clutchpop" GiverId="56406" X="1288.79" Y="-449.6007" Z="343.9973" />
 <PickUp QuestName="Silly Wikket, Slickies are for Hozen" QuestId="29942" GiverName="Eekle Eekle" GiverId="56358" X="1285.95" Y="-435.5556" Z="345.1792" />
 <If Condition="HasQuest(29939) &amp;&amp; !IsQuestCompleted(29939)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(29939)" >
     <RunTo QuestId="29939" X="1077.033" Y="-415.8375" Z="259.1892" />
 		<CustomBehavior File="Misc\RunLua" QuestId="29939" Lua="UseItemByName(76262)" />
@@ -1182,7 +1182,7 @@
 		<CustomBehavior File="WaitTimer" QuestId="29939" WaitTime="3000" />
 		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29939" MobId="209877" ObjectType="GameObject" NumOfTimes="5" WaitForNpcs="False" CollectionDistance="1000" X="1077.033" Y="-415.8375" Z="259.1892" />
 	</While>
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Silly Wikket, Slickies are for Hozen" QuestId="29942" Type="CollectItem" ItemId="76420" CollectCount="4" />
 <TurnIn QuestName="Silly Wikket, Slickies are for Hozen" QuestId="29942" TurnInName="Eekle Eekle" TurnInId="56358" X="1285.95" Y="-435.5556" Z="345.1792" />
@@ -1252,7 +1252,7 @@
 <PickUp QuestName="Green-ish Energy" QuestId="29968" GiverName="Rivett Clutchpop" GiverId="56406" X="1219.484" Y="-698.0799" Z="325.0175" />
 <Objective QuestName="Green-ish Energy" QuestId="29968" Type="CollectItem" ItemId="76333" CollectCount="7" />
 <If Condition="HasQuest(29943) &amp;&amp; !IsQuestCompleted(29943)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Guerrillas in our Midst" QuestId="29943" Type="KillMob" MobId="56303" KillCount="8" />
 <If Condition="HasQuest(29943) &amp;&amp; IsQuestCompleted(29943)" >
@@ -1468,13 +1468,13 @@
 <PickUp QuestName="Vessels of the Spirit" QuestId="29750" GiverName="Pei-Zhi" GiverId="55614" X="2952.861" Y="-1636.967" Z="252.8331" />
 <PickUp QuestName="The Wayward Dead" QuestId="29752" GiverName="Pei-Zhi" GiverId="55614" X="2952.861" Y="-1636.967" Z="252.8331" />
 <If Condition="HasQuest(29750) &amp;&amp; !IsQuestCompleted(29750)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Ritual Artifacts" QuestId="29751" Type="CollectItem" ItemId="74762" CollectCount="1" />
 <Objective QuestName="Ritual Artifacts" QuestId="29751" Type="CollectItem" ItemId="74761" CollectCount="1" />
 <Objective QuestName="Ritual Artifacts" QuestId="29751" Type="CollectItem" ItemId="74760" CollectCount="1" />
 <If Condition="HasQuest(29750) &amp;&amp; IsQuestCompleted(29750)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(29752) &amp;&amp; !IsQuestCompleted(29752)" >
   <While Condition="!IsQuestCompleted(29752)" >
@@ -1488,7 +1488,7 @@
 </If>
 <Objective QuestName="Vessels of the Spirit" QuestId="29750" Type="CollectItem" ItemId="74763" CollectCount="8" />
 <If Condition="HasQuest(29750) &amp;&amp; IsQuestCompleted(29750)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Ritual Artifacts" QuestId="29751" TurnInName="Pei-Zhi" TurnInId="55614" X="2952.861" Y="-1636.967" Z="252.8331" />
 <TurnIn QuestName="Vessels of the Spirit" QuestId="29750" TurnInName="Pei-Zhi" TurnInId="55614" X="2952.861" Y="-1636.967" Z="252.8331" />

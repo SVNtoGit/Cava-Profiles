@@ -191,7 +191,7 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+
 <!--# # # Level 10.7 # # # -->
 <CustomBehavior File="Message" Text="Compiling Westfall Map Zone" LogColor="Aquamarine" />
 <If Condition="!HasQuest(28562) &amp;&amp; !IsQuestCompleted(28562) &amp;&amp; !HasQuest(26378) &amp;&amp; !IsQuestCompleted(26378)" >
@@ -253,7 +253,6 @@
   <While Condition="!IsQuestCompleted(26232)" >
     <RunTo QuestId="26232" X="-9861.432" Y="1333.309" Z="41.90343" />
 	<CustomBehavior File="WaitTimer" QuestId="26232" WaitTime="40000"/>
-	<CustomBehavior File="Cava\CavaSettings" QuestId="26232"  />
 	<RunTo QuestId="26232" X="-9852.887" Y="1275.882" Z="40.95193" />
   </While>
 </If>
@@ -272,7 +271,7 @@
 <!--# # # Level 12 # # # -->
 <Objective QuestName="Times are Tough" QuestId="26237" Type="KillMob" MobId="114" KillCount="10" />
 <If Condition="!HasQuest(26252) &amp;&amp; !IsQuestCompleted(26252)">
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+<LootMobs Value="true" />
   <If Condition="!HasItem(57935)" >
     <SetGrindArea>
 	  <GrindArea>
@@ -286,7 +285,7 @@
 	</SetGrindArea>
 	<GrindTo Condition="HasItem(57935)" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <PickUp QuestName="Heart of the Watcher" QuestId="26252" GiverType="Item" GiverId="57935" />
 </If>
 <TurnIn QuestName="Times are Tough" QuestId="26237" TurnInName="Farmer Saldean" TurnInId="233" X="-10128.7" Y="1055.21" Z="36.25024" />
@@ -399,12 +398,12 @@
 <TurnIn QuestName="To Moonbrook!" QuestId="26292" TurnInName="Captain Alpert" TurnInId="42425" X="-10896.19" Y="1543.047" Z="54.64867" />
 <PickUp QuestName="Propaganda" QuestId="26295" GiverName="Captain Alpert" GiverId="42425" X="-10896.19" Y="1543.047" Z="54.64867" />
 <If Condition="!HasQuest(26296) &amp;&amp; !IsQuestCompleted(26296)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="-10977.16" Y="1565.248" Z="45.61914" />
   <While Condition="!HasItem(58117)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42677" WaitTime="1000" MobState="Alive" CollectionDistance="1000" X="-10972.59" Y="1565.516" Z="45.61837" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasItem(58117)" >
   <PickUp QuestName="Evidence Collection" QuestId="26296" GiverName="Red Bandana" GiverId="58117" GiverType="Item" />

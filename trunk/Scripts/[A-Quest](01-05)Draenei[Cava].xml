@@ -100,7 +100,11 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  DrinkAmount="0" FoodAmount="0" />
+<!--
+<CustomBehavior File="UserSettings"  DrinkAmount="0" FoodAmount="0" />
+-->
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+
 <CustomBehavior File="Message" Text="Compiling Draenei Quests (1-5)" LogColor="Aquamarine" />
 <!--# # # Level 1 # # # -->
 <PickUp QuestName="You Survived!" QuestId="9279" GiverName="Megelon" GiverId="16475" X="-3961.696" Y="-13926.94" Z="100.8916" />
@@ -244,7 +248,7 @@
 <PickUp QuestName="Blood Elf Spy" QuestId="9311" GiverName="Tolaan" GiverId="16546" X="-4445.659" Y="-13430.91" Z="51.25343" />
 <If Condition="HasQuest(9311) &amp;&amp; !IsQuestCompleted(9311)" >
   <RunTo X="-4569.503" Y="-13311.77" Z="87.52728" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Blood Elf Spy" QuestId="9311" Type="KillMob" MobId="16522" KillCount="1" />
 <If Condition="!HasQuest(9798) &amp;&amp; !IsQuestCompleted(9798)" >
@@ -252,7 +256,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="16522" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="-4579.389" Y="-13319.93" Z="87.99693" />
   </While>
   <PickUp QuestName="Blood Elf Plans" QuestId="9798" GiverType="Item" GiverId="24414" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Blood Elf Spy" QuestId="9311" TurnInName="Vindicator Aldar" TurnInId="16535" />
 <PickUp QuestName="The Emitter" QuestId="9312" GiverName="Vindicator Aldar" GiverId="16535" />

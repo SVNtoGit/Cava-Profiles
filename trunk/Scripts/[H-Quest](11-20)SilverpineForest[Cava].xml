@@ -485,7 +485,7 @@
 <CustomBehavior File="Message" Text="Compiling Silverpine Forest Quests (11-20)" LogColor="Aquamarine" />
 <!--# # # Level 11.3 # # # -->
 <If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290)">
-  <CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  />
+  
 </If>
 <If Condition="!HasQuest(26965) &amp;&amp; !IsQuestCompleted(26965)">
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
@@ -502,11 +502,11 @@
 <PickUp QuestName="Guts and Gore" QuestId="26995" GiverName="High Apothecary Shana T'veen" GiverId="44784" X="1431.48" Y="1086.86" Z="60.47852" />
 <PickUp QuestName="Agony Abounds" QuestId="26992" GiverName="Apothecary Witherbloom" GiverId="44778" X="1409.33" Y="1065.86" Z="60.47844" />
 <If Condition="HasQuest(26995) &amp;&amp; !IsQuestCompleted(26995)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Agony Abounds" QuestId="26992" Type="CollectItem" ItemId="60741" CollectCount="8" />
 <If Condition="HasQuest(26995)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Guts and Gore" QuestId="26995" Type="CollectItem" ItemId="60742" CollectCount="6" />
 <Objective QuestName="The Gilneas Liberation Front" QuestId="26989" Type="KillMob" MobId="44793" KillCount="10" />
@@ -984,7 +984,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  DrinkAmount="20" FoodAmount="20"/>
+<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="20" FoodAmount="20"/>
 <TurnIn QuestName="To Forsaken Forward Command" QuestId="27290" TurnInName="Deathstalker Commander Belmont" TurnInId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="In Time, All Will Be Revealed" QuestId="27342" GiverName="Deathstalker Commander Belmont" GiverId="45312" X="-933.0803" Y="1632.079" Z="68.38374" />
 <PickUp QuestName="Losing Ground" QuestId="27333" GiverName="Forward Commander Onslaught" GiverId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
@@ -1523,11 +1523,11 @@
 <PickUp QuestName="Breaking the Barrier" QuestId="27474" GiverName="Lady Sylvanas Windrunner" GiverId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
 <PickUp QuestName="Unyielding Servitors" QuestId="27475" GiverName="Daschla" GiverId="45626" X="-145.042" Y="1270.53" Z="54.60617" />
 <If Condition="HasQuest(27475) &amp;&amp; !IsQuestCompleted(27475)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Breaking the Barrier" QuestId="27474" Type="CollectItem" ItemId="61306" CollectCount="1" />
 <If Condition="HasQuest(27475)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Unyielding Servitors" QuestId="27475" Type="CollectItem" ItemId="61307" CollectCount="6" />
 <TurnIn QuestName="Unyielding Servitors" QuestId="27475" TurnInName="Daschla" TurnInId="45626" X="-145.042" Y="1270.53" Z="54.6063" />
@@ -1716,24 +1716,24 @@
   </If>
 </If>
 <If Condition="!HasQuest(27480) &amp;&amp; !IsQuestCompleted(27480) &amp;&amp; !HasItem(61310)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="45728" MobState="Alive" CollectItemCount="1" CollectItemId="61310" HuntingGroundRadius="200" CollectUntil="RequiredCountReached">
     <Hotspot X="184.234" Y="442.7271" Z="-5.200301" />
     <Hotspot X="210.1897" Y="324.3748" Z="-15.57094" />
     <Hotspot X="345.526" Y="297.247" Z="-10.08317" />
     <Hotspot X="349.561" Y="423.2372" Z="-15.29491" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(27480) &amp;&amp; !IsQuestCompleted(27480) &amp;&amp; HasItem(61310)">
   <PickUp QuestName="Ley Energies" QuestId="27480" GiverType="Item" GiverId="61310" />
 </If>
 <If Condition="HasQuest(27480) &amp;&amp; !IsQuestCompleted(27480)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Relios the Relic Keeper" QuestId="27478" Type="CollectItem" ItemId="61312" CollectCount="1" />
 <If Condition="HasQuest(27480)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Ley Energies" QuestId="27480" Type="CollectItem" ItemId="61311" CollectCount="8" />
 <!--# # # Level 18 # # # -->
@@ -2172,11 +2172,11 @@
 <PickUp QuestName="7th Legion Battle Plans" QuestId="27577" GiverName="Lord Walden" GiverId="45879" X="-164.5273" Y="1272.746" Z="48.94875" />
 <PickUp QuestName="Sowing Discord" QuestId="27580" GiverName="Lord Godfrey" GiverId="45878" X="-164.5273" Y="1272.746" Z="48.94875" />
 <If Condition="HasQuest(27577) &amp;&amp; !IsQuestCompleted(27577)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Sowing Discord" QuestId="27580" Type="KillMob" MobId="45995" KillCount="1" />
 <If Condition="HasQuest(27577)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Sowing Discord" QuestId="27580" TurnInName="Lord Godfre" TurnInId="45878" X="-164.5273" Y="1272.746" Z="48.94875" />
 <Objective QuestName="7th Legion Battle Plans" QuestId="27577" Type="CollectItem" ItemId="61510" CollectCount="1" />

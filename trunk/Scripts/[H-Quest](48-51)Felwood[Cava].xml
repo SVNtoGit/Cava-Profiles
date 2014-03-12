@@ -433,40 +433,40 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Felwood Quests (48-51)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 48.90 # # # -->
 <PickUp QuestName="A Slimy Situation" QuestId="28207" GiverName="Kelnir Leafsong" GiverId="47696" X="5220.6" Y="-704.363" Z="344.0027" />
@@ -549,13 +549,13 @@
 <PickUp QuestName="The Core of Kroshius" QuestId="28359" GiverName="Hurak Wildhorn" GiverId="48349" X="6111.81" Y="-870.03" Z="412.392" />
 <If Condition="(HasQuest(28359) &amp;&amp; !IsQuestCompleted(28359)) ||
                (HasQuest(28341) &amp;&amp; !IsQuestCompleted(28341))">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Fel To Pieces" QuestId="28342" Type="CollectItem" ItemId="63123" CollectCount="9" />
 <Objective QuestName="The Core of Kroshius" QuestId="28359" Type="CollectItem" ItemId="63687" CollectCount="1" />
 <Objective QuestName="Collecting Corruption" QuestId="28341" Type="CollectItem" ItemId="63522" CollectCount="8" />
 <If Condition="HasQuest(28359) || HasQuest(28341)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Hunting the Damned" QuestId="28358" Type="KillMob" MobId="7136" KillCount="6" />
 <Objective QuestName="Running Their Course" QuestId="28360" Type="KillMob" MobId="48455" KillCount="8" />
@@ -1013,7 +1013,7 @@
 <PickUp QuestName="Slap and Cap" QuestId="28336" GiverName="Darla Drilldozer" GiverId="48127" X="6907.05" Y="-1617.02" Z="503.9767" />
 <PickUp QuestName="Is Your Oil Running?" QuestId="28339" GiverName="Darla Drilldozer" GiverId="48127" X="6907.05" Y="-1617.02" Z="503.9767" />
 <If Condition="HasQuest(28339) &amp;&amp; !IsQuestCompleted(28339)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28336) &amp;&amp; !IsQuestCompleted(28336)">
   <CustomBehavior File="InteractWith" QuestId="28336" MobId="48331" MobState="Alive" NumOfTimes="1000" CollectionDistance="1000" >
@@ -1031,7 +1031,7 @@
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(28339)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(28339) &amp;&amp; !IsQuestCompleted(28339)">
   <Objective QuestName="Is Your Oil Running?" QuestId="28339" Type="CollectItem" ItemId="63519" CollectCount="10" />
@@ -1067,19 +1067,19 @@
 <PickUp QuestName="Disarming Bears" QuestId="28366" GiverName="Nafien" GiverId="15395" X="6821.855" Y="-2082.51" Z="623.1876" />
 <PickUp QuestName="Stupid Drizle!" QuestId="28362" GiverName="Ferli" GiverId="48461" X="6821.65" Y="-2087.57" Z="623.6501" />
 <If Condition="!HasQuest(8470) &amp;&amp; !IsQuestCompleted(8470) &amp;&amp; !HasItem(20741)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Stupid Drizle!" QuestId="28362" TurnInName="Drizle" TurnInId="47556" X="6853.1" Y="-1874.25" Z="551.1445" />
 <PickUp QuestName="The Chieftain's Key" QuestId="28364" GiverName="Drizle" GiverId="47556" X="6853.1" Y="-1874.25" Z="551.1445" />
 <If Condition="!HasQuest(8470) &amp;&amp; !IsQuestCompleted(8470) &amp;&amp; HasItem(20741)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28364) &amp;&amp; !IsQuestCompleted(28364)">
   <Objective QuestName="The Chieftain's Key" QuestId="28364" Type="CollectItem" ItemId="63695" CollectCount="1" />
 </If>
 <TurnIn QuestName="The Chieftain's Key" QuestId="28364" TurnInName="Drizle" TurnInId="47556" X="6853.1" Y="-1874.25" Z="551.1445" />
 <If Condition="!HasQuest(8470) &amp;&amp; !IsQuestCompleted(8470) &amp;&amp; HasItem(20741)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Disarming Bears" QuestId="28366" Type="CollectItem" ItemId="63689" CollectCount="7" />
 <If Condition="!HasQuest(8470) &amp;&amp; !IsQuestCompleted(8470) &amp;&amp; !HasItem(20741)" >
@@ -1099,7 +1099,7 @@
       <Hotspot X="6841.374" Y="-1947.509" Z="550.3579" />
       <Hotspot X="6848.551" Y="-1907.093" Z="550.6353" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(8470) &amp;&amp; !IsQuestCompleted(8470) &amp;&amp; HasItem(20741)" >
   <PickUp QuestName="Deadwood Ritual Totem" QuestId="8470" GiverId="20741" GiverType="Item" />

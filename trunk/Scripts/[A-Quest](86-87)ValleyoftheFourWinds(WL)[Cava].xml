@@ -585,7 +585,7 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
   <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	<LootMobs Value="true" />
 	<CustomBehavior File="Message" Text="Compiling Valley of the Four Winds (86-87)" LogColor="Green" />
   <!-- LVL 86 -->
 <If Condition="!HasQuest(29907) &amp;&amp; !IsQuestCompleted(29907)" >
@@ -744,7 +744,7 @@
 <Objective QuestName="Leaders Among Breeders" QuestId="29944" Type="KillMob" MobId="56513" KillCount="1" />
 <Objective QuestName="Leaders Among Breeders" QuestId="29944" Type="KillMob" MobId="56520" KillCount="1" />
 <If Condition="HasQuest(29945) &amp;&amp; IsQuestCompleted(29945)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Yellow and Red Make Orange" QuestId="29945" TurnInName="Li Li" TurnInId="56138" X="-37.48438" Y="-24.45833" Z="154.5381" />
 <PickUp QuestName="Crouching Carrot, Hidden Turnip" QuestId="29947" GiverName="Li Li" GiverId="56138" X="-37.48438" Y="-24.45833" Z="154.5381" />
@@ -802,7 +802,7 @@
 <PickUp QuestName="Watery Woes" QuestId="30267" GiverName="Gladecaster Lang" GiverId="58736" X="236.066" Y="286.0295" Z="153.5946" />
 <PickUp QuestName="Bottletoads" QuestId="29757" GiverName="Yan" GiverId="56773" X="214.4271" Y="300.2326" Z="153.789" />
 <If Condition="!HasQuest(30275) &amp;&amp; !IsQuestCompleted(30275)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!HasItem(79238)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="58754" MobState="Alive" X="420.7778" Y="422.8976" Z="147.6667" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
@@ -813,7 +813,7 @@
   <PickUp QuestName="A Crocolisk Tale" QuestId="30275" GiverType="Item" GiverName="Enormous Crocolisk Tail" GiverId="79238" />
 </If>
 <If Condition="HasQuest(30267) &amp;&amp; !IsQuestCompleted(30267)" >
-	<CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+	<LootMobs Value="true" />
 	<CustomBehavior File="ForcedMount" />
 	<RunTo X="278.6341" Y="412.7885" Z="145.1904" />
   <CustomBehavior File="ForcedDismount" />
@@ -827,7 +827,7 @@
 </If>
 <Objective QuestName="Watery Woes" QuestId="30267" Type="CollectItem" ItemId="79198" CollectCount="5" />
 <If Condition="HasQuest(30267) &amp;&amp; IsQuestCompleted(30267)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="A Crocolisk Tale" QuestId="30275" TurnInName="Yan" TurnInId="56773" X="214.4271" Y="300.2326" Z="153.789" />
 <TurnIn QuestName="Watery Woes" QuestId="30267" TurnInName="Gladecaster Lang" TurnInId="58736" X="236.066" Y="286.0295" Z="153.5946" />
@@ -839,12 +839,12 @@
 <TurnIn QuestName="Ashyo's Vision" QuestId="29577" TurnInName="Zhang Yue" TurnInId="56802" X="364.6944" Y="331.1823" Z="189.5327" />
 <PickUp QuestName="The Golden Dream" QuestId="29581" GiverName="Zhang Yue" GiverId="56802" X="364.6944" Y="331.1823" Z="189.5327" />
 <If Condition="!HasQuest(29758) &amp;&amp; !IsQuestCompleted(29758)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
   <While Condition="!HasItem(83767)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="56833" MobState="Alive" X="422.6007" Y="114.2882" Z="209.3493" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
   </While>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="HasItem(83767)" >
   <PickUp QuestName="Guess Whose Back" QuestId="29758" GiverType="Item" GiverName="Krosh's Back" GiverId="83767" />
@@ -1158,7 +1158,7 @@
 </If>
 <PickUp QuestName="Enough is Ookin' Enough" QuestId="30054" GiverName="Mung-Mung" GiverId="57401" X="200.1684" Y="945.7778" Z="174.7017" />
 <If Condition="HasQuest(30054) &amp;&amp; !IsQuestCompleted(30054)" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(30056) &amp;&amp; !IsQuestCompleted(30056)" >
   <PickUp QuestName="The Farmer's Daughter" QuestId="30056" GiverName="Den Mudclaw" GiverId="62385" X="200.6997" Y="942.033" Z="174.7217" />
@@ -1200,7 +1200,7 @@
 </If>
 <Objective QuestName="Enough is Ookin' Enough" QuestId="30054" Type="CollectItem" ItemId="77379" CollectCount="100" />
 <If Condition="HasQuest(30054) &amp;&amp; IsQuestCompleted(30054)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Enough is Ookin' Enough" QuestId="30054" TurnInName="Mung-Mung" TurnInId="57401" X="200.1684" Y="945.7778" Z="174.7017" />
 <TurnIn QuestName="Seeing Orange" QuestId="30057" TurnInName="Den Mudclaw" TurnInId="62385" X="200.6997" Y="942.033" Z="174.7216" />

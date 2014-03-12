@@ -658,38 +658,38 @@
 </If>
 <CustomBehavior File="Message" Text="Compiling Blasted Lands (57-60)" LogColor="Aquamarine" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 57.95 # # # -->
 <If Condition="!HasQuest(25674) &amp;&amp; !IsQuestCompleted(25674)" >
@@ -707,7 +707,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="Futile Pride" QuestId="25674" GiverName="Okrilla" GiverId="41124" X="-10867.65" Y="-2675.7" Z="9.808718" />
 <If Condition="HasQuest(25674) &amp;&amp; !IsQuestCompleted(25674)" >
   <Objective QuestName="Futile Pride" QuestId="25674" Type="KillMob" MobId="41136" KillCount="1" />
@@ -841,7 +841,7 @@
   </If>
 </If>
 <If Condition="(HasQuest(25685) &amp;&amp; !IsQuestCompleted(25685)) &amp;&amp; (HasQuest(25690) &amp;&amp; !IsQuestCompleted(25690))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <SetGrindArea>
   <GrindArea>
   <Factions>14 38 49</Factions>
@@ -890,12 +890,12 @@
   <GrindTo Condition="IsQuestCompleted(25690) || IsObjectiveComplete(1, 25685) || IsObjectiveComplete(2, 25685)" />
 </If>
 <If Condition="HasQuest(25690) &amp;&amp; !IsQuestCompleted(25690)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <Objective QuestName="A Bloodmage's Gotta Eat Too" QuestId="25690" Type="CollectItem" ItemId="55828" CollectCount="5" />
 </If>
 <If Condition="HasQuest(25685) &amp;&amp; !IsQuestCompleted(25685)" >
   <If Condition="!IsObjectiveComplete(1, 25685) &amp;&amp; !IsObjectiveComplete(2, 25685)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <SetGrindArea>
     <GrindArea>
     <Factions>38 49</Factions>
@@ -943,12 +943,12 @@
     </SetGrindArea>
     <GrindTo Condition="IsObjectiveComplete(1, 25685) || IsObjectiveComplete(2, 25685)" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective QuestName="The First Step" QuestId="25685" Type="CollectItem" ItemId="55826" CollectCount="9" />
   <Objective QuestName="The First Step" QuestId="25685" Type="CollectItem" ItemId="55827" CollectCount="9" />
 </If>
 <If Condition="HasQuest(25685)  || HasQuest(25690)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
     <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
@@ -1087,27 +1087,27 @@
 <PickUp QuestName="The Vile Blood of Demons" QuestId="25692" GiverName="Watcher Wazzik" GiverId="41159" X="-11806.18" Y="-3182.689" Z="-30.73849" />
 <PickUp QuestName="Protecting Our Rear" QuestId="25694" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67968" />
 <If Condition="HasQuest(25694) &amp;&amp; !IsQuestCompleted(25694)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(25692) &amp;&amp; IsQuestCompleted(25692)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="25694" Type="KillMob" MobId="41165" KillCount="1" />
 <If Condition="HasQuest(25692) &amp;&amp; IsQuestCompleted(25692)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="25694" Type="KillMob" MobId="41166" KillCount="1" />
 <If Condition="HasQuest(25692) &amp;&amp; IsQuestCompleted(25692)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Protecting Our Rear" QuestId="25694" Type="KillMob" MobId="41164" KillCount="1" />
 <If Condition="HasQuest(25694)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="The Vile Blood of Demons" QuestId="25692" Type="CollectItem" ItemId="55991" CollectCount="7" />
 <Objective QuestName="The Charred Granite of the Dark Portal" QuestId="25691" Type="CollectItem" ItemId="55989" CollectCount="24" />
 <If Condition="HasQuest(25692) &amp;&amp; IsQuestCompleted(25692)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="The Charred Granite of the Dark Portal" QuestId="25691" TurnInName="Watcher Wazzik" TurnInId="41159" X="-11806.18" Y="-3182.689" Z="-30.73849" />
 <TurnIn QuestName="The Vile Blood of Demons" QuestId="25692" TurnInName="Watcher Wazzik" TurnInId="41159" X="-11806.18" Y="-3182.689" Z="-30.73849" />
@@ -1399,11 +1399,11 @@
 </If>
 <PickUp QuestName="Demoniac Vessel" QuestId="25719" GiverName="Elijah Dawnflight" GiverId="42348" X="-12271.1" Y="-2919.788" Z="97.45673" />
 <If Condition="HasQuest(25719) &amp;&amp; !IsQuestCompleted(25719)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <Objective QuestName="Demoniac Vessel" QuestId="25719" Type="CollectItem" ItemId="57178" CollectCount="20" />
   <Objective QuestName="Demoniac Vessel" QuestId="25719" Type="CollectItem" ItemId="57177" CollectCount="4" />
   <Objective QuestName="Demoniac Vessel" QuestId="25719" Type="CollectItem" ItemId="57179" CollectCount="2" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <RunTo X="-12334.59" Y="-3016.15" Z="88.21655" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(57178)" NumOfTimes="20" WaitTime="1000" />

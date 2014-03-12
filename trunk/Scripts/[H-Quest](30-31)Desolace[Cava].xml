@@ -550,38 +550,38 @@
 <CustomBehavior File="Message" Text="Compiling Desolace Quests (31-33)" LogColor="Aquamarine" />
 <!--# # # Level 26.46 # # # -->
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <PickUp QuestName="My Time Has Passed" QuestId="14184" GiverName="Furien" GiverId="35286" X="189.5573" Y="1770.958" Z="91.12318" />
 <If Condition="HasQuest(14184)" >
@@ -610,7 +610,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <PickUp QuestName="Avenge Furien!" QuestId="14188" GiverName="Cerelia" GiverId="35295" X="-430.4236" Y="2227.076" Z="89.06757" />
 <TurnIn QuestName="Avenge Furien!" QuestId="14188" TurnInName="Sorrem" TurnInId="35298" X="-432.5052" Y="2214.288" Z="89.06464" />
 <PickUp QuestName="Translation" QuestId="14189" GiverName="Sorrem" GiverId="35298" X="-432.5052" Y="2214.288" Z="89.06464" />
@@ -688,7 +688,7 @@
 </If>
 <PickUp QuestName="To the Hilt!" QuestId="14219" GiverType="Object" GiverName="Elune's Handmaiden" GiverId="195517" X="-343.1368" Y="818.7985" Z="94.59098" />
 <If Condition="HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(14191) &amp;&amp; !IsQuestCompleted(14191)" >
   <While Condition="!IsObjectiveComplete(1, 14191)">
@@ -697,7 +697,7 @@
 </If>
 <PickUp QuestName="Ten Pounds of Flesh" QuestId="14213" GiverName="Elune's Brazier" GiverType="Object" GiverId="195497" X="-241.5546" Y="696.0903" Z="100.8941" />
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) || (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(14191) &amp;&amp; !IsQuestCompleted(14191)" >
   <While Condition="!IsObjectiveComplete(2, 14191)">
@@ -705,7 +705,7 @@
   </While>
 </If>
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) &amp;&amp; (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(14191) &amp;&amp; !IsQuestCompleted(14191)" >
   <While Condition="!IsObjectiveComplete(4, 14191)">
@@ -713,7 +713,7 @@
   </While>
 </If>
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) &amp;&amp; (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(14191)" >
   <While Condition="HasQuest(14191)" >
@@ -726,7 +726,7 @@
 <!--# # # Level 32 # # # -->
 <Objective QuestName="Nothing a Couple of Melons Won't Fix" QuestId="14360" Type="CollectItem" ItemId="48106" CollectCount="8" />
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) &amp;&amp; (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(14360) &amp;&amp; !IsQuestCompleted(14360)" >
   <While Condition="!IsQuestCompleted(14360)" >
@@ -735,7 +735,7 @@
   </While>
 </If>
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) &amp;&amp; (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(14360)" >
   <While Condition="HasQuest(14360)" >
@@ -746,7 +746,7 @@
   <PickUp QuestName="All Becoming Clearer" QuestId="14195" GiverId="195433" GiverName="Ancient Tablets" GiverType="GameObject" X="-426.6843" Y="1119.279" Z="96.02759" />
 </If>
 <If Condition="HasQuest(14219) || HasQuest(14213)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="(HasQuest(14219) &amp;&amp; !IsQuestCompleted(14219)) || (HasQuest(14213) &amp;&amp; !IsQuestCompleted(14213))" >
 </If>
@@ -871,7 +871,7 @@
   <PickUp QuestName="You'll Know It When You See It" QuestId="14225" GiverName="Sorrem" GiverId="35298" X="-432.5052" Y="2214.288" Z="89.06448" />
 </If>
 <If Condition="!HasQuest(14232) &amp;&amp; !IsQuestCompleted(14232) &amp;&amp; !HasItem(49010)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId1="4663" MobId2="4664" MobId3="4666" MobState="Alive" CollectItemCount="1" CollectItemId="49010" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
     <Hotspot X="-415.537" Y="1720.821" Z="129.8501" />
     <Hotspot X="-427.8791" Y="1758.948" Z="128.9751" />
@@ -880,7 +880,7 @@
     <Hotspot X="-405.9311" Y="1799.566" Z="126.7982" />
     <Hotspot X="-379.1447" Y="1740.351" Z="139.3923" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(14232) &amp;&amp; !IsQuestCompleted(14232) &amp;&amp; HasItem(49010)" >
   <PickUp QuestName="Ears Are Burning" QuestId="14232" GiverName="Burning Blade Ear" GiverId="49010" GiverType="Item" />
@@ -905,7 +905,7 @@
   <PickUp QuestName="Putting Their Heads Together" QuestId="14227" GiverName="Sorrem" GiverId="35298" X="-432.5052" Y="2214.288" Z="89.06448" />
 </If>
 <If Condition="(HasQuest(14232) &amp;&amp; !IsQuestCompleted(14232)) || (HasQuest(14227) &amp;&amp; !IsQuestCompleted(14227))" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(14227) &amp;&amp; !IsQuestCompleted(14227)" >
   <While Condition="!IsQuestCompleted(14227)" >
@@ -918,7 +918,7 @@
   </While>
 </If>
 <If Condition="HasQuest(14232)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Ears Are Burning" QuestId="14232" Type="CollectItem" ItemId="49008" CollectCount="25" />
 <TurnIn QuestName="Putting Their Heads Together" QuestId="14227" TurnInName="Sorrem" TurnInId="35298" X="-432.5052" Y="2214.288" Z="89.06461" />
@@ -954,12 +954,12 @@
 <!--# # # Level 33 # # # -->
 <PickUp QuestName="Slitherblade Slaughter" QuestId="14257" GiverName="Cenarion Researcher Korrah" GiverId="35773" X="-355.8646" Y="2489.03" Z="75.56133" />
 <If Condition="HasQuest(14257) &amp;&amp; !IsQuestCompleted(14257)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <Objective QuestName="Slitherblade Slaughter" QuestId="14257" Type="CollectItem" ItemId="49058" CollectCount="30" />
   <Objective QuestName="Slitherblade Slaughter" QuestId="14257" Type="CollectItem" ItemId="49056" CollectCount="10" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
   <Objective QuestName="Slitherblade Slaughter" QuestId="14257" Type="CollectItem" ItemId="49060" CollectCount="4" />
-  <CustomBehavior File="Cava\CavaSettings" />
+  
 </If>
 <TurnIn QuestName="Slitherblade Slaughter" QuestId="14257" TurnInName="Cenarion Researcher Korrah" TurnInId="35773" X="-355.8646" Y="2489.03" Z="75.56133" />
 <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />

@@ -130,7 +130,7 @@
   Please move your char to: DARKSHORE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
@@ -148,7 +148,7 @@
 <PickUp QuestName="Malfurion's Return" QuestId="13573" GiverName="Corvine Moonrise" GiverId="32987" X="6276.713" Y="257.554" Z="18.21576" />
 <PickUp QuestName="Coaxing the Spirits" QuestId="13547" GiverName="Yalda" GiverId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
 <If Condition="HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(13547) &amp;&amp; !IsQuestCompleted(13547)">
   <While Condition="!IsObjectiveComplete(4, 13547)">
@@ -172,7 +172,7 @@
 </If>
 <Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32990" KillCount="1" />
 <If Condition="HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(13542)" >
     <If Condition="GetItemCount(44868) &lt; 8" >
       <SetGrindArea>
@@ -205,12 +205,12 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(44868)" WaitTime="1000" />
     </While>
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Coaxing the Spirits" QuestId="13547" TurnInName="Yalda" TurnInId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
 <PickUp QuestName="Call Down the Thunder" QuestId="13558" GiverName="Yalda" GiverId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
 <If Condition="HasQuest(13558) &amp;&amp; !IsQuestCompleted(13558)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(13558)" >
     <RunTo X="6446.367" Y="629.8206" Z="22.03401" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
@@ -223,7 +223,7 @@
       <PickUp QuestName="Call Down the Thunder" QuestId="13558" GiverName="Yalda" GiverId="6887" X="6360.369" Y="490.4615" Z="16.12906" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <PickUp QuestName="The Last Refugee" QuestId="13605" GiverName="Archaeologist Hollee" GiverId="33232" X="6393.328" Y="522.533" Z="32.52357" />
 <If Condition="HasQuest(13605) &amp;&amp; !IsQuestCompleted(13605)" >

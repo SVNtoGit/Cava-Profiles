@@ -274,18 +274,18 @@
 <If Condition="Me.Race != WoWRace.NightElf" >
 	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Asterisk" SoundCueInterval="2" Text="You must be an Night Elf to run this profile" />
 </If>
-	<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="True" />
+	
 	<CustomBehavior File="Message" Text="Compiling Teldrassil Quests (5-11)" LogColor="Green" />
   <!-- LVL 5.5 -->
 <PickUp QuestName="Dolanaar Delivery" QuestId="2159" GiverName="Porthannius" GiverId="6780" X="10214.34" Y="700.5534" Z="1360.597" />
 <PickUp QuestName="Zenn's Bidding" QuestId="488" GiverName="Zenn Foulhoof" GiverId="2150" X="9921.281" Y="739.1232" Z="1314.569" />
 <If Condition="((HasQuest(488)) &amp;&amp; (!IsQuestCompleted(488)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 </If>
 <Objective QuestName="Zenn's Bidding" QuestId="488" Type="CollectItem" ItemId="3411" CollectCount="2" />
 <Objective QuestName="Zenn's Bidding" QuestId="488" Type="CollectItem" ItemId="3409" CollectCount="2" />
 <If Condition="((HasQuest(488)) &amp;&amp; (!IsQuestCompleted(488)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Zenn's Bidding" QuestId="488" Type="CollectItem" ItemId="3412" CollectCount="2" />
 <TurnIn QuestName="Zenn's Bidding" QuestId="488" TurnInName="Zenn Foulhoof" TurnInId="2150" X="9921.281" Y="739.1232" Z="1314.569" />
@@ -369,42 +369,42 @@
 </If>
 <PickUp QuestName="The Sleeping Druid" QuestId="2541" GiverName="Oben Rageclaw" GiverId="7317" X="9753.26" Y="1590.161" Z="1300.385" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 <Else>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 	</Else>
 </If>
 <Objective QuestName="The Relics of Wakening" QuestId="483" Type="CollectItem" ItemId="3408" CollectCount="1" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 <Else>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 	</Else>
 </If>
 <Objective QuestName="The Relics of Wakening" QuestId="483" Type="CollectItem" ItemId="3406" CollectCount="1" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 <Else>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 	</Else>
 </If>
 <Objective QuestName="The Relics of Wakening" QuestId="483" Type="CollectItem" ItemId="3407" CollectCount="1" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 <Else>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 	</Else>
 </If>
 <Objective QuestName="The Relics of Wakening" QuestId="483" Type="CollectItem" ItemId="3405" CollectCount="1" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+	<LootMobs Value="true" />
 <Else>
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 	</Else>
 </If>
 <Objective QuestName="The Sleeping Druid" QuestId="2541" Type="CollectItem" ItemId="8363" CollectCount="1" />
 <If Condition="((HasQuest(2541)) &amp;&amp; (IsQuestCompleted(2541)))" >
-	<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+	<LootMobs Value="null" />
 </If>
 <TurnIn QuestName="The Sleeping Druid" QuestId="2541" TurnInName="Oben Rageclaw" TurnInId="7317" X="9753.26" Y="1590.161" Z="1300.385" />
 <PickUp QuestName="Druid of the Claw" QuestId="2561" GiverName="Oben Rageclaw" GiverId="7317" X="9753.26" Y="1590.161" Z="1300.385" />
@@ -485,12 +485,12 @@
 <PickUp QuestName="Timberling Seeds" QuestId="918" GiverName="Denalan" GiverId="2080" X="9507.291" Y="714.583" Z="1255.886" />
 <PickUp QuestName="Timberling Sprouts" QuestId="919" GiverName="Denalan" GiverId="2080" X="9507.291" Y="714.583" Z="1255.886" />
 <If Condition="HasQuest(919) &amp;&amp; !IsQuestCompleted(919)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <PickUp QuestName="The Glowing Fruit" QuestId="930" GiverType="GameObject" GiverName="Strange Fruited Plant" GiverId="6751" X="9386.179" Y="846.3346" Z="1259.466" />
 <Objective QuestName="Timberling Sprouts" QuestId="919" Type="CollectItem" ItemId="5169" CollectCount="10" />
 <If Condition="HasQuest(919) &amp;&amp; IsQuestCompleted(919)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Timberling Seeds" QuestId="918" Type="CollectItem" ItemId="5168" CollectCount="6" />
 <TurnIn QuestName="Timberling Seeds" QuestId="918" TurnInName="Denalan" TurnInId="2080" X="9507.291" Y="714.583" Z="1255.886" />
@@ -663,13 +663,13 @@
 <PickUp QuestName="The Enchanted Glade" QuestId="937" GiverName="Sentinel Arynia Cloudsbreak" GiverId="3519" X="10678.44" Y="1914.682" Z="1339.155" />
 <PickUp QuestName="Tears of the Moon" QuestId="2518" GiverName="Priestess A'moora" GiverId="7313" X="10676.9" Y="1933.958" Z="1336.111" />
 <If Condition="HasQuest(937)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <PickUp QuestName="The Shimmering Frond" QuestId="931" GiverType="GameObject" GiverName="Strange Fruited Plant" GiverId="6752" X="10845.77" Y="2046.179" Z="1327.137" />
 
 <Objective QuestName="Tears of the Moon" QuestId="2518" Type="CollectItem" ItemId="8344" CollectCount="1" />
 <If Condition="HasQuest(937)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="The Enchanted Glade" QuestId="937" Type="CollectItem" ItemId="5204" CollectCount="6" />
 <TurnIn QuestName="Tears of the Moon" QuestId="2518" TurnInName="Priestess A'moora" TurnInId="7313" X="10676.9" Y="1933.958" Z="1336.111" />

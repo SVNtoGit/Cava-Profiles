@@ -184,40 +184,40 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Tanaris Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 45.21 # # # -->
@@ -540,9 +540,9 @@
 <PickUp QuestName="I'm With Scorpid" QuestId="25521" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
 <PickUp QuestName="Blood to Thrive" QuestId="25021" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25021) &amp;&amp; !IsQuestCompleted(25021)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <Objective QuestName="Blood to Thrive" QuestId="25021" Type="CollectItem" ItemId="52064" CollectCount="6" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(25521) &amp;&amp; !IsQuestCompleted(25521)" >
   <Objective QuestName="I'm With Scorpid" QuestId="25521" Type="CollectItem" ItemId="54856" CollectCount="6" />

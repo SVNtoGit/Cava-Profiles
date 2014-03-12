@@ -341,40 +341,40 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="3770" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43606" GossipOptions="2" MobState="Alive" BuyItemId="1205" BuyItemCount="40" X="3360.08" Y="950.816" Z="7.404282" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <PickUp QuestName="Naga at the Zoram Strand" QuestId="6442" GiverName="Marukai" GiverId="12719" X="3312.5" Y="969.976" Z="9.872747" />
 <PickUp QuestName="Lousy Pieces of Ship" QuestId="13883" GiverName="Dagrun Ragehammer" GiverId="34303" X="3307.555" Y="1028.819" Z="4.057806" />
@@ -695,14 +695,14 @@
   <CustomBehavior File="MyCTM" X="2009.972" Y="-1114.522" Z="94.5151" />
 </If>
 <If Condition="!HasQuest(1918) &amp;&amp; !IsQuestCompleted(1918) &amp;&amp; !HasItem(16408)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <While Condition="!HasItem(16408)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="12759" X="1990.406" Y="-1079.308" Z="94.26836" />
   </While>
 <!--  <CustomBehavior File="CollectThings" MobId="12759" MobState="Alive" CollectItemCount="1" CollectItemId="16408" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
     <Hotspot X="1990.406" Y="-1079.308" Z="94.26836" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>-->
+  <LootMobs Value="true" />-->
 </If>
 <If Condition="!HasQuest(1918) &amp;&amp; !IsQuestCompleted(1918) &amp;&amp; HasItem(16408)" >
   <PickUp QuestName="The Befouled Element" QuestId="1918" GiverName="Befouled Water Globe" GiverId="16408" GiverType="Item" />
@@ -754,11 +754,11 @@
 <!--long time to spam mob its wast of time
 <If Condition="!HasQuest(23) &amp;&amp; !IsQuestCompleted(23) &amp;&amp; !HasItem(16303)" >
   <RunTo X="2031.835" Y="-719.5433" Z="102.065" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="12678" MobState="Alive" CollectItemCount="1" CollectItemId="16303" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
     <Hotspot X="2031.835" Y="-719.5433" Z="102.065" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If> -->
 <If Condition="!HasQuest(23) &amp;&amp; !IsQuestCompleted(23) &amp;&amp; HasItem(16303)" >
   <PickUp QuestName="Ursangous's Paw" QuestId="23" GiverName="Ursangous Paw" GiverId="16303" GiverType="Item" />
@@ -810,11 +810,11 @@
 <PickUp QuestName="Stalemate" QuestId="13962" GiverName="Thagg" GiverId="34518" X="2647.973" Y="-1798.16" Z="188.4473" />
 <If Condition="!HasQuest(24) &amp;&amp; !IsQuestCompleted(24) &amp;&amp; !HasItem(16304)" >
   <RunTo X="2647.658" Y="-1834.332" Z="183.9711" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True"/>
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="12677" MobState="Alive" CollectItemCount="1" CollectItemId="16304" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
     <Hotspot X="2647.658" Y="-1834.332" Z="183.9711" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original"/>
+  <LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(24) &amp;&amp; !IsQuestCompleted(24) &amp;&amp; HasItem(16304)" >
   <PickUp QuestName="Shadumbra's Head" QuestId="24" GiverName="Shadumbras Head" GiverId="16304" GiverType="Item" />

@@ -499,40 +499,40 @@
   Please move your char to: SEARING GORGE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Human">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Draenei">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <CustomBehavior File="Message" Text="Compiling Searing Gorge Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 46.95 # # # -->
@@ -566,25 +566,25 @@
 <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
 <PickUp QuestName="The Fewer, the Better" QuestId="27960" GiverName="Burrian Coalpart" GiverId="47267" X="-6892.43" Y="-1851.08" Z="250.6842" />
 <If Condition="HasQuest(27956) &amp;&amp; !IsQuestCompleted(27956)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(27963) &amp;&amp; !IsQuestCompleted(27963)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="A New Master... But Who?" QuestId="27963" Type="CollectItem" ItemId="62807" CollectCount="1" />
 <If Condition="HasQuest(27963) &amp;&amp; IsQuestCompleted(27963)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27956) &amp;&amp; !IsQuestCompleted(27956)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Lunk's Task" QuestId="27956" Type="CollectItem" ItemId="62805" CollectCount="15" />
 <If Condition="HasQuest(27960) &amp;&amp; !IsQuestCompleted(27960)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="The Fewer, the Better" QuestId="27960" Type="KillMob" MobId="5839" KillCount="10" />
 <If Condition="HasQuest(27960) &amp;&amp; IsQuestCompleted(27960)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="The Fewer, the Better" QuestId="27960" TurnInName="Burrian Coalpart" TurnInId="47267" X="-6892.43" Y="-1851.08" Z="250.6842" />
 <!--# # # Level 47 # # # -->
@@ -649,7 +649,7 @@
 -->
 </If>
 <If Condition="HasQuest(27959) &amp;&amp; !IsQuestCompleted(27959)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27959" MobId="5856" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-6683.447" Y="-1823.39" Z="249.4068" />
     <Hotspot X="-6680.129" Y="-1864.374" Z="244.6034" />
@@ -685,7 +685,7 @@
 <!--
 <Objective QuestName="Lunk's Adventure: Spider Rider" QuestId="27959" Type="KillMob" MobId="47279" KillCount="7" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27959) &amp;&amp; IsQuestCompleted(27959)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47281" WaitForNpcs="False" />
@@ -694,11 +694,11 @@
   </While>
 </If>
 <If Condition="HasQuest(27958) &amp;&amp; !IsQuestCompleted(27958)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="A Proper Antivenom" QuestId="27958" Type="CollectItem" ItemId="62809" CollectCount="14" />
 <If Condition="HasQuest(27958) &amp;&amp; IsQuestCompleted(27958)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <Objective QuestName="A Lumbering Relic" QuestId="27962" Type="CollectItem" ItemId="10005" CollectCount="1" />
 <TurnIn QuestName="Out of Place" QuestId="27961" TurnInName="Burrian Coalpart" TurnInId="47267" X="-6892.43" Y="-1851.08" Z="250.6842" />
@@ -706,11 +706,11 @@
 <TurnIn QuestName="A Proper Antivenom" QuestId="27958" TurnInName="Prisanne Dustcropper" TurnInId="47268" X="-6893.49" Y="-1856.53" Z="250.6811" />
 <If Condition="HasQuest(27964) &amp;&amp; !IsQuestCompleted(27964)" >
   <RunTo X="-6674.917" Y="-1697.807" Z="241.1647" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Dig-Boss Dinwhisker" QuestId="27964" Type="CollectItem" ItemId="62806" CollectCount="1" />
 <If Condition="HasQuest(27964) &amp;&amp; IsQuestCompleted(27964)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" />
+  
 </If>
 <TurnIn QuestName="Dig-Boss Dinwhisker" QuestId="27964" TurnInName="Jack Rockleg" TurnInId="47266" X="-6893.81" Y="-1853.1" Z="250.6842" />
 <PickUp QuestName="Thorium Point: The Seat of the Brotherhood" QuestId="27965" GiverName="Jack Rockleg" GiverId="47266" X="-6893.81" Y="-1853.1" Z="250.6842" />
@@ -745,10 +745,10 @@
 <PickUp QuestName="Heat That Just Don't Quit" QuestId="27981" GiverName="Hansel Heavyhands" GiverId="14627" X="-6514.44" Y="-1181.33" Z="309.2555" />
 <PickUp QuestName="Recon Essentials" QuestId="27977" GiverName="Taskmaster Scrange" GiverId="14626" X="-6530.244" Y="-1156.919" Z="310.4146" />
 <If Condition="HasQuest(28099) &amp;&amp; !IsQuestCompleted(28099)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" KillBetweenHotspots="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="!HasQuest(27983) &amp;&amp; !IsQuestCompleted(27983)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="-6627.005" Y="-1142.104" Z="250.8309" />
   <While Condition="!HasQuest(27983)" >
     <RunTo X="-6670.277" Y="-1153.373" Z="242.0879" />
@@ -760,11 +760,11 @@
 <PickUp QuestName="Lunk's Adventure: Cranky Little Dwarfs" QuestId="27983" GiverName="" GiverId="" />
 -->
   <If Condition="HasQuest(28099) &amp;&amp; IsQuestCompleted(28099)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
 </If>
 <If Condition="HasQuest(27983) &amp;&amp; !IsQuestCompleted(27983)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" LootMobs="True" />
+  <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="27983" MobId="5840" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-6729.523" Y="-1330.368" Z="241.4101" />
     <Hotspot X="-6729.735" Y="-1370.434" Z="241.9449" />
@@ -797,11 +797,11 @@
 <!--
 <Objective QuestName="Lunk's Adventure: Cranky Little Dwarfs" QuestId="27983" Type="KillMob" MobId="47381" KillCount="7" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27977) &amp;&amp; !IsQuestCompleted(27977)" >
   <RunTo X="-6674.917" Y="-1697.807" Z="241.1647" />
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="True" />
+  
 </If>
 <Objective QuestName="Recon Essentials" QuestId="27977" Type="CollectItem" ItemId="18959" CollectCount="1" />
 <Objective QuestName="Recon Essentials" QuestId="27977" Type="CollectItem" ItemId="18960" CollectCount="1" />
@@ -810,7 +810,7 @@
     <CustomBehavior File="CompleteLogQuest" QuestId="27983" />
   </While>
   <If Condition="HasQuest(28099) &amp;&amp; IsQuestCompleted(28099)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
 </If>
 <If Condition="HasQuest(27981) &amp;&amp; !IsQuestCompleted(27981)" >
@@ -825,7 +825,7 @@
       <Hotspot X="-6752.349" Y="-1020.103" Z="237.779" />
     </HuntingGrounds>
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="Heat That Just Don't Quit" QuestId="27981" Type="CollectItem" ItemId="62827" CollectCount="10" />
 -->
@@ -836,7 +836,7 @@
 <Objective QuestName="Curse These Fat Fingers" QuestId="27976" Type="KillMob" MobId="5854" KillCount="12" />
 <Objective QuestName="The Spiders Have to Go" QuestId="27980" Type="KillMob" MobId="5857" KillCount="9" />
 <If Condition="HasQuest(27980) &amp;&amp; IsQuestCompleted(27980)" >
-  <CustomBehavior File="Cava\CavaSettings"  KillBetweenHotspots="False" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Curse These Fat Fingers" QuestId="27976" TurnInName="Hansel Heavyhands" TurnInId="14627" X="-6514.44" Y="-1181.33" Z="309.2555" />
 <TurnIn QuestName="Heat That Just Don't Quit" QuestId="27981" TurnInName="Hansel Heavyhands" TurnInId="14627" X="-6514.44" Y="-1181.33" Z="309.2555" />
@@ -854,7 +854,7 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](49-52)BurningSteppes[Cava]" />
 </If>
 <If Condition="HasQuest(27982) &amp;&amp; !IsQuestCompleted(27982)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Dark Ministry" QuestId="27979" Type="CollectItem" ItemId="62824" CollectCount="1" />
 <If Condition="!HasQuest(27984) &amp;&amp; !IsQuestCompleted(27984)" >
@@ -883,7 +883,7 @@
 </If>
 <Objective QuestName="Twilight Collars" QuestId="27982" Type="CollectItem" ItemId="62822" CollectCount="20" />
 <If Condition="HasQuest(27982) &amp;&amp; IsQuestCompleted(27982)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Dark Ministry" QuestId="27979" TurnInName="Hansel Heavyhands" TurnInId="14627" X="-6514.44" Y="-1181.33" Z="309.256" />
 <PickUp QuestName="In the Hall of the Mountain-Lord" QuestId="27986" GiverName="Hansel Heavyhands" GiverId="14627" X="-6514.44" Y="-1181.33" Z="309.256" />
@@ -920,10 +920,10 @@
 <PickUp QuestName="They Build a Better Bullet" QuestId="28030" GiverName="Mountain-Lord Rendan" GiverId="47393" X="-7109.52" Y="-1202.63" Z="324.2995" />
 <PickUp QuestName="The Mysteries of the Fire-Gizzard" QuestId="28032" GiverName="Agnes Flimshale" GiverId="47440" X="-7125.42" Y="-1189.46" Z="306.3764" />
 <If Condition="HasQuest(28030) &amp;&amp; !IsQuestCompleted(28030)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28032) &amp;&amp; !IsQuestCompleted(28032)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28029) &amp;&amp; !IsQuestCompleted(28029)" >
   <While Condition="!IsObjectiveComplete(2, 28029)">
@@ -936,7 +936,7 @@
 <Objective QuestName="The Mysteries of the Fire-Gizzard" QuestId="28032" Type="CollectItem" ItemId="62914" CollectCount="6" />
 <If Condition="HasQuest(28032) &amp;&amp; IsQuestCompleted(28032)" >
   <If Condition="HasQuest(28030) &amp;&amp; IsQuestCompleted(28030)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
   </If>
 </If>
 <If Condition="HasQuest(28029) &amp;&amp; !IsQuestCompleted(28029)" >
@@ -949,7 +949,7 @@
 </If>
 <Objective QuestName="They Build a Better Bullet" QuestId="28030" Type="CollectItem" ItemId="62916" CollectCount="200" />
 <If Condition="HasQuest(28030) &amp;&amp; IsQuestCompleted(28030)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Siege!" QuestId="28028" Type="KillMob" MobId="8338" KillCount="9" />
 <TurnIn QuestName="The Mysteries of the Fire-Gizzard" QuestId="28032" TurnInName="Agnes Flimshale" TurnInId="47440" X="-7125.42" Y="-1189.46" Z="306.3764" />

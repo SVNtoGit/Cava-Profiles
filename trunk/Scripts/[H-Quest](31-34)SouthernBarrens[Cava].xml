@@ -583,44 +583,44 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Southern Barrens Quests (31-34)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 <ElseIf Condition="Me.Race == WoWRace.Orc">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Tauren">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Troll" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Undead" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
   </ElseIf>
 <Else>
   </Else>
 </If>
 <If Condition="Me.Class == WoWClass.Paladin">
   <If Condition="Me.Race == WoWRace.Tauren">
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
   <Else>
-    <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+    
     </Else>
   </If>
 </If>
 <If Condition="Me.Class == WoWClass.Warlock">
-  <!--<CustomBehavior File="Cava\CavaSettings" MountName="" />-->
+  
 </If>
 <!--# # # Level 31.15 # # # -->
 <!--entregar isto antes-->
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="HasQuest(26069)">
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10437" />
 </If>
@@ -697,7 +697,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="44270" X="-785.29" Y="-1552.46" Z="140.4068" />
 </If>
 <TurnIn QuestName="Holdout at Hunter's Hill" QuestId="24505" TurnInName="Onatay" TurnInId="37138" X="-801.2656" Y="-1570.007" Z="140.5331" />
-<CustomBehavior File="Cava\CavaSettings" LootMobs="Original" GroundMountFarmingMode="False" KillBetweenHotspots="False"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
@@ -717,7 +717,7 @@
 </If>
 <Objective QuestName="Raptor Scraps" QuestId="24514" Type="CollectItem" ItemId="49772" CollectCount="8" />
 <If Condition="!HasQuest(24518) &amp;&amp; !IsQuestCompleted(24518) &amp;&amp; !HasItem(49776)" >
- <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+ <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" MobId="37216" MobState="Alive" CollectItemCount="1" CollectItemId="49776" CollectUntil="RequiredCountReached" HuntingGroundRadius="200" >
       <Hotspot X="-895.6123" Y="-1632.335" Z="88.55532" />
       <Hotspot X="-917.0162" Y="-1667.101" Z="89.80251" />
@@ -745,7 +745,7 @@
       <Hotspot X="-821.6628" Y="-1677.001" Z="76.7541" />
       <Hotspot X="-855.3419" Y="-1654.851" Z="85.0571" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(24518) &amp;&amp; !IsQuestCompleted(24518) &amp;&amp; HasItem(49776)" >
   <PickUp QuestName="The Low Road" QuestId="24518" GiverName="Roadway Plans" GiverId="49776" GiverType="Item" />
@@ -1187,14 +1187,14 @@
 <PickUp QuestName="Flightmare" QuestId="24631" GiverName="Tomusa" GiverId="37909" X="-3304.807" Y="-1690.12" Z="123.0022" />
 <PickUp QuestName="Parts-is-Parts" QuestId="24619" GiverName="Calder Gray" GiverId="37908" X="-3266.174" Y="-1801.974" Z="103.325" />
 <If Condition="HasQuest(24634) &amp;&amp; !IsQuestCompleted(24634)" >
-<CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+<LootMobs Value="true" />
   <CustomBehavior File="CollectThings" QuestId="24634" MobId="37924" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="-3169.809" Y="-1703.565" Z="92.54404" />
       <Hotspot X="-3177.925" Y="-1663.165" Z="93.96085" />
       <Hotspot X="-3140.893" Y="-1648.12" Z="92.45168" />
       <Hotspot X="-3338.577" Y="-1786.838" Z="108.4696" />
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(24654) &amp;&amp; !IsQuestCompleted(24654)" >
   <While Condition="!IsQuestCompleted(24654)" >

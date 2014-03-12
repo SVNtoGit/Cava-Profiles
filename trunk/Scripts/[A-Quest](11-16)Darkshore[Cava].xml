@@ -308,7 +308,7 @@
   Please move your char to: DARKSHORE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(13518) &amp;&amp; !IsQuestCompleted(13518)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
@@ -352,7 +352,7 @@
 <PickUp QuestName="The Boon of the Seas" QuestId="13520" GiverName="Serendia Oakwhisper" GiverId="32972" X="7443.725" Y="-267.0579" Z="12.77051" />
 <PickUp QuestName="Buzzbox 413" QuestId="13521" GiverName="Wizbang Cranktoggle" GiverId="32977" X="7375.461" Y="-289.4134" Z="6.158772" />
 <If Condition="HasQuest(13521) &amp;&amp; !IsQuestCompleted(13521)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(13520) &amp;&amp; !IsQuestCompleted(13520)" >
   <RunTo X="7425.198" Y="-396.2437" Z="-1.651742" />
@@ -368,7 +368,7 @@
 -->
 </If>
 <If Condition="HasQuest(13521) &amp;&amp; !IsQuestCompleted(13521)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="True" />
+  <LootMobs Value="true" />
   <RunTo X="7425.198" Y="-396.2437" Z="-1.651742" />
   <CustomBehavior File="CollectThings" QuestId="13521" MobId="32935" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
       <Hotspot X="7425.198" Y="-396.2437" Z="-1.651742" />
@@ -378,7 +378,7 @@
       <Hotspot X="7403.669" Y="-459.5655" Z="0.7024532" />
  </CustomBehavior>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 <!--
 <Objective QuestName="Buzzbox 413" QuestId="13521" Type="CollectItem" ItemId="44863" CollectCount="4" />
 -->
@@ -402,7 +402,7 @@
 <PickUp QuestName="A Cure In The Dark" QuestId="13554" GiverName="Buzzbox 723" GiverId="194122" GiverType="GameObject" X="6961.604" Y="-485.7445" Z="24.90013" />
 <PickUp QuestName="The Corruption's Source" QuestId="13529" GiverName="Tharnariun Treetender" GiverId="32978" X="7373.332" Y="-288.9186" Z="6.30031" />
 <If Condition="!HasQuest(13557) &amp;&amp; !IsQuestCompleted(13557)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="The Corruption's Source" QuestId="13529" Type="KillMob" MobId="33020" KillCount="1" />
 <If Condition="!HasQuest(13557) &amp;&amp; !IsQuestCompleted(13557)" >
@@ -421,7 +421,7 @@
   <PickUp QuestName="Bearer of Good Fortune" QuestId="13557" GiverType="Item" GiverId="44927" />
 </If>
 <If Condition="HasQuest(13554) &amp;&amp; !IsQuestCompleted(13554)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(13557) &amp;&amp; !IsQuestCompleted(13557)" >
   <While Condition="!IsQuestCompleted(13557)" >
@@ -437,12 +437,12 @@
 </If>
 <PickUp QuestName="A Troubling Prescription" QuestId="13831" GiverName="Disgusting Workbench" GiverId="194714" GiverType="GameObject" X="6766.292" Y="-695.6254" Z="69.80367" />
 <If Condition="HasQuest(13554) &amp;&amp; !IsQuestCompleted(13554)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="A Cure In The Dark" QuestId="13554" Type="CollectItem" ItemId="44966" CollectCount="6" />
 <Objective QuestName="The Corruption's Source" QuestId="13529" Type="KillMob" MobId="33021" KillCount="8" />
 <If Condition="HasQuest(13529) &amp;&amp; IsQuestCompleted(13529)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
@@ -577,11 +577,11 @@
 <PickUp QuestName="Remnants of the Highborne" QuestId="13505" GiverName="Balthule Shadowstrike" GiverId="32966" X="7381.116" Y="-789.6237" Z="8.642805" />
 <PickUp QuestName="Shatterspear Laborers" QuestId="13504" GiverName="Sentinel Tysha Moonblade" GiverId="32965" X="7386.244" Y="-790.6309" Z="8.662822" />
 <If Condition="!HasQuest(13506) &amp;&amp; !IsQuestCompleted(13506) &amp;&amp; !HasItem(44979)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Remnants of the Highborne" QuestId="13505" Type="CollectItem" ItemId="44830" CollectCount="8" />
 <If Condition="HasItem(44979)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <Objective QuestName="Shatterspear Laborers" QuestId="13504" Type="KillMob" MobId="32861" KillCount="10" />
 <If Condition="!HasQuest(13506) &amp;&amp; !IsQuestCompleted(13506)" >
@@ -591,7 +591,7 @@
   <PickUp QuestName="Reason to Worry" QuestId="13506" GiverType="Item" GiverId="44979" />
 </If>
 <If Condition="HasQuest(13504) &amp;&amp; IsQuestCompleted(13504)" >
-  <CustomBehavior File="Cava\CavaSettings"  LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="HasItem(44979)">
 </If>
@@ -708,22 +708,22 @@
 <TurnIn QuestName="Swift Response" QuestId="13508" TurnInName="Alanndarian Nightsong" TurnInId="33055" X="7964.816" Y="-1104.202" Z="35.77448" />
 <PickUp QuestName="One Bitter Wish" QuestId="13511" GiverName="Alanndarian Nightsong" GiverId="33055" X="7964.816" Y="-1104.202" Z="35.77448" />
 <If Condition="HasQuest(13511) &amp;&amp; !IsQuestCompleted(13511)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="One Bitter Wish" QuestId="13511" Type="KillMob" MobId="32970" KillCount="1" />
 <If Condition="!HasQuest(13510) &amp;&amp; !IsQuestCompleted(13510)" >
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+  <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(13510) &amp;&amp; !IsQuestCompleted(13510)" >
   <While Condition="!IsQuestCompleted(13510)" >
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="True" />
+    <LootMobs Value="true" />
     <RunTo X="7994.567" Y="-1128.015" Z="34.69038" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
     <While Condition="!HasItem(45040)">
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="32970"  MobState="Alive" X="7994.567" Y="-1128.015" Z="34.69038" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </While>
-    <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" />
+    <LootMobs Value="null" />
     <While Condition="!HasQuest(13510)" >
 	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="32964" MobState="Alive" NotMoving="True" CollectionDistance="1000" X="7993.427" Y="-1147.746" Z="34.37603" />
 	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" ObjectType="GameObject" MobId="194101" NumOfTimes="1" CollectionDistance="50" X="7993.427" Y="-1147.746" Z="34.37603" />
