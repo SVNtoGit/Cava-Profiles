@@ -1116,7 +1116,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1156,7 +1156,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3522">
@@ -1185,7 +1185,7 @@
   <TurnIn QuestName="Killing the Crawlers" QuestId="10927" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
   <If Condition="!HasQuest(10455) &amp;&amp; !IsQuestCompleted(10455)">
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-    <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+    <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
     <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="InteractWith" MobId="19499" MovementBy="NavigatorPreferred" WaitTime="1000" CollectionDistance="50" X="2100.732" Y="6797.837" Z="175.6128" />
@@ -1195,9 +1195,9 @@
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="19495" AreaId="3772" X="2098.176" Y="6903.917" Z="183.2305" /> <!--id3772-->
-    <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+    <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="The Encroaching Wilderness" QuestId="10455" GiverName="Rina Moonspring" GiverId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
   <PickUp QuestName="The Den Mother" QuestId="10690" GiverName="Wanted Poster" GiverType="GameObject" GiverId="185035" X="1973.359" Y="6860.424" Z="162.2496" />
   <PickUp QuestName="The Bloodmaul Ogres" QuestId="10502" GiverName="Commander Skyshadow" GiverId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
@@ -1230,11 +1230,11 @@
         <CustomBehavior File="WaitTimer" WaitTime="4000" />
       </While>
       <If Condition="Me.HasAura(36904)">
-        <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+        <CustomBehavior File="UserSettings" UseMount="False" />
         <CustomBehavior File="ForcedDismount" />
         <RunTo QuestId="10556" X="1716.9" Y="6783.606" Z="140.2142" />
         <CustomBehavior File="WaitTimer" QuestId="10556" WaitTime="6000" />
-        <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+        <CustomBehavior File="UserSettings" UseMount="True" />
       </If>
       <If Condition="Me.HasAura(36904)">
         <RunTo QuestId="10556" X="1826.057" Y="6813.043" Z="138.4874" />
@@ -1750,7 +1750,7 @@
   <If Condition="HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506)">
     <CustomBehavior File="FlyTo" X="1483.94" Y="6579.726" Z="-10.23015" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="CombatUseItemOnV2" QuestId="10506" ItemId="30251" ItemAppliesAuraId="36310" MobId="20058" MaxRangeToUseItem="5"
       UseWhenMobHasHealthPercent="100" UseItemStrategy="UseItemOncePerTarget" WaitTimeAfterItemUse="5000" CollectionDistance="1000" >
       <HuntingGrounds >
@@ -1772,7 +1772,7 @@
       <Hotspot X="1620.52" Y="6428.088" Z="-10.68749" />
       </HuntingGrounds>
     </CustomBehavior>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
   </If>
 <!--
   <If Condition="!HasQuest(10516) &amp;&amp; !IsQuestCompleted(10516)">
@@ -1935,7 +1935,7 @@ turnin 10517
     <RunTo X="2404.106" Y="5953.911" Z="151.9879" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="19470" AreaId="3769" X="2404.132" Y="5950.765" Z="152.1093" /> <!--3769-->
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="The Bladespire Threat" QuestId="10503" GiverName="Tor'chunk Twoclaws" GiverId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
   <PickUp QuestName="Felling an Ancient Tree" QuestId="10489" GiverName="Wanted Poster" GiverId="184660" GiverType="GameObject" X="2318.512" Y="6029.955" Z="142.5888" />
   <PickUp QuestName="The Encroaching Wilderness" QuestId="10486" GiverName="Gor'drek" GiverId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
@@ -2347,7 +2347,7 @@ turnin 10517
     <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10566) &amp;&amp; !IsQuestCompleted(10566)">
-    <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+    <CustomBehavior File="UserSettings" UseMount="False" />
     <While Condition="HasItem(30650)">
       <CustomBehavior File="Misc\RunLua" WaitTime="10000" NumOfTimes="1" Lua="UseItemByName(30650)" />
     </While>
@@ -2467,7 +2467,7 @@ turnin 10517
         <CustomBehavior File="WaitTimer" WaitTime="2000" />
       </If>
     </While>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True"/>
+    <CustomBehavior File="UserSettings" UseMount="True"/>
   </If>
   <If Condition="HasQuest(10846) || HasQuest(10566)">
     <RunTo X="1819.705" Y="4919.578" Z="172.4356" />
@@ -3024,12 +3024,12 @@ Text="\n
 <If Condition="HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893)">
   <CustomBehavior File="FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <RunTo X="3201.532" Y="6275.544" Z="124.6176" />
   <CustomBehavior File="ForcedDismount" />
   <Objective QuestName="Longtail is the Lynchpin" QuestId="10893" Type="KillMob" MobId="22396" KillCount="1" />
   <RunTo X="3102.66" Y="6117.984" Z="134.5902" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(10893)">
   <TurnIn QuestName="Longtail is the Lynchpin" QuestId="10893" TurnInName="Watcher Moonshade" TurnInId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
@@ -3131,7 +3131,7 @@ Text="\n
 <!--<If Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)">
   <CustomBehavior File="FlyTo" X="3195.461" Y="7132.668" Z="174.0501" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="CombatUseItemOnV2" QuestId="10747" ItemId="31129" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" MobId="21387"
     UseWhenMobHasHealthPercent="100" MaxRangeToUseItem="15" UseItemStrategy="UseItemOncePerTargetDontDefend" >
     <HuntingGrounds>
@@ -3145,7 +3145,7 @@ Text="\n
       <Hotspot X="3108.102" Y="7071.969" Z="160.0865" />
     </HuntingGrounds>
   </CustomBehavior>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>-->
 <If Condition="HasQuest(10607)">
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="3951" />

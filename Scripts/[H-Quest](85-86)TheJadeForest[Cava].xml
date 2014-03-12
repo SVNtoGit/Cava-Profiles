@@ -1634,7 +1634,7 @@
 <If Condition="HasQuest(29628) &amp;&amp; !IsQuestCompleted(29628)" >
   <RunTo X="2831.823" Y="-1183.857" Z="330.1519" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="209551" ObjectType="GameObject" WaitTime="4000" X="2832.691" Y="-1184.826" Z="330.1524" />
 </If>
 <Objective QuestName="And a Heavy Fist" QuestId="29630" Type="KillMob" MobId="54987" KillCount="10" />
@@ -1642,7 +1642,7 @@
   <While Condition="!IsQuestCompleted(29628)" >
     <Runto X="2548.648" Y="-1452.344" Z="406.1151" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(29629) &amp;&amp; !IsQuestCompleted(29629)" >
 <!--

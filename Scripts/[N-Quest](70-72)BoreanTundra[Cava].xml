@@ -1704,7 +1704,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1747,7 +1747,7 @@
       </Else>
     </If>
   </If>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3537">
@@ -1780,7 +1780,7 @@
     <RunTo X="2284.933" Y="5209.668" Z="12.49066" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="25245" AreaId="6556" X="2282.294" Y="5210.832" Z="12.49425" /><!--AreaId="6556"-->
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Enlistment Day" QuestId="11672" GiverName="Recruitment Officer Blythe" GiverId="25307" X="2300.503" Y="5239.977" Z="11.33996" />
   <If Condition="HasQuest(11672)" >
     <CustomBehavior File="FlyTo" X="2178.155" Y="5285.884" Z="24.55811" />
@@ -2138,7 +2138,7 @@
     <RunTo X="2801.738" Y="6157.679" Z="85.08488" />
     <CustomBehavior File="Cava\SetHearthstone" MobId="25278" AreaId="4129" X="2803.702" Y="6154.502" Z="84.79264" /><!--AreaId="4129"-->
   </If>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
   <PickUp QuestName="Hellscream's Vigil" QuestId="11585" GiverName="Warsong Recruitment Officer" GiverId="25273" X="2822.696" Y="6171.691" Z="121.9802" />
   <TurnIn QuestName="Hellscream's Vigil" QuestId="11585" TurnInName="Garrosh Hellscream" TurnInId="25237" X="2838.318" Y="6187.358" Z="84.68269" />
   <PickUp QuestName="The Defense of Warsong Hold" QuestId="11596" GiverName="High Overlord Saurfang" GiverId="25256" X="2834.037" Y="6186.433" Z="84.67728" />
@@ -2462,9 +2462,9 @@
     PreInteractMountStrategy="DismountOrCancelShapeshift" Range="40" WaitTime="5000" Nav="CTM" X="1504.738" Y="5565.235" Z="-93.43801" />
   </While>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <RunTo X="1415.925" Y="5623.046" Z="2.989937" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(11626)">
   <CustomBehavior File="FlyTo" X="1999.838" Y="5852.147" Z="35.97097" />
@@ -3939,10 +3939,10 @@
     <CustomBehavior File="InteractWith" QuestId="11961" MobId="26219" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount" Nav="CTM" X="2960.394" Y="4671.321" Z="-32.58078" />
   </While>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <RunTo X="2978.644" Y="4782.795" Z="-0.9755647" />
   <CustomBehavior File="MyCTM" X="2991.663" Y="4786.329" Z="0.7932295" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(11961)" >
   <CustomBehavior File="FlyTo" X="2792.9" Y="4697.404" Z="1.862359" />
@@ -4591,7 +4591,7 @@
     <While Condition="!IsQuestCompleted(11881)">
       <CustomBehavior File="FlyTo" X="3475.634" Y="4909.927" Z="12.71652" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+      <CustomBehavior File="UserSettings" UseMount="False" />
       <CustomBehavior File="Misc\RunLua" WaitTime="4000" NumOfTimes="1" Lua="UseItemByName(35272)" />
 	  <If Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 25969 &amp;&amp; u.Distance &lt;= 35))" >
         <RunTo X="3438.008" Y="4801.373" Z="28.04352" />
@@ -4636,7 +4636,7 @@
       </If>
       <CustomBehavior File="WaitTimer" QuestId="11881" WaitTime="10000" />
     </While>
-    <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+    <CustomBehavior File="UserSettings" UseMount="True" />
   </If>
   <TurnIn QuestName="Load'er Up!" QuestId="11881" TurnInName="Fezzix Geartwist" TurnInId="25849" X="3477.158" Y="4103.965" Z="17.7563" />
   <PickUp QuestName="The Power of the Elements" QuestId="11893" GiverName="Dorain Frosthoof" GiverId="25983" X="3477.563" Y="4096.331" Z="17.54654" />
@@ -5578,14 +5578,14 @@ Text="\n
     PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="5000" Nav="CTM" X="4285.271" Y="6119.602" Z="-119.8386" />
   </While>
   <CustomBehavior File="AscendInWater" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <If Condition="!HasQuest(11559) &amp;&amp; !IsQuestCompleted(11559) &amp;&amp; (GetItemCount(34597) &lt; 5)">
     <RunTo X="4298.849" Y="6193.807" Z="0.3136982" />
   <Else>
     <RunTo X="4323.164" Y="6062.852" Z="0.5200557" />
     </Else>
   </If>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <If Condition="HasQuest(11571)">
   <CustomBehavior File="FlyTo" X="4361.059" Y="6062.084" Z="0.3647171" />
@@ -5696,7 +5696,8 @@ Text="\n
 <If Condition="(HasQuest(11563) &amp;&amp; !IsQuestCompleted(11563)) || (HasQuest(11564) &amp;&amp; !IsQuestCompleted(11564))">
   <CustomBehavior File="FlyTo" X="4404.758" Y="6148.645" Z="0.6986394" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="True" UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(11564) &amp;&amp; !IsQuestCompleted(11564)">
   <CustomBehavior File="CollectThings" QuestId="11564" MobId="25204" CollectUntil="QuestComplete">
@@ -5734,7 +5735,8 @@ Text="\n
 </If>
 <If Condition="HasQuest(11563) || HasQuest(11564)">
   <RunTo X="4404.758" Y="6148.645" Z="0.6986394" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True"/>
+  <CustomBehavior File="UserSettings"  UseMount="True"/>
+<LootMobs Value="true" />
 </If>
 <TurnIn QuestName="Grmmurggll Mrllggrl Glrggl!!!" QuestId="11563" TurnInName="Mrmrglmr" TurnInId="25205" X="4407.047" Y="6149.951" Z="0.7710698" />
 <PickUp QuestName="The Spare Suit" QuestId="11565" GiverName="Mrmrglmr" GiverId="25205" X="4407.047" Y="6149.951" Z="0.7710698" />

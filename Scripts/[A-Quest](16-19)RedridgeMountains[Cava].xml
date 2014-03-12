@@ -300,7 +300,7 @@
   Please move your char to: REDRIDGE MOUNTAINS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(26510) &amp;&amp; !IsQuestCompleted(26510)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
@@ -313,7 +313,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="6727" X="-9223.979" Y="-2157.121" Z="63.73111" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="20" FoodAmount="20" />
+<CustomBehavior File="UserSettings" DrinkAmount="20" FoodAmount="20" />
 <CustomBehavior File="Message" Text="Compiling Redridge Mountains Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 16.35 # # # -->
 <If Condition="(Me.LevelFraction &gt;= 19.65 )">

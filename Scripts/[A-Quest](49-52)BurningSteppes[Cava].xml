@@ -312,7 +312,7 @@
   Please move your char to: BURNING STEPPES\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -376,11 +376,11 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <RunTo X="-8094.291" Y="-1019.495" Z="132.4989" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766" />
 <PickUp QuestName="Done Nothing Wrong" QuestId="28172" GiverName="Mouton Flamestar" GiverId="47779" X="-8062.68" Y="-999.832" Z="131.6382" />
 <If Condition="!HasQuest(28416) &amp;&amp; !IsQuestCompleted(28416) &amp;&amp; !HasQuest(28174) &amp;&amp; !IsQuestCompleted(28174)" >
   <While Condition="!HasQuest(28416) &amp;&amp; !HasQuest(28174)" >
@@ -2082,7 +2082,7 @@
 <PickUp QuestName="Latent Demons of the Land" QuestId="28312" GiverName="Colonel Troteman" GiverId="48307" X="-8395.82" Y="-2785.71" Z="194.7973" />
 <PickUp QuestName="A Heap of Delicious Worg" QuestId="28313" GiverName="Colonel Troteman" GiverId="48307" X="-8395.82" Y="-2785.71" Z="194.7973" />
 <If Condition="HasQuest(28313) &amp;&amp; !IsQuestCompleted(28313)" >
-  <CustomBehavior File="Cava\CavaSettings"  SkinMobs="False" />
+  <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <While Condition="!IsQuestCompleted(28313)" >
     <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8218.628" Y="-2744.223" Z="134.8074" />
     <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8207.409" Y="-2783.79" Z="137.7379" />
@@ -2098,8 +2098,9 @@
     <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8238.132" Y="-2667.018" Z="134.8995" />
     <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8236.797" Y="-2708.298" Z="135.2648" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" Preset="UserOriginal" />
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
+  <CustomBehavior File="UserSettings" Preset="UserOriginal" />
+  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
+<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28415) &amp;&amp; !IsQuestCompleted(28415) &amp;&amp; HasQuest(28312) &amp;&amp; !IsQuestCompleted(28312)" >
   <While Condition="!IsQuestCompleted(28415) &amp;&amp; !IsQuestCompleted(28312)" >

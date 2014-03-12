@@ -184,7 +184,7 @@
   Please move your char to: TANARIS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -233,12 +233,12 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="7733" X="-7069.17" Y="-3854.53" Z="9.852146" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 <PickUp QuestName="Butcherbot" QuestId="25112" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <PickUp QuestName="Seaside Salvage" QuestId="25048" GiverName="Kelsey Steelspark" GiverId="38535" X="-7209.425" Y="-3756.036" Z="9.188984" />
 <PickUp QuestName="Puddle Stomping" QuestId="25049" GiverName="Kelsey Steelspark" GiverId="38535" X="-7209.425" Y="-3756.036" Z="9.188984" />
 <If Condition="HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
-  <CustomBehavior File="Cava\CavaSettings"  SkinMobs="False"/>
+  <CustomBehavior File="UserSettings"  SkinMobs="False"/>
   <While Condition="!IsQuestCompleted(25112)" >
     <If Condition="!IsQuestCompleted(25112)" >
       <CustomBehavior File="CombatUseItemOn" MobId="5419" MobHpPercentLeft="99" NumOfTimes="1" ItemId="52715" X="-7423.516" Y="-3651.443" Z="9.464562" />
@@ -401,7 +401,7 @@
 </If>
 <PickUp QuestName="Scavengers Scavenged" QuestId="25111" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <If Condition="HasQuest(25111) &amp;&amp; !IsQuestCompleted(25111)" >
-  <CustomBehavior File="Cava\CavaSettings"  SkinMobs="False" />
+  <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <RunTo X="-7431.793" Y="-3687.643" Z="9.309354" />
   <While Condition="!IsQuestCompleted(25111)" >
     <If Condition="!IsQuestCompleted(25111)" >
@@ -453,7 +453,7 @@
 </If>
 <PickUp QuestName="Blisterpaw Butchery" QuestId="25115" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
 <If Condition="HasQuest(25115) &amp;&amp; !IsQuestCompleted(25115)" >
-  <CustomBehavior File="Cava\CavaSettings"  SkinMobs="False" />
+  <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <RunTo X="-7111.974" Y="-3594.469" Z="9.275411" />
   <While Condition="!IsQuestCompleted(25115)" >
     <If Condition="!IsQuestCompleted(25115)" >

@@ -521,7 +521,7 @@
   Please move your char to: WESTERN PLAGUELANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -567,18 +567,18 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <If Condition="(Me.Level &gt;= 35 )">
-    <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
+    <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
   <Else>
-    <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4539" DrinkName="1708" />
+    <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4539" DrinkName="1708" />
     </Else>
   </If>
   <CustomBehavior File="Cava\SetHearthstone" MobId="46269" X="942.109" Y="-1446.09" Z="63.39726" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
 <If Condition="(Me.Level &gt;= 35 )">
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
 <Else>
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4539" DrinkName="1708" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4539" DrinkName="1708" />
   </Else>
 </If>
 <CustomBehavior File="Message" Text="Compiling Western Plaguelands Map Zone" LogColor="Aquamarine" />
@@ -961,7 +961,8 @@
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](39-44)EasternPlaguelands[Cava]" />
 </If>
 <If Condition="HasQuest(26935)">
-  <CustomBehavior File="Cava\CavaSettings" LootMobs="Original"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<LootMobs Value="true" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47721" WaitTime="1000" CollectionDistance="50" X="1408.33" Y="-1284.47" Z="61.46678" />
@@ -973,7 +974,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="46269" X="942.109" Y="-1446.09" Z="63.39726" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4602" DrinkName="1645" />
 <If Condition="HasQuest(26935)" >
   <RunTo X="1421.974" Y="-1306.413" Z="60.55703" />
   <RunTo X="1456.827" Y="-1311.305" Z="61.3556" />

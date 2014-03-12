@@ -243,7 +243,7 @@
   Please move your char to: WETLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -290,7 +290,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="1464" X="-3825.19" Y="-833.29" Z="0.6484348" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
 <CustomBehavior File="Message" Text="Compiling Wetlands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 23 # # # -->
 <If Condition="!HasQuest(26980) &amp;&amp; !IsQuestCompleted(26980) &amp;&amp; !HasQuest(25856) &amp;&amp; !IsQuestCompleted(25856)">

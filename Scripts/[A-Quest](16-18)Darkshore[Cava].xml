@@ -130,7 +130,7 @@
   Please move your char to: DARKSHORE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  DrinkAmount="0" FoodAmount="0" />
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
@@ -140,7 +140,7 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4542" DrinkName="1205" />
 <CustomBehavior File="Message" Text="Compiling Darkshore Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 16.80 # # # -->
 <PickUp QuestName="Against the Wind" QuestId="13542" GiverName="Sentinel Selarin" GiverId="3694" X="6276.563" Y="268.4762" Z="18.22018" />

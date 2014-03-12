@@ -864,7 +864,7 @@
 <PickUp QuestName="Trap Setting" QuestId="30889" GiverName="Mao the Lookout" GiverId="61467" X="1324.708" Y="2519.497" Z="326.0672" />
 <If Condition="HasQuest(30889) &amp;&amp; !IsQuestCompleted(30889)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False" />
+  <CustomBehavior File="UserSettings"  UseMount="False" />
   <While Condition="!IsQuestCompleted(30889)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1331.406" Y="2428.914" Z="328.0236" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1286.089" Y="2430.307" Z="317.8863" />
@@ -873,7 +873,7 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1199.215" Y="2485.418" Z="308.5592" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1170.021" Y="2508.401" Z="316.2328" />
   </While>
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
   <CustomBehavior File="ForcedMount" />
 </If>
 <If Condition="HasQuest(30890) &amp;&amp; !IsQuestCompleted(30890)" >

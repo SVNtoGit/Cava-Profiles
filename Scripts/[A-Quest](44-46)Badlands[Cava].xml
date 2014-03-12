@@ -277,7 +277,7 @@
   Please move your char to: BADLANDS\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -329,7 +329,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="48054" X="-6584.51" Y="-3923.13" Z="379.5427" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
 <PickUp QuestName="Easily Swayed" QuestId="27774" GiverName="Dolph Blastus" GiverId="46652" X="-6639.79" Y="-3900.45" Z="379.2945" />
 <PickUp QuestName="When the Going Gets Tough, Cheat" QuestId="27775" GiverName="Garyanne Fleezlebop" GiverId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
 <Objective QuestName="When the Going Gets Tough, Cheat" QuestId="27775" Type="CollectItem" ItemId="62396" CollectCount="1" />
@@ -370,7 +370,7 @@
 <PickUp QuestName="A Strange Request" QuestId="27764" GiverName="Dolph Blastus" GiverId="46652" X="-6639.79" Y="-3900.45" Z="379.2945" />
 <If Condition="HasQuest(27776) &amp;&amp; !IsQuestCompleted(27776)" >
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings" UseMount="False" />
+  <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(27776)" >
     <CustomBehavior File="Cava\UseItemOn" QuestId="27776" MobId="46393" ItemId="62397" Range="5" MobState="Alive" CollectionDistance="1000" X="-6657.339" Y="-3915.248" Z="378.2864" />
     <CustomBehavior File="WaitTimer" QuestId="27776" WaitTime="3000" />
@@ -394,7 +394,7 @@
 <!--
 <Objective QuestName="It's Goat Time, Baby" QuestId="27776" Type="KillMob" MobId="46696" KillCount="12" />
 -->
-  <CustomBehavior File="Cava\CavaSettings" UseMount="True" />
+  <CustomBehavior File="UserSettings" UseMount="True" />
 </If>
 <TurnIn QuestName="It's Goat Time, Baby" QuestId="27776" TurnInName="Garyanne Fleezlebop" TurnInId="46653" X="-6634.3" Y="-3875.6" Z="379.1244" />
 <TurnIn QuestName="A Strange Request" QuestId="27764" TurnInName="Rhea" TurnInId="46654" X="-6989.34" Y="-3940.96" Z="263.8894" />
@@ -603,7 +603,7 @@
 <PickUp QuestName="Baelog, the Glass Cannon" QuestId="27834" GiverName="Baelog" GiverId="46856" X="-6993.829" Y="-2534.15" Z="241.7142" />
 <PickUp QuestName="Olaf, the Big Fella'" QuestId="27835" GiverName="Olaf" GiverId="46857" X="-6994.573" Y="-2531.244" Z="241.7137" />
 <If Condition="!HasQuest(27825) &amp;&amp; !IsQuestCompleted(27825)">
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48096" WaitTime="1000" CollectionDistance="50" X="-7041.03" Y="-2555.21" Z="252.3195" />
@@ -612,7 +612,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="48093" X="-7006.62" Y="-2537.2" Z="241.7148" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4601" DrinkName="1645" />
 </If>
 <PickUp QuestName="Survival of the Fattest" QuestId="27825" GiverName="Victoria Dolen" GiverId="46930" X="-6994.01" Y="-2542.61" Z="241.7141" />
 <PickUp QuestName="To the Aid of the Thorium Brotherhood" QuestId="28512" GiverName="Victoria Dolen" GiverId="46930" X="-6994.01" Y="-2542.61" Z="241.7141" />
@@ -653,7 +653,7 @@
 </If>
 <If Condition="HasQuest(27829) &amp;&amp; !IsQuestCompleted(27829)">
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False" />
+  <CustomBehavior File="UserSettings"  UseMount="False" />
   <While Condition="!IsObjectiveComplete(1, 27829)">
     <CustomBehavior File="UsePetAbility" AttackButton="2" />
     <CustomBehavior File="UsePetAbility" AttackButton="5" />
@@ -665,7 +665,7 @@
 <Objective QuestName="The Wrath of a Dragonflight" QuestId="27829" Type="KillMob" MobId="46859" KillCount="1" />
 -->
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" />
+  <CustomBehavior File="UserSettings"  UseMount="True" />
 </If>
 <Objective QuestName="The Wrath of a Dragonflight" QuestId="27829" Type="KillMob" MobId="46915" KillCount="4" />
 <If Condition="HasQuest(27829) &amp;&amp; IsQuestCompleted(27829)" >
@@ -700,7 +700,7 @@
   
   <Objective QuestName="Survival of the Fattest" QuestId="27825" Type="CollectItem" ItemId="62544" CollectCount="6" />
   <Objective QuestName="Survival of the Fattest" QuestId="27825" Type="CollectItem" ItemId="62547" CollectCount="10" />
-  <CustomBehavior File="Cava\CavaSettings"  />
+  <CustomBehavior File="UserSettings"  />
 </If>
 <If Condition="HasQuest(27825)" >
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />

@@ -499,7 +499,7 @@
   Please move your char to: SEARING GORGE\n
   and start bot." />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <If Condition="Me.Race == WoWRace.Dwarf">
   
 <ElseIf Condition="Me.Race == WoWRace.Gnome">
@@ -563,7 +563,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9868" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
 <PickUp QuestName="The Fewer, the Better" QuestId="27960" GiverName="Burrian Coalpart" GiverId="47267" X="-6892.43" Y="-1851.08" Z="250.6842" />
 <If Condition="HasQuest(27956) &amp;&amp; !IsQuestCompleted(27956)" >
   <LootMobs Value="true" />
@@ -725,14 +725,14 @@
 </If>
 <If Condition="HasQuest(27965)">
   <RunTo X="-6550.468" Y="-1168.563" Z="309.3137" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
+  <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8952" DrinkName="8766" />
 </If>
 <TurnIn QuestName="Thorium Point: The Seat of the Brotherhood" QuestId="27965" TurnInName="Overseer Oilfist" TurnInId="14625" X="-6501.13" Y="-1173.36" Z="325.864" />
 <If Condition="(Me.LevelFraction &gt;= 49.55 )">
@@ -902,7 +902,7 @@
 </If>
 <If Condition="HasQuest(27986)">
   <RunTo X="-7115.181" Y="-1232.943" Z="289.6709" />
-  <CustomBehavior File="Cava\CavaSettings" DrinkAmount="0" FoodAmount="0" FoodName="8950" DrinkName="8766" />
+  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" FoodName="8950" DrinkName="8766" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
@@ -913,7 +913,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="47942" X="-7085.53" Y="-1202.19" Z="323.9868" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
+<CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="8950" DrinkName="8766" />
 <TurnIn QuestName="In the Hall of the Mountain-Lord" QuestId="27986" TurnInName="Mountain-Lord Rendan" TurnInId="47393" X="-7109.52" Y="-1202.63" Z="324.2995" />
 <PickUp QuestName="Siege!" QuestId="28028" GiverName="Mountain-Lord Rendan" GiverId="47393" X="-7109.52" Y="-1202.63" Z="324.2995" />
 <PickUp QuestName="Set Them Ablaze!" QuestId="28029" GiverName="Mountain-Lord Rendan" GiverId="47393" X="-7109.52" Y="-1202.63" Z="324.2995" />

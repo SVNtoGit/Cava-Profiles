@@ -381,7 +381,7 @@
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43217" MobState="Alive" InteractByGossipOptions="3" X="2947.02" Y="-4998.86" Z="165.6512" />
   <CustomBehavior File="WaitTimer" WaitTime="102000" />
 </If>
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <PickUp QuestName="Amberwind's Journal" QuestId="14428" GiverName="Andorel Sunsworn" GiverId="36596" X="4509.807" Y="-5722.682" Z="104.6739" />
 <PickUp QuestName="The Blackmaw Scar" QuestId="14431" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9374" />
 <If Condition="HasQuest(14431) &amp;&amp; !IsQuestCompleted(14431)" >
@@ -409,12 +409,12 @@
 </If>
 <Objective QuestName="A Pale Brew" QuestId="14432" Type="CollectItem" ItemId="49365" CollectCount="10" />
 <If Condition="HasQuest(14432) &amp;&amp; IsQuestCompleted(14432)" >
-  <LootMobs Value="true" /><!--LootMobs="Original"-->
+  <LootMobs Value="true" />
 </If>
 <Objective QuestName="Diplomacy by Another Means" QuestId="14433" Type="CollectItem" ItemId="49366" CollectCount="1" />
 <Objective QuestName="Diplomacy by Another Means" QuestId="14433" Type="CollectItem" ItemId="49367" CollectCount="1" />
 <If Condition="HasQuest(14432) || HasQuest(14433)" >
-    <LootMobs Value="true" /><!----><!--LootMobs="Original"-->
+    <LootMobs Value="true" />
 </If>
 <TurnIn QuestName="A Pale Brew" QuestId="14432" TurnInName="Haggrum Bloodfist" TurnInId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
 <TurnIn QuestName="Diplomacy by Another Means" QuestId="14433" TurnInName="Haggrum Bloodfist" TurnInId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
@@ -525,9 +525,9 @@
 <TurnIn QuestName="Lightning Strike Assassination" QuestId="14464" TurnInName="Chawg" TurnInId="36730" X="2997.021" Y="-4145.448" Z="101.2716" />
 -->
 <If Condition="HasQuest(14475)" >
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <TurnIn QuestName="Grounded!" QuestId="14475" TurnInName="Bombardier Captain Smooks" TurnInId="36785" X="2602.422" Y="-4170.153" Z="158.6329" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" /><!---->
+  <CustomBehavior File="UserSettings"  UseMount="True" /><!---->
 </If>
 <If Condition="Me.LevelFraction &gt;= 23.15">
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />

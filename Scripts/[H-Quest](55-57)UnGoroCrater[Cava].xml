@@ -684,7 +684,7 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Un'Guro Crate (55-57)" LogColor="Aquamarine" />
-<CustomBehavior File="Cava\CavaSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <If Condition="Me.Race == WoWRace.BloodElf">
   
 <ElseIf Condition="Me.Race == WoWRace.Orc">
@@ -938,7 +938,7 @@
 <!--<PickUp QuestName="A Little Help From My Friends" QuestId="24735" GiverName="Ringo" GiverId="9999" X="-7195.259" Y="-1389.547" Z="-231.3248" />
 <If Condition="HasQuest(24735) &amp;&amp; !IsQuestCompleted(24735)" >
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="False"/>
+  <CustomBehavior File="UserSettings"  UseMount="False"/>
   <If Condition="(Me.Class == WoWClass.Hunter) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Warlock) || ((Me.Class == WoWClass.Druid) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.DruidBalance)) || ((Me.Class == WoWClass.Shaman) &amp;&amp; (StyxWoW.Me.Specialization == WoWSpec.ShamanElemental))">
   </If>
   <CustomBehavior File="ForcedDismount" />
@@ -1046,7 +1046,7 @@
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </If>
   </While>
-  <CustomBehavior File="Cava\CavaSettings"  UseMount="True" />/>
+  <CustomBehavior File="UserSettings"  UseMount="True" />/>
 </If>
 <TurnIn QuestName="A Little Help From My Friends" QuestId="24735" TurnInName="Spraggle Frock" TurnInId="9997" X="-7512.159" Y="-1506.016" Z="-265.5514" />-->
 <TurnIn QuestName="Blazerunner" QuestId="24690" TurnInName="Williden Marshal" TurnInId="9270" X="-7501.733" Y="-1504.569" Z="-266.2425" />
