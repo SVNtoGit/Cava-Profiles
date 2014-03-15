@@ -4948,12 +4948,11 @@
     <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
 Text="\n
 # # # # # # # # # # W A R N I N G # # # # # # # #\n
-..    Plugin AutoEquip2 will now be disabled   ..\n
-..      for next quest. Do NOT enable it      ..\n
-..       Profile will auto enable later        ..\n
-..          DON'T ENABLE AUTOEQUIP2            ..\n
+..       AutoEquip will now be disabled        ..\n
+..      for next quest. Do NOT enable it       ..\n
+..          DON'T ENABLE AUTOEQUIP            ..\n
 # # # # # # # # # # W A R N I N G # # # # # # # #" />
-    <CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
+    <CustomBehavior File="UserSettings" AutoEquipArmor="false" />
     <While Condition="!IsQuestCompleted(11633)">
       <If Condition="!IsObjectiveComplete(3, 11633)">
         <CustomBehavior File="FlyTo" X="3811.626" Y="3467.466" Z="82.89046" />
@@ -5013,7 +5012,7 @@ Text="\n
         <RunTo X="4054.558" Y="3712.761" Z="92.01427" />
       </If>
     </While>
-    <CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
+    <CustomBehavior File="UserSettings" AutoEquipArmor="original" />
   </If>
   <If Condition="HasQuest(11633)">
     <CustomBehavior File="FlyTo" X="3457.865" Y="4102.188" Z="16.08184" />

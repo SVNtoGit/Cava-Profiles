@@ -324,15 +324,14 @@
 <TurnIn QuestName="The Emblazoned Runeblade" QuestId="12619" TurnInName="Instructor Razuvious" TurnInId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
 <PickUp QuestName="Runeforging: Preparation For Battle" QuestId="12842" GiverName="Instructor Razuvious" GiverId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
 <If Condition="HasQuest(12842) &amp;&amp; !IsQuestCompleted(12842)" >
-  <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
-  <CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
+  <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip \n For next Quest\n" LogColor="Aquamarine" />
+  <CustomBehavior File="UserSettings" AutoEquipArmor="false" />
   <RunTo X="2490.266" Y="-5638.453" Z="420.6452" />
   <While Condition="!IsQuestCompleted(12842)" >
     <CustomBehavior File="PerformTradeskillOn" QuestId="12842" TradeSkillId="53428" TradeSkillItemId="53341" CastOnItemId="38707" />
   </While>
   <CustomBehavior File="Misc\RunLua" Lua="CloseTradeSkill()" />
-  <CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
-  <CustomBehavior File="Message" Text="\n\n    Enabled\n AutoEquip2 Plugin\n" LogColor="Aquamarine" />
+  <CustomBehavior File="UserSettings" AutoEquipArmor="original" />
 </If>
 <TurnIn QuestName="Runeforging: Preparation For Battle" QuestId="12842" TurnInName="Instructor Razuvious" TurnInId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
 <If Condition="!HasQuest(12848) &amp;&amp; !IsQuestCompleted(12848)" >
@@ -552,8 +551,8 @@
   <CustomBehavior File="EquipItem" ItemId="38670" />
 </If>
 <If Condition="HasQuest(12720) &amp;&amp; !IsQuestCompleted(12720)" >
-  <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
-  <CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
+  <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip \n For next Quest\n" LogColor="Aquamarine" />
+  <CustomBehavior File="UserSettings" AutoEquipArmor="false" />
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
   <While Condition="HasItem(39418)" >
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(39418)" WaitTime="1000" />
@@ -563,8 +562,7 @@
   <CustomBehavior File="EquipItem" ItemId="39371" Slot="SecondaryHandSlot" />
   <CustomBehavior File="SpecificQuests\DeathknightStart\FindAndBeatNpcs" QuestId="12720" MobId1="28610" MobId2="28936" MobId3="28939" X="1696.448" Y="-5849.888" Z="116.1477" />
   <CustomBehavior File="EquipItem" ItemId="38707" Slot="MainHandSlot" />
-  <CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
-  <CustomBehavior File="Message" Text="\n\n    Enabled\n AutoEquip2 Plugin\n" LogColor="Aquamarine" />
+  <CustomBehavior File="UserSettings" AutoEquipArmor="original" />
 </If>
 <TurnIn QuestName="How To Win Friends And Influence Enemies" QuestId="12720" TurnInName="Prince Keleseth" TurnInId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
 <PickUp QuestName="Behind Scarlet Lines" QuestId="12723" GiverName="Prince Keleseth" GiverId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
