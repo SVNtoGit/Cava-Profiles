@@ -2797,12 +2797,11 @@ turnin 10517
   <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
 Text="\n
 # # # # # # # # # # W A R N I N G # # # # # # # #\n
-..    Plugin AutoEquip2 will now be disabled   ..\n
+..       AutoEquip will now be disabled        ..\n
 ..      for next quests. Do NOT enable it      ..\n
-..       Profile will auto enable later        ..\n
 ..          DON'T ENABLE AUTOEQUIP2            ..\n
 # # # # # # # # # # W A R N I N G # # # # # # # #" />
-<CustomBehavior File="DisablePlugin" Names="AutoEquip2" />
+<CustomBehavior File="UserSettings" AutoEquipArmor="false" />
 </If>
 <If Condition="HasQuest(10819)">
   <While Condition="HasQuest(10819)">
@@ -2853,7 +2852,7 @@ Text="\n
     <CustomBehavior File="InteractWith" MobId="185165" KeepTargetSelected="True" PreInteractMountStrategy="Dismount" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
   </While>
-  <CustomBehavior File="EnablePlugin" Names="AutoEquip2" />
+  <CustomBehavior File="UserSettings" AutoEquipArmor="original" />
 </If>
 <!--
                                                                                                                                    |
