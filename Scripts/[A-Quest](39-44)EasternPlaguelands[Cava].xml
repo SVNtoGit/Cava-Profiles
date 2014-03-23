@@ -1292,6 +1292,13 @@
 <If Condition="HasQuest(27616) &amp;&amp; !IsQuestCompleted(27616)" >
   <While Condition="!IsQuestCompleted(27616)" >
     <RunTo X="1622.037" Y="-5289.918" Z="99.96706" />
+    <While Condition="Me.HasAura(1784)"><!--Stealth-->
+      <CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff('player',GetSpellInfo(1784))" WaitTime="1000" />
+		</While>
+		<While Condition="Me.HasAura(5215)"><!--Prowl-->
+      <CustomBehavior File="Misc\RunLua" Lua="CancelUnitBuff('player',GetSpellInfo(5215))" WaitTime="1000" />
+		</While>
+    <CustomBehavior File="WaitTimer" QuestId="27616" WaitTime="10000" />
   </While>
 </If>
 <TurnIn QuestName="Scarlet Salvage" QuestId="27614" TurnInName="Crusade Commander Korfax" TurnInId="16112" X="1656.81" Y="-5324.98" Z="74.39872" />
