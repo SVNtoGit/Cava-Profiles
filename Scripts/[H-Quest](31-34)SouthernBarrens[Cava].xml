@@ -1214,7 +1214,7 @@
 </If>
 <If Condition="HasQuest(24631) &amp;&amp; !IsQuestCompleted(24631)" >
   <RunTo X="-3237.361" Y="-2003.134" Z="87.92919" />
-  <CustomBehavior File="InteractWith" MobId="201876" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
+  <CustomBehavior File="InteractWith" MobId="201876" NonCompeteDistance="0" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
   <While Condition="!IsQuestCompleted(24631)" >
     <RunTo X="-3228.966" Y="-2009.483" Z="88.18093" />
     <CustomBehavior File="InteractWith" QuestId="24631" MobId="37978" InteractByUsingItemId="50031" Range="100" WaitTime="5000" CollectionDistance="100" X="-3228.966" Y="-2009.483" Z="88.18093" />
