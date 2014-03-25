@@ -18,7 +18,12 @@
 </Mailboxes>
 
 <Vendors>
-  <Vendor Name="Michelle De Rum" Entry="52830" Type="Repair" X="6678.736" Y="-4676.556" Z="721.7139" />
+	<Vendor Name="Innkeeper Vizzie" Entry="11118" Type="Food" X="6695.151" Y="-4673.041" Z="721.5685" />
+  <Vendor Name="Himmik" Entry="11187" Type="Food" X="6679.623" Y="-4670.889" Z="721.7147" />
+  <Vendor Name="Michelle De Rum" Entry="52830" Type="Repair" X="6678.736" Y="-4676.556" Z="721.7141" />
+  <Vendor Name="Nixxrak" Entry="11182" Type="Repair" X="6740.854" Y="-4691.69" Z="721.3699" />
+  <Vendor Name="Blixxrak" Entry="11183" Type="Repair" X="6742.888" Y="-4694.972" Z="721.3699" />
+  <Vendor Name="Wixxrak" Entry="11184" Type="Repair" X="6733.39" Y="-4699.038" Z="721.3702" />
 </Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
 <Quest Id="28540" Name="Doin' De E'ko Magic">
@@ -697,7 +702,10 @@
 <PickUp QuestName="Words of the High Chief" QuestId="28472" GiverName="Donova Snowden" GiverId="9298" X="6395.573" Y="-2536.748" Z="541.535" />
 <Objective QuestName="Words of the High Chief" QuestId="28472" Type="CollectItem" ItemId="12842" CollectCount="1" />
 <TurnIn QuestName="Words of the High Chief" QuestId="28472" TurnInName="Kelek Skykeeper" TurnInId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
-<PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
+<If Condition="!HasQuest(28479) &amp;&amp; !IsQuestCompleted(28479)" >
+  <RunTo X="6583.971" Y="-3875.339" Z="663.7031" />
+	<PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.074" />
+</If>
 <TurnIn QuestName="The Ruins of Kel'Theril" QuestId="28479" TurnInName="Kaldorei Spirit" TurnInId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
 <If Condition="(Me.LevelFraction &gt;= 58.15 )">
   <RunTo X="6802.778" Y="-4737.768" Z="701.4667" />
