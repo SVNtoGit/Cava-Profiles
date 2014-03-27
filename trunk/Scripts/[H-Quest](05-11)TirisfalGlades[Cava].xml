@@ -626,8 +626,8 @@
 <If Condition="!HasQuest(24978) &amp;&amp; !IsQuestCompleted(24978)" >
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10666" WaitTime="1000" CollectionDistance="50" X="2240.748" Y="1022.179" Z="36.49952" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10666" WaitTime="1000" CollectionDistance="50" X="2240.748" Y="1022.179" Z="36.49952" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10666" WaitTime="1000" CollectionDistance="50" X="2240.748" Y="1022.179" Z="36.49952" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10666" WaitTime="1000" CollectionDistance="50" X="2240.748" Y="1022.179" Z="36.49952" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -655,7 +655,7 @@
 <TurnIn QuestName="Fields of Grief" QuestId="24975" TurnInName="Apothecary Johaan" TurnInId="1518" X="2217.135" Y="1017.366" Z="37.12373" />
 <PickUp QuestName="Variety is the Spice of Death" QuestId="24976" GiverName="Apothecary Johaan" GiverId="1518" X="2217.135" Y="1017.366" Z="37.12373" />
 <If Condition="HasQuest(24976) &amp;&amp; !IsQuestCompleted(24976)">
-  <CustomBehavior File="InteractWith" QuestId="24976" QuestObjectiveIndex="1" MobId="202422" NumOfTimes="1000" NonCompeteDistance="0" CollectionDistance="1000" >
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="24976" QuestObjectiveIndex="1" MobId="202422" NumOfTimes="1000" NonCompeteDistance="0" CollectionDistance="1000" >
     <HuntingGrounds>
       <Hotspot X="2158.006" Y="831.394" Z="30.59422" />
       <Hotspot X="2144.956" Y="792.9863" Z="30.37889" />
@@ -669,7 +669,7 @@
 <Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52067" CollectCount="4" />
 -->
   <Objective QuestName="Variety is the Spice of Death" QuestId="24976" Type="CollectItem" ItemId="52066" CollectCount="4" />
-  <CustomBehavior File="InteractWith" QuestId="24976" QuestObjectiveIndex="3" MobId="38933" NumOfTimes="1000" InteractByLooting="True" NonCompeteDistance="0" CollectionDistance="1000" >
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="24976" QuestObjectiveIndex="3" MobId="38933" NumOfTimes="1000" InteractByLooting="True" NonCompeteDistance="0" CollectionDistance="1000" >
     <HuntingGrounds>
       <Hotspot X="2572.227" Y="1464.295" Z="-4.508661" />
       <Hotspot X="2605.931" Y="1442.583" Z="-5.103283" />
@@ -711,7 +711,7 @@
 <If Condition="HasQuest(24979) &amp;&amp; !IsQuestCompleted(24979)">
   <While Condition="!IsQuestCompleted(24979)">
     <RunTo X="2441.099" Y="1597.97" Z="72.15547" />
-    <CustomBehavior File="InteractWith" QuestId="24979" MobId="38999" NonCompeteDistance="0" WaitForNpcs="False" InteractByGossipOptions="1,1,1" X="2441.099" Y="1597.97" Z="72.15547" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="24979" MobId="38999" NonCompeteDistance="0" WaitForNpcs="False" InteractByGossipOptions="1,1,1" X="2441.099" Y="1597.97" Z="72.15547" />
   </While>
 </If>
 -->
@@ -731,15 +731,15 @@
 <If Condition="HasQuest(25090)" >
   <RunTo X="2260.998" Y="287.5288" Z="33.3798" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="2137" WaitTime="1000" X="2302.86" Y="288.523" Z="33.3571" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="2137" WaitTime="1000" X="2302.86" Y="288.523" Z="33.3571" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="2137" WaitTime="1000" X="2302.86" Y="288.523" Z="33.3571" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="2137" WaitTime="1000" X="2302.86" Y="288.523" Z="33.3571" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
   </If>
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2134" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" InteractByQuestFrameDisposition="TerminateBehavior" X="2305.479" Y="288.0078" Z="33.35704" />
   </If>
   <CustomBehavior File="Cava\SetHearthstone" MobId="5688" X="2285.95" Y="282.613" Z="33.24683" />
 </If>
@@ -826,7 +826,7 @@
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-  <CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
   <TurnIn QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-20)SilverpineForest[Cava]" />
 </If>
@@ -844,7 +844,7 @@
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-  <CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
   <TurnIn QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-20)SilverpineForest[Cava]" />
 </If>
@@ -869,7 +869,7 @@
 <Objective QuestName="Maggot Eye" QuestId="24998" Type="CollectItem" ItemId="3635" CollectCount="1" />
 <Objective QuestName="Off the Scales" QuestId="24995" Type="CollectItem" ItemId="2859" CollectCount="5" />
 <If Condition="HasQuest(24999) &amp;&amp; !IsQuestCompleted(24999)">
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24999" MobId="38937" NumOfTimes="1000" MobState="Alive" >
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24999" MobId="38937" NumOfTimes="1000" MobState="Alive" >
     <HuntingGrounds>
       <Hotspot X="3007.051" Y="358.3804" Z="4.629209" />
       <Hotspot X="3000.272" Y="318.3062" Z="2.805238" />
@@ -942,13 +942,13 @@
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-  <CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
   <TurnIn QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-20)SilverpineForest[Cava]" />
 </If>
 <If Condition="HasQuest(25006) &amp;&amp; !IsQuestCompleted(25006)">
   <While Condition="!IsQuestCompleted(25006)">
-    <CustomBehavior File="InteractWith" QuestId="25006" MobId="39117" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" X="2242.281" Y="230.375" Z="34.50985" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25006" MobId="39117" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" X="2242.281" Y="230.375" Z="34.50985" />
     <RunTo X="2245.638" Y="232.9343" Z="41.81231" />
     <CustomBehavior File="WaitTimer" WaitTime="55000" />
   </While>
@@ -966,7 +966,7 @@
   <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
   <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-  <CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
   <TurnIn QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-20)SilverpineForest[Cava]" />
 </If>
@@ -1037,13 +1037,13 @@
 <TurnIn QuestName="To Bigger and Better Things" QuestId="25011" TurnInName="Timothy Cunningham" TurnInId="37915" X="1730.373" Y="-743.1945" Z="60.06481" />
 <PickUp QuestName="Take to the Skies" QuestId="25012" GiverName="Timothy Cunningham" GiverId="37915" X="1730.373" Y="-743.1945" Z="60.06481" />
 <If Condition="HasQuest(25012)">
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" InteractByGossipOptions="2" X="1730.373" Y="-743.1945" Z="60.06481" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" InteractByGossipOptions="2" X="1730.373" Y="-743.1945" Z="60.06481" />
 </If>
 <TurnIn QuestName="Take to the Skies" QuestId="25012" TurnInName="Executor Zygand" TurnInId="1515" X="2275.082" Y="297.6129" Z="33.6494" />
 <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
 <PickUp QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" GiverName="Executor Zygand" GiverId="1515" X="2275.082" Y="297.6129" Z="33.64941" />
 <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-<CustomBehavior File="InteractWith" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+<CustomBehavior File="Cava\InteractWith1324" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
 <TurnIn QuestName="Warchief's Command: Silverpine Forest!" QuestId="26964" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](11-20)SilverpineForest[Cava]" />
 </QuestOrder>

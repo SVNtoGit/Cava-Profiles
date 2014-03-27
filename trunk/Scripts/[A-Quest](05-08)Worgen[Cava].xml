@@ -135,8 +135,8 @@
 <PickUp QuestName="Among Humans Again" QuestId="14313" GiverName="Lord Godfrey" GiverId="36170" X="-1839.762" Y="2291.104" Z="42.22679" />
 <If Condition="HasQuest(14313)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="36717" WaitTime="1000" CollectionDistance="50" X="-1867.021" Y="2232.498" Z="42.32354" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="36717" WaitTime="1000" CollectionDistance="50" X="-1867.021" Y="2232.498" Z="42.32354" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="36717" WaitTime="1000" CollectionDistance="50" X="-1867.021" Y="2232.498" Z="42.32354" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="36717" WaitTime="1000" CollectionDistance="50" X="-1867.021" Y="2232.498" Z="42.32354" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -144,7 +144,7 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="38791" X="-1909.7" Y="2280.496" Z="44.07693" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36695" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-1894.104" Y="2299.844" Z="44.16444" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36695" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-1894.104" Y="2299.844" Z="44.16444" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </If>
 </If>
@@ -164,7 +164,7 @@
 <If Condition="HasQuest(14348) &amp;&amp; !IsQuestCompleted(14348)" >
   <While Condition="!IsQuestCompleted(14348)" >
     <If Condition="GetItemCount(49202) &lt; 1" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14348" MobId="196403" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="-1948.586" Y="2326.807" Z="34.17924" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14348" MobId="196403" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="-1948.586" Y="2326.807" Z="34.17924" />
     </If>
     <While Condition="!IsQuestCompleted(9544) &amp;&amp; HasItem(49202)" >
 	  <CustomBehavior File="Cava\UseItemOn" QuestId="14348" ItemId="49202" MobId="36231" CollectionDistance="1000" Range="20" X="-1948.586" Y="2326.807" Z="34.17924" />
@@ -176,7 +176,7 @@
 <TurnIn QuestName="You Can't Take 'Em Alone" QuestId="14348" TurnInName="Prince Liam Greymane" TurnInId="36140" X="-1921.679" Y="2328.22" Z="37.77991" />
 <PickUp QuestName="Holding Steady" QuestId="14366" GiverName="Prince Liam Greymane" GiverId="36140" X="-1921.679" Y="2328.22" Z="37.77991" />
 <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(14366)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36695" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-1894.104" Y="2299.844" Z="44.16444" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36695" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-1894.104" Y="2299.844" Z="44.16444" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
 <TurnIn QuestName="Holding Steady" QuestId="14366" TurnInName="Gwen Armstead" TurnInId="34571" X="-1862.302" Y="2262.728" Z="44.21612" />
@@ -201,7 +201,7 @@
 	<CustomBehavior File="MyCTM" X="-1929.232" Y="2554.922" Z="12.73541"/>
 	<CustomBehavior File="MyCTM" X="-1927.552" Y="2560.583" Z="12.73432"/>
 	<CustomBehavior File="MyCTM" X="-1931.266" Y="2561.877" Z="12.73798"/>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36288" Nav="CTM" X="-1931.613" Y="2562.289" Z="12.73914" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36288" Nav="CTM" X="-1931.613" Y="2562.289" Z="12.73914" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
 	<CustomBehavior File="MyCTM" X="-1931.266" Y="2561.877" Z="12.73798"/>
 	<CustomBehavior File="MyCTM" X="-1927.552" Y="2560.583" Z="12.73432"/>
@@ -210,17 +210,17 @@
 	<CustomBehavior File="MyCTM" X="-1918.327" Y="2563.08" Z="3.579272" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 14368)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36289" X="-1933.879" Y="2537.262" Z="1.39221" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36289" X="-1933.879" Y="2537.262" Z="1.39221" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 14368)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36287" X="-1987.47" Y="2508.71" Z="1.391987" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36287" X="-1987.47" Y="2508.71" Z="1.391987" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
   </While>
 </If>
 <If Condition="HasQuest(14382) &amp;&amp; !IsQuestCompleted(14382)" >
   <While Condition="!IsObjectiveComplete(1, 14382)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36292" MobState="Alive" WaitForNpcs="False" CollectionDistance="1000" X="-2046.555" Y="2544.935" Z="0.1126263" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36292" MobState="Alive" WaitForNpcs="False" CollectionDistance="1000" X="-2046.555" Y="2544.935" Z="0.1126263" />
 	<CustomBehavior File="Vehicles\VehicleBehavior" QuestId="14382" VehicleMountId="36283" VehicleId="36283" AttackButton="1" FireHeight="12" FireLocationX="-2070.634" FireLocationY="2620.279" FireLocationZ="0.5988749" TargetLocationX="-2124.423" TargetLocationY="2662.952" TargetLocationZ="8.255829" PreviousFireLocationX="0" PreviousFireLocationY="0" PreviousFireLocationZ="0" />
 	<CustomBehavior File="WaitTimer" WaitTime="5000" />
     <CustomBehavior File="EjectVeh" />
@@ -236,7 +236,7 @@
     </If>
   </While>
   <While Condition="!IsObjectiveComplete(2, 14382)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36292" MobState="Alive" WaitForNpcs="False" NumOfTimes="1" GossipOptions="1" CollectionDistance="10" X="-2046.555" Y="2544.935" Z="0.1126263" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36292" MobState="Alive" WaitForNpcs="False" NumOfTimes="1" GossipOptions="1" CollectionDistance="10" X="-2046.555" Y="2544.935" Z="0.1126263" />
     <CustomBehavior File="Vehicles\VehicleBehavior" QuestId="14382" VehicleMountId="36283" VehicleId="36283" AttackButton="1" FireHeight="12"
 				FireLocationX="-2150.443" FireLocationY="2495.917" FireLocationZ="4.577399"
 				TargetLocationX="-2219.892" TargetLocationY="2560.604" TargetLocationZ="8.628399"
@@ -290,7 +290,7 @@
 <PickUp QuestName="Gasping for Breath" QuestId="14395" GiverName="Prince Liam Greymane" GiverId="36451" X="-1897.979" Y="2526.242" Z="1.253146" />
 <If Condition="HasQuest(14395) &amp;&amp; !IsQuestCompleted(14395)">
   <While Condition="!IsQuestCompleted(14395)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14395" MobId="36440" Nav="CTM" X="-1916.453" Y="2540.397" Z="-1.68574" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14395" MobId="36440" Nav="CTM" X="-1916.453" Y="2540.397" Z="-1.68574" />
 	<CustomBehavior File="MyCTM" QuestId="14395" X="-1904.751" Y="2523.336" Z="-0.309191"/>
 	<CustomBehavior File="MyCTM" QuestId="14395" X="-1897.278" Y="2517.726" Z="1.458099"/>
 	<CustomBehavior File="WaitTimer" QuestId="14395" WaitTime="10000" />
@@ -325,9 +325,9 @@
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(14401)">
     <RunTo QuestId="14401" X="-2106.718" Y="2335.631" Z="7.345545" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36459" X="-2102.93" Y="2333.44" Z="8.443903" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14401" MobId="36459" X="-2102.93" Y="2333.44" Z="8.443903" />
 	<CustomBehavior File="WaitTimer" QuestId="14401" WaitTime="5000"/>
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14401" MobId="36461" WaitForNpcs="False" MobState="Alive" X="-2102.93" Y="2333.44" Z="8.443903" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14401" MobId="36461" WaitForNpcs="False" MobState="Alive" X="-2102.93" Y="2333.44" Z="8.443903" />
 	<CustomBehavior File="WaitTimer" QuestId="14401" WaitTime="5000"/>
   </While>
   <LootMobs Value="null" />

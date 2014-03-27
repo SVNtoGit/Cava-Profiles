@@ -15,6 +15,7 @@
 </Mailboxes>
 
 <Vendors>
+	<Vendor Name="Innkeeper Vizzie" Entry="11118" Type="Food" X="6695.151" Y="-4673.041" Z="721.5685" />
   <Vendor Name="Himmik" Entry="11187" Type="Food" X="6679.623" Y="-4670.889" Z="721.7147" />
   <Vendor Name="Michelle De Rum" Entry="52830" Type="Repair" X="6678.736" Y="-4676.556" Z="721.7141" />
   <Vendor Name="Nixxrak" Entry="11182" Type="Repair" X="6740.854" Y="-4691.69" Z="721.3699" />
@@ -119,46 +120,12 @@
   and start bot." />
 </If>
 <CustomBehavior File="Message" Text="Compiling Winterspring (51-52)" LogColor="Aquamarine" />
-<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
-<If Condition="Me.Race == WoWRace.BloodElf">
-  
-<ElseIf Condition="Me.Race == WoWRace.Orc">
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Tauren">
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Troll" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Undead" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Goblin" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  
-  </ElseIf>
-<Else>
-  </Else>
-</If>
-<If Condition="Me.Class == WoWClass.Paladin">
-  <If Condition="Me.Race == WoWRace.Tauren">
-    
-  <Else>
-    
-    </Else>
-  </If>
-</If>
-<If Condition="Me.Class == WoWClass.Warlock">
-  
-</If>
+<CustomBehavior File="UserSettings" UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" />
 <!--# # # Level 51.65 # # # -->
 <If Condition="!HasQuest(28522) &amp;&amp; !IsQuestCompleted(28522)" >
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <While Condition="HasQuestAvailable(11556)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11556" KeepTargetSelected="True" X="6900.443" Y="-2285.773" Z="586.0642" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11556" KeepTargetSelected="True" X="6900.443" Y="-2285.773" Z="586.0642" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -279,7 +246,7 @@
 <Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
   <While Condition="!HasItem(12842)" >
-    <CustomBehavior File="InteractWith" MobId="10738" Loot="True" X="6514.67" Y="-3264.19" Z="574.186" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="10738" Loot="True" X="6514.67" Y="-3264.19" Z="574.186" />
   </While>
 </If>
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; HasItem(12842)" >

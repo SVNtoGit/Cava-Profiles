@@ -16,8 +16,12 @@
 </Mailboxes>
 
 <Vendors>
+	<Vendor Name="Innkeeper Vizzie" Entry="11118" Type="Food" X="6695.151" Y="-4673.041" Z="721.5685" />
   <Vendor Name="Himmik" Entry="11187" Type="Food" X="6679.623" Y="-4670.889" Z="721.7147" />
   <Vendor Name="Michelle De Rum" Entry="52830" Type="Repair" X="6678.736" Y="-4676.556" Z="721.7141" />
+  <Vendor Name="Nixxrak" Entry="11182" Type="Repair" X="6740.854" Y="-4691.69" Z="721.3699" />
+  <Vendor Name="Blixxrak" Entry="11183" Type="Repair" X="6742.888" Y="-4694.972" Z="721.3699" />
+  <Vendor Name="Wixxrak" Entry="11184" Type="Repair" X="6733.39" Y="-4699.038" Z="721.3702" />
 </Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
 <Quest Id="28518" Name="Legacy of the High Elves">
@@ -454,8 +458,11 @@
 <If Condition="Me.Class == WoWClass.Warlock">
   
 </If>
-<!--# # # Level 52.40 # # # -->
-<PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
+<!--# # # Level 52.40 # # #--> 
+<If Condition="!HasQuest(28479) &amp;&amp; !IsQuestCompleted(28479)" >
+  <RunTo X="6583.971" Y="-3875.339" Z="663.7031" />
+	<PickUp QuestName="The Ruins of Kel'Theril" QuestId="28479" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.074" />
+</If>
 <TurnIn QuestName="The Ruins of Kel'Theril" QuestId="28479" TurnInName="Kaldorei Spirit" TurnInId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
 <PickUp QuestName="Pride of the Highborne" QuestId="28513" GiverName="Kaldorei Spirit" GiverId="48658" X="6543.913" Y="-4110.53" Z="663.3641" />
 <If Condition="HasQuest(28513) &amp;&amp; !IsQuestCompleted(28513)" >
@@ -512,6 +519,7 @@
 <TurnIn QuestName="The Curse of Zin-Malor" QuestId="28536" TurnInName="Kelek Skykeeper" TurnInId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
 <PickUp QuestName="In Pursuit of Shades" QuestId="28537" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
 <If Condition="HasQuest(28537) &amp;&amp; !IsQuestCompleted(28537)" >
+  <DisableRepair />
   <While Condition="!IsQuestCompleted(28537)" >
     <RunTo X="6563.709" Y="-4368.442" Z="696.2975" />
     <RunTo X="6376.424" Y="-4389.959" Z="738.0492" />
@@ -521,16 +529,17 @@
     <CustomBehavior File="MyCTM" X="6184.636" Y="-4127.124" Z="746.7639" />
     <CustomBehavior File="MyCTM" X="6189.732" Y="-4112.859" Z="746.3948" />
     <While Condition="(Me.Location.Distance(new WoWPoint(6189.732, -4112.859, 746.3948)) &lt; 50) &amp;&amp; !IsQuestCompleted(28537)">
-      <CustomBehavior File="InteractWith" MobId="48678" Loot="True" X="6187.036" Y="-4110.682" Z="747.524" />
+      <CustomBehavior File="Cava\InteractWith1324" MobId="48678" Loot="True" X="6187.036" Y="-4110.682" Z="747.524" />
     </While>
   </While>
+  <EnableRepair />
 </If>
 <TurnIn QuestName="In Pursuit of Shades" QuestId="28537" TurnInName="Kelek Skykeeper" TurnInId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
 <PickUp QuestName="Trailing the Spiritspeaker" QuestId="28848" GiverName="Kelek Skykeeper" GiverId="10920" X="6586.487" Y="-3872.67" Z="664.0745" />
 <If Condition="HasQuest(28848)">
   <!--Everlook-->
   <RunTo X="6812.624" Y="-4609.296" Z="710.6694" />
-  <CustomBehavior File="InteractWith" MobId="11139" MobState="Alive" X="6815.121" Y="-4610.124" Z="710.67" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="11139" MobState="Alive" X="6815.121" Y="-4610.124" Z="710.67" />
 </If>
 <TurnIn QuestName="Trailing the Spiritspeaker" QuestId="28848" TurnInName="Nymn" TurnInId="50366" X="6723.967" Y="-4662.056" Z="720.9704" />
 <If Condition="!HasQuest(28609) &amp;&amp; !IsQuestCompleted(28609)">
@@ -538,8 +547,8 @@
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="52830" WaitTime="1000" CollectionDistance="50" X="6678.736" Y="-4676.556" Z="721.7139" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="52830" WaitTime="1000" CollectionDistance="50" X="6678.736" Y="-4676.556" Z="721.7139" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="52830" WaitTime="1000" CollectionDistance="50" X="6678.736" Y="-4676.556" Z="721.7139" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="52830" WaitTime="1000" CollectionDistance="50" X="6678.736" Y="-4676.556" Z="721.7139" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -552,8 +561,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -572,8 +579,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -618,8 +623,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -644,7 +647,7 @@
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(28632)" >
-    <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
       <HuntingGrounds>
       <Hotspot X="6765.769" Y="-5296.978" Z="746.0128" />
       <Hotspot X="6725.265" Y="-5301.883" Z="746.0128" />
@@ -682,7 +685,7 @@
 -->
 <If Condition="HasQuest(28722) &amp;&amp; !IsQuestCompleted(28722)" >
   <While Condition="!IsQuestCompleted(28722)" >
-    <CustomBehavior File="InteractWith" QuestId="28722" MobId="10978" InteractByUsingItemId="12928" Range="20" NotMoving="True" X="6705.608" Y="-4686.181" Z="721.8718" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="28722" MobId="10978" InteractByUsingItemId="12928" Range="20" NotMoving="True" X="6705.608" Y="-4686.181" Z="721.8718" />
   </While>
 </If>
 <TurnIn QuestName="Yetiphobia" QuestId="28722" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
@@ -690,8 +693,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -730,8 +731,6 @@
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
-  <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](55-57)UnGoroCrater[Cava]" />
@@ -939,8 +938,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -953,8 +950,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -974,14 +969,16 @@
 <Objective QuestName="Magic Prehistoric" QuestId="28839" Type="CollectItem" ItemId="65901" CollectCount="1" />
 <Objective QuestName="Magic Prehistoric" QuestId="28839" Type="CollectItem" ItemId="65900" CollectCount="1" />
 <If Condition="HasQuest(28839) &amp;&amp; !IsQuestCompleted(28839)" >
+  <DisableRepair />
   <If Condition="!IsObjectiveComplete(1, 28839)" >
     <RunTo X="5721.602" Y="-4983.461" Z="808.1277" />
   </If>
   <While Condition="!IsQuestCompleted(28839)" >
     <CustomBehavior File="MyCTM" X="5764.863" Y="-4991.632" Z="809.2863" />
-    <CustomBehavior File="InteractWith" QuestId="28839" MobId="207421" ObjectType="GameObject" Nav="CTM" WaitTime="6000" X="5764.863" Y="-4991.632" Z="809.2863" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="28839" MobId="207421" ObjectType="GameObject" Nav="CTM" WaitTime="6000" X="5764.863" Y="-4991.632" Z="809.2863" />
   </While>
   <CustomBehavior File="MyCTM" X="5721.602" Y="-4983.461" Z="808.1277" />
+  <EnableRepair />
 </If>
 <If Condition="HasQuest(28839) &amp;&amp; IsQuestCompleted(28839)" >
   <While Condition="HasQuest(28839)" >
@@ -1015,8 +1012,6 @@
   <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
   <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-  <RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-  <CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
   <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
@@ -1034,7 +1029,7 @@
 <PickUp QuestName="The Arcane Storm Within" QuestId="28841" GiverName="Haleh" GiverId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
 <PickUp QuestName="Umbranse's Deliverance" QuestId="28842" GiverName="Haleh" GiverId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
 <If Condition="HasQuest(28841) &amp;&amp; !IsQuestCompleted(28841)" >
-  <CustomBehavior File="InteractWith" QuestId="28841" MobId="50291" NumOfTimes="1000" InteractByUsingItemId="66060" Range="15" CollectionDistance="1000" MovementBy="NavigatorPreferred">
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="28841" MobId="50291" NumOfTimes="1000" InteractByUsingItemId="66060" Range="15" CollectionDistance="1000" MovementBy="NavigatorPreferred">
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="6193.873" Y="-4275.655" Z="661.1233" />
       <Hotspot X="6184.383" Y="-4237.496" Z="651.791" />
@@ -1059,8 +1054,6 @@
 <CustomBehavior File="Message" Text="Moving to UN'GORO CRATER, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="6811.753" Y="-4609.158" Z="710.6703" />
 <CustomBehavior File="TaxiRide" MobId="11139" DestName="Gadgetzan" WaitTime="1000" />
-<RunTo X="-7094.03" Y="-3813.69" Z="9.490752" />
-<CustomBehavior File="TaxiRide" MobId="7824" DestName="Dawnrise Expedition" WaitTime="1000" />
 <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
 <PickUp QuestName="Tropical Paradise Beckons" QuestId="24911" GiverName="Sherm" GiverId="44374" X="-9468.31" Y="-2457.65" Z="18.00542" />
 <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />

@@ -137,8 +137,8 @@
 <If Condition="!HasQuest(26093) &amp;&amp; !IsQuestCompleted(26093)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />

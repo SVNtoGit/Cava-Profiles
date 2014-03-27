@@ -211,8 +211,8 @@
 <If Condition="!HasQuest(25780) &amp;&amp; !IsQuestCompleted(25780)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1454" WaitTime="1000" CollectionDistance="50" X="-3775.439" Y="-805.4011" Z="0.6005868" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1454" WaitTime="1000" CollectionDistance="50" X="-3775.439" Y="-805.4011" Z="0.6005868" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1454" WaitTime="1000" CollectionDistance="50" X="-3775.439" Y="-805.4011" Z="0.6005868" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1454" WaitTime="1000" CollectionDistance="50" X="-3775.439" Y="-805.4011" Z="0.6005868" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -220,9 +220,9 @@
   <CustomBehavior File="Cava\SetHearthstone" MobId="1464" X="-3825.19" Y="-833.29" Z="0.6484348" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <RunTo X="-3744.934" Y="-886.3812" Z="0.3054724" />
-  <CustomBehavior File="InteractWith" MobId="1452" BuyItemId="4542" BuyItemCount="10" WaitTime="1000" CollectionDistance="100" X="-3745.084" Y="-887.7281" Z="0.3046385" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="1452" BuyItemId="4542" BuyItemCount="10" WaitTime="1000" CollectionDistance="100" X="-3745.084" Y="-887.7281" Z="0.3046385" />
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <CustomBehavior File="InteractWith" MobId="1452" BuyItemId="1205" BuyItemCount="10" WaitTime="1000" CollectionDistance="100" X="-3745.084" Y="-887.7281" Z="0.3046385" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="1452" BuyItemId="1205" BuyItemCount="10" WaitTime="1000" CollectionDistance="100" X="-3745.084" Y="-887.7281" Z="0.3046385" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
 <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
@@ -345,7 +345,7 @@
   <While Condition="!HasQuest(25804)" >
     <RunTo X="-3199.031" Y="-956.7774" Z="9.122682" />
     <While Condition="HasQuestAvailable(142151)" >
-      <CustomBehavior File="InteractWith" MobId="142151" KeepTargetSelected="True" ObjectType="GameObject"  X="-3201.878" Y="-953.4223" Z="8.672083" />
+      <CustomBehavior File="Cava\InteractWith1324" MobId="142151" KeepTargetSelected="True" ObjectType="GameObject"  X="-3201.878" Y="-953.4223" Z="8.672083" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--

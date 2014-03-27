@@ -127,9 +127,9 @@
     <TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
   </If>
   <CustomBehavior File="Cava\SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="384" MobId="1247" BuyItemId="2894" GossipOptions="3" NumOfTimes="1" CollectionDistance="50" X="-5601.6" Y="-531.203" Z="399.6541" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="384" MobId="1247" BuyItemId="2894" GossipOptions="3" NumOfTimes="1" CollectionDistance="50" X="-5601.6" Y="-531.203" Z="399.6541" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
   </If>
 </If>
 <PickUp QuestName="The Perfect Stout" QuestId="315" GiverName="Rejold Barleybrew" GiverId="1374" X="-5612.144" Y="-516.9948" Z="402.6357" />
@@ -165,18 +165,18 @@
 <PickUp QuestName="Forced to Watch from Afar" QuestId="313" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Pilfered Supplies" QuestId="25668" GiverName="Quartermaster Glynna" GiverId="40951" X="-5642.425" Y="-493.0816" Z="396.6447" />
 <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(313) &amp;&amp; !IsQuestCompleted(313)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 </If>
 <If Condition="HasQuest(313) &amp;&amp; !IsQuestCompleted(313)">
   <While Condition="!IsObjectiveComplete(1, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="40991" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5475.986" Y="-229.2361" Z="354.3773" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="40991" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5475.986" Y="-229.2361" Z="354.3773" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="40994" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5502.422" Y="-271.9618" Z="354.2406" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="40994" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5502.422" Y="-271.9618" Z="354.2406" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="41056" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5387.958" Y="-278.2431" Z="363.053" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="41056" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5387.958" Y="-278.2431" Z="363.053" />
   </While>
 </If>
 <Objective QuestName="Pilfered Supplies" QuestId="25668" Type="CollectItem" ItemId="55151" CollectCount="6" />
@@ -188,7 +188,7 @@
 <PickUp QuestName="Pushing Forward" QuestId="25792" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Operation Recombobulation" QuestId="412" GiverName="Razzle Sprysprocket" GiverId="1269" X="-5636.52" Y="-471.158" Z="397.769" />
 <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(25792)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
 </If>
 <If Condition="(Me.LevelFraction &gt;= 8.2 )">
@@ -217,7 +217,7 @@
 <TurnIn QuestName="Help from Steelgrill's Depot" QuestId="25838" TurnInName="Delber Cranktoggle" TurnInId="41363" X="-5479.412" Y="-645.6684" Z="392.3267" />
 <PickUp QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" GiverName="Delber Cranktoggle" GiverId="41363" X="-5479.412" Y="-645.6684" Z="392.3267" />
 <If Condition="HasQuest(25839)">
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41398" WaitTime="5000" CollectionDistance="50" X="-5465.621" Y="-646.8057" Z="393.7324" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="41398" WaitTime="5000" CollectionDistance="50" X="-5465.621" Y="-646.8057" Z="393.7324" />
 </If>
 <TurnIn QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" TurnInName="Slamp Wobblecog" TurnInId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
 <PickUp QuestName="Eliminate the Resistance" QuestId="25840" GiverName="Slamp Wobblecog" GiverId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
