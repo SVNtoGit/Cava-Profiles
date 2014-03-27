@@ -642,7 +642,7 @@
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
-    <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
     <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
     </Else>
   </If>
@@ -695,11 +695,11 @@
 <If Condition="!HasQuest(25674) &amp;&amp; !IsQuestCompleted(25674)" >
   <!--Dreadmaul Hold-->
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
-  <CustomBehavior File="InteractWith" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -719,7 +719,7 @@
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -783,13 +783,13 @@
 <PickUp QuestName="Some People Just Need Killing" QuestId="25681" GiverName="Tak'arili" GiverId="41134" X="-10618.62" Y="-3472.019" Z="5.596112" />
 <If Condition="HasQuest(25681) &amp;&amp; !IsQuestCompleted(25681)" >
   <If Condition="!Me.IsOnTransport" >
-    <CustomBehavior File="InteractWith" MobId="203192" NonCompeteDistance="0" X="-10637.35" Y="-3120.548" Z="24.30128" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203192" NonCompeteDistance="0" X="-10637.35" Y="-3120.548" Z="24.30128" />
   </If>
   <RunTo X="-10573.38" Y="-3198.689" Z="7.109308" />
   <RunTo X="-10637.35" Y="-3120.548" Z="24.30128" />
   <CustomBehavior File="EjectVeh" />
   <Objective QuestName="Some People Just Need Killing" QuestId="25681" Type="KillMob" MobId="41173" KillCount="1" />
-  <CustomBehavior File="InteractWith" MobId="203192" NonCompeteDistance="0" X="-10648.52" Y="-3095.894" Z="24.30157" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="203192" NonCompeteDistance="0" X="-10648.52" Y="-3095.894" Z="24.30157" />
   <RunTo X="-10573.38" Y="-3198.689" Z="7.109308" />
   <RunTo X="-10614.34" Y="-3468.946" Z="5.701164" />
   <CustomBehavior File="EjectVeh" />
@@ -806,7 +806,7 @@
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -827,10 +827,10 @@
 <PickUp QuestName="Attune the Bloodstone" QuestId="25684" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="HasQuest(25684) &amp;&amp; !IsQuestCompleted(25684)" >
   <While Condition="!IsObjectiveComplete(1, 25684)" >
-  <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 25684)" >
-  <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </While>
 </If>
 <TurnIn QuestName="Attune the Bloodstone" QuestId="25684" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
@@ -838,7 +838,7 @@
 <PickUp QuestName="A Bloodmage's Gotta Eat Too" QuestId="25690" GiverName="Bloodmage Drazial" GiverId="7505" X="-11467.3" Y="-2631.38" Z="4.057312" />
 <If Condition="(HasQuest(25685) &amp;&amp; !IsQuestCompleted(25685)) || (HasQuest(25690) &amp;&amp; !IsQuestCompleted(25690))" >
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
 </If>
 <If Condition="(HasQuest(25685) &amp;&amp; !IsQuestCompleted(25685)) &amp;&amp; (HasQuest(25690) &amp;&amp; !IsQuestCompleted(25690))" >
@@ -952,7 +952,7 @@
   <LootMobs Value="true" />
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-    <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </If>
 </If>
 <TurnIn QuestName="A Bloodmage's Gotta Eat Too" QuestId="25690" TurnInName="Bloodmage Drazial" TurnInId="7505" X="-11467.3" Y="-2631.38" Z="4.057312" />
@@ -961,11 +961,11 @@
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -984,25 +984,25 @@
 <PickUp QuestName="Blood Ritual" QuestId="25686" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="HasQuest(25686) &amp;&amp; !IsQuestCompleted(25686)" >
   <While Condition="!IsQuestCompleted(25686)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25686" MobId="7506" WaitTime="5000" GossipOptions="1" X="-11469.4" Y="-2629.918" Z="4.088411" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25686" MobId="7506" WaitTime="5000" GossipOptions="1" X="-11469.4" Y="-2629.918" Z="4.088411" />
   </While>
 </If>
 <TurnIn QuestName="Blood Ritual" QuestId="25686" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <PickUp QuestName="Not Just Any Body" QuestId="25687" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="HasQuest(25687) &amp;&amp; !IsQuestCompleted(25687)" >
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <Objective QuestName="Not Just Any Body" QuestId="25687" Type="CollectItem" ItemId="55836" CollectCount="1" />
   <Objective QuestName="Not Just Any Body" QuestId="25687" Type="CollectItem" ItemId="55829" CollectCount="1" />
   <Objective QuestName="Not Just Any Body" QuestId="25687" Type="CollectItem" ItemId="55837" CollectCount="1" />
   <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-  <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
 </If>
 <If Condition="HasQuest(25687)" >
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-    <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </If>
 </If>
 <TurnIn QuestName="Not Just Any Body" QuestId="25687" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
@@ -1010,11 +1010,11 @@
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1033,23 +1033,23 @@
 <PickUp QuestName="The Altar of Storms" QuestId="25688" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
 <If Condition="HasQuest(25688) &amp;&amp; !IsQuestCompleted(25688)" >
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-11280.08" Y="-2547.901" Z="99.41405" />
   <While Condition="!IsQuestCompleted(25688)" >
-    <CustomBehavior File="InteractWith" MobId="203196" NonCompeteDistance="0" WaitTime="3000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-11280.08" Y="-2547.901" Z="99.41405" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203196" NonCompeteDistance="0" WaitTime="3000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-11280.08" Y="-2547.901" Z="99.41405" />
     <CustomBehavior File="EscortGroup" QuestId="25688" EscortNpcId="41193" EscortCompleteWhen="QuestCompleteOrFails" />
     <If Condition="!IsQuestCompleted(25688)" >
       <CustomBehavior File="WaitTimer" WaitTime="65000" />
     </If>
   </While>
   <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-  <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
 </If>
 <If Condition="HasQuest(25688)" >
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-    <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </If>
 </If>
 <TurnIn QuestName="The Altar of Storms" QuestId="25688" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952704" />
@@ -1057,11 +1057,11 @@
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1080,7 +1080,7 @@
 <PickUp QuestName="Time is Short" QuestId="25689" GiverName="Loramus Thalipedes" GiverId="7783" X="-11457" Y="-2635.34" Z="3.952704" />
 <If Condition="HasQuest(25689)" >
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
 </If>
 <TurnIn QuestName="Time is Short" QuestId="25689" TurnInName="Watcher Wazzik" TurnInId="41159" X="-11806.18" Y="-3182.689" Z="-30.73849" />
@@ -1119,7 +1119,7 @@
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1143,7 +1143,7 @@
     <RunTo X="-11809.89" Y="-3225.522" Z="-30.65356" />
 	<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 41269 &amp;&amp; u.Distance &lt;= 8))" >
     </While>
-    <CustomBehavior File="InteractWith" MobId="203226" Range="5" NonCompeteDistance="0" WaitTime="3000" X="-11809.47" Y="-3229.115" Z="-30.31655" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203226" Range="5" NonCompeteDistance="0" WaitTime="3000" X="-11809.47" Y="-3229.115" Z="-30.31655" />
   </While>
   <RunTo X="-11811.34" Y="-3183.254" Z="-30.6249" />
 </If>
@@ -1153,7 +1153,7 @@
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1171,9 +1171,9 @@
 </If>
 <If Condition="!HasQuest(25696) &amp;&amp; !IsQuestCompleted(25696) &amp;&amp; HasQuest(25693)">
   <RunTo X="-11815.1" Y="-3185.555" Z="-30.5383" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobState="Alive" MobId="19254" KeepTargetSelected="True" X="-11817.3" Y="-3187.891" Z="-30.67968" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobState="Alive" MobId="19254" KeepTargetSelected="True" X="-11817.3" Y="-3187.891" Z="-30.67968" />
   <While Condition="HasQuestAvailable(19254)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19254" KeepTargetSelected="True" X="-11817.3" Y="-3187.891" Z="-30.67968" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19254" KeepTargetSelected="True" X="-11817.3" Y="-3187.891" Z="-30.67968" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -1184,7 +1184,7 @@
 <If Condition="HasQuest(25693)" >
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-    <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </If>
 </If>
 <TurnIn QuestName="Enhancing the Stone" QuestId="25693" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952949" />
@@ -1192,11 +1192,11 @@
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1221,7 +1221,7 @@
                (HasQuest(25698) &amp;&amp; !IsQuestCompleted(25698)) ||
                (HasQuest(25699) &amp;&amp; !IsQuestCompleted(25699))" >
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
 </If>
 <Objective QuestName="The Amulet of Allistarj" QuestId="25697" Type="CollectItem" ItemId="10755" CollectCount="1" />
@@ -1234,9 +1234,9 @@
     <RunTo QuestId="25699" X="-11451.77" Y="-3791.916" Z="4.035245" />
     <CustomBehavior File="MyCTM" QuestId="25699" X="-11446.63" Y="-3799.184" Z="-2.003908" />
     <CustomBehavior File="MyCTM" QuestId="25699" X="-11449.92" Y="-3793.96" Z="-4.870585" />
-	<CustomBehavior File="InteractWith" QuestId="25699" NonCompeteDistance="0" MobId="203230" X="-11450.43" Y="-3793.646" Z="-4.315826" />
+	<CustomBehavior File="Cava\InteractWith1324" QuestId="25699" NonCompeteDistance="0" MobId="203230" X="-11450.43" Y="-3793.646" Z="-4.315826" />
 	<CustomBehavior File="WaitTimer" QuestId="25699" WaitTime="3000"/>
-	<CustomBehavior File="InteractWith" QuestId="25699" NonCompeteDistance="0" MobId="41267" WaitForNpcs="False" CollectionDistance="100" X="-11447.32" Y="-3797.772" Z="-7.286124" />
+	<CustomBehavior File="Cava\InteractWith1324" QuestId="25699" NonCompeteDistance="0" MobId="41267" WaitForNpcs="False" CollectionDistance="100" X="-11447.32" Y="-3797.772" Z="-7.286124" />
 	<CustomBehavior File="WaitTimer" QuestId="25699" WaitTime="1000"/>
     <CustomBehavior File="MyCTM" QuestId="25699" X="-11446.63" Y="-3799.184" Z="-2.003908" />
 	<CustomBehavior File="AscendInWater" QuestId="25699" />
@@ -1252,7 +1252,7 @@
 <PickUp QuestName="Home... Gone... Naga..." QuestId="25702" GiverName="Salt-Flop" GiverId="41265" X="-11741.48" Y="-3873.863" Z="57.23445" />
 <If Condition="HasQuest(25698) &amp;&amp; !IsQuestCompleted(25698)" >
   <While Condition="!IsQuestCompleted(25698)" >
-    <CustomBehavior File="InteractWith" QuestId="25698" NonCompeteDistance="0" MobId="41265" GossipOptions="1" CollectionDistance="50" X="-11741.48" Y="-3873.863" Z="57.23445" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25698" NonCompeteDistance="0" MobId="41265" GossipOptions="1" CollectionDistance="50" X="-11741.48" Y="-3873.863" Z="57.23445" />
   </While>
 </If>
 <TurnIn QuestName="Home... Gone... Naga..." QuestId="25702" TurnInName="Neptool" TurnInId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
@@ -1285,7 +1285,7 @@
 <PickUp QuestName="Neptool's Revenge" QuestId="25706" GiverName="Neptool" GiverId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <If Condition="HasQuest(25705) &amp;&amp; !IsQuestCompleted(25705)" >
   <RunTo X="-12111.84" Y="-3440.848" Z="35.15879" />
-  <CustomBehavior File="InteractWith" QuestId="25705" MobId="203289" NumOfTimes="1000" PreInteractMountStrategy="Dismount" CollectionDistance="1000" >
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="25705" MobId="203289" NumOfTimes="1000" PreInteractMountStrategy="Dismount" CollectionDistance="1000" >
     <HuntingGrounds>
       <Hotspot X="-12111.84" Y="-3440.848" Z="35.15879" />
       <Hotspot X="-12072.93" Y="-3437.426" Z="25.3288" />
@@ -1312,12 +1312,12 @@
 <If Condition="HasQuest(25697) || HasQuest(25698) || HasQuest(25699)" >
   <!--Sunveil Excursion-->
   <RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
-  <CustomBehavior File="InteractWith" MobId="43114" MobState="Alive" X="-12362.7" Y="-3058.79" Z="90.32547" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="43114" MobState="Alive" X="-12362.7" Y="-3058.79" Z="90.32547" />
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <If Condition="(!Me.IsIndoors)" >
     <RunTo X="-11361.5" Y="-2717" Z="13.23" />
-    <CustomBehavior File="InteractWith" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203180" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11361.5" Y="-2717" Z="13.23" />
   </If>
 </If>
 <TurnIn QuestName="The Amulet of Allistarj" QuestId="25697" TurnInName="Bloodmage Lynnore" TurnInId="7506" X="-11469.39" Y="-2629.916" Z="4.086352" />
@@ -1326,7 +1326,7 @@
 <PickUp QuestName="Loramus Thalipedes Awaits" QuestId="25700" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.39" Y="-2629.916" Z="4.086352" />
 <If Condition="HasQuest(25700) &amp;&amp; !IsQuestCompleted(25700)" >
   <While Condition="!IsQuestCompleted(25700)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25700" MobId="7506" WaitTime="5000" GossipOptions="1" X="-11469.4" Y="-2629.918" Z="4.088411" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25700" MobId="7506" WaitTime="5000" GossipOptions="1" X="-11469.4" Y="-2629.918" Z="4.088411" />
   </While>
 </If>
 <If Condition="HasQuest(25700) &amp;&amp; Me.Level &gt;= 60">
@@ -1334,11 +1334,11 @@
   <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <If Condition="(Me.IsIndoors)" >
-    <CustomBehavior File="InteractWith" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="203181" Range="6" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="3000" X="-11454.32" Y="-2633.609" Z="4.291142" />
   </If>
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1382,7 +1382,7 @@
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1423,7 +1423,7 @@
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1445,17 +1445,17 @@
 <If Condition="HasQuest(25720) &amp;&amp; !IsQuestCompleted(25720)" >
   <While Condition="!IsQuestCompleted(25720)" >
     <RunTo QuestId="25720" X="-12252.9" Y="-2471.11" Z="38.91191" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
     <RunTo QuestId="25720" X="-12248.5" Y="-2452.24" Z="38.9816" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
     <RunTo QuestId="25720" X="-12225.9" Y="-2454.65" Z="38.91243" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
     <RunTo QuestId="25720" X="-12224.6" Y="-2473.52" Z="38.91037" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25720" MobId="41471" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" />
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="2000" />
 	<CustomBehavior File="UseItemTargetLocation" QuestId="25720" ItemId="57185" UseType="ToObject" WaitTime="4000" ObjectId="42334" MinRange="2" Range="6" X="-12238.83" Y="-2464.189" Z="38.91131" />
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="10000" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="42334" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="-12238.83" Y="-2464.189" Z="38.91042" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25720" MobId="42334" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="-12238.83" Y="-2464.189" Z="38.91042" />
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="1000" />
   </While>
 </If>
@@ -1495,7 +1495,7 @@
   <CustomBehavior File="TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
   <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />

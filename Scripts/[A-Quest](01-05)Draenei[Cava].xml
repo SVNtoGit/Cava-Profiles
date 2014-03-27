@@ -122,10 +122,10 @@
 <Objective QuestName="Volatile Mutations" QuestId="10302" Type="KillMob" MobId="16516" KillCount="8" />
 <If Condition="HasQuest(9283) &amp;&amp; !IsQuestCompleted(9283)" >
   <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 16483 &amp;&amp; u.Distance &gt; 100))" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4009.41" Y="-13644.25" Z="62.40472" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3916.144" Y="-13600.73" Z="59.3369" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3923.809" Y="-13722.62" Z="63.4711" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4048.647" Y="-13574.26" Z="54.32418" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4009.41" Y="-13644.25" Z="62.40472" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3916.144" Y="-13600.73" Z="59.3369" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3923.809" Y="-13722.62" Z="63.4711" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4048.647" Y="-13574.26" Z="54.32418" />
   </While>
   <If Condition="SpellManager.HasSpell(28880)">
     <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="28880" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
@@ -216,7 +216,7 @@
  <If Condition="HasQuest(9294) &amp;&amp; !IsQuestCompleted(9294)" >
   <RunTo X="-4357.861" Y="-13652.62" Z="50.1552" />
   <CustomBehavior File="MyCTM" X="-4378.933" Y="-13644.87" Z="38.37949" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9294" ObjectType="GameObject" MobId="181433" Range="20" CollectionDistance="50" X="-4388.744" Y="-13644.09" Z="38.52658" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="9294" ObjectType="GameObject" MobId="181433" Range="20" CollectionDistance="50" X="-4388.744" Y="-13644.09" Z="38.52658" />
 </If>
 <If Condition="HasQuest(9303) &amp;&amp; !IsQuestCompleted(9303)" >
   <RunTo X="-4393.39" Y="-13769.05" Z="52.25103" />
@@ -253,7 +253,7 @@
 <Objective QuestName="Blood Elf Spy" QuestId="9311" Type="KillMob" MobId="16522" KillCount="1" />
 <If Condition="!HasQuest(9798) &amp;&amp; !IsQuestCompleted(9798)" >
   <While Condition="!HasItem(24414)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="16522" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="-4579.389" Y="-13319.93" Z="87.99693" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="16522" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="-4579.389" Y="-13319.93" Z="87.99693" />
   </While>
   <PickUp QuestName="Blood Elf Plans" QuestId="9798" GiverType="Item" GiverId="24414" />
   <LootMobs Value="null" />

@@ -280,8 +280,8 @@
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
@@ -577,19 +577,19 @@
 <If Condition="HasQuest(28126) &amp;&amp; !IsQuestCompleted(28126)" >
   <While Condition="!IsObjectiveComplete(1, 28126)" >
     <RunTo QuestId="28126" X="4978.084" Y="-443.2689" Z="315.6177" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176158" ObjectType="GameObject" X="4978.084" Y="-443.2689" Z="315.6177" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176158" ObjectType="GameObject" X="4978.084" Y="-443.2689" Z="315.6177" />
   </While>
   <While Condition="!IsObjectiveComplete(4, 28126)" >
     <RunTo QuestId="28126" X="5019.166" Y="-456.2224" Z="321.3839" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176161" ObjectType="GameObject" X="5019.166" Y="-456.2224" Z="321.3839" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176161" ObjectType="GameObject" X="5019.166" Y="-456.2224" Z="321.3839" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 28126)" >
     <RunTo QuestId="28126" X="5093.897" Y="-470.0657" Z="297.6135" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176160" ObjectType="GameObject" X="5093.897" Y="-470.0657" Z="297.6135" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176160" ObjectType="GameObject" X="5093.897" Y="-470.0657" Z="297.6135" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 28126)" >
     <RunTo QuestId="28126" X="5116.806" Y="-520.2294" Z="296.0909" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176159" ObjectType="GameObject" X="5116.806" Y="-520.2294" Z="296.0909" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176159" ObjectType="GameObject" X="5116.806" Y="-520.2294" Z="296.0909" />
   </While>
 </If>
 <!--# # # Level 49 # # # -->
@@ -625,7 +625,7 @@
 </If>
 <If Condition="HasQuest(28155) &amp;&amp; !IsQuestCompleted(28155)" >
   <Objective QuestName="Lord Banehollow" QuestId="28155" Type="KillMob" MobId="9516" KillCount="1" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="206831" ObjectType="GameObject" GossipOptions="1" X="5303.111" Y="-514.9827" Z="273.6088" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="206831" ObjectType="GameObject" GossipOptions="1" X="5303.111" Y="-514.9827" Z="273.6088" />
   <CustomBehavior File="WaitTimer" WaitTime="8000" />
 </If>
 <TurnIn QuestName="The Inner Circle" QuestId="28128" TurnInName="Jessir Moonbow" TurnInId="11019" X="4730.97" Y="-875.901" Z="343.3851" />

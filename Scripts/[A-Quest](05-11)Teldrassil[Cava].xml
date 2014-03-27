@@ -294,7 +294,7 @@
 <PickUp QuestName="A Troubling Breeze" QuestId="475" GiverName="Athridas Bearmantle" GiverId="2078" X="9811.159" Y="963.6233" Z="1308.782" />
 <If Condition="HasQuest(2159)">
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(313) &amp;&amp; !IsQuestCompleted(313)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3608" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="9891.875" Y="988.3077" Z="1327.564" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3608" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="9891.875" Y="988.3077" Z="1327.564" />
   </If>
   <CustomBehavior File="Cava\SetHearthstone" MobId="6736" X="9802.209" Y="982.6077" Z="1313.896" />
   <TurnIn QuestName="Dolanaar Delivery" QuestId="2159" TurnInName="Innkeeper Keldamyr" TurnInId="6736" X="9802.209" Y="982.6077" Z="1313.896" />
@@ -327,7 +327,7 @@
 <TurnIn QuestName="The Emerald Dreamcatcher" QuestId="2438" TurnInName="Tallonkai Swiftroot" TurnInId="3567" X="9890.172" Y="971.8316" Z="1313.855" />
 <If Condition="((!HasQuest(2459)) &amp;&amp; (!IsQuestCompleted(2459)))" >
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(313) &amp;&amp; !IsQuestCompleted(313)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3608" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="9891.875" Y="988.3077" Z="1327.564" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3608" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="9891.875" Y="988.3077" Z="1327.564" />
   </If>
 </If>
 <If Condition="(Me.LevelFraction &gt;= 11.58 )">
@@ -364,7 +364,7 @@
 <TurnIn QuestName="Nature's Reprisal" QuestId="13946" TurnInName="Syral Bladeleaf" TurnInId="2083" X="9872.257" Y="959.2782" Z="1308.069" />
 <TurnIn QuestName="Twisted Hatred" QuestId="932" TurnInName="Tallonkai Swiftroot" TurnInId="3567" X="9890.172" Y="971.8316" Z="1313.855" />
 <If Condition="((!HasQuest(2541)) &amp;&amp; (!IsQuestCompleted(2541)))" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="34761" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="9822.085" Y="969.2761" Z="1308.775" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="34761" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="9822.085" Y="969.2761" Z="1308.775" />
 	<CustomBehavior File="WaitTimer" WaitTime="66000" />
 </If>
 <PickUp QuestName="The Sleeping Druid" QuestId="2541" GiverName="Oben Rageclaw" GiverId="7317" X="9753.26" Y="1590.161" Z="1300.385" />
@@ -414,7 +414,7 @@
     <CustomBehavior File="WaitTimer" WaitTime="15000" />
     <RunTo X="9784.994" Y="1563.769" Z="1299.716" />
     <CustomBehavior File="WaitTimer" WaitTime="3000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="7318" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="9786.846" Y="1568.388" Z="1301.351" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="7318" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="9786.846" Y="1568.388" Z="1301.351" />
     <CustomBehavior File="RunMacro" Macro="/target Rageclaw" NumOfTimes="1" WaitTime="1000" />
     <CustomBehavior File="Misc\RunLua" QuestId="2561" Lua="UseItemByName(8149)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="7000" />

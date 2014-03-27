@@ -366,11 +366,11 @@
 <If Condition="!HasQuest(25112) &amp;&amp; !IsQuestCompleted(25112)" >
   <!--Gadgetzan-->
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.09296" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.09296" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.09296" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.09296" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -385,7 +385,7 @@
   <CustomBehavior File="UserSettings"  SkinMobs="False"/>
   <RunTo X="-7350.464" Y="-3532.854" Z="8.032914" />
   <While Condition="!IsQuestCompleted(25112)" >
-    <CustomBehavior File="InteractWith" QuestId="25112" MobId="5419" MobState="Dead" NumOfTimes="1000"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25112" MobId="5419" MobState="Dead" NumOfTimes="1000"
       InteractByUsingItemId="52715" CollectionDistance="1000" >
       <HuntingGrounds >
       <Hotspot X="-7350.464" Y="-3532.854" Z="8.032914" />
@@ -454,10 +454,8 @@
   <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Momentum" QuestId="24947" GiverName="Megs Dreadshredder" GiverId="38534" X="-7211.632" Y="-3757.743" Z="9.190154" />
@@ -466,7 +464,7 @@
   <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <RunTo X="-7482.427" Y="-3699.511" Z="8.443866" />
   <While Condition="!IsQuestCompleted(25111)" >
-    <CustomBehavior File="InteractWith" QuestId="25111" MobId="5429" MobState="Dead" NumOfTimes="1000"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25111" MobId="5429" MobState="Dead" NumOfTimes="1000"
       InteractByUsingItemId="52715" CollectionDistance="1000" >
       <HuntingGrounds >
       <Hotspot X="-7482.427" Y="-3699.511" Z="8.443866" />
@@ -489,10 +487,8 @@
   <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Blisterpaw Butchery" QuestId="25115" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
@@ -500,7 +496,7 @@
   <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <RunTo X="-7111.974" Y="-3594.469" Z="9.275411" />
   <While Condition="!IsQuestCompleted(25115)" >
-    <CustomBehavior File="InteractWith" QuestId="25115" MobId="5426" MobState="Dead" NumOfTimes="1000"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25115" MobId="5426" MobState="Dead" NumOfTimes="1000"
       InteractByUsingItemId="52715" CollectionDistance="1000" >
       <HuntingGrounds >
       <Hotspot X="-7111.974" Y="-3594.469" Z="9.275411" />
@@ -531,10 +527,8 @@
   <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Sandsorrow Watch" QuestId="25091" GiverName="Driz Plunkbow" GiverId="39178" X="-7120.835" Y="-3831.493" Z="9.009231" />
@@ -561,10 +555,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Gargantapid" QuestId="25522" GiverName="Gus Rustflutter" GiverId="40580"  X="-6938.05" Y="-3127.238" Z="8.989256" />
@@ -577,10 +569,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Darkest Mojo" QuestId="25026" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
@@ -593,19 +583,17 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Secrets in the Oasis" QuestId="25032" GiverName="Mazoga" GiverId="38927" X="-6917.094" Y="-3113.195" Z="8.797052" />
 <If Condition="HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032)" >
   <RunTo X="-7452.334" Y="-2882.982" Z="6.584354" />
   <While Condition="!IsQuestCompleted(25032)" >
-    <CustomBehavior File="InteractWith" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
     <CustomBehavior File="WaitTimer" QuestId="25032" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
   </While>
 </If>
 <TurnIn QuestName="Secrets in the Oasis" QuestId="25032" TurnInName="Trenton Lighthammer" TurnInId="7804" X="-6926.155" Y="-3124.703" Z="8.835281" />
@@ -614,10 +602,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <!--start Ballon part chain-->
@@ -684,10 +670,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Filling Our Pockets" QuestId="25541" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
@@ -728,10 +712,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Captain Dreadbeard" QuestId="24950" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
@@ -745,14 +727,14 @@
   <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
   <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Bootlegger Outpost" QuestId="25103" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
 <If Condition="HasQuest(25103)">
   <!--Bootlegger Outpost-->
   <RunTo X="-8684.399" Y="-4090.714" Z="40.41941" />
-  <CustomBehavior File="InteractWith" MobId="41214" MobState="Alive" X="-8684.64" Y="-4093.03" Z="40.45161" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="41214" MobState="Alive" X="-8684.64" Y="-4093.03" Z="40.45161" />
 </If>
 <TurnIn QuestName="Bootlegger Outpost" QuestId="25103" TurnInName="Zeke Bootscuff" TurnInId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
 <PickUp QuestName="Cutting Losses" QuestId="24932" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
@@ -849,10 +831,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Chicken of the Desert" QuestId="24933" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
@@ -984,10 +964,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="A Great Idea" QuestId="24951" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
@@ -1049,17 +1027,15 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Just Trying to Kill Some Bugs" QuestId="24953" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
 <If Condition="HasQuest(24953) &amp;&amp; !IsQuestCompleted(24953)">
   <While Condition="!IsQuestCompleted(24953)">
     <While Condition="!Me.IsOnTransport" >
-      <CustomBehavior File="InteractWith" MobId="11811" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8668.247" Y="-4046.139" Z="43.67683" />
+      <CustomBehavior File="Cava\InteractWith1324" MobId="11811" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8668.247" Y="-4046.139" Z="43.67683" />
     </While>
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="24953" VehicleId="38748" SpellId="73211" X="-9238.78" Y="-3992.896" Z="-38.73989" />
   </While>
@@ -1071,10 +1047,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Returning a Favor" QuestId="24905" GiverName="Zeke Bootscuff" GiverId="38706" X="-8696.94" Y="-4076.49" Z="40.4147" />
@@ -1091,7 +1065,7 @@
       </If>
     </While>
     <If Condition="Me.HasAura(72984) &amp;&amp; !IsQuestCompleted(24955)" >
-      <CustomBehavior File="InteractWith" MobId1="5471" MobId2="5472" MobId3="5473" MobId4="5474" MobId5="5475" MobState="Alive"
+      <CustomBehavior File="Cava\InteractWith1324" MobId1="5471" MobId2="5472" MobId3="5473" MobId4="5474" MobId5="5475" MobState="Alive"
        InteractByGossipOptions="1" NumOfTimes="1" IgnoreCombat="True" WaitTime="3000" CollectionDistance="1000">
         <HuntingGrounds>
         <Hotspot X="-8347.243" Y="-3137.925" Z="8.841303" />
@@ -1122,10 +1096,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Get The Centipaarty Started" QuestId="24957" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
@@ -1138,10 +1110,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Maul 'Em With Kindness" QuestId="24963" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
@@ -1176,10 +1146,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Sandscraper" QuestId="25001" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
@@ -1194,17 +1162,15 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Andoren Will Know" QuestId="25018" GiverName="Megs Dreadshredder" GiverId="38849" X="-8303.047" Y="-3278.45" Z="24.47854" />
 <If Condition="HasQuest(25018)">
   <!--Dawnrise Expedition-->
   <RunTo X="-9487.141" Y="-2465.114" Z="17.00014" />
-  <CustomBehavior File="InteractWith" MobId="41215" MobState="Alive" X="-9490.44" Y="-2464.22" Z="17.00078" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="41215" MobState="Alive" X="-9490.44" Y="-2464.22" Z="17.00078" />
 </If>
 <TurnIn QuestName="Andoren Will Know" QuestId="25018" TurnInName="Examiner Andoren Dawnrise" TurnInId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
 <!--# # # Level 47 # # # -->
@@ -1220,10 +1186,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="Ancient Obstacles" QuestId="25017" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
@@ -1236,10 +1200,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="976" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
   <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-  <RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-  <CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
   <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-  <CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </If>
 <PickUp QuestName="The Crumbling Past" QuestId="25068" GiverName="Examiner Andoren Dawnrise" GiverId="38922" X="-9474.21" Y="-2461.978" Z="17.00117" />
@@ -1251,9 +1213,9 @@
 <PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
   <While Condition="!IsQuestCompleted(25070)">
-    <CustomBehavior File="InteractWith" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
   </While>
 </If>
 <TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />
@@ -1267,10 +1229,8 @@
 <CustomBehavior File="Message" Text="Moving to FELWOOD, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
 <CustomBehavior File="TaxiRide" MobId="7824" DestName="Silverwind Refuge" WaitTime="1000" />
-<RunTo X="2159.62" Y="-1144.05" Z="97.87" />
-<CustomBehavior File="TaxiRide" MobId="34943" DestName="Emerald Sanctuary" WaitTime="1000" />
 <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
-<CustomBehavior File="InteractWith" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
+<CustomBehavior File="Cava\InteractWith1324" MobId="22931" MobState="Alive" X="3968.68" Y="-1325.96" Z="244.6767" />
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](47-48)Felwood[Cava]" />
 </QuestOrder>
 </HBProfile>

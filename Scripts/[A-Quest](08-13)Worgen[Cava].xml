@@ -185,7 +185,7 @@
 <PickUp QuestName="Exodus" QuestId="24438" GiverName="King Genn Greymane" GiverId="36743" X="-1517.514" Y="2607.744" Z="203.525" />
 <If Condition="HasQuest(24438)" >
   <RunTo X="-1667.767" Y="2524.896" Z="97.96247" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44928" X="-1670.69" Y="2530.55" Z="97.83398" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44928" X="-1670.69" Y="2530.55" Z="97.83398" />
   <CustomBehavior File="WaitTimer" WaitTime="78000"/>
 </If>
 <TurnIn QuestName="Exodus" QuestId="24438" TurnInName="Prince Liam Greymane" TurnInId="37065" X="-2222.056" Y="1809.637" Z="11.81762" />
@@ -391,7 +391,7 @@
 	<UseItem ItemId="50134" QuestName="Take Back What's Ours" QuestId="24646" X="-2139.578" Y="1577.01" Z="-49.81606" />
 	<CustomBehavior File="WaitTimer" WaitTime="6000"/>
 	<CustomBehavior File="NoCombatMoveTo" X="-2122.085" Y="1629.767" Z="-42.22638" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="201939" CollectionDistance="200" ObjectType="GameObject" X="-2121.341" Y="1628.219" Z="-42.23239" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="201939" CollectionDistance="200" ObjectType="GameObject" X="-2121.341" Y="1628.219" Z="-42.23239" />
 	<CustomBehavior File="NoCombatMoveTo" X="-2070.059" Y="1280.797" Z="-85.63913" />
   </While>
 </If>
@@ -462,7 +462,7 @@
 </If>
 <PickUp QuestName="Flank the Forsaken" QuestId="24677" GiverName="King Genn Greymane" GiverId="37876" X="-2045.116" Y="977.2066" Z="70.0658" />
 <If Condition="HasQuest(24677)">
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="38764" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="20" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="38764" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="20" />
   <CustomBehavior File="WaitTimer" WaitTime="101000"/>
 </If>
 <TurnIn QuestName="Flank the Forsaken" QuestId="24677" TurnInName="Lorna Crowley" TurnInId="37783" X="-1369.111" Y="1209.896" Z="35.55989" />
@@ -494,7 +494,7 @@
 	  <GrindTo Condition="GetItemCount(49881) &gt;= 1 || IsQuestCompleted(24575)" />
     </If>
     <While Condition="HasQuest(24575) &amp;&amp; !IsQuestCompleted(24575) &amp;&amp; HasItem(49881)" >
-	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24575" MobId="201775" CollectionDistance="1000" ObjectType="GameObject" />
+	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24575" MobId="201775" CollectionDistance="1000" ObjectType="GameObject" />
     </While>
   </While>
   <LootMobs Value="null" />
@@ -520,7 +520,7 @@
 	</If>
     <CustomBehavior File="WaitTimer" QuestId="24904" WaitTime="3000" />
 
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
     <CustomBehavior File="Escort" QuestId="24904" MobId1="38218" MobId2="38470" EscortUntil="DestinationReached" EscortDestX="-1727.858" EscortDestY="1392.903" EscortDestZ="21.41557" X="-1392.526" Y="1222.099" Z="35.55768"/>
     <While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 38331 &amp;&amp; u.Distance &lt; 500))" >
     </While>
@@ -542,7 +542,7 @@
 	    <CustomBehavior File="RunMacro" Macro="/click OverrideActionBarButton1" NumOfTimes="1" WaitTime="1000"/>
       </While>
     </While>
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24904" MobId1="38218" MobId2="38470" CollectionDistance="2000" X="-1727.858" Y="1392.903" Z="21.41557" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24904" MobId1="38218" MobId2="38470" CollectionDistance="2000" X="-1727.858" Y="1392.903" Z="21.41557" />
     <RunTo Hotspot X="-1695.285" Y="1633.358" Z="20.48827" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000" />
   </While>
@@ -554,7 +554,7 @@
   </If>
   <CustomBehavior File="WaitTimer" QuestId="24904" WaitTime="3000" />
   <While Condition="!IsQuestCompleted(24904)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24904" MobId="38553" GossipOptions="1" WaitForNpcs="False" WaitTime="2000" CollectionDistance="200" />
 	<RunTo QuestId="24904" X="-1409.394" Y="1261.183" Z="36.42795" />
     <CustomBehavior File="Escort" QuestId="24904" MobId1="38218" MobId2="38470" X="-1409.394" Y="1261.183" Z="36.42795" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -564,7 +564,7 @@
 <PickUp QuestName="The Hunt For Sylvanas" QuestId="24902" GiverName="Lorna Crowley" GiverId="38611" X="-1663.908" Y="1589.962" Z="23.12685" />
 <If Condition="HasQuest(24902) &amp;&amp; !IsQuestCompleted(24902)" >
   <While Condition="!IsQuestCompleted(24902)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24902" MobId="38611" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-1663.908" Y="1589.962" Z="23.12681" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24902" MobId="38611" GossipOptions="1" WaitTime="1000" CollectionDistance="50" X="-1663.908" Y="1589.962" Z="23.12681" />
     <CustomBehavior File="MyCTM" X="-1663.917" Y="1589.324" Z="23.12429" />
     <CustomBehavior File="MyCTM" X="-1650.597" Y="1576.285" Z="21.76778" />
     <CustomBehavior File="MyCTM" X="-1629.107" Y="1601.446" Z="21.76144" />

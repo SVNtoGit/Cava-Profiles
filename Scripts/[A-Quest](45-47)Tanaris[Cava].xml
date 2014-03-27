@@ -225,8 +225,8 @@
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -583,9 +583,9 @@
 <If Condition="HasQuest(25032) &amp;&amp; !IsQuestCompleted(25032)" >
   <RunTo X="-7452.334" Y="-2882.982" Z="6.584354" />
   <While Condition="!IsQuestCompleted(25032)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25032" MobId="202441" ObjectType="GameObject" X="-7452.334" Y="-2882.982" Z="6.584354" />
     <CustomBehavior File="WaitTimer" QuestId="25032" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25032" MobId="38968" MobState="Alive" WaitForNpcs="False" X="-7435.897" Y="-2880.448" Z="8.710381" />
   </While>
 </If>
 <TurnIn QuestName="Secrets in the Oasis" QuestId="25032" TurnInName="Trenton Lighthammer" TurnInId="7804" X="-6926.155" Y="-3124.703" Z="8.835281" />

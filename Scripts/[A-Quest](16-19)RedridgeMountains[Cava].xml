@@ -305,8 +305,8 @@
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="956" WaitTime="1000" X="-9247.676" Y="-2240.278" Z="63.93378" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="956" WaitTime="1000" X="-9247.676" Y="-2240.278" Z="63.93378" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="956" WaitTime="1000" X="-9247.676" Y="-2240.278" Z="63.93378" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="956" WaitTime="1000" X="-9247.676" Y="-2240.278" Z="63.93378" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
@@ -443,16 +443,16 @@
   <While Condition="!IsQuestCompleted(26520)" >
     <If Condition="!Me.HasAura(82558)" >
       <RunTo QuestId="26520" X="-9040.893" Y="-2078.69" Z="138.5947" />
-      <CustomBehavior File="InteractWith" MobId="43094" QuestId="26520" NonCompeteDistance="0" MobState="Alive" Range="20" InteractByUsingItemId="58895" X="-9040.893" Y="-2078.69" Z="138.5947" />
+      <CustomBehavior File="Cava\InteractWith1324" MobId="43094" QuestId="26520" NonCompeteDistance="0" MobState="Alive" Range="20" InteractByUsingItemId="58895" X="-9040.893" Y="-2078.69" Z="138.5947" />
     </If>
     <CustomBehavior File="WaitTimer" QuestId="26520" WaitTime="3000" />
     <If Condition="Me.HasAura(82558)" >
 	  <RunTo X="-9274.12" Y="-2288.6" Z="68.15446" />
-      <CustomBehavior File="InteractWith" QuestId="26520" NonCompeteDistance="0" MobId="43196" InteractByUsingItemId="58895" WaitTime="8000" X="-9274.12" Y="-2288.6" Z="68.15446" />
+      <CustomBehavior File="Cava\InteractWith1324" QuestId="26520" NonCompeteDistance="0" MobId="43196" InteractByUsingItemId="58895" WaitTime="8000" X="-9274.12" Y="-2288.6" Z="68.15446" />
 	  <CustomBehavior File="Cava\UseItemOn" QuestId="26520" MobId="43196" ItemId="58895" NumOfTimes="1" WaitTime="1000" Range="5" CollectionDistance="500" X="-9274.12" Y="-2288.6" Z="68.15446" />
 	  <RunTo QuestId="26520" X="-9322.615" Y="-2342.182" Z="61.24439" />
 	  <CustomBehavior File="WaitTimer" QuestId="26520" WaitTime="10000"/>
-	  <CustomBehavior File="InteractWith" QuestId="26520" NonCompeteDistance="0" MobId="43196" ItemId="58895" NumOfTimes="1" WaitTime="300" Range="5" CollectionDistance="500" X="-9322.615" Y="-2342.182" Z="61.24439" />
+	  <CustomBehavior File="Cava\InteractWith1324" QuestId="26520" NonCompeteDistance="0" MobId="43196" ItemId="58895" NumOfTimes="1" WaitTime="300" Range="5" CollectionDistance="500" X="-9322.615" Y="-2342.182" Z="61.24439" />
 	  <CustomBehavior File="WaitTimer" QuestId="26520" WaitTime="3000" />
     </If>
   </While>
@@ -496,7 +496,7 @@
     </While>
 	<CustomBehavior File="MyCTM" X="-9184.519" Y="-2766.723" Z="88.67263" />
 	<CustomBehavior File="MyCTM" X="-9166.73" Y="-2746.136" Z="89.08935" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26587" MobId="204389" Range="6" NumOfTimes="1" ProactiveCombatStrategy="NoClear" CollectionDistance="1000" X="-9165.448" Y="-2743.158" Z="88.74001" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26587" MobId="204389" Range="6" NumOfTimes="1" ProactiveCombatStrategy="NoClear" CollectionDistance="1000" X="-9165.448" Y="-2743.158" Z="88.74001" />
     <RunTo X="-9210.281" Y="-2772.708" Z="90.3838" />
     <RunTo X="-9210.281" Y="-2772.708" Z="90.3838" />
     <RunTo X="-9202.807" Y="-2775.259" Z="90.38366" />
@@ -521,7 +521,7 @@
 	  <Hotspot X="-9165.448" Y="-2743.158" Z="88.74001" />
 	  </FollowPath>
 	</CustomBehavior>
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26587" MobId="204389" Range="6" NumOfTimes="1" ProactiveCombatStrategy="NoClear" CollectionDistance="1000" X="-9165.448" Y="-2743.158" Z="88.74001" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26587" MobId="204389" Range="6" NumOfTimes="1" ProactiveCombatStrategy="NoClear" CollectionDistance="1000" X="-9165.448" Y="-2743.158" Z="88.74001" />
 	<CustomBehavior File="MyCTM" X="-9166.96" Y="-2741.83" Z="88.68454" />
 	<CustomBehavior File="MyCTM" X="-9191.613" Y="-2779.496" Z="90.58443" />
 	<CustomBehavior File="MyCTM" X="-9198.114" Y="-2771.768" Z="89.92594" />
@@ -585,7 +585,7 @@
 <Objective QuestName="And Last But Not Least... Danforth" QuestId="26562" Type="CollectItem" ItemId="59033" CollectCount="1" />
 <If Condition="HasQuest(26562)" >
   <RunTo X="-8820.554" Y="-2192.231" Z="138.4767" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0"  ObjectType="GameObject" MobId="204403" NumOfTimes="1" CollectionDistance="50" X="-8820.554" Y="-2192.231" Z="138.4767" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  ObjectType="GameObject" MobId="204403" NumOfTimes="1" CollectionDistance="50" X="-8820.554" Y="-2192.231" Z="138.4767" />
 </If>
 <TurnIn QuestName="And Last But Not Least... Danforth" QuestId="26562" TurnInName="Danforth" TurnInId="43275" X="-8805.089" Y="-2206.237" Z="130.9454" />
 <PickUp QuestName="Return of the Bravo Company" QuestId="26563" GiverName="Danforth" GiverId="43302" X="-8806.528" Y="-2204.096" Z="132.3716" />

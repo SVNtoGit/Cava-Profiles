@@ -555,9 +555,9 @@
 <PickUp QuestName="Perfect Pitch" QuestId="30771" GiverName="Taran Zhu" GiverId="60688" X="2387.497" Y="2992.503" Z="417.3715" />
 <If Condition="HasQuest(30770) &amp;&amp; !IsQuestCompleted(30770)" >
   <While Condition="!IsQuestCompleted(30770)" >
-    <CustomBehavior File="InteractWith" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
-    <CustomBehavior File="InteractWith" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2479.985" Y="3209.524" Z="402.7212" />
-    <CustomBehavior File="InteractWith" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2567.367" Y="3138.321" Z="406.705" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2479.985" Y="3209.524" Z="402.7212" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="30770" NonCompeteDistance="0" MobId1="60669" MobId2="60739" NotMoving="True" IgnoreMobsInBlackspots="True" CollectionDistance="1000" X="2567.367" Y="3138.321" Z="406.705" />
   </While>
 </If>
 <Objective QuestName="Perfect Pitch" QuestId="30771" Type="CollectItem" ItemId="81174" CollectCount="8" />
@@ -576,7 +576,7 @@
 <Objective QuestName="The Exile" QuestId="30775" Type="KillMob" MobId="60725" KillCount="1" />
 <If Condition="HasQuest(30774) &amp;&amp; !IsQuestCompleted(30774)" >
   <While Condition="!IsObjectiveComplete(2, 30774)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60899" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="2675.845" Y="3254.471" Z="426.7203" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="60899" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="2675.845" Y="3254.471" Z="426.7203" />
   </While>
 </If>
 <Objective QuestName="The Exile" QuestId="30775" Type="KillMob" MobId="60726" KillCount="1" />
@@ -604,7 +604,7 @@
 	    <GrindTo Condition="(GetItemCount(81178) &gt;= 1)" />
     </If>
     <While Condition="HasQuest(30774) &amp;&amp; !IsQuestCompleted(30774) &amp;&amp; HasItem(81178)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30774" MobId="60730" CollectionDistance="2000" X="2848.106" Y="3250.785" Z="432.8559" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30774" MobId="60730" CollectionDistance="2000" X="2848.106" Y="3250.785" Z="432.8559" />
 	    <CustomBehavior File="UseGameObject" QuestId="30774" ObjectId="211511" WaitTime="6000" NumOfTimes="1" X="2848.106" Y="3250.785" Z="432.8559" />
       <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="4000" />
     </While>
@@ -621,8 +621,8 @@
 <PickUp QuestName="Jung Duk" QuestId="30776" GiverName="Suna Silentstrike" GiverId="60684" X="2558.747" Y="3216.507" Z="430.1053" />
 <If Condition="HasQuest(30776) &amp;&amp; !IsQuestCompleted(30776)" >
   <While Condition="!IsQuestCompleted(30776)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30776" MobId="211524" ObjectType="GameObject" X="2603.539" Y="3249.278" Z="423.4874" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30776" MobId="60801" MobState="Alive" WaitForNpcs="False" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30776" MobId="211524" ObjectType="GameObject" X="2603.539" Y="3249.278" Z="423.4874" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30776" MobId="60801" MobState="Alive" WaitForNpcs="False" />
   </While>
 </If>
 <TurnIn QuestName="Jung Duk" QuestId="30776" TurnInName="Ban Bearheart" TurnInId="60687" X="2392.611" Y="2999.976" Z="417.3717" />
@@ -633,16 +633,16 @@
 <PickUp QuestName="The Torches" QuestId="30787" GiverName="Orbiss" GiverId="60857" X="1967.333" Y="3176.756" Z="268.7043" />
 <If Condition="HasQuest(30787) &amp;&amp; !IsQuestCompleted(30787)" >
   <While Condition="!IsQuestCompleted(30787)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1907.669" Y="3179.315" Z="264.3771" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1907.669" Y="3179.315" Z="264.3771" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1943.386" Y="3270.202" Z="264.5612" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1943.386" Y="3270.202" Z="264.5612" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1915.409" Y="3303.861" Z="265.5487" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1915.409" Y="3303.861" Z="265.5487" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1861.23" Y="3314.117" Z="264.3877" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1861.23" Y="3314.117" Z="264.3877" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="2462.992" Y="3130.378" Z="402.5647" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1907.669" Y="3179.315" Z="264.3771" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1907.669" Y="3179.315" Z="264.3771" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1943.386" Y="3270.202" Z="264.5612" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1943.386" Y="3270.202" Z="264.5612" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1915.409" Y="3303.861" Z="265.5487" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1915.409" Y="3303.861" Z="265.5487" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60698" WaitForNpcs="False" CollectionDistance="1000" X="1861.23" Y="3314.117" Z="264.3877" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30787" MobId="60697" WaitForNpcs="False" CollectionDistance="1000" X="1861.23" Y="3314.117" Z="264.3877" />
   </While>
 </If>
 <TurnIn QuestName="The Torches" QuestId="30787" TurnInName="Orbiss" TurnInId="60857" X="1967.333" Y="3176.756" Z="268.7043" />
@@ -650,13 +650,13 @@
 <PickUp QuestName="Arconiss" QuestId="30789" GiverName="Orbiss" GiverId="60857" X="1967.333" Y="3176.756" Z="268.7043" />
 <If Condition="HasQuest(30788) &amp;&amp; !IsQuestCompleted(30788)" >
   <While Condition="!IsQuestCompleted(30788)" >
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30788" MobId="211513" ObjectType="GameObject" X="1891.411" Y="3029.912" Z="292.6059" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30788" MobId="211513" ObjectType="GameObject" X="1891.411" Y="3029.912" Z="292.6059" />
    <CustomBehavior File="Escort" QuestId="30788" MobId="60734" X="1889.47" Y="3015.678" Z="291.2321" />
   </While>
 </If>
 <If Condition="HasQuest(30789) &amp;&amp; !IsQuestCompleted(30789)" >
   <While Condition="!IsQuestCompleted(30789)" >
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30789" MobId="211515" ObjectType="GameObject" X="1790.484" Y="2972.981" Z="292.6308" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30789" MobId="211515" ObjectType="GameObject" X="1790.484" Y="2972.981" Z="292.6308" />
    <CustomBehavior File="Escort" QuestId="30789" MobId="60764" X="1765.095" Y="2982.104" Z="287.6725" />
   </While>
 </If>
@@ -665,7 +665,7 @@
 <PickUp QuestName="The Death of Me" QuestId="30815" GiverName="Orbiss" GiverId="60857" />
 <If Condition="HasQuest(30815) &amp;&amp; !IsQuestCompleted(30815)" >
   <While Condition="!IsQuestCompleted(30815)" >
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30815" MobId="60857" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1967.333" Y="3176.756" Z="268.7043" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30815" MobId="60857" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1967.333" Y="3176.756" Z="268.7043" />
   </While>
 </If>
 <TurnIn QuestName="The Death of Me" QuestId="30815" TurnInName="Orbiss" TurnInId="60622" X="1967.333" Y="3176.756" Z="268.7043" />
@@ -676,13 +676,13 @@
 <Objective QuestName="Arconiss Thirsts" QuestId="30791" Type="CollectItem" ItemId="81260" CollectCount="4" />
 <If Condition="HasQuest(30792) &amp;&amp; !IsQuestCompleted(30792)" >
   <While Condition="!IsQuestCompleted(30792)" >
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1868.255" Y="3029.457" Z="291.2489" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1814.495" Y="3017.829" Z="291.2666" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1865.394" Y="2947.758" Z="292.252" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1891.155" Y="2877.663" Z="292.0887" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1856.369" Y="2821.033" Z="291.9706" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1773.92" Y="2815.618" Z="292.1601" />
-   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1752.5" Y="2899.359" Z="291.2326" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1868.255" Y="3029.457" Z="291.2489" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1814.495" Y="3017.829" Z="291.2666" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1865.394" Y="2947.758" Z="292.252" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1891.155" Y="2877.663" Z="292.0887" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1856.369" Y="2821.033" Z="291.9706" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1773.92" Y="2815.618" Z="292.1601" />
+   <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30792" MobId="60862" NumOfTimes="1" GossipOptions="1" WaitTime="1000" WaitForNpcs="False" CollectionDistance="1000" X="1752.5" Y="2899.359" Z="291.2326" />
   </While>
 </If>
 <TurnIn QuestName="Golgoss Hungers" QuestId="30790" TurnInName="Orbiss" TurnInId="60622" X="1967.333" Y="3176.756" Z="268.7043" />
@@ -691,7 +691,7 @@
 <PickUp QuestName="Mists' Opportunity" QuestId="30793" GiverName="Orbiss" GiverId="60622" X="1967.333" Y="3176.756" Z="268.7043" />
 <If Condition="HasQuest(30793) &amp;&amp; !IsQuestCompleted(30793)" >
   <RunTo X="1772.849" Y="2690.231" Z="303.3897" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30793" MobId="60802" MobState="Alive" X="1766.828" Y="2674.821" Z="305.0011" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30793" MobId="60802" MobState="Alive" X="1766.828" Y="2674.821" Z="305.0011" />
 <!--
 <Objective QuestName="Mists' Opportunity" QuestId="30793" Type="KillMob" MobId="60802" KillCount="1" />
 -->
@@ -780,17 +780,17 @@
 <PickUp QuestName="What Lies Beneath" QuestId="30827" GiverName="Yalia Sagewhisper" GiverId="60864" X="1762.351" Y="2335.464" Z="377.4284" />
 <If Condition="HasQuest(30827) &amp;&amp; !IsQuestCompleted(30827)" >
   <While Condition="!IsObjectiveComplete(1, 30827)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60864" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1762.351" Y="2335.464" Z="377.4284" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="60864" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1762.351" Y="2335.464" Z="377.4284" />
   </While>
   <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="6000" />
   <While Condition="!IsObjectiveComplete(3, 30827)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60990" X="1742.126" Y="2343.799" Z="377.4331" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="60990" X="1742.126" Y="2343.799" Z="377.4331" />
   </While>
   <While Condition="!IsObjectiveComplete(4, 30827)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60991" X="1739.106" Y="2330.234" Z="377.3171" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="60991" X="1739.106" Y="2330.234" Z="377.3171" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 30827)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="60933" X="1752.566" Y="2335.75" Z="377.4266" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="60933" X="1752.566" Y="2335.75" Z="377.4266" />
   </While>
   <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="6000" />
 </If>
@@ -798,13 +798,13 @@
 <PickUp QuestName="Hatred Becomes Us" QuestId="30783" GiverName="Yalia Sagewhisper" GiverId="60864" X="1762.351" Y="2335.464" Z="377.4286" />
 <PickUp QuestName="Spiteful Spirits" QuestId="30782" GiverName="Ban Bearheart" GiverId="61261" X="1762.351" Y="2335.464" Z="377.4286" />
 <If Condition="HasQuest(30782) &amp;&amp; !IsQuestCompleted(30782)" >
-<!--    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1803.601" Y="2307.867" Z="383.4969" />
+<!--    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1803.601" Y="2307.867" Z="383.4969" />
     <RunTo X="1753.721" Y="2337.746" Z="377.4281" />
     <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="50000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1729.475" Y="2288.403" Z="378.0369" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1729.475" Y="2288.403" Z="378.0369" />
     <RunTo X="1753.721" Y="2337.746" Z="377.4281" />
     <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="50000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1729.475" Y="2288.403" Z="378.0369" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" X="1729.475" Y="2288.403" Z="378.0369" />
     <RunTo X="1753.721" Y="2337.746" Z="377.4281" />
     <CustomBehavior File="WaitTimer" QuestId="30774" WaitTime="50000" />
 
@@ -819,7 +819,7 @@
     <RunTo QuestId="30783" X="1753.721" Y="2337.746" Z="377.4281" />
     <CustomBehavior File="WaitTimer" QuestId="30783" WaitTime="50000" />
     <CustomBehavior File="UseItemTargetLocation" QuestId="30783" Range="10" MobId="61050" ItemId="81417" WaitTime="5000" UseType="ToObject" ObjectType="NPC" X="1753.721" Y="2337.746" Z="377.4281" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30783" WaitForNpcs="False" MobId="61062" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30783" WaitForNpcs="False" MobId="61062" />
     <CustomBehavior File="WaitTimer" QuestId="30783" WaitTime="5000" />
   </While>
 </If>
@@ -827,7 +827,7 @@
   <While Condition="!IsQuestCompleted(30782)" >
     <RunTo QuestId="30782" X="1753.721" Y="2337.746" Z="377.4281" />
     <CustomBehavior File="WaitTimer" QuestId="30782" WaitTime="50000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30782" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="5000" X="1753.721" Y="2337.746" Z="377.4281" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30782" MobId="63839" MobState="Alive" NumOfTimes="1" CollectionDistance="5000" X="1753.721" Y="2337.746" Z="377.4281" />
   </While>
 </If>
 <TurnIn QuestName="Spiteful Spirits" QuestId="30782" TurnInName="Ban Bearheart" TurnInId="61261" X="1762.351" Y="2335.464" Z="377.4286" />
@@ -836,7 +836,7 @@
 <Objective QuestName="The Point of No Return" QuestId="30784" Type="KillMob" MobId="61055" KillCount="1" />
 <TurnIn QuestName="The Point of No Return" QuestId="30784" TurnInName="Ban Bearheart" TurnInId="61261" X="1762.351" Y="2335.464" Z="377.4286" />
 <If Condition="!HasQuest(30785) &amp;&amp; !IsQuestCompleted(30785)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="61261" KeepTargetSelected="True" X="1762.351" Y="2335.464" Z="377.4286" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="61261" KeepTargetSelected="True" X="1762.351" Y="2335.464" Z="377.4286" />
   <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
   <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -866,28 +866,28 @@
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="UserSettings"  UseMount="False" />
   <While Condition="!IsQuestCompleted(30889)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1331.406" Y="2428.914" Z="328.0236" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1286.089" Y="2430.307" Z="317.8863" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1252.423" Y="2443.829" Z="316.7463" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1225.576" Y="2456.877" Z="312.2671" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1199.215" Y="2485.418" Z="308.5592" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1170.021" Y="2508.401" Z="316.2328" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1331.406" Y="2428.914" Z="328.0236" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1286.089" Y="2430.307" Z="317.8863" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1252.423" Y="2443.829" Z="316.7463" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1225.576" Y="2456.877" Z="312.2671" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1199.215" Y="2485.418" Z="308.5592" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30889" MobId="61426" WaitForNpcs="False" CollectionDistance="1000" X="1170.021" Y="2508.401" Z="316.2328" />
   </While>
   <CustomBehavior File="UserSettings" UseMount="True" />
   <CustomBehavior File="ForcedMount" />
 </If>
 <If Condition="HasQuest(30890) &amp;&amp; !IsQuestCompleted(30890)" >
   <While Condition="!IsObjectiveComplete(4, 30890)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="61397" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1105.988" Y="2541.264" Z="320.4983" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="61397" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1105.988" Y="2541.264" Z="320.4983" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 30890)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="61396" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1129.226" Y="2339.38" Z="316.7636" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="61396" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1129.226" Y="2339.38" Z="316.7636" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 30890)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="61395" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1258.207" Y="2411.045" Z="334.2922" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="61395" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1258.207" Y="2411.045" Z="334.2922" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 30890)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="61378" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1258.207" Y="2411.045" Z="334.2922" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="61378" NumOfTimes="1" GossipOptions="1" WaitTime="1000" X="1258.207" Y="2411.045" Z="334.2922" />
   </While>
 </If>
 <If Condition="HasQuest(30888) &amp;&amp; !IsQuestCompleted(30888)" >
@@ -903,12 +903,12 @@
 <PickUp QuestName="Rummaging Through the Remains" QuestId="30894" GiverName="Septi the Herbalist" GiverId="61470" X="1374.78" Y="2721.9" Z="316.7414" />
 <If Condition="HasQuest(30894) &amp;&amp; !IsQuestCompleted(30894)" >
   <While Condition="!IsQuestCompleted(30894)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1188.514" Y="2724.462" Z="271.0987" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1146.431" Y="2705.135" Z="290.1342" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1127.281" Y="2754.613" Z="294.7853" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1110.012" Y="2799.521" Z="287.3552" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1152.201" Y="2842.12" Z="274.5195" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1210.438" Y="2856.344" Z="266.0892" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1188.514" Y="2724.462" Z="271.0987" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1146.431" Y="2705.135" Z="290.1342" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1127.281" Y="2754.613" Z="294.7853" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1110.012" Y="2799.521" Z="287.3552" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1152.201" Y="2842.12" Z="274.5195" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30894" MobId="211863" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1210.438" Y="2856.344" Z="266.0892" />
   </While>
 </If>
 <If Condition="HasQuest(30892) &amp;&amp; !IsQuestCompleted(30892)" >
@@ -1016,13 +1016,13 @@
   <RunTo X="1345.723" Y="3586.536" Z="226.9614" />
   <RunTo X="1066.605" Y="3739.74" Z="248.6069" />
   <While Condition="!IsQuestCompleted(30975)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30975" MobId="62529" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30975" MobId="214848" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30975" MobId="62529" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30975" MobId="214848" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
     <If Condition="!IsObjectiveComplete(2, 30975)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30975" MobId="62686" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30975" MobId="62686" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
     </If>
     <If Condition="!IsObjectiveComplete(1, 30975)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30975" MobId="62680" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30975" MobId="62680" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
     </If>
   </While>
 </If>
@@ -1039,7 +1039,7 @@
 <PickUp QuestName="Hostile Skies" QuestId="30978" GiverName="Hawkmaster Nurong" GiverId="61020" X="1217.394" Y="4111.624" Z="185.4181" />
 <If Condition="HasQuest(30978) &amp;&amp; !IsQuestCompleted(30978)" >
   <If Condition="!Me.IsOnTransport" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="62747" X="1215.698" Y="4111.557" Z="185.4414" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="62747" X="1215.698" Y="4111.557" Z="185.4414" />
 	<CustomBehavior File="WaitTimer" WaitTime="2000" GoalText="Using item {TimeRemaining}" />
   </If>
   <CustomBehavior File="SpecificQuests\30978-TownlongSteppes-HostileSkies" />
@@ -1070,7 +1070,7 @@
 <PickUp QuestName="Buried Beneath" QuestId="31065" GiverName="Taran Zhu" GiverId="62274" X="1576.543" Y="3973.643" Z="227.252" />
 <If Condition="HasQuest(31065) &amp;&amp; !IsQuestCompleted(31065)" >
   <While Condition="!IsQuestCompleted(31065)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31065" MobId="212538" ObjectType="GameObject" X="1593.81" Y="4004.286" Z="224.1749" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31065" MobId="212538" ObjectType="GameObject" X="1593.81" Y="4004.286" Z="224.1749" />
   </While>
   <CustomBehavior File="WaitTimer" WaitTime="32000" />
 </If>
@@ -1085,14 +1085,14 @@
 <Objective QuestName="Lao-Chin and Serevex" QuestId="31063" Type="KillMob" MobId="62580" KillCount="1" />
 <If Condition="HasQuest(31688) &amp;&amp; !IsQuestCompleted(31688)" >
   <While Condition="!IsQuestCompleted(31688)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1545.685" Y="4679.235" Z="164.5584" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1481.061" Y="4735.108" Z="159.1735" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1573.394" Y="4781.207" Z="148.4833" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1705.057" Y="4475.901" Z="108.4899" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1686.939" Y="4415.321" Z="106.4984" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1609.539" Y="4394.366" Z="104.2446" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1541.384" Y="4287.07" Z="111.6744" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1070.659" Y="3734.568" Z="248.1864" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1545.685" Y="4679.235" Z="164.5584" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1481.061" Y="4735.108" Z="159.1735" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1573.394" Y="4781.207" Z="148.4833" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1705.057" Y="4475.901" Z="108.4899" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1686.939" Y="4415.321" Z="106.4984" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1609.539" Y="4394.366" Z="104.2446" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31688" MobId="214734" ObjectType="GameObject" WaitForNpcs="False" CollectionDistance="1000" X="1541.384" Y="4287.07" Z="111.6744" />
   </While>
 </If>
 <If Condition="HasQuest(31687) &amp;&amp; !IsQuestCompleted(31687)" >
@@ -1108,7 +1108,7 @@
 </If>
 <TurnIn QuestName="The Sha of Hatred" QuestId="30968" TurnInName="Taoshi" TurnInId="62802" X="1400.644" Y="4430.052" Z="86.87626" />
 <While Condition="HasQuestAvailable(62802)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="62802" KeepTargetSelected="True" X="1400.644" Y="4430.052" Z="86.87626" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="62802" KeepTargetSelected="True" X="1400.644" Y="4430.052" Z="86.87626" />
   <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
   <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -1191,7 +1191,7 @@ goto 39.4,62.0
   <CustomBehavior File="RunMacro" Macro="/cancelform" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(30929)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30929" MobId="61163" WaitTime="15000" X="2187.104" Y="4823.444" Z="181.9502" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30929" MobId="61163" WaitTime="15000" X="2187.104" Y="4823.444" Z="181.9502" />
   </While>
 </If>
 <TurnIn QuestName="Bad Yak" QuestId="30929" TurnInName="Bluesaddle" TurnInId="61161" X="2183.851" Y="4827.085" Z="181.9506" />
@@ -1259,11 +1259,11 @@ goto 39.5,61.9
 <If Condition="HasQuest(30927) &amp;&amp; !IsQuestCompleted(30927)" >
 	<LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(30927)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2224.343" Y="5226.989" Z="89.06761" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2256.359" Y="4909.565" Z="80.38731" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2191.824" Y="5032.615" Z="72.48427" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2251.571" Y="5082.892" Z="78.23823" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2200.74" Y="5137.582" Z="89.46139" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2224.343" Y="5226.989" Z="89.06761" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2256.359" Y="4909.565" Z="80.38731" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2191.824" Y="5032.615" Z="72.48427" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2251.571" Y="5082.892" Z="78.23823" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="30927" MobId1="66276" MobId2="66281" MobId3="66282" MobId4="66277" Range="3" WaitForNpcs="False" CollectionDistance="1000" X="2200.74" Y="5137.582" Z="89.46139" />
   </While>
 </If>
 -->

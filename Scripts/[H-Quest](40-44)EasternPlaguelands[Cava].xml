@@ -663,17 +663,17 @@
 <If Condition="!HasQuest(27367) &amp;&amp; !IsQuestCompleted(27367)" >
   <!--Crown Guard Tower-->
   <RunTo X="1878.242" Y="-3693.653" Z="157.6873" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44232" MobState="Alive" X="1879.72" Y="-3694.56" Z="157.6868" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44232" MobState="Alive" X="1879.72" Y="-3694.56" Z="157.6868" />
   <!--Light's Shield Tower-->
   <RunTo X="2262.414" Y="-4412.652" Z="111.6166" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44231" MobState="Alive" X="2264.55" Y="-4414.64" Z="111.6992" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44231" MobState="Alive" X="2264.55" Y="-4414.64" Z="111.6992" />
   <!--Light's Hope Chapel-->
   <RunTo X="2272.244" Y="-5341.76" Z="87.11243" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="12636" MobState="Alive" X="2272.06" Y="-5343.54" Z="86.95744" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="12636" MobState="Alive" X="2272.06" Y="-5343.54" Z="86.95744" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 q then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -711,7 +711,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="What I Do Best" QuestId="27371" GiverName="Tarenar Sunstrike" GiverId="45429" X="1692.83" Y="-3027.97" Z="77.35835" />
@@ -769,16 +769,16 @@
 <PickUp QuestName="Onward, to Light's Hope Chapel" QuestId="27373" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
 <If Condition="HasQuest(27373) &amp;&amp; !HasQuest(27432) &amp;&amp; !IsQuestCompleted(27432)" >
   <If Condition="(Me.Class == WoWClass.Mage) || (Me.Class == WoWClass.Priest) || (Me.Class == WoWClass.Warlock)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45400" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45400" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
 	<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
   <Else>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45400" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45400" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
 	<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton2" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     </Else>
   </If>
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1915.03" Y="-2641.71" Z="59.70663" />
   <CustomBehavior File="WaitTimer" WaitTime="133000" />
 </If>
 <PickUp QuestName="Zaeldarr the Outcast" QuestId="27432" GiverName="Urk Gagbaz" GiverId="45500" X="1872.73" Y="-3699.23" Z="158.9656" />
@@ -786,7 +786,7 @@
 <PickUp QuestName="Traveling Companions" QuestId="27381" GiverName="Tarenar Sunstrike" GiverId="45429" X="1853.47" Y="-3708.96" Z="160.5862" />
 <PickUp QuestName="Little Pamela" QuestId="27383" GiverName="Carlin Redpath" GiverId="11063" X="1852.64" Y="-3721.62" Z="160.5882" />
 <If Condition="HasQuest(27381) &amp;&amp; !IsQuestCompleted(27381)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45451" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1852.64" Y="-3718.98" Z="195.6799" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45451" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1852.64" Y="-3718.98" Z="195.6799" />
 </If>
 <PickUp QuestName="Rough Roads" QuestId="27382" GiverName="Argus Highbeacon" GiverId="45451" X="1852.64" Y="-3718.98" Z="195.6799" />
 <TurnIn QuestName="Traveling Companions" QuestId="27381" TurnInName="Tarenar Sunstrike" TurnInId="45429" X="1853.47" Y="-3708.96" Z="160.5862" />
@@ -806,7 +806,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <TurnIn QuestName="Little Pamela" QuestId="27383" TurnInName="Pamela Redpath" TurnInId="10926" X="1452.991" Y="-3596.824" Z="86.98743" />
@@ -852,7 +852,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Villains of Darrowshire" QuestId="27387" GiverName="Chromie" GiverId="10667" X="1874.412" Y="-3709.206" Z="159.5418" />
@@ -861,7 +861,7 @@
 <PickUp QuestName="Cenarion Tenacity" QuestId="27544" GiverName="Urk Gagbaz" GiverId="45500" X="1872.73" Y="-3699.23" Z="158.9656" />
 <If Condition="HasQuest(27388) &amp;&amp; !IsQuestCompleted(27388)" >
   <While Condition="!IsObjectiveComplete(1, 27388)" >    13202
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11063" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1852.64" Y="-3721.62" Z="160.5882" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11063" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1852.64" Y="-3721.62" Z="160.5882" />
   </While>
 </If>
 <Objective QuestName="Villains of Darrowshire" QuestId="27387" Type="CollectItem" ItemId="12957" CollectCount="1" />
@@ -885,7 +885,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <If Condition="HasQuest(27432) &amp;&amp; !IsQuestCompleted(27432)" >
@@ -894,11 +894,11 @@
 <If Condition="HasQuest(27388) &amp;&amp; !IsQuestCompleted(27388)" >
   <While Condition="!IsObjectiveComplete(2, 27388)" >
     <RunTo QuestId="27388" X="1869.824" Y="-3188.259" Z="133.318" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27388" Nav="CTM" MobId="176206" Range="5" ObjectType="GameObject" CollectionDistance="100" X="1869.824" Y="-3188.259" Z="133.318" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27388" Nav="CTM" MobId="176206" Range="5" ObjectType="GameObject" CollectionDistance="100" X="1869.824" Y="-3188.259" Z="133.318" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 27388)" >
     <RunTo X="1872.331" Y="-3181.881" Z="129.0236" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27388"  MobId="176207" Range="5" ObjectType="GameObject" WaitTime="1000" CollectionDistance="50" X="1872.331" Y="-3181.881" Z="129.0236" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27388"  MobId="176207" Range="5" ObjectType="GameObject" WaitTime="1000" CollectionDistance="50" X="1872.331" Y="-3181.881" Z="129.0236" />
   </While>
 </If>
 <TurnIn QuestName="Zaeldarr the Outcast" QuestId="27432" TurnInName="Urk Gagbaz" TurnInId="45500" X="1872.73" Y="-3699.23" Z="158.9656" />
@@ -919,7 +919,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <Objective QuestName="Villains of Darrowshire" QuestId="27387" Type="CollectItem" ItemId="12956" CollectCount="1" />
@@ -991,7 +991,7 @@
 </If>
 <PickUp QuestName="The Trek Continues" QuestId="27448" GiverName="Fiona" GiverId="45417" X="1845.88" Y="-3692.61" Z="158.7106" />
 <If Condition="HasQuest(27448) &amp;&amp; !IsQuestCompleted(27448)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1842.149" Y="-3698.729" Z="158.7519" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="1842.149" Y="-3698.729" Z="158.7519" />
   <CustomBehavior File="WaitTimer" WaitTime="115000" />
 </If>
 <TurnIn QuestName="The Trek Continues" QuestId="27448" TurnInName="Fiona" TurnInId="45417" X="2278.03" Y="-4420.79" Z="111.7496" />
@@ -1011,14 +1011,14 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Boys Will Be Boys" QuestId="27455" GiverName="Fiona" GiverId="45417" X="2278.03" Y="-4420.79" Z="111.7496" />
 <If Condition="!HasQuest(27451) &amp;&amp; !IsQuestCompleted(27451)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45451" WaitTime="1000" CollectionDistance="50" X="2262.87" Y="-4463.15" Z="114.2997" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45451" WaitTime="1000" CollectionDistance="50" X="2262.87" Y="-4463.15" Z="114.2997" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45451" WaitTime="1000" CollectionDistance="50" X="2262.87" Y="-4463.15" Z="114.2997" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45451" WaitTime="1000" CollectionDistance="50" X="2262.87" Y="-4463.15" Z="114.2997" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1156,7 +1156,7 @@
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61283)" WaitTime="1000" />
 	<RunTo X="1650.274" Y="-4802.631" Z="86.72732" />
     <CustomBehavior File="ForcedDismount" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27454" MobId="205485" ObjectType="GameObject" GossipOptions="2" Range="8" X="1650.274" Y="-4802.631" Z="86.72732" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27454" MobId="205485" ObjectType="GameObject" GossipOptions="2" Range="8" X="1650.274" Y="-4802.631" Z="86.72732" />
 	<CustomBehavior File="WaitTimer" WaitTime="3000"/>
   </While>
   <RunTo X="2079.234" Y="-4776.981" Z="73.62347" />
@@ -1168,8 +1168,8 @@
   <CustomBehavior File="TaxiRide" MobId="44231" MobState="Alive" WaitForNpcs="True" DestName="s Hope Chapel" WaitTime="1000" />
   <RunTo X="2272.244" Y="-5341.76" Z="87.11243" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1199,7 +1199,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Argent Call: The Trial of the Crypt" QuestId="27464" GiverName="Lord Maxwell Tyrosus" GiverId="11034" X="2307.55" Y="-5345.78" Z="91.44675" />
@@ -1209,9 +1209,9 @@
 	<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61309)" WaitTime="1000" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000"/>
 	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 45707 &amp;&amp; u.Distance &lt;= 50))" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45707" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="100" X="2323.407" Y="-5398.381" Z="75.46349" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45707" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="100" X="2323.407" Y="-5398.381" Z="75.46349" />
 	  <CustomBehavior File="WaitTimer" WaitTime="3000"/>
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45698" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="100" X="2323.407" Y="-5398.381" Z="75.46349" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45698" MobState="Alive" WaitTime="1000" WaitForNpcs="False" CollectionDistance="100" X="2323.407" Y="-5398.381" Z="75.46349" />
     </While>
   </While>
 </If>
@@ -1222,7 +1222,7 @@
 <If Condition="HasQuest(27467) &amp;&amp; !IsQuestCompleted(27467)" >
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="UserSettings" UseMount="False" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27467" MobId="45695" NumOfTimes="1000" CollectionDistance="1000" >
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27467" MobId="45695" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="2712.279" Y="-5349.025" Z="164.2282" />
     <Hotspot X="2749.072" Y="-5367.081" Z="157.0765" />
@@ -1261,7 +1261,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <If Condition="HasQuest(27456) &amp;&amp; !IsQuestCompleted(27456)">
@@ -1356,12 +1356,12 @@
 <If Condition="HasQuest(27612) &amp;&amp; !IsQuestCompleted(27612)" >
   <While Condition="!IsObjectiveComplete(2, 27612)" >
     <RunTo X="1800.478" Y="-5427.037" Z="89.68433" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="205877" ObjectType="GameObject" Range="5" WaitForNpcs="False" X="1795.962" Y="-5424.794" Z="90.75282" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="205877" ObjectType="GameObject" Range="5" WaitForNpcs="False" X="1795.962" Y="-5424.794" Z="90.75282" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000"/>
   </While>
   <While Condition="!IsObjectiveComplete(1, 27612)" >
     <RunTo X="1743.671" Y="-5459.842" Z="82.30913" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="205876" ObjectType="GameObject" Range="5" WaitForNpcs="False" X="1744.367" Y="-5453.857" Z="83.36356" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="205876" ObjectType="GameObject" Range="5" WaitForNpcs="False" X="1744.367" Y="-5453.857" Z="83.36356" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000"/>
   </While>
 </If>
@@ -1393,7 +1393,7 @@
 	<CustomBehavior File="WaitTimer" QuestId="27620" WaitTime="3000"/>
     <RunTo QuestId="27620" X="1569.74" Y="-5606.13" Z="114.1905" />
 	<CustomBehavior File="WaitTimer" QuestId="27620" WaitTime="3000"/>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27620" MobId="46096" MobState="Alive" WaitForNpcs="False" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27620" MobId="46096" MobState="Alive" WaitForNpcs="False" />
   </While>
 </If>
 <If Condition="HasQuest(27620)" >
@@ -1405,8 +1405,8 @@
   <TurnIn QuestName="Gathering Some Grub(s)" QuestId="27456" TurnInName="Rimblat Earthshatter" TurnInId="16134" X="2309.75" Y="-5261.74" Z="82.22324" />
   <RunTo X="2271.03" Y="-5330.754" Z="87.67014" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47286" WaitTime="1000" CollectionDistance="50" X="2266.66" Y="-5285.23" Z="83.05431" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1430,7 +1430,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <If Condition="Me.LevelFraction &gt;= 440.45">
@@ -1449,7 +1449,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Argent Call: Northdale" QuestId="27466" GiverName="Tarenar Sunstrike" GiverId="45729" X="2295.67" Y="-5341.89" Z="90.7524" />
@@ -1460,7 +1460,7 @@
 <If Condition="HasQuest(27457)" >
   <!--Eastwall Tower-->
   <RunTo X="2526.22" Y="-4770.06" Z="103.6196" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44230" MobState="Alive" X="2526.09" Y="-4772.52" Z="103.9859" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44230" MobState="Alive" X="2526.09" Y="-4772.52" Z="103.9859" />
 </If>
 <TurnIn QuestName="An Opportune Alliance" QuestId="27457" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9727" />
 <TurnIn QuestName="Argent Call: Northdale" QuestId="27466" TurnInName="Fiona" TurnInId="45417" X="2556.82" Y="-4765.68" Z="105.9727" />
@@ -1499,7 +1499,7 @@
     <CustomBehavior File="WaitTimer" QuestId="27481" WaitTime="10000"/>
     <RunTo QuestId="27481" X="3435.459" Y="-4977.293" Z="192.0392" />
     <CustomBehavior File="WaitTimer" QuestId="27481" WaitTime="10000"/>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27481" MobId="10822" MobState="Alive" WaitForNpcs="False" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27481" MobId="10822" MobState="Alive" WaitForNpcs="False" />
     <CustomBehavior File="WaitTimer" QuestId="27481" WaitTime="30000"/>
   </While>
 </If>
@@ -1551,7 +1551,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Impatience" QuestId="27488" GiverName="Tarenar Sunstrike" GiverId="45729" X="2542.57" Y="-4769.43" Z="105.2397" />
@@ -1559,18 +1559,18 @@
 <TurnIn QuestName="Impatience" QuestId="27488" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="2542.57" Y="-4769.43" Z="105.2397" />
 <PickUp QuestName="Nobody to Blame but Myself" QuestId="27489" GiverName="Tarenar Sunstrike" GiverId="45729" X="2542.57" Y="-4769.43" Z="105.2397" />
 <If Condition="HasQuest(27489) &amp;&amp; !IsQuestCompleted(27489)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="2559.748" Y="-4767.114" Z="106.04" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45400" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="2559.748" Y="-4767.114" Z="106.04" />
   <CustomBehavior File="WaitTimer" WaitTime="97000" />
   <!--Northpass Tower-->
   <RunTo X="3133.067" Y="-4356.038" Z="133.495" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28621" MobState="Alive" X="3131.37" Y="-4357.82" Z="133.4968" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="28621" MobState="Alive" X="3131.37" Y="-4357.82" Z="133.4968" />
 </If>
 <If Condition="HasQuest(27489)">
   <TurnIn QuestName="Nobody to Blame but Myself" QuestId="27489" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3162.91" Y="-4320.87" Z="131.6298" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47166" WaitTime="1000" CollectionDistance="50" X="3178.53" Y="-4342.51" Z="133.425" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47166" WaitTime="1000" CollectionDistance="50" X="3178.53" Y="-4342.51" Z="133.425" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47166" WaitTime="1000" CollectionDistance="50" X="3178.53" Y="-4342.51" Z="133.425" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47166" WaitTime="1000" CollectionDistance="50" X="3178.53" Y="-4342.51" Z="133.425" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1591,7 +1591,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Beat it Out of Them" QuestId="27522" GiverName="Tarenar Sunstrike" GiverId="45729" X="3162.91" Y="-4320.87" Z="131.6298" />
@@ -1667,7 +1667,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <TurnIn QuestName="Blind Fury" QuestId="27524" TurnInName="Tarenar Sunstrike" TurnInId="45729" X="3135.564" Y="-3409.367" Z="139.8979" />
@@ -1707,7 +1707,7 @@
   </If>
   <RunTo X="3090.903" Y="-3190.288" Z="143.0541" />
   <While Condition="!IsQuestCompleted(27528)" >
-    <CustomBehavior File="InteractWith" QuestId="27528" MobId="45851" MobState="Dead" InteractByUsingItemId="61369" CollectionDistance="1000"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="27528" MobId="45851" MobState="Dead" InteractByUsingItemId="61369" CollectionDistance="1000"
       PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="14" WaitTime="4000">
     <HuntingGrounds>
       <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
@@ -1779,7 +1779,7 @@
       <Hotspot X="3041.949" Y="-3458.538" Z="152.7421" />
     </HuntingGrounds>
     </CustomBehavior>
-    <CustomBehavior File="InteractWith" QuestId="27529" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="27529" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
       NonCompeteDistance="0" MobId="11064" WaitForNpcs="False" />
   </While>
 </If>
@@ -1788,7 +1788,7 @@
     <LootMobs Value="true" />
   </If>
   <While Condition="!IsQuestCompleted(27529)" >
-    <CustomBehavior File="InteractWith" QuestId="27529" MobId1="8530" MobId2="11064" MobState="Alive" CollectionDistance="1000"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="27529" MobId1="8530" MobId2="11064" MobState="Alive" CollectionDistance="1000"
     PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs">
     <HuntingGrounds>
       <Hotspot X="3132.644" Y="-3267.286" Z="154.4213" />
@@ -1875,7 +1875,7 @@
   <CustomBehavior File="Message" Text="Moving to TANARIS, Please do not stop bot" LogColor="Aquamarine" />
   <TurnIn QuestName="The Plaguewood Tower" QuestId="27532" TurnInName="Argent Apothecary Judkins" TurnInId="45828" X="2954.69" Y="-2994.99" Z="126.9722" />
   <RunTo X="2968.325" Y="-3034.199" Z="126.7499" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44233" MobState="Alive" X="2968.76" Y="-3031.63" Z="126.826" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44233" MobState="Alive" X="2968.76" Y="-3031.63" Z="126.826" />
   <CustomBehavior File="TaxiRide" MobId="44233" MobState="Alive" WaitForNpcs="True" DestName="Brill" WaitTime="1000" />
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
@@ -1889,22 +1889,22 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <!--<PickUp QuestName="The Corpsebeasts" QuestId="27530" GiverName="Crusader Kevin Frost" GiverId="45831" X="3143.53" Y="-3402.09" Z="139.7926" />
 <If Condition="HasQuest(27530) &amp;&amp; !IsQuestCompleted(27530)" >
   <While Condition="!IsQuestCompleted(27530)" >
     <CustomBehavior File="WaitTimer" QuestId="27530" WaitTime="6000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2791.705" Y="-3567.66" Z="99.98891" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2791.53" Y="-3680.93" Z="103.3997" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2826.76" Y="-3614.84" Z="100.9568" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2746.54" Y="-3550.71" Z="104.7593" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2759.78" Y="-3463.52" Z="101.0036" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2844.54" Y="-3444.74" Z="99.86723" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2810.92" Y="-3378.34" Z="94.92168" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2738.18" Y="-3317.17" Z="95.83102" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2714.18" Y="-3381.9" Z="97.4555" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2791.705" Y="-3567.66" Z="99.98891" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2791.53" Y="-3680.93" Z="103.3997" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2826.76" Y="-3614.84" Z="100.9568" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2746.54" Y="-3550.71" Z="104.7593" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2759.78" Y="-3463.52" Z="101.0036" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2844.54" Y="-3444.74" Z="99.86723" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2810.92" Y="-3378.34" Z="94.92168" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2738.18" Y="-3317.17" Z="95.83102" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="45893" MobId2="45886" MobId3="45895" Range="10" NumOfTimes="1" CollectionDistance="1000" X="2714.18" Y="-3381.9" Z="97.4555" />
     <If Condition="(Me.Location.Distance(new WoWPoint(2791.53, -3680.93, 103.3997)) &lt; 25)">
       <RunTo X="2817.421" Y="-3680.82" Z="105.2551" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(61375)" WaitTime="1000" />
@@ -1989,7 +1989,7 @@
 <If Condition="HasQuest(27532)" >
   <!--Plaguewood Tower-->
   <RunTo X="2968.325" Y="-3034.199" Z="126.7499" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44233" MobState="Alive" X="2968.76" Y="-3031.63" Z="126.826" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44233" MobState="Alive" X="2968.76" Y="-3031.63" Z="126.826" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <TurnIn QuestName="The Plaguewood Tower" QuestId="27532" TurnInName="Argent Apothecary Judkins" TurnInId="45828" X="2954.69" Y="-2994.99" Z="126.9722" />
 </If>
@@ -2009,7 +2009,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <PickUp QuestName="Counter-Plague Research" QuestId="27531" GiverName="Argent Apothecary Judkins" GiverId="45828" X="2954.69" Y="-2994.99" Z="126.9722" />
@@ -2034,7 +2034,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
   <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </If>
 <TurnIn QuestName="Just a Little Touched" QuestId="27535" TurnInName="Augustus the Touched" TurnInId="12384" X="2935.735" Y="-2744.635" Z="109.6077" />
@@ -2079,7 +2079,7 @@
 <CustomBehavior File="WaitTimer" WaitTime="1000" />
 <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Gadgetzan" WaitTime="1000" />
 <RunTo X="-7099.102" Y="-3818.385" Z="9.490863" />
-<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
+<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7824" MobState="Alive" X="-7098.417" Y="-3816.016" Z="9.489906" />
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](44-47)Tanaris[Cava]" />
 </QuestOrder>
 </HBProfile>

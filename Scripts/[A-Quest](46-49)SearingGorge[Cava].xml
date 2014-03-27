@@ -554,8 +554,8 @@
   <RunTo X="-6905.343" Y="-1775.813" Z="240.7436" />
   <RunTo X="-7115.181" Y="-1232.943" Z="289.6709" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -594,7 +594,7 @@
 <PickUp QuestName="Dig-Boss Dinwhisker" QuestId="27964" GiverName="Jack Rockleg" GiverId="47266" X="-6893.81" Y="-1853.1" Z="250.6842" />
 <TurnIn QuestName="Lunk's Task" QuestId="27956" TurnInName="Lunk" TurnInId="47269" X="-6892.28" Y="-1860.73" Z="251.0352" />
 <If Condition="!HasQuest(27957) &amp;&amp; !IsQuestCompleted(27957)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47269" KeepTargetSelected="True" X="-6892.28" Y="-1860.73" Z="251.0352" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="47269" KeepTargetSelected="True" X="-6892.28" Y="-1860.73" Z="251.0352" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>
@@ -602,8 +602,8 @@
 <If Condition="!HasQuest(27959) &amp;&amp; !IsQuestCompleted(27959)" >
   <While Condition="!HasQuest(27959)" >
     <RunTo X="-6819.524" Y="-1762.354" Z="263.9529" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="5856" MobState="Alive" CollectionDistance="1000" X="-6819.524" Y="-1762.354" Z="263.9529" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47280" KeepTargetSelected="True" WaitForNpcs="False" X="-6892.28" Y="-1860.73" Z="251.0352" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="5856" MobState="Alive" CollectionDistance="1000" X="-6819.524" Y="-1762.354" Z="263.9529" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="47280" KeepTargetSelected="True" WaitForNpcs="False" X="-6892.28" Y="-1860.73" Z="251.0352" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </While>
@@ -613,36 +613,36 @@
 </If>
 <If Condition="HasQuest(27961) &amp;&amp; !IsQuestCompleted(27961)" >
   <While Condition="!IsQuestCompleted(27961)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6683.447" Y="-1823.39" Z="249.4068" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6680.129" Y="-1864.374" Z="244.6034" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6654.426" Y="-1895.305" Z="244.4959" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6616.457" Y="-1908.386" Z="244.7948" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6634.956" Y="-1871.839" Z="244.1445" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6652.041" Y="-1834.884" Z="248.5716" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6690.982" Y="-1820.385" Z="249.5749" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6731.635" Y="-1814.657" Z="253.5833" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6769.905" Y="-1801.68" Z="256.8579" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6797.919" Y="-1772.176" Z="258.627" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6896.642" Y="-1705.458" Z="240.9577" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6881.497" Y="-1667.039" Z="244.3773" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6900.679" Y="-1630.659" Z="242.4262" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6931.968" Y="-1604.705" Z="246.5911" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6967.087" Y="-1583.703" Z="243.8236" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6998.531" Y="-1558.518" Z="241.8311" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7037.161" Y="-1547.664" Z="243.7483" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7076.287" Y="-1535.325" Z="245.8963" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7116.309" Y="-1530.407" Z="242.9082" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7141.741" Y="-1562.128" Z="243.9627" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7149.732" Y="-1602.513" Z="243.2877" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7177.169" Y="-1633.412" Z="241.6159" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7187.408" Y="-1672.385" Z="240.6868" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7146.259" Y="-1664.622" Z="240.5164" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7116.415" Y="-1637.102" Z="242.0031" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7087.093" Y="-1612.414" Z="256.5981" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7047.578" Y="-1612.569" Z="248.6624" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7009.489" Y="-1627.409" Z="246.5022" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6968.831" Y="-1626.904" Z="240.7635" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6932.892" Y="-1646.491" Z="241.6801" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6683.447" Y="-1823.39" Z="249.4068" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6680.129" Y="-1864.374" Z="244.6034" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6654.426" Y="-1895.305" Z="244.4959" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6616.457" Y="-1908.386" Z="244.7948" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6634.956" Y="-1871.839" Z="244.1445" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6652.041" Y="-1834.884" Z="248.5716" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6690.982" Y="-1820.385" Z="249.5749" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6731.635" Y="-1814.657" Z="253.5833" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6769.905" Y="-1801.68" Z="256.8579" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6797.919" Y="-1772.176" Z="258.627" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6896.642" Y="-1705.458" Z="240.9577" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6881.497" Y="-1667.039" Z="244.3773" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6900.679" Y="-1630.659" Z="242.4262" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6931.968" Y="-1604.705" Z="246.5911" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6967.087" Y="-1583.703" Z="243.8236" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6998.531" Y="-1558.518" Z="241.8311" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7037.161" Y="-1547.664" Z="243.7483" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7076.287" Y="-1535.325" Z="245.8963" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7116.309" Y="-1530.407" Z="242.9082" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7141.741" Y="-1562.128" Z="243.9627" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7149.732" Y="-1602.513" Z="243.2877" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7177.169" Y="-1633.412" Z="241.6159" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7187.408" Y="-1672.385" Z="240.6868" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7146.259" Y="-1664.622" Z="240.5164" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7116.415" Y="-1637.102" Z="242.0031" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7087.093" Y="-1612.414" Z="256.5981" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7047.578" Y="-1612.569" Z="248.6624" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-7009.489" Y="-1627.409" Z="246.5022" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6968.831" Y="-1626.904" Z="240.7635" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27961" MobId="47278" WaitForNpcs="False" Loot="True" MobState="Alive" CollectionDistance="1000" X="-6932.892" Y="-1646.491" Z="241.6801" />
    </While>
 <!--
 <Objective QuestName="Out of Place" QuestId="27961" Type="CollectItem" ItemId="62934" CollectCount="8" />
@@ -688,7 +688,7 @@
   <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(27959) &amp;&amp; IsQuestCompleted(27959)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47281" WaitForNpcs="False" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="47281" WaitForNpcs="False" />
   <While Condition="HasQuest(27959)" >
     <CustomBehavior File="CompleteLogQuest" QuestId="27959" />
   </While>
@@ -727,8 +727,8 @@
   <RunTo X="-6550.468" Y="-1168.563" Z="309.3137" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="14624" WaitTime="1000" CollectionDistance="50" X="-6526.64" Y="-1185.78" Z="309.2666" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -752,7 +752,7 @@
   <RunTo X="-6627.005" Y="-1142.104" Z="250.8309" />
   <While Condition="!HasQuest(27983)" >
     <RunTo X="-6670.277" Y="-1153.373" Z="242.0879" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47332" KeepTargetSelected="True" WaitForNpcs="False" X="-6703.225" Y="-1271.265" Z="241.8069" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="47332" KeepTargetSelected="True" WaitForNpcs="False" X="-6703.225" Y="-1271.265" Z="241.8069" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
   </While>
@@ -865,7 +865,7 @@
 <If Condition="HasQuest(27984) &amp;&amp; !IsQuestCompleted(27984)" >
   <While Condition="!IsQuestCompleted(27984)" >
     <RunTo X="-6491.566" Y="-984.5315" Z="335.3483" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="8436" GossipOptions="1, 1, 1" MobState="Alive" X="-6491.069" Y="-982.717" Z="335.4388" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="8436" GossipOptions="1, 1, 1" MobState="Alive" X="-6491.069" Y="-982.717" Z="335.4388" />
   </While>
 </If>
 <TurnIn QuestName="Lunthistle's Tale" QuestId="27984" TurnInName="Zamael Lunthistle" TurnInId="8436" X="-6491.069" Y="-982.717" Z="335.4388" />
@@ -904,8 +904,8 @@
   <RunTo X="-7115.181" Y="-1232.943" Z="289.6709" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" FoodName="8950" DrinkName="8766" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="47937" WaitTime="1000" CollectionDistance="50" X="-7093.68" Y="-1268.31" Z="270.4855" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -961,7 +961,7 @@
 <PickUp QuestName="Lunk's Adventure: Rendan's Weakness" QuestId="28034" GiverName="Lunk" GiverId="47429" X="-7110.08" Y="-1211.65" Z="308.4449" />
 <If Condition="HasQuest(28034) &amp;&amp; !IsQuestCompleted(28034)" >
   <While Condition="!IsQuestCompleted(28034)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28034" MobId="47434" GossipOptions="1" CollectionDistance="1000" X="-7090.816" Y="-1244.798" Z="276.4302" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28034" MobId="47434" GossipOptions="1" CollectionDistance="1000" X="-7090.816" Y="-1244.798" Z="276.4302" />
   </While>
 </If>
 <If Condition="HasQuest(28034)" >
@@ -987,7 +987,7 @@
 <If Condition="HasQuest(28052) &amp;&amp; !IsQuestCompleted(28052)" >
   <While Condition="!IsQuestCompleted(28052)" >
     <If Condition="!Me.IsOnTransport" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28052" MobId="2941" GossipOptions="2" X="-6559.06" Y="-1169.38" Z="309.7965" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28052" MobId="2941" GossipOptions="2" X="-6559.06" Y="-1169.38" Z="309.7965" />
     </If>
 	<CustomBehavior File="WaitTimer" QuestId="28052" WaitTime="80000" />
   </While>
@@ -998,30 +998,30 @@
 <PickUp QuestName="Rise, Obsidion" QuestId="28056" GiverName="Mountain-Lord Rendan" GiverId="47393" X="-6868.26" Y="-1233.31" Z="176.8025" />
 <If Condition="HasQuest(28056) &amp;&amp; !IsQuestCompleted(28056)" >
   <While Condition="!IsQuestCompleted(28056)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" ObjectType="GameObject" MobId="148498" GossipOptions="1"  Range="8" X="-6478.351" Y="-1241.586" Z="180.1533" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" ObjectType="GameObject" MobId="148498" GossipOptions="1"  Range="8" X="-6478.351" Y="-1241.586" Z="180.1533" />
 	<CustomBehavior File="WaitTimer" WaitTime="15000" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28056" MobId="8400" WaitForNpcs="False" MobState="Alive" X="-6477.246" Y="-1255.217" Z="180.3669" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28056" MobId="8391" WaitForNpcs="False" MobState="Alive" X="-6476.368" Y="-1252.349" Z="180.3325" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28056" MobId="8400" WaitForNpcs="False" MobState="Alive" X="-6477.246" Y="-1255.217" Z="180.3669" />
+	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28056" MobId="8391" WaitForNpcs="False" MobState="Alive" X="-6476.368" Y="-1252.349" Z="180.3325" />
   </While>
 </If>
 <If Condition="HasQuest(28055) &amp;&amp; !IsQuestCompleted(28055)" >
   <While Condition="!IsQuestCompleted(28055)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6773.789" Y="-1184.683" Z="187.4834" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6759.937" Y="-1222.677" Z="182.5912" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6761.474" Y="-1182.651" Z="186.1306" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6755.79" Y="-1142.175" Z="185.589" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6715.888" Y="-1135.811" Z="185.5686" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6688.46" Y="-1165.524" Z="184.1377" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6667.159" Y="-1199.425" Z="180.897" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6627.872" Y="-1208.858" Z="182.3805" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6590.645" Y="-1194.567" Z="186.1378" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6556.305" Y="-1215.751" Z="185.4872" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6538.593" Y="-1251.663" Z="181.2593" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6505.796" Y="-1274.576" Z="180.6644" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6472.09" Y="-1297.165" Z="180.9339" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6440.469" Y="-1272.165" Z="180.9376" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6436.473" Y="-1232.012" Z="180.8649" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6474.842" Y="-1219.682" Z="179.8606" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6773.789" Y="-1184.683" Z="187.4834" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6759.937" Y="-1222.677" Z="182.5912" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6761.474" Y="-1182.651" Z="186.1306" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6755.79" Y="-1142.175" Z="185.589" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6715.888" Y="-1135.811" Z="185.5686" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6688.46" Y="-1165.524" Z="184.1377" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6667.159" Y="-1199.425" Z="180.897" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6627.872" Y="-1208.858" Z="182.3805" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6590.645" Y="-1194.567" Z="186.1378" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6556.305" Y="-1215.751" Z="185.4872" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6538.593" Y="-1251.663" Z="181.2593" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6505.796" Y="-1274.576" Z="180.6644" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6472.09" Y="-1297.165" Z="180.9339" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6440.469" Y="-1272.165" Z="180.9376" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6436.473" Y="-1232.012" Z="180.8649" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28055" MobId="5843" MobState="Alive" NotMoving="True" GossipOptions="1" WaitForNpcs="False" CollectionDistance="1000" X="-6474.842" Y="-1219.682" Z="179.8606" />
   </While>
 </If>
 <If Condition="HasQuest(28054) &amp;&amp; !IsQuestCompleted(28054)" >
@@ -1063,12 +1063,12 @@
 <PickUp QuestName="Twisted Twilight Ties" QuestId="28060" GiverName="Taskmaster Scrange" GiverId="14626" X="-6613.101" Y="-1265.26" Z="208.7437" />
 <If Condition="HasQuest(28060) &amp;&amp; !IsQuestCompleted(28060)" >
   <While Condition="!IsQuestCompleted(28060)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28060" MobId="14627" MobState="Alive" GossipOptions="1" X="-6615.3" Y="-1265.55" Z="208.744" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28060" MobId="14627" MobState="Alive" GossipOptions="1" X="-6615.3" Y="-1265.55" Z="208.744" />
     <If Condition="!IsObjectiveComplete(2, 28060)">
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28060" MobId="47460" WaitForNpcs="False" MobState="Alive" X="-6632.53" Y="-1234.04" Z="209.8085" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28060" MobId="47460" WaitForNpcs="False" MobState="Alive" X="-6632.53" Y="-1234.04" Z="209.8085" />
     </If>
     <If Condition="!IsObjectiveComplete(1, 28060)">
-	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28060" MobId="14621" WaitForNpcs="False" MobState="Alive" X="-6632.53" Y="-1234.04" Z="209.8085" />
+	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28060" MobId="14621" WaitForNpcs="False" MobState="Alive" X="-6632.53" Y="-1234.04" Z="209.8085" />
     </If>
 	<CustomBehavior File="WaitTimer" QuestId="28060" WaitTime="8000" />
 
@@ -1107,7 +1107,7 @@
 <If Condition="!HasQuest(28053) &amp;&amp; !IsQuestCompleted(28053)" >
   <RunTo X="-6487.542" Y="-1195.747" Z="325.733" />
   <While Condition="!IsQuestCompleted(28053)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="47429" KeepTargetSelected="True" X="-6484.775" Y="-1192.429" Z="325.7204" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="47429" KeepTargetSelected="True" X="-6484.775" Y="-1192.429" Z="325.7204" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
   </While>
