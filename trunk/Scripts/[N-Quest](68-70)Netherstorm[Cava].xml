@@ -978,7 +978,7 @@
       <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
     <Else>
       <RunTo X="-9006.312" Y="870.4896" Z="129.6931" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195141" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-9006.312" Y="870.4896" Z="129.6931" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="195141" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-9006.312" Y="870.4896" Z="129.6931" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
       <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
@@ -1004,7 +1004,7 @@
     <Else>
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
       <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
-      <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
+      <CustomBehavior File="Cava\InteractWith1324" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
       <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
       <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
       <CustomBehavior File="WaitTimer" WaitTime="12000" />
@@ -1036,7 +1036,7 @@
   <CustomBehavior File="FlyTo" X="3377.343" Y="4317.054" Z="121.125" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="HasQuestAvailable(19569)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19569" KeepTargetSelected="True" X="3377.343" Y="4317.054" Z="121.125" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19569" KeepTargetSelected="True" X="3377.343" Y="4317.054" Z="121.125" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -1088,7 +1088,7 @@
 <If Condition="!HasQuest(10186) &amp;&amp; !IsQuestCompleted(10186)" >
   <CustomBehavior File="FlyTo" X="3077.876" Y="3600.26" Z="144.0669" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="InteractWith" MobId="18938" MobState="Alive" X="3078.104" Y="3602.156" Z="144.067" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="18938" MobState="Alive" X="3078.104" Y="3602.156" Z="144.067" />
 </If>
 <If Condition="HasQuest(10183)" >
   <TurnIn QuestName="Off To Area 52" QuestId="10183" TurnInName="Rocket-Chief Fuselage" TurnInId="19570" X="3041.798" Y="3658.854" Z="143.3238" />
@@ -1100,7 +1100,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1130,7 +1130,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1164,8 +1164,8 @@
 <If Condition="!HasQuest(10186) &amp;&amp; !IsQuestCompleted(10186)" >
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <RunTo X="2977.44" Y="3663.656" Z="143.1281" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1235,7 +1235,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1265,7 +1265,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1314,7 +1314,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1344,7 +1344,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1396,19 +1396,19 @@
       <Hotspot X="2612.792" Y="3556.631" Z="141.9383" />
       </HuntingGrounds>
     </CustomBehavior>
-    <CustomBehavior File="InteractWith" MobId="183933" NonCompeteDistance="0" InteractByLooting="True" WaitForNpcs="False" MovementBy="ClickToMoveOnly"/>
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183933" NonCompeteDistance="0" InteractByLooting="True" WaitForNpcs="False" MovementBy="ClickToMoveOnly"/>
   </While>
 </If>
 <If Condition="HasQuest(10203) &amp;&amp; !IsQuestCompleted(10203)">
   <If Condition="!IsObjectiveComplete(3, 10203)">
     <CustomBehavior File="FlyTo" X="2746.809" Y="3235.568" Z="147.5975" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="InteractWith" QuestId="10203" QuestObjectiveIndex="3" MobId="183807" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2746.809" Y="3235.568" Z="147.5975" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="10203" QuestObjectiveIndex="3" MobId="183807" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2746.809" Y="3235.568" Z="147.5975" />
   </If>
   <If Condition="!IsObjectiveComplete(1, 10203)">
     <CustomBehavior File="FlyTo" X="2716.466" Y="3197.078" Z="147.5956" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="InteractWith" QuestId="10203" QuestObjectiveIndex="1" MobId="183805" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2716.466" Y="3197.078" Z="147.5956" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="10203" QuestObjectiveIndex="1" MobId="183805" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2716.466" Y="3197.078" Z="147.5956" />
   </If>
 </If>
 <If Condition="HasQuest(10265) &amp;&amp; !IsQuestCompleted(10265)">
@@ -1420,12 +1420,12 @@
   <If Condition="!IsObjectiveComplete(4, 10203)">
     <CustomBehavior File="FlyTo" X="2770.758" Y="3116.678" Z="154.0617" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="InteractWith" QuestId="10203" QuestObjectiveIndex="4" MobId="183808" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2770.758" Y="3116.678" Z="154.0617" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="10203" QuestObjectiveIndex="4" MobId="183808" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2770.758" Y="3116.678" Z="154.0617" />
   </If>
   <If Condition="!IsObjectiveComplete(2, 10203)">
     <CustomBehavior File="FlyTo" X="2790.831" Y="3176.995" Z="145.6805" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="InteractWith" QuestId="10203" QuestObjectiveIndex="2" MobId="183806" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2790.831" Y="3176.995" Z="145.6805" />
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="10203" QuestObjectiveIndex="2" MobId="183806" NonCompeteDistance="0" ProactiveCombatStrategy="ClearMobsTargetingUs" MovementBy="NavigatorPreferred" X="2790.831" Y="3176.995" Z="145.6805" />
   </If>
 </If>
 <If Condition="HasQuest(10173) &amp;&amp; !IsQuestCompleted(10173)">
@@ -1474,7 +1474,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1504,7 +1504,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1554,7 +1554,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1584,7 +1584,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1641,7 +1641,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1671,7 +1671,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1720,7 +1720,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1750,7 +1750,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -1793,13 +1793,13 @@
   <While Condition="HasQuest(10174)" >
   <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -1808,13 +1808,13 @@
   <While Condition="!HasQuest(10188)">
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2027,7 +2027,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2057,7 +2057,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2107,7 +2107,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2137,7 +2137,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2195,7 +2195,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2225,7 +2225,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2274,7 +2274,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2304,7 +2304,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2350,7 +2350,7 @@
   <While Condition="HasQuest(10188)" >
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <If Condition="(Me.Class == WoWClass.DeathKnight) || (Me.Class == WoWClass.Paladin) || (Me.Class == WoWClass.Warrior)">
         <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(4)" />
@@ -2369,7 +2369,7 @@
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2381,7 +2381,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2411,7 +2411,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2446,13 +2446,13 @@
   <While Condition="!HasQuest(10192)">
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2483,14 +2483,14 @@
   <While Condition="HasQuest(10192)" >
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2502,7 +2502,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2532,7 +2532,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2567,13 +2567,13 @@
   <While Condition="!HasQuest(10301)">
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2620,14 +2620,14 @@
   <While Condition="HasQuest(10301)" >
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2636,18 +2636,18 @@
   <While Condition="!HasQuest(10209)">
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2661,7 +2661,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2691,7 +2691,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2742,14 +2742,14 @@
   <While Condition="HasQuest(10209)" >
     <CustomBehavior File="ForcedDismount" />
     <While Condition="HasQuestAvailable(19644, &quot;TurnIn&quot;)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="19644" KeepTargetSelected="True" WaitForNpcs="False"/>
       <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     </While>
     <If Condition="!HasItem(28455)">
       <CustomBehavior File="FlyTo" X="2996.577" Y="3733.237" Z="144.095" />
       <CustomBehavior File="ForcedDismount" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="19217" Type="Repair" X="2997.609" Y="3734.968" Z="143.9959" />
     </If>
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(28455)" />
   </While>
@@ -2761,7 +2761,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2791,7 +2791,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2826,8 +2826,8 @@
   <CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="3712" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <RunTo X="2977.44" Y="3663.656" Z="143.1281" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
+  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="19575" WaitTime="1000" CollectionDistance="50" X="2975.461" Y="3663.066" Z="143.0856" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -2905,7 +2905,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -2935,7 +2935,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3006,7 +3006,7 @@
   <CustomBehavior File="TaxiRide" MobId="18938" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3036,7 +3036,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3070,7 +3070,7 @@
 <If Condition="HasQuest(10423)">
   <CustomBehavior File="FlyTo" X="4158.785" Y="2958.464" Z="352.0694" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="InteractWith" MobId="19583" MobState="Alive" X="4160.158" Y="2957.296" Z="352.2144" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="19583" MobState="Alive" X="4160.158" Y="2957.296" Z="352.2144" />
 </If>
 <TurnIn QuestName="To the Stormspire" QuestId="10423" TurnInName="Ghabar" TurnInId="20811" X="4149.916" Y="3056.212" Z="337.2243" />
 <PickUp QuestName="Diagnosis: Critical" QuestId="10424" GiverName="Ghabar" GiverId="20811" X="4149.916" Y="3056.212" Z="337.2243" />
@@ -3084,7 +3084,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3114,7 +3114,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3182,7 +3182,7 @@
     <Objective QuestName="Fel Reavers, No Thanks!" QuestId="10855" Type="CollectItem" ItemId="31653" CollectCount="5" />
     <CustomBehavior File="FlyTo" X="4519.114" Y="3435.031" Z="166.7231" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" MobId="22293" KeepTargetSelected="True" WaitForNpcs="False" X="4521.53" Y="3435.606" Z="166.7218" />
+    <CustomBehavior File="Cava\InteractWith1324" ProactiveCombatStrategy="NoClear" NonCompeteDistance="0" MobId="22293" KeepTargetSelected="True" WaitForNpcs="False" X="4521.53" Y="3435.606" Z="166.7218" />
     <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
     <CustomBehavior File="WaitTimer" WaitTime="15000" QuestId="10855" />
@@ -3200,7 +3200,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3230,7 +3230,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3359,7 +3359,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3389,7 +3389,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3446,7 +3446,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3476,7 +3476,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3516,7 +3516,7 @@
   <CustomBehavior File="FlyTo" X="4247.361" Y="3128.569" Z="180.1282" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(10426)">
-    <CustomBehavior File="InteractWith" QuestId="10426" MobId="20774" NumOfTimes="1000" MobState="Alive" InteractByUsingItemId="29818"
+    <CustomBehavior File="Cava\InteractWith1324" QuestId="10426" MobId="20774" NumOfTimes="1000" MobState="Alive" InteractByUsingItemId="29818"
       Range="20" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitTime="1000" >
       <HuntingGrounds>
       <Hotspot X="4376.299" Y="3072.593" Z="128.5951" />
@@ -3551,7 +3551,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3581,7 +3581,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3655,7 +3655,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3685,7 +3685,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3726,7 +3726,7 @@
   <CustomBehavior File="FlyTo" X="3925.567" Y="2502.769" Z="105.993" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(10422)">
-    <CustomBehavior File="InteractWith" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184588" Range="8" X="4017.968" Y="2315.796" Z="114.8625" />
+    <CustomBehavior File="Cava\InteractWith1324" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184588" Range="8" X="4017.968" Y="2315.796" Z="114.8625" />
   </While>
 </If>
 <If Condition="HasQuest(10422)">
@@ -3741,7 +3741,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3771,7 +3771,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3820,7 +3820,7 @@
 <PickUp QuestName="Arconus the Insatiable" QuestId="10353" GiverName="Agent Ya-six" GiverId="20552" X="3912.772" Y="2087.175" Z="138.7578" />
 <Objective QuestName="Arconus the Insatiable" QuestId="10353" Type="KillMob" MobId="20554" KillCount="1" />
 <If Condition="HasQuest(10345) &amp;&amp; !IsQuestCompleted(10345)">
-  <CustomBehavior File="InteractWith" QuestId="10345" NumOfTimes="1000" MobId="20561" AuraIdOnMob="31261" InteractByUsingItemId="29473" MinRange="10" Range="15" >
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="10345" NumOfTimes="1000" MobId="20561" AuraIdOnMob="31261" InteractByUsingItemId="29473" MinRange="10" Range="15" >
     <HuntingGrounds>
       <Hotspot X="3737.304" Y="2089.055" Z="149.4379" />
       <Hotspot X="3775.707" Y="2077.629" Z="154.607" />
@@ -3866,7 +3866,7 @@
   <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
   <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
   <If Condition="Me.IsAlliance" >
-    <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3896,7 +3896,7 @@
  	TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
   </If>
   <If Condition="Me.IsHorde">
-    <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+    <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
     <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
     <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
       <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -3931,8 +3931,8 @@
   <CustomBehavior File="FlyTo" X="4004.366" Y="1515.485" Z="-116.0868" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="HasQuest(10270)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184073" Range="8" X="4004.366" Y="1515.485" Z="-116.0868" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="20518" KeepTargetSelected="True" WaitForNpcs="False" X="4006.99" Y="1516.938" Z="-115.5346" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184073" Range="8" X="4004.366" Y="1515.485" Z="-116.0868" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="20518" KeepTargetSelected="True" WaitForNpcs="False" X="4006.99" Y="1516.938" Z="-115.5346" />
     <CustomBehavior File="RunMacro" WaitTime="2000" Macro="/click QuestFrameCompleteButton" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
   </While>
@@ -3941,17 +3941,17 @@
   <CustomBehavior File="FlyTo" X="4004.366" Y="1515.485" Z="-116.0868" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!HasQuest(10271)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="20518" KeepTargetSelected="True" WaitForNpcs="False" X="4006.99" Y="1516.938" Z="-115.5346" />
+    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="20518" KeepTargetSelected="True" WaitForNpcs="False" X="4006.99" Y="1516.938" Z="-115.5346" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     <If Condition="!HasQuest(10271)">
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184073" Range="8" X="4004.366" Y="1515.485" Z="-116.0868" />
+      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" WaitTime="2000" PreInteractMountStrategy="Dismount" MobId="184073" Range="8" X="4004.366" Y="1515.485" Z="-116.0868" />
     </If>
   </While>
 </If>
 <If Condition="HasQuest(10271) &amp;&amp; !IsQuestCompleted(10271)">
   <CustomBehavior File="FlyTo" X="4004.366" Y="1515.485" Z="-116.0868" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="InteractWith" QuestId="10271" MobId1="18877" MobId2="20332" MobState="Alive" InteractByUsingItemId="69825"
+  <CustomBehavior File="Cava\InteractWith1324" QuestId="10271" MobId1="18877" MobId2="20332" MobState="Alive" InteractByUsingItemId="69825"
     NumOfTimes="1000" CollectionDistance="1000" MinRange="20" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="NoClear"
     Range="30" MovementBy="NavigatorPreferred" WaitTime="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
@@ -3993,7 +3993,7 @@
 <CustomBehavior File="TaxiRide" MobId="19583" DestName="Shattrath" WaitTime="1000" />
 <RunTo X="-1895.169" Y="5391.674" Z="-12.42781" />
 <If Condition="Me.IsAlliance" >
-  <CustomBehavior File="InteractWith" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="183325" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
   <RunTo X="-8846.39" Y="502.2069" Z="109.6141" />
   <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />
@@ -4023,7 +4023,7 @@
   TransportEndX="2218.391" TransportEndY="5119.588" TransportEndZ="0.0499853" />
 </If>
 <If Condition="Me.IsHorde">
-  <CustomBehavior File="InteractWith" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
+  <CustomBehavior File="Cava\InteractWith1324" MobId="183323" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-1895.169" Y="5391.674" Z="-12.42781" />
   <RunTo X="1798.451" Y="-4359.138" Z="102.4438" />
   <If Condition="!HasSpell(54197) &amp;&amp; Me.Gold &gt;= 500">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: COLD WEATHER FLYING. Please do not stop bot." LogColor="Aquamarine" />

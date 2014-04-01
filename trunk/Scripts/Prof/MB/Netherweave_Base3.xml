@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <While Condition="SecondaryBot.Name != &quot;Questing&quot;" IgnoreCanRun="True">
+    <ChangeBotAction BotName="Questing" />
+  </While>
+  <CustomAction Code="CharacterSettings.Instance.LootMobs = true;" />
+  <CustomAction Code="var9 = 20 - InBankCount (21877);" />
+  <While Condition="InbagCount(21877) &lt; (int)var9" IgnoreCanRun="True">
+    <If Condition="Me.MapId != 530" IgnoreCanRun="True">
+      <CallSubRoutine SubRoutineName="Move To Outlands" />
+    </If>
+    <CustomAction Code="var1 = rnd.Next(100);" />
+    <If Condition="(int)var1 &lt;= 50 &amp;&amp; Me.ZoneId == 3519" IgnoreCanRun="True">
+      <CustomAction Code="var1 = 75;" />
+    </If>
+    <If Condition="(int)var1 &gt; 50 &amp;&amp; Me.ZoneId == 3483" IgnoreCanRun="True">
+      <CustomAction Code="var1 = 25;" />
+    </If>
+    <If Condition="(int)var1 &lt;= 50" IgnoreCanRun="True">
+      <!--<FlyToAction Dismount="True" Location="-2972.587, 4979.647, -21.01518" />
+      <FlyToAction Dismount="True" Location="-2972.587, 4979.647, -21.01518" />-->
+      <LoadProfileAction ProfileType="Professionbuddy" Path="NC3519_Base.xml" />
+			<CustomAction Code="TreeRoot.Stop();" />
+		</If>
+    <If Condition="(int)var1 &gt; 50" IgnoreCanRun="True">
+      <!--<FlyToAction Dismount="True" Location="-228.6671, 2342.706, 41.80946" />
+      <FlyToAction Dismount="True" Location="-228.6671, 2342.706, 41.80946" />-->
+      <LoadProfileAction ProfileType="Professionbuddy" Path="NC3483_Base.xml" />
+			<CustomAction Code="TreeRoot.Stop();" />
+    </If>
+    <If Condition="Me.FreeNormalBagSlots &lt;= 5" IgnoreCanRun="False">
+      <LoadProfileAction ProfileType="Professionbuddy" Path="[PB]MBBase(Cava).xml" />
+			<CustomAction Code="TreeRoot.Stop();" />
+    </If>
+  </While>  
+  <LoadProfileAction ProfileType="Professionbuddy" Path="[PB]MBBase(Cava).xml" />
+  <CustomAction Code="TreeRoot.Stop();" />
+
+   <SubRoutine SubRoutineName="Move To Outlands" >
+      <CallSubRoutine SubRoutineName="Move Main City" />
+      <CustomAction Code="slog(&quot;Moving to Outlands&quot;);" />
+      <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="-8999.261, 861.9354, 129.262" />
+        <MoveToAction Location="-9006.312, 870.4896, 129.6931" MoveType="Location" Pathing="Navigator" Entry="0" />
+        <InteractionAction InteractType="GameObject" Entry="195141" InteractDelay="1000" GameObjectType="Transport" SpellFocus="Anvil" />
+      </If>
+      <If Condition="Me.IsHorde" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="1891.899, -4478.009, 23.29911" />
+        <MoveToAction Location="1771.429, -4326.675, -8.22939" MoveType="Location" Pathing="Navigator" Entry="0" />
+        <InteractionAction InteractType="GameObject" Entry="195142" InteractDelay="1000" GameObjectType="Transport" SpellFocus="Anvil" />
+      </If>
+      <WaitAction Condition="Me.ZoneId == 4" Timeout="30000" />
+      <FlyToAction Dismount="False" Location="-11895.9, -3206.984, -6.04731" />
+      <CustomAction Code="CTM(-11930.31, -3209.613, -1.836873);" />
+      <CustomAction Code="Thread.Sleep(5000);" />
+      <WaitAction Condition="Me.MapId == 530" Timeout="30000" />
+    </SubRoutine>
+   <SubRoutine SubRoutineName="Move Main City">
+      <If Condition="Me.IsAlliance &amp;&amp; Me.ZoneId != 1519" IgnoreCanRun="True">
+        <CustomAction Code="slog(&quot;Moving to Stormwind&quot;);" />
+        <If Condition="Me.MapId == 1" IgnoreCanRun="True">
+          <CallSubRoutine SubRoutineName="Move Kalindor_EK_Darkshore_Stormwind" />
+        </If>
+      <If Condition="Me.MapId == 0 &amp;&amp; Me.ZoneId != 1519" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="-8382.521, 617.4127, 95.66184" />
+      </If>
+      <If Condition="Me.ZoneId != 1519" IgnoreCanRun="True">
+        <CustomAction Code="MessageBox.Show(&quot;Failed to move char to Stormwind, please manualy move it..EXITING&quot;);" />
+        <CustomAction Code="TreeRoot.Stop();" />
+      </If>
+    </If>
+      <If Condition="Me.IsHorde &amp;&amp; Me.ZoneId != 1637" IgnoreCanRun="True">
+      <CustomAction Code="slog(&quot;Moving to Orgrimmar&quot;);" />
+      <If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId != 1637" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="2056.886, -4769.664, 27.85884" />
+      </If>
+      <If Condition="Me.MapId == 0 &amp;&amp; DistanceTo(-12446.25, 216.3512, 31.52748) &lt; DistanceTo(2066.941, 285.7291, 97.03172)" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move EK_Kalindor_GromgolBaseCamp_Orgrimmar" />
+      </If>
+      <If Condition="Me.MapId == 0 &amp;&amp; DistanceTo(2066.941, 285.7291, 97.03172) &lt; DistanceTo(-12446.25, 216.3512, 31.52748)" IgnoreCanRun="True">
+        <CallSubRoutine SubRoutineName="Move EK_Kalindor_Brill_Orgrimmar" />
+      </If>
+      <If Condition="Me.ZoneId != 1637" IgnoreCanRun="True">
+        <CustomAction Code="MessageBox.Show(&quot;Failed to move char to Orgrimmar, please manualy move it..EXITING&quot;);" />
+        <CustomAction Code="TreeRoot.Stop();" />
+      </If>
+    </If>
+  </SubRoutine>
+   <SubRoutine SubRoutineName="Move Kalindor_EK_Darkshore_Stormwind">
+      <CustomAction Code="slog(&quot;Switching to Eastern Kingdoms..&quot;);" />
+      <CustomAction Code="FarmTime.Reset();" />
+      <If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId != 141" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="7459.9, -326.56, 8.09" />
+        <LoadProfileAction ProfileType="Professionbuddy" Path="Kalindor_EK_DS_[PB]MB(Cava).xml" />
+      </If>
+      <If Condition="Me.MapId == 1 &amp;&amp; Me.ZoneId == 141" IgnoreCanRun="True">
+        <FlyToAction Dismount="True" Location="8177.59, 1002.69, 6.671073" />
+        <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176310 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176310 ).Location.Distance(new WoWPoint(8162.587, 1005.365, -0.02063938)) &lt; 3" Timeout="6000000" />
+        <CustomAction Code="CTM(8168.902, 1005.917, 6.204763);" />
+        <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176310 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 176310 ).Location.Distance(new WoWPoint(-8650.719, 1346.051, 0.04130154)) &lt; 3 &amp;&amp; Me.MapId == 0" Timeout="6000000" />
+        <MoveToAction Location="-8640.046, 1326.006, 5.233113" MoveType="Location" Pathing="ClickToMove" Entry="0" />
+      </If>
+    </SubRoutine>
+   <SubRoutine SubRoutineName="Move EK_Kalindor_GromgolBaseCamp_Orgrimmar">
+    <CustomAction Code="slog(&quot;Switching to Kalimdor.&quot;);" />
+    <FlyToAction Dismount="True" Location="-12446.25, 216.3512, 31.52748" />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 175080 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 175080 ).Location.Distance(new WoWPoint(-12464.34, 233.1597, 49.53437)) &lt; 3 &amp;&amp; Me.MapId == 0" Timeout="6000000" />
+    <CustomAction Code="CTM(-12455.66, 222.6899, 31.77196);" />
+    <WaitAction Condition="Me.MapId == 1" Timeout="10000000" />
+    <CustomAction Code="Thread.Sleep(5000);" />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 175080 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 175080 ).Location.Distance(new WoWPoint(1880.818, -4435.269, 152.8608)) &lt; 3" Timeout="6000000" />
+    <MoveToAction Location="1864.878, -4414.582, 135.2331" MoveType="Location" Pathing="ClickToMove" Entry="0" />
+  </SubRoutine>
+   <SubRoutine SubRoutineName="Move EK_Kalindor_Brill_Orgrimmar">
+    <FlyToAction Dismount="True" Location="2065.385, 283.6125, 97.01198" />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871).Location.Distance(new WoWPoint(2062.376, 292.998, 114.973)) &lt; 2 &amp;&amp; Me.MapId == 0" Timeout="6000000" />
+    <CustomAction Code="CTM(2068.048, 295.7675, 97.24749);" />
+    <WaitAction Condition="Me.MapId == 1" Timeout="10000000" />
+    <CustomAction Code="Thread.Sleep(5000);" />
+    <WaitAction Condition="ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871 ) != null &amp;&amp; ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().FirstOrDefault(o =&gt; o.Entry == 164871 ).Location.Distance(new WoWPoint(1833.509, -4391.543, 152.7679)) &lt; 2" Timeout="6000000" />
+    <MoveToAction Location="1840.743, -4390.931, 135.233" MoveType="Location" Pathing="ClickToMove" Entry="0" />
+  </SubRoutine>
+
+<Declaration Code="private void slog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.Aquamarine, &quot;[PB-Cava]: &quot; + format, args);&#xD;&#xA;}" />
+<Declaration Code="Random rnd = new Random();" />
+<Declaration Code="static Stopwatch FarmTime = new Stopwatch();" />
+
+</Professionbuddy>
