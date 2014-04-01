@@ -588,6 +588,24 @@
     </Hotspots>
   </Objective>
 </Quest>
+<Quest Id="27533" Name="A Fate Worse Than Butchery">
+  <Objective Type="KillMob" MobId="16117" KillCount="9">
+    <Hotspots>
+			<Hotspot X="2944.698" Y="-2865.787" Z="100.0499" />
+			<Hotspot X="2905.391" Y="-2876.609" Z="98.57363" />
+			<Hotspot X="2884.344" Y="-2911.572" Z="99.00864" />
+			<Hotspot X="2918.03" Y="-2934.036" Z="102.8025" />
+			<Hotspot X="2953.03" Y="-2914.36" Z="102.9098" />
+			<Hotspot X="2993.098" Y="-2902.945" Z="103.6182" />
+			<Hotspot X="3028.547" Y="-2882.95" Z="105.9232" />
+			<Hotspot X="3007.376" Y="-2848.28" Z="107.2474" />
+			<Hotspot X="3029.934" Y="-2815.136" Z="104.0664" />
+			<Hotspot X="2998.9" Y="-2790.69" Z="114.6578" />
+			<Hotspot X="2962.721" Y="-2770.249" Z="111.6927" />
+			<Hotspot X="2953.983" Y="-2809.956" Z="107.2656" />
+    </Hotspots>
+  </Objective>
+</Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
 <If Condition="Me.IsAlliance" >
@@ -2041,6 +2059,8 @@
 <PickUp QuestName="A Fate Worse Than Butchery" QuestId="27533" GiverName="Augustus the Touched" GiverId="12384" X="2935.735" Y="-2744.635" Z="109.6077" />
 <PickUp QuestName="Augustus' Receipt Book" QuestId="27534" GiverName="Augustus the Touched" GiverId="12384" X="2935.735" Y="-2744.635" Z="109.6077" />
 <Objective QuestName="Augustus' Receipt Book" QuestId="27534" Type="CollectItem" ItemId="15884" CollectCount="1" />
+<Objective QuestName="A Fate Worse Than Butchery" QuestId="27533" Type="KillMob" MobId="16117" KillCount="9" />
+<!--
 <If Condition="HasQuest(27533) &amp;&amp; !IsQuestCompleted(27533)" >
   <CustomBehavior File="CollectThings" QuestId="27533" MobId="16117" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="2944.698" Y="-2865.787" Z="100.0499" />
@@ -2057,6 +2077,7 @@
     <Hotspot X="2953.983" Y="-2809.956" Z="107.2656" />
   </CustomBehavior>
 </If>
+-->
 <TurnIn QuestName="A Fate Worse Than Butchery" QuestId="27533" TurnInName="Augustus the Touched" TurnInId="12384" X="2935.735" Y="-2744.635" Z="109.6077" />
 <TurnIn QuestName="Augustus' Receipt Book" QuestId="27534" TurnInName="Augustus the Touched" TurnInId="12384" X="2935.735" Y="-2744.635" Z="109.6077" />
 <If Condition="HasQuest(27527)" >
