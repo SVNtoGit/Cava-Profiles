@@ -552,7 +552,7 @@
 </If>
 <If Condition="HasQuest(12720) &amp;&amp; !IsQuestCompleted(12720)" >
   <CustomBehavior File="Message" Text="\n\n    Disabling\n AutoEquip \n For next Quest\n" LogColor="Aquamarine" />
-  <CustomBehavior File="UserSettings" AutoEquipArmor="false" />
+	<CustomBehavior File="UserSettings" AutoEquipWeapons="false" />
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
   <While Condition="HasItem(39418)" >
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(39418)" WaitTime="1000" />
@@ -562,7 +562,7 @@
   <CustomBehavior File="EquipItem" ItemId="39371" Slot="SecondaryHandSlot" />
   <CustomBehavior File="SpecificQuests\DeathknightStart\FindAndBeatNpcs" QuestId="12720" MobId1="28610" MobId2="28936" MobId3="28939" X="1696.448" Y="-5849.888" Z="116.1477" />
   <CustomBehavior File="EquipItem" ItemId="38707" Slot="MainHandSlot" />
-  <CustomBehavior File="UserSettings" AutoEquipArmor="original" />
+  <CustomBehavior File="UserSettings" AutoEquipWeapons="original" />
 </If>
 <TurnIn QuestName="How To Win Friends And Influence Enemies" QuestId="12720" TurnInName="Prince Keleseth" TurnInId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
 <PickUp QuestName="Behind Scarlet Lines" QuestId="12723" GiverName="Prince Keleseth" GiverId="28911" X="1879.399" Y="-5765.102" Z="83.77553" />
