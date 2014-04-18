@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Professionbuddy>
+  <While Condition="SecondaryBot.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True">
+    <ChangeBotAction BotName="Gatherbuddy2" />
+  </While>
+  <WaitAction Condition="false" Timeout="6000" />
+	<If Condition="Me.IsAlliance" IgnoreCanRun="True">
+		<LoadProfileAction ProfileType="Honorbuddy" Path="AllianceBlank.xml" />
+	</If>
+	<If Condition="Me.IsHorde" IgnoreCanRun="True">
+		<LoadProfileAction ProfileType="Honorbuddy" Path="HordeBlank.xml" />
+	</If>
+  <LoadProfileAction ProfileType="Professionbuddy" Path="Free[PB]MB(Cava).xml" />
+	<CustomAction Code="TreeRoot.Stop();" />
+
+		<Declaration Code="public string version = &quot;alpha 1&quot;;" />
+    <Declaration Code="private void slog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.Aquamarine, &quot;[PB-Cava]: &quot; + format, args);&#xD;&#xA;}" />
+    <Declaration Code="private void dlog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.LemonChiffon, &quot;[PBCava-Debug]: &quot; + format, args);&#xD;&#xA;}" />
+</Professionbuddy>
+
