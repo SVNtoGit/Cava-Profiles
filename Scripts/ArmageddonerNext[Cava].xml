@@ -1,7 +1,10 @@
 <HBProfile>
 <Name>Armageddoner Next [Cava] $Rev$</Name>
 <QuestOrder>
-<If Condition="(Me.LevelFraction &gt;= 79.25)">
+<If Condition="(Me.Level &gt;= 80)">
+  <If Condition="!HasQuest(28363) &amp;&amp; IsQuestCompleted(28363)">
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(85-86)TheJadeForest[Cava]" />
+  </If>	
   <If Condition="!HasQuest(27938) &amp;&amp; IsQuestCompleted(27938) &amp;&amp; Me.LevelFraction &gt;= 82.50">
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(83-84)Uldum[Cava]" />
   </If>	
@@ -15,10 +18,7 @@
   <If Condition="!HasQuest(13083) &amp;&amp; IsQuestCompleted(13083)">
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(80-81)TheStormPeaks[Cava]" />
   </If>	
-  <If Condition="!HasQuest(12621) &amp;&amp; IsQuestCompleted(12621)">
-    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(80-81)Icecrow[Cava]" />
-  </If>
-  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(79-80)SholazarBasin[Cava]" />
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(80-81)Icecrow[Cava]" />
 </If>
 <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </QuestOrder>
