@@ -1136,26 +1136,50 @@
 <If Condition="HasQuest(27453) &amp;&amp; !IsQuestCompleted(27453)" >
   <CustomBehavior File="UserSettings" UseMount="False" />
   <While Condition="!IsQuestCompleted(27453)" >
-  <CustomBehavior File="CombatUseItemOnV2" QuestId="27453" ItemId="61284" MobId1="8519" MobId2="8520" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
-    UseWhenMobHasHealthPercent="25" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000" UseItemStrategy="UseItemOncePerTarget" >
-    <HuntingGrounds WaypointVisitStrategy="Random" >
-    <Hotspot X="1777.728" Y="-4480.072" Z="71.33502" />
-    <Hotspot X="1738.422" Y="-4471.527" Z="71.33502" />
-    <Hotspot X="1706.271" Y="-4495.529" Z="71.33502" />
-    <Hotspot X="1674.637" Y="-4520.238" Z="71.33502" />
-    <Hotspot X="1656.789" Y="-4556.394" Z="71.33502" />
-    <Hotspot X="1660.149" Y="-4596.311" Z="71.33502" />
-    <Hotspot X="1668.791" Y="-4635.538" Z="71.33502" />
-    <Hotspot X="1677.436" Y="-4674.782" Z="71.33502" />
-    <Hotspot X="1695.259" Y="-4710.895" Z="71.33502" />
-    <Hotspot X="1735.306" Y="-4710.209" Z="71.33502" />
-    <Hotspot X="1746.92" Y="-4671.615" Z="71.33502" />
-    <Hotspot X="1760.544" Y="-4633.939" Z="71.33502" />
-    <Hotspot X="1776.969" Y="-4597.149" Z="71.33502" />
-    <Hotspot X="1785.604" Y="-4557.94" Z="71.33502" />
-    <Hotspot X="1791.535" Y="-4517.845" Z="71.33502" />
-    </HuntingGrounds>
-  </CustomBehavior>
+		<If Condition="HasItem(61284)" >
+			<CustomBehavior File="CombatUseItemOnV2" QuestId="27453" ItemId="61284" MobId1="8519" MobId2="8520" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
+				UseWhenMobHasHealthPercent="25" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000" UseItemStrategy="UseItemOncePerTarget" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="1777.728" Y="-4480.072" Z="71.33502" />
+				<Hotspot X="1738.422" Y="-4471.527" Z="71.33502" />
+				<Hotspot X="1706.271" Y="-4495.529" Z="71.33502" />
+				<Hotspot X="1674.637" Y="-4520.238" Z="71.33502" />
+				<Hotspot X="1656.789" Y="-4556.394" Z="71.33502" />
+				<Hotspot X="1660.149" Y="-4596.311" Z="71.33502" />
+				<Hotspot X="1668.791" Y="-4635.538" Z="71.33502" />
+				<Hotspot X="1677.436" Y="-4674.782" Z="71.33502" />
+				<Hotspot X="1695.259" Y="-4710.895" Z="71.33502" />
+				<Hotspot X="1735.306" Y="-4710.209" Z="71.33502" />
+				<Hotspot X="1746.92" Y="-4671.615" Z="71.33502" />
+				<Hotspot X="1760.544" Y="-4633.939" Z="71.33502" />
+				<Hotspot X="1776.969" Y="-4597.149" Z="71.33502" />
+				<Hotspot X="1785.604" Y="-4557.94" Z="71.33502" />
+				<Hotspot X="1791.535" Y="-4517.845" Z="71.33502" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+		<If Condition="HasItem(61285)" >
+			<CustomBehavior File="CombatUseItemOnV2" QuestId="27453" ItemId="61285" MobId1="8519" MobId2="8520" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds"
+				UseWhenMobHasHealthPercent="25" MaxRangeToUseItem="5" NumOfTimesToUseItem="1000" UseItemStrategy="UseItemOncePerTarget" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="1777.728" Y="-4480.072" Z="71.33502" />
+				<Hotspot X="1738.422" Y="-4471.527" Z="71.33502" />
+				<Hotspot X="1706.271" Y="-4495.529" Z="71.33502" />
+				<Hotspot X="1674.637" Y="-4520.238" Z="71.33502" />
+				<Hotspot X="1656.789" Y="-4556.394" Z="71.33502" />
+				<Hotspot X="1660.149" Y="-4596.311" Z="71.33502" />
+				<Hotspot X="1668.791" Y="-4635.538" Z="71.33502" />
+				<Hotspot X="1677.436" Y="-4674.782" Z="71.33502" />
+				<Hotspot X="1695.259" Y="-4710.895" Z="71.33502" />
+				<Hotspot X="1735.306" Y="-4710.209" Z="71.33502" />
+				<Hotspot X="1746.92" Y="-4671.615" Z="71.33502" />
+				<Hotspot X="1760.544" Y="-4633.939" Z="71.33502" />
+				<Hotspot X="1776.969" Y="-4597.149" Z="71.33502" />
+				<Hotspot X="1785.604" Y="-4557.94" Z="71.33502" />
+				<Hotspot X="1791.535" Y="-4517.845" Z="71.33502" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
   </While>
   <CustomBehavior File="AscendInWater" />
   <CustomBehavior File="UserSettings"  UseMount="True" />
