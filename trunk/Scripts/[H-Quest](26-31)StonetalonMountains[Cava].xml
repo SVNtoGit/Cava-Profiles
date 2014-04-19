@@ -582,20 +582,10 @@
   <CustomBehavior File="ForcedDismount" QuestId="26058" />
   <CustomBehavior File="Vehicles\MountVehOnly" QuestId="26058" VehicleMountId="41895" X="926.4401" Y="0.3862346" Z="93.2642" />
   <CustomBehavior File="WaitTimer" QuestId="26058" WaitTime="2000" />
-  <CustomBehavior File="EjectVeh" QuestId="26058" />
-  <CustomBehavior File="WaitTimer" QuestId="26058" WaitTime="2000" />
-  <CustomBehavior File="AbandonQuest" QuestId="26058" />
-  <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <PickUp QuestName="In Defense of Krom'gar Fortress" QuestId="26058" GiverName="Chief Blastgineer Bombgutz" GiverId="40902" X="929.1406" Y="-5.588542" Z="92.56274" />
-  <RunTo QuestId="26058" X="926.4401" Y="0.3862346" Z="93.2642" />
-  <CustomBehavior File="RunMacro" QuestId="26058" Macro="/cancelform" />
-  <CustomBehavior File="ForcedDismount" QuestId="26058" />
-  <CustomBehavior File="Vehicles\MountVehOnly" QuestId="26058" VehicleMountId="41895" X="926.4401" Y="0.3862346" Z="93.2642" />
-  <If Condition="!IsQuestCompleted(26058)" >
-    <DisableBehavior Name="Combat" />
-    <CustomBehavior File="SpecificQuests\26058-Stonetalon-InDefenseofKromgarFortress" />
-    <EnableBehavior Name="Combat" />
-  </If>
+	<While Condition="!IsQuestCompleted(26058)" >
+    <CustomBehavior File="Cava\26058-Stonetalon-InDefenseofKromgarFortress" />
+	</While>
+	<EnableBehavior Name="Combat" />
   <CustomBehavior File="WaitTimer" QuestId="26058" WaitTime="4000" />
 </If>
 <TurnIn QuestName="In Defense of Krom'gar Fortress" QuestId="26058" TurnInName="Overlord Krom'gar" TurnInId="41023" X="899.0891" Y="-1.17107" Z="93.00195" />
