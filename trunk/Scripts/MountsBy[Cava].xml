@@ -34,22 +34,22 @@
       <CustomBehavior File="Message" Text="Continuing Mount Procedures. Going to Buy : 1 GROUND MOUNT. Please do not stop bot." LogColor="Aquamarine" />
 			<If Condition="Me.Race == WoWRace.Dwarf">
 				<RunTo X="-5523.76" Y="-1347.603" Z="398.6647" />
-				<CustomBehavior File="Cava\InteractWith1324" MobId="1261" BuyItemId="5873" WaitTime="5000" X="-5538.411" Y="-1323.057" Z="398.9364" />
+				<CustomBehavior File="InteractWith" MobId="1261" BuyItemId="5873" WaitTime="5000" X="-5538.411" Y="-1323.057" Z="398.9364" />
         <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(5873)" />
       </If>
 			<If Condition="Me.Race == WoWRace.Gnome">
 				<RunTo X="-5454.171" Y="-621.048" Z="393.3968" />
-        <CustomBehavior File="Cava\InteractWith1324" MobId="7955" BuyItemId="8595" WaitTime="5000" X="-5454.171" Y="-621.048" Z="393.3968" />
+        <CustomBehavior File="InteractWith" MobId="7955" BuyItemId="8595" WaitTime="5000" X="-5454.171" Y="-621.048" Z="393.3968" />
         <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8595)" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Pandaren">
 				<RunTo X="-8847.539" Y="501.144" Z="109.6118" />
-				<CustomBehavior File="Cava\InteractWith1324" MobId="65068" BuyItemId="91009" WaitTime="5000" X="-8209.379" Y="546.0261" Z="117.7685" />
+				<CustomBehavior File="InteractWith" MobId="65068" BuyItemId="91009" WaitTime="5000" X="-8209.379" Y="546.0261" Z="117.7685" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(91009)" />
 			</If>
 			<If Condition="Me.Race == WoWRace.Human">
 				<RunTo X="-8847.539" Y="501.144" Z="109.6118" />
-				<CustomBehavior File="Cava\InteractWith1324" MobId="43694" BuyItemId="2414" WaitTime="5000" X="-8783.64" Y="386.509" Z="100.8159" />
+				<CustomBehavior File="InteractWith" MobId="43694" BuyItemId="2414" WaitTime="5000" X="-8783.64" Y="386.509" Z="100.8159" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(2414)" />
 			</If>
 			<If Condition="Me.Race == WoWRace.NightElf">  <!--vai-->
@@ -65,7 +65,7 @@
 				<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 				
 				<RunTo X="10129.78" Y="2526.595" Z="1324.828" />  <!--treina-->
-				<CustomBehavior File="Cava\InteractWith1324" MobId="4730" BuyItemId="8631" WaitTime="5000" X="10129.91" Y="2533.245" Z="1323.271" />
+				<CustomBehavior File="InteractWith" MobId="4730" BuyItemId="8631" WaitTime="5000" X="10129.91" Y="2533.245" Z="1323.271" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8631)" />
 
 				<RunTo X="9948.389" Y="2614.481" Z="1316.236" />  <!--volta-->
@@ -93,13 +93,13 @@
 				<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 
 				<RunTo X="9655.252" Y="2509.33" Z="1331.598" />  <!--treina-->
-				<CustomBehavior File="Cava\InteractWith1324" MobId="207995" ObjectType="GameObject" Range="5" X="9655.252" Y="2509.33" Z="1331.598" />
+				<CustomBehavior File="InteractWith" MobId="207995" ObjectType="GameObject" Range="5" X="9655.252" Y="2509.33" Z="1331.598" />
 				<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for  {TimeRemaining}" />
 				<RunTo X="-3981.769" Y="-11929.14" Z="-0.2419412" />
-				<CustomBehavior File="Cava\InteractWith1324" MobId="17584" BuyItemId="29744" WaitTime="5000" CollectionDistance="50" X="-3981.769" Y="-11929.14" Z="-0.2419412" />
+				<CustomBehavior File="InteractWith" MobId="17584" BuyItemId="29744" WaitTime="5000" CollectionDistance="50" X="-3981.769" Y="-11929.14" Z="-0.2419412" />
 				<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(29744)" />
 				<RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
-				<CustomBehavior File="Cava\InteractWith1324" MobId="207996" ObjectType="GameObject" Range="5" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+				<CustomBehavior File="InteractWith" MobId="207996" ObjectType="GameObject" Range="5" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
 				<CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 
 				<RunTo X="9948.389" Y="2614.481" Z="1316.236" />  <!--volta-->
@@ -148,7 +148,7 @@
 		</If>
     <If Condition="Mount.FlyingMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 50">
       <CustomBehavior File="Message" Text="Continuing Mount Procedures. Going to Buy : 1 FLY MOUNT. Please do not stop bot." LogColor="Aquamarine" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="43768" NonCompeteDistance="0" InteractByBuyingItemId="25470" X="-8829.18" Y="482.34" Z="109.616" />
+      <CustomBehavior File="InteractWith" MobId="43768" NonCompeteDistance="0" InteractByBuyingItemId="25470" X="-8829.18" Y="482.34" Z="109.616" />
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(25470)" />
     </If>
@@ -214,18 +214,18 @@ HORDE      HORDE      HORDE      HORDE
           TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
           TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
         <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-        <CustomBehavior File="Cava\InteractWith1324" MobId="184503" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+        <CustomBehavior File="InteractWith" MobId="184503" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
         <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 				<While Condition="!HasItem(28927)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+					<CustomBehavior File="InteractWith" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(28927)" >
 					<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 				</If>
         <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-        <CustomBehavior File="Cava\InteractWith1324" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+        <CustomBehavior File="InteractWith" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
         <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
         <RunTo X="2066.672" Y="285.47" Z="97.03136" />
         <CustomBehavior File="UseTransport" TransportId="164871"
@@ -240,7 +240,7 @@ HORDE      HORDE      HORDE      HORDE
         <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 				<RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 				<While Condition="!HasItem(46099)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+					<CustomBehavior File="InteractWith" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(46099)" >
@@ -252,7 +252,7 @@ HORDE      HORDE      HORDE      HORDE
         <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
         <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 				<While Condition="!HasItem(15290)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+					<CustomBehavior File="InteractWith" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(15290)" >
@@ -260,14 +260,14 @@ HORDE      HORDE      HORDE      HORDE
 				</If>
         <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
         <CustomBehavior File="WaitTimer" WaitTime="1000" />
-        <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+        <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
         <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
       </If>
 			<If Condition="Me.Race == WoWRace.Troll">
         <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
         <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 				<While Condition="!HasItem(18790)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+					<CustomBehavior File="InteractWith" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(18790)" >
@@ -275,7 +275,7 @@ HORDE      HORDE      HORDE      HORDE
 				</If>
 				<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
         <CustomBehavior File="WaitTimer" WaitTime="1000" />
-        <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+        <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
         <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
       </If>
 			<If Condition="Me.Race == WoWRace.Undead" >
@@ -289,7 +289,7 @@ HORDE      HORDE      HORDE      HORDE
           TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
         <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 				<While Condition="!HasItem(13331)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+					<CustomBehavior File="InteractWith" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(13331)" >
@@ -308,7 +308,7 @@ HORDE      HORDE      HORDE      HORDE
         <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
         <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 				<While Condition="!HasItem(62461)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+					<CustomBehavior File="InteractWith" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(62461)" >
@@ -320,7 +320,7 @@ HORDE      HORDE      HORDE      HORDE
         <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
         <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 				<While Condition="!HasItem(91007)" >
-					<CustomBehavior File="Cava\InteractWith1324" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+					<CustomBehavior File="InteractWith" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 					<CustomBehavior File="WaitTimer" WaitTime="5000" />
 				</While>
 				<If Condition="HasItem(91007)" >
@@ -360,7 +360,7 @@ HORDE      HORDE      HORDE      HORDE
 	</If>
     <If Condition="Mount.FlyingMounts.Count() &lt;= 0 &amp;&amp; Me.Gold &gt;= 50">
       <CustomBehavior File="Message" Text="Continuing Mount Procedures. Going to Buy : 1 FLY MOUNT. Please do not stop bot." LogColor="Aquamarine" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="44918" NonCompeteDistance="0" InteractByBuyingItemId="25474" X="1806.94" Y="-4340.67" Z="102.0508" />
+      <CustomBehavior File="InteractWith" MobId="44918" NonCompeteDistance="0" InteractByBuyingItemId="25474" X="1806.94" Y="-4340.67" Z="102.0508" />
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(25474)" />
     </If>

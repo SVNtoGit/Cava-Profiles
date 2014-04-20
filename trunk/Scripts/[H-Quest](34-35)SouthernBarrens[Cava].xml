@@ -5,8 +5,12 @@
 <SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
 
 <AvoidMobs>
+	<Mob Name="Hurlston Stonesthrow" Id="39154" />
+	<Mob Name="Twinbraid's Bodyguard" Id="39156" />
+	<Mob Name="General Twinbraid" Id="39118" />
 </AvoidMobs>
 <Blackspots>
+  <Blackspot X="-3661.594" Y="-1865.085" Z="91.66811" Radius="50" />
   <Blackspot X="-2128.62" Y="-1738.848" Z="95.55921" Radius="0.9141951" />
   <Blackspot X="2146.624" Y="-1747.624" Z="99.07735" Radius="0.9141951" />
   <Blackspot X="-2107.653" Y="-1770.23" Z="92.87098" Radius="2.04443" />
@@ -15,6 +19,7 @@
   <Blackspot X="-2156.348" Y="-1737.305" Z="91.12527" Radius="0.9" />
   <Blackspot X="-3835.989" Y="-1458.326" Z="134.3484" Radius="0.9" />
   <Blackspot X="-3859.045" Y="-1819.973" Z="91.66666" Radius="5" />
+  <Blackspot X="-1913.491" Y="-2435.182" Z="97.4805" Radius="10" />
 </Blackspots>
 
 <Mailboxes>
@@ -133,7 +138,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" DestName="Desolation Hold" WaitTime="1000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3310" MobState="Alive" DestName="Desolation Hold" WaitTime="1000" />
     <RunTo X="-3288.85" Y="-1697.99" Z="122.62" />
     </Else>
   </If>
@@ -269,7 +274,7 @@
 <If Condition="HasQuest(24633) &amp;&amp; !IsQuestCompleted(24633)" >
   <RunTo X="-4146.751" Y="-1947.241" Z="93.06946" />
   <While Condition="!IsQuestCompleted(24633)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37847" MobState="Alive" GossipOptions="1" WaitTime="1000" X="-4148.825" Y="-1942.795" Z="92.94933" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37847" MobState="Alive" GossipOptions="1" WaitTime="1000" X="-4148.825" Y="-1942.795" Z="92.94933" />
   </While>
 </If>
 <TurnIn QuestName="Mahka's Plea" QuestId="24633" TurnInName="Mahka" TurnInId="37812" X="-4017.233" Y="-1990.208" Z="92.62781" />
@@ -311,7 +316,7 @@
 <If Condition="HasQuest(24747) &amp;&amp; !IsQuestCompleted(24747)" >
   <While Condition="!IsObjectiveComplete(1, 24747)" >
     <RunTo X="-4045.799" Y="-2401.036" Z="126.4094" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="38109" X="-4045.799" Y="-2401.036" Z="126.4094" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="38109" X="-4045.799" Y="-2401.036" Z="126.4094" />
   </While>
   <RunTo X="-3867.069" Y="-2288.091" Z="91.66738" />
 </If>

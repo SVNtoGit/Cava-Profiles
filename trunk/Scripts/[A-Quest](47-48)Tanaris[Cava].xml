@@ -142,8 +142,8 @@
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5411" WaitTime="1000" CollectionDistance="50" X="-7232.01" Y="-3751.71" Z="9.092983" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -176,9 +176,9 @@
 <PickUp QuestName="What Lies Within" QuestId="25070" GiverType="GameObject" GiverName="Antediluvean Chest" GiverId="202474" X="-9811.891" Y="-2790.806" Z="10.39081" />
 <If Condition="HasQuest(25070) &amp;&amp; !IsQuestCompleted(25070)">
   <While Condition="!IsQuestCompleted(25070)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="202474" ObjectType="GameObject" GossipOptions="1" X="-9811.891" Y="-2790.806" Z="10.39081" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25070" MobId="39077" MobState="Alive" WaitForNpcs="False" X="-9805.138" Y="-2790.609" Z="10.39171" />
   </While>
 </If>
 <TurnIn QuestName="What Lies Within" QuestId="25070" TurnInId="202474" TurnInType="GameObject" X="-9811.891" Y="-2790.806" Z="10.39081" />

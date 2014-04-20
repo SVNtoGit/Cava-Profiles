@@ -245,8 +245,8 @@
 <If Condition="!HasQuest(26546) &amp;&amp; !IsQuestCompleted(26546)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="8161" WaitTime="1000" CollectionDistance="50" X="311.295" Y="-2092.38" Z="123.2282" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="8161" WaitTime="1000" CollectionDistance="50" X="311.295" Y="-2092.38" Z="123.2282" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="8161" WaitTime="1000" CollectionDistance="50" X="311.295" Y="-2092.38" Z="123.2282" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="8161" WaitTime="1000" CollectionDistance="50" X="311.295" Y="-2092.38" Z="123.2282" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -295,7 +295,7 @@
 <If Condition="HasQuest(26548)" >
   <RunTo X="291.5901" Y="-2002.034" Z="194.1264" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="8018" NumOfTimes="1" GossipOptions="2" WaitTime="1000" CollectionDistance="100" X="282.0963" Y="-2001.276" Z="194.1264" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="8018" NumOfTimes="1" GossipOptions="2" WaitTime="1000" CollectionDistance="100" X="282.0963" Y="-2001.276" Z="194.1264" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="43699" X="328.227" Y="-4122.65" Z="117.202" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
 </If>

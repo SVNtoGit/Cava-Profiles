@@ -118,7 +118,7 @@
   <PickUp QuestName="Continue to Stormwind" QuestId="26394" GiverName="Bartlett the Brave" GiverId="42983" X="-9435.714" Y="87.61111" Z="57.12768" />
   <If Condition="HasQuest(26394) &amp;&amp; Me.ZoneId == 12">
     <RunTo X="-9435.353" Y="86.40341" Z="56.89362" />
-    <CustomBehavior File="TaxiRide" MobId="42983" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="42983" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
   </If>
   <TurnIn QuestName="Continue to Stormwind" QuestId="26394" TurnInName="Osric Strang" TurnInId="1323" X="-8702.275" Y="382.0517" Z="103.7259" />
   <PickUp QuestName="Dungar Longdrink" QuestId="26395" GiverName="Osric Strang" GiverId="1323" X="-8702.275" Y="382.0517" Z="103.7259" />
@@ -126,7 +126,7 @@
   <PickUp QuestName="Return to Argus" QuestId="26396" GiverName="Dungar Longdrink" GiverId="352" X="-8835.292" Y="490.3976" Z="109.6168" />
   <If Condition="HasQuest(26396) &amp;&amp; Me.ZoneId == 1519">
     <RunTo X="-8836.521" Y="490.2663" Z="109.6144" />
-    <CustomBehavior File="TaxiRide" MobId="352" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="352" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
   </If>
   <TurnIn QuestName="Return to Argus" QuestId="26396" TurnInName="Smith Argus" TurnInId="514" />
 </If>
@@ -153,7 +153,7 @@
 <TurnIn QuestName="The Fargodeep Mine" QuestId="62" TurnInName="Marshal Dughan" TurnInId="240" X="-9465.521" Y="74.00694" Z="56.59536" />
 <PickUp QuestName="The Jasperlode Mine" QuestId="76" GiverName="Marshal Dughan" GiverId="240" X="-9465.521" Y="74.00694" Z="56.59536" />
 <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(47)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="151" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-9465.286" Y="9.633138" Z="56.96364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="151" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-9465.286" Y="9.633138" Z="56.96364" />
 </If>
 <TurnIn QuestName="Gold Dust Exchange" QuestId="47" TurnInName="Remy &quot;Two Times&quot;" TurnInId="241" X="-9496.319" Y="72.82639" Z="56.41537" />
 <If Condition="HasQuest(26150)" >
@@ -204,7 +204,7 @@
 <TurnIn QuestName="A Fishy Peril" QuestId="40" TurnInName="Marshal Dughan" TurnInId="240"  X="-9465.521" Y="74.00694" Z="56.59536" />
 <PickUp QuestName="Further Concerns" QuestId="35" GiverName="Marshal Dughan" GiverId="240" X="-9465.521" Y="74.00694" Z="56.59536" />
 <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(107)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="151" BuyItemId="4496" BuyItemCount="2" WaitTime="5000" CollectionDistance="50" X="-9465.286" Y="9.633138" Z="56.96364" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="151" BuyItemId="4496" BuyItemCount="2" WaitTime="5000" CollectionDistance="50" X="-9465.286" Y="9.633138" Z="56.96364" />
 </If>
 <If Condition="HasQuest(107)" >
  	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
@@ -220,7 +220,7 @@
 <TurnIn QuestName="The Escape" QuestId="114" TurnInName="Maybell Maclure" TurnInId="251" X="-10014.04" Y="37.6059" Z="35.1707" />-->
 <If Condition="HasQuest(35)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0"  MobId="240" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-9465.521" Y="74.00694" Z="56.59536" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="240" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-9465.521" Y="74.00694" Z="56.59536" />
   <CustomBehavior File="WaitTimer" WaitTime="90000" />
 </If>
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](07-10)ElwynnForest[Cava]" />

@@ -489,14 +489,14 @@
 </If>
 <If Condition="!HasQuest(26965) &amp;&amp; !IsQuestCompleted(26965)">
   <RunTo X="1421.067" Y="1019.964" Z="52.67456" />
-  <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
+  <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="44825" MobState="Alive" X="1422.93" Y="1017.771" Z="52.56585" />
 </If>
 <PickUp QuestName="The Warchief Cometh" QuestId="26965" GiverName="Grand Executor Mortuus" GiverId="44615" X="1383" Y="1038.63" Z="54.31712" />
 <If Condition="HasQuest(26965)" >
   <CustomBehavior File="WaitTimer" WaitTime="180000" />
   <TurnIn QuestName="The Warchief Cometh" QuestId="26965" TurnInName="Grand Executor Mortuus" TurnInId="44615" X="1383" Y="1038.63" Z="54.31712" />
   <RunTo X="1420.063" Y="1019.367" Z="52.72049" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="44825" NonCompeteDistance="0" X="1422.93" Y="1017.77" Z="52.56605" />
+  <CustomBehavior File="InteractWith" MobId="44825" NonCompeteDistance="0" X="1422.93" Y="1017.77" Z="52.56605" />
 </If>
 <PickUp QuestName="The Gilneas Liberation Front" QuestId="26989" GiverName="Grand Executor Mortuus" GiverId="44615" X="1383" Y="1038.63" Z="54.31712" />
 <PickUp QuestName="Guts and Gore" QuestId="26995" GiverName="High Apothecary Shana T'veen" GiverId="44784" X="1431.48" Y="1086.86" Z="60.47852" />
@@ -516,7 +516,7 @@
 <PickUp QuestName="Iterating Upon Success" QuestId="26998" GiverName="High Apothecary Shana T'veen" GiverId="44784" X="1431.48" Y="1086.86" Z="60.47852" />
 <If Condition="HasQuest(26998) &amp;&amp; !IsQuestCompleted(26998)">
   <While Condition="!IsQuestCompleted(26998)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="26998"  MobId="44825" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" X="1422.93" Y="1017.77" Z="52.56605" />
+    <CustomBehavior File="InteractWith" QuestId="26998"  MobId="44825" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" X="1422.93" Y="1017.77" Z="52.56605" />
     <CustomBehavior File="Cava\26998-SilverpineForest-IUS" />
     <While Condition="Me.IsOnTransport" >
     </While>
@@ -529,9 +529,9 @@
 <If Condition="HasQuest(27045) &amp;&amp; !IsQuestCompleted(27045)">
   <While Condition="!IsQuestCompleted(27045)">
     <RunTo QuestId="27045" X="1302.468" Y="1181.781" Z="52.42754" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27045" MobId="205143" NonCompeteDistance="0" InteractByGossipOptions="1" X="1302.468" Y="1181.781" Z="52.42754" />
+    <CustomBehavior File="InteractWith" QuestId="27045" MobId="205143" NonCompeteDistance="0" InteractByGossipOptions="1" X="1302.468" Y="1181.781" Z="52.42754" />
     <RunTo QuestId="27045" X="1312.753" Y="1209.37" Z="58.51101" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27045" MobId="44894" NonCompeteDistance="0" X="1312.753" Y="1209.37" Z="58.51101" />
+    <CustomBehavior File="InteractWith" QuestId="27045" MobId="44894" NonCompeteDistance="0" X="1312.753" Y="1209.37" Z="58.51101" />
     <CustomBehavior File="WaitTimer" QuestId="27045" WaitTime="130000" />
   </While>
 </If>
@@ -541,10 +541,10 @@
 <PickUp QuestName="The Warchief's Fleet" QuestId="27065" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="1381.35" Y="1040.73" Z="54.31715" />
 <If Condition="HasQuest(27065)" >
   <RunTo X="1056.219" Y="1519.929" Z="29.89098" />
-  <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="50463" MobState="Alive" X="1054.004" Y="1520.776" Z="30.01304" />
+  <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="50463" MobState="Alive" X="1054.004" Y="1520.776" Z="30.01304" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45497" WaitTime="1000" CollectionDistance="50" X="1036.46" Y="1581" Z="27.57662" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45497" WaitTime="1000" CollectionDistance="50" X="1036.46" Y="1581" Z="27.57662" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45497" WaitTime="1000" CollectionDistance="50" X="1036.46" Y="1581" Z="27.57662" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45497" WaitTime="1000" CollectionDistance="50" X="1036.46" Y="1581" Z="27.57662" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -560,18 +560,18 @@
 <PickUp QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" GiverName="Apothecary Wormcrud" GiverId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <If Condition="HasQuest(27088) &amp;&amp; !IsQuestCompleted(27088)">
   <While Condition="!IsQuestCompleted(27088)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27088" MobId="44367" AuraIdMissingFromMob="83903" MobState="Alive" InteractByUsingItemId="60808"
+    <CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" AuraIdMissingFromMob="83903" MobState="Alive" InteractByUsingItemId="60808"
       MinRange="25" Range="75" WaitTime="5000" ProactiveCombatStrategy="ClearMobsTargetingUs" X="821.3822" Y="1731.285" Z="22.4601" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27088" MobId="44367" AuraIdOnMob="83903" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False"/>
+    <CustomBehavior File="InteractWith" QuestId="27088" MobId="44367" AuraIdOnMob="83903" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False"/>
   </While>
 </If>
 <TurnIn QuestName="It's Only Poisonous if You Ingest It" QuestId="27088" TurnInName="Apothecary Wormcrud" TurnInId="44912" X="1081.15" Y="1568.67" Z="28.08229" />
 <If Condition="HasQuest(27069) &amp;&amp; !IsQuestCompleted(27069)">
   <While Condition="!IsQuestCompleted(27069)">
     <If Condition="!Me.HasAura(83839)" >
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" MobId="44916" WaitTime="1000" CollectionDistance="50" X="1068.75" Y="1601.3" Z="28.00132" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByGossipOptions="1" MobState="Alive" MobId="44916" WaitTime="1000" CollectionDistance="50" X="1068.75" Y="1601.3" Z="28.00132" />
     </If>
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="205165" WaitTime="1000" CollectionDistance="1000">
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="205165" WaitTime="1000" CollectionDistance="1000">
       <HuntingGrounds>
       <Hotspot X="950.4467" Y="1759.005" Z="13.09029" />
       <Hotspot X="932.5454" Y="1796.49" Z="12.59434" />
@@ -640,7 +640,7 @@
 <PickUp QuestName="Orcs are in Order" QuestId="27096" GiverName="Admiral Hatchet" GiverId="44916" X="1068.75" Y="1601.3" Z="28.00162" />
 <If Condition="HasQuest(27096)">
   <RunTo X="1056.4" Y="1520.314" Z="29.78237" />
-  <CustomBehavior File="TaxiRide" MobId="50463" DestName="Forsaken High Command"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="50463" DestName="Forsaken High Command"/>
   <RunTo X="1421.02" Y="1018.23" Z="52.6672" />
 </If>
 <TurnIn QuestName="Orcs are in Order" QuestId="27096" TurnInName="Lady Sylvanas Windrunner" TurnInId="44365" X="1381.35" Y="1040.73" Z="54.31714" />
@@ -688,13 +688,13 @@
 <PickUp QuestName="Honor the Dead" QuestId="27180" GiverName="Lady Sylvanas Windrunner" GiverId="44365" X="500.622" Y="1564.54" Z="128.2625" />
 <If Condition="!HasQuest(27226) &amp;&amp; !IsQuestCompleted(27226)">
   <RunTo X="479.3072" Y="1542.345" Z="130.4013" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="2226"  NonCompeteDistance="0" MobState="Alive" X="477.035" Y="1542.86" Z="130.544" />
+  <CustomBehavior File="InteractWith" MobId="2226"  NonCompeteDistance="0" MobState="Alive" X="477.035" Y="1542.86" Z="130.544" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="6739" X="471.135" Y="1500.55" Z="135.522" /><!--id 228-->
 </If>
 <PickUp QuestName="Hair of the Dog" QuestId="27226" GiverName="Warlord Torok" GiverId="44917" X="493.005" Y="1528.26" Z="130.3365" />
 <PickUp QuestName="Reinforcements from Fenris" QuestId="27231" GiverName="Admiral Hatchet" GiverId="44916" X="492.161" Y="1526.04" Z="130.7133" />
 <If Condition="HasQuest(27226) &amp;&amp; !IsQuestCompleted(27226)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="27226" MobId="45196" NumOfTimes="1000" NotMoving="True" InteractByUsingItemId="60870" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" QuestId="27226" MobId="45196" NumOfTimes="1000" NotMoving="True" InteractByUsingItemId="60870" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="747.9648" Y="1205.213" Z="59.22477" />
       <Hotspot X="752.5828" Y="1165.965" Z="52.30637" />
@@ -725,7 +725,7 @@
 <TurnIn QuestName="Hair of the Dog" QuestId="27226" TurnInName="Warlord Torok" TurnInId="44917" X="493.005" Y="1528.26" Z="130.3365" />
 <If Condition="HasQuest(27180) &amp;&amp; !IsQuestCompleted(27180)">
   <While Condition="!IsQuestCompleted(27180)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27180" MobId="45197" Mobstate="Dead" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" QuestId="27180" MobId="45197" Mobstate="Dead" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="325.9091" Y="1465.282" Z="114.9139" />
       <Hotspot X="302.3915" Y="1498.523" Z="115.6164" />
@@ -743,7 +743,7 @@
 </If>
 <If Condition="!HasQuest(27181) &amp;&amp; !IsQuestCompleted(27181)">
   <While Condition="!IsQuestCompleted(27181)">
-    <CustomBehavior File="Cava\InteractWith1324" MobId="45195" MobState="Alive" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" MobId="45195" MobState="Alive" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="325.9091" Y="1465.282" Z="114.9139" />
       <Hotspot X="302.3915" Y="1498.523" Z="115.6164" />
@@ -798,7 +798,7 @@
 </If>
 <TurnIn QuestName="Cornered and Crushed!" QuestId="27194" TurnInName="Master Forteski" TurnInId="45228" X="368.99" Y="1102.56" Z="106.2657" />
 <If Condition="HasQuest(27195) &amp;&amp; !IsQuestCompleted(27195)">
-  <CustomBehavior File="Cava\InteractWith1324" KeepTargetSelected="True"  NonCompeteDistance="0" MobState="Alive" MobId="45228" WaitTime="1000" X="368.99" Y="1102.56" Z="106.2658" />
+  <CustomBehavior File="InteractWith" KeepTargetSelected="True"  NonCompeteDistance="0" MobState="Alive" MobId="45228" WaitTime="1000" X="368.99" Y="1102.56" Z="106.2658" />
   <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
   <CustomBehavior File="WaitTimer" WaitTime="2000" />
 </If>
@@ -807,7 +807,7 @@
   <While Condition="!IsQuestCompleted(27195)" >
     <CustomBehavior File="EscortGroup" QuestId="27195" EscortNpcId="45228" EscortCompleteWhen="QuestCompleteOrFails" />
     <If Condition="!IsQuestCompleted(27195)" >
-      <CustomBehavior File="Cava\InteractWith1324" KeepTargetSelected="True" MobState="Alive" MobId="45228" WaitTime="1000" X="368.99" Y="1102.56" Z="106.2658" />
+      <CustomBehavior File="InteractWith" KeepTargetSelected="True" MobState="Alive" MobId="45228" WaitTime="1000" X="368.99" Y="1102.56" Z="106.2658" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
       <CustomBehavior File="WaitTimer" WaitTime="2000" />
     </If>
@@ -818,7 +818,7 @@
 <If Condition="!HasQuest(27290) &amp;&amp; !IsQuestCompleted(27290) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="478.761" Y="1538.956" Z="130.8325" />
-  <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="2226" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -842,18 +842,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503"  NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503"  NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -868,7 +868,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -880,7 +880,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -888,14 +888,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -903,7 +903,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -917,7 +917,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -936,7 +936,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324"  NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith"  NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -948,7 +948,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -977,10 +977,10 @@
   <CustomBehavior File="WaitTimer" WaitTime="70000" />
   <EnableBehavior Name="Combat" />
   <RunTo X="-908.3533" Y="1637.583" Z="68.33718" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="45479" MobState="Alive" X="-905.708" Y="1637.5" Z="68.24181" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="45479" MobState="Alive" X="-905.708" Y="1637.5" Z="68.24181" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45484" WaitTime="1000" CollectionDistance="50" X="-947.821" Y="1624.81" Z="68.33994" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45484" WaitTime="1000" CollectionDistance="50" X="-947.821" Y="1624.81" Z="68.33994" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45484" WaitTime="1000" CollectionDistance="50" X="-947.821" Y="1624.81" Z="68.33994" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="45484" WaitTime="1000" CollectionDistance="50" X="-947.821" Y="1624.81" Z="68.33994" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
@@ -991,7 +991,7 @@
 <PickUp QuestName="The F.C.D." QuestId="27345" GiverName="Forward Commander Onslaught" GiverId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 <If Condition="HasQuest(27345) &amp;&amp; !IsQuestCompleted(27345)">
   <While Condition="!IsQuestCompleted(27345)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27345" NonCompeteDistance="0" MobId="205363" X="-991.7174" Y="1999.604" Z="23.98579" />
+    <CustomBehavior File="InteractWith" QuestId="27345" NonCompeteDistance="0" MobId="205363" X="-991.7174" Y="1999.604" Z="23.98579" />
   </While>
 </If>
 <If Condition="HasQuest(27333) &amp;&amp; !IsQuestCompleted(27333)">
@@ -1020,7 +1020,7 @@
 <TurnIn QuestName="The F.C.D." QuestId="27345" TurnInName="Forward Commander Onslaught" TurnInId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 <If Condition="HasQuest(27342) &amp;&amp; !IsQuestCompleted(27342)">
   <While Condition="!IsQuestCompleted(27342)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27342" MobId="205367" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" QuestId="27342" MobId="205367" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-1127.42" Y="1553.873" Z="36.78362" />
       <Hotspot X="-1166.907" Y="1551.589" Z="28.88032" />
@@ -1045,7 +1045,7 @@
 <If Condition="!HasQuest(27349) &amp;&amp; !IsQuestCompleted(27349) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-909.1154" Y="1637.844" Z="68.34979" />
-  <CustomBehavior File="TaxiRide" MobId="45479" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="45479" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -1069,18 +1069,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -1095,7 +1095,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -1107,7 +1107,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -1115,14 +1115,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -1130,7 +1130,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -1144,7 +1144,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -1163,7 +1163,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -1175,7 +1175,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -1243,7 +1243,7 @@
 <If Condition="HasQuest(27401) &amp;&amp; !IsQuestCompleted(27401)">
   <While Condition="!IsQuestCompleted(27401)">
     <RunTo X="-1464.153" Y="1709.413" Z="20.75263" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27401" NonCompeteDistance="0" MobId="205417" Range="8" X="-1464.153" Y="1709.413" Z="20.75263" />
+    <CustomBehavior File="InteractWith" QuestId="27401" NonCompeteDistance="0" MobId="205417" Range="8" X="-1464.153" Y="1709.413" Z="20.75263" />
     <CustomBehavior File="WaitTimer" QuestId="27401" WaitTime="40000" />
   </While>
 </If>
@@ -1318,7 +1318,7 @@
 <If Condition="HasQuest(27406) &amp;&amp; !IsQuestCompleted(27406)">
   <While Condition="!IsQuestCompleted(27406)">
     <RunTo X="-2122.612" Y="933.7408" Z="1.264872" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27406" NonCompeteDistance="0" MobId="44369" X="-2121.18" Y="931.868" Z="1.144271" />
+    <CustomBehavior File="InteractWith" QuestId="27406" NonCompeteDistance="0" MobId="44369" X="-2121.18" Y="931.868" Z="1.144271" />
   </While>
 </If>
 <TurnIn QuestName="A Man Named Godfrey" QuestId="27406" TurnInName="Deathstalker Commander Belmont" TurnInId="45474" X="-1155.172" Y="1136.166" Z="24.28254" />
@@ -1347,7 +1347,7 @@
 </If>
 <If Condition="HasQuest(27438)">
   <RunTo X="-117.489" Y="1310.357" Z="56.74168" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46552" MobState="Alive" X="-114.764" Y="1313.55" Z="56.74158" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46552" MobState="Alive" X="-114.764" Y="1313.55" Z="56.74158" />
 </If>
 <TurnIn QuestName="The Great Escape" QuestId="27438" TurnInName="Lady Sylvanas Windrunner" TurnInId="45525" X="-182.658" Y="1275.42" Z="46.45326" />
 <PickUp QuestName="Rise, Godfrey" QuestId="27472" GiverName="Lady Sylvanas Windrunner" GiverId="45525" X="-182.658" Y="1275.42" Z="46.45326" />
@@ -1367,7 +1367,7 @@
 <If Condition="!HasQuest(26964) &amp;&amp; !IsQuestCompleted(26964) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-117.489" Y="1310.357" Z="56.74168" />
-  <CustomBehavior File="TaxiRide" MobId="46552" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="46552" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -1391,18 +1391,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -1417,7 +1417,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -1429,7 +1429,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -1437,14 +1437,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -1452,7 +1452,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -1466,7 +1466,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -1485,7 +1485,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -1497,7 +1497,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -1535,14 +1535,14 @@
 <PickUp QuestName="Dalar Dawnweaver" QuestId="27476" GiverName="Lady Sylvanas Windrunner" GiverId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
 <If Condition="HasQuest(27476)">
   <RunTo X="-117.489" Y="1310.357" Z="56.74168" />
-  <CustomBehavior File="TaxiRide" MobId="46552" DestName="The Sepulcher"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="46552" DestName="The Sepulcher"/>
   <RunTo X="478.86" Y="1536.59" Z="131.1036" />
 </If>
 <TurnIn QuestName="Dalar Dawnweaver" QuestId="27476" TurnInName="Dalar Dawnweaver" TurnInId="1938" X="456.391" Y="1472.7" Z="124.9997" />
 <If Condition="!HasQuest(27478) &amp;&amp; !IsQuestCompleted(27478)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="9553" WaitTime="1000" CollectionDistance="50" X="556.339" Y="1568.4" Z="131.9677" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="9553" WaitTime="1000" CollectionDistance="50" X="556.339" Y="1568.4" Z="131.9677" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="9553" WaitTime="1000" CollectionDistance="50" X="556.339" Y="1568.4" Z="131.9677" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="9553" WaitTime="1000" CollectionDistance="50" X="556.339" Y="1568.4" Z="131.9677" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1552,7 +1552,7 @@
 <If Condition="!HasQuest(27478) &amp;&amp; !IsQuestCompleted(27478) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
-  <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="2226" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -1576,18 +1576,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -1602,7 +1602,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -1614,7 +1614,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -1622,14 +1622,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -1637,7 +1637,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -1651,7 +1651,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -1670,7 +1670,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -1682,7 +1682,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -1712,7 +1712,7 @@
                (HasQuest(27483) &amp;&amp; !IsQuestCompleted(27483))">
   <If Condition="Me.ZoneId != 267">
     <RunTo X="454.1225" Y="1468.119" Z="125.029" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="45731"  WaitForNpcs="False" NonCompeteDistance="0" WaitTime="8000" Range="8" CollectionDistance="1000" X="454.1225" Y="1468.119" Z="125.029" />
+    <CustomBehavior File="InteractWith" MobId="45731"  WaitForNpcs="False" NonCompeteDistance="0" WaitTime="8000" Range="8" CollectionDistance="1000" X="454.1225" Y="1468.119" Z="125.029" />
   </If>
 </If>
 <If Condition="!HasQuest(27480) &amp;&amp; !IsQuestCompleted(27480) &amp;&amp; !HasItem(61310)">
@@ -1763,7 +1763,7 @@
 <If Condition="HasQuest(27478) || HasQuest(27480) || HasQuest(27483)">
   <If Condition="Me.ZoneId == 267">
     <RunTo X="293.377" Y="378.2" Z="-64.7137" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="45732" WaitForNpcs="False" WaitTime="8000" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="454.1225" Y="1468.119" Z="125.029" />
+    <CustomBehavior File="InteractWith" MobId="45732" WaitForNpcs="False" WaitTime="8000" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="454.1225" Y="1468.119" Z="125.029" />
   </If>
 </If>
 <TurnIn QuestName="Relios the Relic Keeper" QuestId="27478" TurnInName="Dalar Dawnweaver" TurnInId="1938" X="456.391" Y="1472.7" Z="124.9997" />
@@ -1772,7 +1772,7 @@
 <If Condition="!HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
-  <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="2226" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -1796,18 +1796,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -1822,7 +1822,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -1834,7 +1834,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -1842,14 +1842,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -1857,7 +1857,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -1871,7 +1871,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -1890,7 +1890,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -1902,7 +1902,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -1928,7 +1928,7 @@
 <PickUp QuestName="Only One May Enter" QuestId="27484" GiverName="Dalar Dawnweaver" GiverId="1938" X="456.391" Y="1472.7" Z="124.9997" />
 <If Condition="HasQuest(27484) &amp;&amp; !IsQuestCompleted(27484) &amp;&amp; Me.Level &gt;= 20">
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
-  <CustomBehavior File="TaxiRide" MobId="2226" DestName="The Forsaken Front"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="2226" DestName="The Forsaken Front"/>
   <RunTo X="-114.142" Y="1312.32" Z="56.7416" />
 </If>
 <TurnIn QuestName="Only One May Enter" QuestId="27484" TurnInName="Lady Sylvanas Windrunner" TurnInId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
@@ -1939,7 +1939,7 @@
 <PickUp QuestName="Transdimensional Warfare: Chapter II" QuestId="27513" GiverName="Ambermill Dimensional Portal" GiverId="45752" X="-290.7847" Y="1010.779" Z="113.4999" />
 <If Condition="HasQuest(27513) &amp;&amp; !IsQuestCompleted(27513)">
   <If Condition="!Me.HasAura(85361)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27513" MobId="45752" NonCompeteDistance="0" InteractByGossipOptions="1" X="-290.7847" Y="1010.779" Z="113.4999" />
+    <CustomBehavior File="InteractWith" QuestId="27513" MobId="45752" NonCompeteDistance="0" InteractByGossipOptions="1" X="-290.7847" Y="1010.779" Z="113.4999" />
   </If>
   <CustomBehavior File="CollectThings" QuestId="27513" MobId="1913" MobId1="1914" MobId2="1888" MobId3="1889" CollectUntil="QuestComplete" MobState="Alive" >
      <Hotspot X="-133.5131" Y="962.0079" Z="67.46605" />
@@ -1964,7 +1964,7 @@
 <!--# # # Level 19 # # # -->
 <If Condition="HasQuest(27518) &amp;&amp; !IsQuestCompleted(27518)">
   <While Condition="!IsQuestCompleted(27518)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27518" NonCompeteDistance="0" MobId="2120" MobState="Alive" WaitTime="3000" X="-135.444" Y="1071.23" Z="66.07559" />
+    <CustomBehavior File="InteractWith" QuestId="27518" NonCompeteDistance="0" MobId="2120" MobState="Alive" WaitTime="3000" X="-135.444" Y="1071.23" Z="66.07559" />
   </While>
 </If>
 <TurnIn QuestName="A Wolf in Bear's Clothing" QuestId="27510" TurnInName="High Warlord Cromush" TurnInId="45631" X="-213.4528" Y="1266.518" Z="46.57634" />
@@ -1972,7 +1972,7 @@
 <If Condition="!HasQuest(27542) &amp;&amp; !IsQuestCompleted(27542)">
   <RunTo X="-157.7935" Y="1271.415" Z="50.90693" />
   <While Condition="HasQuestAvailable(45617)" >
-    <CustomBehavior File="Cava\InteractWith1324" KeepTargetSelected="True" NonCompeteDistance="0" MobState="Alive"
+    <CustomBehavior File="InteractWith" KeepTargetSelected="True" NonCompeteDistance="0" MobState="Alive"
     MobId="45617" X="-153.325" Y="1270.27" Z="51.46418" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1981,7 +1981,7 @@
 <If Condition="!HasQuest(27547) &amp;&amp; !IsQuestCompleted(27547) &amp;&amp; Me.Level &gt;= 20">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="477.334" Y="1541.139" Z="130.7148" />
-  <CustomBehavior File="TaxiRide" MobId="2226" DestName="Brill"/>
+  <CustomBehavior File="Cava\TaxiRide" MobId="2226" DestName="Brill"/>
   <RunTo X="2066.672" Y="285.47" Z="97.03136" />
   <CustomBehavior File="UseTransport" TransportId="164871"
     WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -2005,18 +2005,18 @@
         TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+      <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	  <While Condition="!HasItem(28927)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(28927)" >
 	    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	  </If>
       <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-      <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+      <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
       <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
       <RunTo X="2066.672" Y="285.47" Z="97.03136" />
       <CustomBehavior File="UseTransport" TransportId="164871"
@@ -2031,7 +2031,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	  <RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	  <While Condition="!HasItem(46099)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(46099)" >
@@ -2043,7 +2043,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	  <While Condition="!HasItem(15290)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(15290)" >
@@ -2051,14 +2051,14 @@
 	  </If>
       <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Troll">
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	  <While Condition="!HasItem(18790)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(18790)" >
@@ -2066,7 +2066,7 @@
 	  </If>
 	  <RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
-      <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
       <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
     </If>
     <If Condition="Me.Race == WoWRace.Undead" >
@@ -2080,7 +2080,7 @@
         TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
       <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	  <While Condition="!HasItem(13331)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(13331)" >
@@ -2099,7 +2099,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	  <While Condition="!HasItem(62461)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
 	  <If Condition="HasItem(62461)" >
@@ -2111,7 +2111,7 @@
       <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
       <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	  <While Condition="!HasItem(91007)" >
-	    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	    <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	  </While>
       <If Condition="HasItem(91007)" >
@@ -2153,7 +2153,7 @@
 </If>
 <TurnIn QuestName="Pyrewood's Fall" QuestId="27550" TurnInName="Lord Godfrey" TurnInId="45878" X="-164.5273" Y="1272.746" Z="48.94875" />
 <If Condition="HasQuest(27547) &amp;&amp; !IsQuestCompleted(27547)">
-  <CustomBehavior File="Cava\InteractWith1324"  QuestId="27547" NonCompeteDistance="0" NumOfTimes="1000" MobId="45910" WaitTime="1000" CollectionDistance="1000">
+  <CustomBehavior File="InteractWith"  QuestId="27547" NonCompeteDistance="0" NumOfTimes="1000" MobId="45910" WaitTime="1000" CollectionDistance="1000">
     <HuntingGrounds>
       <Hotspot X="-359.5446" Y="1603.387" Z="18.65908" />
       <Hotspot X="-390.5657" Y="1576.729" Z="18.65908" />
@@ -2184,7 +2184,7 @@
 <!--# # # Level 20 # # # -->
 <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="-119.0278" Y="1311.098" Z="56.74191" />
-<CustomBehavior File="TaxiRide" MobId="46552" DestName="Brill"/>
+<CustomBehavior File="Cava\TaxiRide" MobId="46552" DestName="Brill"/>
 <RunTo X="2066.672" Y="285.47" Z="97.03136" />
 <CustomBehavior File="UseTransport" TransportId="164871"
   WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
@@ -2208,18 +2208,18 @@
       TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
       TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
     <RunTo X="1805.411" Y="346.5782" Z="71.13829" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
+    <CustomBehavior File="InteractWith" MobId="184503" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="1805.411" Y="346.5782" Z="71.13829" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
     <RunTo X="9244.157" Y="-7493.535" Z="37.04896" />
 	<While Condition="!HasItem(28927)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16264" BuyItemId="28927" WaitTime="5000" X="9243.975" Y="-7496.219" Z="37.05021" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(28927)" >
 	  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(28927)" WaitTime="1000" />
 	</If>
     <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+    <CustomBehavior File="InteractWith" MobId="184502" NonCompeteDistance="0" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
     <RunTo X="2066.672" Y="285.47" Z="97.03136" />
     <CustomBehavior File="UseTransport" TransportId="164871"
@@ -2234,7 +2234,7 @@
     <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
 	<RunTo X="2090.952" Y="-4570.108" Z="49.25381" />
 	<While Condition="!HasItem(46099)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3362" BuyItemId="46099" WaitTime="5000" X="2077.21" Y="-4566.8" Z="49.2534" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(46099)" >
@@ -2246,7 +2246,7 @@
     <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
     <RunTo X="-2276.675" Y="-391.7559" Z="-9.422676" />
 	<While Condition="!HasItem(15290)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3685" BuyItemId="15290" WaitTime="5000" X="-2279.796" Y="-392.0697" Z="-9.396775" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(15290)" >
@@ -2254,14 +2254,14 @@
 	</If>
     <RunTo X="-2302.333" Y="-378.9293" Z="-9.142591" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   </If>
   <If Condition="Me.Race == WoWRace.Troll">
     <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
     <RunTo X="-855.8142" Y="-4880.039" Z="21.20707" />
 	<While Condition="!HasItem(18790)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7952" BuyItemId="18790" WaitTime="5000" X="-858.092" Y="-4883.042" Z="22.11629" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(18790)" >
@@ -2269,7 +2269,7 @@
 	</If>
 	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
     <CustomBehavior File="WaitTimer" WaitTime="1000" />
-    <CustomBehavior File="TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   </If>
   <If Condition="Me.Race == WoWRace.Undead" >
@@ -2283,7 +2283,7 @@
       TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
     <RunTo X="2276.172" Y="240.7322" Z="33.39476" />
 	<While Condition="!HasItem(13331)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4731" BuyItemId="13331" WaitTime="5000" X="2276.172" Y="240.7322" Z="33.39476" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(13331)" >
@@ -2302,7 +2302,7 @@
     <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
     <RunTo X="1484.721" Y="-4134.545" Z="52.46157" />
 	<While Condition="!HasItem(62461)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="48510" BuyItemId="62461" GossipOptions="1" WaitTime="5000" X="1482.96" Y="-4132.74" Z="52.5905" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(62461)" >
@@ -2314,7 +2314,7 @@
     <RunTo X="1738.168" Y="-4420.57" Z="37.00436" />
     <RunTo X="2009.67" Y="-4717.963" Z="29.19584" />
 	<While Condition="!HasItem(91007)" >
-	  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
+	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="66022" BuyItemId="91007" WaitTime="5000" X="2009.267" Y="-4721.249" Z="29.5149" />
 	  <CustomBehavior File="WaitTimer" WaitTime="5000" />
 	</While>
 	<If Condition="HasItem(91007)" >

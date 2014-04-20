@@ -333,11 +333,11 @@
 <PickUp QuestName="Medicinal Purpose" QuestId="9463" GiverName="Anchorite Fateema" GiverId="17214" X="-4199.106" Y="-12469.88" Z="45.63029" />
 <If Condition="HasQuest(9313)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="5000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20894" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
   </If>
   <CustomBehavior File="Cava\SetHearthstone" MobId="16553" X="-4127.804" Y="-12467.71" Z="44.08532" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -370,11 +370,11 @@
 <!--# # # Level 6 # # # -->
 <TurnIn QuestName="The Great Moongraze Hunt" QuestId="9454" TurnInName="Acteon" TurnInId="17110" X="-4203.647" Y="-12526.49" Z="45.44647" />
 <If Condition="!HasQuest(9506) &amp;&amp; !IsQuestCompleted(9506)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="18810" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="18810" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
   </If>
 </If>
 <PickUp QuestName="A Small Start" QuestId="9506" GiverName="Admiral Odesyus" GiverId="17240" X="-4699.569" Y="-12414.81" Z="11.56222" />
@@ -393,7 +393,7 @@
 <TurnIn QuestName="I've Got a Plant" QuestId="9530" TurnInName="Admiral Odesyus" TurnInId="17240" X="-4699.569" Y="-12414.81" Z="11.56313" />
 <PickUp QuestName="Tree's Company" QuestId="9531" GiverName="Admiral Odesyus" GiverId="17240" X="-4699.569" Y="-12414.81" Z="11.56313" />
 <If Condition="HasQuest(9523) &amp;&amp; !IsQuestCompleted(9523)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17489" X="-4720.671" Y="-12381.52" Z="10.9913" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17489" X="-4720.671" Y="-12381.52" Z="10.9913" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <RunTo X="-4836.979" Y="-12112.58" Z="29.78202" />
@@ -431,14 +431,14 @@
 <If Condition="HasQuest(9463)">
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="18810" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-4209.451" Y="-12456.21" Z="45.54427" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <TurnIn QuestName="Medicinal Purpose" QuestId="9463" TurnInName="Anchorite Fateema" TurnInId="17214" X="-4199.106" Y="-12469.88" Z="45.63039" />
   <If Condition="(Me.LevelFraction &gt;= 11.58 )">
     <RunTo X="-3865.313" Y="-11642.25" Z="-137.6485" />
     <RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
     <PickUp QuestName="Breaking Waves of Change" QuestId="26383" GiverName="Sentinel Cordressa Briarbow" GiverId="42936" X="9682.51" Y="2511.49" Z="1359.997" />
     <RunTo X="9948.389" Y="2614.481" Z="1316.236" />
@@ -499,7 +499,7 @@
   <LootMobs Value="true" />
   <RunTo X="-4756.698" Y="-12439.8" Z="2.074138" />
   <While Condition="!IsQuestCompleted(9537)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="9537" MobId="17243" MobState="Alive" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="1000" X="-4756.698" Y="-12439.8" Z="2.074138" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9537" MobId="17243" MobState="Alive" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="1000" X="-4756.698" Y="-12439.8" Z="2.074138" />
     <CustomBehavior File="WaitTimer" WaitTime="10000" />
   </While>
   <LootMobs Value="null" />
@@ -518,7 +518,7 @@
   <If Condition="(Me.LevelFraction &gt;= 11.58 )">
     <RunTo X="-3865.313" Y="-11642.25" Z="-137.6485" />
     <RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
     <PickUp QuestName="Breaking Waves of Change" QuestId="26383" GiverName="Sentinel Cordressa Briarbow" GiverId="42936" X="9682.51" Y="2511.49" Z="1359.997" />
     <RunTo X="9948.389" Y="2614.481" Z="1316.236" />
@@ -595,8 +595,8 @@
 	  <GrindTo Condition="GetItemCount(23801) &gt;= 1 || IsQuestCompleted(9544)" />
     </If>
     <While Condition="HasQuest(9544) &amp;&amp; !IsQuestCompleted(9544) &amp;&amp; HasItem(23801)" >
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="9544" MobId="17375" Range="8" NotMoving="True" CollectionDistance="2000" X="-4582.794" Y="-11581.06" Z="15.21268" />
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="9544" MobId1="181714" MobId2="181720" MobId3="181721" MobId4="181722" MobId5="181723"
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9544" MobId="17375" Range="8" NotMoving="True" CollectionDistance="2000" X="-4582.794" Y="-11581.06" Z="15.21268" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9544" MobId1="181714" MobId2="181720" MobId3="181721" MobId4="181722" MobId5="181723"
         MobId6="181724" MobId7="181725" MobId8="181726" MobId9="181727" MobId10="181728" MobId11="181729" MobId12="181730" MobId13="181731" MobId14="181732" MobId15="181733"
         ObjectType="GameObject" CollectionDistance="2000" X="-4582.794" Y="-11581.06" Z="15.21268" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -795,7 +795,7 @@
   <If Condition="(Me.LevelFraction &gt;= 11.58 )">
     <RunTo X="-3865.313" Y="-11642.25" Z="-137.6485" />
     <RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
     <PickUp QuestName="Breaking Waves of Change" QuestId="26383" GiverName="Sentinel Cordressa Briarbow" GiverId="42936" X="9682.51" Y="2511.49" Z="1359.997" />
     <RunTo X="9948.389" Y="2614.481" Z="1316.236" />
@@ -807,8 +807,8 @@
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](11-16)Darkshore[Cava]" />
   </If>
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="17930" WaitTime="1000" CollectionDistance="50" X="-4235.529" Y="-12518.16" Z="46.20815" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for bag = 0,4,1 do for slot = 1, 32, 1 do local name = GetContainerItemLink(bag,slot); PickupContainerItem(bag,slot); DeleteCursorItem(); end; end" />
@@ -828,7 +828,7 @@
 <Objective QuestName="Murlocs... Why Here? Why Now?" QuestId="9562" Type="CollectItem" ItemId="23849" CollectCount="5" />
 <If Condition="!HasQuest(9564) &amp;&amp; !IsQuestCompleted(9564)" >
   <While Condition="!HasItem(23850)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="17475" WaitTime="500" CollectionDistance="50" X="-3410.685" Y="-11914.34" Z="1.200484" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="17475" WaitTime="500" CollectionDistance="50" X="-3410.685" Y="-11914.34" Z="1.200484" />
   </While>
   <PickUp QuestName="Gurf's Dignity" QuestId="9564" GiverType="Item" GiverId="23850" />
   <LootMobs Value="null" />
@@ -870,7 +870,7 @@
 </If>
 <If Condition="Me.ZoneId == 3557"> <!-- Exodar -->
   <RunTo X="-4043.964" Y="-11570.73" Z="-138.4523" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="207996" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-4043.964" Y="-11570.73" Z="-138.4523" />
   <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
 </If>
 <If Condition="Me.ZoneId == 1657"> <!-- Darnassus -->
@@ -881,7 +881,7 @@
 </If>
 <If Condition="Me.ZoneId == 141"> <!-- Teldrassil (Rut'theran Village) -->
   <RunTo X="8383.156" Y="982.5832" Z="30.82965" />
-  <CustomBehavior File="TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
   <RunTo X="7454.986" Y="-326.4835" Z="8.030777" />
 </If>
 <TurnIn QuestName="Breaking Waves of Change" QuestId="26383" TurnInName="Dentaria Silverglade" TurnInId="32973" X="7446.51" Y="-331.0717" Z="8.055398" />

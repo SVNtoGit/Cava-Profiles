@@ -378,7 +378,7 @@
 	TransportEndX="2936.059" TransportEndY="-4993.609" TransportEndZ="165.4816" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43217" MobState="Alive" InteractByGossipOptions="3" X="2947.02" Y="-4998.86" Z="165.6512" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43217" MobState="Alive" InteractByGossipOptions="3" X="2947.02" Y="-4998.86" Z="165.6512" />
   <CustomBehavior File="WaitTimer" WaitTime="102000" />
 </If>
 <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
@@ -393,13 +393,13 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <PickUp QuestName="A Pale Brew" QuestId="14432" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9379" />
@@ -422,13 +422,13 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <Objective QuestName="Amberwind's Journal" QuestId="14428" Type="CollectItem" ItemId="49356" CollectCount="1" />
@@ -442,7 +442,7 @@
 <If Condition="HasQuest(14430) &amp;&amp; !IsQuestCompleted(14430)" >
   <RunTo X="4281.499" Y="-6295.583" Z="95.56413" />
   <While Condition="!IsQuestCompleted(14430)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36599" GossipOptions="1" MobState="Alive" X="4279.885" Y="-6295.137" Z="95.56365" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36599" GossipOptions="1" MobState="Alive" X="4279.885" Y="-6295.137" Z="95.56365" />
   </While>
 </If>
 <TurnIn QuestName="Hacking the Construct" QuestId="14430" TurnInName="Andorel Sunsworn" TurnInId="36596" X="4509.807" Y="-5722.682" Z="104.6739" />
@@ -450,13 +450,13 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <PickUp QuestName="The Blackmaw Doublecross" QuestId="14435" GiverName="Haggrum Bloodfist" GiverId="8586" X="4513.173" Y="-5711.819" Z="105.9377" />
@@ -465,10 +465,10 @@
     <Runto X="4506.947" Y="-5719.754" Z="105.1245" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(49368)" WaitTime="1000" />
   </While>
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36596" MobState="Alive" GossipOptions="1" X="4509.807" Y="-5722.682" Z="104.6735" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36596" MobState="Alive" GossipOptions="1" X="4509.807" Y="-5722.682" Z="104.6735" />
   <CustomBehavior File="WaitTimer" WaitTime="8000" />
   <While Condition="!IsObjectiveComplete(1, 14435)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36618" MobState="Alive" GossipOptions="1, 1, 1" X="4278.357" Y="-5081.085" Z="132.9803" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36618" MobState="Alive" GossipOptions="1, 1, 1" X="4278.357" Y="-5081.085" Z="132.9803" />
   </While>
   <Objective QuestName="The Blackmaw Doublecross" QuestId="14435" Type="KillMob" MobId="36013" KillCount="4" />
   <Objective QuestName="The Blackmaw Doublecross" QuestId="14435" Type="KillMob" MobId="36012" KillCount="4" />
@@ -478,13 +478,13 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <If Condition="!HasQuest(14475) &amp;&amp; !IsQuestCompleted(14475)" >
@@ -495,10 +495,10 @@
     StandOnX="4488.054" StandOnY="-5711.091" StandOnZ="107.1199"
 	TransportStartX="4488.178" TransportStartY="-5711.46" TransportStartZ="106.729"
 	TransportEndX="4488.178" TransportEndY="-5711.46" TransportEndZ="145.5508" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43217" MobState="Alive" GossipOptions="3" X="4478.03" Y="-5718.1" Z="145.564" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43217" MobState="Alive" GossipOptions="3" X="4478.03" Y="-5718.1" Z="145.564" />
   <CustomBehavior File="WaitTimer" WaitTime="102000" />
   <RunTo X="2989.938" Y="-4161.812" Z="101.3086" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36728" MobState="Alive" X="2990.2" Y="-4164.109" Z="101.3395" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36728" MobState="Alive" X="2990.2" Y="-4164.109" Z="101.3395" />
 </If>
 <PickUp QuestName="Grounded!" QuestId="14475" GiverName="Kroum" GiverId="36728" X="2990.2" Y="-4164.109" Z="101.3395" />
 <PickUp QuestName="Where's My Head?" QuestId="14462" GiverName="Chawg" GiverId="36730" X="2997.021" Y="-4145.448" Z="101.2715" />
@@ -515,7 +515,7 @@
 </If>
 <If Condition="HasQuest(14464)" >
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36761" WaitForNpcs="False" X="2872.335" Y="-4024.022" Z="179.7786" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36761" WaitForNpcs="False" X="2872.335" Y="-4024.022" Z="179.7786" />
   <CustomBehavior File="WaitTimer" WaitTime="20000" />
   <If Condition="Me.Z &gt; 170" >
       <CustomBehavior File="MyCTM" X="2876.282" Y="-4028.363" Z="180.7295" />
@@ -533,13 +533,13 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <Objective QuestName="Let Them Feast on Fear" QuestId="24433" Type="KillMob" MobId="36816" KillCount="12" />
@@ -548,7 +548,7 @@
 <TurnIn QuestName="Commando Drop" QuestId="24434" TurnInName="Lorekeeper's Summoning Stone" TurnInId="36918" X="2810.522" Y="-3954.583" Z="96.18325" />
 <!--# # # Level 21 # # # -->
 <If Condition="HasQuest(24433)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="36918" GossipOptions="1" X="2810.522" Y="-3954.583" Z="96.18325" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="36918" GossipOptions="1" X="2810.522" Y="-3954.583" Z="96.18325" />
   <CustomBehavior File="WaitTimer" WaitTime="8000" />
 </If>
 <TurnIn QuestName="Let Them Feast on Fear" QuestId="24433" TurnInName="Chawg" TurnInId="36730" X="2997.021" Y="-4145.448" Z="101.2715" />
@@ -556,19 +556,19 @@
   <CustomBehavior File="Message" Text="Moving to ASHENVALE, Please do not stop bot" LogColor="Aquamarine" />
   <!--Sirverwind Refuge FP-->
   <RunTo X="2162.874" Y="-1142.296" Z="97.98605" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34943" MobState="Alive" X="2164.845" Y="-1142.432" Z="98.09012" />
   <RunTo X="3049.433" Y="-497.6142" Z="205.6378" />
   <!--Hellscream FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34429" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3050.128" Y="-496.0035" Z="205.6396" />
   <RunTo X="3351.621" Y="1052.791" Z="3.052232" />
   <!--Zoram'gar FP-->
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11901" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="3349.501" Y="1056.158" Z="2.948962" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](23-26)Ashenvale[Cava]" />
 </If>
 <!--turnin 14477-->
 <!--The mor'shan Ramparts FP-->
 <RunTo X="1206.05" Y="-2209.15" Z="92.1406" />
-<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="34927" MobState="Alive" X="1202.19" Y="-2210.24" Z="92.14162" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34927" MobState="Alive" X="1202.19" Y="-2210.24" Z="92.14162" />
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](20-23)Ashenvale[Cava]" />
 </QuestOrder>
 </HBProfile>

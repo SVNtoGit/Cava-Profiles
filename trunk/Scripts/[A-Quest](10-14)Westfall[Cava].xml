@@ -213,7 +213,7 @@
 <If Condition="HasQuest(26209) &amp;&amp; !IsQuestCompleted(26209)" >
   <RunTo X="-9816.654" Y="976.4108" Z="29.13091" />
   <While Condition="!IsQuestCompleted(26209)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26209" KeepTargetSelected="True" MobId1="42386" MobId2="42384" MobId3="42391" MobId4="42383" MobState="Alive" NumOfTimes="1" GossipOptions="2" WaitTime="1000" CollectionDistance="100" X="-9819.229" Y="974.2356" Z="29.13065" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26209" KeepTargetSelected="True" MobId1="42386" MobId2="42384" MobId3="42391" MobId4="42383" MobState="Alive" NumOfTimes="1" GossipOptions="2" WaitTime="1000" CollectionDistance="100" X="-9819.229" Y="974.2356" Z="29.13065" />
     <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" />
   </While>
 </If>
@@ -401,7 +401,7 @@
   <LootMobs Value="true" />
   <RunTo X="-10977.16" Y="1565.248" Z="45.61914" />
   <While Condition="!HasItem(58117)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="42677" WaitTime="1000" MobState="Alive" CollectionDistance="1000" X="-10972.59" Y="1565.516" Z="45.61837" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42677" WaitTime="1000" MobState="Alive" CollectionDistance="1000" X="-10972.59" Y="1565.516" Z="45.61837" />
   </While>
   <LootMobs Value="null" />
 </If>
