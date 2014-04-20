@@ -290,8 +290,8 @@
 <If Condition="!HasQuest(26341) &amp;&amp; !IsQuestCompleted(26341)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1471" WaitTime="1000" CollectionDistance="50" X="-1257.819" Y="-2546.45" Z="21.45418" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -358,9 +358,9 @@
   <While Condition="!HasQuest(26117)">
     <If Condition="!HasQuest(26116) &amp;&amp; !IsQuestCompleted(26116)">
       <RunTo X="-1425.855" Y="-3037.161" Z="32.50045" />
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2713" X="-1427.404" Y="-3035.176" Z="32.18531" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2713" X="-1427.404" Y="-3035.176" Z="32.18531" />
       <While Condition="HasQuestAvailable(2713)" >
-        <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2713" X="-1427.404" Y="-3035.176" Z="32.18531" />
+        <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2713" X="-1427.404" Y="-3035.176" Z="32.18531" />
         <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
         <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 
@@ -457,7 +457,7 @@
   <RunTo X="-1655.137" Y="-2654.666" Z="41.04195" />
   <CustomBehavior File="WaitTimer" WaitTime="6000" />
   <While Condition="!IsQuestCompleted(26042)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2611" MobState="Alive" X="-1697.082" Y="-2645.625" Z="43.536" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2611" MobState="Alive" X="-1697.082" Y="-2645.625" Z="43.536" />
   </While>
 <!--
     <Objective QuestName="Breaking the Keystone" QuestId="26042" Type="CollectItem" ItemId="4469" CollectCount="1" />
@@ -468,7 +468,7 @@
   <RunTo X="-1463.15" Y="-2270.605" Z="53.02412" />
   
   <TurnIn QuestName="Breaking the Keystone" QuestId="26042" TurnInName="Keystone" TurnInId="2688" TurnInType="GameObject" X="-1526.257" Y="-2165.491" Z="17.9056" />/>
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="2763" WaitForNpcs="False" X="-1529.569" Y="-2167.87" Z="17.62176" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="2763" WaitForNpcs="False" X="-1529.569" Y="-2167.87" Z="17.62176" />
 </If>
 <PickUp QuestName="Myzrael's Tale" QuestId="26346" GiverName="Stone of Inner Binding" GiverId="2702" GiverType="GameObject" X="-1508.396" Y="-2170.288" Z="17.26832" />
 <If Condition="HasQuest(26037) &amp;&amp; !IsQuestCompleted(26037)">

@@ -294,8 +294,8 @@
 <If Condition="!HasQuest(25395) &amp;&amp; !IsQuestCompleted(25395)">
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" CollectionDistance="50" X="-5343.68" Y="-2932.134" Z="324.3617" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" CollectionDistance="50" X="-5343.68" Y="-2932.134" Z="324.3617" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" CollectionDistance="50" X="-5343.68" Y="-2932.134" Z="324.3617" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" CollectionDistance="50" X="-5343.68" Y="-2932.134" Z="324.3617" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -348,25 +348,25 @@
   <If Condition="Me.Race == WoWRace.Dwarf">
     <RunTo X="-5523.76" Y="-1347.603" Z="398.6647" />
     <CustomBehavior File="ForceTrainRiding" MobId="4772" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="1261" BuyItemId="5873" WaitTime="5000" X="-5538.411" Y="-1323.057" Z="398.9364" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1261" BuyItemId="5873" WaitTime="5000" X="-5538.411" Y="-1323.057" Z="398.9364" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(5873)" />
   </If>
   <If Condition="Me.Race == WoWRace.Gnome">
      <RunTo X="-5454.171" Y="-621.048" Z="393.3968" />
      <CustomBehavior File="ForceTrainRiding" MobId="7954" />
-     <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="7955" BuyItemId="8595" WaitTime="5000" X="-5454.171" Y="-621.048" Z="393.3968" />
+     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="7955" BuyItemId="8595" WaitTime="5000" X="-5454.171" Y="-621.048" Z="393.3968" />
      <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(8595)" />
   </If>
   <If Condition="Me.Race == WoWRace.Pandaren">
     <RunTo X="-8847.539" Y="501.144" Z="109.6118" />
     <CustomBehavior File="ForceTrainRiding" MobId="43769" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="65068" BuyItemId="91009" WaitTime="5000" X="-8209.379" Y="546.0261" Z="117.7685" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="65068" BuyItemId="91009" WaitTime="5000" X="-8209.379" Y="546.0261" Z="117.7685" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(91009)" />
   </If>
   <If Condition="Me.Race == WoWRace.Human">
     <RunTo X="-8847.539" Y="501.144" Z="109.6118" />
     <CustomBehavior File="ForceTrainRiding" MobId="43769" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43694" BuyItemId="2414" WaitTime="5000" X="-8783.64" Y="386.509" Z="100.8159" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43694" BuyItemId="2414" WaitTime="5000" X="-8783.64" Y="386.509" Z="100.8159" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(2414)" />
   </If>
 </If>
@@ -399,10 +399,10 @@
 <Objective QuestName="Down In Thelgen Rock" QuestId="25734" Type="CollectItem" ItemId="55242" CollectCount="1" />
 <If Condition="!HasQuest(25736) &amp;&amp; !IsQuestCompleted(25736)" >
   <LootMobs Value="true" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="41167" MobState="Alive"  WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" MobState="Alive"  WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
   <If Condition="!HasItem(55243)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="41167" WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41167" WaitForNpcs="False" CollectionDistance="1000" X="-3952.55" Y="-2357.212" Z="18.2087" />
   </If>
   <LootMobs Value="null" />
 </If>
@@ -411,7 +411,7 @@
 </If>
 <If Condition="HasQuest(25735) &amp;&amp; !IsQuestCompleted(25735)" >
   <While Condition="!IsQuestCompleted(25735)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="25735" MobId="203188" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000"
+    <CustomBehavior File="InteractWith" QuestId="25735" MobId="203188" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000"
       PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" NonCompeteDistance="0">
       <HuntingGrounds>
       <Hotspot X="-3857.077" Y="-2520" Z="41.34671" />
@@ -449,7 +449,7 @@
 <If Condition="HasQuest(25777)" >
   <RunTo X="-4122.751" Y="-2751.728" Z="17.95915" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="41260" X="-4123.51" Y="-2749.5" Z="18.06591" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41260" X="-4123.51" Y="-2749.5" Z="18.06591" />
   <CustomBehavior File="WaitTimer" WaitTime="120000" />
 </If>
 <TurnIn QuestName="Onwards to Menethil" QuestId="25777" TurnInName="Captain Stoutfist" TurnInId="2104" X="-3683.297" Y="-824.5052" Z="1.317324" />-->

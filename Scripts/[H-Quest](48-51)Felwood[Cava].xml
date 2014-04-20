@@ -418,7 +418,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Emerald Sanctuary" WaitTime="1000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Emerald Sanctuary" WaitTime="1000" />
     <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
     </Else>
   </If>
@@ -481,10 +481,10 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Whisperwind Grove-->
   <RunTo X="6078.539" Y="-845.9514" Z="412.2345" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
+  <CustomBehavior File="InteractWith" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -495,10 +495,10 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Whisperwind Grove-->
   <RunTo X="6078.539" Y="-845.9514" Z="412.2345" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
+  <CustomBehavior File="InteractWith" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -507,7 +507,7 @@
 <If Condition="HasQuest(28213) &amp;&amp; !IsQuestCompleted(28213)">
   <RunTo X="5101.9" Y="-358.8959" Z="357.1791" />
   <While Condition="!IsQuestCompleted(28213)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="28213" MobId="47679" MobHpPercentLeft="100" MobState="Alive" InteractByUsingItemId="63284"
+    <CustomBehavior File="InteractWith" QuestId="28213" MobId="47679" MobHpPercentLeft="100" MobState="Alive" InteractByUsingItemId="63284"
       PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="16" X="5102.24" Y="-358.321" Z="357.1809" />
   </While>
 </If>
@@ -519,12 +519,12 @@
 <If Condition="HasQuest(28306)">
   <!--Whisperwind Grove-->
   <RunTo X="6078.539" Y="-845.9514" Z="412.2345" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
+  <CustomBehavior File="InteractWith" MobId="43073" MobState="Alive" X="6077.66" Y="-844.493" Z="412.2927" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" Domail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48573" WaitTime="1000" CollectionDistance="50" X="6079.8" Y="-823.891" Z="414.8033" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48573" WaitTime="1000" CollectionDistance="50" X="6079.8" Y="-823.891" Z="414.8033" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48573" WaitTime="1000" CollectionDistance="50" X="6079.8" Y="-823.891" Z="414.8033" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48573" WaitTime="1000" CollectionDistance="50" X="6079.8" Y="-823.891" Z="414.8033" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -537,7 +537,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -560,7 +560,7 @@
 <Objective QuestName="Hunting the Damned" QuestId="28358" Type="KillMob" MobId="7136" KillCount="6" />
 <Objective QuestName="Running Their Course" QuestId="28360" Type="KillMob" MobId="48455" KillCount="8" />
 <If Condition="HasQuest(28361) &amp;&amp; !IsQuestCompleted(28361)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="28361" MobId="48457" NumOfTimes="1000" CollectionDistance="1000" MobState="Alive" >
+  <CustomBehavior File="InteractWith" QuestId="28361" MobId="48457" NumOfTimes="1000" CollectionDistance="1000" MobState="Alive" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="5824.026" Y="-751.3414" Z="390.1335" />
       <Hotspot X="5823.242" Y="-791.3506" Z="398.6619" />
@@ -592,7 +592,7 @@
 <TurnIn QuestName="Squirrely Clean" QuestId="28361" TurnInName="Tender Puregrove" TurnInId="48459" X="6007.84" Y="-829.347" Z="412.0817" />
 <PickUp QuestName="Weeding the Lawn" QuestId="28374" GiverName="Tender Puregrove" GiverId="48459" X="6007.84" Y="-829.347" Z="412.0817" />
 <If Condition="HasQuest(28374) &amp;&amp; !IsQuestCompleted(28374)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="28374" MobId="47747" NumOfTimes="1000" CollectionDistance="1000" MobState="Alive" >
+  <CustomBehavior File="InteractWith" QuestId="28374" MobId="47747" NumOfTimes="1000" CollectionDistance="1000" MobState="Alive" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="5995.787" Y="-843.6658" Z="412.0515" />
       <Hotspot X="5958.689" Y="-862.4297" Z="412.2136" />
@@ -617,7 +617,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -645,7 +645,7 @@
   <PickUp QuestName="Buzzers for Baby" QuestId="28219" GiverName="Seedling Protector" GiverId="48032" X="6221.018" Y="-1153.269" Z="383.4433" />
 </If>
 <If Condition="HasQuest(28220) &amp;&amp; !IsQuestCompleted(28220)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="28220" MobId="206963" NumOfTimes="1000" CollectionDistance="1000" WaitTime="3000">
+  <CustomBehavior File="InteractWith" QuestId="28220" MobId="206963" NumOfTimes="1000" CollectionDistance="1000" WaitTime="3000">
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="6107.85" Y="-1126.492" Z="377.418" />
       <Hotspot X="6068.168" Y="-1122.688" Z="381.6922" />
@@ -668,7 +668,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -679,7 +679,7 @@
   <PickUp QuestName="These Roots Were Made For Stompin'" QuestId="28221" GiverName="Sapling Protector" GiverId="48042" X="6221.018" Y="-1153.269" Z="383.4433" />
 </If>
 <If Condition="HasQuest(28222) &amp;&amp; !IsQuestCompleted(28222)">
-  <CustomBehavior File="Cava\InteractWith1324" Range="3" QuestId="28222" MobId="207063" NumOfTimes="1000" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitTime="3000">
+  <CustomBehavior File="InteractWith" Range="3" QuestId="28222" MobId="207063" NumOfTimes="1000" PreInteractMountStrategy="Dismount" CollectionDistance="1000" WaitTime="3000">
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="6190.806" Y="-1345.145" Z="375.7322" />
       <Hotspot X="6220.997" Y="-1371.364" Z="372.6718" />
@@ -728,13 +728,13 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
 <If Condition="HasQuest(28217) &amp;&amp; !IsQuestCompleted(28217)">
   <While Condition="!IsQuestCompleted(28217)">
-    <CustomBehavior File="Cava\InteractWith1324" MobId="47923" InteractByQuestFrameDisposition="TerminateBehavior" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="6423.77" Y="-964.604" Z="423.1494" />
+    <CustomBehavior File="InteractWith" MobId="47923" InteractByQuestFrameDisposition="TerminateBehavior" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="6423.77" Y="-964.604" Z="423.1494" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </While>
 </If>
@@ -743,7 +743,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -752,7 +752,7 @@
   <While Condition="!IsQuestCompleted(28218)">
     <CustomBehavior File="WaitTimer" WaitTime="28000" />
     <RunTo QuestId="28218" X="6435.128" Y="-948.1365" Z="423.1476" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="28218" MobId="47733" MobState="Alive"
+    <CustomBehavior File="InteractWith" QuestId="28218" MobId="47733" MobState="Alive"
       NonCompeteDistance="1" NumOfTimes="1000" InteractBlacklistTimeInSeconds="1"
       TerminateWhen="Unit(47733, u =&gt; u.IsFriendly) != null"
       X="6439.576" Y="-946.642" Z="423.1492" />
@@ -797,7 +797,7 @@
     <CustomBehavior File="WaitTimer" WaitTime="10000" />
     <RunTo X="6435.128" Y="-948.1365" Z="423.1476" />
 	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 47735 &amp;&amp; u.Distance &lt;= 100))" >
-      <CustomBehavior File="Cava\InteractWith1324" MobId1="47800" MobId2="47802" MobId3="47795" MobState="Alive" WaitForNpcs="False" CollectionDistance="25"/>
+      <CustomBehavior File="InteractWith" MobId1="47800" MobId2="47802" MobId3="47795" MobState="Alive" WaitForNpcs="False" CollectionDistance="25"/>
     </While>
     <If Condition="!IsQuestCompleted(28256)">
       <CustomBehavior File="AbandonQuest" QuestId="28256" />
@@ -837,7 +837,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -856,7 +856,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63419)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </While>
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="28261" MobId="48154" MobState="Alive" CollectionDistance="1000" WaitForNpcs="False" X="6488.852" Y="-824.8346" Z="474.2901" />
+    <CustomBehavior File="InteractWith" QuestId="28261" MobId="48154" MobState="Alive" CollectionDistance="1000" WaitForNpcs="False" X="6488.852" Y="-824.8346" Z="474.2901" />
   </While>
 </If>
 <If Condition="HasQuest(28261)" >
@@ -868,7 +868,7 @@
   <CustomBehavior File="Message" Text="Moving to WINTERSPRING, Please do not stop bot" LogColor="Aquamarine" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](51-52)Winterspring[Cava]" />
 </If>
@@ -878,17 +878,17 @@
 <If Condition="HasQuest(28264) &amp;&amp; !IsQuestCompleted(28264)">
   <While Condition="!IsQuestCompleted(28264)">
     <RunTo X="6056.568" Y="-918.8637" Z="455.7434" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="47842" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="6058.27" Y="-915.953" Z="455.742" />
+    <CustomBehavior File="InteractWith" MobId="47842" InteractByGossipOptions="1" MovementBy="NavigatorPreferred" X="6058.27" Y="-915.953" Z="455.742" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </While>
 </If>
 <TurnIn QuestName="Navarax's Gambit" QuestId="28264" TurnInName="Huntress Selura" TurnInId="47843" X="6098.09" Y="-836.012" Z="412.2294" />
 <PickUp QuestName="Back to Business" QuestId="28372" GiverName="Fez Hobnob" GiverId="48469" X="6108.09" Y="-883.596" Z="411.8589" />
 <If Condition="HasQuest(28372)">
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43073" MobState="Alive" InteractByGossipOptions="2" PreInteractMountStrategy="DismountOrCancelShapeshift" X="6077.66" Y="-844.493" Z="412.2911" />
+  <CustomBehavior File="InteractWith" MobId="43073" MobState="Alive" InteractByGossipOptions="2" PreInteractMountStrategy="DismountOrCancelShapeshift" X="6077.66" Y="-844.493" Z="412.2911" />
   <!--Irontree Clearing-->
   <RunTo X="6892.69" Y="-1620.41" Z="503.106" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
+  <CustomBehavior File="InteractWith" MobId="43085" MobState="Alive" X="6888.39" Y="-1619.07" Z="502.8654" />
 </If>
 <TurnIn QuestName="Back to Business" QuestId="28372" TurnInName="Darla Drilldozer" TurnInId="48127" X="6907.05" Y="-1617.02" Z="503.9767" />
 <If Condition="!HasQuest(28261) &amp;&amp; !IsQuestCompleted(28261) &amp;&amp; Me.LevelFraction &gt;= 51.65">
@@ -901,7 +901,7 @@
 <If Condition="HasQuest(28333) &amp;&amp; !IsQuestCompleted(28333)">
   <While Condition="!IsQuestCompleted(28333)">
     <While Condition="(GetItemCount(63515) &lt; 1)" >
-      <CustomBehavior File="Cava\InteractWith1324" QuestId="28333" MobId="48310" InteractByUsingItemId="63513" Range="20" CollectionDistance="1000" >
+      <CustomBehavior File="InteractWith" QuestId="28333" MobId="48310" InteractByUsingItemId="63513" Range="20" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="6600.932" Y="-1620.813" Z="493.631" />
     <Hotspot X="6595.857" Y="-1580.954" Z="487.1054" />
@@ -925,7 +925,7 @@
       </CustomBehavior>
     </While>
     <While Condition="!IsQuestCompleted(28333) &amp;&amp; HasItem(63515)" >
-      <CustomBehavior File="Cava\InteractWith1324" QuestId="28333" MobId="48259" AuraIdMissingFromMob="89829" MobState="Alive" InteractByUsingItemId="63515" CollectionDistance="1000">
+      <CustomBehavior File="InteractWith" QuestId="28333" MobId="48259" AuraIdMissingFromMob="89829" MobState="Alive" InteractByUsingItemId="63515" CollectionDistance="1000">
       <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="6600.932" Y="-1620.813" Z="493.631" />
     <Hotspot X="6595.857" Y="-1580.954" Z="487.1054" />
@@ -983,7 +983,7 @@
 <PickUp QuestName="Take it to the Tree" QuestId="28357" GiverName="Darla Drilldozer" GiverId="48127" X="6907.05" Y="-1617.02" Z="503.9767" />
 <PickUp QuestName="Wisp-napping" QuestId="28370" GiverName="Darla Drilldozer" GiverId="48127" X="6907.05" Y="-1617.02" Z="503.9767" />
 <If Condition="HasQuest(28370) &amp;&amp; !IsQuestCompleted(28370)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="28370" MobId="48454" MobState="Alive" InteractByUsingItemId="63698" NumOfTimes="1000" Range="20" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" QuestId="28370" MobId="48454" MobState="Alive" InteractByUsingItemId="63698" NumOfTimes="1000" Range="20" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="6501.826" Y="-1690.337" Z="506.1852" />
     <Hotspot X="6473.477" Y="-1660.982" Z="501.5595" />
@@ -1016,7 +1016,7 @@
   <LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(28336) &amp;&amp; !IsQuestCompleted(28336)">
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="28336" MobId="48331" MobState="Alive" NumOfTimes="1000" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" QuestId="28336" MobId="48331" MobState="Alive" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
     <Hotspot X="6753.411" Y="-1589.787" Z="479.8085" />
     <Hotspot X="6723.064" Y="-1561.895" Z="475.5515" />

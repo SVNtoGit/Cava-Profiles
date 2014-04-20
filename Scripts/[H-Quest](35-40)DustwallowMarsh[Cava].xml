@@ -440,7 +440,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" DestName="Brackenwall Village" WaitTime="1000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3310" MobState="Alive" DestName="Brackenwall Village" WaitTime="1000" />
     <RunTo X="-3145.848" Y="-2842.498" Z="34.62574" />
     </Else>
   </If>
@@ -506,11 +506,11 @@
 <If Condition="!HasQuest(27229) &amp;&amp; !IsQuestCompleted(27229)" >
   <!--Brackenwall Village FP-->
   <RunTo X="-3146.776" Y="-2842.301" Z="34.61447" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11899" MobState="Alive" X="-3149.139" Y="-2842.133" Z="34.58207" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11899" MobState="Alive" X="-3149.139" Y="-2842.133" Z="34.58207" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="4883" WaitTime="1000" CollectionDistance="50" X="-3112.938" Y="-2885.783" Z="35.2661" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -535,7 +535,7 @@
 
 
     <If Condition="HasQuestAvailable(4926)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4926" KeepTargetSelected="True" X="-3149.238" Y="-2887.008" Z="34.11252" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4926" KeepTargetSelected="True" X="-3149.238" Y="-2887.008" Z="34.11252" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -556,7 +556,7 @@
 <If Condition="Me.Level &gt;= 40">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -579,19 +579,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="The Black Shield" QuestId="27256" GiverName="Do'gol" GiverId="5087" X="-3111.075" Y="-2892.656" Z="35.03893" />
@@ -607,7 +607,7 @@
 </If>
 <Objective QuestName="SMASH BROODQUEEN" QuestId="27229" Type="CollectItem" ItemId="60883" CollectCount="1" />
 <If Condition="HasQuest(25051) &amp;&amp; !IsQuestCompleted(25051)">
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25051" MobId="205267" ObjectType="GameObject" NumOfTimes="1000" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25051" MobId="205267" ObjectType="GameObject" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-2751.338" Y="-2603.15" Z="27.5846" />
       <Hotspot X="-2770.416" Y="-2567.555" Z="30.42095" />
@@ -663,7 +663,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="2000" />
   <RunTo X="-2876.627" Y="-3425.51" Z="40.04852" />
   <While Condition="!IsObjectiveComplete(1, 9437)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="9437" MobId="17119" MobState="Alive" GossipOptions="1" X="-2889.806" Y="-3423.234" Z="40.05722" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9437" MobId="17119" MobState="Alive" GossipOptions="1" X="-2889.806" Y="-3423.234" Z="40.05722" />
   </While>
   <Objective QuestName="Twilight of the Dawn Runner" QuestId="9437" Type="CollectItem" ItemId="23657" CollectCount="1" />
 </If>-->
@@ -749,7 +749,7 @@
     <RunTo QuestId="27190" X="-2967.302" Y="-3872.069" Z="31.06809" />
     <CustomBehavior File="Misc\RunLua" QuestId="27190" Lua="UseItemByName(33113)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" QuestId="27190" WaitTime="37000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27190" MobId="23864" MobState="Alive" WaitForNpcs="False" X="-2975.827" Y="-3860.24" Z="41.82395" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27190" MobId="23864" MobState="Alive" WaitForNpcs="False" X="-2975.827" Y="-3860.24" Z="41.82395" />
   </While>
 </If>
 <TurnIn QuestName="Cleansing Witch Hill" QuestId="27190" TurnInName="Mordant Grimsby" TurnInId="23843" X="-2948.356" Y="-3893.17" Z="35.05546" />
@@ -772,7 +772,7 @@
 <If Condition="Me.Level &gt;= 40">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -795,19 +795,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="Check Up on Tabetha" QuestId="11213" GiverName="Nazeer Bloodpike" GiverId="4791" X="-3106.366" Y="-2823.563" Z="34.45407" />
@@ -835,7 +835,7 @@
 <If Condition="Me.Level &gt;= 40">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -858,19 +858,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="Hungry as an Ogre!" QuestId="27191" GiverName="&quot;Swamp Eye&quot; Jarl" GiverId="4792" X="-2952.756" Y="-3885.405" Z="34.22656" />
@@ -978,12 +978,12 @@
 <TurnIn QuestName="Direhorn Raiders" QuestId="27340" TurnInName="Apprentice Morlann" TurnInId="23600" X="-4043.441" Y="-3395.461" Z="38.16371" />
 <If Condition="Me.Level &gt;= 40">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
   <TurnIn QuestName="Questioning Reethe" QuestId="27261" TurnInName="Krog" TurnInId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1006,19 +1006,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <TurnIn QuestName="The Zeppelin Crash" QuestId="27346" TurnInName="Moxie Steelgrille" TurnInId="23797" X="-4025.398" Y="-3787.586" Z="42.16163" />
@@ -1050,7 +1050,7 @@
 <If Condition="HasQuest(11211)">
   <!--Mudsprocket-->
   <RunTo X="-4566.23" Y="-3226.05" Z="34.69845" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="40358" MobState="Alive" X="-4568.401" Y="-3223.187" Z="34.90655" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40358" MobState="Alive" X="-4568.401" Y="-3223.187" Z="34.90655" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="23995" X="-4630.091" Y="-3176.113" Z="41.22022" />
 </If>
@@ -1058,12 +1058,12 @@
 <TurnIn QuestName="Delivery for Drazzit" TurnInName="Drazzit Dripvalve" QuestId="11208" TurnInId="23572" X="-4585.801" Y="-3197.325" Z="35.04314" />
 <If Condition="Me.Level &gt;= 40">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
   <TurnIn QuestName="Questioning Reethe" QuestId="27261" TurnInName="Krog" TurnInId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-4566.23" Y="-3226.05" Z="34.69845" />
-  <CustomBehavior File="TaxiRide" MobId="40358" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1086,19 +1086,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="WANTED: Goreclaw the Ravenous" GiverName="Wanted Poster" QuestId="27412" GiverId="186426" GiverType="Object" X="-4591.122" Y="-3167.704" Z="34.16309" />
@@ -1110,12 +1110,12 @@
 <TurnIn QuestName="Bloodfen Feathers" TurnInName="Brogg" QuestId="27407" TurnInId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
 <If Condition="Me.Level &gt;= 40">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
   <TurnIn QuestName="Questioning Reethe" QuestId="27261" TurnInName="Krog" TurnInId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-4566.23" Y="-3226.05" Z="34.69845" />
-  <CustomBehavior File="TaxiRide" MobId="40358" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1138,19 +1138,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="Banner of the Stonemaul" GiverName="Brogg" QuestId="27408" GiverId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
@@ -1160,7 +1160,7 @@
 <Objective QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" Type="CollectItem" ItemId="5836" CollectCount="1" />
 <If Condition="HasQuest(27409) &amp;&amp; !IsQuestCompleted(27409)" >
   <While Condition="!IsQuestCompleted(27409)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="27409" NumOfTimes="1000" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" CollectionDistance="1000" PreInteractMountStrategy="Dismount" InteractBlacklistTimeInSeconds="300">
+    <CustomBehavior File="InteractWith" QuestId="27409" NumOfTimes="1000" MobId1="4328" MobId2="4329" MobId3="4331" MobState="Dead" InteractByUsingItemId="33088" CollectionDistance="1000" PreInteractMountStrategy="Dismount" InteractBlacklistTimeInSeconds="300">
       <HuntingGrounds>
         <Hotspot X="-4346.631" Y="-2990.993" Z="32.43918" />
         <Hotspot X="-4386.152" Y="-2996.354" Z="29.22396" />
@@ -1182,14 +1182,14 @@
 <TurnIn QuestName="The Essence of Enmity" TurnInName="Brogg" QuestId="27409" TurnInId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
 <If Condition="Me.Level &gt;= 40">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
   <TurnIn QuestName="Questioning Reethe" QuestId="27261" TurnInName="Krog" TurnInId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
   <TurnIn QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" TurnInName="Overlord Mok'Morokk" TurnInId="4500" X="-3132.845" Y="-2880.269" Z="34.70103" />
   <TurnIn QuestName="Army of the Black Dragon" QuestId="1168" TurnInName="Tharg" TurnInId="4502" X="-3131.986" Y="-2936.708" Z="35.46791" />
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1212,24 +1212,24 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <PickUp QuestName="Spirits of Stonemaul Hold" GiverName="Brogg" QuestId="27410" GiverId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
 <If Condition="HasQuest(27410) &amp;&amp; !IsQuestCompleted(27410)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27410" MobId="186332" NumOfTimes="1000" WaitTime="4000" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27410" MobId="186332" NumOfTimes="1000" WaitTime="4000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-4401.985" Y="-3200.96" Z="38.59455" />
       <Hotspot X="-4396.766" Y="-3240.546" Z="28.94506" />
@@ -1250,14 +1250,14 @@
 <TurnIn QuestName="Spirits of Stonemaul Hold" TurnInName="Brogg" QuestId="27410" TurnInId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
 <If Condition="Me.Level &gt;= 40">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
   <TurnIn QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" TurnInName="Overlord Mok'Morokk" TurnInId="4500" X="-3132.845" Y="-2880.269" Z="34.70103" />
   <TurnIn QuestName="Army of the Black Dragon" QuestId="1168" TurnInName="Tharg" TurnInId="4502" X="-3131.986" Y="-2936.708" Z="35.46791" />
   <TurnIn QuestName="Questioning Reethe" QuestId="27261" TurnInName="Krog" TurnInId="4926" X="-3149.238" Y="-2887.008" Z="34.11252" />
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1280,19 +1280,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <!--# # # Level 39 # # # -->
@@ -1303,7 +1303,7 @@
     <CustomBehavior File="WaitTimer" QuestId="27411" WaitTime="6000" />
 	<UseItem ItemId="33095" QuestId="27411" QuestName="Stonemaul Banner" X="-4686.087" Y="-3710.557" Z="46.97383" />
 	<CustomBehavior File="WaitTimer" QuestId="27411" WaitTime="25000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="27411" MobId="23789" MobState="Alive" WaitForNpcs="False" X="-4686.087" Y="-3710.557" Z="46.97383" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27411" MobId="23789" MobState="Alive" WaitForNpcs="False" X="-4686.087" Y="-3710.557" Z="46.97383" />
   </While>
 </If>
 <Objective QuestName="Catch a Dragon by the Tail" QuestId="27413" Type="Collect" CollectCount="8" ItemId="33175" />
@@ -1315,7 +1315,7 @@
 <TurnIn QuestName="Challenge to the Black Flight" QuestId="27411" TurnInName="Brogg" TurnInId="23579" X="-4622.449" Y="-3172.485" Z="34.81137" />
 <If Condition="HasQuest(27424)">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
 </If>
 <TurnIn QuestName="Overlord Mok'Morokk's Concern" QuestId="27424" TurnInName="Overlord Mok'Morokk" TurnInId="4500" X="-3132.845" Y="-2880.269" Z="34.70103" />
@@ -1330,7 +1330,7 @@
 <If Condition="Me.Level &gt;= 40">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1353,19 +1353,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <If Condition="HasQuest(27415) &amp;&amp; !IsQuestCompleted(27415)" >
@@ -1375,32 +1375,32 @@
 <Objective QuestName="The Brood of Onyxia" QuestId="27415" Type="UseObject" ObjectId="20359" UseCount="5" />
 <If Condition="HasQuest(27415)">
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
-  <CustomBehavior File="TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="40358" DestName="Brackenwall Village" WaitTime="1000" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
 </If>
 <TurnIn QuestName="The Brood of Onyxia" QuestId="27415" TurnInName="Draz'Zilb" TurnInId="4501" X="-3191.32" Y="-2925.545" Z="33.35921" />
 <If Condition="!HasQuest(25478) &amp;&amp; !IsQuestCompleted(25478)" >
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" DestName="Mudsprocket" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" DestName="Mudsprocket" WaitTime="1000" />
   <RunTo X="-4566.107" Y="-3223.117" Z="34.69033" />
 </If>
 <PickUp QuestName="To the Summit" QuestId="25478" GiverName="Nyse" GiverId="40344" X="-4619.234" Y="-3173.33" Z="34.83513" />
 <If Condition="HasQuest(25478) &amp;&amp; !IsQuestCompleted(25478)">
   <RunTo X="-4565.155" Y="-3221.447" Z="34.4728" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25478" MobId="40358" MobState="Alive" GossipOptions="2" X="-4568.401" Y="-3223.187" Z="34.90661" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25478" MobId="40358" MobState="Alive" GossipOptions="2" X="-4568.401" Y="-3223.187" Z="34.90661" />
   <CustomBehavior File="WaitTimer" WaitTime="120000" />
   <RunTo X="-4305.92" Y="-923.57" Z="81.15" />
 </If>
 <If Condition="HasQuest(25478)">
   <!--Westreach-->
   <RunTo X="-4305.92" Y="-923.57" Z="81.15" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="44399" MobState="Alive" X="-4306.391" Y="-926.283" Z="81.17162" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="44399" MobState="Alive" X="-4306.391" Y="-926.283" Z="81.17162" />
 </If>
 <TurnIn QuestName="To the Summit" QuestId="25478" TurnInName="Kanati Greycloud" TurnInId="39895" X="-4295.639" Y="-923.2587" Z="80.31674" />
 <If Condition="Me.Level &gt;= 40">
   <CustomBehavior File="Message" Text="Moving to ORGRIMMAR, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="-3147.39" Y="-2842.18" Z="34.61" />
-  <CustomBehavior File="TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="11899" NpcState="Alive" TaxiNumber="2" WaitTime="1000" />
   <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
   <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 149 &amp;&amp; Me.Gold &gt;= 50">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: JOURNEYMAN RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
@@ -1423,19 +1423,19 @@
     TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
   <!--Brill-->
   <RunTo X="2273.323" Y="371.9782" Z="35.6977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43124" MobState="Alive" X="2272.85" Y="374.516" Z="35.84255" />
   <!--The Bulwark-->
   <RunTo X="1730.56" Y="-741.0255" Z="60.06364" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37915" MobState="Alive" X="1730.373" Y="-743.1945" Z="60.06467" />
   <!--Andorhal-->
   <RunTo X="1511.79" Y="-1585.523" Z="64.46038" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46004" MobState="Alive" X="1511.6" Y="-1583.94" Z="64.60494" />
   <!--The Menders' Stead-->
   <RunTo X="1866.747" Y="-1753.965" Z="59.83613" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46011" MobState="Alive" X="1869.61" Y="-1754.99" Z="60.06637" />
   <!--Thondroril River-->
   <RunTo X="1937.377" Y="-2694.034" Z="61.9725" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="37888" MobState="Alive" X="1939.44" Y="-2694.39" Z="62.06386" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](40-44)EasternPlaguelands[Cava]" />
 </If>
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](39-40)ThousandNeedles[Cava]" />

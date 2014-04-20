@@ -591,7 +591,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="62000" />
   <!--Frien's Post FP-->
   <RunTo X="-438.5412" Y="2241.203" Z="92.85007" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35315" MobState="Alive" X="-437.5399" Y="2242.967" Z="92.99724" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35315" MobState="Alive" X="-437.5399" Y="2242.967" Z="92.99724" />
 </If>
 <TurnIn QuestName="My Time Has Passed" QuestId="14184" TurnInName="Cerelia" TurnInId="35295" X="-430.4236" Y="2227.076" Z="89.06757" />
 <If Condition="Me.LevelFraction &gt;= 31.15">
@@ -604,7 +604,7 @@
 </If>
 <If Condition="!HasQuest(14188) &amp;&amp; !IsQuestCompleted(14188)" >
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -637,13 +637,13 @@
 <If Condition="!HasQuest(14246) &amp;&amp; !IsQuestCompleted(14246)" >
   <!--Tunk's Abode FP-->
   <RunTo X="-530.725" Y="1058.287" Z="89.86422" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35556" MobState="Alive" X="-534.007" Y="1056.241" Z="89.90723" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35556" MobState="Alive" X="-534.007" Y="1056.241" Z="89.90723" />
 </If>
 <PickUp QuestName="Early Adoption" QuestId="14246" GiverName="Cenarion Embassador Thunk" GiverId="35661" X="-536.4948" Y="1069.274" Z="89.83062" />
 <PickUp QuestName="Stubborn Lands" QuestId="14247" GiverName="Cenarion Embassador Thunk" GiverId="35661" X="-536.4948" Y="1069.274" Z="89.83062" />
 <If Condition="HasQuest(14246) &amp;&amp; !IsQuestCompleted(14246)" >
   <While Condition="!IsQuestCompleted(14246)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="195588" ObjectType="GameObject" NumOfTimes="1" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195588" ObjectType="GameObject" NumOfTimes="1" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="-334.2631" Y="1178.361" Z="94.27687" />
         <Hotspot X="-300.2192" Y="1200.464" Z="91.29236" />
@@ -659,20 +659,20 @@
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(49014)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
 	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 51139 &amp;&amp; u.Distance &lt;= 100))" >
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId1="35750" MobId2="4728" MobId3="35811" MobId4="4689" MobState="Alive" WaitForNpcs="False" CollectionDistance="25"/>
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="51139" WaitForNpcs="False" NotMoving="True"/>
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="35750" MobId2="4728" MobId3="35811" MobId4="4689" MobState="Alive" WaitForNpcs="False" CollectionDistance="25"/>
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="51139" WaitForNpcs="False" NotMoving="True"/>
     </While>
   </While>
 </If>
 <If Condition="HasQuest(14247)" >
   <While Condition="HasQuest(14247)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="195600" KeepTargetSelected="True" ObjectType="GameObject" Range="14" X="-183.6784" Y="1117.673" Z="90.28101" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195600" KeepTargetSelected="True" ObjectType="GameObject" Range="14" X="-183.6784" Y="1117.673" Z="90.28101" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
   </While>
 </If>
 <If Condition="!HasQuest(14254) &amp;&amp; !IsQuestCompleted(14254)" >
   <While Condition="!HasQuest(14254)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="195600" KeepTargetSelected="True" ObjectType="GameObject" Range="14" X="-183.6784" Y="1117.673" Z="90.28101" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195600" KeepTargetSelected="True" ObjectType="GameObject" Range="14" X="-183.6784" Y="1117.673" Z="90.28101" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" NumOfTimes="1" WaitTime="1000" />
   </While>
 </If>
@@ -774,7 +774,7 @@
 	<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 35386 &amp;&amp; u.Distance &lt;= 25))" >
        <CustomBehavior File="Misc\RunLua" QuestId="14196" Lua="UseItemByName(48110)" WaitTime="1000" />
     </While>
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14196" MobId="35384" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14196" MobId="35384" MobState="Alive" NumOfTimes="1" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
         <Hotspot X="-101.9202" Y="826.2699" Z="121.9116" />
         <Hotspot X="-106.6452" Y="785.3218" Z="125.7462" />
@@ -846,7 +846,7 @@
 <PickUp QuestName="Ethel Rethor" QuestId="14255" GiverName="Cerelia" GiverId="35295" X="-430.4236" Y="2227.076" Z="89.06744" />
 <If Condition="!HasQuest(14223) &amp;&amp; !IsQuestCompleted(14223)" >
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="43899" WaitTime="1000" CollectionDistance="50" X="-429.215" Y="2221.91" Z="89.0643" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" />
@@ -914,7 +914,7 @@
     <RunTo QuestId="14227" X="-347.0654" Y="1762.648" Z="138.3714" />
     <CustomBehavior File="Misc\RunLua" QuestId="14227" Lua="UseItemByName(48953)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" QuestId="14227" WaitTime="2000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="14227" MobId="35647" MobState="Alive" WaitForNpcs="False" X="-347.0654" Y="1762.648" Z="138.3714" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14227" MobId="35647" MobState="Alive" WaitForNpcs="False" X="-347.0654" Y="1762.648" Z="138.3714" />
     <CustomBehavior File="WaitTimer" QuestId="14227" WaitTime="2000" />
   </While>
 </If>
@@ -927,7 +927,7 @@
 <If Condition="HasQuest(14255)" >
   <!--Ethel Rethor FP-->
   <RunTo X="-359.106" Y="2479.104" Z="75.84846" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35562" MobState="Alive" X="-355.2309" Y="2476.524" Z="76.1656" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35562" MobState="Alive" X="-355.2309" Y="2476.524" Z="76.1656" />
 </If>
 <TurnIn QuestName="Ethel Rethor" QuestId="14255" TurnInName="Cenarion Researcher Korrah" TurnInId="35773" X="-355.8646" Y="2489.03" Z="75.56133" />
 <If Condition="Me.LevelFraction &gt;= 31.15">
@@ -940,7 +940,7 @@
 </If>
 <PickUp QuestName="The Emerging Threat" QuestId="14256" GiverName="Cenarion Researcher Korrah" GiverId="35773" X="-355.8646" Y="2489.03" Z="75.56133" />
 <If Condition="HasQuest(14256) &amp;&amp; !IsQuestCompleted(14256)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35773" GossipOptions="1" MobState="Alive" X="-355.8646" Y="2489.03" Z="75.56122" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35773" GossipOptions="1" MobState="Alive" X="-355.8646" Y="2489.03" Z="75.56122" />
   <CustomBehavior File="WaitTimer" QuestId="14256" WaitTime="153000" />
 </If>
 <TurnIn QuestName="The Emerging Threat" QuestId="14256" TurnInName="Cenarion Researcher Korrah" TurnInId="35773" X="-355.8646" Y="2489.03" Z="75.56133" />

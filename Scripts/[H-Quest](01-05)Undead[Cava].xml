@@ -177,15 +177,15 @@
 <If Condition="HasQuest(24960) &amp;&amp; !IsQuestCompleted(24960)">
   <While Condition="!IsObjectiveComplete(3, 24960)" >
     <RunTo X="1738.893" Y="1703.881" Z="128.6123" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="49231" NumOfTimes="1" GossipOptions="1,1,1" CollectionDistance="50" X="1740.354" Y="1704.372" Z="128.7762" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="49231" NumOfTimes="1" GossipOptions="1,1,1" CollectionDistance="50" X="1740.354" Y="1704.372" Z="128.7762" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 24960)" >
     <RunTo X="1756.616" Y="1667.141" Z="121.32" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="38895" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1757.392" Y="1666.097" Z="121.2159" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="38895" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1757.392" Y="1666.097" Z="121.2159" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 24960)" >
     <RunTo X="1753.84" Y="1642.301" Z="117.7763" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="49230" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1753.845" Y="1640.663" Z="117.5054" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="49230" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1753.845" Y="1640.663" Z="117.5054" />
   </While>
 </If>
 <Objective QuestName="Those That Couldn't Be Saved" QuestId="26799" Type="KillMob" MobId="1501" KillCount="6"/>
@@ -198,7 +198,7 @@
 <PickUp QuestName="Scourge on our Perimeter" QuestId="26801" GiverId="1569" GiverName="Shadow Priest Sarvis" X="1843.317" Y="1639.905" Z="97.62814" />
 <Objective QuestName="Scourge on our Perimeter" QuestId="26801" Type="KillMob" MobId="1890" KillCount="8"/>
 <If Condition="HasQuest(26800) &amp;&amp; !IsQuestCompleted(26800)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26800" NumOfTimes="1000" MobId="49340" MobState="Dead" WaitTime="2500" Range="6" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26800" NumOfTimes="1000" MobId="49340" MobState="Dead" WaitTime="2500" Range="6" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="1899.973" Y="1597.628" Z="87.32769" />
       <Hotspot X="1933.639" Y="1618.847" Z="81.17287" />
@@ -220,7 +220,7 @@
   <PickUp QuestName="Stab!" QuestId="24967" GiverId="2122" GiverName="David Trias" X="1859.652" Y="1563.301" Z="94.30677"/>
   <While Condition="HasQuest(24967) &amp;&amp; !IsQuestCompleted(24967)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24967" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24967" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="44794" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="44794" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
@@ -232,7 +232,7 @@
   <PickUp QuestName="Of Light and Shadows" QuestId="24966" GiverId="2123" GiverName="Dark Cleric Duesten" X="1848.324" Y="1627.631" Z="96.93338"/>
   <While Condition="HasQuest(24966) &amp;&amp; !IsQuestCompleted(24966)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24966" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24966" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
 	<CustomBehavior File="CastSpellOn" QuestId="24966" SpellId="589" MobId="44794" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Of Light and Shadows" QuestId="24966" TurnInId="2123" TurnInName="Dark Cleric Duesten" X="1848.324" Y="1627.631" Z="96.93338"/>
@@ -243,7 +243,7 @@
   <PickUp QuestName="Magic Training" QuestId="24965" GiverId="2124" GiverName="Isabella" X="1847.386" Y="1635.52" Z="96.93366"/>
   <While Condition="HasQuest(24965) &amp;&amp; !IsQuestCompleted(24965)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24965" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24965" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" SpellId="122" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" Range="30" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Magic Training" QuestId="24965" TurnInId="2124" TurnInName="Isabella" X="1847.386" Y="1635.52" Z="96.93366"/>
@@ -254,7 +254,7 @@
   <PickUp QuestName="Dark Deeds" QuestId="24968" GiverId="2126" GiverName="Maximillion" X="1839.03" Y="1636.539" Z="96.93337"/>
   <While Condition="HasQuest(24968) &amp;&amp; !IsQuestCompleted(24968)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24968" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24968" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" QuestId="24968" SpellId="172" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Dark Deeds" QuestId="24968" TurnInId="2126" TurnInName="Maximillion" X="1839.03" Y="1636.539" Z="96.93337"/>
@@ -264,7 +264,7 @@
   <TurnIn QuestName="Simple Scroll" QuestId="3095" TurnInId="2119" TurnInName="Dannal Stern" X="1860.85" Y="1557.41" Z="94.78485"/>
   <PickUp QuestName="Charging into Battle" QuestId="24969" GiverId="2119" GiverName="Dannal Stern" X="1860.85" Y="1557.41" Z="94.78485"/>
   <While Condition="HasQuest(24969) &amp;&amp; !IsQuestCompleted(24969)">
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24969" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24969" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <RunTo X="1862.386" Y="1600.113" Z="94.35104" />
     <RunTo X="1840.043" Y="1601.823" Z="94.98824" />
     <CustomBehavior File="CastSpellOn" QuestId="24969" SpellId="100" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="1821.23" Y="1603.28" Z="95.78717" />
@@ -277,7 +277,7 @@
   <PickUp QuestName="The Thrill of the Hunt" QuestId="24964" GiverId="38911" GiverName="Xavier the Huntsman" X="1861.363" Y="1612.109" Z="95.60777"/>
   <While Condition="HasQuest(24964) &amp;&amp; !IsQuestCompleted(24964)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24964" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24964" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" QuestId="24964" NumOfTimes="1" SpellId="56641" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="The Thrill of the Hunt" QuestId="24964" TurnInId="38911" TurnInName="Xavier the Huntsman" X="1861.363" Y="1612.109" Z="95.60777"/>
@@ -288,7 +288,7 @@
   <PickUp QuestName="Tiger Palm" QuestId="31147" GiverName="Ting, Strong of Stomach" GiverId="63272" X="1857.422" Y="1568.047" Z="94.3139" />
   <While Condition="HasQuest(31147) &amp;&amp; !IsQuestCompleted(31147)">
     <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="31147" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31147" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100780" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100787" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
@@ -296,7 +296,7 @@
 </If>
 <If Condition="HasQuest(24961) &amp;&amp; !IsQuestCompleted(24961)">
   <While Condition="!IsQuestCompleted(24961)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="24961" MobId="38910" WaitTime="7000" GossipOptions="1" X="1861.425" Y="1565.896" Z="94.31261" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24961" MobId="38910" WaitTime="7000" GossipOptions="1" X="1861.425" Y="1565.896" Z="94.31261" />
   </While>
 </If>
 <TurnIn QuestName="The Truth of the Grave" QuestId="24961" TurnInId="1661" TurnInName="Novice Elreth" X="1847.73" Y="1638.654" Z="96.93375" />

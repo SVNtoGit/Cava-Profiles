@@ -228,7 +228,7 @@
       TransportStartX="-8650.719" TransportStartY="1346.051" TransportStartZ="0.04130154"
       TransportEndX="8162.587" TransportEndY="1005.365" TransportEndZ="-0.02063938" />
     <RunTo X="8383.75" Y="980.964" Z="30.8292" />
-    <CustomBehavior File="TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
     <RunTo X="3972.84" Y="-1324.51" Z="244.8029" />
     </Else>
   </If>
@@ -280,8 +280,8 @@
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
 </If>
@@ -370,7 +370,7 @@
 <TurnIn QuestName="Dance for Ruumbo!" QuestId="27995" TurnInName="Grazle" TurnInId="11554" X="3986.96" Y="-1318.72" Z="245.7647" />
 <If Condition="!HasQuest(28150) &amp;&amp; !IsQuestCompleted(28150) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -460,7 +460,7 @@
 <TurnIn QuestName="Fight the Power" QuestId="28102" TurnInName="Eridan Bluewind" TurnInId="9116" X="4336.02" Y="-749.495" Z="284.4339" />
 <If Condition="!HasQuest(28152) &amp;&amp; !IsQuestCompleted(28152) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -501,7 +501,7 @@
 <TurnIn QuestName="Jaedenar Awaits" QuestId="28152" TurnInName="Greta Mosshoof" TurnInId="10922" X="4738.67" Y="-867.752" Z="343.4679" />
 <If Condition="!HasQuest(28116) &amp;&amp; !IsQuestCompleted(28116) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -554,7 +554,7 @@
 <TurnIn QuestName="Purity From Corruption" QuestId="28119" TurnInName="Andalar Shadevale" TurnInId="51664" X="4882.829" Y="-406.1042" Z="350.9769" />
 <If Condition="!HasQuest(28128) &amp;&amp; !IsQuestCompleted(28128) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -577,19 +577,19 @@
 <If Condition="HasQuest(28126) &amp;&amp; !IsQuestCompleted(28126)" >
   <While Condition="!IsObjectiveComplete(1, 28126)" >
     <RunTo QuestId="28126" X="4978.084" Y="-443.2689" Z="315.6177" />
-	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176158" ObjectType="GameObject" X="4978.084" Y="-443.2689" Z="315.6177" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176158" ObjectType="GameObject" X="4978.084" Y="-443.2689" Z="315.6177" />
   </While>
   <While Condition="!IsObjectiveComplete(4, 28126)" >
     <RunTo QuestId="28126" X="5019.166" Y="-456.2224" Z="321.3839" />
-	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176161" ObjectType="GameObject" X="5019.166" Y="-456.2224" Z="321.3839" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176161" ObjectType="GameObject" X="5019.166" Y="-456.2224" Z="321.3839" />
   </While>
   <While Condition="!IsObjectiveComplete(3, 28126)" >
     <RunTo QuestId="28126" X="5093.897" Y="-470.0657" Z="297.6135" />
-	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176160" ObjectType="GameObject" X="5093.897" Y="-470.0657" Z="297.6135" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176160" ObjectType="GameObject" X="5093.897" Y="-470.0657" Z="297.6135" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 28126)" >
     <RunTo QuestId="28126" X="5116.806" Y="-520.2294" Z="296.0909" />
-	<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="28126" MobId="176159" ObjectType="GameObject" X="5116.806" Y="-520.2294" Z="296.0909" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="28126" MobId="176159" ObjectType="GameObject" X="5116.806" Y="-520.2294" Z="296.0909" />
   </While>
 </If>
 <!--# # # Level 49 # # # -->
@@ -625,7 +625,7 @@
 </If>
 <If Condition="HasQuest(28155) &amp;&amp; !IsQuestCompleted(28155)" >
   <Objective QuestName="Lord Banehollow" QuestId="28155" Type="KillMob" MobId="9516" KillCount="1" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="206831" ObjectType="GameObject" GossipOptions="1" X="5303.111" Y="-514.9827" Z="273.6088" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="206831" ObjectType="GameObject" GossipOptions="1" X="5303.111" Y="-514.9827" Z="273.6088" />
   <CustomBehavior File="WaitTimer" WaitTime="8000" />
 </If>
 <TurnIn QuestName="The Inner Circle" QuestId="28128" TurnInName="Jessir Moonbow" TurnInId="11019" X="4730.97" Y="-875.901" Z="343.3851" />
@@ -633,7 +633,7 @@
 <TurnIn QuestName="Lord Banehollow" QuestId="28155" TurnInName="Farlus Wildheart" TurnInId="47617" X="4740.09" Y="-876.09" Z="343.4682" />
 <If Condition="!HasQuest(28305) &amp;&amp; !IsQuestCompleted(28305) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -656,7 +656,7 @@
 <TurnIn QuestName="A Slimy Situation" QuestId="28207" TurnInName="Kelnir Leafsong" TurnInId="47696" X="5220.6" Y="-704.363" Z="344.0027" />
 <If Condition="!HasQuest(28208) &amp;&amp; !IsQuestCompleted(28208) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -672,7 +672,7 @@
 <TurnIn QuestName="Winna's Kitten" QuestId="28208" TurnInName="Kelnir Leafsong" TurnInId="47696" X="5220.6" Y="-704.363" Z="344.0027" />
 <If Condition="!HasQuest(28213) &amp;&amp; !IsQuestCompleted(28213) &amp;&amp; (Me.LevelFraction &gt;= 49.55)">
   <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-  <CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
   <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
   <CustomBehavior File="UseTransport" TransportId="176310"
 	WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"
@@ -697,7 +697,7 @@
 <TurnIn QuestName="Hazzard Disposal" QuestId="28213" TurnInName="Kelnir Leafsong" TurnInId="47696" X="5220.6" Y="-704.363" Z="344.0027" />
 <TurnIn QuestName="Cleanup at Bloodvenom Post" QuestId="28214" TurnInName="Altsoba Ragetotem" TurnInId="47692" X="5218.87" Y="-703.203" Z="343.723" />
 <RunTo X="7459.9" Y="-326.56" Z="8.089913" />
-<CustomBehavior File="TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
+<CustomBehavior File="Cava\TaxiRide" MobId="3841" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" />
 <RunTo X="8177.59" Y="1002.69" Z="6.671073" />
 <CustomBehavior File="UseTransport" TransportId="176310"
   WaitAtX="8177.59" WaitAtY="1002.69" WaitAtZ="6.671073"

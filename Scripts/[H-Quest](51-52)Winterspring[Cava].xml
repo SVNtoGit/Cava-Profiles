@@ -105,7 +105,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Everlook" WaitTime="1000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Everlook" WaitTime="1000" />
     <RunTo X="6812.619" Y="-4609.729" Z="710.6693" />
     </Else>
   </If>
@@ -125,7 +125,7 @@
 <If Condition="!HasQuest(28522) &amp;&amp; !IsQuestCompleted(28522)" >
   <RunTo X="6895.17" Y="-2290.251" Z="587.54" />
   <While Condition="HasQuestAvailable(11556)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="11556" KeepTargetSelected="True" X="6900.443" Y="-2285.773" Z="586.0642" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="11556" KeepTargetSelected="True" X="6900.443" Y="-2285.773" Z="586.0642" />
     <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
@@ -246,7 +246,7 @@
 <Objective QuestName="High Chief Winterfall" QuestId="28470" Type="KillMob" MobId="10738" KillCount="1" />
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; !HasItem(12842)" >
   <While Condition="!HasItem(12842)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="10738" Loot="True" X="6514.67" Y="-3264.19" Z="574.186" />
+    <CustomBehavior File="InteractWith" MobId="10738" Loot="True" X="6514.67" Y="-3264.19" Z="574.186" />
   </While>
 </If>
 <If Condition="!HasQuest(28471) &amp;&amp; !IsQuestCompleted(28471) &amp;&amp; HasItem(12842)" >

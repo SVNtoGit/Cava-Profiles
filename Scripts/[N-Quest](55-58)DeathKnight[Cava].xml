@@ -340,7 +340,7 @@
 <PickUp QuestName="The Endless Hunger" QuestId="12848" GiverName="Instructor Razuvious" GiverId="28357" X="2497.261" Y="-5597.126" Z="420.4305" />
 <If Condition="HasQuest(12848) &amp;&amp; !IsQuestCompleted(12848)" >
   <While Condition="!IsQuestCompleted(12848)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="12848" MobId="191577" X="2461.431" Y="-5593.675" Z="414.122" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="12848" MobId="191577" X="2461.431" Y="-5593.675" Z="414.122" />
     <CustomBehavior File="WaitTimer" WaitTime="19000" />
   </While>
 </If>
@@ -354,7 +354,7 @@
   <DisableBehavior Name="Combat" />
   <While Condition="!IsQuestCompleted(12641)" >
     <If Condition="!Me.HasAura(51852)">
-      <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="191609" X="2345.848" Y="-5696.338" Z="426.0303" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="191609" X="2345.848" Y="-5696.338" Z="426.0303" />
 	  <CustomBehavior File="WaitTimer" WaitTime="25000" />
     </If>
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="12641" QuestObjectiveIndex="3"
@@ -386,7 +386,7 @@
 <PickUp QuestName="Report To Scourge Commander Thalanor" QuestId="12850" GiverName="Highlord Darion Mograine" GiverId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
 <If Condition="!HasQuest(12849) &amp;&amp; !IsQuestCompleted(12849)" >
   <While Condition="!IsQuestCompleted(12849)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="28472" KeepTargetSelected="True" X="2527.734" Y="-5549.208" Z="377.0358" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="28472" KeepTargetSelected="True" X="2527.734" Y="-5549.208" Z="377.0358" />
 	<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -403,7 +403,7 @@
 <PickUp QuestName="Death's Challenge" QuestId="12733" GiverName="Olrun the Battlecaller" GiverId="29047" X="2363.1" Y="-5772.362" Z="153.6424" />
 <If Condition="HasQuest(12733) &amp;&amp; !IsQuestCompleted(12733)" >
   <While Condition="!IsQuestCompleted(12733)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="12733" MobId="28406" NumOfTimes="10" InteractByGossipOptions="1" NotMoving="true"
+    <CustomBehavior File="InteractWith" QuestId="12733" MobId="28406" NumOfTimes="10" InteractByGossipOptions="1" NotMoving="true"
       NonCompeteDistance="15" PreInteractMountStrategy="Dismount" KeepTargetSelected="true" WaitTime="13000" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="2336.138" Y="-5697.079" Z="153.9221" />
@@ -423,7 +423,7 @@
   <RunTo X="2151.364" Y="-5673.979" Z="107.6511" />
   <RunTo X="2114.652" Y="-5794.738" Z="99.62489" />
   <While Condition="!IsQuestCompleted(12711)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="190917" KeepTargetSelected="True" X="2112.364" Y="-5794.504" Z="99.72356" />
+    <CustomBehavior File="InteractWith" MobId="190917" KeepTargetSelected="True" X="2112.364" Y="-5794.504" Z="99.72356" />
 	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
 	<CustomBehavior File="WaitTimer" WaitTime="1000" />
   </While>
@@ -431,7 +431,7 @@
 <Objective QuestName="Tonight We Dine In Havenshire" QuestId="12679" Type="CollectItem" ItemId="39160" CollectCount="15" />
 <If Condition="HasQuest(12678) &amp;&amp; !IsQuestCompleted(12678)" >
   <While Condition="!IsObjectiveComplete(2, 12678)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="12678" QuestObjectiveIndex="2" NotMoving="true" MobId1="28576" MobId2="28577" NumOfTimes="1000" PreInteractMountStrategy="Dismount"
+    <CustomBehavior File="InteractWith" QuestId="12678" QuestObjectiveIndex="2" NotMoving="true" MobId1="28576" MobId2="28577" NumOfTimes="1000" PreInteractMountStrategy="Dismount"
       MobId3="28660" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="1000" X="2085.29" Y="-5730.485" Z="100.585" />
   </While>
   <CustomBehavior File="CollectThings" QuestId="12678" MobId1="28609" MobId2="28611" MobId3="28557" MobId4="28608" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
@@ -452,7 +452,7 @@
   <While Condition="HasQuest(12680) &amp;&amp; !IsQuestCompleted(12680)" >
     <CustomBehavior File="SpecificQuests\DeathknightStart\WaitForPatrol" AvoidMobId="28683" AvoidDistance="80" X="2270.073" Y="-5842.686" Z="100.9374" />
     <DisableBehavior Name="Pull,Combat" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="12680" MobId1="28605" MobId2="28606" MobId3="28607" NumOfTimes="1" IgnoreCombat="True" ProactiveCombatStrategy="NoClear" CollectionDistance="100" WaitForNpcs="false" X="2232.95" Y="-5814.65" Z="101.28" />
+    <CustomBehavior File="InteractWith" QuestId="12680" MobId1="28605" MobId2="28606" MobId3="28607" NumOfTimes="1" IgnoreCombat="True" ProactiveCombatStrategy="NoClear" CollectionDistance="100" WaitForNpcs="false" X="2232.95" Y="-5814.65" Z="101.28" />
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="12680" AuraId_ProxyVehicle="52263" VehicleId1="28605" VehicleId2="28606" VehicleId3="28607" MovementBy="ClickToMoveOnly" MobId="28653" SpellId="52264" Hop="true" X="2347.104" Y="-5695.789" Z="155.9568" />
     <CustomBehavior File="Misc\RunLua" Lua= "VehicleExit()" />
     <UseMount Value="True" />
@@ -468,7 +468,7 @@
   <UseMount Value="False" />
   <While Condition="!IsQuestCompleted(12687)" >
     <While Condition="!Me.HasAura(52693)" >
-      <CustomBehavior File="Cava\InteractWith1324" MobId="28653" InteractByGossipOptions="1" CollectionDistance="100" X="2336.86" Y="-5686.712" Z="153.9225" />
+      <CustomBehavior File="InteractWith" MobId="28653" InteractByGossipOptions="1" CollectionDistance="100" X="2336.86" Y="-5686.712" Z="153.9225" />
     </While>
     <CustomBehavior File="SpecificQuests\DeathknightStart\IntoTheRealmofShadows" X="2180.936" Y="-5770.511" Z="103.7404" />
     <CustomBehavior File="Vehicles\VehicleMover" QuestId="12687" VehicleId="28782" IgnoreCombat="true" MovementBy="ClickToMoveOnly" SpellId="52362" Hop="True" X="2358.639" Y="-5708.643" Z="153.9229" />
@@ -507,9 +507,9 @@
 <PickUp QuestName="Massacre At Light's Point" QuestId="12701" GiverName="Prince Valanar" GiverId="28377" X="2371.366" Y="-5701.044" Z="153.9223" />
 <If Condition="HasQuest(12701) &amp;&amp; !IsQuestCompleted(12701)" >
   <If Condition="(Me.Location.Distance(new WoWPoint(2270.801, -6196.619, 13.22168)) &gt;= 30.0) &amp;&amp; (Me.Location.Distance(new WoWPoint(2115.99, -6196.928, 13.31354)) &gt;= 30.0)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="190767" WaitTime="85000" X="2391.104" Y="-5900.058" Z="109.1245" />
+    <CustomBehavior File="InteractWith" MobId="190767" WaitTime="85000" X="2391.104" Y="-5900.058" Z="109.1245" />
   </If>
-  <CustomBehavior File="Cava\InteractWith1324" MobId="28833" PreInteractMountStrategy="Dismount" X="2389.416" Y="-5901.79" Z="108.9628" />
+  <CustomBehavior File="InteractWith" MobId="28833" PreInteractMountStrategy="Dismount" X="2389.416" Y="-5901.79" Z="108.9628" />
   <CustomBehavior File="Vehicles\CannonControl" VehicleId="28833" QuestId="12701" MaxAngle="0.55" MinAngle="0.32" Buttons="2,1" ExitButton="5" />
   <CustomBehavior File="WaitTimer" WaitTime="70000" />
 </If>
@@ -529,14 +529,14 @@
 <PickUp QuestName="Lambs To The Slaughter" QuestId="12722" GiverName="Baron Rivendare" GiverId="28910" X="1876.437" Y="-5777.139" Z="85.01876" />
 <If Condition="HasQuest(12716) &amp;&amp; !IsQuestCompleted(12716)" >
   <LootMobs Value="true" />
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="12716" QuestObjectiveIndex="1" MobId="190937" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1784.615" Y="-5875.238" Z="109.4968" />
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="12716" QuestObjectiveIndex="2" MobId="190938" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1811.489" Y="-6002.574" Z="117.6457" />
+  <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="1" MobId="190937" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1784.615" Y="-5875.238" Z="109.4968" />
+  <CustomBehavior File="InteractWith" QuestId="12716" QuestObjectiveIndex="2" MobId="190938" IgnoreMobsInBlackspots="false" NonCompeteDistance="0" X="1811.489" Y="-6002.574" Z="117.6457" />
   <LootMobs Value="null" />
   <Objective QuestName="The Plaguebringer's Request" QuestId="12716" Type="CollectItem" ItemId="39328" CollectCount="10" />
 </If>
 <If Condition="HasQuest(12719) &amp;&amp; !IsQuestCompleted(12719)" >
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="12719" QuestObjectiveIndex="1" MobId="28945" X="1580.829" Y="-5702.371" Z="121.6818" />
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="12719" QuestObjectiveIndex="2" MobId="190947" X="1580.829" Y="-5702.371" Z="121.6818" />
+  <CustomBehavior File="InteractWith" QuestId="12719" QuestObjectiveIndex="1" MobId="28945" X="1580.829" Y="-5702.371" Z="121.6818" />
+  <CustomBehavior File="InteractWith" QuestId="12719" QuestObjectiveIndex="2" MobId="190947" X="1580.829" Y="-5702.371" Z="121.6818" />
 </If>
 <Objective QuestName="Lambs To The Slaughter" QuestId="12722" Type="KillMob" MobId="28984" KillCount="10" />
 <Objective QuestName="Lambs To The Slaughter" QuestId="12722" Type="KillMob" MobId="28986" KillCount="15" />
@@ -578,9 +578,9 @@
 <PickUp QuestName="Bloody Breakout" QuestId="12727" GiverName="Koltira Deathweaver" GiverId="28912" X="1655.967" Y="-6038.763" Z="128.6404" />
 <If Condition="HasQuest(12727) &amp;&amp; !IsQuestCompleted(12727)" >
   <While Condition="!IsQuestCompleted(12727)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="28912" GossipOptions="1" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="29001" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
-	<CustomBehavior File="Cava\InteractWith1324" MobId="191092" ObjectType="GameObject"  WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
+    <CustomBehavior File="InteractWith" MobId="28912" GossipOptions="1" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
+    <CustomBehavior File="InteractWith" MobId="29001" WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
+	<CustomBehavior File="InteractWith" MobId="191092" ObjectType="GameObject"  WaitForNpcs="False" X="1651.89" Y="-6037.101" Z="127.5844" />
   </While>
 </If>
 
@@ -714,9 +714,9 @@
 <TurnIn QuestName="The Scarlet Onslaught Emerges" QuestId="12756" TurnInName="Orbaz Bloodbane" TurnInId="28914" X="1403.938" Y="-5826.62" Z="137.191" />
 <PickUp QuestName="Scarlet Armies Approach..." QuestId="12757" GiverName="Orbaz Bloodbane" GiverId="28914" X="1403.938" Y="-5826.62" Z="137.191" />
 <If Condition="HasQuest(12757)">
-  <CustomBehavior File="Cava\InteractWith1324" MobId="28914" GossipOptions="1" X="1403.938" Y="-5826.62" Z="137.191" />
+  <CustomBehavior File="InteractWith" MobId="28914" GossipOptions="1" X="1403.938" Y="-5826.62" Z="137.191" />
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="191155" WaitForNpcs="False" X="1399.36" Y="-5823.832" Z="137.1881" />
+  <CustomBehavior File="InteractWith" MobId="191155" WaitForNpcs="False" X="1399.36" Y="-5823.832" Z="137.1881" />
 </If>
 <TurnIn QuestName="Scarlet Armies Approach..." QuestId="12757" TurnInName="Highlord Darion Mograine" TurnInId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
 <PickUp QuestName="The Scarlet Apocalypse" QuestId="12778" GiverName="Highlord Darion Mograine" GiverId="28444" X="2460.503" Y="-5593.47" Z="367.3926" />
@@ -769,7 +769,7 @@
 <If Condition="HasQuest(13165)" >
   <CustomBehavior File="Misc\RunLua" Lua = "CastSpellByID(50977)" />
   <CustomBehavior File="WaitTimer" WaitTime="10000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="190942" X="2261.751" Y="-5285.169" Z="81.79683" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="190942" X="2261.751" Y="-5285.169" Z="81.79683" />
 </If>
 <TurnIn QuestName="Taking Back Acherus" QuestId="13165" TurnInName="Highlord Darion Mograine" TurnInId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
 <DisableRepair />
@@ -782,7 +782,7 @@
 <If Condition="Me.IsAlliance" >
   <PickUp QuestName="Where Kings Walk" QuestId="13188" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
   <If Condition="HasQuest(13188) &amp;&amp; Me.ZoneId == 139" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="193053" X="2324.879" Y="-5659.905" Z="382.2406" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="193053" X="2324.879" Y="-5659.905" Z="382.2406" />
 	<CustomBehavior File="WaitTimer" WaitTime="20000" />
   </If>
   <If Condition="HasQuest(13188)" >
@@ -797,7 +797,7 @@
 <Else>
   <PickUp QuestName="Warchief's Blessing" QuestId="13189" GiverName="Highlord Darion Mograine" GiverId="31084" X="2375.382" Y="-5650.722" Z="382.4386" />
   <If Condition="HasQuest(13189) &amp;&amp; Me.ZoneId == 139" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="193052" X="2349.222" Y="-5693.983" Z="382.2392" />
+    <CustomBehavior File="InteractWith" MobId="193052" X="2349.222" Y="-5693.983" Z="382.2392" />
 	<CustomBehavior File="WaitTimer" WaitTime="20000" />
   </If>
   <If Condition="HasQuest(13189)" >
@@ -805,9 +805,9 @@
 	<TurnIn QuestName="Warchief's Blessing" QuestId="13189" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.178" Y="-4343.229" Z="28.36206" />
     <CustomBehavior File="Message" Text="Moving to BLASTED LANDS, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
+    <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
     <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
     <EnableRepair />
     <EnableBehavior Name="Combat" />
     <CustomBehavior File="UserSettings" PullDistance="original" />

@@ -332,8 +332,8 @@
 <If Condition="!HasQuest(25999) &amp;&amp; !IsQuestCompleted(25999)" >
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="41675" WaitTime="1000" CollectionDistance="50" X="1543.002" Y="-494.7188" Z="56.84977" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -388,7 +388,7 @@
 <PickUp QuestName="Barrier to Entry" QuestId="25999" GiverName="Saurboz" GiverId="34341" X="1526.84" Y="-480.0121" Z="55.88953" />
 <If Condition="HasQuest(25999) &amp;&amp; !IsQuestCompleted(25999)" >
   <While Condition="!IsQuestCompleted(25999)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="25999" MobId="203413" ObjectType="GameObject" Range="7" CollectionDistance="1000" X="1676.952" Y="-429.8148" Z="86.47578" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25999" MobId="203413" ObjectType="GameObject" Range="7" CollectionDistance="1000" X="1676.952" Y="-429.8148" Z="86.47578" />
   </While>
 </If>
 <TurnIn QuestName="Barrier to Entry" QuestId="25999" TurnInName="Saurboz" TurnInId="34341" X="1526.84" Y="-480.0121" Z="55.88953" />
@@ -396,10 +396,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Krom'gar Fortress FP-->
   <RunTo X="933.7768" Y="-23.60325" Z="92.81059" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35140" MobState="Alive" X="936.1476" Y="-22.67188" Z="92.80998" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35140" MobState="Alive" X="936.1476" Y="-22.67188" Z="92.80998" />
   <!--Malaka'jin FP-->
   <RunTo X="-113.413" Y="-261.4543" Z="23.9217" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
   <PickUp QuestName="Nura Pathfinder" QuestId="26069" GiverName="Witch Doctor Jin'Zil" GiverId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10435" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
@@ -426,7 +426,7 @@
 <If Condition="HasQuest(26004)" >
   <!--Krom'gar Fortress FP-->
   <RunTo X="933.7768" Y="-23.60325" Z="92.81059" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35140" MobState="Alive" X="936.1476" Y="-22.67188" Z="92.80998" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35140" MobState="Alive" X="936.1476" Y="-22.67188" Z="92.80998" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="41892" X="877.2882" Y="-20.30903" Z="92.67494" />
 </If>
 <TurnIn QuestName="Krom'gar Fortress" QuestId="26004" TurnInName="Overlord Krom'gar" TurnInId="41023" X="895.4531" Y="7.110739" Z="92.96282" />
@@ -434,7 +434,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Malaka'jin FP-->
   <RunTo X="-113.413" Y="-261.4543" Z="23.9217" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
   <PickUp QuestName="Nura Pathfinder" QuestId="26069" GiverName="Witch Doctor Jin'Zil" GiverId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10435" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
@@ -443,14 +443,14 @@
 <!--<PickUp QuestName="Dream of a Better Tomorrow" QuestId="26026" GiverName="Clarissa" GiverId="40907" X="879.1279" Y="0.2237442" Z="92.6748" />-->
 <If Condition="!HasQuest(28084) &amp;&amp; !IsQuestCompleted(28084)" >
   <RunTo X="883.869" Y="13.85638" Z="92.95615" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="42028" KeepTargetSelected="True" X="883.869" Y="13.85638" Z="92.95615" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42028" KeepTargetSelected="True" X="883.869" Y="13.85638" Z="92.95615" />
   <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" NumOfTimes="1" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
 </If>
 <PickUp QuestName="Enemy of the Horde: Marshal Paltrow" QuestId="26011" GiverName="Spy-Mistress Anara" GiverId="40903" X="914.0989" Y="22.22222" Z="95.84534" />
 <Objective QuestName="Enemy of the Horde: Marshal Paltrow" QuestId="26011" Type="KillMob" MobId="41937" KillCount="1" />
 <If Condition="HasQuest(26010) &amp;&amp; !IsQuestCompleted(26010)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26010" MobId="203431" NumOfTimes="1000" PreInteractMountStrategy="Dismount"
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26010" MobId="203431" NumOfTimes="1000" PreInteractMountStrategy="Dismount"
     InteractByUsingItemId="56473" CollectionDistance="1000" IgnoreLoSToTarget="True" MinRange="6" Range="9" >
     <HuntingGrounds>
       <Hotspot X="759.7139" Y="270.4472" Z="23.25467" />
@@ -478,7 +478,7 @@
     <CustomBehavior File="MyCTM" X="1165.883" Y="203.2355" Z="14.5682" />
     <CustomBehavior File="MyCTM" X="1178.691" Y="194.2719" Z="17.86065" />
     <CustomBehavior File="MyCTM" X="1172.477" Y="183.452" Z="23.12873" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="203174" ObjectType="GameObject" X="1172.685" Y="183.7845" Z="23.17829" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="203174" ObjectType="GameObject" X="1172.685" Y="183.7845" Z="23.17829" />
     <CustomBehavior File="MyCTM" X="1179.142" Y="194.788" Z="17.94999" />
     <CustomBehavior File="MyCTM" X="1165.781" Y="203.1285" Z="14.55201" />
     <CustomBehavior File="MyCTM" X="1155.092" Y="188.4729" Z="5.459989" />
@@ -501,7 +501,7 @@
 <If Condition="HasQuest(26028) &amp;&amp; !IsQuestCompleted(26028)" >
   <While Condition="!Me.IsOnTransport" >
     <RunTo X="881.7044" Y="7.685256" Z="92.68915" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="40907" GossipOptions="1" WaitTime="1000" X="878.3525" Y="8.298717" Z="92.675" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="40907" GossipOptions="1" WaitTime="1000" X="878.3525" Y="8.298717" Z="92.675" />
   </While>
   <CustomBehavior File="..\Default Profiles\Cava\Scripts\QB\26028-fixed-Stonetalons-MrDsWildRide" QuestId="26028" X="1081.281" Y="21.28194" Z="4.390781" endX="936.7939" endY="-43.59257" endZ="94.04282"  />
 </If>
@@ -514,7 +514,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Malaka'jin FP-->
   <RunTo X="-113.413" Y="-261.4543" Z="23.9217" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
   <PickUp QuestName="Nura Pathfinder" QuestId="26069" GiverName="Witch Doctor Jin'Zil" GiverId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10435" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](31-34)SouthernBarrens[Cava]" />
@@ -528,7 +528,7 @@
 <PickUp QuestName="And That's Why They Call Them Peons..." QuestId="26047" GiverName="Blastgineer Igore" GiverId="41992" X="868.467" Y="-61.24826" Z="10.0031" />
 <PickUp QuestName="Between a Rock and a Hard Place" QuestId="26046" GiverName="Scout Utvoch" GiverId="41990" X="865.1233" Y="-56.625" Z="9.707718" />
 <If Condition="HasQuest(26047) &amp;&amp; !IsQuestCompleted(26047)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26047" MobId="41989" NumOfTimes="1000" NotMoving="True" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26047" MobId="41989" NumOfTimes="1000" NotMoving="True" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="859.9996" Y="-64.98229" Z="11.04002" />
       <Hotspot X="822.0092" Y="-52.35056" Z="15.50806" />
@@ -594,7 +594,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Malaka'jin FP-->
   <RunTo X="-113.413" Y="-261.4543" Z="23.9217" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
   <TurnIn QuestName="Eyes and Ears: Malaka'jin" QuestId="26059" TurnInName="Witch Doctor Jin'Zil" TurnInId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
   <PickUp QuestName="Nura Pathfinder" QuestId="26069" GiverName="Witch Doctor Jin'Zil" GiverId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
   <TurnIn QuestName="Nura Pathfinder" QuestId="26069" TurnInName="Nura Pathfinder" TurnInId="37135" X="-454.9236" Y="-972.3055" Z="96.10435" />
@@ -603,7 +603,7 @@
 <If Condition="!HasQuest(26063) &amp;&amp; !IsQuestCompleted(26063)" >
   <!--Sun Rock retread-->
   <RunTo X="966.57" Y="1040.32" Z="104.27" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="4312" MobState="Alive" X="968.0775" Y="1042.289" Z="104.3674" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="4312" MobState="Alive" X="968.0775" Y="1042.289" Z="104.3674" />
 </If>
 <PickUp QuestName="The Queen and Her Court" QuestId="26063" GiverName="Darn Talongrip" GiverId="11821" X="154.7225" Y="71.29021" Z="49.01923" />
 <If Condition="HasQuest(26063) &amp;&amp; !IsQuestCompleted(26063)" >
@@ -631,7 +631,7 @@
 <If Condition="HasQuest(26059)" >
   <!--Malaka'jin FP-->
   <RunTo X="-113.413" Y="-261.4543" Z="23.9217" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35139" MobState="Alive" X="-114.6441" Y="-263.901" Z="24.00237" />
 </If>
 <TurnIn QuestName="Eyes and Ears: Malaka'jin" QuestId="26059" TurnInName="Witch Doctor Jin'Zil" TurnInId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
 <If Condition="Me.LevelFraction &gt;= 31.15">
@@ -683,7 +683,7 @@
 </If>
 <PickUp QuestName="Jin'Zil's Blessing" QuestId="26067" GiverName="Witch Doctor Jin'Zil" GiverId="3995" X="-184.1285" Y="-293.7465" Z="11.54494" />
 <If Condition="HasQuest(26067) &amp;&amp; !IsQuestCompleted(26067)" >
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="26067" MobState="Alive" MobId="41360" NumOfTimes="1000" IgnoreCombat="True"
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26067" MobState="Alive" MobId="41360" NumOfTimes="1000" IgnoreCombat="True"
     InteractByUsingItemId="56798" CollectionDistance="1000" Range="20" AuraIdMissingFromMob="78337" WaitTime="6000" >
     <HuntingGrounds>
       <Hotspot X="49.6583" Y="-240.8557" Z="9.105747" />
@@ -726,14 +726,14 @@
   <RunTo X="899.3856" Y="-29.68316" Z="93.81355" />
   <CustomBehavior File="RunMacro" Macro="/cancelform" />
   <CustomBehavior File="ForcedDismount" />
-  <!--<CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="42029" Range="8" X="899.3856" Y="-29.68316" Z="93.81355" />-->
+  <!--<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42029" Range="8" X="899.3856" Y="-29.68316" Z="93.81355" />-->
   <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="42029" X="899.3856" Y="-29.68316" Z="93.81355" />
   <CustomBehavior File="WaitTimer" WaitTime="80000" />
 </If>
 <If Condition="HasQuest(26074)" >
   <!--Sludgewaerks FP-->
   <RunTo X="1827.784" Y="724.6865" Z="162.1231" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="41246" MobState="Alive" X="1826.073" Y="723.6858" Z="162.1316" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41246" MobState="Alive" X="1826.073" Y="723.6858" Z="162.1316" />
 </If>
 <TurnIn QuestName="Beginning of the End" QuestId="26074" TurnInName="Jibbly Rakit" TurnInId="42033" X="1865.252" Y="777.8646" Z="143.8975" />
 <If Condition="Me.LevelFraction &gt;= 31.15">
@@ -759,7 +759,7 @@
 <PickUp QuestName="Spy Infestation" QuestId="26076" GiverName="Jibbly Rakit" GiverId="42033" X="1865.252" Y="777.8646" Z="143.8975" />
 <If Condition="HasQuest(26076) &amp;&amp; !IsQuestCompleted(26076)" >
   <While Condition="!IsQuestCompleted(26076)" >
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="42035" NumOfTimes="1" InteractByUsingItemId="56800" CollectionDistance="1000" Range="8" MobState="Alive" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42035" NumOfTimes="1" InteractByUsingItemId="56800" CollectionDistance="1000" Range="8" MobState="Alive" >
       <HuntingGrounds>
       <Hotspot X="1769.434" Y="811.6328" Z="132.1379" />
       <Hotspot X="1728.903" Y="810.2845" Z="128.9913" />
@@ -771,7 +771,7 @@
       </HuntingGrounds>
     </CustomBehavior>
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="42035" WaitForNpcs="False" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42035" WaitForNpcs="False" />
   </While>
 </If>
 <TurnIn QuestName="Spy Infestation" QuestId="26076" TurnInName="Jibbly Rakit" TurnInId="42033" X="1865.252" Y="777.8646" Z="143.8975" />

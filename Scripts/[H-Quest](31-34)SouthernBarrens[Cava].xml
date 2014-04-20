@@ -5,8 +5,12 @@
 <SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
 
 <AvoidMobs>
+	<Mob Name="Hurlston Stonesthrow" Id="39154" />
+	<Mob Name="Twinbraid's Bodyguard" Id="39156" />
+	<Mob Name="General Twinbraid" Id="39118" />
 </AvoidMobs>
 <Blackspots>
+  <Blackspot X="-3661.594" Y="-1865.085" Z="91.66811" Radius="50" />
   <Blackspot X="-2128.62" Y="-1738.848" Z="95.55921" Radius="0.9141951" />
   <Blackspot X="2146.624" Y="-1747.624" Z="99.07735" Radius="0.9141951" />
   <Blackspot X="-2107.653" Y="-1770.23" Z="92.87098" Radius="2.04443" />
@@ -15,6 +19,7 @@
   <Blackspot X="-2156.348" Y="-1737.305" Z="91.12527" Radius="0.9" />
   <Blackspot X="-1696.075" Y="-2115.946" Z="94.16197" Radius="16.04632" />
   <Blackspot X="-1590.911" Y="-2385.194" Z="94.61779" Radius="20" />
+  <Blackspot X="-1913.491" Y="-2435.182" Z="97.4805" Radius="10" />
 </Blackspots>
 
 <Mailboxes>
@@ -632,13 +637,13 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Hunter's Hill FP-->
   <RunTo X="-796.0659" Y="-1589.256" Z="140.7098" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39340" MobState="Alive" X="-797.2344" Y="-1592.398" Z="140.6498" />
+  <CustomBehavior File="InteractWith" MobId="39340" MobState="Alive" X="-797.2344" Y="-1592.398" Z="140.6498" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -648,7 +653,7 @@
 <If Condition="(HasQuest(24512) &amp;&amp; !IsQuestCompleted(24512)) || (HasQuest(25284) &amp;&amp; !IsQuestCompleted(25284))" >
   <If Condition="Me.Z &gt; 140">
     <RunTo X="-616.5439" Y="-1415.04" Z="157.6194" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="201707" ObjectType="GameObject" WaitTime="1000"  X="-616.5439" Y="-1415.04" Z="157.6194" />
+    <CustomBehavior File="InteractWith" MobId="201707" ObjectType="GameObject" WaitTime="1000"  X="-616.5439" Y="-1415.04" Z="157.6194" />
     <CustomBehavior File="WaitTimer" WaitTime="4000" />
   </If>
 </If>
@@ -663,7 +668,7 @@
       <Hotspot X="-519.6856" Y="-1382.568" Z="91.94479" />
   </CustomBehavior>
   <While Condition="!IsQuestCompleted(24512)">
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24512" MobId="37167" GossipOptions="1" X="-486.8424" Y="-1400.546" Z="96.8259" />
+    <CustomBehavior File="InteractWith" QuestId="24512" MobId="37167" GossipOptions="1" X="-486.8424" Y="-1400.546" Z="96.8259" />
   </While>
 </If>
 <If Condition="HasQuest(25284) &amp;&amp; !IsQuestCompleted(25284)" >
@@ -678,7 +683,7 @@
 <If Condition="(HasQuest(24512) &amp;&amp; IsQuestCompleted(24512)) || (HasQuest(25284) &amp;&amp; IsQuestCompleted(25284))" >
   <If Condition="Me.Z &lt; 140">
     <RunTo X="-560.2657" Y="-1408.728" Z="92.61794" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="201708" ObjectType="GameObject" WaitTime="1000" X="-560.2657" Y="-1408.728" Z="92.61794" />
+    <CustomBehavior File="InteractWith" MobId="201708" ObjectType="GameObject" WaitTime="1000" X="-560.2657" Y="-1408.728" Z="92.61794" />
     <CustomBehavior File="WaitTimer" WaitTime="4000" />
   </If>
 </If>
@@ -687,11 +692,11 @@
 <If Condition="HasQuest(24505)" >
   <!--Hunter's Hill FP-->
   <RunTo X="-796.0659" Y="-1589.256" Z="140.7098" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39340" MobState="Alive" X="-797.2344" Y="-1592.398" Z="140.6498" />
+  <CustomBehavior File="InteractWith" MobId="39340" MobState="Alive" X="-797.2344" Y="-1592.398" Z="140.6498" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44285" WaitTime="1000" CollectionDistance="50" X="-812.585" Y="-1573.87" Z="140.3629" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -704,10 +709,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -760,10 +765,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -778,10 +783,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -795,10 +800,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -806,7 +811,7 @@
 <PickUp QuestName="A Curious Bloom" QuestId="24542" GiverName="Lane Tallgrass" GiverId="37515" X="-1440.66" Y="-1938.087" Z="94.04192" />
 <If Condition="HasQuest(24529) &amp;&amp; !IsQuestCompleted(24529)" >
   <While Condition="!IsObjectiveComplete(1, 24529)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="37487" Range="11" MobState="Alive" NotMoving="True" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" MobId="37487" Range="11" MobState="Alive" NotMoving="True" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-1613.673" Y="-1748.65" Z="92.83192" />
       <Hotspot X="-1580.704" Y="-1695.119" Z="91.66651" />
@@ -815,7 +820,7 @@
       <Hotspot X="-1405.998" Y="-1580.088" Z="91.7009" />
       </HuntingGrounds>
     </CustomBehavior>
-    <CustomBehavior File="Cava\InteractWith1324" MobId="201724" Range="10" ObjectType="GameObject" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" MobId="201724" Range="10" ObjectType="GameObject" CollectionDistance="1000" >
       <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-1613.673" Y="-1748.65" Z="92.83192" />
       <Hotspot X="-1580.704" Y="-1695.119" Z="91.66651" />
@@ -855,10 +860,10 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -871,20 +876,20 @@
     <RunTo QuestId="24534" X="-1864.518" Y="-1838.624" Z="90.80508" />
     <UseItem QuestId="24534" ItemId="49782" X="-1864.518" Y="-1838.624" Z="90.80508" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" />
-	<CustomBehavior File="Cava\InteractWith1324" QuestId="24534" MobId="37513" WaitForNpcs="False" MobState="Alive" X="-1864.518" Y="-1838.624" Z="90.80508" />
+	<CustomBehavior File="InteractWith" QuestId="24534" MobId="37513" WaitForNpcs="False" MobState="Alive" X="-1864.518" Y="-1838.624" Z="90.80508" />
   </While>
 </If>
 <If Condition="HasQuest(24543)" >
   <!--Vendeta Point-->
   <RunTo X="-2144.502" Y="-1726.315" Z="93.54316" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
+  <CustomBehavior File="InteractWith" MobId="52060" MobState="Alive" X="-2148.177" Y="-1723.438" Z="92.99072" />
 </If>
 <TurnIn QuestName="A Family Divided" QuestId="24543" TurnInName="Kirge Sternhorn" TurnInId="3418" X="-2094.175" Y="-1728.589" Z="98.65248" />
 <If Condition="Me.LevelFraction &gt;= 340.74">
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -898,7 +903,7 @@
   <While Condition="!IsQuestCompleted(24546)" >
     <RunTo QuestId="24546" X="-2129.173" Y="-2078.145" Z="99.33595" />
 	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201781 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
-      <CustomBehavior File="Cava\InteractWith1324" QuestId="24546" MobId="201781" ObjectType="GameObject" X="-2129.173" Y="-2078.145" Z="99.33595" />
+      <CustomBehavior File="InteractWith" QuestId="24546" MobId="201781" ObjectType="GameObject" X="-2129.173" Y="-2078.145" Z="99.33595" />
       <CustomBehavior File="WaitTimer" QuestId="24546" WaitTime="12000" />
 	  <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201744 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
         <RunTo QuestId="24546" X="-2129.173" Y="-2078.145" Z="99.33595" />
@@ -909,7 +914,7 @@
     </If>
     <RunTo QuestId="24546" X="-2464.21" Y="-2308.73" Z="100.34" />
 	<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201743 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
-      <CustomBehavior File="Cava\InteractWith1324" QuestId="24546" MobId="201743" ObjectType="GameObject" X="-2466.405" Y="-2306.976" Z="100.2301" />
+      <CustomBehavior File="InteractWith" QuestId="24546" MobId="201743" ObjectType="GameObject" X="-2466.405" Y="-2306.976" Z="100.2301" />
       <CustomBehavior File="WaitTimer" QuestId="24546" WaitTime="12000" />
 	  <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 201744 &amp;&amp; u.Distance &lt;= 100)) &amp;&amp; !IsQuestCompleted(24546)" >
         <RunTo QuestId="24546" X="-2464.21" Y="-2308.73" Z="100.34" />
@@ -928,7 +933,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -939,7 +944,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -979,14 +984,14 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
 <PickUp QuestName="Biological Intervention" QuestId="24565" GiverName="Naralex" GiverId="37570" X="-1805.736" Y="-2380.675" Z="91.75423" />
 <Objective QuestName="Lashvine Seeds" QuestId="24571" Type="CollectItem" ItemId="49876" CollectCount="4" />
 <If Condition="HasQuest(24570) &amp;&amp; !IsQuestCompleted(24570)" >
-  <CustomBehavior File="Cava\InteractWith1324" QuestId="24570" MobId="37738" MobState="Alive" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
+  <CustomBehavior File="InteractWith" QuestId="24570" MobId="37738" MobState="Alive" InteractByLooting="True" NumOfTimes="1000" CollectionDistance="1000" >
     <HuntingGrounds WaypointVisitStrategy="Random" >
       <Hotspot X="-1589.013" Y="-2325.392" Z="95.0639" />
       <Hotspot X="-1579.002" Y="-2286.007" Z="96.93629" />
@@ -1029,14 +1034,14 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
 <PickUp QuestName="To Harvest Chaos" QuestId="24574" GiverName="Naralex" GiverId="37570" X="-1805.736" Y="-2380.675" Z="91.75423" />
 <If Condition="HasQuest(24566) &amp;&amp; !IsQuestCompleted(24566)" >
   <While Condition="!IsQuestCompleted(24566)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24566" MobId1="37090" MobId2="37091" AuraIdMissingFromMob="71205" NumOfTimes="1000"
+    <CustomBehavior File="InteractWith" QuestId="24566" MobId1="37090" MobId2="37091" AuraIdMissingFromMob="71205" NumOfTimes="1000"
       MobState="Alive" InteractByUsingItemId="49882" Range="30" WaitTime="3000" PreInteractMountStrategy="Dismount" CollectionDistance="1000" >
       <HuntingGrounds>
       <Hotspot X="-1824.031" Y="-2388.884" Z="92.7349" />
@@ -1123,7 +1128,7 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <RunTo X="-4010.591" Y="-1991.227" Z="92.43288" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](34-35)SouthernBarrens[Cava]" />
 </If>
@@ -1131,7 +1136,7 @@
 <If Condition="HasQuest(24601) &amp;&amp; !IsQuestCompleted(24601)" >
   <RunTo X="-1704.515" Y="-2219.51" Z="98.37155" />
   <While  Condition="!IsQuestCompleted(24601)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24601" MobId="37570" GossipOptions="1" MobState="Alive" X="-1705.63" Y="-2216.93" Z="98.85027" />
+    <CustomBehavior File="InteractWith" QuestId="24601" MobId="37570" GossipOptions="1" MobState="Alive" X="-1705.63" Y="-2216.93" Z="98.85027" />
     <RunTo QuestId="24601" X="-1717.552" Y="-2214.429" Z="99.33627" />
     <CustomBehavior File="EscortGroup" QuestId="24601" EscortCompleteWhen="QuestCompleteOrFails" EscortNpcId="37570"
     EscortMaxFightDistance="100" EscortMaxFollowDistance="100" X="-1705.63" Y="-2216.93" Z="98.85027" />
@@ -1143,9 +1148,9 @@
 <PickUp QuestName="Desolation Hold Inspection" QuestId="24577" GiverName="Warlord Bloodhilt" GiverId="37679" X="-2108.87" Y="-1718.785" Z="98.43536" />
 <If Condition="HasQuest(24577) &amp;&amp; !IsQuestCompleted(24577)" >
   <While Condition="!IsQuestCompleted(24577)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="37679" GossipOptions="1" MobState="Alive" X="-2108.87" Y="-1718.785" Z="98.43536" />
+    <CustomBehavior File="InteractWith" MobId="37679" GossipOptions="1" MobState="Alive" X="-2108.87" Y="-1718.785" Z="98.43536" />
     <CustomBehavior File="WaitTimer" WaitTime="125000" />
-    <CustomBehavior File="Cava\InteractWith1324" MobId="37811" GossipOptions="1 1 1" MobState="Alive" X="-3246.019" Y="-1730.144" Z="92.1137" />
+    <CustomBehavior File="InteractWith" MobId="37811" GossipOptions="1 1 1" MobState="Alive" X="-3246.019" Y="-1730.144" Z="92.1137" />
     <CustomBehavior File="WaitTimer" QuestId="24577" WaitTime="4000" />
   </While>
 </If>
@@ -1154,7 +1159,7 @@
 <If Condition="!HasQuest(24654) &amp;&amp; !IsQuestCompleted(24654)" >
   <!--Desolation Hold FP-->
   <RunTo X="-3296.377" Y="-1701.972" Z="122.5754" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
+  <CustomBehavior File="InteractWith" MobId="39330" MobState="Alive" X="-3292.701" Y="-1700.938" Z="122.5895" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44276" X="-3220.69" Y="-1663.86" Z="99.90458" />
 </If>
@@ -1174,8 +1179,8 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1214,13 +1219,13 @@
 </If>
 <If Condition="HasQuest(24631) &amp;&amp; !IsQuestCompleted(24631)" >
   <RunTo X="-3237.361" Y="-2003.134" Z="87.92919" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="201876" NonCompeteDistance="0" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
+  <CustomBehavior File="InteractWith" MobId="201876" NonCompeteDistance="0" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
   <While Condition="!IsQuestCompleted(24631)" >
     <RunTo X="-3228.966" Y="-2009.483" Z="88.18093" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24631" MobId="37978" InteractByUsingItemId="50031" Range="100" WaitTime="5000" CollectionDistance="100" X="-3228.966" Y="-2009.483" Z="88.18093" />
+    <CustomBehavior File="InteractWith" QuestId="24631" MobId="37978" InteractByUsingItemId="50031" Range="100" WaitTime="5000" CollectionDistance="100" X="-3228.966" Y="-2009.483" Z="88.18093" />
     <CustomBehavior File="WaitTimer" QuestId="24631" WaitTime="2000" />
     <If Condition="HasQuest(24619) &amp;&amp; !IsQuestCompleted(24619)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24619" MobId1="37977" MobId2="37922" MobId3="37923" MobId4="37924" MobState="Dead"
+    <CustomBehavior File="InteractWith" QuestId="24619" MobId1="37977" MobId2="37922" MobId3="37923" MobId4="37924" MobState="Dead"
       InteractByUsingItemId="49948" WaitTime="5000" WaitForNpcs="False" CollectionDistance="1000" >
    	  <HuntingGrounds>
       <Hotspot X="-3231.023" Y="-2006.344" Z="87.92674" />
@@ -1244,9 +1249,9 @@
 </If>
 <If Condition="HasQuest(24619) &amp;&amp; !IsQuestCompleted(24619)" >
   <RunTo X="-3237.361" Y="-2003.134" Z="87.92919" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="201876" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
+  <CustomBehavior File="InteractWith" MobId="201876" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
   <While Condition="!IsQuestCompleted(24619)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24619" MobId1="37977" MobId2="37922" MobId3="37923" MobId4="37924" MobState="Dead"
+    <CustomBehavior File="InteractWith" QuestId="24619" MobId1="37977" MobId2="37922" MobId3="37923" MobId4="37924" MobState="Dead"
       InteractByUsingItemId="49948" WaitTime="5000" WaitForNpcs="False" CollectionDistance="1000" >
    	  <HuntingGrounds>
       <Hotspot X="-3231.023" Y="-2006.344" Z="87.92674" />
@@ -1265,7 +1270,7 @@
     </CustomBehavior>
     <CustomBehavior File="WaitTimer" QuestId="24619" WaitTime="7000" />
     <CustomBehavior File="CollectThings" QuestId="24619" ObjectId="201904" CollectItemCount="15" CollectItemId="49945" CollectUntil="NoTargetsInArea" HuntingGroundRadius="200" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24619" MobId1="37923" MobId2="37924" InteractByUsingItemId="49948" WaitTime="5000" WaitForNpcs="False" CollectionDistance="1000" >
+    <CustomBehavior File="InteractWith" QuestId="24619" MobId1="37923" MobId2="37924" InteractByUsingItemId="49948" WaitTime="5000" WaitForNpcs="False" CollectionDistance="1000" >
    	  <HuntingGrounds>
       <Hotspot X="-3231.023" Y="-2006.344" Z="87.92674" />
       <Hotspot X="-3184.303" Y="-1979.7" Z="91.48306" />
@@ -1286,7 +1291,7 @@
 <If Condition="HasQuest(24618) &amp;&amp; !IsQuestCompleted(24618)" >
   <RunTo X="-3237.361" Y="-2003.134" Z="87.92919" />
   <While Condition="!IsObjectiveComplete(2, 24618)" >
-    <CustomBehavior File="Cava\InteractWith1324" MobId="201876" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
+    <CustomBehavior File="InteractWith" MobId="201876" ObjectType="GameObject" WaitTime="1000" WaitForNpcs="False" X="-3242.371" Y="-2002.575" Z="87.93439" />
   </While>
   <Objective QuestName="Claim the Battle Scar" QuestId="24618" Type="KillMob" MobId="37923" KillCount="10" />
 </If>
@@ -1302,8 +1307,8 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1316,9 +1321,9 @@
 <If Condition="HasQuest(24637) &amp;&amp; !IsQuestCompleted(24637)" >
   <RunTo X="-2672.563" Y="-2216.644" Z="92.21957" />
   <While Condition="!IsQuestCompleted(24637)" >
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24637" MobId="38015" GossipOptions="1" MobState="Alive" X="-2670.955" Y="-2215.455" Z="92.29124" />
+    <CustomBehavior File="InteractWith" QuestId="24637" MobId="38015" GossipOptions="1" MobState="Alive" X="-2670.955" Y="-2215.455" Z="92.29124" />
     <CustomBehavior File="WaitTimer" QuestId="24637" WaitTime="12000" />
-    <CustomBehavior File="Cava\InteractWith1324" QuestId="24637" MobId="38018" WaitForNpcs="False" X="-2655.984" Y="-2184.238" Z="95.78497" />
+    <CustomBehavior File="InteractWith" QuestId="24637" MobId="38018" WaitForNpcs="False" X="-2655.984" Y="-2184.238" Z="95.78497" />
   </While>
 </If>
 <If Condition="HasQuest(24620) &amp;&amp; !IsQuestCompleted(24620)" >
@@ -1330,8 +1335,8 @@
   <CustomBehavior File="Message" Text="Moving to SOUTHERN BARRENS, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1346,8 +1351,8 @@
 <If Condition="HasQuest(24667)" >
   <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44287" MobState="Alive" X="-3267.02" Y="-1714.96" Z="92.30474" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />

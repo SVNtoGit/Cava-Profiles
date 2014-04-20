@@ -118,7 +118,7 @@
       TransportStartX="-8650.719" TransportStartY="1346.051" TransportStartZ="0.04130154"
       TransportEndX="8162.587" TransportEndY="1005.365" TransportEndZ="-0.02063938" />
     <RunTo X="8383.156" Y="982.5832" Z="30.82965" />
-    <CustomBehavior File="TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3838" MobState="Alive" WaitForNpcs="True" TaxiNumber="1" WaitTime="5000" />
     <RunTo X="7454.986" Y="-326.4835" Z="8.030777" />
     <RunTo X="6276.334" Y="262.6395" Z="18.21574" />
     </Else>
@@ -134,8 +134,8 @@
 <If Condition="!HasQuest(13542) &amp;&amp; !IsQuestCompleted(13542)">
   <CustomBehavior File="ForceSetVendor" DoMail="False" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="33231" WaitTime="1000" CollectionDistance="50" X="6270.868" Y="263.5678" Z="18.21685" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="33231" WaitTime="1000" CollectionDistance="50" X="6270.868" Y="263.5678" Z="18.21685" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="33231" WaitTime="1000" CollectionDistance="50" X="6270.868" Y="263.5678" Z="18.21685" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="33231" WaitTime="1000" CollectionDistance="50" X="6270.868" Y="263.5678" Z="18.21685" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -152,22 +152,22 @@
 </If>
 <If Condition="HasQuest(13547) &amp;&amp; !IsQuestCompleted(13547)">
   <While Condition="!IsObjectiveComplete(4, 13547)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33037" WaitTime="1000" CollectionDistance="50" X="6328.09" Y="552.9063" Z="13.64776" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33037" WaitTime="1000" CollectionDistance="50" X="6328.09" Y="552.9063" Z="13.64776" />
   </While>
 </If>
 <Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32989" KillCount="1" />
 <If Condition="HasQuest(13547) &amp;&amp; !IsQuestCompleted(13547)">
   <While Condition="!IsObjectiveComplete(3, 13547)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33035" WaitTime="1000" CollectionDistance="50" X="6417.681" Y="525.25" Z="24.06362" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33035" WaitTime="1000" CollectionDistance="50" X="6417.681" Y="525.25" Z="24.06362" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 13547)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33033" WaitTime="1000" CollectionDistance="50" X="6438.566" Y="368.0104" Z="3.049881" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33033" WaitTime="1000" CollectionDistance="50" X="6438.566" Y="368.0104" Z="3.049881" />
   </While>
 </If>
 <Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32988" KillCount="1" />
 <If Condition="HasQuest(13547) &amp;&amp; !IsQuestCompleted(13547)">
   <While Condition="!IsObjectiveComplete(1, 13547)">
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33001" WaitTime="1000" CollectionDistance="50" X="6545.417" Y="476.1719" Z="5.118798" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="13547" GossipOptions="1" MobId="33001" WaitTime="1000" CollectionDistance="50" X="6545.417" Y="476.1719" Z="5.118798" />
   </While>
 </If>
 <Objective QuestName="Three Hammers to Break" QuestId="13543" Type="KillMob" MobId="32990" KillCount="1" />
@@ -214,7 +214,7 @@
   <While Condition="!IsQuestCompleted(13558)" >
     <RunTo X="6446.367" Y="629.8206" Z="22.03401" />
     <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="194145" Range="6" X="6455.232" Y="653.7842" Z="21.82932" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="194145" Range="6" X="6455.232" Y="653.7842" Z="21.82932" />
     <CustomBehavior File="WaitTimer" WaitTime="50000" />
     <CustomBehavior File="WaitTimer" WaitTime="5000" />
     <If Condition="!IsQuestCompleted(13558)" >
@@ -262,7 +262,7 @@
 <PickUp QuestName="Mutual Aid" QuestId="13576" GiverName="Elder Brownpaw" GiverId="33117" X="5788.352" Y="369.901" Z="11.39828" />
 <If Condition="HasQuest(13576) &amp;&amp; !IsQuestCompleted(13576)" >
   <While Condition="!IsQuestCompleted(13576)" >
- 	<CustomBehavior File="Cava\InteractWith1324" QuestId="13576" MobId="32999" MobState="Dead" InteractByUsingItemId="44959" NumOfTimes="1000" CollectionDistance="1000">
+ 	<CustomBehavior File="InteractWith" QuestId="13576" MobId="32999" MobState="Dead" InteractByUsingItemId="44959" NumOfTimes="1000" CollectionDistance="1000">
       <HuntingGrounds>
       <Hotspot X="5790.794" Y="370.0075" Z="11.39946" />
       <Hotspot X="5761.159" Y="398.1615" Z="8.723725" />
@@ -304,7 +304,7 @@
 <PickUp QuestName="The Emerald Dream" QuestId="13586" GiverName="Malfurion Stormrage" GiverId="33091" X="5919.359" Y="194.224" Z="64.36148" />
 <If Condition="HasQuest(13586)" >
   <RunTo X="5764.071" Y="-153.9426" Z="13.7683" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" MobId="195071" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="5764.071" Y="-153.9426" Z="13.7683" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195071" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="5764.071" Y="-153.9426" Z="13.7683" />
   <CustomBehavior File="WaitTimer" WaitTime="3000" />
 </If>
 <TurnIn QuestName="The Emerald Dream" QuestId="13586" TurnInName="Thessera" TurnInId="33166" X="5768.422" Y="-164.4774" Z="13.74413" />

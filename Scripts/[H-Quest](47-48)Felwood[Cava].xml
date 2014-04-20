@@ -164,7 +164,7 @@
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
     <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <CustomBehavior File="TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Emerald Sanctuary" WaitTime="1000" />
+    <CustomBehavior File="Cava\TaxiRide" MobId="3310" MobState="Alive" WaitForNpcs="True" DestName="Emerald Sanctuary" WaitTime="1000" />
     <RunTo X="3972.84" Y="-1324.51" Z="244.803" />
     </Else>
   </If>
@@ -219,8 +219,8 @@
   <CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True" />
   <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
-  <CustomBehavior File="Cava\InteractWith1324" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="48608" WaitTime="1000" CollectionDistance="50" X="4003.65" Y="-1319.84" Z="246.2254" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -313,7 +313,7 @@
 <If Condition="!HasQuest(28150) &amp;&amp; !IsQuestCompleted(28150) &amp;&amp; Me.LevelFraction &gt;= 48.90">
   <CustomBehavior File="Message" Text="Moving to Felwood, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="4734.16" Y="-883.806" Z="342.934" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
+  <CustomBehavior File="InteractWith" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
   <RunTo X="5219.919" Y="-706.1689" Z="343.6011" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](48-51)Felwood[Cava]" />
 </If>
@@ -384,7 +384,7 @@
 <If Condition="!HasQuest(28152) &amp;&amp; !IsQuestCompleted(28152) &amp;&amp; Me.LevelFraction &gt;= 48.90">
   <CustomBehavior File="Message" Text="Moving to Felwood, Please do not stop bot" LogColor="Aquamarine" />
   <RunTo X="4734.16" Y="-883.806" Z="342.934" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
+  <CustomBehavior File="InteractWith" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
   <RunTo X="5219.919" Y="-706.1689" Z="343.6011" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](48-51)Felwood[Cava]" />
 </If>
@@ -409,7 +409,7 @@
 <If Condition="HasQuest(28152)">
   <!--Wildheart Point-->
   <RunTo X="4734.16" Y="-883.806" Z="342.934" />
-  <CustomBehavior File="Cava\InteractWith1324" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
+  <CustomBehavior File="InteractWith" MobId="43079" MobState="Alive" X="4736.93" Y="-886.96" Z="343.1577" />
 </If>
 <TurnIn QuestName="Jaedenar Awaits" QuestId="28152" TurnInName="Greta Mosshoof" TurnInId="10922" X="4738.67" Y="-867.752" Z="343.4679" />
 <If Condition="!HasQuest(28116) &amp;&amp; !IsQuestCompleted(28116) &amp;&amp; Me.LevelFraction &gt;= 48.90">
