@@ -430,7 +430,7 @@
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
 <If Condition="Me.IsAlliance" >
-  <CustomBehavior File="LoadProfile" ProfileName="..\[Quest]1to90By[Cava]" />
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0 || Mount.GroundMounts.Count() &lt;= 0">
   <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
@@ -446,7 +446,7 @@
   </If>
 </If>
 <If Condition="Me.Level &gt;= 40">
-  <CustomBehavior File="LoadProfile" ProfileName="..\[Quest]1to90By[Cava]" />
+  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 15">
   <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
