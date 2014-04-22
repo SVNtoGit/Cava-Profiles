@@ -614,18 +614,25 @@
 <If Condition="HasQuest(24927) &amp;&amp; !IsQuestCompleted(24927) ||
                HasQuest(24928) &amp;&amp; !IsQuestCompleted(24928) ||
                HasQuest(24949) &amp;&amp; !IsQuestCompleted(24949)" >
+  <RunTo X="-7984.337" Y="-5271.026" Z="0.6049516" />
 </If>
 <If Condition="HasQuest(24949) &amp;&amp; !IsQuestCompleted(24949)" >
-  <CustomBehavior File="CollectThings" QuestId="24949" ObjectId1="203019" ObjectId2="203021" ObjectId3="203022" ObjectId4="202263" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-      <Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
-      <Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
-      <Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
-      <Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
-      <Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
-      <Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
-      <Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
-      <Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
-  </CustomBehavior>
+	<LootMobs Value="true" />
+	<While Condition="!IsQuestCompleted(24949)" >
+		<CustomBehavior File="InteractWith" QuestId="24949" MobId1="203019" MobId2="203021" MobId3="203022" MobId4="202263" NumOfTimes="1000" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+			<HuntingGrounds>
+				<Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
+				<Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
+				<Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
+				<Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
+				<Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
+				<Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
+				<Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
+				<Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
+			</HuntingGrounds>
+		</CustomBehavior>
+	</While>	
+	<LootMobs Value="null" />
 </If>
 <!--
 <Objective QuestName="Booty Duty" QuestId="24949" Type="CollectItem" ItemId="51549" CollectCount="10" /> -->
@@ -650,16 +657,22 @@
   </While>
 </If>
 <If Condition="HasQuest(24927) &amp;&amp; !IsQuestCompleted(24927)" >
-  <CustomBehavior File="CollectThings" QuestId="24927" MobId1="7855" MobId2="7858" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-      <Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
-      <Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
-      <Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
-      <Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
-      <Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
-      <Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
-      <Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
-      <Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
-  </CustomBehavior>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>7855, 7856, 7858</MobIDs>
+			<Hotspots>
+				<Hotspot X="-7984.337" Y="-5271.026" Z="0.6049516" />
+				<Hotspot X="-8016.622" Y="-5245.399" Z="0.5862356" />
+				<Hotspot X="-8056.864" Y="-5244.813" Z="1.040936" />
+				<Hotspot X="-8092.376" Y="-5263.325" Z="0.6702381" />
+				<Hotspot X="-8099.903" Y="-5303.93" Z="0.5516319" />
+				<Hotspot X="-8061.589" Y="-5317.197" Z="1.330864" />
+				<Hotspot X="-8022.879" Y="-5332.167" Z="0.7868709" />
+				<Hotspot X="-7993.133" Y="-5303.224" Z="0.5798224" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(24927)" />
 </If>
 <TurnIn QuestName="Dead Man's Chest" QuestId="24927" TurnInName="Megs Dreadshredder" TurnInId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
 <PickUp QuestName="Going Off-Task" QuestId="25534" GiverName="Megs Dreadshredder" GiverId="38703" X="-7954.868" Y="-5245.221" Z="1.251492" />
