@@ -1228,7 +1228,23 @@
 <If Condition="!HasQuest(27364) &amp;&amp; !IsQuestCompleted(27364)">
   <PickUp QuestName="On Whose Orders?" QuestId="27364" GiverName="Forward Commander Onslaught" GiverId="45315" X="-916.026" Y="1629.5" Z="68.35623" />
 </If>
-<Objective QuestName="On Whose Orders?" QuestId="27364" Type="CollectItem" ItemId="60977" CollectCount="1" />
+<If Condition="HasQuest(27364) &amp;&amp; !IsQuestCompleted(27364)">
+  <RunTo X="-1528.83" Y="1587.73" Z="26.53719" />
+	<LootMobs Value="true" />
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>45405</MobIDs>
+			<Hotspots>
+				<Hotspot X="-1528.83" Y="1587.73" Z="26.53719" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(27364)" />
+	<LootMobs Value="null" />
+<!--
+	<Objective QuestName="On Whose Orders?" QuestId="27364" Type="CollectItem" ItemId="60977" CollectCount="1" />
+-->
+</If>
 <If Condition="HasQuest(27364) &amp;&amp; !IsQuestCompleted(27364)">
   <RunTo X="-1527.453" Y="1589.709" Z="26.53675" />
 </If>
