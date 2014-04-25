@@ -671,8 +671,9 @@
 <PickUp QuestName="Marsh Frog Legs" QuestId="27183" GiverName="&quot;Swamp Eye&quot; Jarl" GiverId="4792" X="-2952.756" Y="-3885.405" Z="34.22612" />
 <PickUp QuestName="What's Haunting Witch Hill?" QuestId="27188" GiverName="Mordant Grimsby" GiverId="23843" X="-2948.356" Y="-3893.17" Z="35.05546" />
 <PickUp QuestName="The Lost Report" QuestId="27244" GiverName="Loose Dirt" GiverType="GameObject" GiverId="20985" X="-2940.664" Y="-3884.77" Z="35.00951" />
-<!--<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
+<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
   <LootMobs Value="true" />
+  <RunTo X="-2939.012" Y="-3883.433" Z="34.86161" />
   <CustomBehavior File="CollectThings" QuestId="27183" MobId="23979" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="-2939.012" Y="-3883.433" Z="34.86161" />
     <Hotspot X="-2909.818" Y="-3911.979" Z="38.03432" />
@@ -688,11 +689,12 @@
     <Hotspot X="-2935.093" Y="-3861.285" Z="29.0013" />
   </CustomBehavior>
   <LootMobs Value="null" />
-</If> -->
-<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
+</If>
+<!--<If Condition="HasQuest(27183) &amp;&amp; !IsQuestCompleted(27183)" >
   <RunTo X="-2939.012" Y="-3883.433" Z="34.86161" />
   <Objective QuestName="Marsh Frog Legs" QuestId="27183" Type="CollectItem" ItemId="33202" CollectCount="10" />
 </If>
+-->
 <If Condition="HasQuest(27188) &amp;&amp; !IsQuestCompleted(27188)" >
   <SetGrindArea>
   <GrindArea>
