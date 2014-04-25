@@ -410,14 +410,14 @@
 <PickUp QuestName="Druid of the Claw" QuestId="2561" GiverName="Oben Rageclaw" GiverId="7317" X="9753.26" Y="1590.161" Z="1300.385" />
 <If Condition="((HasQuest(2561)) &amp;&amp; (!IsQuestCompleted(2561)))" >
   <While Condition="!IsQuestCompleted(2561)" >
-		<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 7318 &amp;&amp; u.IsDead &amp;&amp; u.IsTagged &amp;&amp; u.Distance < 11)) &amp;&amp; !IsQuestCompleted(2561)" >
+		<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 7318 &amp;&amp; u.IsDead &amp;&amp; u.IsTagged &amp;&amp; u.Distance &lt; 11)) &amp;&amp; !IsQuestCompleted(2561)" >
 			<RunTo X="9753.717" Y="1587.009" Z="1300.926" />
 			<CustomBehavior File="WaitTimer" WaitTime="15000" />
 			<RunTo X="9784.334" Y="1562.03" Z="1299.716" />
 			<CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</While>
 		<If Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 195112 &amp;&amp; !u.Locked)) &amp;&amp; !IsQuestCompleted(2561)" >
-			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="2561" MobId="7318" WaitTime="1000" CollectionDistance="10" InteractByUsingItemId="8149" WaitTime="2000" ProactiveCombatStrategy="ClearMobsTargetingUs" X="9786.846" Y="1568.388" Z="1301.351" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="2561" MobId="7318" CollectionDistance="10" InteractByUsingItemId="8149" WaitTime="2000" ProactiveCombatStrategy="ClearMobsTargetingUs" X="9786.846" Y="1568.388" Z="1301.351" />
 		<Else>
 			<RunTo X="9753.717" Y="1587.009" Z="1300.926" />
 			<RunTo X="9784.334" Y="1562.03" Z="1299.716" />
