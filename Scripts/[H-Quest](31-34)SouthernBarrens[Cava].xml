@@ -1290,11 +1290,12 @@
 </If>
 <If Condition="HasQuest(24618) &amp;&amp; !IsQuestCompleted(24618)" >
   <RunTo X="-3237.361" Y="-2003.134" Z="87.92919" />
+  <Objective QuestName="Claim the Battle Scar" QuestId="24618" Type="KillMob" MobId="37923" KillCount="10" />
   <While Condition="!IsObjectiveComplete(2, 24618)" >
 		<RunTo X="-3242.411" Y="-2003.26" Z="87.9324" />
+		<CustomBehavior File="ForcedDismount" />
 		<CustomBehavior File="InteractWith" QuestId="24618" QuestObjectiveIndex="2" MobId1="201876" MobId2="201877" NonCompeteDistance="0" WaitTime="1000" WaitForNpcs="False" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-3242.371" Y="-2002.575" Z="87.93439" />
   </While>
-  <Objective QuestName="Claim the Battle Scar" QuestId="24618" Type="KillMob" MobId="37923" KillCount="10" />
 </If>
 <TurnIn QuestName="Parts-is-Parts" QuestId="24619" TurnInName="Calder Gray" TurnInId="37908" X="-3266.174" Y="-1801.974" Z="103.325" />
 <PickUp QuestName="Hearts-is-Hearts" QuestId="24620" GiverName="Calder Gray" GiverId="37908" X="-3266.174" Y="-1801.974" Z="103.325" />
