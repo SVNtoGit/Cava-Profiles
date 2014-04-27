@@ -1,5 +1,5 @@
 <HBProfile>
-<Name>[Quest]MOP 85 to 90 With Loot By [Cava] $Rev$</Name>
+<Name>[Quest]MOP 85 to 90 With Loot By [Cava] $Rev: 232 $</Name>
 	
 <QuestOrder>
   <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
@@ -21,15 +21,7 @@ Also be sure to:\n
 <!-- #######################################################################################################################-->
 <If Condition="Me.IsHorde" >
  <If Condition="(Me.LevelFraction &gt;= 85)" >
-    <If Condition="HasQuest(30814) &amp;&amp; IsQuestCompleted(30814)" >
-    </If>
-    <If Condition="HasQuest(31286) &amp;&amp; IsQuestCompleted(31286)" >
-    </If>
-    <If Condition="HasQuest(30079) &amp;&amp; IsQuestCompleted(30079)" >
-    </If>
-    <If Condition="HasQuest(29907) &amp;&amp; IsQuestCompleted(29907)" >
-   </If>
-   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](86-87)ValleyoftheFourWinds(WL)[Cava]" />
+   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](87)KrasarangWilds(WL)[Cava]" />
   </If>
 </If>
 <!-- #######################################################################################################################-->
@@ -41,10 +33,7 @@ Also be sure to:\n
     <If Condition="HasQuest(31286) &amp;&amp; IsQuestCompleted(31286)" >
         <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit(WL)[Cava]" />
     </If>
-    <If Condition="HasQuest(30079) &amp;&amp; IsQuestCompleted(30079)" >
-        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87)KrasarangWilds(WL)[Cava]" />
-    </If>
-    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](86-87)ValleyoftheFourWinds(WL)[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87)KrasarangWilds(WL)[Cava]" />
   </If>
 </If>
 
