@@ -2,6 +2,9 @@
 <Name>Armageddoner Next [Cava] $Rev$</Name>
 <QuestOrder>
 <If Condition="(Me.Level &gt;= 80)">
+  <If Condition="!HasQuest(29670) &amp;&amp; IsQuestCompleted(29670)">
+    <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(86-87)ValleyoftheFourWinds[Cava]" />
+  </If>	
   <If Condition="!HasQuest(28363) &amp;&amp; IsQuestCompleted(28363)">
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(85-86)TheJadeForest[Cava]" />
   </If>	
