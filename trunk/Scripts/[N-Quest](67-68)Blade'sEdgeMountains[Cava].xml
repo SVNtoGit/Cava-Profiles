@@ -2939,7 +2939,7 @@ Text="\n
 		<While Condition="!IsQuestCompleted(10714)">
 			<CustomBehavior File="InteractWith" QuestId="10714" MobId1="22384" MobId2="223160" NumOfTimes="1000" MobState="Alive" NotMoving="True"
 			  InteractByUsingItemId="31128" CollectionDistance="1000" MinRange="20" PreInteractMountStrategy="DismountOrCancelShapeshift"
-				ProactiveCombatStrategy="ClearMobsTargetingUs" Range="25" WaitTime="30000">
+				ProactiveCombatStrategy="ClearMobsTargetingUs" Range="25" WaitTime="30000" TerminateWhen="Me.Combat">
 				<HuntingGrounds>
 					<Hotspot X="3313.754" Y="5735.281" Z="-10.30445" />
 					<Hotspot X="3276.689" Y="5720.55" Z="-5.516799" />
@@ -2952,6 +2952,7 @@ Text="\n
 					<Hotspot X="3071.668" Y="5870.674" Z="-0.01054512" />
 				</HuntingGrounds>
 			</CustomBehavior>
+      <CustomBehavior File="WaitTimer" WaitTime="3000" />
 		</While>
 	</If>
   <If Condition="HasQuest(10714)">

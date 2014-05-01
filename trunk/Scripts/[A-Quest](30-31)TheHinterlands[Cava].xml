@@ -378,36 +378,36 @@
 <TurnIn QuestName="99 Bottles of Booze on the Beach" QuestId="26486" TurnInName="Dron Blastbrew" TurnInId="43109" X="330.431" Y="-4125.25" Z="117.213" />
 <TurnIn QuestName="The Wicked Revantusk" QuestId="26462" TurnInName="Kerr Ironsight" TurnInId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
 <TurnIn QuestName="Gan'dranda" QuestId="26483" TurnInName="Kerr Ironsight" TurnInId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
-<If Condition="(Me.LevelFraction &gt;= 31.25 )">
+<!--
+<If Condition="(Me.LevelFraction &gt;= 31.25)">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](31-34)TheHinterlands[Cava]" />
 </If>
 <PickUp QuestName="Skulk Rock Clean-Up" QuestId="26491" GiverName="Kerr Ironsight" GiverId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
 <PickUp QuestName="Skulk Rock Supplies" QuestId="26492" GiverName="Kerr Ironsight" GiverId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
-<!--
 <PickUp QuestName="Prime Slime" QuestId="26490" GiverName="Dron Blastbrew" GiverId="43109" X="330.431" Y="-4125.25" Z="117.2127" />
--->
 <If Condition="HasQuest(26492) &amp;&amp; !IsQuestCompleted(26492)" >
   <LootMobs Value="true" />
   <RunTo X="488.306" Y="-3847.647" Z="108.9968" />
   <Objective QuestName="Skulk Rock Supplies" QuestId="26492" Type="CollectItem" ItemId="57989" CollectCount="5" />
 </If>
-<!--
 <If Condition="HasQuest(26490) &amp;&amp; !IsQuestCompleted(26490)" >
   <LootMobs Value="null" />
 </If>
 <Objective QuestName="Prime Slime" QuestId="26490" Type="CollectItem" ItemId="58082" CollectCount="1" />
--->
+
 <If Condition="HasQuest(26491) &amp;&amp; !IsQuestCompleted(26491)" >
   <LootMobs Value="null" />
 </If>
 <Objective QuestName="Skulk Rock Clean-Up" QuestId="26491" Type="KillMob" MobId="2656" KillCount="10" />
+-->
 <!--# # # Level 31 # # # -->
 <!--
 <TurnIn QuestName="Prime Slime" QuestId="26490" TurnInName="Dron Blastbrew" TurnInId="43109" X="330.431" Y="-4125.25" Z="117.2127" />
--->
 <TurnIn QuestName="Skulk Rock Clean-Up" QuestId="26491" TurnInName="Kerr Ironsight" TurnInId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
+<!--
 <TurnIn QuestName="Skulk Rock Supplies" QuestId="26492" TurnInName="Kerr Ironsight" TurnInId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
 <PickUp QuestName="Down with the Vilebranch" QuestId="26496" GiverName="Kerr Ironsight" GiverId="43108" X="330.224" Y="-4130.02" Z="117.2121" />
+-->
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](31-34)TheHinterlands[Cava]" />
 </QuestOrder>
 </HBProfile>
