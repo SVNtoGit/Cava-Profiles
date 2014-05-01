@@ -234,7 +234,7 @@
 <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0">
   <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
 </If>
-<If Condition="(Me.Level &gt;= 30 )">
+<If Condition="(Me.LevelFraction &gt;= 31.25)">
   <RunTo X="288.0102" Y="-2005.636" Z="194.1264" />
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
@@ -398,7 +398,7 @@
 <PickUp QuestName="Wand over Fist" QuestId="26036" GiverName="Skuerto" GiverId="2789" X="-1281.153" Y="-2529.644" Z="21.52105" />
 <!--<TurnIn QuestName="For Southshore" QuestId="26117" TurnInName="Commander Amaren" TurnInId="2608" X="-1248.1" Y="-2506.788" Z="21.33775" />-->
 <!--# # # Level 29 # # # -->
-<If Condition="(Me.Level &gt;= 30 )">
+<If Condition="(Me.LevelFraction &gt;= 31.25)">
   <RunTo X="288.0102" Y="-2005.636" Z="194.1264" />
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
@@ -447,7 +447,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>
 <TurnIn QuestName="Wand over Fist" QuestId="26036" TurnInName="Skuerto" TurnInId="2789" X="-1281.153" Y="-2529.644" Z="21.52105" />
-<If Condition="(Me.Level &gt;= 30 )">
+<If Condition="(Me.LevelFraction &gt;= 31.25)">
   <RunTo X="288.0102" Y="-2005.636" Z="194.1264" />
   <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
 </If>
@@ -482,7 +482,7 @@
 <Objective QuestName="Attack on the Tower" QuestId="26038" Type="CollectItem" ItemId="4530" CollectCount="1" />
 <Objective QuestName="Attack on the Tower" QuestId="26038" Type="CollectItem" ItemId="4532" CollectCount="1" />
 <Objective QuestName="Attack on the Tower" QuestId="26038" Type="CollectItem" ItemId="4531" CollectCount="1" />
-<If Condition="Me.LevelFraction &lt; 29.82">
+<If Condition="Me.LevelFraction &lt; 30.15">
   
   <SetGrindArea>
   <GrindArea>
@@ -501,7 +501,7 @@
   </Hotspots>
   </GrindArea>
   </SetGrindArea>
-  <GrindTo Condition="Me.LevelFraction &gt;=29.82" />
+  <GrindTo Condition="Me.LevelFraction &gt;=30.15" />
   
 </If>
 <If Condition="HasQuest(26038) &amp;&amp; IsQuestCompleted(26038)">
