@@ -2829,7 +2829,6 @@
   </If>
   <If Condition="HasQuest(10286)">
     <CustomBehavior File="FlyTo" X="-199.1616" Y="4378.77" Z="59.50231" />
-		<!--InteractByGossipOptions="1"-->
 		<While Condition="HasQuest(10286)">
 			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" KeepTargetSelected="True"
 				CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" >
@@ -2944,7 +2943,6 @@
   </If>
 	<If Condition="!HasQuest(10287) &amp;&amp; !IsQuestCompleted(10287)">
     <CustomBehavior File="FlyTo" X="-199.1616" Y="4378.77" Z="59.50231" />
-		<!--InteractByGossipOptions="1"-->
 		<While Condition="!HasQuest(10287)">
 			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" WaitTime="1500" KeepTargetSelected="True"
 				CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" >
