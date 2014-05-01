@@ -814,8 +814,8 @@ Also be sure to:\n
   <PickUp QuestName="Palm of the Tiger" QuestId="31142" GiverName="Bao" GiverId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
   <RunTo QuestId="31142" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <While Condition="HasQuest(31142) &amp;&amp; !IsQuestCompleted(31142)">
-	<CustomBehavior File="CastSpellOn" QuestId="31142" SpellId="100780" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
-	<CustomBehavior File="CastSpellOn" QuestId="31142" SpellId="100787" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
+		<CustomBehavior File="InteractWith" InteractByCastingSpellId="100780" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="100787" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
   </While>
   <TurnIn QuestName="Palm of the Tiger" QuestId="31142" TurnInName="Bao" TurnInId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
   <PickUp QuestName="Join the Battle!" QuestId="31143" GiverName="Bao" GiverId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />
