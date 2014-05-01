@@ -78,7 +78,11 @@
 
 <!-- # # # # # # # # # # # # # Alliance Character # # # # # # # # # # # # #-->
 <If Condition="Me.IsAlliance" >
-
+	<!--Mop Side-->
+	<If Condition="Me.ZoneId == 5785 || Me.ZoneId == 6134 || Me.ZoneId == 5841 || Me.ZoneId == 5805 || Me.ZoneId == 5842 || Me.ZoneId == 6138 || Me.ZoneId == 6661 || Me.ZoneId == 5840  || Me.ZoneId == 6507 || Me.ZoneId == 6757">
+		<CustomBehavior File="FlyTo" Land="True" X="-308.6749" Y="-1774.119" Z="62.47319" />
+		<CustomBehavior File="InteractWith" MobId="210805" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="-308.6749" Y="-1774.119" Z="62.47319" />
+	</If>
   <!--Cataclysm Side-->
   <If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
     <CustomBehavior File="InteractWith" MobId="209080" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5543.027" Y="-3590.346" Z="1568.018" />
@@ -255,6 +259,11 @@
 
 
 <If Condition="Me.IsHorde">
+	<!--Mop Side-->
+	<If Condition="Me.ZoneId == 5785 || Me.ZoneId == 6134 || Me.ZoneId == 5841 || Me.ZoneId == 5805 || Me.ZoneId == 5842 || Me.ZoneId == 6138 || Me.ZoneId == 6661 || Me.ZoneId == 5840  || Me.ZoneId == 6507 || Me.ZoneId == 6757">
+		<CustomBehavior File="FlyTo" Land="True" X="3001.962" Y="-542.4926" Z="248.1749" />
+		<CustomBehavior File="InteractWith" MobId="210804" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="3001.962" Y="-542.4926" Z="248.1749" />
+	</If>
   <!--Cataclysm side-->
   <If Condition="Me.ZoneId == 616 &amp;&amp; Me.Level &gt;= 80">
     <CustomBehavior File="InteractWith" MobId="209081" NonCompeteDistance="0" PreInteractMountStrategy="Dismount" WaitTime="12000" X="5503.639" Y="-3628.739" Z="1567.61" />
