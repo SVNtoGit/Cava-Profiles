@@ -2164,7 +2164,7 @@
     <CustomBehavior File="FlyTo" X="2891.072" Y="5545.203" Z="56.84653" />
     <CustomBehavior File="ForcedDismount" />
     <LootMobs Value="true" />
-    <CustomBehavior File="Cava\PullMobs" QuestId="11717" MobId="25464" PullMob="True"  CollectUntil="QuestComplete" >
+    <CustomBehavior File="Cava\PullMobs" QuestId="11717" MobId="25464" MobState="Alive" PullMob="True" CollectUntil="QuestComplete" >
       <Hotspot X="2880.418" Y="5565.77" Z="56.42569" />
       <Hotspot X="2878.079" Y="5606.378" Z="49.45724" />
       <Hotspot X="2908.488" Y="5632.695" Z="46.07666" />
@@ -3057,12 +3057,7 @@
   <CustomBehavior File="ForcedDismount" />
 </If>
 -->
-<PickUp QuestName="Reading the Meters" QuestId="11900" GiverName="Archmage Berinand" GiverId="25314" X="3575.609" Y="6671.719" Z="195.109" />
-<If Condition="!HasQuest(11910) &amp;&amp; !IsQuestCompleted(11910)" >
-  <PickUp QuestName="Secrets of the Ancients" QuestId="11910" GiverName="Archmage Berinand" GiverId="25314" X="3575.609" Y="6671.719" Z="195.109" />
-  <RunTo X="3583.975" Y="6664.483" Z="195.2309" />
-</If>
-<If Condition="!HasQuest(11918) &amp;&amp; !IsQuestCompleted(11918) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
+<If Condition="!HasQuest(11900) &amp;&amp; !IsQuestCompleted(11900) &amp;&amp; (Me.LevelFraction &gt;= 72.95)" >
   <If Condition="Me.IsAlliance &amp;&amp; (Me.LevelFraction &gt;= 72.95)">
     <CustomBehavior File="Message" Text="Moving to DRAGONBLIGHT, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3504.13" Y="1992.03" Z="64.95794" />
@@ -3076,8 +3071,10 @@
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](72-75)Dragonblight[Cava]" />
   </If>
 </If>
-<PickUp QuestName="Basic Training" QuestId="11918" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="Nuts for Berries" QuestId="11912" GiverName="Librarian Serrah" GiverId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
+<PickUp Nav="Fly" QuestName="Reading the Meters" QuestId="11900" GiverName="Archmage Berinand" GiverId="25314" X="3575.609" Y="6671.719" Z="195.109" />
+<PickUp Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" GiverName="Archmage Berinand" GiverId="25314" X="3575.609" Y="6671.719" Z="195.109" />
+<PickUp Nav="Fly" QuestName="Basic Training" QuestId="11918" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="Nuts for Berries" QuestId="11912" GiverName="Librarian Serrah" GiverId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
 <If Condition="HasQuest(11910) &amp;&amp; !IsQuestCompleted(11910)" >
   <LootMobs Value="true" />
 </If>
@@ -3145,51 +3142,44 @@
     <Hotspot X="3766.038" Y="6587.458" Z="170.1896" />
   </CustomBehavior>
 </If>
-<Objective QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35483" CollectCount="3" />
-<Objective QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35484" CollectCount="3" />
+<Objective Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35483" CollectCount="3" />
+<Objective Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35484" CollectCount="3" />
 <If Condition="HasQuest(11910)" >
   <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(11912) &amp;&amp; !IsQuestCompleted(11912)" >
   <CustomBehavior File="FlyTo" X="3744.509" Y="6581.362" Z="172.674" />
   <CustomBehavior File="ForcedDismount" />
-  <Objective QuestName="Nuts for Berries" QuestId="11912" Type="CollectItem" ItemId="35492" CollectCount="10" />
+  <Objective Nav="Fly" QuestName="Nuts for Berries" QuestId="11912" Type="CollectItem" ItemId="35492" CollectCount="10" />
 </If>
 <If Condition="HasQuest(11918) &amp;&amp; !IsQuestCompleted(11918)" >
   <CustomBehavior File="FlyTo" X="3736.517" Y="6615.127" Z="167.8221" />
   <CustomBehavior File="ForcedDismount" />
-  <Objective QuestName="Basic Training" QuestId="11918" Type="KillMob" MobId="25722" KillCount="10" />
+  <Objective Nav="Fly" QuestName="Basic Training" QuestId="11918" Type="KillMob" MobId="25722" KillCount="10" />
 </If>
-<If Condition="HasQuest(11900) || HasQuest(11918) || HasQuest(11941) || HasQuest(11912) || HasQuest(11910)" >
-  <CustomBehavior File="FlyTo" X="3582.8" Y="6661.594" Z="195.6721" />
-  <CustomBehavior File="ForcedDismount" />
-</If>
-<TurnIn QuestName="Reading the Meters" QuestId="11900" TurnInName="Archmage Berinand" TurnInId="25314" X="3575.609" Y="6671.719" Z="195.109" />
-<If Condition="HasQuest(11910)" >
-  <TurnIn QuestName="Secrets of the Ancients" QuestId="11910" TurnInName="Archmage Berinand" TurnInId="25314" X="3575.609" Y="6671.719" Z="195.109" />
-  <RunTo X="3583.975" Y="6664.483" Z="195.2309" />
-</If>
-<TurnIn QuestName="Basic Training" QuestId="11918" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="Hatching a Plan" QuestId="11936" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<TurnIn QuestName="Puzzling..." QuestId="11941" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="The Cell" QuestId="11943" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<TurnIn QuestName="Nuts for Berries" QuestId="11912" TurnInName="Librarian Serrah" TurnInId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
-<PickUp QuestName="Keep the Secret Safe" QuestId="11914" GiverName="Librarian Serrah" GiverId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
+<TurnIn Nav="Fly" QuestName="Reading the Meters" QuestId="11900" TurnInName="Archmage Berinand" TurnInId="25314" X="3575.609" Y="6671.719" Z="195.109" />
+<TurnIn Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" TurnInName="Archmage Berinand" TurnInId="25314" X="3575.609" Y="6671.719" Z="195.109" />
+<TurnIn Nav="Fly" QuestName="Basic Training" QuestId="11918" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="Hatching a Plan" QuestId="11936" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Puzzling..." QuestId="11941" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="The Cell" QuestId="11943" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Nuts for Berries" QuestId="11912" TurnInName="Librarian Serrah" TurnInId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
+<PickUp Nav="Fly" QuestName="Keep the Secret Safe" QuestId="11914" GiverName="Librarian Serrah" GiverId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
 <If Condition="HasQuest(11936) &amp;&amp; !IsQuestCompleted(11936) &amp;&amp; (GetItemCount(35586) &lt; 5)" >
   <CustomBehavior File="FlyTo" X="3575.214" Y="7025.985" Z="194.2488" />
   <CustomBehavior File="ForcedDismount" />
-  <Objective QuestName="Hatching a Plan" QuestId="11936" Type="CollectItem" ItemId="35586" CollectCount="5" />
+  <Objective Nav="Fly" QuestName="Hatching a Plan" QuestId="11936" Type="CollectItem" ItemId="35586" CollectCount="5" />
 </If>
 <If Condition="HasQuest(11943) &amp;&amp; !IsQuestCompleted(11943)" >
   <If Condition="!IsObjectiveComplete(1, 11943)">
     <CustomBehavior File="FlyTo" X="3790.224" Y="7174.326" Z="159.7913" />
     <CustomBehavior File="ForcedDismount" />
-    <Objective QuestName="The Cell" QuestId="11943" Type="CollectItem" ItemId="35669" CollectCount="1" />
+    <Objective Nav="Fly" QuestName="The Cell" QuestId="11943" Type="CollectItem" ItemId="35669" CollectCount="1" />
   </If>
   <If Condition="!IsObjectiveComplete(2, 11943)">
     <CustomBehavior File="FlyTo" X="4091.66" Y="7015.697" Z="162.8733" />
     <CustomBehavior File="ForcedDismount" />
-    <Objective QuestName="The Cell" QuestId="11943" Type="CollectItem" ItemId="35668" CollectCount="1" />
+    <Objective Nav="Fly" QuestName="The Cell" QuestId="11943" Type="CollectItem" ItemId="35668" CollectCount="1" />
   </If>
 </If>
 <If Condition="(HasQuest(11914) &amp;&amp; !IsQuestCompleted(11914)) || (HasQuest(11936) &amp;&amp; !IsQuestCompleted(11936))" >
@@ -3199,7 +3189,7 @@
 <If Condition="HasQuest(11914) &amp;&amp; !IsQuestCompleted(11914)" >
   <LootMobs Value="true" />
 </If>
-<Objective QuestName="Hatching a Plan" QuestId="11936" Type="UseObject" ObjectId="188133" UseCount="5" />
+<Objective Nav="Fly" QuestName="Hatching a Plan" QuestId="11936" Type="UseObject" ObjectId="188133" UseCount="5" />
 <If Condition="HasQuest(11914)" >
   <LootMobs Value="null" />
 </If>
@@ -3225,14 +3215,10 @@
 <!--<Objective QuestName="Keep the Secret Safe" QuestId="11914" Type="CollectItem" ItemId="35493" CollectCount="5" />-->
   <LootMobs Value="null" />
 </If>
-<If Condition="HasQuest(11936) || HasQuest(11943) || HasQuest(11914)" >
-  <CustomBehavior File="FlyTo" X="3575.25" Y="6650.797" Z="195.1935" />
-  <CustomBehavior File="ForcedDismount" />
-</If>
-<TurnIn QuestName="Hatching a Plan" QuestId="11936" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="Drake Hunt" QuestId="11919" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<TurnIn QuestName="The Cell" QuestId="11943" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<TurnIn QuestName="Keep the Secret Safe" QuestId="11914" TurnInName="Librarian Serrah" TurnInId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
+<TurnIn Nav="Fly" QuestName="Hatching a Plan" QuestId="11936" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="Drake Hunt" QuestId="11919" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="The Cell" QuestId="11943" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Keep the Secret Safe" QuestId="11914" TurnInName="Librarian Serrah" TurnInId="26110" X="3576.481" Y="6640.387" Z="195.0928" />
 <If Condition="HasQuest(11919) &amp;&amp; !IsQuestCompleted(11919)" >
   <CustomBehavior File="FlyTo" X="3952.326" Y="7114.247" Z="162.8867" />
   <CustomBehavior File="ForcedDismount" />
@@ -3250,8 +3236,8 @@
     </While>
   </While>
 </If>
-<TurnIn QuestName="Drake Hunt" QuestId="11919" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="Cracking the Code" QuestId="11931" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Drake Hunt" QuestId="11919" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="Cracking the Code" QuestId="11931" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
 <If Condition="!HasQuest(11946) &amp;&amp; !IsQuestCompleted(11946)" >
   <CustomBehavior File="FlyTo" X="3574.972" Y="6652.38" Z="195.1879" />
   <CustomBehavior File="ForcedDismount" />
@@ -3299,14 +3285,14 @@
   <CustomBehavior File="FlyTo" X="3799.451" Y="6676.156" Z="150.6605" />
   <CustomBehavior File="ForcedDismount" />
   <LootMobs Value="true" />
-  <Objective QuestName="Cracking the Code" QuestId="11931" Type="CollectItem" ItemId="35628" CollectCount="1" />
+  <Objective Nav="Fly" QuestName="Cracking the Code" QuestId="11931" Type="CollectItem" ItemId="35628" CollectCount="1" />
   <LootMobs Value="null" />
-  <Objective QuestName="Cracking the Code" QuestId="11931" Type="CollectItem" ItemId="35629" CollectCount="3" />
+  <Objective Nav="Fly" QuestName="Cracking the Code" QuestId="11931" Type="CollectItem" ItemId="35629" CollectCount="3" />
 </If>
 <If Condition="HasQuest(11951) &amp;&amp; !IsQuestCompleted(11951)" >
   <CustomBehavior File="FlyTo" X="3966.198" Y="6850.082" Z="155.6717" />
   <CustomBehavior File="ForcedDismount" />
-  <Objective QuestName="Bait and Switch" QuestId="11951" Type="CollectItem" ItemId="35685" CollectCount="10" />
+  <Objective Nav="Fly" QuestName="Bait and Switch" QuestId="11951" Type="CollectItem" ItemId="35685" CollectCount="10" />
 </If>
 <If Condition="HasQuest(11951)" >
   <While Condition="HasQuest(11951)" >
@@ -3396,13 +3382,9 @@
     <CustomBehavior File="InteractWith" WaitTime="15000" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26206" MovementBy="NavigatorPreferred" WaitForNpcs="False"/>
   </While>
 </If>
-<If Condition="HasQuest(11967) || HasQuest(11931)" >
-  <CustomBehavior File="FlyTo" X="3574.22" Y="6652.13" Z="195.185" />
-  <CustomBehavior File="ForcedDismount" />
-</If>
-<TurnIn QuestName="Cracking the Code" QuestId="11931" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<TurnIn QuestName="Mustering the Reds" QuestId="11967" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-<PickUp QuestName="Springing the Trap" QuestId="11969" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Cracking the Code" QuestId="11931" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<TurnIn Nav="Fly" QuestName="Mustering the Reds" QuestId="11967" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
+<PickUp Nav="Fly" QuestName="Springing the Trap" QuestId="11969" GiverName="Raelorasz" GiverId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
 <If Condition="HasQuest(11969) &amp;&amp; !IsQuestCompleted(11969)" >
   <CustomBehavior File="FlyTo" X="4059.134" Y="7105.895" Z="169.7226" />
   <CustomBehavior File="ForcedDismount" />
@@ -3414,12 +3396,7 @@
     <CustomBehavior File="WaitTimer" WaitTime="120000" />
   </While>
 </If>
-<If Condition="HasQuest(11969)" >
-  <CustomBehavior File="FlyTo" X="3574.22" Y="6652.13" Z="195.185" />
-  <CustomBehavior File="ForcedDismount" />
-  <TurnIn QuestName="Springing the Trap" QuestId="11969" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
-  <RunTo X="3581.008" Y="6653.365" Z="195.615" />
-</If>
+<TurnIn Nav="Fly" QuestName="Springing the Trap" QuestId="11969" TurnInName="Raelorasz" TurnInId="26117" X="3570.397" Y="6650.404" Z="195.1806" />
 <!--
                                                                                                                                    |
                                                      Alliance                                                                      |
