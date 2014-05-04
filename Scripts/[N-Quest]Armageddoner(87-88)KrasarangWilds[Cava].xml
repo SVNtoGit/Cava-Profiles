@@ -1,36 +1,488 @@
-<HBProfile creator="Cava" version="1">
-  <Name>[N-Quest] Armageddoner (87-88) Krasarang Wilds [Cava] $Rev$</Name>
-  <MinLevel>1</MinLevel>
-  <MaxLevel>91</MaxLevel>
-  <MinDurability>0.2</MinDurability>
-	<MinFreeBagSlots>2</MinFreeBagSlots>
-  <MailGrey>False</MailGrey>
-	<MailWhite>True</MailWhite>
-	<MailGreen>True</MailGreen>
-	<MailBlue>True</MailBlue>
-	<MailPurple>True</MailPurple>
-  <SellGrey>True</SellGrey>
-	<SellWhite>True</SellWhite>
-	<SellGreen>True</SellGreen>
-	<SellBlue>False</SellBlue>
-	<SellPurple>False</SellPurple>
-  <TargetElites>False</TargetElites>
+<HBProfile creator="Cava">
+<Name>[N-Quest] (87-88) Krasarang Wilds [Cava] $Rev$</Name>
+
+<MinLevel>5</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
+<MailGrey>False</MailGrey><MailWhite>False</MailWhite><MailGreen>True</MailGreen><MailBlue>True</MailBlue><MailPurple>True</MailPurple>
+<SellGrey>True</SellGrey><SellWhite>True</SellWhite><SellGreen>False</SellGreen><SellBlue>False</SellBlue><SellPurple>False</SellPurple>
   
-  <AvoidMobs>
-  </AvoidMobs>
-  <Blackspots>
-  </Blackspots>
+<AvoidMobs>
+  <Mob Name="Source of Despair" Entry="65873" />
+  <Mob Name="Maw of Despair" Entry="59237" />
+  <Mob Name="Maw of Despair" Entry="59315" />
+</AvoidMobs>
 
-  <Mailboxes>
-  </Mailboxes>
+<Blacklist>
+</Blacklist>
 
-  <Vendors>
-  </Vendors>
+<Blackspots>
+</Blackspots>
+
+<Mailboxes>
+</Mailboxes>
+
+<Vendors>
+</Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="30081" Name="Materia Medica">
+	<Objective Type="CollectItem" ItemId="78881" CollectCount="4">
+		<CollectFrom>
+		  <GameObject Name="Rain-Slick Honeycomb" Id="210188" />
+		</CollectFrom>
+		<Hotspots>
+      <Hotspot X="-482.6041" Y="-583.252" Z="107.3138" />
+      <Hotspot X="-510.2485" Y="-532.569" Z="97.2313" />
+      <Hotspot X="-502.4439" Y="-452.0733" Z="96.97982" />
+      <Hotspot X="-419.2452" Y="-470.7223" Z="98.01394" />
+      <Hotspot X="-457.5559" Y="-507.0568" Z="100.652" />
+      <Hotspot X="-377.8855" Y="-453.1141" Z="101.7997" />
+		</Hotspots>
+	</Objective>
+	<Objective Type="CollectItem" ItemId="78877" CollectCount="4">
+		<CollectFrom>
+		  <GameObject Name="Slick Mudfish" Id="210184" />
+		  <GameObject Name="Slick Mudfish" Id="210185" />
+		  <GameObject Name="Slick Mudfish" Id="210186" />
+		</CollectFrom>
+		<Hotspots>
+      <Hotspot X="-460.1942" Y="-612.4688" Z="103.6076" />
+      <Hotspot X="-450.5141" Y="-582.5123" Z="103.1653" />
+      <Hotspot X="-464.4421" Y="-554.603" Z="102.5802" />
+      <Hotspot X="-433.3359" Y="-412.9564" Z="93.41087" />
+      <Hotspot X="-463.1106" Y="-426.8788" Z="93.72592" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="CollectItem" ItemId="78880" CollectCount="4">
+	  <CollectFrom>
+		  <Mob Name="Weeping Horror" Entry="57649" />
+ 		</CollectFrom>
+		<Hotspots>
+      <Hotspot X="908.4722" Y="4205.888" Z="197.3743" />
+      <Hotspot X="846.2427" Y="4200.631" Z="197.3672" />
+      <Hotspot X="780.0621" Y="4172.979" Z="206.8537" />
+      <Hotspot X="730.2137" Y="4136.119" Z="200.9536" />
+      <Hotspot X="829.9067" Y="4124.754" Z="202.3806" />
+      <Hotspot X="892.217" Y="4104.337" Z="197.9128" />
+      <Hotspot X="944.0601" Y="4103.65" Z="196.6647" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30091" Name="Tears of Pandaria">
+  <Objective Type="KillMob" MobId="57649" KillCount="12">
+	  <Hotspots>
+    <Hotspot X="-460.1942" Y="-612.4688" Z="103.6076" />
+    <Hotspot X="-450.5141" Y="-582.5123" Z="103.1653" />
+    <Hotspot X="-464.4421" Y="-554.603" Z="102.5802" />
+    <Hotspot X="-433.3359" Y="-412.9564" Z="93.41087" />
+    <Hotspot X="-463.1106" Y="-426.8788" Z="93.72592" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30088" Name="Why So Serious?">
+	<Objective Type="CollectItem" ItemId="78942" CollectCount="1">
+		<CollectFrom>
+		  <GameObject Name="Jar of Pigment" Id="210228" />
+		</CollectFrom>
+		<Hotspots>
+      <Hotspot X="-380.0989" Y="-219.5629" Z="134.0771" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="CollectItem" ItemId="78941" CollectCount="18">
+	  <CollectFrom>
+		  <Mob Name="Krasari Stalker" Entry="58221" />
+ 		</CollectFrom>
+		<Hotspots>
+      <Hotspot X="-618.0965" Y="-363.3031" Z="91.27448" />
+      <Hotspot X="-688.4122" Y="-371.1142" Z="75.52398" />
+      <Hotspot X="-717.4246" Y="-494.6213" Z="67.11907" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30083" Name="Securing the Province">
+  <Objective Type="KillMob" MobId="58215" KillCount="10">
+	  <Hotspots>
+      <Hotspot X="-372.2553" Y="-234.244" Z="133.383" />
+      <Hotspot X="-402.1875" Y="-279.9751" Z="122.991" />
+      <Hotspot X="-350.7145" Y="-308.0794" Z="116.1385" />
+      <Hotspot X="-426.7407" Y="-352.109" Z="109.0636" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30090" Name="Zhu's Despair">
+  <Objective Type="KillMob" MobId="58409" KillCount="8">
+	  <Hotspots>
+      <Hotspot X="-379.275" Y="-651.5649" Z="117.901" />
+      <Hotspot X="-412.6235" Y="-681.5869" Z="119.0212" />
+      <Hotspot X="-377.515" Y="-626.231" Z="117.0362" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30179" Name="Poisoned!">
+  <Objective Type="CollectItem" ItemId="79252" CollectCount="5">
+	  <CollectFrom>
+		  <Mob Name="Krasari Tormentor" Entry="58377" />
+			<Mob Name="Krasari Runekeeper" Entry="65598" />
+ 		</CollectFrom>
+	  <Hotspots>
+	    <Hotspot X="-821.5877" Y="-252.4077" Z="54.41612" />
+			<Hotspot X="-814.1062" Y="-216.8602" Z="56.73926" />
+			<Hotspot X="-745.655" Y="-222.7532" Z="61.87301" />
+			<Hotspot X="-712.7006" Y="-291.8246" Z="66.59109" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30352" Name="Crane Mastery">
+  <Objective Type="KillMob" MobId="59116" KillCount="12">
+	  <Hotspots>
+      <Hotspot X="-973.9565" Y="-107.7114" Z="32.70152" />
+      <Hotspot X="-950.2754" Y="-54.93736" Z="34.54964" />
+      <Hotspot X="-1067.943" Y="-93.7383" Z="20.40756" />
+      <Hotspot X="-1077.986" Y="-16.71507" Z="17.86916" />
+      <Hotspot X="-1163.761" Y="-39.7023" Z="4.677294" />
+      <Hotspot X="-1173.549" Y="28.69341" Z="11.18955" />
+      <Hotspot X="-995.1401" Y="16.61419" Z="9.397411" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30353" Name="Profit Mastery">
+  <Objective Type="CollectItem" ItemId="78914" CollectCount="12">
+	  <CollectFrom>
+		  <Mob Name="Krasari Huntress" Entry="59116" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-973.9565" Y="-107.7114" Z="32.70152" />
+      <Hotspot X="-950.2754" Y="-54.93736" Z="34.54964" />
+      <Hotspot X="-1067.943" Y="-93.7383" Z="20.40756" />
+      <Hotspot X="-1077.986" Y="-16.71507" Z="17.86916" />
+      <Hotspot X="-1163.761" Y="-39.7023" Z="4.677294" />
+      <Hotspot X="-1173.549" Y="28.69341" Z="11.18955" />
+      <Hotspot X="-995.1401" Y="16.61419" Z="9.397411" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="31262" Name="Crane Mastery: Needlebeak">
+  <Objective Type="CollectItem" ItemId="85854" CollectCount="1">
+	  <CollectFrom>
+		  <Mob Name="Needlebeak" Entry="63796" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-746.1091" Y="-14.05182" Z="30.63237" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="31260" Name="Profit Mastery: Chasheen">
+  <Objective Type="CollectItem" ItemId="85774" CollectCount="1">
+	  <CollectFrom>
+		  <Mob Name="Chasheen" Entry="63767" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-1108.577" Y="52.50569" Z="6.30942" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30344" Name="The Lost Dynasty">
+	<Objective Type="CollectItem" ItemId="79713" CollectCount="6">
+		<CollectFrom>
+		  <GameObject Name="Ancient Dynastic Tablet" Id="210618" />
+		  <GameObject Name="Ancient Dynastic Tablet" Id="210618" />
+		  <GameObject Name="Ancient Dynastic Tablet" Id="210618" />
+    </CollectFrom>
+		<Hotspots>
+      <Hotspot X="-764.3367" Y="-243.3828" Z="56.96668" />
+      <Hotspot X="-767.9537" Y="-211.917" Z="56.82562" />
+      <Hotspot X="-828.6051" Y="-207.0154" Z="55.97548" />
+      <Hotspot X="-822.4354" Y="-253.5281" Z="54.3762" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30384" Name="Blind Them!">
+  <Objective Type="KillMob" MobId="58850" KillCount="1">
+	  <Hotspots>
+      <Hotspot X="-892.6512" Y="-183.6962" Z="33.09674" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30350" Name="Squirmy Delight">
+  <Objective Type="CollectItem" ItemId="78911" CollectCount="5">
+	  <CollectFrom>
+		  <Mob Name="Jungle Skitterer" Entry="58067" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-817.9661" Y="-71.88259" Z="15.64508" />
+      <Hotspot X="-801.9517" Y="12.42382" Z="16.15549" />
+      <Hotspot X="-787.2996" Y="50.02795" Z="16.15549" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30346" Name="Where are the Pools">
+  <Objective Type="CollectItem" ItemId="78917" CollectCount="1">
+	  <CollectFrom>
+		  <Mob Name="Dojani Dominator" Entry="558165" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-1187.608" Y="345.6181" Z="68.09264" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30351" Name="Lotus Tea">
+	<Objective Type="CollectItem" ItemId="78918" CollectCount="20">
+		<CollectFrom>
+		  <GameObject Name="Imperial Lotus" Id="210209" />
+    </CollectFrom>
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30349" Name="Threat from Dojan">
+  <Objective Type="KillMob" MobId="65626" KillCount="4">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="KillMob" MobId="58117" KillCount="6">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="KillMob" MobId="58068" KillCount="8">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30123" Name="Skitterer Stew">
+  <Objective Type="CollectItem" ItemId="78911" CollectCount="5">
+	  <CollectFrom>
+		  <Mob Name="Jungle Skitterer" Entry="58067" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-817.9661" Y="-71.88259" Z="15.64508" />
+      <Hotspot X="-801.9517" Y="12.42382" Z="16.15549" />
+      <Hotspot X="-787.2996" Y="50.02795" Z="16.15549" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30124" Name="Blind Them!">
+  <Objective Type="KillMob" MobId="58857" KillCount="1">
+	  <Hotspots>
+      <Hotspot X="-1046.352" Y="67.74318" Z="11.686" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30129" Name="The Mogu Agenda">
+  <Objective Type="CollectItem" ItemId="78917" CollectCount="1">
+	  <CollectFrom>
+		  <Mob Name="Dojani Dominator" Entry="558165" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-1187.608" Y="345.6181" Z="68.09264" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30130" Name="Herbal Remedies">
+	<Objective Type="CollectItem" ItemId="78918" CollectCount="20">
+		<CollectFrom>
+		  <GameObject Name="Imperial Lotus" Id="210209" />
+    </CollectFrom>
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30127" Name="Threat from Dojan">
+  <Objective Type="KillMob" MobId="65626" KillCount="4">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="KillMob" MobId="58117" KillCount="6">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+  <Objective Type="KillMob" MobId="58068" KillCount="8">
+		<Hotspots>
+      <Hotspot X="-1227.489" Y="347.2719" Z="63.23589" />
+      <Hotspot X="-1315.377" Y="315.7863" Z="43.98582" />
+      <Hotspot X="-1291.601" Y="388.2092" Z="43.98661" />
+      <Hotspot X="-1268.421" Y="459.1405" Z="43.99928" />
+      <Hotspot X="-1329.19" Y="407.8957" Z="43.99936" />
+      <Hotspot X="-1368.033" Y="360.8882" Z="47.24525" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30270" Name="Blinding the Riverblades">
+  <Objective Type="KillMob" MobId="58858" KillCount="8">
+	  <Hotspots>
+      <Hotspot X="-1238.094" Y="819.7852" Z="25.39742" />
+      <Hotspot X="-1246.045" Y="740.2792" Z="24.8131" />
+      <Hotspot X="-1261.704" Y="680.5339" Z="14.79193" />
+      <Hotspot X="-1214.35" Y="677.7779" Z="26.74023" />
+      <Hotspot X="-1135.58" Y="713.8949" Z="27.54808" />
+      <Hotspot X="-1152.591" Y="778.603" Z="18.5066" />
+      <Hotspot X="-1120.381" Y="783.6181" Z="15.64386" />
+      <Hotspot X="-1047.419" Y="818.3127" Z="33.06099" />
+      <Hotspot X="-988.374" Y="814.1378" Z="32.84844" />
+      <Hotspot X="-989.4748" Y="964.9647" Z="17.66881" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30272" Name="Striking the Rain">
+  <Objective Type="KillMob" MobId="59236" KillCount="18">
+	  <Hotspots>
+      <Hotspot X="-1691.585" Y="931.9537" Z="14.671" />
+      <Hotspot X="-1652.645" Y="967.4053" Z="15.86261" />
+      <Hotspot X="-1620.884" Y="990.6664" Z="14.93896" />
+      <Hotspot X="-1608.004" Y="1040.637" Z="14.33021" />
+      <Hotspot X="-1599.482" Y="1072.176" Z="14.84529" />
+      <Hotspot X="-1614.53" Y="1117.999" Z="15.96054" />
+      <Hotspot X="-1671.199" Y="1175.993" Z="14.15054" />
+      <Hotspot X="-1704.37" Y="1179.96" Z="13.5169" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30169" Name="Raid Leader Slovan">
+  <Objective Type="KillMob" MobId="58285" KillCount="1">
+	  <Hotspots>
+      <Hotspot X="-1016.25" Y="1457.342" Z="31.47988" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30168" Name="Thieving Raiders">
+  <Objective Type="CollectItem" ItemId="78958" CollectCount="5">
+	  <CollectFrom>
+		  <Mob Name="Riverblade Flesh-hunter" Entry="58274" />
+ 		</CollectFrom>
+	  <Hotspots>
+      <Hotspot X="-1020.206" Y="1431.747" Z="28.69339" />
+      <Hotspot X="-989.1168" Y="1400.147" Z="32.53748" />
+      <Hotspot X="-1017.041" Y="1378.626" Z="27.75809" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30355" Name="Re-Reclaim">
+	<Objective Type="CollectItem" ItemId="79120" CollectCount="20">
+		<CollectFrom>
+		  <GameObject Name="Mogu Artifact" Id="210416" />
+    </CollectFrom>
+		<Hotspots>
+      <Hotspot X="-1303.038" Y="1782.994" Z="15.83834" />
+      <Hotspot X="-1291.433" Y="1845.071" Z="15.14491" />
+      <Hotspot X="-1337.974" Y="1822.531" Z="15.08059" />
+      <Hotspot X="-1406.28" Y="1836.511" Z="14.84742" />
+      <Hotspot X="-1447.958" Y="1765.686" Z="12.33914" />
+      <Hotspot X="-1393.944" Y="1733.516" Z="12.13729" />
+      <Hotspot X="-1425.374" Y="1698.101" Z="14.43536" />
+      <Hotspot X="-1349.499" Y="1655.781" Z="13.68624" />
+      <Hotspot X="-1333.483" Y="1707.881" Z="12.32628" />
+      <Hotspot X="-1285.814" Y="1694.688" Z="14.88303" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30356" Name="Sever Their Supply Line">
+  <Objective Type="KillMob" MobId="58614" KillCount="8">
+	  <Hotspots>
+      <Hotspot X="-1303.038" Y="1782.994" Z="15.83834" />
+      <Hotspot X="-1291.433" Y="1845.071" Z="15.14491" />
+      <Hotspot X="-1337.974" Y="1822.531" Z="15.08059" />
+      <Hotspot X="-1406.28" Y="1836.511" Z="14.84742" />
+      <Hotspot X="-1447.958" Y="1765.686" Z="12.33914" />
+      <Hotspot X="-1393.944" Y="1733.516" Z="12.13729" />
+      <Hotspot X="-1425.374" Y="1698.101" Z="14.43536" />
+      <Hotspot X="-1349.499" Y="1655.781" Z="13.68624" />
+      <Hotspot X="-1333.483" Y="1707.881" Z="12.32628" />
+      <Hotspot X="-1285.814" Y="1694.688" Z="14.88303" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30361" Name="The Mantid">
+  <Objective Type="KillMob" MobId="58367" KillCount="10">
+	  <Hotspots>
+      <Hotspot X="-1409.915" Y="2285.912" Z="25.22109" />
+      <Hotspot X="-1328.388" Y="2303.387" Z="24.03031" />
+      <Hotspot X="-1250.757" Y="2299.569" Z="37.52064" />
+      <Hotspot X="-1234.753" Y="2216.921" Z="37.12701" />
+      <Hotspot X="-1255.074" Y="2160.562" Z="29.04547" />
+      <Hotspot X="-1343.204" Y="2167.45" Z="25.66043" />
+      <Hotspot X="-1389.7" Y="2208.931" Z="26.08716" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30230" Name="Re-Reclaim">
+	<Objective Type="CollectItem" ItemId="79120" CollectCount="20">
+		<CollectFrom>
+		  <GameObject Name="Mogu Artifact" Id="210416" />
+    </CollectFrom>
+		<Hotspots>
+      <Hotspot X="-1303.038" Y="1782.994" Z="15.83834" />
+      <Hotspot X="-1291.433" Y="1845.071" Z="15.14491" />
+      <Hotspot X="-1337.974" Y="1822.531" Z="15.08059" />
+      <Hotspot X="-1406.28" Y="1836.511" Z="14.84742" />
+      <Hotspot X="-1447.958" Y="1765.686" Z="12.33914" />
+      <Hotspot X="-1393.944" Y="1733.516" Z="12.13729" />
+      <Hotspot X="-1425.374" Y="1698.101" Z="14.43536" />
+      <Hotspot X="-1349.499" Y="1655.781" Z="13.68624" />
+      <Hotspot X="-1333.483" Y="1707.881" Z="12.32628" />
+      <Hotspot X="-1285.814" Y="1694.688" Z="14.88303" />
+		</Hotspots>
+	</Objective>
+</Quest>
+<Quest Id="30229" Name="The Greater Danger">
+  <Objective Type="KillMob" MobId="58614" KillCount="8">
+	  <Hotspots>
+      <Hotspot X="-1303.038" Y="1782.994" Z="15.83834" />
+      <Hotspot X="-1291.433" Y="1845.071" Z="15.14491" />
+      <Hotspot X="-1337.974" Y="1822.531" Z="15.08059" />
+      <Hotspot X="-1406.28" Y="1836.511" Z="14.84742" />
+      <Hotspot X="-1447.958" Y="1765.686" Z="12.33914" />
+      <Hotspot X="-1393.944" Y="1733.516" Z="12.13729" />
+      <Hotspot X="-1425.374" Y="1698.101" Z="14.43536" />
+      <Hotspot X="-1349.499" Y="1655.781" Z="13.68624" />
+      <Hotspot X="-1333.483" Y="1707.881" Z="12.32628" />
+      <Hotspot X="-1285.814" Y="1694.688" Z="14.88303" />
+		</Hotspots>
+	</Objective>
+</Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
-  <QuestOrder IgnoreCheckPoints="False" >
-	<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Profile in development,
-	Please check again later" />
-  <CustomBehavior File="Halt"/>
+<QuestOrder IgnoreCheckPoints="False" >
+  <CustomBehavior File="Cava\LoadProfile" PBL="-1" ProfileName="115-armageddoner87-88krasarangwilds-1" /> 
 </QuestOrder>
+<ProtectedItems>
+</ProtectedItems>
 </HBProfile>
+
