@@ -2830,8 +2830,8 @@
   <If Condition="HasQuest(10286)">
     <CustomBehavior File="FlyTo" X="-199.1616" Y="4378.77" Z="59.50231" />
 		<While Condition="HasQuest(10286)">
-			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" KeepTargetSelected="True"
-				CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" >
+			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" KeepTargetSelected="True" InteractBlacklistTimeInSeconds="1" InteractByGossipOptions="1"
+				CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" InteractByQuestFrameDisposition="TerminateBehavior">
 				<HuntingGrounds WaypointVisitStrategy="InOrder">
 				<Hotspot X="-691.1694" Y="4178.644" Z="57.29576" />
 				<Hotspot X="-673.9981" Y="4216.283" Z="56.44601" />
@@ -2930,8 +2930,11 @@
 				<Hotspot X="-671.5899" Y="4214.326" Z="56.45533" />
 				</HuntingGrounds>
 			</CustomBehavior>
+			<CustomBehavior File="WaitTimer" WaitTime="8000" />
+			<!--
 			<CustomBehavior File="RunMacro" WaitTime="10000" Macro="/click GossipTitleButton1" />
-			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" WaitTime="1500" KeepTargetSelected="True" CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="False" />
+			-->
+			<CustomBehavior File="InteractWith" MobId="20159" MobState="Alive" InteractBlacklistTimeInSeconds="1" WaitTime="1500" KeepTargetSelected="True" CollectionDistance="2000" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="False" />
 			<CustomBehavior File="RunMacro" WaitTime="1500" Macro="/click QuestFrameCompleteQuestButton" />
 			<CustomBehavior File="RunMacro" WaitTime="1500" Macro="/script SelectGossipAvailableQuest(1)" />
 			<CustomBehavior File="RunMacro" WaitTime="1500" Macro="/click QuestFrameAcceptButton" />

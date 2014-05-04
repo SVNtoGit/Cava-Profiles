@@ -1,5 +1,5 @@
 <HBProfile>
-<Name>[Quest]MOP 85 to 90 With Loot By [Cava] $Rev: 232 $</Name>
+<Name>[Quest]MOP 88 to 90 With Loot By [Cava] $Rev: 232 $</Name>
 	
 <QuestOrder>
   <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
@@ -19,21 +19,12 @@ Also be sure to:\n
      Configure a mail recipient in Honorbuddy\n" />
 
 <!-- #######################################################################################################################-->
-<If Condition="Me.IsHorde" >
- <If Condition="(Me.LevelFraction &gt;= 85)" >
-   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](87)KrasarangWilds(WL)[Cava]" />
-  </If>
-</If>
-<!-- #######################################################################################################################-->
 <If Condition="Me.IsAlliance" >
   <If Condition="(Me.LevelFraction &gt;= 1)" >
     <If Condition="HasQuest(30814) &amp;&amp; IsQuestCompleted(30814)" >
         <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes(WL)[Cava]" />
     </If>
-    <If Condition="HasQuest(31286) &amp;&amp; IsQuestCompleted(31286)" >
-        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit(WL)[Cava]" />
-    </If>
-    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87)KrasarangWilds(WL)[Cava]" />
+    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit(WL)[Cava]" />
   </If>
 </If>
 
