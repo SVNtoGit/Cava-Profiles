@@ -1,5 +1,5 @@
 <HBProfile>
-<Name>[Quest]MOP 88 to 90 With Loot By [Cava] $Rev: 232 $</Name>
+<Name>[Quest]MOP 89 to 90 With Loot By [Cava] $Rev: 232 $</Name>
 	
 <QuestOrder>
   <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
@@ -20,12 +20,7 @@ Also be sure to:\n
 
 <!-- #######################################################################################################################-->
 <If Condition="Me.IsAlliance" >
-  <If Condition="(Me.LevelFraction &gt;= 1)" >
-    <If Condition="HasQuest(30814) &amp;&amp; IsQuestCompleted(30814)" >
-        <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes(WL)[Cava]" />
-    </If>
-    <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](87-88)Kun-LaiSummit(WL)[Cava]" />
-  </If>
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](88-89)TownlongSteppes(WL)[Cava]" />
 </If>
 
 </QuestOrder>
