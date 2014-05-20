@@ -701,9 +701,13 @@
   <RunTo X="2272.244" Y="-5341.76" Z="87.11243" />
   <CustomBehavior File="Cava\TaxiRide" MobId="12636" MobState="Alive" WaitForNpcs="True" DestName="Thondroril River" WaitTime="1000" />
 </If>
-<PickUp QuestName="Gidwin Goldbraids" QuestId="27367" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
+<If Condition="!IsQuestCompleted(27368)">
+	<PickUp QuestName="Gidwin Goldbraids" QuestId="27367" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
+</If>
 <PickUp QuestName="Tarenar Sunstrike" QuestId="27370" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
-<TurnIn QuestName="Gidwin Goldbraids" QuestId="27367" TurnInName="Gidwin Goldbraids" TurnInId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
+<If Condition="HasQuest(27367)" >
+	<TurnIn QuestName="Gidwin Goldbraids" QuestId="27367" TurnInName="Gidwin Goldbraids" TurnInId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
+</If>
 <PickUp QuestName="Just Encased" QuestId="27368" GiverName="Gidwin Goldbraids" GiverId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
 <If Condition="HasQuest(27368) &amp;&amp; !IsQuestCompleted(27368)" >
   <Objective QuestName="Just Encased" QuestId="27368" Type="CollectItem" ItemId="60983" CollectCount="8" />

@@ -739,7 +739,7 @@
 <If Condition="Me.Class == WoWClass.Warlock">
   
 </If>
-<If Condition="!HasQuest(27367) &amp;&amp; !IsQuestCompleted(27367)">
+<If Condition="!HasQuest(27367) &amp;&amp; !IsQuestCompleted(27367) &amp;&amp; !IsQuestCompleted(27368)">
   <RunTo X="1918.626" Y="-2654.936" Z="60.58456" />
   <CustomBehavior File="ForcedMount" />
   <CustomBehavior File="NoCombatMoveTo" X="1892.025" Y="-4223.411" Z="90.0819" />
@@ -762,9 +762,13 @@
 <CustomBehavior File="UserSettings" DrinkAmount="40" FoodAmount="40" FoodName="4599" DrinkName="1645" />
 <CustomBehavior File="Message" Text="Compiling Eastern Plaguelands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 39.2 # # # -->
-<PickUp QuestName="Gidwin Goldbraids" QuestId="27367" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
+<If Condition="!IsQuestCompleted(27368)">
+	<PickUp QuestName="Gidwin Goldbraids" QuestId="27367" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
+</If>
 <PickUp QuestName="Tarenar Sunstrike" QuestId="27370" GiverName="Fiona" GiverId="45417" X="1916.45" Y="-2651.12" Z="60.61995" />
-<TurnIn QuestName="Gidwin Goldbraids" QuestId="27367" TurnInName="Gidwin Goldbraids" TurnInId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
+<If Condition="HasQuest(27367)" >
+	<TurnIn QuestName="Gidwin Goldbraids" QuestId="27367" TurnInName="Gidwin Goldbraids" TurnInId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
+</If>
 <PickUp QuestName="Just Encased" QuestId="27368" GiverName="Gidwin Goldbraids" GiverId="45428" X="2736.42" Y="-2454.52" Z="68.69669" />
 <If Condition="HasQuest(27368) &amp;&amp; !IsQuestCompleted(27368)" >
   <Objective QuestName="Just Encased" QuestId="27368" Type="CollectItem" ItemId="60983" CollectCount="8" />
