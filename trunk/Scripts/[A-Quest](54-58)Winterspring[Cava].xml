@@ -1176,7 +1176,15 @@
 <If Condition="!HasQuest(28639) &amp;&amp; !IsQuestCompleted(28639)" >
   <PickUp QuestName="Ursius" QuestId="28639" GiverName="Francis Morcott" GiverId="49436" X="7634.253" Y="-4429.314" Z="623.8746" />
 </If>
+<If Condition="HasQuest(28639) &amp;&amp; !IsQuestCompleted(28639)" >
+	<While Condition="!IsQuestCompleted(28639)" >
+		<RunTo X="7120.522" Y="-4662.222" Z="638.6036" />
+		<CustomBehavior File="WaitTimer" QuestId="28639" WaitTime="4000" />
+	</While>
+</If>
+<!--
 <Objective QuestName="Ursius" QuestId="28639" Type="KillMob" MobId="10806" KillCount="1" />
+-->
 <TurnIn QuestName="A Bird of Legend" QuestId="28782" TurnInName="Jeb Guthrie" TurnInId="49537" X="7635.991" Y="-4433.809" Z="623.8761" />
 <TurnIn QuestName="You Gotta Have Eggs" QuestId="28828" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 <TurnIn QuestName="Shy-Rotam" QuestId="28742" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
