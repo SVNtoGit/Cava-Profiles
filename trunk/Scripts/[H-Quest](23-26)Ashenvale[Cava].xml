@@ -663,7 +663,9 @@
   </If>
 </If>
 <If Condition="HasQuest(13880) &amp;&amp; !IsQuestCompleted(13880)" >
-  <CustomBehavior File="UseItemTargetLocation" QuestId="13880" MobId="195002" ObjectType="GameObject" WaitTime="5000" UseType="ToObject" ItemId="46352" MinRange="5" Range="20"  CollectionDistance="10000" X="2635.722" Y="-1244.493" Z="144.4696" />
+	<While Condition="!IsQuestCompleted(13880)" >
+			<CustomBehavior File="UseItemTargetLocation" QuestId="13880" MobId="195002" ObjectType="GameObject" WaitTime="5000" UseType="ToObject" ItemId="46352" MinRange="5" Range="20"  CollectionDistance="10000" X="2635.722" Y="-1244.493" Z="144.4696" />
+	</While>
 </If>
 <Objective QuestName="Put Out The Fire" QuestId="13884" Type="KillMob" MobId="34314" KillCount="10" />
 <TurnIn QuestName="Hot Lava" QuestId="13880" TurnInName="Core" TurnInId="34290" X="2500.823" Y="-1317.696" Z="134.7428" />
