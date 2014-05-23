@@ -1651,9 +1651,16 @@
     <CustomBehavior File="InteractWith" MobId="19409" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" InteractByGossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-670.4271" Y="1851.844" Z="66.90973" />
   </If>
   <TurnIn QuestName="Shatter Point" QuestId="10340" TurnInName="Runetog Wildhammer" TurnInId="20234" X="279.3968" Y="1489.759" Z="-15.52258" />
-  <PickUp QuestName="Wing Commander Gryphongar" QuestId="10344" GiverName="Runetog Wildhammer" GiverId="20234" X="279.3968" Y="1489.759" Z="-15.52258" />
-  <TurnIn QuestName="Wing Commander Gryphongar" QuestId="10344" TurnInName="Wing Commander Gryphongar" TurnInId="20232" X="315.3369" Y="1442.098" Z="0.9002622" />
-  <PickUp QuestName="Mission: The Abyssal Shelf" QuestId="10163" GiverName="Wing Commander Gryphongar" GiverId="20232" X="315.3369" Y="1442.098" Z="0.9002622" />
+  <If Condition="HasQuest(10163) &amp;&amp; !IsQuestCompleted(10163)">
+    <CustomBehavior File="AbandonQuest" QuestId="28218" />
+	</If>
+  <If Condition="!IsQuestCompleted(10163)">
+		<PickUp QuestName="Wing Commander Gryphongar" QuestId="10344" GiverName="Runetog Wildhammer" GiverId="20234" X="279.3968" Y="1489.759" Z="-15.52258" />
+  </If>
+  <If Condition="HasQuest(10344)">
+		<TurnIn QuestName="Wing Commander Gryphongar" QuestId="10344" TurnInName="Wing Commander Gryphongar" TurnInId="20232" X="315.3369" Y="1442.098" Z="0.9002622" />
+  </If>
+	<PickUp QuestName="Mission: The Abyssal Shelf" QuestId="10163" GiverName="Wing Commander Gryphongar" GiverId="20232" X="315.3369" Y="1442.098" Z="0.9002622" />
   <If Condition="HasQuest(10163) &amp;&amp; !IsQuestCompleted(10163)">
     <While Condition="!IsQuestCompleted(10163)">
       <RunTo QuestId="10163" X="295.1377" Y="1496.295" Z="-14.41226" />
