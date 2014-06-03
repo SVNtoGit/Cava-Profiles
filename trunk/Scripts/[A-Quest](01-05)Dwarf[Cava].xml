@@ -1,4 +1,4 @@
-<HBProfile creator="Cava" version="1">
+<HBProfile creator="Cava">
 <Name>[A-Quest] (1-5) Dwarf [Cava] $Rev$</Name>
 
 <MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
@@ -278,60 +278,41 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsHorde">
+<If Condition="Me.Race != WoWRace.Dwarf">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
-  Text="Thank you for taking the time to use Cava's profiles and I hope you have enjoyed them so far.\n\n
-
-Please report any bugs to help our team members improve the profiles\n
-To ensure your questing goes smoothly, make sure you enable and properly setup:\n
-     AutoEquip2\n\n
-
-Also be sure to:\n
-     Send gold and bags to a character in the process of leveling\n
-     Be sure to set the food and drink options in Honorbuddy\n
-     Configure a mail recipient in Honorbuddy\n" />
-<If Condition="Me.Race != WoWRace.Dwarf" >
-  <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
-  Text="This profile have some quests particularly writen for race Dwarf. That quests will be ignored."/>
-</If>
-<!--
-
--->
-
-<!--# # # Level 1 # # # -->
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Coldridge Valley Map Zone" LogColor="Aquamarine" />
 <PickUp QuestName="Hold the Line!" QuestId="24469" GiverName="Joren Ironstock" GiverId="37081" X="-6228.306" Y="331.5486" Z="383.1833" />
 <Objective QuestName="Hold the Line!" QuestId="24469" Type="KillMob" MobId="37070" KillCount="6" />
 <TurnIn QuestName="Hold the Line!" QuestId="24469" TurnInName="Joren Ironstock" TurnInId="37081" X="-6228.306" Y="331.5486" Z="383.1833" />
-
 <PickUp QuestName="Give 'em What-For" QuestId="24470" GiverName="Joren Ironstock" GiverId="37081" X="-6228.306" Y="331.5486" Z="383.1833" />
 <PickUp QuestName="Aid for the Wounded" QuestId="24471" GiverName="Sten Stoutarm" GiverId="658" X="-6230.665" Y="346.7454" Z="383.6737" />
 <If Condition="HasQuest(24471) &amp;&amp; !IsQuestCompleted(24471)" >
   <While Condition="!IsQuestCompleted(24471)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6278.301" Y="341.1346" Z="376.9636" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6292.518" Y="303.6833" Z="375.6379" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6313.867" Y="270.0545" Z="380.2306" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6341.714" Y="299.1217" Z="380.0261" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6346.294" Y="339.5983" Z="379.3491" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6346.437" Y="379.631" Z="377.769" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6318.626" Y="408.3698" Z="380.9236" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6282.635" Y="390.1785" Z="381.254" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24471" MobId="37080" ItemId="49743" WaitTime="1000" WaitForNpcs="False" Range="6" CollectionDistance="1000" X="-6274.146" Y="350.5529" Z="377.7" />
-    <CustomBehavior File="WaitTimer" WaitTime="14000" QuestId="24471" />
+    <CustomBehavior File="InteractWith" QuestId="24471" MobId="37080" InteractByUsingItemId="49743" NumOfTimes="1000" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+			<HuntingGrounds>
+				<Hotspot X="-6278.301" Y="341.1346" Z="376.9636" />
+				<Hotspot X="-6292.518" Y="303.6833" Z="375.6379" />
+				<Hotspot X="-6313.867" Y="270.0545" Z="380.2306" />
+				<Hotspot X="-6341.714" Y="299.1217" Z="380.0261" />
+				<Hotspot X="-6346.294" Y="339.5983" Z="379.3491" />
+				<Hotspot X="-6346.437" Y="379.631" Z="377.769" />
+				<Hotspot X="-6318.626" Y="408.3698" Z="380.9236" />
+				<Hotspot X="-6282.635" Y="390.1785" Z="381.254" />
+				<Hotspot X="-6274.146" Y="350.5529" Z="377.7" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
 </If>
 <Objective QuestName="Give 'em What-For" QuestId="24470" Type="KillMob" MobId="37073" KillCount="3" />
-<!--# # # Level 2 # # # -->
 <TurnIn QuestName="Aid for the Wounded" QuestId="24471" TurnInName="Sten Stoutarm" TurnInId="658" X="-6230.665" Y="346.7454" Z="383.6737" />
 <TurnIn QuestName="Give 'em What-For" QuestId="24470" TurnInName="Joren Ironstock" TurnInId="37081" X="-6228.306" Y="331.5486" Z="383.1833" />
 <PickUp QuestName="Lockdown in Anvilmar" QuestId="24473" GiverName="Joren Ironstock" GiverId="37081" X="-6228.306" Y="331.5486" Z="383.1833" />
@@ -339,28 +320,28 @@ Also be sure to:\n
 <PickUp QuestName="First Things First: We're Gonna Need Some Beer" QuestId="24474" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
 <If Condition="(Me.Class == WoWClass.Paladin &amp;&amp; Me.Race == WoWRace.Dwarf)">
   <PickUp QuestName="Consecrated Rune" QuestId="3107" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
-<ElseIf Condition="(Me.Class == WoWClass.Warrior &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Warrior">
   <PickUp QuestName="Simple Rune" QuestId="3106" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Rogue &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Rogue">
   <PickUp QuestName="Encrypted Rune" QuestId="3109" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Priest &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Priest">
   <PickUp QuestName="Hallowed Rune" QuestId="3110" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Warlock &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Warlock">
   <PickUp QuestName="Tainted Rune" QuestId="3115" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Hunter &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Hunter">
 	<PickUp QuestName="Etched Rune" QuestId="3108" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Mage &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Mage">
 	<PickUp QuestName="Arcane Rune" QuestId="24496" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Shaman &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Shaman">
 	<PickUp QuestName="Empowered Rune" QuestId="24494" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
-<ElseIf Condition="(Me.Class == WoWClass.Monk &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<ElseIf Condition="Me.Class == WoWClass.Monk">
 	<PickUp QuestName="Elegant Rune" QuestId="31150" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
   </ElseIf>
 <Else>
@@ -369,9 +350,6 @@ Also be sure to:\n
 <PickUp QuestName="Dwarven Artifacts" QuestId="24477" GiverName="Grundel Harkin" GiverId="1104" X="-6104.505" Y="384.0296" Z="395.5433" />
 <Objective QuestName="First Things First: We're Gonna Need Some Beer" QuestId="24474" Type="CollectItem" ItemId="49746" CollectCount="1" />
 <Objective QuestName="First Things First: We're Gonna Need Some Beer" QuestId="24474" Type="CollectItem" ItemId="49744" CollectCount="1" />
-<If Condition="HasQuest(24474) &amp;&amp; !IsQuestCompleted(24474)" >
-  <RunTo X="-6154.3" Y="433.4646" Z="401.6665" />
-</If>
 <Objective QuestName="First Things First: We're Gonna Need Some Beer" QuestId="24474" Type="CollectItem" ItemId="49745" CollectCount="1" />
 <Objective QuestName="Dwarven Artifacts" QuestId="24477" Type="CollectItem" ItemId="49749" CollectCount="5" />
 <TurnIn QuestName="Dwarven Artifacts" QuestId="24477" TurnInName="Grundel Harkin" TurnInId="1104" X="-6104.505" Y="384.0296" Z="395.5433" />
@@ -379,163 +357,163 @@ Also be sure to:\n
 <TurnIn QuestName="First Things First: We're Gonna Need Some Beer" QuestId="24474" TurnInName="Jona Ironstock" TurnInId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
 <PickUp QuestName="All the Other Stuff" QuestId="24475" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
 <Objective QuestName="Make Hay While the Sun Shines" QuestId="24486" Type="CollectItem" ItemId="49751" CollectCount="5" />
-<!--# # # Level 3 # # # -->
 <If Condition="HasQuest(24475) &amp;&amp; !IsQuestCompleted(24475)" >
+  <LootMobs Value="true" />
   <If Condition="!IsObjectiveComplete(1, 24475) &amp;&amp; !IsObjectiveComplete(2, 24475)" >
-	  <LootMobs Value="true" />
-    <SetGrindArea>
-    <GrindArea>
-		<Factions>32 189</Factions>
-		<TargetMinLevel>2</TargetMinLevel>
-		<TargetMaxLevel>4</TargetMaxLevel>
-		<Hotspots>
-      <Hotspot X="-6155.959" Y="578.8283" Z="385.9621" />
-      <Hotspot X="-6168.738" Y="616.8975" Z="385.39" />
-      <Hotspot X="-6193.916" Y="648.1166" Z="385.2001" />
-      <Hotspot X="-6219.368" Y="679.6935" Z="384.9532" />
-      <Hotspot X="-6251.767" Y="703.3575" Z="386.2433" />
-      <Hotspot X="-6291.549" Y="698.0549" Z="384.6894" />
-      <Hotspot X="-6328.661" Y="682.3475" Z="384.7651" />
-      <Hotspot X="-6365.101" Y="664.7599" Z="386.7983" />
-      <Hotspot X="-6395.354" Y="637.9539" Z="386.4824" />
-      <Hotspot X="-6400.595" Y="597.7765" Z="386.5949" />
-      <Hotspot X="-6386.292" Y="560.3297" Z="385.562" />
-      <Hotspot X="-6386.368" Y="520.1545" Z="384.2371" />
-      <Hotspot X="-6391.962" Y="480.1292" Z="380.2155" />
-      <Hotspot X="-6384.667" Y="440.7025" Z="378.1806" />
-      <Hotspot X="-6386.331" Y="400.1811" Z="378.9991" />
-      <Hotspot X="-6373.904" Y="362.2455" Z="385.8314" />
-      <Hotspot X="-6349.215" Y="330.5101" Z="379.5908" />
-      <Hotspot X="-6311.369" Y="343.458" Z="376.526" />
-      <Hotspot X="-6285.458" Y="374.5345" Z="381.6319" />
-      <Hotspot X="-6260.909" Y="406.1389" Z="383.8151" />
-      <Hotspot X="-6230.069" Y="432.7343" Z="386.962" />
-      <Hotspot X="-6202.466" Y="462.5126" Z="388.1611" />
-      <Hotspot X="-6183.631" Y="497.8862" Z="385.3472" />
-      <Hotspot X="-6167.092" Y="534.3588" Z="386.36" />
-      <Hotspot X="-6185.14" Y="570.4428" Z="385.3608" />
-      <Hotspot X="-6215.825" Y="596.0002" Z="389.7638" />
-      <Hotspot X="-6254.731" Y="584.4943" Z="388.2012" />
-      <Hotspot X="-6282.528" Y="555.3251" Z="387.7996" />
-      <Hotspot X="-6300.053" Y="518.7352" Z="388.0349" />
-      <Hotspot X="-6321.198" Y="484.6699" Z="384.096" />
-      <Hotspot X="-6334.989" Y="447.0354" Z="379.8083" />
-		</Hotspots>
-		</GrindArea>
-	  </SetGrindArea>
+		<SetGrindArea>
+			<GrindArea>
+				<MobIDs>704, 705, 708</MobIDs>
+				<Hotspots>
+					<Hotspot X="-6155.959" Y="578.8283" Z="385.9621" />
+					<Hotspot X="-6168.738" Y="616.8975" Z="385.39" />
+					<Hotspot X="-6193.916" Y="648.1166" Z="385.2001" />
+					<Hotspot X="-6219.368" Y="679.6935" Z="384.9532" />
+					<Hotspot X="-6251.767" Y="703.3575" Z="386.2433" />
+					<Hotspot X="-6291.549" Y="698.0549" Z="384.6894" />
+					<Hotspot X="-6328.661" Y="682.3475" Z="384.7651" />
+					<Hotspot X="-6365.101" Y="664.7599" Z="386.7983" />
+					<Hotspot X="-6395.354" Y="637.9539" Z="386.4824" />
+					<Hotspot X="-6400.595" Y="597.7765" Z="386.5949" />
+					<Hotspot X="-6386.292" Y="560.3297" Z="385.562" />
+					<Hotspot X="-6386.368" Y="520.1545" Z="384.2371" />
+					<Hotspot X="-6391.962" Y="480.1292" Z="380.2155" />
+					<Hotspot X="-6384.667" Y="440.7025" Z="378.1806" />
+					<Hotspot X="-6386.331" Y="400.1811" Z="378.9991" />
+					<Hotspot X="-6373.904" Y="362.2455" Z="385.8314" />
+					<Hotspot X="-6349.215" Y="330.5101" Z="379.5908" />
+					<Hotspot X="-6311.369" Y="343.458" Z="376.526" />
+					<Hotspot X="-6285.458" Y="374.5345" Z="381.6319" />
+					<Hotspot X="-6260.909" Y="406.1389" Z="383.8151" />
+					<Hotspot X="-6230.069" Y="432.7343" Z="386.962" />
+					<Hotspot X="-6202.466" Y="462.5126" Z="388.1611" />
+					<Hotspot X="-6183.631" Y="497.8862" Z="385.3472" />
+					<Hotspot X="-6167.092" Y="534.3588" Z="386.36" />
+					<Hotspot X="-6185.14" Y="570.4428" Z="385.3608" />
+					<Hotspot X="-6215.825" Y="596.0002" Z="389.7638" />
+					<Hotspot X="-6254.731" Y="584.4943" Z="388.2012" />
+					<Hotspot X="-6282.528" Y="555.3251" Z="387.7996" />
+					<Hotspot X="-6300.053" Y="518.7352" Z="388.0349" />
+					<Hotspot X="-6321.198" Y="484.6699" Z="384.096" />
+					<Hotspot X="-6334.989" Y="447.0354" Z="379.8083" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
 	  <GrindTo Condition="IsObjectiveComplete(1, 24475) || IsObjectiveComplete(2, 24475)" />
 	  <LootMobs Value="null" />
   </If>
+	<Objective QuestName="All the Other Stuff" QuestId="24475" Type="CollectItem" ItemId="49748" CollectCount="4" />
+	<Objective QuestName="All the Other Stuff" QuestId="24475" Type="CollectItem" ItemId="49747" CollectCount="3" />
 </If>
-<Objective QuestName="All the Other Stuff" QuestId="24475" Type="CollectItem" ItemId="49748" CollectCount="4" />
-<Objective QuestName="All the Other Stuff" QuestId="24475" Type="CollectItem" ItemId="49747" CollectCount="3" />
 <TurnIn QuestName="Make Hay While the Sun Shines" QuestId="24486" TurnInName="Grundel Harkin" TurnInId="1104" X="-6104.505" Y="384.0296" Z="395.5433" />
 <TurnIn QuestName="All the Other Stuff" QuestId="24475" TurnInName="Jona Ironstock" TurnInId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
 <PickUp QuestName="Whitebeard Needs Ye" QuestId="24487" GiverName="Jona Ironstock" GiverId="37087" X="-6106.804" Y="381.4078" Z="395.5414" />
-
-<If Condition="(Me.Class == WoWClass.Paladin &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Paladin">
   <TurnIn QuestName="Consecrated Rune" QuestId="3107" TurnInName="Bromos Grummner" TurnInId="926" X="-6120.679" Y="382.0895" Z="395.5435" />
   <PickUp QuestName="The Power of the Light" QuestId="24528" GiverName="Bromos Grummner" GiverId="926" X="-6120.679" Y="382.0895" Z="395.5435" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
   <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
-  <While Condition="HasQuest(24528) &amp;&amp; !IsQuestCompleted(24528)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24528" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" QuestId="24528" Lua="CastSpellByID(35395)" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24528) &amp;&amp; !IsQuestCompleted(24528)" >
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<CustomBehavior QuestId="26918" File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
+		<While Condition="!IsQuestCompleted(24528)" >
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24528" MobId="44389" InteractByCastingSpellId="35395" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Power of the Light" QuestId="24528" TurnInName="Bromos Grummner" TurnInId="926" X="-6120.679" Y="382.0895" Z="395.5435" />
 </If>
-<If Condition="(Me.Class == WoWClass.Warrior &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Warrior">
   <TurnIn QuestName="Simple Rune" QuestId="3106" TurnInName="Thran Khorman" TurnInId="912" X="-6084.768" Y="382.1413" Z="395.5427" />
   <PickUp QuestName="Getting Battle-Ready" QuestId="24531" GiverName="Thran Khorman" GiverId="912" X="-6150.75" Y="378.814" Z="395.5428" />
-  <While Condition="HasQuest(24531) &amp;&amp; !IsQuestCompleted(24531)" >
-    <RunTo QuestId="24531" X="-6150.341" Y="379.9159" Z="395.543" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24531" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <RunTo QuestId="24531" X="-6179.792" Y="388.9813" Z="396.0843" />
-    <RunTo QuestId="24531" X="-6167.816" Y="385.9798" Z="398.9323" />
-    <CustomBehavior File="CastSpellOn" QuestId="24531" SpellId="100" MobId="44389" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-6150.75" Y="378.814" Z="395.5428" />
-  </While>
+  <If Condition="HasQuest(24531) &amp;&amp; !IsQuestCompleted(24531)" >
+		<RunTo QuestId="24531" X="-6167.816" Y="385.9798" Z="398.9323" />
+		<While Condition="!IsQuestCompleted(24531)" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24531" InteractByCastingSpellId="100" MobId="44389" Range="20" MinRange="15" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Getting Battle-Ready" QuestId="24531" TurnInName="Thran Khorman" TurnInId="912" X="-6084.768" Y="382.1413" Z="395.5427" />
 </If>
-<If Condition="(Me.Class == WoWClass.Rogue &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Rogue">
   <TurnIn QuestName="Encrypted Rune" QuestId="3109" TurnInName="Solm Hargrin" TurnInId="916" X="-6093.748" Y="404.9183" Z="395.5375" />
   <PickUp QuestName="Evisceratin' the Enemy" QuestId="24532" GiverName="Solm Hargrin" GiverId="916" X="-6093.748" Y="404.9183" Z="395.5375" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(24532) &amp;&amp; !IsQuestCompleted(24532)">
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24532" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(1752)" QuestId="24532" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(2098)" QuestId="24532" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24532) &amp;&amp; !IsQuestCompleted(24532)">
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="!IsQuestCompleted(24532)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="1752" MobId="44389" NumOfTimes="3" X="-6150.75" Y="378.814" Z="395.5428" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="2098" MobId="44389" NumOfTimes="1" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Evisceratin' the Enemy" QuestId="24532" TurnInName="Solm Hargrin" TurnInId="916" X="-6093.748" Y="404.9183" Z="395.5375" />
 </If>
-<If Condition="(Me.Class == WoWClass.Priest &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Priest">
   <TurnIn QuestName="Hallowed Rune" QuestId="3110" TurnInName="Branstock Khalder" TurnInId="837" X="-6056.739" Y="393.548" Z="392.7603" />
   <PickUp QuestName="Words of Power" QuestId="24533" GiverName="Branstock Khalder" GiverId="837" X="-6056.739" Y="393.548" Z="392.7603" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(24533) &amp;&amp; !IsQuestCompleted(24533)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24533" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(589)" QuestId="24533" NumOfTimes="5" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24533) &amp;&amp; !IsQuestCompleted(24533)" >
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="!IsQuestCompleted(24533)" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24533" InteractByCastingSpellId="589" MobId="44389" NumOfTimes="5" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Words of Power" QuestId="24533" TurnInName="Branstock Khalder" TurnInId="837" X="-6056.739" Y="393.548" Z="392.7603" />
 </If>
-<If Condition="(Me.Class == WoWClass.Warlock &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Warlock">
   <TurnIn QuestName="Tainted Rune" QuestId="3115" TurnInName="Saripal Smolderbrew" TurnInId="43455" X="-6074.89" Y="388.547" Z="393.6033" />
   <PickUp QuestName="Harnessing the Flames" QuestId="26904" GiverName="Saripal Smolderbrew" GiverId="43455" X="-6074.89" Y="388.547" Z="393.6033" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(26904) &amp;&amp; !IsQuestCompleted(26904)">
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26904" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(172)" QuestId="26904" NumOfTimes="5" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(26904) &amp;&amp; !IsQuestCompleted(26904)">
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="HasQuest(26904) &amp;&amp; !IsQuestCompleted(26904)">
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26904" InteractByCastingSpellId="172" MobId="44389" NumOfTimes="5" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Harnessing the Flames" QuestId="26904" TurnInName="Saripal Smolderbrew" TurnInId="43455" X="-6074.89" Y="388.547" Z="393.6033" />
 </If>
-<If Condition="(Me.Class == WoWClass.Hunter &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Hunter">
   <TurnIn QuestName="Etched Rune" QuestId="3108" TurnInName="Thorgas Grimson" TurnInId="895" X="-6091.788" Y="365.1413" Z="395.5414" />
   <PickUp QuestName="Oh, A Hunter's Life For Me" QuestId="24530" GiverName="Thorgas Grimson" GiverId="895" X="-6091.788" Y="365.1413" Z="395.5414" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(24530) &amp;&amp; !IsQuestCompleted(24530)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24530" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(56641)" QuestId="24530" NumOfTimes="5" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24530) &amp;&amp; !IsQuestCompleted(24530)" >
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="!IsQuestCompleted(24530)" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24530" InteractByCastingSpellId="56641" MobId="44389" NumOfTimes="5" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Oh, A Hunter's Life For Me" QuestId="24530" TurnInName="Thorgas Grimson" TurnInId="895" X="-6091.788" Y="365.1413" Z="395.5414" />
 </If>
-<If Condition="(Me.Class == WoWClass.Mage &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Mage">
   <TurnIn QuestName="Arcane Rune" QuestId="24496" TurnInName="Teegli Merrowith" TurnInId="37121" X="-6056.094" Y="388.1749" Z="392.7616" />
   <PickUp QuestName="Filling Up the Spellbook" QuestId="24526" GiverName="Teegli Merrowith" GiverId="37121" X="-6056.094" Y="388.1749" Z="392.7616" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(24526) &amp;&amp; !IsQuestCompleted(24526)">
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24526" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(122)" QuestId="24526" NumOfTimes="2" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24526) &amp;&amp; !IsQuestCompleted(24526)">
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="!IsQuestCompleted(24526)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24526" InteractByCastingSpellId="122" MobId="44389" NumOfTimes="2" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Filling Up the Spellbook" QuestId="24526" TurnInName="Teegli Merrowith" TurnInId="37121" X="-6056.094" Y="388.1749" Z="392.7616" />
 </If>
-<If Condition="(Me.Class == WoWClass.Shaman &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Shaman">
   <TurnIn QuestName="Empowered Rune" QuestId="24494" TurnInName="Teo Hammerstorm" TurnInId="37115" X="-6051.206" Y="387.3906" Z="398.8733" />
   <PickUp QuestName="Your Path Begins Here" QuestId="24527" GiverName="Teo Hammerstorm" GiverId="37115" X="-6051.206" Y="387.3906" Z="398.8733" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="HasQuest(24527) &amp;&amp; !IsQuestCompleted(24527)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24527" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(73899)" QuestId="24527" NumOfTimes="2" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(24527) &amp;&amp; !IsQuestCompleted(24527)" >
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="!IsQuestCompleted(24527)" >
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24527" InteractByCastingSpellId="73899" MobId="44389" NumOfTimes="3" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Your Path Begins Here" QuestId="24527" TurnInName="Teo Hammerstorm" TurnInId="37115" X="-6051.206" Y="387.3906" Z="398.8733" />
 </If>
-<If Condition="(Me.Class == WoWClass.Monk &amp;&amp; Me.Race == WoWRace.Dwarf)">
+<If Condition="Me.Class == WoWClass.Monk">
   <TurnIn QuestName="Elegant Rune" QuestId="31150" TurnInName="Lo" TurnInId="63285" X="-6105.804" Y="369.4063" Z="395.5439" />
   <PickUp QuestName="Kick, Punch, It's All in the Mind" QuestId="31151" GiverName="Lo" GiverId="63285" X="-6105.804" Y="369.4063" Z="395.5439" />
-  <RunTo X="-6150.341" Y="379.9159" Z="395.543" />
-  <While Condition="((HasQuest(31151)) &amp;&amp; (!IsQuestCompleted(31151)))" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31151" MobId="44389" WaitTime="1" X="-6150.75" Y="378.814" Z="395.5428" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100780)" QuestId="31151" NumOfTimes="1" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100787)" QuestId="31151" NumOfTimes="1" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(31151) &amp;&amp; !IsQuestCompleted(31151)" >
+		<RunTo X="-6150.341" Y="379.9159" Z="395.543" />
+		<While Condition="((HasQuest(31151)) &amp;&amp; (!IsQuestCompleted(31151)))" >
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31151" InteractByCastingSpellId="100780" MobId="44389" X="-6150.75" Y="378.814" Z="395.5428" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31151" InteractByCastingSpellId="100787" MobId="44389" X="-6150.75" Y="378.814" Z="395.5428" />
+		</While>
+	</If>	
   <TurnIn QuestName="Kick, Punch, It's All in the Mind" QuestId="31151" TurnInName="Lo" TurnInId="63285" X="-6105.804" Y="369.4063" Z="395.5439" />
-</If>
-<If Condition="HasQuest(24487)" >
-	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
 </If>
 <TurnIn QuestName="Whitebeard Needs Ye" QuestId="24487" TurnInName="Grelin Whitebeard" TurnInId="786" X="-6363.002" Y="567.0847" Z="385.7681" />
 <PickUp QuestName="The Troll Menace" QuestId="182" GiverName="Grelin Whitebeard" GiverId="786" X="-6363.002" Y="567.0847" Z="385.7681" />
 <PickUp QuestName="Trolling for Information" QuestId="24489" GiverName="Apprentice Soren" GiverId="1354" X="-6368.77" Y="562.093" Z="385.5307" />
 <PickUp QuestName="A Refugee's Quandary" QuestId="3361" GiverName="Felix Whindlebolt" GiverId="8416" X="-6369.702" Y="576.087" Z="385.806" />
-<!--# # # Level 4 # # # -->
 <Objective QuestName="A Refugee's Quandary" QuestId="3361" Type="CollectItem" ItemId="10438" CollectCount="1" />
 <If Condition="HasQuest(24489) &amp;&amp; !IsQuestCompleted(24489)" >
   <While Condition="!IsObjectiveComplete(3, 24489)">
@@ -562,14 +540,12 @@ Also be sure to:\n
 <Objective QuestName="Ice and Fire" QuestId="218" Type="KillMob" MobId="37514" KillCount="10" />
 <Objective QuestName="Ice and Fire" QuestId="218" Type="KillMob" MobId="808" KillCount="1" />
 <Objective QuestName="Ice and Fire" QuestId="218" Type="KillMob" MobId="37112" KillCount="1" />
-<!--# # # Level 5 # # # -->
 <TurnIn QuestName="Ice and Fire" QuestId="218" TurnInName="Grelin Whitebeard" TurnInId="786" X="-6363.002" Y="567.0847" Z="385.7681" />
 <PickUp QuestName="A Trip to Ironforge" QuestId="24490" GiverName="Grelin Whitebeard" GiverId="786" X="-6363.002" Y="567.0847" Z="385.7681" />
-<If Condition="HasQuest(24490 &amp;&amp; Me.Race == WoWRace.Dwarf)">
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+<If Condition="HasQuest(24490)">
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="132" />
+	<TurnIn QuestName="A Trip to Ironforge" QuestId="24490" TurnInName="Hands Springsprocket" TurnInId="6782" X="-6248.838" Y="135.0416" Z="431.5902" />
 </If>
-<TurnIn QuestName="A Trip to Ironforge" QuestId="24490" TurnInName="Hands Springsprocket" TurnInId="6782" X="-6248.838" Y="135.0416" Z="431.5902" />
 <PickUp QuestName="Follow that Gyro-Copter!" QuestId="24491" GiverName="Hands Springsprocket" GiverId="6782" X="-6248.838" Y="135.0416" Z="431.5902" />
 <TurnIn QuestName="Follow that Gyro-Copter!" QuestId="24491" TurnInName="Milo Geartwinge" TurnInId="37113" X="-6245.788" Y="305.4635" Z="383.854" />
 <PickUp QuestName="Pack Your Bags" QuestId="24492" GiverName="Milo Geartwinge" GiverId="37113" X="-6245.788" Y="305.4635" Z="383.854" />
@@ -580,8 +556,19 @@ Also be sure to:\n
 <TurnIn QuestName="Pack Your Bags" QuestId="24492" TurnInName="Milo Geartwinge" TurnInId="37113" />
 <If Condition="HasQuest(24493)">
   <CustomBehavior File="WaitTimer" WaitTime="87000" />
+	<TurnIn QuestName="Don't Forget About Us" QuestId="24493" TurnInName="Tharek Blackstone" TurnInId="1872" X="-5573.777" Y="-464.4554" Z="401.9636" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
 </If>
-<TurnIn QuestName="Don't Forget About Us" QuestId="24493" TurnInName="Tharek Blackstone" TurnInId="1872" X="-5573.777" Y="-464.4554" Z="401.9636" />
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)DunMorogh[Cava]" />
 </QuestOrder>
 </HBProfile>

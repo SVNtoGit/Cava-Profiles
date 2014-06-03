@@ -156,7 +156,7 @@
 <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue == 0">
   <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
 </If>
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 11">
@@ -243,13 +243,16 @@
   <RunTo X="-3788.187" Y="-836.1669" Z="-0.3965543" />
 </If>
 <TurnIn QuestName="The Third Fleet" QuestId="25815" TurnInName="First Mate Fitzsimmons" TurnInId="1239" X="-3794.61" Y="-842.481" Z="0.8879969" />
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <PickUp QuestName="Cursed to Roam" QuestId="25816" GiverName="First Mate Fitzsimmons" GiverId="1239" X="-3794.61" Y="-842.481" Z="0.8879969" />
 <If Condition="HasQuest(25800) &amp;&amp; !IsQuestCompleted(25800)" >
+  <RunTo X="-3743.156" Y="-876.3594" Z="-0.3971157" />
   <LootMobs Value="true" />
-  <CustomBehavior File="CollectThings" QuestId="25800" MobId="44116" MobState="Alive" CollectItemCount="5" CollectItemId="56013" HuntingGroundRadius="200" >
+	<UseMount Value="false" />
+	<CustomBehavior File="InteractWith" QuestId="25800" MobId="44116" MobState="Alive" NumOfTimes="1000" InteractByLooting="True" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+		<HuntingGrounds>
       <Hotspot X="-3743.156" Y="-876.3594" Z="-0.3971157" />
       <Hotspot X="-3776.339" Y="-853.7288" Z="-0.3972291" />
       <Hotspot X="-3793.662" Y="-815.9272" Z="-0.3655601" />
@@ -289,8 +292,10 @@
       <Hotspot X="-3765.12" Y="-1001.747" Z="-2.041966" />
       <Hotspot X="-3725.244" Y="-1005.518" Z="-2.041966" />
       <Hotspot X="-3685.011" Y="-1009.324" Z="-2.041966" />
-  </CustomBehavior>
+		</HuntingGrounds>
+	</CustomBehavior>
   <CustomBehavior File="AscendInWater" />
+	<UseMount Value="true" />
   <LootMobs Value="null" />
 <!--
 <Objective QuestName="When Life Gives You Crabs" QuestId="25800" Type="CollectItem" ItemId="56013" CollectCount="5" />
@@ -335,7 +340,7 @@
 <PickUp QuestName="Reclaiming Goods" QuestId="25802" GiverName="Karl Boran" GiverId="41297" X="-3740.495" Y="-848.1146" Z="0.5935773" />
 <TurnIn QuestName="A Mother's Worries" QuestId="25820" TurnInName="Derina Rumdnul" TurnInId="1484" X="-3743.811" Y="-879.8472" Z="0.289906" />
 <!--# # # Level 22 # # # -->
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <TurnIn QuestName="Reclaiming Goods" QuestId="25802" TurnInName="Damaged Crate" TurnInId="261" TurnInType="GameObject" X="-3288.887" Y="-947.9923" Z="9.909934" />
@@ -357,7 +362,7 @@
 <Objective QuestName="Claws from the Deep" QuestId="25801" Type="CollectItem" ItemId="3618" CollectCount="1" />
 <TurnIn QuestName="Search More Hovels" QuestId="25804" TurnInName="Half-buried Barrel" TurnInId="259" TurnInType="GameObject" X="-3108.332" Y="-966.6092" Z="8.371773" />
 <PickUp QuestName="Return the Statuette" QuestId="25805" GiverName="Half-buried Barrel" GiverId="259" GiverType="GameObject" X="-3108.332" Y="-966.6092" Z="8.371773" />
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <If Condition="HasQuest(25801) &amp;&amp; !IsQuestCompleted(25801)" >
@@ -391,7 +396,7 @@
   
 </If>
 <TurnIn QuestName="Cursed to Roam" QuestId="25816" TurnInName="First Mate Snellig" TurnInId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <PickUp QuestName="The Cursed Crew" QuestId="25817" GiverName="First Mate Snellig" GiverId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
@@ -442,7 +447,7 @@
 -->
 </If>
 <TurnIn QuestName="The Cursed Crew" QuestId="25817" TurnInName="First Mate Snellig" TurnInId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />
-<If Condition="(Me.Level &gt;= 23 )">
+<If Condition="(Me.Level &gt;= 230 )">
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](23-25)Wetlands[Cava]" />
 </If>
 <PickUp QuestName="Lifting the Curse" QuestId="25818" GiverName="First Mate Snellig" GiverId="41307" X="-2957.703" Y="-1019.526" Z="10.37181" />

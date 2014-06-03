@@ -1,4 +1,4 @@
-<HBProfile creator="Cava" version="1">
+<HBProfile creator="Cava" >
 <Name>[A-Quest] (1-5) Draenei [Cava] $Rev$</Name>
 
 <MinLevel>1</MinLevel><MaxLevel>91</MaxLevel><MinDurability>0.2</MinDurability><MinFreeBagSlots>2</MinFreeBagSlots><TargetElites>False</TargetElites>
@@ -97,23 +97,23 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsHorde">
+<If Condition="Me.Race != WoWRace.Draenei">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<!--
-<CustomBehavior File="UserSettings"  DrinkAmount="0" FoodAmount="0" />
--->
-<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Draenei Quests (1-5)" LogColor="Aquamarine" />
-<!--# # # Level 1 # # # -->
 <PickUp QuestName="You Survived!" QuestId="9279" GiverName="Megelon" GiverId="16475" X="-3961.696" Y="-13926.94" Z="100.8916" />
 <TurnIn QuestName="You Survived!" QuestId="9279" TurnInName="Proenitus" TurnInId="16477" X="-4039.4" Y="-13773.65" Z="75.22622" />
 <PickUp QuestName="Replenishing the Healing Crystals" QuestId="9280" GiverName="Proenitus" GiverId="16477" X="-4039.4" Y="-13773.65" Z="75.22622" />
 <Objective QuestName="Replenishing the Healing Crystals" QuestId="9280" Type="CollectItem" ItemId="22889" CollectCount="6" />
 <TurnIn QuestName="Replenishing the Healing Crystals" QuestId="9280" TurnInName="Proenitus" TurnInId="16477" X="-4039.4" Y="-13773.65" Z="75.22622" />
 <PickUp QuestName="Urgent Delivery!" QuestId="9409" GiverName="Proenitus" GiverId="16477" X="-4039.4" Y="-13773.65" Z="75.22622" />
-<!--# # # Level 2 # # # -->
 <TurnIn QuestName="Urgent Delivery!" QuestId="9409" TurnInName="Zalduun" TurnInId="16502" X="-4101.897" Y="-13770.12" Z="74.69601" />
 <PickUp QuestName="Rescue the Survivors!" QuestId="9283" GiverName="Zalduun" GiverId="16502" X="-4101.897" Y="-13770.12" Z="74.69601" />
 <PickUp QuestName="Botanist Taerix" QuestId="9371" GiverName="Proenitus" GiverId="16477" X="-4039.4" Y="-13773.65" Z="75.22622" />
@@ -121,36 +121,86 @@
 <PickUp QuestName="Volatile Mutations" QuestId="10302" GiverName="Botanist Taerix" GiverId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
 <Objective QuestName="Volatile Mutations" QuestId="10302" Type="KillMob" MobId="16516" KillCount="8" />
 <If Condition="HasQuest(9283) &amp;&amp; !IsQuestCompleted(9283)" >
-  <While Condition="(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 16483 &amp;&amp; u.Distance &gt; 100))" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4009.41" Y="-13644.25" Z="62.40472" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3916.144" Y="-13600.73" Z="59.3369" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-3923.809" Y="-13722.62" Z="63.4711" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="16483" WaitForNpcs="False" Range="30" CollectionDistance="1000" X="-4048.647" Y="-13574.26" Z="54.32418" />
-  </While>
-  <If Condition="SpellManager.HasSpell(28880)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="28880" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59547)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59547" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59544)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59544" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59542)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59542" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59548)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59548" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59543)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59543" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(59545)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="59545" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
-  <If Condition="SpellManager.HasSpell(121093)">
-    <CustomBehavior File="CastSpellOn" QuestId="9283" SpellId="121093" MobId="16483" MobHpPercentLeft="10" Range="30" X="-4009.41" Y="-13644.25" Z="62.40472" />
-  </If>
+	<While Condition="HasSpell(28880) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="28880" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59547) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59547" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59544) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59544" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59542) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59542" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59548) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59548" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59543) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59543" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(59545) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="59545" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
+	<While Condition="HasSpell(121093) &amp;&amp; !IsQuestCompleted(9283)" >
+    <CustomBehavior File="InteractWith" InteractByCastingSpellId="121093" QuestId="9283" NonCompeteDistance="0" MobId="16483" MobHpPercentLeft="10" Range="30" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+      <HuntingGrounds>
+				<Hotspot X="-4009.41" Y="-13644.25" Z="62.40472" />
+				<Hotspot X="-3916.144" Y="-13600.73" Z="59.3369" />
+				<Hotspot X="-3923.809" Y="-13722.62" Z="63.4711" />
+				<Hotspot X="-4048.647" Y="-13574.26" Z="54.32418" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
 </If>
 <TurnIn QuestName="Volatile Mutations" QuestId="10302" TurnInName="Botanist Taerix" TurnInId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
 <PickUp QuestName="What Must Be Done..." QuestId="9293" GiverName="Botanist Taerix" GiverId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
@@ -160,110 +210,165 @@
 <PickUp QuestName="Inoculation" QuestId="9303" GiverName="Vindicator Aldar" GiverId="16535" X="-4195.092" Y="-13735.76" Z="73.72377" />
 <Objective QuestName="What Must Be Done..." QuestId="9293" Type="CollectItem" ItemId="22934" CollectCount="10" />
 <Objective QuestName="Botanical Legwork" QuestId="9799" Type="CollectItem" ItemId="24416" CollectCount="3" />
-<!--# # # Level 3 # # # -->
 <TurnIn QuestName="Botanical Legwork" QuestId="9799" TurnInName="Apprentice Vishael" TurnInId="20233" X="-4059.43" Y="-13718.84" Z="72.88725" />
 <TurnIn QuestName="What Must Be Done..." QuestId="9293" TurnInName="Botanist Taerix" TurnInId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
 <PickUp QuestName="Healing the Lake" QuestId="9294" GiverName="Botanist Taerix" GiverId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
 <If Condition="(Me.Class == WoWClass.Paladin)">
   <PickUp QuestName="The Light's Power" QuestId="26966" GiverName="Aurelon" GiverId="16501" X="-4103.122" Y="-13744.15" Z="74.63235" />
-  <CustomBehavior QuestId="26966" File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
-  <While Condition="!IsQuestCompleted(26966)" >
-    <RunTo QuestId="26966" X="-4036.764" Y="-13763.25" Z="75.97457" />
-	<CustomBehavior File="CastSpellOn" QuestId="26966" MobId="44703" SpellId="35395" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
-  <TurnIn QuestName="The Light's Power" QuestId="26966" TurnInName="Aurelon" TurnInId="16501" X="-4103.122" Y="-13744.15" Z="74.63235" />
+	<If Condition="HasQuest(26966) &amp;&amp; !IsQuestCompleted(26966)" >
+		<CustomBehavior QuestId="26966" File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
+		<While Condition="!IsQuestCompleted(26966)" >
+			<RunTo QuestId="26966" X="-4036.764" Y="-13763.25" Z="75.97457" />
+			<CustomBehavior File="InteractWith" QuestId="26966" MobId="44703" InteractByCastingSpellId="35395" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+  </If>
+	<TurnIn QuestName="The Light's Power" QuestId="26966" TurnInName="Aurelon" TurnInId="16501" X="-4103.122" Y="-13744.15" Z="74.63235" />
 </If>
 <If Condition="(Me.Class == WoWClass.Hunter)">
   <PickUp QuestName="Steadying Your Shot" QuestId="26963" GiverName="Keilnei" GiverId="16499" X="-4143.191" Y="-13752.03" Z="74.54939" />
-  <While Condition="!IsQuestCompleted(26963)" >
-    <RunTo QuestId="26963" X="-4036.764" Y="-13763.25" Z="75.97457" />
-	<CustomBehavior File="CastSpellOn" QuestId="26963" MobId="44703" SpellId="56641" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
+	<If Condition="HasQuest(26963) &amp;&amp; !IsQuestCompleted(26963)" >
+		<While Condition="!IsQuestCompleted(26963)" >
+			<RunTo QuestId="26963" X="-4036.764" Y="-13763.25" Z="75.97457" />
+      <CustomBehavior File="InteractWith" QuestId="26963" InteractByCastingSpellId="56641" MobId="44703" NumOfTimes="5" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+	</If>	
   <TurnIn QuestName="Steadying Your Shot" QuestId="26963" TurnInName="Keilnei" TurnInId="16499" X="-4143.191" Y="-13752.03" Z="74.54939" />
 </If>
 <If Condition="(Me.Class == WoWClass.Warrior)">
   <PickUp QuestName="Your First Lesson" QuestId="26958" GiverName="Kore" GiverId="16503" X="-4136.041" Y="-13739.75" Z="74.56161" />
-  <While Condition="!IsQuestCompleted(26958)" >
-    <RunTo QuestId="26958" X="-4028.721" Y="-13777.36" Z="74.70341" />
-	<CustomBehavior File="CastSpellOn" QuestId="26958" MobId="44703" SpellId="100" MinRange="18" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
+	<If Condition="HasQuest(26958) &amp;&amp; !IsQuestCompleted(26958)" >
+		<RunTo QuestId="26958" X="-4028.721" Y="-13777.36" Z="74.70341" />
+		<While Condition="!IsQuestCompleted(26958)" >
+      <CustomBehavior File="InteractWith" QuestId="26958" InteractByCastingSpellId="100" MobId="44703" Range="20" MinRange="15" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+	</If>	
   <TurnIn QuestName="Your First Lesson" QuestId="26958" TurnInName="Kore" TurnInId="16503" X="-4136.041" Y="-13739.75" Z="74.56161" />
 </If>
 <If Condition="(Me.Class == WoWClass.Priest)">
   <PickUp QuestName="Learning the Word" QuestId="26970" GiverName="Zalduun" GiverId="16502" X="-4101.897" Y="-13770.12" Z="74.69601" />
-  <While Condition="!IsQuestCompleted(26970)" >
-    <RunTo QuestId="26970" X="-4036.764" Y="-13763.25" Z="75.97457" />
-	<CustomBehavior File="CastSpellOn" QuestId="26970" MobId="44703" SpellId="589" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
+	<If Condition="HasQuest(26970) &amp;&amp; !IsQuestCompleted(26970)" >
+		<While Condition="!IsQuestCompleted(26970)" >
+			<RunTo QuestId="26970" X="-4036.764" Y="-13763.25" Z="75.97457" />
+      <CustomBehavior File="InteractWith" QuestId="26970" InteractByCastingSpellId="589" MobId="44703" NumOfTimes="5" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+	</If>	
   <TurnIn QuestName="Learning the Word" QuestId="26970" TurnInName="Zalduun" TurnInId="16502" X="-4101.897" Y="-13770.12" Z="74.69601" />
 </If>
 <If Condition="(Me.Class == WoWClass.Shaman)">
   <PickUp QuestName="Primal Strike" QuestId="26969" GiverName="Firmanvaar" GiverId="17089" X="-4127.279" Y="-13727.25" Z="74.67699" />
-  <While Condition="!IsQuestCompleted(26969)" >
-    <RunTo QuestId="26969" X="-4036.764" Y="-13763.25" Z="75.97457" />
-	<CustomBehavior File="CastSpellOn" QuestId="26969" MobId="44703" SpellId="73899" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
+	<If Condition="HasQuest(26969) &amp;&amp; !IsQuestCompleted(26969)" >
+		<While Condition="!IsQuestCompleted(26969)" >
+			<RunTo QuestId="26969" X="-4036.764" Y="-13763.25" Z="75.97457" />
+      <CustomBehavior File="InteractWith" QuestId="26969" InteractByCastingSpellId="73899" MobId="44703" NumOfTimes="3" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+	</If>	
   <TurnIn QuestName="Primal Strike" QuestId="26969" TurnInName="Firmanvaar" TurnInId="17089" X="-4127.279" Y="-13727.25" Z="74.67699" />
 </If>
 <If Condition="(Me.Class == WoWClass.Mage)">
   <PickUp QuestName="Frost Nova" QuestId="26968" GiverName="Valaatu" GiverId="16500" X="-4117.474" Y="-13739.6" Z="74.63202" />
-  <While Condition="!IsQuestCompleted(26968)" >
-    <RunTo QuestId="26968" X="-4036.764" Y="-13763.25" Z="75.97457" />
-	<CustomBehavior File="CastSpellOn" QuestId="26968" MobId="44703" SpellId="122" X="-4038.92" Y="-13762.1" Z="75.90264" />
-  </While>
+	<If Condition="HasQuest(26968) &amp;&amp; !IsQuestCompleted(26968)" >
+		<RunTo QuestId="26968" X="-4036.764" Y="-13763.25" Z="75.97457" />
+		<While Condition="!IsQuestCompleted(26968)" >
+			<CustomBehavior File="InteractWith" QuestId="26968" InteractByCastingSpellId="122" MobId="44703" NumOfTimes="2" X="-4038.92" Y="-13762.1" Z="75.90264" />
+		</While>
+	</If>	
   <TurnIn QuestName="Frost Nova" QuestId="26968" TurnInName="Valaatu" TurnInId="16500" X="-4117.474" Y="-13739.6" Z="74.63202" />
 </If>
- <If Condition="HasQuest(9294) &amp;&amp; !IsQuestCompleted(9294)" >
-  <RunTo X="-4357.861" Y="-13652.62" Z="50.1552" />
-  <CustomBehavior File="MyCTM" X="-4378.933" Y="-13644.87" Z="38.37949" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9294" ObjectType="GameObject" MobId="181433" Range="20" CollectionDistance="50" X="-4388.744" Y="-13644.09" Z="38.52658" />
+<If Condition="HasQuest(9294) &amp;&amp; !IsQuestCompleted(9294)" >
+  <RunTo X="-4388.744" Y="-13644.09" Z="38.52658" />
+	<While Condition="!IsQuestCompleted(9294)" >
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9294" MobId="181433" Range="20" CollectionDistance="1000" X="-4388.744" Y="-13644.09" Z="38.52658" />
+	</While>
 </If>
 <If Condition="HasQuest(9303) &amp;&amp; !IsQuestCompleted(9303)" >
   <RunTo X="-4393.39" Y="-13769.05" Z="52.25103" />
   <While Condition="!IsQuestCompleted(9303)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="9303" MobId="16518" MobState="Alive" Range="3" ItemId="22962" NumOfTimes="1" WaitTime="5000" X="-4470.333" Y="-13678.24" Z="47.34659" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="9303" MobId="16518" MobState="Alive" Range="3" ItemId="22962" NumOfTimes="1" WaitTime="5000" X="-4404.245" Y="-13724.4" Z="51.12439" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="9303" MobId="16518" MobState="Alive" Range="3" ItemId="22962" NumOfTimes="1" WaitTime="5000" X="-4434.354" Y="-13754.89" Z="56.75713" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="9303" MobId="16518" MobState="Alive" Range="3" ItemId="22962" NumOfTimes="1" WaitTime="5000" X="-4379.574" Y="-13789.15" Z="52.06747" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="9303" MobId="16518" MobState="Alive" Range="3" ItemId="22962" NumOfTimes="1" WaitTime="5000" X="-4364.01" Y="-13831.59" Z="69.2242" />
-  </While>
+    <CustomBehavior File="InteractWith" QuestId="9303" InteractByUsingItemId="22962" MobId="16518" CollectionDistance="1000" NumOfTimes="1000" Range="8" WaitTime="5000" >
+      <HuntingGrounds>
+				<Hotspot X="-4470.333" Y="-13678.24" Z="47.34659" />
+				<Hotspot X="-4404.245" Y="-13724.4" Z="51.12439" />
+				<Hotspot X="-4434.354" Y="-13754.89" Z="56.75713" />
+				<Hotspot X="-4379.574" Y="-13789.15" Z="52.06747" />
+				<Hotspot X="-4364.01" Y="-13831.59" Z="69.2242" />
+      </HuntingGrounds>
+    </CustomBehavior>
+	</While>
 </If>
 <Objective QuesstName="Spare Parts" QuestId="9305" Type="CollectItem" ItemId="22978" CollectCount="4" />
 <If Condition="HasQuest(9294)">
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="3526" />
+	<TurnIn QuestName="Healing the Lake" QuestId="9294" TurnInName="Botanist Taerix" TurnInId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
 </If>
-<TurnIn QuestName="Healing the Lake" QuestId="9294" TurnInName="Botanist Taerix" TurnInId="16514" X="-4057.034" Y="-13721.6" Z="72.83356" />
-<!--# # # Level 4 # # # -->
 <TurnIn QuestName="Spare Parts" QuestId="9305" TurnInName="Technician Zhanaa" TurnInId="17071" X="-4184.554" Y="-13733.05" Z="74.16084" />
 <TurnIn QuestName="Inoculation" QuestId="9303" TurnInName="Vindicator Aldar" TurnInId="16535" X="-4195.092" Y="-13735.76" Z="73.72377" />
 <PickUp QuestName="The Missing Scout" QuestId="9309" GiverName="Vindicator Aldar" GiverId="16535" X="-4195.092" Y="-13735.76" Z="73.72377" />
-<If Condition="HasQuest(9309)" >
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-</If>
 <TurnIn QuestName="The Missing Scout" QuestId="9309" TurnInName="Tolaan" TurnInId="16546" X="-4445.659" Y="-13430.91" Z="51.25343" />
 <PickUp QuestName="The Blood Elves" QuestId="10303" GiverName="Tolaan" GiverId="16546" X="-4445.659" Y="-13430.91" Z="51.25343" />
 <Objective QuestName="The Blood Elves" QuestId="10303" Type="KillMob" MobId="16521" KillCount="10" />
 <TurnIn QuestName="The Blood Elves" QuestId="10303" TurnInName="Tolaan" TurnInId="16546" X="-4445.659" Y="-13430.91" Z="51.25343" />
 <PickUp QuestName="Blood Elf Spy" QuestId="9311" GiverName="Tolaan" GiverId="16546" X="-4445.659" Y="-13430.91" Z="51.25343" />
-<If Condition="HasQuest(9311) &amp;&amp; !IsQuestCompleted(9311)" >
-  <RunTo X="-4569.503" Y="-13311.77" Z="87.52728" />
-  <LootMobs Value="true" />
+<If Condition="!HasQuest(9798) &amp;&amp; !IsQuestCompleted(9798)" >
+  <If Condition="!HasItem(24414)" >
+		<LootMobs Value="true" />
+		<SetGrindArea>
+			<GrindArea>
+				<MobIDs>16522</MobIDs>
+				<Hotspots>
+					<Hotspot X="-4579.389" Y="-13319.93" Z="87.99693" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="HasItem(24414)" />
+  </If>
+  <LootMobs Value="null" />
+  <PickUp QuestName="Blood Elf Plans" QuestId="9798" GiverType="Item" GiverId="24414" />
 </If>
 <Objective QuestName="Blood Elf Spy" QuestId="9311" Type="KillMob" MobId="16522" KillCount="1" />
-<If Condition="!HasQuest(9798) &amp;&amp; !IsQuestCompleted(9798)" >
-  <While Condition="!HasItem(24414)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="16522" NumOfTimes="1" WaitTime="1000" CollectionDistance="100" X="-4579.389" Y="-13319.93" Z="87.99693" />
-  </While>
-  <PickUp QuestName="Blood Elf Plans" QuestId="9798" GiverType="Item" GiverId="24414" />
-  <LootMobs Value="null" />
-</If>
 <TurnIn QuestName="Blood Elf Spy" QuestId="9311" TurnInName="Vindicator Aldar" TurnInId="16535" />
 <PickUp QuestName="The Emitter" QuestId="9312" GiverName="Vindicator Aldar" GiverId="16535" />
 <TurnIn QuestName="Blood Elf Plans" QuestId="9798" TurnInName="Vindicator Aldar" TurnInId="16535" />
 <TurnIn QuestName="The Emitter" QuestId="9312" TurnInName="Technician Zhanaa" TurnInId="17071" X="-4184.554" Y="-13733.05" Z="74.16089" />
-<!--# # # Level 5 # # # -->
 <PickUp QuestName="Travel to Azure Watch" QuestId="9313" GiverName="Technician Zhanaa" GiverId="17071" X="-4184.554" Y="-13733.05" Z="74.16086" />
-<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-11)Azuremyst Isle[Cava]" />
+<PickUp QuestName="Word from Azure Watch" QuestId="9314" GiverName="Aeun" GiverId="16554" X="-4260.659" Y="-13125.38" Z="37.05204" />
+<TurnIn QuestName="Word from Azure Watch" QuestId="9314" TurnInName="Caregiver Chellan" TurnInId="16553" X="-4127.806" Y="-12467.68" Z="44.08618" />
+<If Condition="HasQuest(9313)" >
+  <TurnIn QuestName="Travel to Azure Watch" QuestId="9313" TurnInName="Technician Dyvuun" TurnInId="16551" X="-4157.076" Y="-12480.39" Z="45.20453" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-4207.33" Y="-12459.02" Z="45.61097" />
+		<CustomBehavior File="InteractWith" MobId="18810" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-4209.451" Y="-12456.21" Z="45.54395" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-4207.33" Y="-12459.02" Z="45.61097" />
+		<CustomBehavior File="InteractWith" MobId="18810" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-4209.451" Y="-12456.21" Z="45.54395" />
+	</If>
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-4128.315" Y="-12522.24" Z="44.25739" />
+	<CustomBehavior File="Cava\TaxiRide" MobId="43991" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-4126.64" Y="-12523.8" Z="44.14546" />	
+</If>
+<If Condition="Me.ZoneId == 141"> <!-- Teldrassil (Rut'theran Village) -->
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="8178.884" Y="1002.219" Z="6.825855" />
+	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 176310 &amp;&amp; u.Distance &lt;= 25))" >
+  </While>
+  <CustomBehavior File="UseTransport" TransportId="176310"
+	WaitAtX="8178.884" WaitAtY="1002.219" WaitAtZ="6.825855"
+	GetOffX="-8640.046" GetOffY="1326.006" GetOffZ="5.233113"
+	StandOnX="8168.902" StandOnY="1005.917" StandOnZ="6.204763"
+	TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="-0.02063938"
+	TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="0.04130154" />
+</If>
+<If Condition="Me.ZoneId == 1519"> <!-- Stormwind City -->
+	<CustomBehavior File="Message" Text="Moving to LOCH MODAN, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-8842.751" Y="493.2162" Z="109.6084" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="352" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-8835.292" Y="490.3976" Z="109.6168" />
+</If>
+<If Condition="Me.ZoneId == 1537"> <!-- Ironforge -->
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-5660.8" Y="-494.851" Z="397.008" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)DunMorogh[Cava]" />
 </QuestOrder>
 </HBProfile>

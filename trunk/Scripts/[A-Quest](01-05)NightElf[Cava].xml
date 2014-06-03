@@ -80,29 +80,22 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsHorde">
+<If Condition="Me.Race != WoWRace.NightElf">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
-  Text="Thank you for taking the time to use Cava's profiles and I hope you have enjoyed them so far.\n\n
-
-Please report any bugs to help our team members improve the profiles\n
-To ensure your questing goes smoothly, make sure you enable and properly setup:\n
-     AutoEquip2\n\n
-
-Also be sure to:\n
-     Send gold and bags to a character in the process of leveling\n
-     Be sure to set the food and drink options in Honorbuddy\n
-     Configure a mail recipient in Honorbuddy\n" />
-<!--
-
---><CustomBehavior File="Message" Text="Compiling Night Elf Quests (1-5)" LogColor="Green" />
-<!--# # # Level 1 # # # -->
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+<CustomBehavior File="Message" Text="Compiling Night Elf Quests (1-5)" LogColor="Green" />
 <PickUp QuestName="The Balance of Nature" QuestId="28713" GiverName="Ilthalaine" GiverId="2079" X="10312.7" Y="830.1215" Z="1326.441" />
 <Objective QuestName="The Balance of Nature" QuestId="28713" Type="KillMob" MobId="2031" KillCount="6" />
 <TurnIn QuestName="The Balance of Nature" QuestId="28713" TurnInName="Ilthalaine" TurnInId="2079" X="10312.7" Y="830.1215" Z="1326.441" />
 <PickUp QuestName="Fel Moss Corruption" QuestId="28714" GiverName="Ilthalaine" GiverId="2079" X="10312.7" Y="830.1215" Z="1326.441" />
-<!--# # # Level 2 # # # -->
 <PickUp QuestName="Demonic Thieves" QuestId="28715" GiverName="Melithar Staghelm" GiverId="2077" X="10328.95" Y="825.3351" Z="1326.383" />
 <Objective QuestName="Fel Moss Corruption" QuestId="28714" Type="CollectItem" ItemId="3297" CollectCount="6" />
 <Objective QuestName="Demonic Thieves" QuestId="28715" Type="CollectItem" ItemId="46700" CollectCount="5" />
@@ -113,11 +106,13 @@ Also be sure to:\n
   <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Forbidden Sigil" QuestId="26841" TurnInName="Rhyanda" TurnInId="43006" X="10456.29" Y="804.882" Z="1346.755" />
   <PickUp QuestName="Arcane Missiles" QuestId="26940" GiverName="Rhyanda" GiverId="43006" X="10456.29" Y="804.882" Z="1346.755" />
-  <While Condition="!IsQuestCompleted(26940)" >
-    <RunTo X="10466.46" Y="800.5823" Z="1322.745" />
-    <CustomBehavior File="CastSpellOn" QuestId="26940" MobId="44614" SpellId="122" X="10454.93" Y="801.1702" Z="1322.547" />
-  </While>
-  <TurnIn QuestName="Arcane Missiles" QuestId="26940" TurnInName="Rhyanda" TurnInId="43006" X="10456.29" Y="804.882" Z="1346.755" />
+  <If Condition="HasQuest(26940) &amp;&amp; !IsQuestCompleted(26940)">
+		<While Condition="!IsQuestCompleted(26940)" >
+			<RunTo X="10466.46" Y="800.5823" Z="1322.745" />
+			<CustomBehavior File="InteractWith" QuestId="26940" InteractByCastingSpellId="122" MobId="44614" NumOfTimes="2" X="10454.93" Y="801.1702" Z="1322.547" />
+		</While>
+  </If>
+	<TurnIn QuestName="Arcane Missiles" QuestId="26940" TurnInName="Rhyanda" TurnInId="43006" X="10456.29" Y="804.882" Z="1346.755" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Rhyanda" GiverId="43006" X="10456.29" Y="804.882" Z="1346.755" />
 </If>
 <If Condition="(Me.Class == WoWClass.Warrior)">
@@ -125,10 +120,12 @@ Also be sure to:\n
   <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Simple Sigil" QuestId="3116" TurnInName="Alyissia" TurnInId="3593" X="10526.61" Y="778.0858" Z="1329.6" />
   <PickUp QuestName="Learning New Techniques" QuestId="26945" GiverName="Alyissia" GiverId="3593" X="10526.61" Y="778.0858" Z="1329.6" />
-  <While Condition="!IsQuestCompleted(26945)" >
-    <RunTo X="10478.81" Y="800.5153" Z="1325.278" />
-    <CustomBehavior File="CastSpellOn" QuestId="26945" MobId="44614" SpellId="100" MinRange="18" X="10457.35" Y="806.3055" Z="1322.711" />
-  </While>
+  <If Condition="HasQuest(26945) &amp;&amp; !IsQuestCompleted(26945)">
+		<While Condition="!IsQuestCompleted(26945)" >
+			<RunTo X="10478.81" Y="800.5153" Z="1325.278" />
+			<CustomBehavior File="InteractWith" QuestId="26945" InteractByCastingSpellId="100" MobId="44614" MinRange="15" Range="20" X="10457.35" Y="806.3055" Z="1322.711" />
+		</While>
+	</If>
   <TurnIn QuestName="Learning New Techniques" QuestId="26945" TurnInName="Alyissia" TurnInId="3593" X="10526.61" Y="778.0858" Z="1329.6" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Alyissia" GiverId="3593" X="10526.61" Y="778.0858" Z="1329.6" />
 </If>
@@ -137,10 +134,12 @@ Also be sure to:\n
   <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Etched Sigil" QuestId="3117" TurnInName="Ayanna Everstride" TurnInId="3596" X="10448.12" Y="777.9965" Z="1322.666" />
   <PickUp QuestName="A Woodsman's Training" QuestId="26947" GiverName="Ayanna Everstride" GiverId="3596" X="10448.12" Y="777.9965" Z="1322.666" />
-  <While Condition="!IsQuestCompleted(26947)">
-    <RunTo X="10466.46" Y="800.5823" Z="1322.745" />
-    <CustomBehavior File="CastSpellOn" QuestId="26947" MobId="44614" SpellId="56641" X="10454.93" Y="801.1702" Z="1322.547" />
-  </While>
+  <If Condition="HasQuest(26947) &amp;&amp; !IsQuestCompleted(26947)">
+		<While Condition="!IsQuestCompleted(26947)">
+			<RunTo X="10466.46" Y="800.5823" Z="1322.745" />
+      <CustomBehavior File="InteractWith" QuestId="26947" InteractByCastingSpellId="56641" MobId="44614" NumOfTimes="5" X="10454.93" Y="801.1702" Z="1322.547" />
+		</While>
+	</If>
   <TurnIn QuestName="A Woodsman's Training" QuestId="26947" TurnInName="Ayanna Everstride" TurnInId="3596" X="10448.12" Y="777.9965" Z="1322.666" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Ayanna Everstride" GiverId="3596" X="10448.12" Y="777.9965" Z="1322.666" />
 </If>
@@ -149,47 +148,50 @@ Also be sure to:\n
   <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Encrypted Sigil" QuestId="3118" TurnInName="Frahun Shadewhisper" TurnInId="3594" X="10519.15" Y="778.0143" Z="1329.599" />
   <PickUp QuestName="A Rogue's Advantage" QuestId="26946" GiverName="Frahun Shadewhisper" GiverId="3594" X="10519.15" Y="778.0143" Z="1329.599" />
-  <While Condition="!IsQuestCompleted(26946)">
-    <RunTo X="10466.46" Y="800.5823" Z="1322.745" />
-    <CustomBehavior File="CastSpellOn" QuestId="26946" MobId="44614" SpellId="1752" X="10454.93" Y="801.1702" Z="1322.547" />
-    <CustomBehavior File="CastSpellOn" QuestId="26946" MobId="44614" SpellId="2098" X="10454.93" Y="801.1702" Z="1322.547" />
-  </While>
-  <TurnIn QuestName="A Rogue's Advantage" QuestId="26946" TurnInName="Frahun Shadewhisper" TurnInId="3594" X="10519.15" Y="778.0143" Z="1329.599" />
+  <If Condition="HasQuest(26946) &amp;&amp; !IsQuestCompleted(26946)">
+		<While Condition="!IsQuestCompleted(26946)">
+			<RunTo X="10466.46" Y="800.5823" Z="1322.745" />
+			<CustomBehavior File="InteractWith" QuestId="26946" InteractByCastingSpellId="1752" MobId="44614" NumOfTimes="3" X="10454.93" Y="801.1702" Z="1322.547" />
+      <CustomBehavior File="InteractWith" QuestId="26946" InteractByCastingSpellId="2098" MobId="44614" NumOfTimes="1" X="10454.93" Y="801.1702" Z="1322.547" />
+		</While>
+  </If>
+	<TurnIn QuestName="A Rogue's Advantage" QuestId="26946" TurnInName="Frahun Shadewhisper" TurnInId="3594" X="10519.15" Y="778.0143" Z="1329.599" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Frahun Shadewhisper" GiverId="3594" X="10519.15" Y="778.0143" Z="1329.599" />
 </If>
 <If Condition="(Me.Class == WoWClass.Priest)">
   <PickUp QuestName="Hallowed Sigil" QuestId="3119" GiverName="Melithar Staghelm" GiverId="2077" X="10328.95" Y="825.3351" Z="1326.383" />
-  <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Hallowed Sigil" QuestId="3119" TurnInName="Shanda" TurnInId="3595" X="10458.76" Y="801.6235" Z="1346.755" />
   <PickUp QuestName="Healing for the Wounded" QuestId="26949" GiverName="Shanda" GiverId="3595" X="10458.76" Y="801.6235" Z="1346.755" />
+  <If Condition="HasQuest(26949) &amp;&amp; !IsQuestCompleted(26949)">
     <While Condition="!IsQuestCompleted(26949)">
       <RunTo X="10466.46" Y="800.5823" Z="1322.745" />
- 	<CustomBehavior File="CastSpellOn" QuestId="26949" MobId="44614" SpellId="589" X="10454.93" Y="801.1702" Z="1322.547" />
+      <CustomBehavior File="InteractWith" QuestId="26949" InteractByCastingSpellId="589" MobId="44614" NumOfTimes="5" X="10454.93" Y="801.1702" Z="1322.547" />
     </While>
+	</If>	
   <TurnIn QuestName="Healing for the Wounded" QuestId="26949" TurnInName="Shanda" TurnInId="3595" X="10458.76" Y="801.6235" Z="1346.755" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Shanda" GiverId="3595" X="10458.76" Y="801.6235" Z="1346.755" />
 </If>
 <If Condition="(Me.Class == WoWClass.Druid)">
   <PickUp QuestName="Verdant Sigil" QuestId="3120" GiverName="Melithar Staghelm" GiverId="2077" X="10328.95" Y="825.3351" Z="1326.383" />
-  <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Verdant Sigil" QuestId="3120" TurnInName="Mardant Strongoak" TurnInId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
   <PickUp QuestName="Rejuvenating Touch" QuestId="26948" GiverName="Mardant Strongoak" GiverId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
-  <While Condition="!IsQuestCompleted(26948)">
-    <RunTo X="10466.46" Y="800.5823" Z="1322.745" />
-    <CustomBehavior File="CastSpellOn" QuestId="26948" MobId="44614" SpellId="8921" X="10454.93" Y="801.1702" Z="1322.547" />
-  </While>
-  <TurnIn QuestName="Rejuvenating Touch" QuestId="26948" TurnInName="Mardant Strongoak" TurnInId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
+  <If Condition="HasQuest(26948) &amp;&amp; !IsQuestCompleted(26948)">
+		<While Condition="!IsQuestCompleted(26948)">
+			<RunTo X="10466.46" Y="800.5823" Z="1322.745" />
+			<CustomBehavior File="InteractWith" QuestId="26948" InteractByCastingSpellId="8921" MobId="44614" NumOfTimes="5" X="10454.93" Y="801.1702" Z="1322.547" />
+		</While>
+  </If>
+	<TurnIn QuestName="Rejuvenating Touch" QuestId="26948" TurnInName="Mardant Strongoak" TurnInId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
   <PickUp QuestName="Priestess of the Moon" QuestId="28723" GiverName="Mardant Strongoak" GiverId="3597" X="10485.95" Y="816.0121" Z="1322.744" />
 </If>
 <If Condition="Me.Class == WoWClass.Monk">
   <PickUp QuestName="Calligraphed Sigil" QuestId="31168"  GiverName="Melithar Staghelm" GiverId="2077" X="10328.95" Y="825.3351" Z="1326.383" />
-  <!--# # # Level 3 # # # -->
   <TurnIn QuestName="Calligraphed Sigil" QuestId="31168" TurnInName="Laoxi" TurnInId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
   <PickUp QuestName="The Art of the Monk" QuestId="31169" GiverName="Laoxi" GiverId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
   <If Condition="HasQuest(31169) &amp;&amp; !IsQuestCompleted(31169)" >
     <While Condition="!IsQuestCompleted(31169)" >
       <CustomBehavior File="InteractWith" InteractByCastingSpellId="100780" MobId="44614" X="10454.93" Y="801.1702" Z="1322.547" />
-	  <CustomBehavior File="InteractWith" InteractByCastingSpellId="100787" MobId="44614" X="10454.93" Y="801.1702" Z="1322.547" />
+			<CustomBehavior File="InteractWith" InteractByCastingSpellId="100787" MobId="44614" X="10454.93" Y="801.1702" Z="1322.547" />
     </While>
   </If>
   <TurnIn QuestName="The Art of the Monk" QuestId="31169" TurnInName="Laoxi" TurnInId="63331" X="10526.41" Y="785.5452" Z="1329.601" />
@@ -200,45 +202,72 @@ Also be sure to:\n
 <Objective QuestName="Iverron's Antidote" QuestId="28724" Type="CollectItem" ItemId="10641" CollectCount="7" />
 <TurnIn QuestName="Iverron's Antidote" QuestId="28724" TurnInName="Dentaria Silverglade" TurnInId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <PickUp QuestName="The Woodland Protector" QuestId="28725" GiverName="Dentaria Silverglade" GiverId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
-<If Condition="HasQuest(28725)" >
-  <RunTo X="10758.43" Y="921.9671" Z="1338.538" />
-</If>
 <TurnIn QuestName="The Woodland Protector" QuestId="28725" TurnInName="Tarindrella" TurnInId="49480" X="10758.43" Y="921.9671" Z="1338.538" />
 <PickUp QuestName="Webwood Corruption" QuestId="28726" GiverName="Tarindrella" GiverId="49480" X="10758.43" Y="921.9671" Z="1338.538" />
 <Objective QuestName="Webwood Corruption" QuestId="28726" Type="KillMob" MobId="1986" KillCount="12" />
-<!--# # # Level 4 # # # -->
-<If Condition="HasQuest(28726)" >
-  <RunTo X="10977.22" Y="944.8837" Z="1337.156" />
-	<TurnIn QuestName="Webwood Corruption" QuestId="28726" TurnInName="Tarindrella" TurnInId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
-</If>
-<If Condition="!HasQuest(28727) &amp;&amp; !IsQuestCompleted(28727)" >
-  <RunTo X="10977.22" Y="944.8837" Z="1337.156" />
-	<PickUp QuestName="Vile Touch" QuestId="28727" GiverName="Tarindrella" GiverId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
-</If>
+<TurnIn QuestName="Webwood Corruption" QuestId="28726" TurnInName="Tarindrella" TurnInId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
+<PickUp QuestName="Vile Touch" QuestId="28727" GiverName="Tarindrella" GiverId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
 <Objective QuestName="Vile Touch" QuestId="28727" Type="KillMob" MobId="1994" KillCount="1" />
-<If Condition="HasQuest(28727)" >
-  <RunTo X="10977.22" Y="944.8837" Z="1337.156" />
-  <TurnIn QuestName="Vile Touch" QuestId="28727" TurnInName="Tarindrella" TurnInId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
-</If>
-<If Condition="!HasQuest(28728) &amp;&amp; !IsQuestCompleted(28728)" >
-  <RunTo X="10977.22" Y="944.8837" Z="1337.156" />
-	<PickUp QuestName="Signs of Things to Come" QuestId="28728" GiverName="Tarindrella" GiverId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
-</If>
+<TurnIn QuestName="Vile Touch" QuestId="28727" TurnInName="Tarindrella" TurnInId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
+<PickUp QuestName="Signs of Things to Come" QuestId="28728" GiverName="Tarindrella" GiverId="49480" X="10977.22" Y="944.8837" Z="1337.156" />
 <TurnIn QuestName="Signs of Things to Come" QuestId="28728" TurnInName="Dentaria Silverglade" TurnInId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <PickUp QuestName="Teldrassil: Crown of Azeroth" QuestId="28729" GiverName="Dentaria Silverglade" GiverId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <If Condition="HasQuest(28729) &amp;&amp; !IsQuestCompleted(28729)" >
   <RunTo X="10708.34" Y="763.182" Z="1321.225" />
-  <UseItem QuestId="28729" ItemId="5185"  X="10708.34" Y="763.182" Z="1321.225" />
-  <CustomBehavior File="WaitTimer" WaitTime="4000" />
+	<While Condition="!IsQuestCompleted(28729)" >
+		<RunTo QuestId="28729" X="10708.34" Y="763.182" Z="1321.225" />
+		<CustomBehavior File="Misc\RunLua" QuestId="28729" Lua="UseItemByName(5185)" WaitTime="4000" />
+	</While>
 </If>
 <TurnIn QuestName="Teldrassil: Crown of Azeroth" QuestId="28729" TurnInName="Dentaria Silverglade" TurnInId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <PickUp QuestName="Precious Waters" QuestId="28730" GiverName="Dentaria Silverglade" GiverId="49479" X="10545.33" Y="875.0208" Z="1309.415" />
 <TurnIn QuestName="Precious Waters" QuestId="28730" TurnInName="Tenaron Stormgrip" TurnInId="3514" X="10492.52" Y="807.2798" Z="1397.268" />
 <PickUp QuestName="Teldrassil: Passing Awareness" QuestId="28731" GiverName="Tenaron Stormgrip" GiverId="3514" X="10492.52" Y="807.2798" Z="1397.268" />
-<!--# # # Level 5 # # # -->
-<If Condition="!HasQuest(2159) &amp;&amp; !IsQuestCompleted(2159)" >
-  <RunTo X="10219.96" Y="702.1649" Z="1359.382" />
+<If Condition="HasQuest(28731)" >
+	<TurnIn QuestName="Teldrassil: Passing Awareness" QuestId="28731" TurnInName="Corithras Moonrage" TurnInId="3515" X="9736.91" Y="956.0632" Z="1294.111" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="9890.574" Y="988.153" Z="1327.535" />
+		<CustomBehavior File="InteractWith" MobId="3608" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="9891.875" Y="988.3077" Z="1327.565" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="9890.574" Y="988.153" Z="1327.535" />
+		<CustomBehavior File="InteractWith" MobId="3608" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="9891.875" Y="988.3077" Z="1327.565" />
+	</If>
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="9871.296" Y="974.9704" Z="1309.774" />
+	<CustomBehavior File="Cava\TaxiRide" MobId="40553" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="9873.028" Y="976.4879" Z="1309.922" />
 </If>
-<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-11)Teldrassil[Cava]" />
+<If Condition="Me.ZoneId == 1657"> <!-- Darnassus -->
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<While Condition="Me.ZoneId != 141">
+		<RunTo X="9944.988" Y="2608.418" Z="1316.274" />
+		<CustomBehavior File="GoThruPortal" InitialX="9944.988" InitialY="2608.418" InitialZ="1316.274" X="9949.215" Y="2643.143" Z="1316.773" />	
+	</While>
+</If>
+<If Condition="Me.ZoneId == 141"> <!-- Teldrassil (Rut'theran Village) -->
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="8178.884" Y="1002.219" Z="6.825855" />
+	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 176310 &amp;&amp; u.Distance &lt;= 25))" >
+  </While>
+  <CustomBehavior File="UseTransport" TransportId="176310"
+	WaitAtX="8178.884" WaitAtY="1002.219" WaitAtZ="6.825855"
+	GetOffX="-8640.046" GetOffY="1326.006" GetOffZ="5.233113"
+	StandOnX="8168.902" StandOnY="1005.917" StandOnZ="6.204763"
+	TransportStartX="8162.587" TransportStartY="1005.365" TransportStartZ="-0.02063938"
+	TransportEndX="-8650.719" TransportEndY="1346.051" TransportEndZ="0.04130154" />
+</If>
+<If Condition="Me.ZoneId == 1519"> <!-- Stormwind City -->
+	<CustomBehavior File="Message" Text="Moving to LOCH MODAN, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-8842.751" Y="493.2162" Z="109.6084" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="352" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-8835.292" Y="490.3976" Z="109.6168" />
+</If>
+<If Condition="Me.ZoneId == 1537"> <!-- Ironforge -->
+	<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-5660.8" Y="-494.851" Z="397.008" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)DunMorogh[Cava]" />
 </QuestOrder>
 </HBProfile>
