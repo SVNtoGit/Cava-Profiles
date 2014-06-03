@@ -1270,6 +1270,61 @@
   </If>
   <TurnIn QuestName="Hellscream's Gift" QuestId="31014" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.585" Y="-4343.08" Z="28.36353" />
 </If>
-<CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+<If Condition="Me.ZoneId == 1519"> <!-- Stormwind City -->
+	<CustomBehavior File="Message" Text="Moving to LOCH MODAN, Please do not stop bot" LogColor="Aquamarine" />
+  <RunTo X="-8842.751" Y="493.2162" Z="109.6084" />
+  <CustomBehavior File="Cava\TaxiRide" MobId="352" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-8835.292" Y="490.3976" Z="109.6168" />
+</If>
+<If Condition="Me.ZoneId == 1537"> <!-- Ironforge -->
+	<CustomBehavior File="Message" Text="Moving to LOCH MODAN, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-5047.622" Y="-784.7114" Z="495.0909" />
+</If>
+<If Condition="Me.ZoneId == 1"> <!-- Dun Morogh -->
+	<RunTo X="-5659.158" Y="-2556.244" Z="362.3625" />
+</If>
+<If Condition="Me.ZoneId == 38"> <!-- Loch Modan -->
+	<CustomBehavior File="Message" Text="Moving to LOCH MODAN, Please do not stop bot" LogColor="Aquamarine" />
+	<ClearVendor />
+	<ClearMailbox />
+	<SetMailbox>
+		<Mailboxes>
+			<Mailbox X="-5365.842" Y="-2952.646" Z="323.8266" />
+		</Mailboxes>
+	</SetMailbox>
+	<SetVendor>
+		<Vendors>
+			<Vendor Name="Morhan Coppertongue" Entry="167" Type="Repair" X="-5343.68" Y="-2932.134" Z="324.3618" />
+			<Vendor Name="Yanni Stoutheart" Entry="1682" Type="Food" X="-5381.876" Y="-2952.482" Z="322.0654" />
+		</Vendors>
+	</SetVendor>
+	<RunTo X="-5424.223" Y="-2928.142" Z="347.3829" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1572" WaitTime="1000" X="-5424.851" Y="-2929.872" Z="347.5625" />
+	<RunTo X="-5376.827" Y="-2973.176" Z="323.1693" />
+	<CustomBehavior File="Cava\SetHearthstone" MobId="6734" AreaId="2101" X="-5377.913" Y="-2973.908" Z="323.1688" />	
+  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
+		<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
+		<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
+		<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
+		<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+	</If>
+	<RunTo X="-5346.174" Y="-2934.331" Z="324.3619" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" X="-5343.68" Y="-2932.134" Z="324.3618" />	
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="[A-Quest](12-13)LochModan[Cava]" />
 </QuestOrder>
 </HBProfile>

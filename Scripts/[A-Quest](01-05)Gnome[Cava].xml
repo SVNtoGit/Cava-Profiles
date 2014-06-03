@@ -23,6 +23,18 @@
   <Vendor Name="Elly Sharpedge" Entry="42335" Type="Repair" X="-5168.75" Y="469.4097" Z="389.596" />
 </Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
+<Quest Id="27670" Name="Pinned Down">
+  <Objective Type="KillMob" MobId="46363" KillCount="6">
+    <Hotspots>
+      <Hotspot X="-5282.13" Y="442.5584" Z="385.5407" />
+      <Hotspot X="-5322.606" Y="439.1652" Z="385.1493" />
+      <Hotspot X="-5360.104" Y="454.0703" Z="384.6139" />
+      <Hotspot X="-5369.5" Y="493.106" Z="384.8134" />
+      <Hotspot X="-5346.959" Y="526.392" Z="383.4866" />
+      <Hotspot X="-5307.769" Y="517.5134" Z="385.2646" />
+		</Hotspots>
+  </Objective>
+</Quest>
 <Quest Id="26222" Name="Scrounging for Parts">
   <Objective Type="CollectItem" ItemId="57764" CollectCount="7">
     <CollectFrom>
@@ -101,32 +113,20 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsHorde">
+<If Condition="Me.Race != WoWRace.Gnome">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="6" ExpiryAction="InputEnabled_Continue"
-  Text="Thank you for taking the time to use Cava's profiles and I hope you have enjoyed them so far.\n\n
-
-Please report any bugs to help our team members improve the profiles\n
-To ensure your questing goes smoothly, make sure you enable and properly setup:\n
-     AutoEquip2\n\n
-
-Also be sure to:\n
-     Send gold and bags to a character in the process of leveling\n
-     Be sure to set the food and drink options in Honorbuddy\n
-     Configure a mail recipient in Honorbuddy\n" />
-<If Condition="Me.Race != WoWRace.Gnome" >
-  <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="15" ExpiryAction="InputEnabled_Continue"
-  Text="This profile only have quests for Gnome. Auto changing profile." />
-  <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
-</If>
-<!--
-
--->
-<!--# # # Level 1 # # # -->
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling New Tinkertown Map Zone" LogColor="Aquamarine" />
 <PickUp QuestName="Pinned Down" QuestId="27670" GiverName="Nevin Twistwrench" GiverId="45966" X="-4984.88" Y="875.616" Z="274.3093" />
-<If Condition="((HasQuest(27670)) &amp;&amp; (!IsQuestCompleted(27670)))" >
+<Objective QuestName="Pinned Down" QuestId="27670" Type="KillMob" MobId="46363" KillCount="6" />
+<!--<If Condition="((HasQuest(27670)) &amp;&amp; (!IsQuestCompleted(27670)))" >
   <RunTo X="-5012.349" Y="719.1098" Z="276.2352" />
 </If>
 <If Condition="HasQuest(27670) &amp;&amp; !IsQuestCompleted(27670)" >
@@ -146,70 +146,76 @@ Also be sure to:\n
   </SetGrindArea>
   <GrindTo Condition="IsQuestCompleted(27670)" />
 </If>
+-->
 <TurnIn QuestName="Pinned Down" QuestId="27670" TurnInName="Nevin Twistwrench" TurnInId="45966" X="-4984.88" Y="875.616" Z="274.3093" />
 <PickUp QuestName="Report to Carvo Blastbolt" QuestId="28167" GiverName="Nevin Twistwrench" GiverId="45966" X="-4984.88" Y="875.616" Z="274.3093" />
 <TurnIn QuestName="Report to Carvo Blastbolt" QuestId="28167" TurnInName="Carvo Blastbolt" TurnInId="47250" X="-4983.87" Y="779.559" Z="288.4848" />
 <PickUp QuestName="See to the Survivors" QuestId="27671" GiverName="Carvo Blastbolt" GiverId="47250" X="-4983.87" Y="779.559" Z="288.4848" />
 <If Condition="HasQuest(27671) &amp;&amp; !IsQuestCompleted(27671)" >
   <While Condition="!IsQuestCompleted(27671)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-5020.556" Y="782.2672" Z="276.2133" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-4984.369" Y="799.952" Z="276.2381" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-4958.368" Y="769.3834" Z="276.2456" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-4969.254" Y="730.4681" Z="276.237" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-5008.316" Y="721.418" Z="276.237" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-4977.688" Y="747.4426" Z="280.6141" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27671" MobId="46268" ItemId="62057" WaitTime="1000" WaitForNpcs="False" Range="4" CollectionDistance="1000" X="-4976.578" Y="787.8889" Z="279.9376" />
-    <RunTo QuestId="27671" X="-4988.796" Y="768.5803" Z="288.4849" />
-  </While>
+    <CustomBehavior File="InteractWith" QuestId="27671" MobId="46268" InteractByUsingItemId="62057" NumOfTimes="1000" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+			<HuntingGrounds>
+				<Hotspot X="-5020.556" Y="782.2672" Z="276.2133" />
+				<Hotspot X="-4984.369" Y="799.952" Z="276.2381" />
+				<Hotspot X="-4958.368" Y="769.3834" Z="276.2456" />
+				<Hotspot X="-4969.254" Y="730.4681" Z="276.237" />
+				<Hotspot X="-5008.316" Y="721.418" Z="276.237" />
+				<Hotspot X="-4977.688" Y="747.4426" Z="280.6141" />
+				<Hotspot X="-4976.578" Y="787.8889" Z="279.9376" />
+			</HuntingGrounds>
+		</CustomBehavior>
+	</While>
 </If>
 <TurnIn QuestName="See to the Survivors" QuestId="27671" TurnInName="Carvo Blastbolt" TurnInId="47250" X="-4983.87" Y="779.559" Z="288.4848" />
 <PickUp QuestName="Withdraw to the Loading Room!" QuestId="28169" GiverName="Carvo Blastbolt" GiverId="47250" X="-4983.87" Y="779.559" Z="288.4848" />
-<!--# # # Level 2 # # # -->
-<TurnIn QuestName="Withdraw to the Loading Room!" QuestId="28169" TurnInName="Gaffer Coilspring" TurnInId="46274" X="-5175.33" Y="767.455" Z="285.4742" />
+<If Condition="HasQuest(28169)" >
+	<DisableBehavior Name="Pull" />
+	<TurnIn QuestName="Withdraw to the Loading Room!" QuestId="28169" TurnInName="Gaffer Coilspring" TurnInId="46274" X="-5175.33" Y="767.455" Z="285.4742" />
+	<EnableBehavior Name="Pull" />
+</If>	
 <PickUp QuestName="Decontamination" QuestId="27635" GiverName="Gaffer Coilspring" GiverId="46274" X="-5175.33" Y="767.455" Z="285.4742" />
 <If Condition="HasQuest(27635) &amp;&amp; !IsQuestCompleted(27635)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27635" MobId="46185" X="-5173.01" Y="734.88" Z="288.8873" />
   <CustomBehavior File="WaitTimer" WaitTime="26000" />
+	<TurnIn QuestName="Decontamination" QuestId="27635" TurnInName="Technician Braggle" TurnInId="46255" X="-5172.65" Y="691.495" Z="288.0854" />
 </If>
-<TurnIn QuestName="Decontamination" QuestId="27635" TurnInName="Technician Braggle" TurnInId="46255" X="-5172.65" Y="691.495" Z="288.0854" />
 <PickUp QuestName="To the Surface" QuestId="27674" GiverName="Technician Braggle" GiverId="46255" X="-5172.65" Y="691.495" Z="288.0854" />
-
 <If Condition="HasQuest(27674)" >
   <RunTo X="-5180.774" Y="687.1391" Z="287.844" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="46293" GossipOptions="1" WaitTime="1000" X="-5182.16" Y="686.507" Z="287.7941" />
 </If>
 <TurnIn QuestName="To the Surface" QuestId="27674" TurnInName="Nevin Twistwrench" TurnInId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
-<If Condition="(Me.Class == WoWClass.Warrior &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Warrior">
   <PickUp QuestName="The Future of Gnomeregan" QuestId="26203" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
   <TurnIn QuestName="The Future of Gnomeregan" QuestId="26203" TurnInName="Drill Sergeant Steamcrank" TurnInId="42324" X="-5168.226" Y="453.8974" Z="391.5713" />
   <PickUp QuestName="Meet the High Tinker" QuestId="26425" GiverName="Drill Sergeant Steamcrank" GiverId="42324" X="-5168.226" Y="453.8974" Z="391.5713" />
   <TurnIn QuestName="Meet the High Tinker" QuestId="26425" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Warlock &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Warlock">
   <PickUp QuestName="The Future of Gnomeregan" QuestId="26202" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
 	<TurnIn QuestName="The Future of Gnomeregan" QuestId="26202" TurnInName="Alamar Grimm" TurnInId="460" X="-5195.21" Y="509.182" Z="387.7733" />
 	<PickUp QuestName="Meet the High Tinker" QuestId="26424" GiverName="Alamar Grimm" GiverId="460" X="-5195.21" Y="509.182" Z="387.7733" />
 	<TurnIn QuestName="Meet the High Tinker" QuestId="26424" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Rogue &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Rogue">
   <PickUp QuestName="The Future of Gnomeregan" QuestId="26206" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
   <TurnIn QuestName="The Future of Gnomeregan" QuestId="26206" TurnInName="Kelsey Steelspark" TurnInId="42366" X="-5141.02" Y="502.714" Z="395.5452" />
   <PickUp QuestName="Meet the High Tinker" QuestId="26423" GiverName="Kelsey Steelspark" GiverId="42366" X="-5141.02" Y="502.714" Z="395.5452" />
   <TurnIn QuestName="Meet the High Tinker" QuestId="26423" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Mage &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Mage">
 	<PickUp QuestName="The Future of Gnomeregan" QuestId="26197" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
 	<TurnIn QuestName="The Future of Gnomeregan" QuestId="26197" TurnInName="Bipsi Frostflinger" TurnInId="42331" X="-5086.4" Y="446.071" Z="409.8226" />
 	<PickUp QuestName="Meet the High Tinker" QuestId="26421" GiverName="Bipsi Frostflinger" GiverId="42331" X="-5086.4" Y="446.071" Z="409.8226" />
 	<TurnIn QuestName="Meet the High Tinker" QuestId="26421" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Priest &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Priest">
 	<PickUp QuestName="The Future of Gnomeregan" QuestId="26199" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
 	<TurnIn QuestName="The Future of Gnomeregan" QuestId="26199" TurnInName="&quot;Doc&quot; Cogspin" TurnInId="42323" X="-5077.156" Y="477.2257" Z="401.7406" />
 	<PickUp QuestName="Meet the High Tinker" QuestId="26422" GiverName="&quot;Doc&quot; Cogspin" GiverId="42323" X="-5077.156" Y="477.2257" Z="401.7406" />
 	<TurnIn QuestName="Meet the High Tinker" QuestId="26422" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Monk &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Monk">
 	<PickUp QuestName="The Future of Gnomeregan" QuestId="31135" GiverName="Nevin Twistwrench" GiverId="42396" X="-5200.58" Y="475.514" Z="388.3255" />
 	<TurnIn QuestName="The Future of Gnomeregan" QuestId="31135" TurnInName="Xi, Friend to the Small" TurnInId="63238" X="-5166.229" Y="464.4757" Z="390.4301" />
 	<PickUp QuestName="Meet the High Tinker" QuestId="31137" GiverName="Xi, Friend to the Small" GiverId="63238" X="-5166.229" Y="464.4757" Z="390.4301" />
@@ -222,8 +228,8 @@ Also be sure to:\n
 <TurnIn QuestName="The Fight Continues" QuestId="26208" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 <If Condition="!HasQuest(26566) &amp;&amp; !IsQuestCompleted(26566)" >
   <While Condition="!HasQuest(26566)" >
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42317" KeepTargetSelected="True" X="-5130.65" Y="488.842" Z="395.5452" />
-	<CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42317" KeepTargetSelected="True" X="-5130.65" Y="488.842" Z="395.5452" />
+		<CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 <!--
 <PickUp QuestName="A Triumph of Gnomish Ingenuity" QuestId="26566" GiverName="High Tinker Mekkatorque" GiverId="42317" X="-5130.65" Y="488.842" Z="395.5452" />
 -->
@@ -240,73 +246,83 @@ Also be sure to:\n
 <Objective QuestName="Dealing with the Fallout" QuestId="26265" Type="KillMob" MobId="42185" KillCount="6" />
 <If Condition="HasQuest(26205) &amp;&amp; !IsQuestCompleted(26205)" >
   <While Condition="!IsQuestCompleted(26205)" >
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975" NumOfTimes="1" ObjectType="GameObject" WaitTime="3500" Range="1" X="-5279.584" Y="426.3502" Z="385.1573" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975" NumOfTimes="1" ObjectType="GameObject" WaitTime="3500" Range="1" X="-5279.584" Y="426.3502" Z="385.1573" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975" NumOfTimes="1" ObjectType="GameObject" WaitTime="3500" Range="1" X="-5291.337" Y="488.1837" Z="382.7758" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975" NumOfTimes="1" ObjectType="GameObject" WaitTime="3500" Range="1" X="-5291.337" Y="488.1837" Z="382.7758" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975" NumOfTimes="1" ObjectType="GameObject" WaitTime="3500" Range="1" X="-5244.2" Y="468.6155" Z="383.7059" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="42553" KeepTargetSelected="True" WaitTime="1000" X="-5073.268" Y="454.8828" Z="410.9185" />
-	<CustomBehavior File="RunMacro" QuestId="26205" Macro="/click GossipTitleButton3" />
+		<If Condition="!Me.HasAura(74071) &amp;&amp; !IsQuestCompleted(26205)">
+			<RunTo X="-5074.72" Y="456.4731" Z="410.4598" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="42553" InteractByGossipOptions="1" WaitTime="1000" X="-5073.268" Y="454.8828" Z="410.9185" />
+		</If>
+		<If Condition="Me.HasAura(74071) &amp;&amp; !IsQuestCompleted(26205)">
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26205" MobId="203975 " NumOfTimes="1000" WaitTime="3500" Range="2" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" TerminateWhen="!Me.HasAura(74071)">
+				<HuntingGrounds>
+					<Hotspot X="-5244.2" Y="468.6155" Z="383.7059" />
+					<Hotspot X="-5279.584" Y="426.3502" Z="385.1573" />
+					<Hotspot X="-5279.584" Y="426.3502" Z="385.1573" />
+					<Hotspot X="-5291.337" Y="488.1837" Z="382.7758" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
   </While>
 </If>
 <TurnIn QuestName="Dealing with the Fallout" QuestId="26265" TurnInName="Corporal Fizzwhistle" TurnInId="42630" X="-5222.997" Y="499.4688" Z="387.28" />
-<!--# # # Level 3 # # # -->
-<If Condition="(Me.Class == WoWClass.Priest &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Priest">
   <PickUp QuestName="The Arts of a Priest" QuestId="26200" GiverName="&quot;Doc&quot; Cogspin" GiverId="42323" X="-5077.156" Y="477.2257" Z="401.7406" />
-  <While Condition="HasQuest(26200) &amp;&amp; !IsQuestCompleted(26200)" >
-    <RunTo QuestId="26200" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26200" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(589)" QuestId="26200" NumOfTimes="5" WaitTime="1000" />
-  </While>
+  <If Condition="HasQuest(26200) &amp;&amp; !IsQuestCompleted(26200)" >
+		<While Condition="!IsQuestCompleted(26200)" >
+			<RunTo QuestId="26200" X="-5171.782" Y="447.2581" Z="391.8253" />
+			<CustomBehavior File="InteractWith" QuestId="269200" InteractByCastingSpellId="589" MobId="44171" NumOfTimes="5" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Arts of a Priest" QuestId="26200" TurnInName="&quot;Doc&quot; Cogspin" TurnInId="42323" X="-5077.156" Y="477.2257" Z="401.7406" />
 </If>
-<If Condition="(Me.Class == WoWClass.Rogue &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Rogue">
   <PickUp QuestName="The Arts of a Rogue" QuestId="26207" GiverName="Kelsey Steelspark" GiverId="42366" X="-5141.02" Y="502.714" Z="395.5452" />
-  <While Condition="HasQuest(26207) &amp;&amp; !IsQuestCompleted(26207)">
+  <If Condition="HasQuest(26207) &amp;&amp; !IsQuestCompleted(26207)">
     <RunTo QuestId="26207" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26207" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(1752)" QuestId="26207" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(2098)" QuestId="26207" WaitTime="1000" />
-  </While>
+		<While Condition="!IsQuestCompleted(26207)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="1752" MobId="44171" NumOfTimes="3" X="-5171.84" Y="445.741" Z="392.029" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="2098" MobId="44171" NumOfTimes="1" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Arts of a Rogue" QuestId="26207" TurnInName="Kelsey Steelspark" TurnInId="42366" X="-5141.02" Y="502.714" Z="395.5452" />
 </If>
-<If Condition="(Me.Class == WoWClass.Warrior &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Warrior">
   <PickUp QuestName="The Arts of a Warrior" QuestId="26204" GiverName="Drill Sergeant Steamcrank" GiverId="42324" />
-  <While Condition="HasQuest(26204) &amp;&amp; !IsQuestCompleted(26204)" >
+  <If Condition="HasQuest(26204) &amp;&amp; !IsQuestCompleted(26204)" >
     <RunTo QuestId="26204" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26204" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <RunTo QuestId="26204" X="-5177.747" Y="479.5915" Z="388.3574" />
-    <RunTo QuestId="26204" X="-5173.778" Y="459.2313" Z="389.7131" />
-    <CustomBehavior File="CastSpellOn" QuestId="26204" SpellId="100" MobId="44171" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-5171.84" Y="445.741" Z="392.029" />
-  </While>
+		<While Condition="!IsQuestCompleted(26204)" >
+      <CustomBehavior File="InteractWith" QuestId="26204" NonCompeteDistance="0" InteractByCastingSpellId="100" MobId="44171" Range="20" MinRange="15" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Arts of a Warrior" QuestId="26204" TurnInName="Drill Sergeant Steamcrank" TurnInId="42324" />
 </If>
-<If Condition="(Me.Class == WoWClass.Mage &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Mage">
   <PickUp QuestName="The Arts of a Mage" QuestId="26198" GiverName="Bipsi Frostflinger" GiverId="42331" X="-5086.4" Y="446.071" Z="409.8226" />
-  <While Condition="HasQuest(26198) &amp;&amp; !IsQuestCompleted(26198)">
+  <If Condition="HasQuest(26198) &amp;&amp; !IsQuestCompleted(26198)">
     <RunTo QuestId="26198" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26198" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(122)" QuestId="26198" NumOfTimes="2" WaitTime="1000" />
-  </While>
+		<While Condition="!IsQuestCompleted(26198)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26198" InteractByCastingSpellId="122" MobId="44171" NumOfTimes="2" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Arts of a Mage" QuestId="26198" TurnInName="Bipsi Frostflinger" TurnInId="42331" X="-5086.4" Y="446.071" Z="409.8226" />
 </If>
-<If Condition="(Me.Class == WoWClass.Warlock &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Warlock">
   <PickUp QuestName="The Power of a Warlock" QuestId="26201" GiverName="Alamar Grimm" GiverId="460" X="-5195.21" Y="509.182" Z="387.7733" />
-  <While Condition="HasQuest(26201) &amp;&amp; !IsQuestCompleted(26201)">
+  <If Condition="HasQuest(26201) &amp;&amp; !IsQuestCompleted(26201)">
     <RunTo QuestId="26201" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26201" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(172)" QuestId="26201" NumOfTimes="5" WaitTime="1000" />
-  </While>
+		<While Condition="!IsQuestCompleted(26201)">
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26201" InteractByCastingSpellId="172" MobId="44171" NumOfTimes="5" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Power of a Warlock" QuestId="26201" TurnInName="Alamar Grimm" TurnInId="460" X="-5195.21" Y="509.182" Z="387.7733" />
 </If>
-<If Condition="(Me.Class == WoWClass.Monk &amp;&amp; Me.Race == WoWRace.Gnome)">
+<If Condition="Me.Class == WoWClass.Monk">
   <PickUp QuestName="The Arts of a Monk" QuestId="31138" GiverName="Xi, Friend to the Small" GiverId="63238" X="-5166.229" Y="464.4757" Z="390.4301" />
-  <While Condition="((HasQuest(31138)) &amp;&amp; (!IsQuestCompleted(31138)))">
+  <If Condition="((HasQuest(31138)) &amp;&amp; (!IsQuestCompleted(31138)))">
     <RunTo QuestId="31138" X="-5171.782" Y="447.2581" Z="391.8253" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31138" MobId="44171" WaitTime="1000" X="-5171.84" Y="445.741" Z="392.029" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100780)" QuestId="31138" NumOfTimes="1" WaitTime="1000" />
-    <CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(100787)" QuestId="31138" NumOfTimes="1" WaitTime="1000" />
-  </While>
+		<While Condition="!IsQuestCompleted(31138)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31138" InteractByCastingSpellId="100780" MobId="44171" X="-5171.84" Y="445.741" Z="392.029" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31138" InteractByCastingSpellId="100787" MobId="44171" X="-5171.84" Y="445.741" Z="392.029" />
+		</While>
+	</If>	
   <TurnIn QuestName="The Arts of a Monk" QuestId="31138" TurnInName="Xi, Friend to the Small" TurnInId="63238" X="-5166.229" Y="464.4757" Z="390.4301" />
 </If>
 <TurnIn QuestName="A Job for the Multi-Bot" QuestId="26205" TurnInName="Engineer Grindspark" TurnInId="42553" X="-5072.793" Y="455.6771" Z="410.6591" />
@@ -315,28 +331,30 @@ Also be sure to:\n
 <TurnIn QuestName="What's Keeping Jessup?" QuestId="26316" TurnInName="Jessup McCree" TurnInId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <PickUp QuestName="Get Me Explosives Back!" QuestId="26285" GiverName="Jessup McCree" GiverId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <PickUp QuestName="Missing in Action" QuestId="26284" GiverName="Jessup McCree" GiverId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
-<If Condition="HasQuest(26284) &amp;&amp; !IsQuestCompleted(26284)" >
+<If Condition="HasQuest(26285) &amp;&amp; !IsQuestCompleted(26285)" >
   <LootMobs Value="true" />
+</If>
+<If Condition="HasQuest(26284) &amp;&amp; !IsQuestCompleted(26284)" >
   <While Condition="!IsQuestCompleted(26284)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5561.603" Y="524.3511" Z="382.0901" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5561.603" Y="524.3511" Z="382.0901" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5558.397" Y="483.496" Z="383.5231" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5558.397" Y="483.496" Z="383.5231" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5575.159" Y="446.7459" Z="383.9409" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5575.159" Y="446.7459" Z="383.9409" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5595.349" Y="411.3157" Z="380.7572" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5595.349" Y="411.3157" Z="380.7572" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5609.128" Y="373.3862" Z="383.4508" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5609.128" Y="373.3862" Z="383.4508" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="42645" WaitTime="1" CollectionDistance="2000" X="-5631.385" Y="460.3712" Z="384.4492" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" NumOfTimes="1" Range="4" ObjectType="GameObject" CollectionDistance="1000" X="-5631.385" Y="460.3712" Z="384.4492" />
+    <CustomBehavior File="InteractWith" QuestId="26284" MobId="42645" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" NotMoving="True">
+			<HuntingGrounds>
+				<Hotspot X="-5561.603" Y="524.3511" Z="382.0901" />
+				<Hotspot X="-5558.397" Y="483.496" Z="383.5231" />
+				<Hotspot X="-5575.159" Y="446.7459" Z="383.9409" />
+				<Hotspot X="-5595.349" Y="411.3157" Z="380.7572" />
+				<Hotspot X="-5609.128" Y="373.3862" Z="383.4508" />
+				<Hotspot X="-5631.385" Y="460.3712" Z="384.4492" />
+			</HuntingGrounds>
+		</CustomBehavior>	
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26284" MobId="204019" Range="4" CollectionDistance="6" WaitForNpcs="False" WaitTime="5000"/>
   </While>
+</If>
+<If Condition="HasQuest(26285)" >
   <LootMobs Value="null" />
 </If>
 <Objective QuestName="Get Me Explosives Back!" QuestId="26285" Type="CollectItem" ItemId="58202" CollectCount="7" />
 <TurnIn QuestName="Get Me Explosives Back!" QuestId="26285" TurnInName="Jessup McCree" TurnInId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <TurnIn QuestName="Missing in Action" QuestId="26284" TurnInName="Jessup McCree" TurnInId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
-<!--# # # Level 4 # # # -->
 <PickUp QuestName="Finishin' the Job" QuestId="26318" GiverName="Jessup McCree" GiverId="42708" X="-5531.19" Y="516.505" Z="388.7751" />
 <Objective QuestName="Finishin' the Job" QuestId="26318" Type="UseObject" ObjectId="204042" UseCount="1" />
 <Objective QuestName="Finishin' the Job" QuestId="26318" Type="KillMob" MobId="42773" KillCount="1" />
@@ -346,84 +364,72 @@ Also be sure to:\n
 <PickUp QuestName="Crushcog's Minions" QuestId="26331" GiverName="High Tinker Mekkatorque" GiverId="42317" X="-5131.771" Y="490.1035" Z="395.5461" />
 <PickUp QuestName="No Tanks!" QuestId="26333" GiverName="Hinkles Fastblast" GiverId="42491" X="-5142.26" Y="499.502" Z="395.5461" />
 <If Condition="HasQuest(26333) &amp;&amp; !IsQuestCompleted(26333)" >
-	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-</If>
-<If Condition="HasQuest(26333) &amp;&amp; !IsQuestCompleted(26333)" >
   <While Condition="!IsQuestCompleted(26333)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-5055.69" Y="230.3125" Z="388.5472" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-5015.665" Y="223.1959" Z="386.8935" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-4985.833" Y="195.3731" Z="386.7675" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-4974.153" Y="156.5725" Z="386.7668" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-5002.962" Y="128.2165" Z="387.3092" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-5031.438" Y="156.8268" Z="386.7676" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="26333" MobId="42224" ItemId="58200" NumOfTimes="1" WaitTime="1000" Range="14" CollectionDistance="1000" X="-5045.345" Y="195.152" Z="386.7676" />
+    <CustomBehavior File="InteractWith" QuestId="26333" MobId="42224" InteractByUsingItemId="58200" NumOfTimes="1000" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+			<HuntingGrounds>
+				<Hotspot X="-5055.69" Y="230.3125" Z="388.5472" />
+				<Hotspot X="-5015.665" Y="223.1959" Z="386.8935" />
+				<Hotspot X="-4985.833" Y="195.3731" Z="386.7675" />
+				<Hotspot X="-4974.153" Y="156.5725" Z="386.7668" />
+				<Hotspot X="-5002.962" Y="128.2165" Z="387.3092" />
+				<Hotspot X="-5031.438" Y="156.8268" Z="386.7676" />
+				<Hotspot X="-5045.345" Y="195.152" Z="386.7676" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
 </If>
 <If Condition="HasQuest(26331) &amp;&amp; !IsQuestCompleted(26331)" >
-  <SetGrindArea>
-  <GrindArea>
-  <Factions>14</Factions>
-  <TargetMinLevel>2</TargetMinLevel>
-  <TargetMaxLevel>5</TargetMaxLevel>
-  <Hotspots>
-    <Hotspot X="-5055.69" Y="230.3125" Z="388.5472" />
-    <Hotspot X="-5015.665" Y="223.1959" Z="386.8935" />
-    <Hotspot X="-4985.833" Y="195.3731" Z="386.7675" />
-    <Hotspot X="-4974.153" Y="156.5725" Z="386.7668" />
-    <Hotspot X="-5002.962" Y="128.2165" Z="387.3092" />
-    <Hotspot X="-5031.438" Y="156.8268" Z="386.7676" />
-    <Hotspot X="-5045.345" Y="195.152" Z="386.7676" />
-  </Hotspots>
-  </GrindArea>
-  </SetGrindArea>
-  <GrindTo Condition="IsQuestCompleted(26331)" />
+		<SetGrindArea>
+			<GrindArea>
+				<MobIDs>42223, 42226</MobIDs>
+				<Hotspots>
+					<Hotspot X="-5055.69" Y="230.3125" Z="388.5472" />
+					<Hotspot X="-5015.665" Y="223.1959" Z="386.8935" />
+					<Hotspot X="-4985.833" Y="195.3731" Z="386.7675" />
+					<Hotspot X="-4974.153" Y="156.5725" Z="386.7668" />
+					<Hotspot X="-5002.962" Y="128.2165" Z="387.3092" />
+					<Hotspot X="-5031.438" Y="156.8268" Z="386.7676" />
+					<Hotspot X="-5045.345" Y="195.152" Z="386.7676" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="IsQuestCompleted(26331)" />
 </If>
 <TurnIn QuestName="Crushcog's Minions" QuestId="26331" TurnInName="High Tinker Mekkatorque" TurnInId="42317" X="-5131.771" Y="490.1035" Z="395.5461" />
 <TurnIn QuestName="No Tanks!" QuestId="26333" TurnInName="Hinkles Fastblast" TurnInId="42491" X="-5142.26" Y="499.502" Z="395.5461" />
 <PickUp QuestName="Staging in Brewnall" QuestId="26339" GiverName="Kelsey Steelspark" GiverId="42366" X="-5141.02" Y="502.714" Z="395.5452" />
-<!--# # # Level 5 # # # -->
 <TurnIn QuestName="Staging in Brewnall" QuestId="26339" TurnInName="Jarvi Shadowstep" TurnInId="42353" X="-5379.257" Y="304.467" Z="393.7025" />
 <PickUp QuestName="Paint it Black" QuestId="26342" GiverName="Jarvi Shadowstep" GiverId="42353" X="-5379.257" Y="304.467" Z="393.7025" />
 <If Condition="HasQuest(26342) &amp;&amp; !IsQuestCompleted(26342)" >
   <While Condition="!IsQuestCompleted(26342)" >
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5331.912" Y="247.287" Z="386.1318" />
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5291.795" Y="244.9216" Z="386.1123" />
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5265.913" Y="214.4137" Z="386.1123" />
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5293.671" Y="184.7253" Z="386.1123" />
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5333.712" Y="177.455" Z="386.2448" />
-	<CustomBehavior File="CombatUseItemOn" QuestId="26342" MobId="42291" ItemId="58203" MobHpPercentLeft="99" MaxRange="5" X="-5356.568" Y="210.5168" Z="386.1111" />
-  </While>
-</If>
+		<CustomBehavior File="CombatUseItemOnV2" QuestId="26342" ItemId="58203" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" MobId="42291" UseWhenMobHasHealthPercent="100" MaxRangeToUseItem="4" UseItemStrategy="UseItemOncePerTargetDontDefend">
+			<HuntingGrounds>
+				<Hotspot X="-5331.912" Y="247.287" Z="386.1318" />
+				<Hotspot X="-5291.795" Y="244.9216" Z="386.1123" />
+				<Hotspot X="-5265.913" Y="214.4137" Z="386.1123" />
+				<Hotspot X="-5293.671" Y="184.7253" Z="386.1123" />
+				<Hotspot X="-5333.712" Y="177.455" Z="386.2448" />
+				<Hotspot X="-5356.568" Y="210.5168" Z="386.1111" />
+			</HuntingGrounds>
+		</CustomBehavior>
+	</While>
+</If>	
 <TurnIn QuestName="Paint it Black" QuestId="26342" TurnInName="Jarvi Shadowstep" TurnInId="42353" X="-5379.257" Y="304.467" Z="393.7025" />
-<PickUp QuestName="Down with Crushcog!" QuestId="26364" GiverName="Jarvi Shadowstep" GiverId="42353" X="-5379.257" Y="304.467" Z="393.7025" />
-<If Condition="HasQuest(26364) &amp;&amp; !IsQuestCompleted(26364)" >
-  <While Condition="!IsQuestCompleted(26364)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26364" MobId="42849" KeepTargetSelected="True" X="-5313.493" Y="148.3941" Z="389.427" />
-	<CustomBehavior File="RunMacro" QuestId="26364" Macro="/click GossipTitleButton1" />
-    <RunTo QuestId="26364" X="-5280.052" Y="122.9897" Z="390.9128" />
-	<CustomBehavior File="WaitTimer" QuestId="26364" WaitTime="160000" />
-    <CustomBehavior File="UseItemTargetLocation" QuestId="26364" MobId="42839" ItemId="58253" UseType="PointToObject" Range="20" WaitTime="5000" />
-	<CustomBehavior File="WaitTimer" QuestId="26364" WaitTime="5000" />
-  </While>
+<PickUp QuestName="Bound for Kharanos" QuestId="26380" GiverName="Ciara Deepstone" GiverId="42933" X="-5410.04" Y="-306.828" Z="400.6918" />
+<If Condition="HasQuest(26380)">
+  <TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" X="-5601.6" Y="-531.203" Z="399.654" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
 </If>
-<If Condition="HasQuest(26364) &amp;&amp; IsQuestCompleted(26364)" >
-  <While Condition="HasQuest(26364)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="42353" KeepTargetSelected="True" X="-5379.257" Y="304.467" Z="393.7028" />
-	<CustomBehavior File="RunMacro" Macro="/click GossipTitleButton1" />
-    <CustomBehavior File="RunMacro" Macro="/script GetQuestReward(1)" />
-	<CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
-	<CustomBehavior File="WaitTimer" WaitTime="1000" />
-  </While>
-</If>
-<PickUp QuestName="On to Kharanos" QuestId="26373" GiverName="Jarvi Shadowstep" GiverId="42353" X="-5379.257" Y="304.467" Z="393.7025" />
-<If Condition="!HasQuest(26380) &amp;&amp; !IsQuestCompleted(26380)" >
-  <RunTo X="-5414.385" Y="301.2095" Z="394.5888" />
-  <RunTo X="-5430.76" Y="167.2798" Z="394.8125" />
-  <RunTo X="-5391.552" Y="8.33214" Z="391.1552" />
-  <RunTo X="-5403.678" Y="-78.05618" Z="391.738" />
-  <RunTo X="-5421.726" Y="-176.2298" Z="398.6646" />
-</If>
-<PickUp QuestName="Bound for Kharanos" QuestId="26380" GiverName="Ciara Deepstone" GiverId="42933" X="-5410.04" Y="-306.828" Z="400.6915" />
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](05-08)DunMorogh[Cava]" />
 </QuestOrder>
 </HBProfile>
