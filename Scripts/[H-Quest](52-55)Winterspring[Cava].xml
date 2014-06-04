@@ -628,9 +628,7 @@
   <RunTo X="-7858.05" Y="-2104.742" Z="-267.0351" />
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](55-57)UnGoroCrater[Cava]" />
 </If>
-<!--
 <PickUp QuestName="Fresh From The Hills" QuestId="28632" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
--->
 <PickUp QuestName="Are We There, Yeti?" QuestId="28629" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="Echo Three" QuestId="28630" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="The Perfect Horns" QuestId="28631" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
@@ -643,11 +641,14 @@
   <LootMobs Value="true" />
   <CustomBehavior File="EjectVeh" />
 </If>
+<If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >
+  <LootMobs Value="true" />
+</If>
 <Objective QuestName="The Perfect Horns" QuestId="28631" Type="CollectItem" ItemId="64664" CollectCount="1" />
 <If Condition="HasQuest(28632) &amp;&amp; !IsQuestCompleted(28632)" >
-  <LootMobs Value="true" />
+	<CustomBehavior File="Cava\WinterspringHook" State="True"/>
   <While Condition="!IsQuestCompleted(28632)" >
-    <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000">
+    <CustomBehavior File="InteractWith" QuestId="28632" MobId="49233" KeepTargetSelected="True" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="3">
       <HuntingGrounds>
       <Hotspot X="6765.769" Y="-5296.978" Z="746.0128" />
       <Hotspot X="6725.265" Y="-5301.883" Z="746.0128" />
@@ -667,22 +668,20 @@
       <Hotspot X="6601.73" Y="-5207.287" Z="766.6758" />
       </HuntingGrounds>
     </CustomBehavior>
-  </While>>
+  </While>
+	<CustomBehavior File="Cava\WinterspringHook" State="False"/>
+</If>
+<If Condition="HasQuest(28629)" >
   <LootMobs Value="null" />
 </If>
-<If Condition="HasQuest(28629) &amp;&amp; !IsQuestCompleted(28629)" >
-  <Objective QuestName="Are We There, Yeti?" QuestId="28629" Type="CollectItem" ItemId="12366" CollectCount="10" />
-</If>
+<Objective QuestName="Are We There, Yeti?" QuestId="28629" Type="CollectItem" ItemId="12366" CollectCount="10" />
 <!--# # # Level 53 # # # -->
 <TurnIn QuestName="Are We There, Yeti?" QuestId="28629" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <TurnIn QuestName="The Perfect Horns" QuestId="28631" TurnInName="Umi Rumplesnicker" TurnInId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
 <PickUp QuestName="Yetiphobia" QuestId="28722" GiverName="Umi Rumplesnicker" GiverId="10305" X="6752.665" Y="-4639.333" Z="721.7554" />
-<!--
 <TurnIn QuestName="Fresh From The Hills" QuestId="28632" TurnInName="Deez Rocksnitch" TurnInId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
-
 <PickUp QuestName="Ice Delivery" QuestId="28628" GiverName="Deez Rocksnitch" GiverId="48965" X="6758.009" Y="-4666.043" Z="724.2401" />
 <TurnIn QuestName="Ice Delivery" QuestId="28628" TurnInName="Seril Scourgebane" TurnInId="11193" X="6774.549" Y="-4667.743" Z="723.8229" />
--->
 <If Condition="HasQuest(28722) &amp;&amp; !IsQuestCompleted(28722)" >
   <While Condition="!IsQuestCompleted(28722)" >
     <CustomBehavior File="InteractWith" QuestId="28722" MobId="10978" InteractByUsingItemId="12928" Range="20" NotMoving="True" X="6705.608" Y="-4686.181" Z="721.8718" />
