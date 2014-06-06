@@ -20,6 +20,9 @@ Also be sure to:\n
 
 <!-- #######################################################################################################################-->
 <If Condition="Me.Race == WoWRace.Pandaren">
+	<If Condition="!HasQuest(31014) &amp;&amp; IsQuestCompleted(31014)" >
+		<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+	</If>
   <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-12)Pandaren[Cava]" />
 </If>
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
