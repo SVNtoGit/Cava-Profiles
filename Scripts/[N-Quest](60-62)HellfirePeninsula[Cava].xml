@@ -1539,8 +1539,8 @@
     <CustomBehavior File="FlyTo" X="-394.9646" Y="2357.554" Z="42.68585" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsObjectiveComplete(1, 10055) &amp;&amp; !IsObjectiveComplete(2, 10055)">
-      <CustomBehavior File="InteractWith" MobId1="182799" MobId2="182797" CollectionDistance="1000">
-        <HuntingGrounds WaypointVisitStrategy="Random" >
+      <CustomBehavior File="InteractWith" MobId1="182799" MobId2="182797" CollectionDistance="1000" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs">
+        <HuntingGrounds>
           <Hotspot X="-367.6238" Y="2367.299" Z="43.77814" />
           <Hotspot X="-367.5271" Y="2326.701" Z="47.16851" />
           <Hotspot X="-328.3071" Y="2318.434" Z="52.30044" />
@@ -1649,7 +1649,11 @@
   <PickUp QuestName="Shatter Point" QuestId="10340" GiverName="Forward Commander Kingston" GiverId="19310" X="-680.1464" Y="1855.198" Z="66.90966" />
   <If Condition="HasQuest(10340)">
     <CustomBehavior File="InteractWith" MobId="19409" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" InteractByGossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-670.4271" Y="1851.844" Z="66.90973" />
-  </If>
+		<CustomBehavior File="FlyTo" Land="True" X="277.426" Y="1488.334" Z="-15.3441" />
+		<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="20234" WaitTime="1000" X="279.3968" Y="1489.759" Z="-15.52258" />		
+		<CustomBehavior File="FlyTo" Land="True" X="307.6956" Y="1481.924" Z="-10.12598" />
+		<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="20231" WaitTime="1000" X="310.4291" Y="1484.341" Z="-9.954736" />		
+	</If>
   <TurnIn QuestName="Shatter Point" QuestId="10340" TurnInName="Runetog Wildhammer" TurnInId="20234" X="279.3968" Y="1489.759" Z="-15.52258" />
   <If Condition="HasQuest(10163) &amp;&amp; !IsQuestCompleted(10163)">
     <CustomBehavior File="AbandonQuest" QuestId="28218" />
