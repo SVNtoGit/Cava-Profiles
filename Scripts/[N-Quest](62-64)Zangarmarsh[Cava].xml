@@ -1804,10 +1804,9 @@
     <Objective QuestName="The Dead Mire" QuestId="9782" Type="CollectItem" ItemId="24400" CollectCount="1" />
   </If>
   <If Condition="HasQuest(9777) || HasQuest(9791) || HasQuest(9901) || HasQuest(9782)">
-    <CustomBehavior File="FlyTo" X="297.267" Y="5935.758" Z="199.8949" />
-    <CustomBehavior File="FlyTo" X="284.7056" Y="6030.751" Z="171.737" />
-    <CustomBehavior File="FlyTo" X="259.9305" Y="6039.391" Z="131.6165" />
-    <CustomBehavior File="ForcedDismount" />
+    <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="297.267" Y="5935.758" Z="199.8949" />
+    <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="284.7056" Y="6030.751" Z="171.737" />
+    <CustomBehavior File="FlyTo" IgnoreIndoors="True" Land="True" X="259.9305" Y="6039.391" Z="131.6165" />
     <CustomBehavior File="UserSettings" UseMount="False" />
     <RunTo X="258.1314" Y="6040.271" Z="131.6135" />
   </If>
