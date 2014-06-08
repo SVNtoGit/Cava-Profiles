@@ -2186,8 +2186,9 @@
       <CustomBehavior File="RunMacro" Macro="/script SelectGossipAvailableQuest(1)" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
     </While>
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="22375" MobId2="22376" X="-1655.307" Y="5459.343" Z="-40.40487" />
-  </While>
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId1="22375" MobId2="22376" WaitForNpcs="False" X="-1655.307" Y="5459.343" Z="-40.40487" />
+    <CustomBehavior File="WaitTimer" QuestId="10879" WaitTime="12000"/>
+	</While>
 </If>
 <TurnIn QuestName="The Skettis Offensive" QuestId="10879" TurnInName="Rilak the Redeemed" TurnInId="22292" X="-1656.933" Y="5448.969" Z="-40.4059" />
 <!--
