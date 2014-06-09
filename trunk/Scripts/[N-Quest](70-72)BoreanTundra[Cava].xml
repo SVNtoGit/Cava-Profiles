@@ -2439,10 +2439,9 @@
   <RunTo X="1810.547" Y="6049.846" Z="1.47478" />
 </If>
 <If Condition="HasQuest(11625) &amp;&amp; !IsQuestCompleted(11625)">
-  <CustomBehavior File="FlyTo" X="1527.244" Y="5406.552" Z="66.54446" />
-  <CustomBehavior File="FlyTo" X="1502.089" Y="5406.209" Z="58.58893" />
-  <CustomBehavior File="FlyTo" X="1496.726" Y="5399.003" Z="38.1372" />
-  <CustomBehavior File="ForcedDismount" />
+  <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="1527.244" Y="5406.552" Z="66.54446" />
+  <CustomBehavior File="FlyTo" IgnoreIndoors="True" X="1502.089" Y="5406.209" Z="58.58893" />
+  <CustomBehavior File="FlyTo" IgnoreIndoors="True" Land="True" X="1496.726" Y="5399.003" Z="38.1372" />
   <Objective QuestName="The Trident of Naz'jan" QuestId="11625" Type="CollectItem" ItemId="35774" CollectCount="1" />
   <CustomBehavior File="FlyTo" X="1400.728" Y="5483.02" Z="14.27164" />
 </If>
@@ -3296,6 +3295,7 @@
 </If>
 <If Condition="HasQuest(11951)" >
   <While Condition="HasQuest(11951)" >
+		<CustomBehavior File="FlyTo" Land="True" X="3577.117" Y="6651.863" Z="195.2527" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(35671)" />
     <While Condition="HasQuestAvailable(26206, &quot;TurnIn&quot;)" >
