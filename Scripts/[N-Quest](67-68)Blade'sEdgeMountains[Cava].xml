@@ -1253,7 +1253,7 @@
   </If>
   <TurnIn QuestName="Scratches" QuestId="10556" TurnInName="Daranelle" TurnInId="21469" X="2035.278" Y="6834.906" Z="173.6961" />
   <TurnIn QuestName="The Encroaching Wilderness" QuestId="10455" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
-  <If Condition="!HasQuest(10456) &amp;&amp; !IsQuestCompleted(10456) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10456) &amp;&amp; !IsQuestCompleted(10456) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
     <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
@@ -1311,7 +1311,7 @@
   <PickUp QuestName="The Bladespire Ogres" QuestId="10504" GiverName="Commander Skyshadow" GiverId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
   <TurnIn QuestName="Into the Draenethyst Mine" QuestId="10510" TurnInName="Bronwyn Stouthammer" TurnInId="21197" X="2055.932" Y="6816.509" Z="175.5976" />
   <TurnIn QuestName="Strange Brew" QuestId="10511" TurnInName="Borgrim Stouthammer" TurnInId="21151" X="2069.854" Y="6816.89" Z="175.5974" />
-  <If Condition="!HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
     <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
@@ -1349,7 +1349,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Test Flight: The Zephyrium Capacitorium" QuestId="10557" TurnInName="Tally Zapnabber" TurnInId="21460" X="1935.01" Y="5575.737" Z="263.6925" />
-  <If Condition="!HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
@@ -1385,7 +1385,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Picking Up Some Power Converters" QuestId="10584" TurnInName="Toshley" TurnInId="21691" X="1913.948" Y="5562.182" Z="262.7087" />
-  <If Condition="!HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
@@ -1401,11 +1401,14 @@
   <PickUp QuestName="Ridgespine Menace" QuestId="10620" GiverName="Dizzy Dina" GiverId="21824" X="1921.623" Y="5569.297" Z="263.7382" />
   <PickUp QuestName="Cutting Your Teeth" QuestId="10632" GiverName="Razak Ironsides" GiverId="21118" X="1944.888" Y="5571.545" Z="263.3051" />
   <If Condition="HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710)">
-    <CustomBehavior File="FlyTo" X="1913.616" Y="5575.294" Z="263.5218" />
-    <CustomBehavior File="ForcedDismount" />
-    <RunTo X="1919.339" Y="5579.646" Z="263.8946" />
-    <CustomBehavior File="Misc\RunLua" WaitTime="10000" NumOfTimes="1" Lua="UseItemByName(30540)" />
+    <CustomBehavior File="FlyTo" QuestId="10710" Land="True" X="1913.616" Y="5575.294" Z="263.5218" />
+    <If Condition="!HasItem(30540)">
+			<CustomBehavior File="FlyTo" Land="True" X="1937.468" Y="5575.969" Z="263.4758" />		
+      <CustomBehavior File="InteractWith" MobId="21460" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1935.01" Y="5575.737" Z="263.6919" />    
+		</If>
+		<CustomBehavior File="Misc\RunLua" QuestId="10710" WaitTime="2000" Lua="UseItemByName(30540)" />
     <While Condition="!IsQuestCompleted(10710)">
+			<RunTo  QuestId="10710" X="1919.339" Y="5579.646" Z="263.8946" />
       <CustomBehavior File="InteractWith" QuestId="10710" MobId="21461" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1,1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1920.312" Y="5581.301" Z="263.8955" />
       <CustomBehavior File="WaitTimer" WaitTime="30000" />
     </While>
@@ -1565,7 +1568,7 @@
   <TurnIn QuestName="Ridgespine Menace" QuestId="10620" TurnInName="Dizzy Dina" TurnInId="21824" X="1921.623" Y="5569.297" Z="263.7382" />
   <PickUp QuestName="More than a Pound of Flesh" QuestId="10671" GiverName="Dizzy Dina" GiverId="21824" X="1921.623" Y="5569.297" Z="263.7382" />
   <TurnIn QuestName="Crystal Clear" QuestId="10608" TurnInName="Nickwinkle the Metro-Gnome" TurnInId="21755" X="1914.839" Y="5578.607" Z="263.8767" />
-  <If Condition="!HasQuest(10594) &amp;&amp; !IsQuestCompleted(10594) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10594) &amp;&amp; !IsQuestCompleted(10594) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
@@ -1634,7 +1637,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Gauging the Resonant Frequency" QuestId="10594" TurnInName="Nickwinkle the Metro-Gnome" TurnInId="21755" X="1914.839" Y="5578.607" Z="263.8767" />
-  <If Condition="HasQuest(10711) &amp;&amp; !IsQuestCompleted(10711) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="HasQuest(10711) &amp;&amp; !IsQuestCompleted(10711) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
@@ -1678,7 +1681,7 @@
   <TurnIn QuestName="Test Flight: Razaan's Landing" QuestId="10711" TurnInName="Tally Zapnabber" TurnInId="21460" X="1935.01" Y="5575.737" Z="263.6923" />
   <TurnIn QuestName="More than a Pound of Flesh" QuestId="10671" TurnInName="Dizzy Dina" TurnInId="21824" X="1921.623" Y="5569.297" Z="263.7382" />
   <TurnIn QuestName="Trapping the Light Fantastic" QuestId="10674" TurnInName="Toshley" TurnInId="21691" X="1913.948" Y="5562.182" Z="262.7087" />
-  <If Condition="HasQuest(10675) &amp;&amp; !IsQuestCompleted(10675) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="HasQuest(10675) &amp;&amp; !IsQuestCompleted(10675) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
@@ -1722,7 +1725,7 @@
   </If>
   <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
   <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
-  <If Condition="!HasQuest(10457) &amp;&amp; !IsQuestCompleted(10457) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10457) &amp;&amp; !IsQuestCompleted(10457) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
     <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
@@ -1740,7 +1743,7 @@
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Protecting Our Own" QuestId="10457" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
-  <If Condition="!HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
     <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
@@ -1882,7 +1885,7 @@ turnin 10517
   <TurnIn QuestName="Getting the Bladespire Tanked" QuestId="10512" TurnInName="Borgrim Stouthammer" TurnInId="21151" X="2069.854" Y="6816.89" Z="175.5974" />
   <TurnIn QuestName="The Bladespire Ogres" QuestId="10504" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
   <TurnIn QuestName="A Dire Situation" QuestId="10506" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
-  <If Condition="!HasQuest(10712) &amp;&amp; !IsQuestCompleted(10712) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10712) &amp;&amp; !IsQuestCompleted(10712) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
     <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
@@ -1950,7 +1953,7 @@ turnin 10517
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Encroaching Wilderness" QuestId="10486" TurnInName="Gor'drek" TurnInId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
-  <If Condition="!HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -1973,7 +1976,7 @@ turnin 10517
   </If>
   <TurnIn QuestName="Felling an Ancient Tree" QuestId="10489" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
   <TurnIn QuestName="Dust from the Drakes" QuestId="10487" TurnInName="Gor'drek" TurnInId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
-  <If Condition="!HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2113,7 +2116,7 @@ turnin 10517
     </While>
   </If>
   <TurnIn QuestName="Vision Guide" QuestId="10525" TurnInName="Rokgah Bloodgrip" TurnInId="21311" X="2276.082" Y="5981.618" Z="142.7057" />
-  <If Condition="!HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2273,7 +2276,7 @@ turnin 10517
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Whispers on the Wind" QuestId="10614" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9988" />
-  <If Condition="!HasQuest(10709) &amp;&amp; !IsQuestCompleted(10709) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10709) &amp;&amp; !IsQuestCompleted(10709) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2327,7 +2330,7 @@ turnin 10517
   <PickUp QuestName="Trial and Error" QuestId="10566" GiverName="Dertrok" GiverId="21496" X="2162.213" Y="4769.62" Z="156.5495" />
   <TurnIn QuestName="Silkwing Cocoons" QuestId="10617" TurnInName="Taerek" TurnInId="21895" X="2186.735" Y="4729.706" Z="156.9829" />
   <TurnIn QuestName="The Softest Wings" QuestId="10618" TurnInName="Silmara" TurnInId="21896" X="2182.919" Y="4731.6" Z="156.5488" />
-  <If Condition="!HasQuest(10846) &amp;&amp; !IsQuestCompleted(10846) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10846) &amp;&amp; !IsQuestCompleted(10846) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2479,7 +2482,7 @@ turnin 10517
   <TurnIn QuestName="Trial and Error" QuestId="10566" TurnInName="Dertrok" TurnInId="21496" X="2162.213" Y="4769.62" Z="156.5495" />
   <PickUp QuestName="Ruuan Weald" QuestId="10615" GiverName="Dertrok" GiverId="21496" X="2162.213" Y="4769.62" Z="156.5495" />
   <TurnIn QuestName="Understanding the Mok'Nathal" QuestId="10846" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
-  <If Condition="!HasQuest(10843) &amp;&amp; !IsQuestCompleted(10843) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10843) &amp;&amp; !IsQuestCompleted(10843) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2597,7 +2600,7 @@ turnin 10517
   </If>
   <TurnIn QuestName="Slay the Brood Mother" QuestId="10845" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
   <TurnIn QuestName="Spirit Calling" QuestId="10853" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
-  <If Condition="!HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2620,7 +2623,7 @@ turnin 10517
   <TurnIn QuestName="Gather the Orbs" QuestId="10859" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <PickUp QuestName="Inform Leoroxx!" QuestId="10865" GiverName="Spiritcaller Dohgar" GiverId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <TurnIn QuestName="Inform Leoroxx!" QuestId="10865" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.999" />
-  <If Condition="!HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2745,7 +2748,7 @@ turnin 10517
 <TurnIn QuestName="Little Embers" QuestId="10770" TurnInName="Mosswood the Ancient" TurnInId="22053" X="3017.657" Y="5523.286" Z="148.126" />
 <TurnIn QuestName="From the Ashes" QuestId="10771" TurnInName="Mosswood the Ancient" TurnInId="22053" X="3017.657" Y="5523.286" Z="148.126" />
 <TurnIn QuestName="A Time for Negotiation..." QuestId="10682" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
-<If Condition="!HasQuest(10713) &amp;&amp; !IsQuestCompleted(10713) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+<If Condition="!HasQuest(10713) &amp;&amp; !IsQuestCompleted(10713) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
@@ -2787,7 +2790,7 @@ turnin 10517
 <!--<PickUp QuestName="Whelps of the Wyrmcult" QuestId="10747" GiverName="Samia Inkling" GiverId="21983" X="2981.399" Y="5485.771" Z="143.7749" />-->
 <TurnIn QuestName="...and a Time for Action" QuestId="10713" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
 <TurnIn QuestName="Did You Get The Note?" QuestId="10719" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
-<If Condition="!HasQuest(10894) &amp;&amp; !IsQuestCompleted(10894) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+<If Condition="!HasQuest(10894) &amp;&amp; !IsQuestCompleted(10894) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
@@ -2886,7 +2889,7 @@ Text="\n
   <TurnIn QuestName="Crush the Bloodmaul Camp!" QuestId="10796" TurnInName="Lieutenant Fairweather" TurnInId="22150" X="3036.01" Y="5483.127" Z="146.9879" />
   <TurnIn QuestName="A Date with Dorgok" QuestId="10795" TurnInName="Commander Haephus Stonewall" TurnInId="22149" X="3034.587" Y="5483.083" Z="147.1203" />
   <TurnIn QuestName="Favor of the Gronn" QuestId="10797" TurnInName="Commander Haephus Stonewall" TurnInId="22149" X="3034.587" Y="5483.083" Z="147.1203" />
-  <If Condition="!HasQuest(10798) &amp;&amp; !IsQuestCompleted(10798) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10798) &amp;&amp; !IsQuestCompleted(10798) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2960,7 +2963,7 @@ Text="\n
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="On Spirit's Wings" QuestId="10714" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5028" />
-  <If Condition="!HasQuest(10783) &amp;&amp; !IsQuestCompleted(10783) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10783) &amp;&amp; !IsQuestCompleted(10783) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -2989,7 +2992,7 @@ Text="\n
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Baron Sablemane's Poison" QuestId="10749" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5036" />
-  <If Condition="!HasQuest(10784) &amp;&amp; !IsQuestCompleted(10784) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10784) &amp;&amp; !IsQuestCompleted(10784) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -3022,7 +3025,7 @@ Text="\n
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Wyrmskull Watcher" QuestId="10894" TurnInName="Watcher Moonshade" TurnInId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
-<If Condition="!HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+<If Condition="!HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
@@ -3041,7 +3044,7 @@ Text="\n
 </If>
 <If Condition="HasQuest(10893)">
   <TurnIn QuestName="Longtail is the Lynchpin" QuestId="10893" TurnInName="Watcher Moonshade" TurnInId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
-  <If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+  <If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
@@ -3052,7 +3055,7 @@ Text="\n
     <CustomBehavior File="NoCombatMoveTo" X="3560.864" Y="6802.16" Z="138.3943" />
   </If>
 </If>
-<If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+<If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
   <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
@@ -3161,7 +3164,7 @@ Text="\n
 <TurnIn QuestName="Whispers of the Raven God" QuestId="10607" TurnInName="Timeon" TurnInId="21782" X="2993.936" Y="5473.497" Z="145.1144" />
 <!--<TurnIn QuestName="Whelps of the Wyrmcult" QuestId="10747" TurnInName="Samia Inkling" TurnInId="21983" X="2981.399" Y="5485.771" Z="143.7749" />-->
 <TurnIn QuestName="The Truth Unorbed" QuestId="10825" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7591" />
-<If Condition="!HasQuest(10829) &amp;&amp; !IsQuestCompleted(10829) &amp;&amp; (Me.LevelFraction &gt;= 68.97)">
+<If Condition="!HasQuest(10829) &amp;&amp; !IsQuestCompleted(10829) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
