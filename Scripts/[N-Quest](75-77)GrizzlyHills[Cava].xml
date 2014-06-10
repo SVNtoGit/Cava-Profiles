@@ -2093,8 +2093,27 @@ step
   <If Condition="HasQuest(12307) &amp;&amp; !IsQuestCompleted(12307)" >
     <CustomBehavior File="FlyTo" X="4308.781" Y="-2634.421" Z="254.3635" />
     <CustomBehavior File="ForcedDismount" />
-    <Objective Nav="Fly" QuestName="Wolfsbane Root" QuestId="12307" Type="UseObject" ObjectId="189313" UseCount="8" />
-  </If>
+		<While Condition="!IsQuestCompleted(12307)" >
+			<CustomBehavior File="InteractWith" QuestId="12307" MobId="189313" NumOfTimes="1000" CollectionDistance="1000" PreInteractMountStrategy="Dismount">
+				<HuntingGrounds>
+					<Hotspot X="4308.781" Y="-2634.421" Z="254.3635" />
+					<Hotspot X="4268.749" Y="-2636.402" Z="250.4305" />
+					<Hotspot X="4240.965" Y="-2608.177" Z="239.2083" />
+					<Hotspot X="4214.184" Y="-2578.148" Z="237.7583" />
+					<Hotspot X="4192.213" Y="-2544.587" Z="235.0613" />
+					<Hotspot X="4187.13" Y="-2503.74" Z="232.331" />
+					<Hotspot X="4199.176" Y="-2465.446" Z="229.8186" />
+					<Hotspot X="4213.54" Y="-2427.172" Z="231.787" />
+					<Hotspot X="4246.301" Y="-2403.112" Z="230.1214" />
+					<Hotspot X="4283.896" Y="-2388.466" Z="231.1769" />
+					<Hotspot X="4324.671" Y="-2382.874" Z="230.6851" />
+					<Hotspot X="4365.707" Y="-2383.26" Z="228.8237" />
+					<Hotspot X="4404.767" Y="-2391.903" Z="223.9542" />
+					<Hotspot X="4439.833" Y="-2410.898" Z="228.991" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</While>
+	</If>
   <TurnIn Nav="Fly" QuestName="Wolfsbane Root" QuestId="12307" TurnInName="Katja" TurnInId="27545" />
   <If Condition="!HasQuest(12802) &amp;&amp; !IsQuestCompleted(12802) &amp;&amp; (Me.LevelFraction &gt;= 77.40)">
     <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
@@ -2393,8 +2412,9 @@ step
   <PickUp QuestName="Escape from Silverbrook" QuestId="12308" GiverName="Caged Prisoner" GiverId="27499" X="4405.756" Y="-2499.231" Z="253.0114" />
   <If Condition="HasQuest(12308) &amp;&amp; !IsQuestCompleted(12308)">
     <While Condition="!IsQuestCompleted(12308)">
-      <RunTo X="4428" Y="-2488.299" Z="246.513" />
-      <CustomBehavior File="WaitTimer" WaitTime="35000" />
+			<RunTo X="4369.58" Y="-2506.281" Z="245.7353" />
+      <CustomBehavior File="FlyTo" Land="True" X="4428" Y="-2488.299" Z="246.513" />
+      <CustomBehavior File="WaitTimer" WaitTime="25000" />
       <If Condition="!Me.IsOnTransport" >
         <DisableBehavior Name="Combat" />
         <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="27409" PreInteractMountStrategy="DismountOrCancelShapeshift" WaitForNpcs="False" X="4427.663" Y="-2488.476" Z="246.5292" />
@@ -2953,32 +2973,34 @@ step
 <PickUp Nav="Fly" QuestName="Raining Down Destruction" QuestId="11982" GiverName="Kurun" GiverId="26260" X="4894.461" Y="-4563.207" Z="347.8362" />
 <If Condition="HasQuest(11982) &amp;&amp; !IsQuestCompleted(11982)">
   <CustomBehavior File="FlyTo" X="5029.269" Y="-4583.927" Z="288.2558" />
-  <Objective QuestName="Raining Down Destruction" QuestId="11982" Type="CollectItem" ItemId="35734" CollectCount="5" />
-  <While Condition="!IsQuestCompleted(11982)">
+	<Objective QuestName="Raining Down Destruction" QuestId="11982" Type="CollectItem" ItemId="35734" CollectCount="5" />
+	<While Condition="!IsQuestCompleted(11982)">
     <LootMobs Value="true" />
-    <CustomBehavior File="CollectThings" ObjectId="188260" CollectUntil="RequiredCountReached" CollectItemCount="3" CollectItemId="35734">
-      <Hotspot X="5029.269" Y="-4583.927" Z="288.2558" />
-      <Hotspot X="5019.252" Y="-4622.169" Z="294.6992" />
-      <Hotspot X="5028.583" Y="-4661.188" Z="295.6155" />
-      <Hotspot X="5034.245" Y="-4702.222" Z="294.8204" />
-      <Hotspot X="5066.707" Y="-4725.021" Z="289.3046" />
-      <Hotspot X="5085.725" Y="-4760.53" Z="291.9424" />
-      <Hotspot X="5112.973" Y="-4791.207" Z="296.6728" />
-      <Hotspot X="5138.737" Y="-4822.476" Z="291.6152" />
-      <Hotspot X="5125.642" Y="-4860.641" Z="294.6602" />
-      <Hotspot X="5105.291" Y="-4895.196" Z="302.6937" />
-      <Hotspot X="5117.702" Y="-4933.851" Z="300.2254" />
-      <Hotspot X="5132.775" Y="-4971.366" Z="296.6768" />
-      <Hotspot X="5168.937" Y="-4990.178" Z="293.7952" />
-      <Hotspot X="5202.775" Y="-4966.878" Z="295.6306" />
-    </CustomBehavior>
+		<CustomBehavior File="InteractWith" QuestId="11982" MobId="188260" InteractByLooting="True" CollectionDistance="1000" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" TerminateWhen="HasItem(35734)" MovementBy="NavigatorOnly">
+			<HuntingGrounds>
+				<Hotspot X="5029.269" Y="-4583.927" Z="288.2558" />
+				<Hotspot X="5019.252" Y="-4622.169" Z="294.6992" />
+				<Hotspot X="5028.583" Y="-4661.188" Z="295.6155" />
+				<Hotspot X="5034.245" Y="-4702.222" Z="294.8204" />
+				<Hotspot X="5066.707" Y="-4725.021" Z="289.3046" />
+				<Hotspot X="5085.725" Y="-4760.53" Z="291.9424" />
+				<Hotspot X="5112.973" Y="-4791.207" Z="296.6728" />
+				<Hotspot X="5138.737" Y="-4822.476" Z="291.6152" />
+				<Hotspot X="5125.642" Y="-4860.641" Z="294.6602" />
+				<Hotspot X="5105.291" Y="-4895.196" Z="302.6937" />
+				<Hotspot X="5117.702" Y="-4933.851" Z="300.2254" />
+				<Hotspot X="5132.775" Y="-4971.366" Z="296.6768" />
+				<Hotspot X="5168.937" Y="-4990.178" Z="293.7952" />
+				<Hotspot X="5202.775" Y="-4966.878" Z="295.6306" />
+			</HuntingGrounds>
+		</CustomBehavior>
     <LootMobs Value="null" />
     <CustomBehavior File="FlyTo" X="5004.226" Y="-4633.891" Z="291.8737" />
     <CustomBehavior File="ForcedDismount" />
-    <If Condition="GetItemCount(35734) &gt; 2 &amp;&amp; !IsQuestCompleted(11982)" >
+    <If Condition="HasItem(35734) &amp;&amp; !IsQuestCompleted(11982)" >
       <CustomBehavior File="UseItemTargetLocation" ItemId="35734" UseType="PointToObject" WaitTime="5000" MinRange="30" Range="90"
 	    MobId1="26268" MobId2="26270" X="5005.374" Y="-4632.542" Z="292.1667" />
-	</If>
+		</If>
   </While>
 </If>
 <TurnIn Nav="Fly" QuestName="Raining Down Destruction" QuestId="11982" TurnInName="Kurun" TurnInId="26260" X="4894.704" Y="-4564.427" Z="350.8008" />
