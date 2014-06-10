@@ -3111,15 +3111,12 @@ step
       </CustomBehavior>
       <LootMobs Value="null" />
     </While>
-<!--
-<Objective QuestName="Steady as a Rock?" QuestId="12014" Type="CollectItem" ItemId="35837" CollectCount="1" />
--->
     <While Condition="!IsQuestCompleted(12014)" >
       <RunTo X="5048.094" Y="-4819.878" Z="219.5001" />
-      <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="WaitTimer" WaitTime="2000" />
+      <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="Misc\RunLua" WaitTime="14000" NumOfTimes="1" Lua="UseItemByName(35837)" />
-      <CustomBehavior File="Cava\CavaInteractWith" MobId="188367" NonCompeteDistance="1" PreInteractMountStrategy="DismountOrCancelShapeshift" ProactiveCombatStrategy="ClearMobsTargetingUs" X="5048.094" Y="-4819.878" Z="219.5001" />
+      <CustomBehavior File="InteractWith" MobId="188367" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False" X="5048.094" Y="-4819.878" Z="219.5001" />
     </While>
   </If>
   <If Condition="HasQuest(11993) &amp;&amp; !IsQuestCompleted(11993)">
