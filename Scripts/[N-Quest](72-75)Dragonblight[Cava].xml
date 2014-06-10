@@ -19,6 +19,7 @@
   <Blackspot X="3487.224" Y="-1152.036" Z="111.1653" Radius="150" />
   <Blackspot X="2671.158" Y="875.265" Z="-1.554297" Radius="20" />
   <Blackspot X="2810.223" Y="-1101.677" Z="-11.31628" Radius="20" />
+  <Blackspot X="3144.532" Y="1498.919" Z="152.8155" Radius="2" />
 </Blackspots>
 
 <Mailboxes>
@@ -1758,29 +1759,25 @@
   <If Condition="HasQuest(12237) &amp;&amp; !IsQuestCompleted(12237)" >
     <If Condition="Me.IsOnTransport" >
       <CustomBehavior File="EjectVeh" />
-	  <CustomBehavior File="FlyTo" X="3708.318" Y="-703.1966" Z="215.4663" />
-	  <CustomBehavior File="ForcedDismount" />
-	</If>
-	<While Condition="!IsQuestCompleted(12237)" >
-	  <If Condition="!Me.IsOnTransport" >
-	    <CustomBehavior File="FlyTo" X="3708.318" Y="-703.1966" Z="215.4663" />
-	    <CustomBehavior File="ForcedDismount" />
+			<CustomBehavior File="FlyTo" X="3708.318" Y="-703.1966" Z="215.4663" />
+			<CustomBehavior File="ForcedDismount" />
+		</If>
+		<While Condition="!IsQuestCompleted(12237)" >
+			<If Condition="!Me.IsOnTransport" >
+				<CustomBehavior File="FlyTo" X="3708.318" Y="-703.1966" Z="215.4663" />
+				<CustomBehavior File="ForcedDismount" />
         <CustomBehavior File="Misc\RunLua" QuestId="12237" Lua="UseItemByName(37287)" WaitTime="6000" />
-		<CustomBehavior File="MountVehOnly" VehicleMountId="27258" X="3708.318" Y="-703.1966" Z="215.4663" />
-		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+				<CustomBehavior File="MountVehOnly" VehicleMountId="27258" X="3708.318" Y="-703.1966" Z="215.4663" />
+				<CustomBehavior File="WaitTimer" WaitTime="2000" />
       </If>
       <If Condition="Me.IsOnTransport" >
-	    <CustomBehavior File="Vehicles\FlyingVehicle" QuestId="12237" VehicleId="27258" NpcList="27315, 27336"
-          PickUpPassengerButton="1" DropPassengerButton="2" SpeedButton="3"
-		  StartPath="3677.748, -755.317, 232.0767 | 3681.729, -1021.153, 199.096 | 3691.888, -1128.765, 135.9474"
-		  Path="3691.672, -1128.605, 135.9474 | 3616.087, -1144.626, 129.1776 | 3625.421, -1216.024, 127.1696 |
-			    3670.133, -1269.399, 124.7972 | 3723.138, -1229.059, 130.4213 | 3737.01, -1147.314, 130.7674 |
-			    3667.331, -1096.301, 131.8572 | 3641.226, -1216.414, 132.4473 | 3642.252, -1308.858, 133.6576 |
-			    3547.872, -1363.139, 116.9346 | 3602.878, -1267.035, 125.4067 | 3649.872, -1133.756, 129.4781"
-		  EndPath="3581.456, -914.9228, 248.048 | 3710.879, -697.133, 217.4217" />
+        <CustomBehavior File="Cava\FlightoftheWintergardeDefender" QuestId="12237" VehicleId="27258" NpcList="27315, 27336" PickUpPassengerButton="1" DropPassengerButton="2" SpeedButton="3"
+          StartPath="3677.748, -755.317, 232.0767 | 3681.729, -1021.153, 199.096 | 3691.888, -1128.765, 135.9474"
+          Path="3691.672, -1128.605, 135.9474 | 3616.087, -1144.626, 129.1776 | 3625.421, -1216.024, 127.1696 | 3670.133, -1269.399, 124.7972 | 3723.138, -1229.059, 130.4213 | 3737.01, -1147.314, 130.7674 | 3667.331, -1096.301, 131.8572 | 3641.226, -1216.414, 132.4473 | 3642.252, -1308.858, 133.6576 | 3547.872, -1363.139, 116.9346 | 3602.878, -1267.035, 125.4067 | 3649.872, -1133.756, 129.4781"
+          EndPath="3581.456, -914.9228, 248.048 | 3711.969, -693.996, 215.4035" />
       </If>
     </While>
-	<CustomBehavior File="EjectVeh" />
+		<CustomBehavior File="EjectVeh" />
   </If>
   <TurnIn Nav="Fly" QuestName="Flight of the Wintergarde Defender" QuestId="12237" TurnInName="Gryphon Commander Urik" TurnInId="27317" X="3700.821" Y="-696.8871" Z="215.6114" />
   <PickUp Nav="Fly" QuestName="Return to the High Commander" QuestId="12251" GiverName="Gryphon Commander Urik" GiverId="27317" X="3700.821" Y="-696.8871" Z="215.6114" />
@@ -3724,7 +3721,7 @@
   </If>
   <If Condition="!HasQuest(12478) &amp;&amp; !IsQuestCompleted(12478)">
     <PickUp QuestName="Frostmourne Cavern" QuestId="12478" GiverName="Zelig the Visionary" GiverId="27314" />
-	<RunTo X="3793.728" Y="-793.8074" Z="196.7066" />
+		<RunTo X="3793.728" Y="-793.8074" Z="196.7066" />
   </If>
   <If Condition="HasQuest(12478) &amp;&amp; !IsQuestCompleted(12478)">
     <CustomBehavior File="FlyTo" X="4666.779" Y="-505.2766" Z="171.6787" />
