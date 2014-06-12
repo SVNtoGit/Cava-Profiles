@@ -1063,18 +1063,24 @@
 </If>
 <If Condition="HasQuest(12843) &amp;&amp; !IsQuestCompleted(12843)">
   <While Condition="!IsQuestCompleted(12843)">
-    <CustomBehavior File="CollectThings" QuestId="12843" MobId="29323" CollectUntil="RequiredCountReached" CollectItemCount="1" CollectItemId="40641" >
-      <Hotspot X="6655.603" Y="-1027.813" Z="766.0604" />
-      <Hotspot X="6695.975" Y="-1029.819" Z="768.7693" />
-      <Hotspot X="6731.746" Y="-1011.347" Z="770.2942" />
-      <Hotspot X="6770.091" Y="-1024.781" Z="766.2664" />
-      <Hotspot X="6781.174" Y="-1063.461" Z="766.3991" />
-      <Hotspot X="6754.581" Y="-1094.737" Z="766.2801" />
-      <Hotspot X="6715.281" Y="-1107.747" Z="767.0411" />
-      <Hotspot X="6718.971" Y="-1067.734" Z="765.695" />
-    </CustomBehavior>
+		<SetGrindArea>
+			<GrindArea>
+				<MobIDs>29323, 29331</MobIDs>
+				<Hotspots>
+					<Hotspot X="6655.603" Y="-1027.813" Z="766.0604" />
+					<Hotspot X="6695.975" Y="-1029.819" Z="768.7693" />
+					<Hotspot X="6731.746" Y="-1011.347" Z="770.2942" />
+					<Hotspot X="6770.091" Y="-1024.781" Z="766.2664" />
+					<Hotspot X="6781.174" Y="-1063.461" Z="766.3991" />
+					<Hotspot X="6754.581" Y="-1094.737" Z="766.2801" />
+					<Hotspot X="6715.281" Y="-1107.747" Z="767.0411" />
+					<Hotspot X="6718.971" Y="-1067.734" Z="765.695" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Nav="Fly" Condition="HasItem(40641) || IsQuestCompleted(12843)" />
     <CustomBehavior File="InteractWith" QuestId="12843" NonCompeteDistance="0" MobId="29466" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
-      Range="12" CollectionDistance="1000">
+      Range="7" CollectionDistance="1000" NotMoving="True">
       <HuntingGrounds>
       <Hotspot X="6655.603" Y="-1027.813" Z="766.0604" />
       <Hotspot X="6695.975" Y="-1029.819" Z="768.7693" />
@@ -1087,7 +1093,7 @@
       </HuntingGrounds>
     </CustomBehavior>
     <CustomBehavior File="InteractWith" QuestId="12843" NonCompeteDistance="0" MobId="191544" PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs"
-      Range="7" CollectionDistance="1000" WaitTime="8000" />
+      Range="7" CollectionDistance="8" WaitTime="10000" TerminateWhen="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 29466 &amp;&amp; u.Distance &lt;= 8))"/>
   </While>
 </If>
 <TurnIn Nav="Fly" QuestName="Moving In" QuestId="12829" TurnInName="Tore Rumblewrench" TurnInId="29430" X="6404.13" Y="-1122.326" Z="426.3503" />
