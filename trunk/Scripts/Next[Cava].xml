@@ -125,7 +125,7 @@
   <If Condition="Me.Race == WoWRace.Pandaren &amp;&amp; !IsQuestCompleted(30989)" >
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Pandaren[Cava]" />
   </If>
-  <If Condition="Me.Race == WoWRace.Worgen &amp;&amp; !IsQuestCompleted(14434)">
+  <If Condition="Me.Race == WoWRace.Worgen &amp;&amp; Me.Class != WoWClass.DeathKnight &amp;&amp; !IsQuestCompleted(14434)">
     <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Worgen[Cava]" />
   </If>
   <If Condition="(Me.Level &gt;= 81)">
