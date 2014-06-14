@@ -1050,7 +1050,7 @@
 	<CustomBehavior File="Cava\GilneasHook" State="True"/>
 	<RunTo X="-1390.888" Y="1236.072" Z="35.55896" />
   <While Condition="!IsQuestCompleted(24904)">
-		<While Condition="Me.Location.Distance(new WoWPoint(-1390.888, 1236.072, 35.55896 &gt; 100)) &amp;&amp; !IsQuestCompleted(24904)" >
+		<While Condition="(Me.Location.Distance(new WoWPoint(-1390.888, 1236.072, 35.55896)) &gt; 100) &amp;&amp; !IsQuestCompleted(24904)" >
 			<CustomBehavior File="WaitTimer" WaitTime="30000" />
     </While>
 		<While Condition="(!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 38218 &amp;&amp; u.Distance &lt;= 40))) &amp;&amp; !IsQuestCompleted(24904)" >
