@@ -114,23 +114,62 @@
 <If Condition="Me.IsHorde">
 	<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>	
-
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Dun Morogh Map Zone" LogColor="Aquamarine" />
-<!--# # # Level 5.4 # # # -->
 <If Condition="HasItem(57540)" >
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(57540)" WaitTime="1000" />
 </If>
-<PickUp QuestName="Beer Basted Boar Ribs" QuestId="384" GiverName="Ragnar Thunderbrew" GiverId="1267" X="-5596.211" Y="-504.1317" Z="400.6321" />
-<If Condition="!HasQuest(315) &amp;&amp; !IsQuestCompleted(315)">
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True"  />
-  <If Condition="HasQuest(26380)">
-    <TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-  </If>
-  <CustomBehavior File="Cava\SetHearthstone" MobId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="384" MobId="1247" BuyItemId="2894" GossipOptions="3" NumOfTimes="1" CollectionDistance="50" X="-5601.6" Y="-531.203" Z="399.6541" />
-  <If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
-  </If>
+<If Condition="Me.ZoneId == 6457 || Me.ZoneId == 6176 || Me.ZoneId == 1537">
+  <RunTo X="-5660.8" Y="-494.851" Z="397.008" />
+</If>
+<If Condition="Me.ZoneId != 1">
+	<If Condition="Me.ZoneId != 1519">
+		<CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+	<Else>
+		<CustomBehavior File="Message" Text="Moving to DUN MOROGH, Please do not stop bot" LogColor="Aquamarine" />
+		<RunTo X="-9435.902" Y="84.68204" Z="56.6716" />
+		<CustomBehavior File="Cava\TaxiRide" MobId="42983" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-9436.498" Y="87.12305" Z="57.99459" />
+		<RunTo X="-5660.8" Y="-494.851" Z="397.008" />
+		</Else>
+	</If>
+</If>
+<If Condition="Me.ZoneId != 1">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem moving char to quest\n\n
+  Please move your char to: DUN MOROGH\n
+  and start bot." />
+</If>
+<If Condition="!HasQuest(384) &amp;&amp; !IsQuestCompleted(384)">
+	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True"/>
+	<!--Mir2 Sell-->
+	<RunTo X="-5589.777" Y="-430.2052" Z="397.326" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1273" WaitTime="1000" X="-5590.67" Y="-428.416" Z="397.3266" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <CustomBehavior File="Cava\SetHearthstone" MobId="1247" AreaId="2102" X="-5601.6" Y="-531.203" Z="399.6541" />
+	<PickUp QuestName="Beer Basted Boar Ribs" QuestId="384" GiverName="Ragnar Thunderbrew" GiverId="1267" X="-5596.211" Y="-504.1317" Z="400.6321" />
+</If>
+<If Condition="HasQuest(384) &amp;&amp; !IsQuestCompleted(384) &amp;&amp; !HasItem(2894)">
+  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="384" MobId="1247" BuyItemId="2894" GossipOptions="3"  CollectionDistance="50" X="-5601.6" Y="-531.203" Z="399.6541" />
+</If>
+<If Condition="HasQuest(26380)">
+	<TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" X="-5601.6" Y="-531.203" Z="399.6541" />
 </If>
 <PickUp QuestName="The Perfect Stout" QuestId="315" GiverName="Rejold Barleybrew" GiverId="1374" X="-5612.144" Y="-516.9948" Z="402.6357" />
 <If Condition="HasQuest(26373)">
@@ -139,44 +178,32 @@
 <PickUp QuestName="Frostmane Aggression" QuestId="25724" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <Objective QuestName="Beer Basted Boar Ribs" QuestId="384" Type="CollectItem" ItemId="60496" CollectCount="4" />
 <TurnIn QuestName="Beer Basted Boar Ribs" QuestId="384" TurnInName="Ragnar Thunderbrew" TurnInId="1267" X="-5596.211" Y="-504.1317" Z="400.6321" />
-<If Condition="Me.Race == WoWRace.Dwarf" >
+<If Condition="!HasQuest(26380) &amp;&amp; !IsQuestCompleted(26380)">
   <PickUp QuestName="Bound for Kharanos" QuestId="26380" GiverName="Ciara Deepstone" GiverId="42933" X="-5410.04" Y="-306.828" Z="400.6918" />
 </If>
-<If Condition="((HasQuest(315)) &amp;&amp; (!IsQuestCompleted(315)))">
-  <RunTo X="-5265.084" Y="-403.9218" Z="396.2718" />
+<If Condition="HasQuest(315) &amp;&amp; !IsQuestCompleted(315)">
   <LootMobs Value="true" />
 </If>
 <Objective QuestName="Frostmane Aggression" QuestId="25724" Type="KillMob" MobId="41121" KillCount="5" />
 <Objective QuestName="Frostmane Aggression" QuestId="25724" Type="KillMob" MobId="41122" KillCount="7" />
-<Objective QuestName="The Perfect Stout" QuestId="315" Type="CollectItem" ItemId="2676" CollectCount="7" />
 <If Condition="HasQuest(315)">
   <LootMobs Value="null" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
-</If>
+</If>	
+<Objective QuestName="The Perfect Stout" QuestId="315" Type="CollectItem" ItemId="2676" CollectCount="7" />
 <If Condition="HasQuest(26380)">
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="2102" />
   <TurnIn QuestName="Bound for Kharanos" QuestId="26380" TurnInName="Innkeeper Belm" TurnInId="1247" X="-5601.6" Y="-531.203" Z="399.654" />
 </If>
 <TurnIn QuestName="The Perfect Stout" QuestId="315" TurnInName="Rejold Barleybrew" TurnInId="1374" X="-5612.144" Y="-516.9948" Z="402.6357" />
-<!--# # # Level 6 # # # -->
 <TurnIn QuestName="Frostmane Aggression" QuestId="25724" TurnInName="Captain Tharran" TurnInId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Culling the Wendigos" QuestId="25667" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Forced to Watch from Afar" QuestId="313" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Pilfered Supplies" QuestId="25668" GiverName="Quartermaster Glynna" GiverId="40951" X="-5642.425" Y="-493.0816" Z="396.6447" />
-<If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(313) &amp;&amp; !IsQuestCompleted(313)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
-</If>
 <If Condition="HasQuest(313) &amp;&amp; !IsQuestCompleted(313)">
-  <While Condition="!IsObjectiveComplete(1, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="40991" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5475.986" Y="-229.2361" Z="354.3773" />
-  </While>
-  <While Condition="!IsObjectiveComplete(2, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="40994" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5502.422" Y="-271.9618" Z="354.2406" />
-  </While>
-  <While Condition="!IsObjectiveComplete(3, 313)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0"  MobId="41056" NumOfTimes="1" GossipOptions="1" WaitTime="1000" CollectionDistance="100" X="-5387.958" Y="-278.2431" Z="363.053" />
+  <While Condition="!IsQuestCompleted(313)">
+    <CustomBehavior File="InteractWith" QuestId="313" QuestObjectiveIndex="1" NonCompeteDistance="0" MobId="40991" GossipOptions="1" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="100" X="-5475.986" Y="-229.2361" Z="354.3773" />
+    <CustomBehavior File="InteractWith" QuestId="313" QuestObjectiveIndex="2" NonCompeteDistance="0" MobId="40994" GossipOptions="1" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="100" X="-5502.422" Y="-271.9618" Z="354.2406" />
+    <CustomBehavior File="InteractWith" QuestId="313" QuestObjectiveIndex="3" NonCompeteDistance="0" MobId="41056" GossipOptions="1" ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="100" X="-5387.958" Y="-278.2431" Z="363.053" />
   </While>
 </If>
 <Objective QuestName="Pilfered Supplies" QuestId="25668" Type="CollectItem" ItemId="55151" CollectCount="6" />
@@ -184,41 +211,36 @@
 <TurnIn QuestName="Pilfered Supplies" QuestId="25668" TurnInName="Quartermaster Glynna" TurnInId="40951" X="-5642.425" Y="-493.0816" Z="396.6447" />
 <TurnIn QuestName="Culling the Wendigos" QuestId="25667" TurnInName="Captain Tharran" TurnInId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <TurnIn QuestName="Forced to Watch from Afar" QuestId="313" TurnInName="Captain Tharran" TurnInId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
-<!--# # # Level 7 # # # -->
 <PickUp QuestName="Pushing Forward" QuestId="25792" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <PickUp QuestName="Operation Recombobulation" QuestId="412" GiverName="Razzle Sprysprocket" GiverId="1269" X="-5636.52" Y="-471.158" Z="397.769" />
-<If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(25792)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="1691" BuyItemId="4496" WaitTime="5000" CollectionDistance="50" X="-5597.66" Y="-521.852" Z="399.656" />
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" />
-</If>
-<If Condition="(Me.LevelFraction &gt;= 8.2 )">
-<!--  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-10)Dun Morogh[Cava]" /> -->
-</If>
-<If Condition="HasQuest(25792) &amp;&amp; !IsQuestCompleted(25792)">
+<If Condition="HasQuest(412) &amp;&amp; !IsQuestCompleted(412)">
 	<LootMobs Value="true" />
 </If>
 <If Condition="HasQuest(25792) &amp;&amp; !IsQuestCompleted(25792)">
   <While Condition="!IsQuestCompleted(25792)">
-    <CustomBehavior File="Cava\UseItemOn" QuestId="25792" ItemId="56009" MobId="41202" NumOfTimes="4" WaitTime="1000" Range="15" CollectionDistance="10000" X="-5804.398" Y="-661.7235" Z="397.8242" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="25792" ItemId="56009" MobId="41202" NumOfTimes="4" WaitTime="1000" Range="15" CollectionDistance="10000" X="-5823.179" Y="-719.6515" Z="397.1317" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="25792" ItemId="56009" MobId="41202" NumOfTimes="4" WaitTime="1000" Range="15" CollectionDistance="10000" X="-5872.859" Y="-679.5452" Z="400.5293" />
+		<CustomBehavior File="InteractWith" MobId="41202" InteractByUsingItemId="56009" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="15">
+			<HuntingGrounds>
+				<Hotspot X="-5804.398" Y="-661.7235" Z="397.8242" />
+				<Hotspot X="-5823.179" Y="-719.6515" Z="397.1317" />
+				<Hotspot X="-5872.859" Y="-679.5452" Z="400.5293" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
 </If>
-<If Condition="HasQuest(25792) &amp;&amp; IsQuestCompleted(25792)">
+<If Condition="HasQuest(412)">
 	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Operation Recombobulation" QuestId="412" Type="CollectItem" ItemId="3084" CollectCount="8" />
 <TurnIn QuestName="Operation Recombobulation" QuestId="412" TurnInName="Razzle Sprysprocket" TurnInId="1269" X="-5636.52" Y="-471.158" Z="397.769" />
 <TurnIn QuestName="Pushing Forward" QuestId="25792" TurnInName="Captain Tharran" TurnInId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
-<If Condition="(Me.LevelFraction &gt;= 8.2 )">
-<!--  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-10)Dun Morogh[Cava]" /> -->
-</If>
 <PickUp QuestName="Help from Steelgrill's Depot" QuestId="25838" GiverName="Captain Tharran" GiverId="40950" X="-5645.439" Y="-493.2986" Z="396.6106" />
 <TurnIn QuestName="Help from Steelgrill's Depot" QuestId="25838" TurnInName="Delber Cranktoggle" TurnInId="41363" X="-5479.412" Y="-645.6684" Z="392.3267" />
 <PickUp QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" GiverName="Delber Cranktoggle" GiverId="41363" X="-5479.412" Y="-645.6684" Z="392.3267" />
-<If Condition="HasQuest(25839)">
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41398" WaitTime="5000" CollectionDistance="50" X="-5465.621" Y="-646.8057" Z="393.7324" />
-</If>
+<If Condition="HasQuest(25839) &amp;&amp; !IsQuestCompleted(25839)">
+	<While Condition="!IsQuestCompleted(25839)">
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="41398" WaitTime="5000" CollectionDistance="50" X="-5465.621" Y="-646.8057" Z="393.7324" />
+	</While>
+</If>	
 <TurnIn QuestName="The Ultrasafe Personnel Launcher" QuestId="25839" TurnInName="Slamp Wobblecog" TurnInId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
 <PickUp QuestName="Eliminate the Resistance" QuestId="25840" GiverName="Slamp Wobblecog" GiverId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
 <PickUp QuestName="Strike From Above" QuestId="25841" GiverName="Slamp Wobblecog" GiverId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
@@ -238,15 +260,42 @@
 </If>
 <If Condition="HasQuest(28868) &amp;&amp; !IsQuestCompleted(28868)">
   <While Condition="!IsQuestCompleted(28868)">
-    <CustomBehavior File="Cava\UseItemOn" ItemId="67249" MobId="41251" MobState="Alive" NumOfTimes="1" WaitTime="1500" Range="10" CollectionDistance="10000" X="-5751.228" Y="-994.2282" Z="393.5356" />
+		<CustomBehavior File="InteractWith" QuestId="28868" NonCompeteDistance="0" AuraIdMissingFromMob="93773" MobId="41251" InteractByUsingItemId="67249" MobState="Alive" ProactiveCombatStrategy="ClearMobsTargetingUs" Range="10" CollectionDistance="10000" X="-5751.228" Y="-994.2282" Z="393.5356" />
   </While>
 </If>
 <Objective QuestName="Eliminate the Resistance" QuestId="25840" Type="KillMob" MobId="41258" KillCount="5" />
 <TurnIn QuestName="The View from Down Here" QuestId="28868" TurnInName="Snevik the Blade" TurnInId="50601" X="-5698.252" Y="-925.9601" Z="398.0446" />
 <TurnIn QuestName="Eliminate the Resistance" QuestId="25840" TurnInName="Slamp Wobblecog" TurnInId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
 <TurnIn QuestName="Strike From Above" QuestId="25841" TurnInName="Slamp Wobblecog" TurnInId="41298" X="-5695.066" Y="-923.9097" Z="398.2473" />
-<PickUp QuestName="A Hand at the Ranch" QuestId="25882" GiverName="Slamp Wobblecog" GiverId="41298" />
-<!--# # # Level 8 # # # -->
+<If Condition="!HasQuest(25882) &amp;&amp; !IsQuestCompleted(25882)">
+	<PickUp QuestName="A Hand at the Ranch" QuestId="25882" GiverName="Slamp Wobblecog" GiverId="41298" />
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="2102" />
+	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True"/>
+	<!--Mir2 Sell-->
+	<RunTo X="-5589.777" Y="-430.2052" Z="397.326" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="1273" WaitTime="1000" X="-5590.67" Y="-428.416" Z="397.3266" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-5596.061" Y="-522.3759" Z="399.6535" />
+		<CustomBehavior File="InteractWith" MobId="1691" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5597.66" Y="-521.852" Z="399.6558" />	
+	</If>
+</If>
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](08-10)DunMorogh[Cava]" />
 </QuestOrder>
 </HBProfile>
