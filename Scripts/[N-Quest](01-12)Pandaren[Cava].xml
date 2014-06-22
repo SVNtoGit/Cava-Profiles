@@ -19,9 +19,13 @@
 
 <Vendors>
   <Vendor Name="Merchant Lorvo" Entry="54943" Type="Food" X="1201.16" Y="3507.858" Z="85.83645" />
-  <Vendor Name="Merchant Lorvo" Entry="54943" Type="Food" X="1201.16" Y="3507.858" Z="85.83645" />
   <Vendor Name="Jun Steelbreath" Entry="57618" Type="Repair" X="592.8785" Y="3121.753" Z="89.14588" />
   <Vendor Name="Lien-Hua Thunderhammer" Entry="57622" Type="Repair" X="739.5677" Y="3626.727" Z="142.6314" />
+	<Vendor Name="Cheng Dawnscrive" Entry="57619" Type="Food" X="965.4427" Y="3594.939" Z="196.5354" />
+	<Vendor Name="Provisioner Drog" Entry="67186" Type="Food" X="392.9705" Y="3627.292" Z="93.57657" />
+	<Vendor Name="Provisioner Drog" Entry="67186" Type="Repair" X="392.9705" Y="3627.292" Z="93.57657" />
+	<Vendor Name="Provisioner Phelps" Entry="67185" Type="Food" X="248.375" Y="3837.495" Z="74.44164" />
+	<Vendor Name="Provisioner Phelps" Entry="67185" Type="Repair" X="248.375" Y="3837.495" Z="74.44164" />
 </Vendors>
 <!-- ####################################### Quest Overrides ####################################################################### -->
 <Quest Id="29406" Name="The Lesson of the Sandy Fist">
@@ -415,28 +419,38 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsHorde">
+<If Condition="Me.Race != WoWRace.Pandaren" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</If>
+<If Condition="Me.IsAlliance" >
+  <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](01-12)Pandaren[Cava]" />
+</If>
+<If Condition="Me.IsHorde">
+  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](01-12)Pandaren[Cava]" />
 </If>
 <If Condition="!HasQuest(30989) &amp;&amp; IsQuestCompleted(30989)" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<If Condition="Me.Race != WoWRace.Pandaren" >
+<If Condition="!HasQuest(31014) &amp;&amp; IsQuestCompleted(31014)" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<If Condition="Me.ZoneId != 5736">
-  <If Condition="Me.ZoneId != 1519">
-    <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
-  </If>
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
+<CustomBehavior File="Message" Text="Compiling Pandaren (1-12)" LogColor="Aquamarine" />
+<If Condition="!IsQuestCompleted(30987) &amp;&amp; !IsQuestCompleted(31012) &amp;&amp; Me.ZoneId != 5736">
+  <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
+  Text="There is a problem, your char isnt at THE WANDERING ISLE." />
 </If>
-<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
-<CustomBehavior File="Message" Text="Compiling Pandaren (1-12)" LogColor="Green" />
-<!-- LVL 1 -->
 <If Condition="(Me.Class == WoWClass.Rogue)">
   <TurnIn QuestName="Much to Learn" QuestId="30043" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30036" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30036) &amp;&amp; !IsQuestCompleted(30036)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210018" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210018" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="73208" Slot="MainHandSlot" />
 	  <CustomBehavior File="EquipItem" ItemId="73212" Slot="SecondaryHandSlot" />
   </While>
@@ -446,7 +460,7 @@
   <TurnIn QuestName="Much to Learn" QuestId="30045" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30038" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30038) &amp;&amp; !IsQuestCompleted(30038)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210020" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210020" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="73210" Slot="MainHandSlot" />
   </While>
   <TurnIn QuestName="The Lesson of the Iron Bough" QuestId="30038" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
@@ -455,7 +469,7 @@
   <TurnIn QuestName="Much to Learn" QuestId="30041" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30034" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30034) &amp;&amp; !IsQuestCompleted(30034)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210016" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210016" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="73211" Slot="MainHandSlot" />
   </While>
   <TurnIn QuestName="The Lesson of the Iron Bough" QuestId="30034" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
@@ -464,7 +478,7 @@
   <TurnIn QuestName="Much to Learn" QuestId="30042" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30035" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30035) &amp;&amp; !IsQuestCompleted(30035)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210017" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210017" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="73207" Slot="MainHandSlot" />
 	  <CustomBehavior File="EquipItem" ItemId="76393" Slot="SecondaryHandSlot" />
   </While>
@@ -474,7 +488,7 @@
   <TurnIn QuestName="Much to Learn" QuestId="30044" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30037" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30037) &amp;&amp; !IsQuestCompleted(30037)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210019" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210019" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="76391" Slot="MainHandSlot" />
 	  <CustomBehavior File="EquipItem" ItemId="73213" Slot="SecondaryHandSlot" />
   </While>
@@ -484,7 +498,7 @@
   <TurnIn QuestName="Much to Learn" QuestId="30040" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30033" GiverName="aster Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30033) &amp;&amp; !IsQuestCompleted(30033)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210015" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210015" X="1422.615" Y="3458.468" Z="171.1617" />
 	  <CustomBehavior File="EquipItem" ItemId="76390" Slot="MainHandSlot" />
 	  <CustomBehavior File="EquipItem" ItemId="76392" Slot="SecondaryHandSlot" />
   </While>
@@ -494,30 +508,41 @@
   <TurnIn QuestName="Much to Learn" QuestId="30039" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <PickUp QuestName="The Lesson of the Iron Bough" QuestId="30027" GiverName="Master Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
   <While Condition="HasQuest(30027) &amp;&amp; !IsQuestCompleted(30027)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210005" ObjectType="GameObject" NumOfTimes="1" X="1422.615" Y="3458.468" Z="171.1617" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="210005" X="1422.615" Y="3458.468" Z="171.1617" />
     <CustomBehavior File="EquipItem" ItemId="73209" Slot="MainHandSlot" />
   </While>
   <TurnIn QuestName="The Lesson of the Iron Bough" QuestId="30027" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
 </If>
 <PickUp QuestName="The Lesson of the Sandy Fist" QuestId="29406" GiverName="Master Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
-
 <If Condition="HasQuest(29406) &amp;&amp; !IsQuestCompleted(29406)" >
-  <CustomBehavior File="CollectThings" QuestId="29406" MobId="53714" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1104.034" Y="2974.629" Z="98.07993" />
-  </CustomBehavior>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>53714</MobIDs>
+			<Hotspots>
+				<Hotspot X="1104.034" Y="2974.629" Z="98.07993" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(29406)" />
 </If>
 <TurnIn QuestName="The Lesson of the Sandy Fist" QuestId="29406" TurnInName="Master Shang Xi" TurnInId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
 <PickUp QuestName="The Lesson of Stifled Pride" QuestId="29524" GiverName="Master Shang Xi" GiverId="53566" X="1462.004" Y="3465.594" Z="181.5974" />
 <If Condition="HasQuest(29524) &amp;&amp; !IsQuestCompleted(29524)" >
-  <CustomBehavior File="CollectThings" QuestId="29524" MobId1="54587" MobId2="65470" MobId3="65471" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1441.323" Y="3372.048" Z="173.2961" />
-  </CustomBehavior>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>54587, 65470, 65471</MobIDs>
+			<Hotspots>
+				<Hotspot X="1441.323" Y="3372.048" Z="173.2961" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(29524)" />
 </If>
 <TurnIn QuestName="The Lesson of Stifled Pride" QuestId="29524" TurnInName="Master Shang Xi" TurnInId="53566" X="1445.495" Y="3385.151" Z="173.8028" />
 <PickUp QuestName="The Lesson of the Burning Scroll" QuestId="29408" GiverName="Master Shang Xi" GiverId="53566" X="1445.495" Y="3385.151" Z="173.8028" />
 <If Condition="HasQuest(29408) &amp;&amp; !IsQuestCompleted(29408)" >
   <While Condition="!IsObjectiveComplete(1, 29408)">
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29408" MobId="59591" MobState="Alive" X="1445.861" Y="3384.678" Z="173.8026" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29408" MobId="59591" MobState="Alive" X="1445.861" Y="3384.678" Z="173.8026" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 29408)">
     <RunTo X="1423.762" Y="3377.162" Z="192.0713" />
@@ -526,10 +551,15 @@
 <TurnIn QuestName="The Lesson of the Burning Scroll" QuestId="29408" TurnInName="Master Shang Xi" TurnInId="53566" X="1445.495" Y="3385.151" Z="173.8028" />
 <PickUp QuestName="The Disciple's Challenge" QuestId="29409" GiverName="Master Shang Xi" GiverId="53566" X="1445.495" Y="3385.151" Z="173.8028" />
 <If Condition="HasQuest(29409) &amp;&amp; !IsQuestCompleted(29409)" >
-  <RunTo X="1380.82" Y="3168.939" Z="137.1241" />
-  <CustomBehavior File="CollectThings" QuestId="29409" MobId="54611" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1380.82" Y="3168.939" Z="137.1241" />
-  </CustomBehavior>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>54611</MobIDs>
+			<Hotspots>
+				<Hotspot X="1380.82" Y="3168.939" Z="137.1241" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(29409)" />
 </If>
 <TurnIn QuestName="The Disciple's Challenge" QuestId="29409" TurnInName="Master Shang Xi" TurnInId="53566" X="1379.642" Y="3217.033" Z="141.6386" />
 <PickUp QuestName="Aysa of the Tushui" QuestId="29410" GiverName="Master Shang Xi" GiverId="53566" X="1379.642" Y="3217.033" Z="141.6386" />
@@ -539,17 +569,24 @@
 <If Condition="HasQuest(29419) &amp;&amp; !IsQuestCompleted(29419)" >
   <While Condition="!IsQuestCompleted(29419)" >
     <RunTo X="1412.103" Y="3535.57" Z="86.67779" />
-  </While>
+		<CustomBehavior File="WaitTimer" QuestId="29419" WaitTime="5000" />
+	</While>
 </If>
 <If Condition="HasQuest(29424) &amp;&amp; !IsQuestCompleted(29424)" >
   <LootMobs Value="true" />
-  <CustomBehavior File="CollectThings" QuestId="29424" MobId="54130" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1412.103" Y="3535.57" Z="86.67779" />
-    <Hotspot X="1364.854" Y="3554.427" Z="91.1036" />
-    <Hotspot X="1340.29" Y="3513.939" Z="101.5695" />
-    <Hotspot X="1238.476" Y="3557.24" Z="102.2682" />
-  </CustomBehavior>
-  <LootMobs Value="true" />
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>54130</MobIDs>
+			<Hotspots>
+				<Hotspot X="1412.103" Y="3535.57" Z="86.67779" />
+				<Hotspot X="1364.854" Y="3554.427" Z="91.1036" />
+				<Hotspot X="1340.29" Y="3513.939" Z="101.5695" />
+				<Hotspot X="1238.476" Y="3557.24" Z="102.2682" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(29424)" />
+  <LootMobs Value="null" />
 </If>
 <TurnIn QuestName="Items of Utmost Importance" QuestId="29424" TurnInName="Merchant Lorvo" TurnInId="54943" X="1201.16" Y="3507.858" Z="85.83645" />
 <TurnIn QuestName="The Missing Driver" QuestId="29419" TurnInName="Merchant Lorvo" TurnInId="54943" X="1201.16" Y="3507.858" Z="85.83645" />
@@ -561,62 +598,66 @@
 </If>
 <TurnIn QuestName="The Way of the Tushui" QuestId="29414" TurnInName="Master Shang Xi" TurnInId="54608" X="1168.255" Y="3442.328" Z="104.6883" />
 <PickUp QuestName="Ji of the Huojin" QuestId="29522" GiverName="Master Shang Xi" GiverId="54608" X="1168.255" Y="3442.328" Z="104.6883" />
-<If Condition="HasQuest(29522)" >
+<If Condition="HasQuest(29522) || (!HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417))" >
   <DisableBehavior Name="Pull" />
-  <CustomBehavior File="NoCombatMoveTo" X="1405.112" Y="3635.967" Z="83.73487" />
   <TurnIn QuestName="Ji of the Huojin" QuestId="29522" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-</If>
-<If Condition="!HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417)" >
-  <DisableBehavior Name="Pull" />
   <PickUp QuestName="The Way of the Huojin" QuestId="29417" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
 </If>
 <If Condition="HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417)" >
-  <CustomBehavior File="CollectThings" QuestId="29417" MobId="54131" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
-    <Hotspot X="1405.899" Y="3636.341" Z="83.64842" />
-    <Hotspot X="1415.23" Y="3675.246" Z="78.77971" />
-    <Hotspot X="1417.477" Y="3715.285" Z="79.79829" />
-  </CustomBehavior>
   <DisableBehavior Name="Pull" />
-<!--<Objective QuestName="The Way of the Huojin" QuestId="29417" Type="KillMob" MobId="54131" KillCount="8" />-->
+	<While Condition="HasQuest(29417) &amp;&amp; !IsQuestCompleted(29417)" >
+		<RunTo QuestId="29417" X="1427.67" Y="3718.037" Z="80.4444" />
+		<RunTo QuestId="29417" X="1390.649" Y="3727.815" Z="85.11166" />
+		<RunTo QuestId="29417" X="1344.898" Y="3744.397" Z="78.41084" />
+		<RunTo QuestId="29417" X="1288.672" Y="3865.411" Z="97.38056" />
+		<RunTo QuestId="29417" X="1398.972" Y="3854.028" Z="91.89291" />
+		<RunTo QuestId="29417" X="1420.452" Y="3868.033" Z="86.34482" />
+		<RunTo QuestId="29417" X="1401.975" Y="3805.404" Z="84.50448" />
+		<RunTo QuestId="29417" X="1419.434" Y="3740.983" Z="83.26929" />
+	</While>
 </If>
-<TurnIn QuestName="The Way of the Huojin" QuestId="29417" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<PickUp QuestName="Kindling the Fire" QuestId="29418" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<PickUp QuestName="Fanning the Flames" QuestId="29523" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+<If Condition="HasQuest(29417) || (!HasQuest(29418) &amp;&amp; !IsQuestCompleted(29418)) || (!HasQuest(29523) &amp;&amp; !IsQuestCompleted(29523))" >
+  <DisableBehavior Name="Pull" />
+	<TurnIn QuestName="The Way of the Huojin" QuestId="29417" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+	<PickUp QuestName="Kindling the Fire" QuestId="29418" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+	<PickUp QuestName="Fanning the Flames" QuestId="29523" GiverName="Ji Firepaw" GiverId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+</If>
 <If Condition="HasQuest(29523) &amp;&amp; !IsQuestCompleted(29523)" >
   <DisableBehavior Name="Pull" />
-  <RunTo X="1314.028" Y="3600.681" Z="88.90967" />
-  <LootMobs Value="true" />
   <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
+  <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(29523)" >
-    <RunTo X="1229.573" Y="3714.677" Z="94.38698" />
+    <RunTo X="1230.393" Y="3714.443" Z="93.76823" />
+    <CustomBehavior File="WaitTimer" WaitTime="1000" />
     <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(72109)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="8000" />
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29523" MobId="54631" MobState="Alive" WaitForNpcs="False" X="1230.933" Y="3717.372" Z="93.42289" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29523" MobId="54631" MobState="Alive" WaitForNpcs="False"/>
   </While>
   <LootMobs Value="null" />
 </If>
-<Objective QuestName="Kindling the Fire" QuestId="29418" Type="CollectItem" ItemId="72111" CollectCount="5" />
-<TurnIn QuestName="Kindling the Fire" QuestId="29418" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<TurnIn QuestName="Fanning the Flames" QuestId="29523" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
-<PickUp QuestName="The Spirit's Guardian" QuestId="29420" GiverName="Master Shang Xi" GiverId="54609" X="1403.391" Y="3636.197" Z="83.8237" />
+<If Condition="HasQuest(29418) &amp;&amp; !IsQuestCompleted(29418)" >
+  <DisableBehavior Name="Pull" />
+	<Objective QuestName="Kindling the Fire" QuestId="29418" Type="CollectItem" ItemId="72111" CollectCount="5" />
+</If>
+<If Condition="HasQuest(29418) || HasQuest(29523) || (!HasQuest(29420) &amp;&amp; !IsQuestCompleted(29420))" >
+  <DisableBehavior Name="Pull" />
+	<TurnIn QuestName="Kindling the Fire" QuestId="29418" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+	<TurnIn QuestName="Fanning the Flames" QuestId="29523" TurnInName="Ji Firepaw" TurnInId="54568" X="1407.141" Y="3637.298" Z="83.49312" />
+	<PickUp QuestName="The Spirit's Guardian" QuestId="29420" GiverName="Master Shang Xi" GiverId="54609" X="1403.391" Y="3636.197" Z="83.8237" />
+</If>
 <If Condition="HasQuest(29420)" >
-  <RunTo X="1349.843" Y="3890.408" Z="95.12583" />
-  <EnableBehavior Name="Pull" />
+  <DisableBehavior Name="Combat" />
+  <RunTo X="1333.805" Y="3942.158" Z="110.3751" />
+  <EnableBehavior Name="Combat, Pull" />
 </If>
 <TurnIn QuestName="The Spirit's Guardian" QuestId="29420" TurnInName="Master Li Fei" TurnInId="54135" X="1331.776" Y="3942.804" Z="110.5224" />
 <PickUp QuestName="The Challenger's Fires" QuestId="29664" GiverName="Master Li Fei" GiverId="54135" X="1331.776" Y="3942.804" Z="110.5224" />
 <If Condition="HasQuest(29664) &amp;&amp; !IsQuestCompleted(29664)" >
-  <While Condition="!IsObjectiveComplete(1, 29664)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" MobId="209369" ObjectType="GameObject" X="1333.692" Y="3945.239" Z="112.0827" />
-  </While>
-  <While Condition="!IsObjectiveComplete(4, 29664)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" MobId="209803" ObjectType="GameObject" X="1343.046" Y="3957.259" Z="111.922" />
-  </While>
-  <While Condition="!IsObjectiveComplete(2, 29664)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" MobId="209801" ObjectType="GameObject" X="1367.185" Y="3937.589" Z="111.754" />
-  </While>
-  <While Condition="!IsObjectiveComplete(3, 29664)">
-	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" MobId="209802" ObjectType="GameObject" X="1333.346" Y="3932.21" Z="111.8385" />
+  <While Condition="!IsQuestCompleted(29664)" >
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" QuestObjectiveIndex="1" MobId="209369" X="1333.692" Y="3945.239" Z="112.0827" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" QuestObjectiveIndex="4" MobId="209803" X="1343.046" Y="3957.259" Z="111.922" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" QuestObjectiveIndex="2" MobId="209801" X="1367.185" Y="3937.589" Z="111.754" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29664" QuestObjectiveIndex="3" MobId="209802" X="1333.346" Y="3932.21" Z="111.8385" />
   </While>
 </If>
 <TurnIn QuestName="The Challenger's Fires" QuestId="29664" TurnInName="Master Li Fei" TurnInId="54135" X="1331.776" Y="3942.804" Z="110.5224" />
@@ -636,19 +677,46 @@
 <TurnIn QuestName="Huo, the Spirit of Fire" QuestId="29422" TurnInName="Huo" TurnInId="54787" X="1259.799" Y="3926.655" Z="128.2796" />
 <PickUp QuestName="The Passion of Shen-zin Su" QuestId="29423" GiverName="Huo" GiverId="54787" X="1259.799" Y="3926.655" Z="128.2796" />
 <If Condition="HasQuest(29423)" >
-  <CustomBehavior File="NoCombatMoveTo" X="964.1629" Y="3604.461" Z="196.518" />
+  <DisableBehavior Name="Combat" />
+	<TurnIn QuestName="The Passion of Shen-zin Su" QuestId="29423" TurnInName="Master Shang Xi" TurnInId="54786" X="960.0434" Y="3606.05" Z="196.3309" />
+  <EnableBehavior Name="Combat" />
 </If>
-<TurnIn QuestName="The Passion of Shen-zin Su" QuestId="29423" TurnInName="Master Shang Xi" TurnInId="54786" X="960.0434" Y="3606.05" Z="196.3309" />
 <PickUp QuestName="The Singing Pools" QuestId="29521" GiverName="Master Shang Xi" GiverId="54786" X="960.0434" Y="3606.05" Z="196.3309" />
-<If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; !HasQuest(29662) &amp;&amp; !IsQuestCompleted(29662)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="65087" BuyItemId="4496" WaitTime="5000" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
+<If Condition="!HasQuest(29662) &amp;&amp; !IsQuestCompleted(29662)" >
+	<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True"/>
+	<!--Mir2 Sell-->
+	<RunTo X="738.0231" Y="3626.076" Z="142.6313" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="57622" WaitTime="1000" X="739.5677" Y="3626.727" Z="142.6313" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
+	</If>
 </If>
+<CustomBehavior File="UserSettings" DrinkAmount="20" FoodAmount="20" />
 <PickUp QuestName="Stronger Than Reeds" QuestId="29662" GiverName="Jojo Ironbrow" GiverId="55021" X="1039.491" Y="3283.111" Z="129.5231" />
 <TurnIn QuestName="The Singing Pools" QuestId="29521" TurnInName="Aysa Cloudsinger" TurnInId="54975" X="1027.401" Y="3227.353" Z="115.1725" />
 <PickUp QuestName="The Lesson of Dry Fur" QuestId="29661" GiverName="Aysa Cloudsinger" GiverId="54975" X="1027.401" Y="3227.353" Z="115.1725" />
 <PickUp QuestName="The Lesson of the Balanced Rock" QuestId="29663" GiverName="Aysa Cloudsinger" GiverId="54975" X="1027.401" Y="3227.353" Z="115.1725" />
 <If Condition="HasQuest(29663) &amp;&amp; !IsQuestCompleted(29663)" >
-  <CustomBehavior File="SpecificQuests\29663-PandaStarter-TheLessonoftheBalancedRock" />
+	<While Condition="!IsQuestCompleted(29663)" >
+		<CustomBehavior File="EjectVeh" />	
+		<RunTo X="966.1218" Y="3284.928" Z="126.7932" />
+		<CustomBehavior File="Cava\29663-PandaStarter-TheLessonoftheBalancedRock" />
+	</While>
+	<CustomBehavior File="EjectVeh" />	
 </If>
 <If Condition="HasQuest(29661) &amp;&amp; !IsQuestCompleted(29661)" >
   <RunTo X="940.117" Y="3299.003" Z="118.9753" />
@@ -672,21 +740,28 @@
 <TurnIn QuestName="Finding an Old Friend" QuestId="29676" TurnInName="Old Man Liang" TurnInId="55020" X="1096.363" Y="3093.003" Z="144.5597" />
 <PickUp QuestName="The Sun Pearl" QuestId="29677" GiverName="Old Man Liang" GiverId="55020" X="1096.363" Y="3093.003" Z="144.5597" />
 <PickUp QuestName="The Sting of Learning" QuestId="29666" GiverName="Old Man Liang" GiverId="55020" X="1096.363" Y="3093.003" Z="144.5597" />
-<!-- Level 6 -->
 <Objective QuestName="The Sting of Learning" QuestId="29666" Type="KillMob" MobId="60411" KillCount="6" />
 <Objective QuestName="The Sun Pearl" QuestId="29677" Type="CollectItem" ItemId="73184" CollectCount="1" />
 <TurnIn QuestName="The Sun Pearl" QuestId="29677" TurnInName="Old Man Liang" TurnInId="55020" X="1022.915" Y="2882.95" Z="90.90361" />
 <TurnIn QuestName="The Sting of Learning" QuestId="29666" TurnInName="Old Man Liang" TurnInId="55020" X="1022.915" Y="2882.95" Z="90.90361" />
 <PickUp QuestName="Shu, the Spirit of Water" QuestId="29678" GiverName="Old Man Liang" GiverId="55020" X="1022.915" Y="2882.95" Z="90.90361" />
 <If Condition="HasQuest(29678) &amp;&amp; !IsQuestCompleted(29678)" >
-  <RunTo X="1032.815" Y="2869.447" Z="90.63626" />
-  <CustomBehavior File="MyCTM" X="1036.66" Y="2863.678" Z="87.66699" />
-  <CustomBehavior File="MyCTM" X="1040.962" Y="2851.642" Z="89.35618" />
-  <CustomBehavior File="WaitTimer" WaitTime="5000" />
-  <CustomBehavior File="MyCTM" X="1108.645" Y="2860.527" Z="91.8113" />
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(73791)" WaitTime="1000" />
+	<While Condition="!IsQuestCompleted(29678)" >
+		<If Condition="(Me.Z &lt; 92) &amp;&amp; !IsQuestCompleted(29678)" >
+			<RunTo X="1040.962" Y="2851.642" Z="89.35618" />
+			<CustomBehavior File="WaitTimer" WaitTime="5000" />
+		</If>
+		<If Condition="(Me.Z &gt;= 92) &amp;&amp; !IsQuestCompleted(29678)" >
+			<RunTo X="1108.645" Y="2860.527" Z="91.8113" />
+			<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(73791)" WaitTime="1000" />
+		</If>
+	</While>	
+  <!--
+	<CustomBehavior File="MyCTM" X="1036.66" Y="2863.678" Z="87.66699" />
+	<CustomBehavior File="MyCTM" X="1040.962" Y="2851.642" Z="89.35618" />
+  -->
 </If>
-<If Condition="HasQuest(29678) &amp;&amp; IsQuestCompleted(29678)" >
+<If Condition="HasQuest(29678)" >
   <While Condition="HasQuest(29678)" >
     <CustomBehavior File="CompleteLogQuest" QuestId="29678" /> <!-- <PickUp QuestName="A New Friend" QuestId="29679"/> -->
   </While>
@@ -695,6 +770,7 @@
   <PickUp QuestName="A New Friend" QuestId="29679" GiverName="Aysa Cloudsinger" GiverId="54975" X="1086.083" Y="2847.487" Z="92.64539" />
 </If>
 <If Condition="HasQuest(29679) &amp;&amp; !IsQuestCompleted(29679)" >
+	<CustomBehavior File="AscendInWater" />
   <While Condition="!IsQuestCompleted(29679)" >
     <CustomBehavior File="InteractWith" QuestId="29679" NonCompeteDistance="0" MobId="60488" Range="3"/>
   </While>
@@ -714,16 +790,13 @@
 <Objective QuestName="Still Good!" QuestId="29770" Type="CollectItem" ItemId="74297" CollectCount="3" />
 <Objective QuestName="Still Good!" QuestId="29770" Type="CollectItem" ItemId="74295" CollectCount="3" />
 <Objective QuestName="Rascals" QuestId="29769" Type="KillMob" MobId="55483" KillCount="10" />
-<If Condition="HasQuest(29770) &amp;&amp; IsQuestCompleted(29770)" >
-  <RunTo X="414.534" Y="3209.906" Z="75.74361" />
-  <CustomBehavior File="NoCombatMoveTo" X="533.2719" Y="3212.947" Z="75.71517" />
+<If Condition="HasQuest(29770)" >
+  <DisableBehavior Name="Combat" />
+	<TurnIn QuestName="Still Good!" QuestId="29770" TurnInName="Gao Summerdraft" TurnInId="55479" X="603.9965" Y="3159.637" Z="87.78915" />
+  <EnableBehavior Name="Combat" />
 </If>
-<TurnIn QuestName="Still Good!" QuestId="29770" TurnInName="Gao Summerdraft" TurnInId="55479" X="603.9965" Y="3159.637" Z="87.78915" />
 <TurnIn QuestName="Rascals" QuestId="29769" TurnInName="Ji Firepaw" TurnInId="55477" X="629.354" Y="3139.15" Z="87.7413" />
 <PickUp QuestName="Missing Mallet" QuestId="29768" GiverName="Ji Firepaw" GiverId="55477" X="629.354" Y="3139.15" Z="87.7413" />
-<If Condition="!HasQuest(29771) &amp;&amp; !IsQuestCompleted(29771)" >
-	<CustomBehavior File="ForceSetVendor" DoSell="True"  />
-</If>
 <PickUp QuestName="Stronger Than Wood" QuestId="29771" GiverName="Jojo Ironbrown" GiverId="55478" X="598.3958" Y="3132.111" Z="89.17931" />
 <Objective QuestName="Missing Mallet" QuestId="29768" Type="CollectItem" ItemId="74298" CollectCount="1" />
 <Objective QuestName="Stronger Than Wood" QuestId="29771" Type="CollectItem" ItemId="74301" CollectCount="12" />
@@ -732,7 +805,7 @@
 <PickUp QuestName="Raucous Rousing" QuestId="29772" GiverName="Ji Firepaw" GiverId="55477" X="629.354" Y="3139.15" Z="87.7413" />
 <If Condition="HasQuest(29772) &amp;&amp; !IsQuestCompleted(29772)" >
   <While Condition="!IsQuestCompleted(29772)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="209626" ObjectType="GameObject" X="630.902" Y="3137.535" Z="87.73958" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="209626" X="630.902" Y="3137.535" Z="87.73958" />
   </While>
 </If>
 <TurnIn QuestName="Raucous Rousing" QuestId="29772" TurnInName="Ji Firepaw" TurnInId="55477" X="629.354" Y="3139.15" Z="87.7413" />
@@ -750,9 +823,6 @@
   <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="59497" X="588.7031" Y="3165.64" Z="88.85453" />
   <CustomBehavior File="WaitTimer" WaitTime="90000" />
 </If>
-<If Condition="Me.FreeBagSlots &lt; 40 &amp;&amp; Me.Silver &gt;= 5 &amp;&amp; HasQuest(29775)" >
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="65087" BuyItemId="4496" WaitTime="5000" CollectionDistance="1000" X="702.0015" Y="3477.597" Z="118.6824" />
-</If>
 <TurnIn QuestName="The Spirit and Body of Shen-zin Su" QuestId="29775" TurnInName="Master Shang Xi" TurnInId="54786" X="925.5868" Y="3601.442" Z="196.3203" />
 <PickUp QuestName="Morning Breeze Village" QuestId="29776" GiverName="Master Shang Xi" GiverId="54786" X="925.5868" Y="3601.442" Z="196.3203" />
 <If Condition="HasQuest(29776)" >
@@ -767,31 +837,26 @@
 </If>
 <If Condition="HasQuest(29778) &amp;&amp; !IsQuestCompleted(29778)" >
   <While Condition="HasQuest(29778) &amp;&amp; !IsQuestCompleted(29778)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="908.4722" Y="4205.888" Z="197.3743" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="780.0621" Y="4172.979" Z="206.8537" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="730.2137" Y="4136.119" Z="200.9536" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="829.9067" Y="4124.754" Z="202.3806" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="892.217" Y="4104.337" Z="197.9128" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29778" ObjectType="GameObject" MobId1="209656" MobId2="209660" MobId3="209661" MobId4="209663" NumOfTimes="1" WaitTime="1000" CollectionDistance="1000" X="944.0601" Y="4103.65" Z="196.6647" />
-<!--
-<Objective QuestName="Rewritten Wisdoms" QuestId="29778" Type="UseObject" ObjectId="209656" UseCount="5" />
-<Objective QuestName="Rewritten Wisdoms" QuestId="29778" Type="UseObject" ObjectId="209660" UseCount="5" />
-<Objective QuestName="Rewritten Wisdoms" QuestId="29778" Type="UseObject" ObjectId="209661" UseCount="5" />
-<Objective QuestName="Rewritten Wisdoms" QuestId="29778" Type="UseObject" ObjectId="209663" UseCount="5" />
--->
+		<CustomBehavior File="InteractWith" QuestId="29778" MobId="209660" MobId2="209661" MobId3="209663" MobId4="209656" NumOfTimes="1000" CollectionDistance="1000" >
+			<HuntingGrounds>
+				<Hotspot X="908.4722" Y="4205.888" Z="197.3743" />
+				<Hotspot X="780.0621" Y="4172.979" Z="206.8537" />
+				<Hotspot X="730.2137" Y="4136.119" Z="200.9536" />
+				<Hotspot X="829.9067" Y="4124.754" Z="202.3806" />
+				<Hotspot X="892.217" Y="4104.337" Z="197.9128" />
+				<Hotspot X="944.0601" Y="4103.65" Z="196.6647" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
 </If>
 <If Condition="HasQuest(29777) &amp;&amp; IsQuestCompleted(29777)" >
 	<LootMobs Value="null" />
 </If>
 <Objective QuestName="Stronger Than Stone" QuestId="29783" Type="CollectItem" ItemId="74624" CollectCount="12" />
-<If Condition="HasQuest(29777) &amp;&amp; !IsQuestCompleted(29777)" >
+<If Condition="HasQuest(29777)" >
   <LootMobs Value="null" />
 </If>
 <Objective QuestName="Tools of the Enemy" QuestId="29777" Type="CollectItem" ItemId="74615" CollectCount="8" />
-<If Condition="HasQuest(29777) &amp;&amp; IsQuestCompleted(29777)" >
-  <LootMobs Value="true" />
-</If>
 <TurnIn QuestName="Tools of the Enemy" QuestId="29777" TurnInName="Elder Shaopai" TurnInId="55588" X="1078.806" Y="4130.425" Z="212.5834" />
 <TurnIn QuestName="Stronger Than Stone" QuestId="29783" TurnInName="Jojo Ironbrow" TurnInId="55585" X="1078.087" Y="4180.681" Z="205.8848" />
 <TurnIn QuestName="Rewritten Wisdoms" QuestId="29778" TurnInName="Ji Firepaw" TurnInId="55583" X="1131.813" Y="4151.838" Z="190.6178" />
@@ -802,25 +867,24 @@
 <Objective QuestName="Do No Evil" QuestId="29780" Type="KillMob" MobId="55634" KillCount="1" />
 <Objective QuestName="Monkey Advisory Warning" QuestId="29781" Type="CollectItem" ItemId="74631" CollectCount="8" />
 <If Condition="HasQuest(29779) &amp;&amp; !IsQuestCompleted(29779)" >
-  <SetGrindArea>
-    <GrindArea>
-    <Factions>16</Factions>
-	  <Hotspots>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>55632, 55633, 57466</MobIDs>
+			<Hotspots>
         <Hotspot X="1244.829" Y="4325.565" Z="221.1834" />
         <Hotspot X="1222.777" Y="4313.156" Z="220.411" />
         <Hotspot X="1266.333" Y="4297.272" Z="223.1731" />
         <Hotspot X="1252.782" Y="4253.607" Z="223.1736" />
         <Hotspot X="1214.63" Y="4265.982" Z="222.8908" />
-	  </Hotspots>
-	</GrindArea>
-  </SetGrindArea>
-  <GrindTo Condition="IsQuestCompleted(29779)" />
-<!--
-<Objective QuestName="The Direct Solution" QuestId="29779" Type="KillMob" MobId="55632" KillCount="20" />
--->
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="IsQuestCompleted(29779)" />
 </If>
-<If Condition="HasQuest(29779) &amp;&amp; IsQuestCompleted(29779)" >
+<If Condition="HasQuest(29782)" >
+  <DisableBehavior Name="Combat" />
   <RunTo X="1080.553" Y="4187.35" Z="206.4988" />
+  <EnableBehavior Name="Combat" />
 </If>
 <TurnIn QuestName="Stronger Than Bone" QuestId="29782" TurnInName="Jojo Ironbrow" TurnInId="55585" X="1078.087" Y="4180.681" Z="205.8848" />
 <TurnIn QuestName="The Direct Solution" QuestId="29779" TurnInName="Ji Firepaw" TurnInId="55583" X="1131.813" Y="4151.838" Z="190.618" />
@@ -828,55 +892,30 @@
 <TurnIn QuestName="Monkey Advisory Warning" QuestId="29781" TurnInName="Ji Firepaw" TurnInId="55583" X="1131.813" Y="4151.838" Z="190.618" />
 <PickUp QuestName="Balanced Perspective" QuestId="29784" GiverName="Ji Firepaw" GiverId="55583" X="1131.813" Y="4151.838" Z="190.618" />
 <If Condition="HasQuest(29784)" >
-  <CustomBehavior File="UserDialog" AllowBotStop="False" SoundCue="Exclamation" SoundCueInterval="15" ExpiryTime="20" ExpiryAction="InputEnabled_Continue"
-  Text="Will try walk on ropes and turn in quest\n
-  If bot fall down, will need human assistance " />
   <While Condition="HasQuest(29784)" >
-	<If Condition="(Me.Z &gt; 189)" >
-      <RunTo X="1128.444" Y="4154.432" Z="190.6452" />
-      <CustomBehavior File="MyCTM" X="1130.029" Y="4150.454" Z="190.9646" />
-    </If>
+    <RunTo X="1128.444" Y="4154.432" Z="190.6452" />
+		<CustomBehavior File="Cava\29784-BalancedPerspective"/>
     <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="MyCTM" X="1130.309" Y="4148.83" Z="191.4986" />
-    </If>
-    <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="MyCTM" X="1138.379" Y="4120.477" Z="196.4876" />
-    </If>
-    <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="MyCTM" X="1123.548" Y="4100.45" Z="196.5883" />
-    </If>
-    <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="MyCTM" X="1147.549" Y="4099.289" Z="195.9034" />
-      <CustomBehavior File="MyCTM" X="1151.134" Y="4099.06" Z="196.4183" />
-    </If>
-    <If Condition="(Me.Z &gt; 189)" >
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55595" KeepTargetSelected="True" WaitTime="1000" CollectionDistance="10" X="1151.804" Y="4099.264" Z="196.4569" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55595" KeepTargetSelected="True" WaitTime="1000" X="1151.804" Y="4099.264" Z="196.4569" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
       <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
       <CustomBehavior File="WaitTimer" WaitTime="1000" />
       <CustomBehavior File="MyCTM" X="1147.363" Y="4169.09" Z="188.415" />
-<!--
-    <TurnIn QuestName="Balanced Perspective" QuestId="29784" TurnInName="Aysa Cloudsinger" TurnInId="55595" X="1151.804" Y="4099.264" Z="196.4569" />
-    <PickUp QuestName="Dafeng, the Spirit of Air" QuestId="29785" GiverName="Aysa Cloudsinger" GiverId="55595" />
--->
-    </If>
-    <If Condition="(Me.Z &lt; 189)" >
-      <RunTo X="1149.007" Y="4182.836" Z="188.5352" />
-      <RunTo X="1123.194" Y="4191.283" Z="191.8118" />
-      <RunTo X="1114.772" Y="4168.923" Z="195.7929" />
     </If>
   </While>
 </If>
 <If Condition="HasQuest(29785) &amp;&amp; !IsQuestCompleted(29785)" >
+  <DisableBehavior Name="Combat" />
   <RunTo X="1149.007" Y="4182.836" Z="188.5352" />
   <RunTo X="1123.194" Y="4191.283" Z="191.8118" />
   <RunTo X="1114.772" Y="4168.923" Z="195.7929" />
   <RunTo X="1037.349" Y="4151.479" Z="205.649" />
-  <CustomBehavior File="NoCombatMoveTo" X="650.2739" Y="4223.023" Z="202.9093" />
+  <RunTo X="650.2739" Y="4223.023" Z="202.9093" />
   <CustomBehavior File="Escort" QuestId="29785" MobId1="55744" MobId2="55595" MobId3="55592" EscortUntil="DestinationReached" EscortDestX="544.0045" EscortDestY="4317.108" EscortDestZ="212.2393" />
   <RunTo X="543.5643" Y="4320.984" Z="212.239" />
   <CustomBehavior File="WaitTimer" WaitTime="5000" />
+  <EnableBehavior Name="Combat" />
 </If>
 <TurnIn QuestName="Dafeng, the Spirit of Air" QuestId="29785" TurnInName="Dafeng" TurnInId="55592" X="543.5643" Y="4320.984" Z="212.239" />
 <PickUp QuestName="Battle for the Skies" QuestId="29786" GiverName="Aysa Cloudsinger" GiverId="55595" X="543.9462" Y="4317.313" Z="212.239" />
@@ -909,14 +948,15 @@
 <PickUp QuestName="Small, But Significant" QuestId="29789" GiverName="Master Shang Xi" GiverId="55672" X="874.1059" Y="4459.53" Z="241.188" />
 <If Condition="HasQuest(29789) &amp;&amp; !IsQuestCompleted(29789)" >
   <While Condition="!IsQuestCompleted(29789)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29789" MobId1="209671" MobId2="209774" ObjectType="GameObject" WaitForNpcs="False" Range="5" CollectionDistance="1000" X="867.9199" Y="4488.875" Z="244.0181" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29789" MobId1="209671" MobId2="209774" ObjectType="GameObject" WaitForNpcs="False" Range="5" CollectionDistance="1000" X="774.5689" Y="4403.261" Z="242.7835" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29789" MobId1="209671" MobId2="209774" ObjectType="GameObject" WaitForNpcs="False" Range="5" CollectionDistance="1000" X="807.5253" Y="4368.257" Z="242.8082" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29789" MobId1="209671" MobId2="209774" ObjectType="GameObject" WaitForNpcs="False" Range="5" CollectionDistance="1000" X="888.6218" Y="4345.443" Z="243.9761" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29789" MobId1="209671" MobId2="209774" Range="5" NumOfTimes="1000" CollectionDistance="1000">
+			<HuntingGrounds>
+				<Hotspot X="867.9199" Y="4488.875" Z="244.0181" />
+				<Hotspot X="774.5689" Y="4403.261" Z="242.7835" />
+				<Hotspot X="807.5253" Y="4368.257" Z="242.8082" />
+				<Hotspot X="888.6218" Y="4345.443" Z="243.9761" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
-<!--
-<Objective QuestName="Small, But Significant" QuestId="29789" Type="CollectItem" ItemId="74634" CollectCount="8" />
--->
 </If>
 <Objective QuestName="Unwelcome Nature" QuestId="29788" Type="KillMob" MobId="55640" KillCount="8" />
 <TurnIn QuestName="Unwelcome Nature" QuestId="29788" TurnInName="Master Shang Xi" TurnInId="55672" X="874.1059" Y="4459.53" Z="241.188" />
@@ -937,7 +977,59 @@
 <TurnIn QuestName="The Suffering of Shen-zin Su" QuestId="29791" TurnInName="Elder Shaopai" TurnInId="56012" X="926.3021" Y="3608.648" Z="196.3376" />
 <PickUp QuestName="Bidden to Greatness" QuestId="29792" GiverName="Elder Shaopai" GiverId="56012" X="926.3021" Y="3608.648" Z="196.3376" />
 <If Condition="HasQuest(29792) &amp;&amp; !IsQuestCompleted(29792)" >
-  <CustomBehavior File="ForceSetVendor" DoSell="True" />
+	<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True"/>
+	<!--Mir2 Sell-->
+	<RunTo X="738.0231" Y="3626.076" Z="142.6313" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="57622" WaitTime="1000" X="739.5677" Y="3626.727" Z="142.6313" />
+	<!--check Bags-->
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(20); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(21); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(22); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(23); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
   <While Condition="!IsObjectiveComplete(1, 29792)">
     <RunTo X="701.6477" Y="3600.854" Z="142.0973" />
   </While>
@@ -952,180 +1044,7 @@
 <Objective QuestName="Preying on the Predators" QuestId="30591" Type="KillMob" MobId="55946" KillCount="9" />
 <TurnIn QuestName="Preying on the Predators" QuestId="30591" TurnInName="Wei Palerage" TurnInId="55943" X="421.9549" Y="3641.987" Z="93.61701" />
 <TurnIn QuestName="Stocking Stalks" QuestId="29795" TurnInName="Korga Strongmane" TurnInId="60042" X="421.7101" Y="3637.882" Z="93.70938" />
-<If Condition="!HasQuest(30589) &amp;&amp; !IsQuestCompleted(30589)" >
- <If Condition="(Me.Level &gt;= 10 )">
-  <!--Check if the character have any spec-->
-  <If Condition="(Me.Class == WoWClass.Hunter)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.HunterBeastMastery &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.HunterMarksmanship &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.HunterSurvival">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Beast Mastery Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Beast Mastery=1  Marksmanship=2  Survival=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Priest)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.PriestDiscipline &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PriestHoly &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PriestShadow">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Shadow Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Discipline=1  Holy=2  Shadow=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Mage)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.MageArcane &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MageFire &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MageFrost">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Fire Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Arcane=1  Fire=2  Frost=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Warrior)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.WarriorArms &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarriorFury &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarriorProtection">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Arms Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Arms=1  Fury=2  Protection=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Druid)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.DruidBalance &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidFeral &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidGuardian &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DruidRestoration">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Feral Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Balance=1  Feral=2  Guardian=3  Restoration=4-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Shaman)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.ShamanElemental &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.ShamanEnhancement &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.ShamanRestoration">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Enhancement Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Elemental=1  Enhancement=2  Restoration=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Monk)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.MonkBrewmaster &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MonkMistweaver &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.MonkWindwalker">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Windwalker Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Brewmaster=1  Mistweaver=2  Windwalker=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Warlock)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.WarlockAffliction &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarlockDemonology &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.WarlockDestruction">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Demonology Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Affliction=1  Demonology=2  Destruction=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Rogue)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.RogueAssassination &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.RogueCombat &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.RogueSubtlety">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Combat Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Assassination=1  Combat=2  Subtlety=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton2" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.Paladin)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.PaladinHoly &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PaladinProtection &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.PaladinRetribution">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Retribution Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Holy=1  Protection=2  Retribution=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton3" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
-  <If Condition="(Me.Class == WoWClass.DeathKnight)">
-    <While Condition="StyxWoW.Me.Specialization != WoWSpec.DeathKnightBlood &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DeathKnightFrost &amp;&amp; StyxWoW.Me.Specialization != WoWSpec.DeathKnightUnholy">
-      <CustomBehavior File="Message" Text="Character Have None Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="Message" Text="Changing to Blood Specialization" LogColor="Aquamarine" />
-      <CustomBehavior File="RunMacro" Macro="/run ToggleTalentFrame();" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <!--Blood=1  Frost=2  Unholy=3-->
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationSpecButton1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click PlayerTalentFrameSpecializationLearnButton" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-      <CustomBehavior File="RunMacro" Macro="/click StaticPopup1Button1" NumOfTimes="1" WaitTime="1000" />
-	  <CustomBehavior File="WaitTimer" WaitTime="6000" />
-    </While>
-  </If>
- </If>
-</If>
 <PickUp QuestName="Wrecking the Wreck" QuestId="30589" GiverName="Korga Strongmane" GiverId="60042" X="421.7101" Y="3637.882" Z="93.70938" />
-<If Condition="HasQuest(30589)" >
-  <CustomBehavior File="MyCTM" X="434.2283" Y="3698.123" Z="81.49095" />
-</If>
 <TurnIn QuestName="Wrecking the Wreck" QuestId="30589" TurnInName="Makael Bay" TurnInId="60055" X="498.0677" Y="4009.228" Z="78.29437" />
 <PickUp QuestName="Handle With Care" QuestId="30590" GiverName="Makael Bay" GiverId="60055" X="498.0677" Y="4009.228" Z="78.29437" />
 <PickUp QuestName="Evil from the Seas" QuestId="29793" GiverName="Ji Firepaw" GiverId="55942" X="495.0608" Y="4007.917" Z="78.28341" />
@@ -1140,7 +1059,14 @@
 <PickUp QuestName="From Bad to Worse" QuestId="29665" GiverName="Jojo Ironbrow" GiverId="55940" X="249.0486" Y="3849.711" Z="73.23746" />
 <If Condition="HasQuest(29794) &amp;&amp; !IsQuestCompleted(29794)" >
   <While Condition="!IsQuestCompleted(29794)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55999" WaitTime="2000" CollectionDistance="1000" X="276.1703" Y="3985.337" Z="70.86227" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="55999" WaitTime="2000" CollectionDistance="1000">
+			<HuntingGrounds>
+			  <Hotspot X="276.1703" Y="3985.337" Z="70.86227" />
+			  <Hotspot X="226.0761" Y="3917.953" Z="62.64989" />
+			  <Hotspot X="258.9198" Y="3954.965" Z="67.26794" />
+			  <Hotspot X="295.5066" Y="4049.733" Z="77.39375" />
+			</HuntingGrounds>
+		</CustomBehavior>
     <RunTo X="245.3156" Y="3847.942" Z="73.2694" />
     <CustomBehavior File="WaitTimer" WaitTime="1500" />
   </While>
@@ -1152,14 +1078,10 @@
 <TurnIn QuestName="From Bad to Worse" QuestId="29665" TurnInName="Jojo Ironbrow" TurnInId="55940" X="249.0486" Y="3849.711" Z="73.23746" />
 <PickUp QuestName="An Ancient Evil" QuestId="29798" GiverName="Jojo Ironbrow" GiverId="55940" X="249.0486" Y="3849.711" Z="73.23746" />
 <If Condition="HasQuest(29798) &amp;&amp; !IsQuestCompleted(29798)" >
-  <RunTo X="271.5782" Y="3973.439" Z="69.76906" />
-  <CustomBehavior File="SpecificQuests\29798-PandaStarter-AnAncientEvil"  />
-<!--
-  <While Condition="!IsQuestCompleted(29798)" >
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29798" MobId="56009" NpcState="Alive" CollectionDistance="1000" X="281.9219" Y="4004.95" Z="73.06581" />
-  </While>
-  <Objective QuestName="An Ancient Evil" QuestId="29798" Type="KillMob" MobId="56009" KillCount="1" />
--->
+	<While Condition="!IsQuestCompleted(29798)" >
+		<RunTo X="271.5782" Y="3973.439" Z="69.76906" />
+		<CustomBehavior File="Cava\29798-PandaStarter-AnAncientEvil"  />
+	</While>
 </If>
 <TurnIn QuestName="An Ancient Evil" QuestId="29798" TurnInName="Aysa Cloudsinger" TurnInId="56416" X="286.9531" Y="4004.331" Z="74.69069" />
 <PickUp QuestName="Risking It All" QuestId="30767" GiverName="Aysa Cloudsinger" GiverId="56416" X="286.9531" Y="4004.331" Z="74.69069" />
@@ -1174,18 +1096,67 @@
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="29799" MobId="60848" CollectionDistance="1000" X="257.0578" Y="3901.679" Z="70.54604" />
   </While>
 </If>
-<If Condition="HasQuest(29799) &amp;&amp; IsQuestCompleted(29799)" >
-  <TurnIn QuestName="The Healing of Shen-zin Su" QuestId="29799" TurnInName="Ji Firepaw" TurnInId="56418" X="251.6389" Y="3929.475" Z="66.63634" />
-</If>
+<TurnIn QuestName="The Healing of Shen-zin Su" QuestId="29799" TurnInName="Ji Firepaw" TurnInId="56418" X="251.6389" Y="3929.475" Z="66.63634" />
 <PickUp QuestName="New Allies" QuestId="29800" GiverName="Ji Firepaw" GiverId="57739" X="251.6389" Y="3929.475" Z="66.63634" />
 <If Condition="HasQuest(29800)" >
   <CustomBehavior File="Vehicles\MountVehOnly" VehicleMountId="57741" X="264.3715" Y="3867.603" Z="73.56146" />
   <CustomBehavior File="WaitTimer" WaitTime="100000" />
-  <CustomBehavior File="ForceSetVendor" DoSell="True"  />
+	<CustomBehavior File="ForceSetVendor" DoSell="True" DoRepair="True"/>
+	<!--Mir2 Sell-->
+	<RunTo X="738.0231" Y="3626.076" Z="142.6313" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="57622" WaitTime="1000" X="739.5677" Y="3626.727" Z="142.6313" />
+	<!--check Bags-->
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(20); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(21); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(22); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="65087" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="702.0015" Y="3477.597" Z="118.6824" />
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(23); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
 </If>
 <TurnIn QuestName="New Allies" QuestId="29800" TurnInName="Spirit of Master Shang Xi" TurnInId="56013" X="926.4063" Y="3605.01" Z="196.3211" />
 <PickUp QuestName="A New Fate" QuestId="31450" GiverName="Spirit of Master Shang Xi" GiverId="56013" X="926.4063" Y="3605.01" Z="196.3211" />
-
 <!--################################ SELECT""""""""""""""-->
 <If Condition="HasQuest(31450) &amp;&amp; !IsQuestCompleted(31450)" >
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31450" MobId="56013" GossipOptions="1" X="926.4063" Y="3605.01" Z="196.321" />
@@ -1210,6 +1181,7 @@
   <CustomBehavior File="WaitTimer" WaitTime="65000" />
 </If>
 -->
+
 <If Condition="Me.IsAlliance">
   <TurnIn QuestName="A New Fate" QuestId="31450" TurnInName="Aysa Cloudsinger" TurnInId="60566" X="-9061.311" Y="433.7604" Z="93.05679" />
   <PickUp QuestName="Joining the Alliance" QuestId="30987" GiverName="Aysa Cloudsinger" GiverId="60566" X="-9061.311" Y="433.7604" Z="93.05679" />
@@ -1275,25 +1247,57 @@
 		<RunTo X="-5376.827" Y="-2973.176" Z="323.1693" />
 		<CustomBehavior File="Cava\SetHearthstone" MobId="6734" AreaId="2101" X="-5377.913" Y="-2973.908" Z="323.1688" />	
 		<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
-			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
 			<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
-			<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 4)">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(20); PickupContainerItem(i,j); end end end" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
 		</If>
-		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
-			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
 			<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
-			<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 4)">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(21); PickupContainerItem(i,j); end end end" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
 		</If>
-		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
-			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
 			<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
-			<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
-		</If>
-		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
-			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 4)">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(22); PickupContainerItem(i,j); end end end" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
+	</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
 			<RunTo X="-5381.576" Y="-2954.365" Z="322.0623" />
-			<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 4)">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
+			<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+				<CustomBehavior File="InteractWith" MobId="1682" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-5381.876" Y="-2952.482" Z="322.0654" />
+				<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(23); PickupContainerItem(i,j); end end end" />
+				<CustomBehavior File="WaitTimer" WaitTime="4000" />
+			</If>
 		</If>
 		<RunTo X="-5346.174" Y="-2934.331" Z="324.3619" />
 		<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="167" WaitTime="1000" X="-5343.68" Y="-2932.134" Z="324.3618" />	
