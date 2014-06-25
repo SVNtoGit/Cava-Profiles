@@ -108,7 +108,6 @@
       <Mob Name="Adult Plainstrider" Id="2956"/>
     </CollectFrom>
     <Hotspots>
-      <Hotspot X="-2097.517" Y="-430.5395" Z="-6.711194" />
       <Hotspot X="-2395.164" Y="-685.9266" Z="-6.47179" />
       <Hotspot X="-2503.923" Y="-593.2648" Z="-9.342" />
       <Hotspot X="-2572.37" Y="-465.9059" Z="-3.941662" />
@@ -151,7 +150,7 @@
 </Quest>
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsAlliance || Me.Race != WoWRace.Tauren" >
+<If Condition="Me.Race != WoWRace.Tauren" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 6452 &amp;&amp; Me.ZoneId != 215">
@@ -160,65 +159,30 @@
   Please move your char to: MULGORE/CAMP NARACHE\n
   and start bot." />
 </If>
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Tauren Quests (1-5)" LogColor="Aquamarine" />
-
-<!--# # # Level 1 # # # -->
 <PickUp QuestName="The First Step" QuestId="14449" GiverName="Chief Hawkwind" GiverId="2981" X="-2909.955" Y="-256.526" Z="59.60468" />
 <TurnIn QuestName="The First Step" QuestId="14449" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <PickUp QuestName="Rite of Strength" QuestId="14452" GiverName="Grull Hawkwind" GiverId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
-<If Condition="HasQuest(14452) &amp;&amp; !IsQuestCompleted(14452)" >
-  <Objective QuestName="Rite of Strength" QuestId="14452" Type="KillMob" MobId="2952" KillCount="6" />
-</If>
+<Objective QuestName="Rite of Strength" QuestId="14452" Type="KillMob" MobId="2952" KillCount="6" />
 <TurnIn QuestName="Rite of Strength" QuestId="14452" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
-<If Condition="!HasQuest(24852) &amp;&amp; !IsQuestCompleted(24852) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
-<!--# # # Level 2 # # # -->
 <PickUp QuestName="Our Tribe, Imprisoned" QuestId="24852" GiverName="Grull Hawkwind" GiverId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <Objective QuestName="Our Tribe, Imprisoned" QuestId="24852" Type="UseObject" ObjectId="202112" UseCount="4" />
 <TurnIn QuestName="Our Tribe, Imprisoned" QuestId="24852" TurnInName="Grull Hawkwind" TurnInId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <PickUp QuestName="Go to Adana" QuestId="14458" GiverName="Grull Hawkwind" GiverId="2980" X="-3015.635" Y="-463.6996" Z="45.33501" />
 <TurnIn QuestName="Go to Adana" QuestId="14458" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
-<If Condition="!HasQuest(14456) &amp;&amp; !IsQuestCompleted(14456) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="Rite of Courage" QuestId="14456" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <PickUp QuestName="Stop the Thorncallers" QuestId="14455" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
-<If Condition="(HasQuest(14456) &amp;&amp; !IsQuestCompleted(14456)) || (HasQuest(14455) &amp;&amp; !IsQuestCompleted(14455))">
-  <RunTo X="-3285.348" Y="-365.1725" Z="53.30185" />
-  <Objective QuestName="Rite of Courage" QuestId="14456" Type="CollectItem" ItemId="49535" CollectCount="7" />
-  <Objective QuestName="Stop the Thorncallers" QuestId="14455" Type="KillMob" MobId="36697" KillCount="7" />
-</If>
+<Objective QuestName="Rite of Courage" QuestId="14456" Type="CollectItem" ItemId="49535" CollectCount="7" />
+<Objective QuestName="Stop the Thorncallers" QuestId="14455" Type="KillMob" MobId="36697" KillCount="7" />
 <TurnIn QuestName="Rite of Courage" QuestId="14456" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <TurnIn QuestName="Stop the Thorncallers" QuestId="14455" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
-<!--# # # Level 3 # # # -->
-<If Condition="!HasQuest(14459) &amp;&amp; !IsQuestCompleted(14459) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="The Battleboars" QuestId="14459" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <PickUp QuestName="Feed of Evil" QuestId="14461" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <If Condition="Me.Class == WoWClass.Hunter">
@@ -244,44 +208,29 @@
 </If>
 <If Condition="HasQuest(14461) &amp;&amp; !IsQuestCompleted(14461)" >
   <While Condition="!IsObjectiveComplete(3, 14461)" >
-    <UseItem ItemId="49539" QuestId="14461" X="-3404.656" Y="-263.3071" Z="61.64627" />
+		<RunTo X="-3404.656" Y="-263.3071" Z="61.64627" />
+	  <CustomBehavior File="Misc\RunLua" QuestId="14461" Lua="UseItemByName(49539)" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 14461)" >
-    <UseItem ItemId="49539" QuestId="14461" X="-3391.677" Y="-212.8679" Z="61.69665" />
+    <RunTo X="-3391.677" Y="-212.8679" Z="61.69665" />
+	  <CustomBehavior File="Misc\RunLua" QuestId="14461" Lua="UseItemByName(49539)" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 14461)" >
-    <UseItem ItemId="49539" QuestId="14461" X="-3361.514" Y="-232.2879" Z="61.43986"/>
+    <RunTo X="-3361.514" Y="-232.2879" Z="61.43986"/>
+	  <CustomBehavior File="Misc\RunLua" QuestId="14461" Lua="UseItemByName(49539)" />
   </While>
 </If>
-<If Condition="HasQuest(14459) &amp;&amp; !IsQuestCompleted(14459)">
-  <Objective QuestName="The Battleboars" QuestId="14459" Type="KillMob" MobId="36696" KillCount="10" />
-</If>
+<Objective QuestName="The Battleboars" QuestId="14459" Type="KillMob" MobId="36696" KillCount="10" />
 <TurnIn QuestName="The Battleboars" QuestId="14459" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
 <TurnIn QuestName="Feed of Evil" QuestId="14461" TurnInName="Adana Thunderhorn" TurnInId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
-<!--# # # Level 4 # # # -->
-<If Condition="!HasQuest(14460) &amp;&amp; !IsQuestCompleted(14460) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="Rite of Honor" QuestId="14460" GiverName="Adana Thunderhorn" GiverId="36694" X="-3172.493" Y="-312.8663" Z="46.70725" />
-<If Condition="HasQuest(14460) &amp;&amp; !IsQuestCompleted(14460)">
-  <RunTo X="-3131.524" Y="-113.1387" Z="44.36212" />
-  <Objective QuestName="Rite of Honor" QuestId="14460" Type="CollectItem" ItemId="50473" CollectCount="1" />
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
-</If>
+<Objective QuestName="Rite of Honor" QuestId="14460" Type="CollectItem" ItemId="50473" CollectCount="1" />
 <TurnIn QuestName="Rite of Honor" QuestId="14460" TurnInName="Chief Hawkwind" TurnInId="2981"  X="-2909.955" Y="-256.526" Z="59.60477" />
 <PickUp QuestName="Last Rites, First Rites" QuestId="24861" GiverName="Chief Hawkwind" GiverId="2981"  X="-2909.955" Y="-256.526" Z="59.60477" />
 <If Condition="HasQuest(24861) &amp;&amp; !IsQuestCompleted(24861)" >
   <While Condition="!IsQuestCompleted(24861)" >
-    <UseItem ItemId="50465" QuestId="24861" X="-2907.939" Y="-254.3848" Z="59.73428" />
+    <RunTo X="-2907.939" Y="-254.3848" Z="59.73428" />
+	  <CustomBehavior File="Misc\RunLua" QuestId="24861" Lua="UseItemByName(50465)" />
   </While>
 </If>
 <TurnIn QuestName="Last Rites, First Rites" QuestId="24861" TurnInName="Chief Hawkwind" TurnInId="2981"  X="-2909.955" Y="-256.526" Z="59.60477" />
@@ -289,150 +238,120 @@
 <If Condition="Me.Class == WoWClass.Paladin">
   <TurnIn QuestName="Consecrated Note" QuestId="27015" TurnInName="Sunwalker Helaku" TurnInId="37737" X="-2905.906" Y="-246.2292" Z="59.80172"/>
   <PickUp QuestName="The Way of the Sunwalkers" QuestId="27023" GiverName="Sunwalker Helaku" GiverId="37737" X="-2905.906" Y="-246.2292" Z="59.80172"/>
-  <While Condition="HasQuest(27023) &amp;&amp; !IsQuestCompleted(27023)">
-    <RunTo QuestId="27023" X="-2913.144" Y="-275.8568" Z="59.94337" />
+  <RunTo QuestId="27023" X="-2913.144" Y="-275.8568" Z="59.94337" />
+  <While Condition="!IsQuestCompleted(27023)">
     <CustomBehavior File="Misc\RunLua" QuestId="27023" Lua="CastSpellByID(105361)" WaitTime="1000" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27023" MobId="44848" WaitTime="1000" X="-2912.34" Y="-277.472" Z="59.89342" />
-    <CustomBehavior File="CastSpellOn" QuestId="27023" SpellId="35395" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="3" Range="5" X="-2869.347" Y="-249.1271" Z="59.95384" /> <!-- seal of command -->
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27023" MobId="44848" InteractByCastingSpellId="35395" X="-2869.347" Y="-249.1271" Z="59.95384" />
   </While>
   <TurnIn QuestName="The Way of the Sunwalkers" QuestId="27023" TurnInName="Sunwalker Helaku" TurnInId="37737" X="-2905.906" Y="-246.2292" Z="59.80172"/>
 </If>
 <If Condition="Me.Class == WoWClass.Priest">
   <TurnIn QuestName="Hallowed Note" QuestId="27014" TurnInName="Seer Ravenfeather" TurnInId="37724" X="-2900.104" Y="-247.8229" Z="59.78632"/>
   <PickUp QuestName="Healing in a Flash" QuestId="27066" GiverName="Seer Ravenfeather" GiverId="37724" X="-2900.104" Y="-247.8229" Z="59.78632"/>
-  <RunTo QuestId="27066" X="-2886.78" Y="-267.9286" Z="60.30171" />
+  <RunTo QuestId="27066" X="-2913.924" Y="-275.0043" Z="59.95842" />
   <While Condition="HasQuest(27066) &amp;&amp; !IsQuestCompleted(27066)">
-    <RunTo QuestId="27066" X="-2913.924" Y="-275.0043" Z="59.95842" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27066" MobId="44848" WaitTime="1000" X="-2912.34" Y="-277.472" Z="59.89342" />
-	<CustomBehavior File="CastSpellOn" QuestId="27066" SpellId="589" MobId="44848" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="-2880.177" Y="-225.9676" Z="61.34525" />
+    <CustomBehavior File="InteractWith" QuestId="27066" NonCompeteDistance="0" InteractByCastingSpellId="589" MobId="44848" NumOfTimes="20" MinRange="8" X="-2880.177" Y="-225.9676" Z="61.34525" />
   </While>
   <TurnIn QuestName="Healing in a Flash" QuestId="27066" TurnInName="Seer Ravenfeather" TurnInId="37724" X="-2900.104" Y="-247.8229" Z="59.78632"/>
 </If>
 <If Condition="Me.Class == WoWClass.Shaman">
   <TurnIn QuestName="Rune-Inscribed Note" QuestId="3093" TurnInName="Meela Dawnstrider" TurnInId="3062" X="-2895.839" Y="-253.2118" Z="59.74337"/>
   <PickUp QuestName="Primal Strike" QuestId="27027" GiverName="Meela Dawnstrider" GiverId="3062" X="-2895.839" Y="-253.2118" Z="59.74337"/>
-  <RunTo X="-2913.144" Y="-275.8568" Z="59.94337" />
+  <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
   <While Condition="HasQuest(27027) &amp;&amp; !IsQuestCompleted(27027)">
-    <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27027" MobId="44848" WaitTime="1000" X="-2912.34" Y="-277.472" Z="59.89342" />
-	<CustomBehavior File="CastSpellOn" QuestId="27027" SpellId="73899" MobId="44848" NumOfTimes="20" MobHpPercentLeft="100" MinRange="1" Range="5" X="-2880.177" Y="-225.9676" Z="61.34525" />
+    <CustomBehavior File="InteractWith" QuestId="27027" NonCompeteDistance="0" InteractByCastingSpellId="73899" MobId="44848" NumOfTimes="20" X="-2912.34" Y="-277.472" Z="59.89342" />
   </While>
   <TurnIn QuestName="Primal Strike" QuestId="27027" TurnInName="Meela Dawnstrider" TurnInId="3062" X="-2895.839" Y="-253.2118" Z="59.74337"/>
 </If>
 <If Condition="Me.Class == WoWClass.Druid">
   <TurnIn QuestName="Verdant Note" QuestId="3094" TurnInName="Gart Mistrunner" TurnInId="3060" X="-2898.491" Y="-260.25" Z="59.6141"/>
   <PickUp QuestName="Rejuvenating Touch" QuestId="27067" GiverName="Gart Mistrunner" GiverId="3060" X="-2898.491" Y="-260.25" Z="59.6141"/>
+  <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
   <While Condition="HasQuest(27067) &amp;&amp; !IsQuestCompleted(27067)">
-    <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27067" MobId="44848" WaitTime="1000" X="-2912.34" Y="-277.472" Z="59.89342" />
-	<CustomBehavior File="CastSpellOn" QuestId="27067" SpellId="8921" MobId="44848" NumOfTimes="20" MinRange="8" X="-2880.177" Y="-225.9676" Z="61.34525"/>
+    <CustomBehavior File="InteractWith" QuestId="27067" NonCompeteDistance="0" InteractByCastingSpellId="8921" MobId="44848" NumOfTimes="20" MinRange="8" X="-2912.34" Y="-277.472" Z="59.89342" />
   </While>
   <TurnIn QuestName="Rejuvenating Touch" QuestId="27067" TurnInName="Gart Mistrunner" TurnInId="3060" X="-2898.491" Y="-260.25" Z="59.6141"/>
 </If>
 <If Condition="Me.Class == WoWClass.Warrior">
   <TurnIn QuestName="Simple Note" QuestId="3091" TurnInName="Harutt Thunderhorn" TurnInId="3059" X="-2912.415" Y="-247.7344" Z="59.72432"/>
   <PickUp QuestName="The First Lesson" QuestId="27020" GiverName="Harutt Thunderhorn" GiverId="3059" X="-2912.415" Y="-247.7344" Z="59.72432"/>
+  <RunTo X="-2871.837" Y="-248.5042" Z="60.14921" />
   <While Condition="HasQuest(27020) &amp;&amp; !IsQuestCompleted(27020)">
-    <RunTo X="-2871.837" Y="-248.5042" Z="60.14921" />
-	<CustomBehavior File="NPCAssistance" MobId="44848" X="-2869.347" Y="-249.1271" Z="59.95384" />
-	<CustomBehavior File="CastSpellOn" QuestId="27020" SpellId="100" MobId="44848" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="-2869.347" Y="-249.1271" Z="59.95384" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27020" InteractByCastingSpellId="100" MobId="44848" NumOfTimes="20" MinRange="8" X="-2912.34" Y="-277.472" Z="59.89342" />
   </While>
   <TurnIn QuestName="The First Lesson" QuestId="27020" TurnInName="Harutt Thunderhorn" TurnInId="3059" X="-2912.415" Y="-247.7344" Z="59.72432"/>
 </If>
 <If Condition="Me.Class == WoWClass.Hunter">
   <TurnIn QuestName="Etched Note" QuestId="3092" TurnInName="Lanka Farshot" TurnInId="3061" X="-2904.892" Y="-263.3472" Z="59.5146"/>
   <PickUp QuestName="The Hunter's Path" QuestId="27021" GiverName="Lanka Farshot" GiverId="3061" X="-2904.892" Y="-263.3472" Z="59.5146"/>
+  <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
   <While Condition="HasQuest(27021) &amp;&amp; !IsQuestCompleted(27021)">
-    <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
-	<CustomBehavior File="CastSpellOn" QuestId="27021" SpellId="56641" MobId="44848" NumOfTimes="20" MobHpPercentLeft="100" MinRange="7" X="-2869.347" Y="-249.1271" Z="59.95384" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27021" InteractByCastingSpellId="56641" MobId="44848" NumOfTimes="20" MinRange="7" X="-2912.34" Y="-277.472" Z="59.89342" />
   </While>
   <TurnIn QuestName="The Hunter's Path" QuestId="27021" TurnInName="Lanka Farshot" TurnInId="3061" X="-2904.892" Y="-263.3472" Z="59.5146"/>
 </If>
 <If Condition="Me.Class == WoWClass.Monk">
   <TurnIn QuestName="Calligraphed Note" QuestId="31165" TurnInName="Shoyu" TurnInId="63327" X="-2910.488" Y="-260.8889" Z="59.53426" />
   <PickUp QuestName="Tiger Palm" QuestId="31166" GiverName="Shoyu" GiverId="63327" X="-2910.488" Y="-260.8889" Z="59.53426" />
+  <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
   <While Condition="HasQuest(31166) &amp;&amp; !IsQuestCompleted(31166)" >
-    <RunTo X="-2913.924" Y="-275.0043" Z="59.95842" />
-	<CustomBehavior File="CastSpellOn" SpellId="100780" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" X="-2918.716" Y="-276.8649" Z="59.83102" />
-	<CustomBehavior File="CastSpellOn" SpellId="100787" MobId="44848" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" X="-2918.716" Y="-276.8649" Z="59.83102" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="100780" MobId="44848" X="-2912.34" Y="-277.472" Z="59.89342" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="100787" MobId="44848" X="-2912.34" Y="-277.472" Z="59.89342" />
   </While>
   <TurnIn QuestName="Tiger Palm" QuestId="31166" TurnInName="Shoyu" TurnInId="63327" X="-2910.488" Y="-260.8889" Z="59.53426" />
 </If>
 <TurnIn QuestName="Rites of the Earthmother" QuestId="23733" TurnInName="Dyami Windsoar" TurnInId="36803" X="-2933.408" Y="-42.72396" Z="189.7108" />
 <PickUp QuestName="Rite of the Winds" QuestId="24215" GiverName="Dyami Windsoar" GiverId="36803" X="-2933.408" Y="-42.72396" Z="189.7108" />
 <If Condition="HasQuest(24215)" >
+	<RunTo X="-2931.637" Y="-36.32681" Z="189.8249" />
+  <CustomBehavior File="WaitTimer" WaitTime="500"/>
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(49652)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="45000"/>
-</If>
-<TurnIn QuestName="Rite of the Winds" QuestId="24215" TurnInName="Ahmo Thunderhorn" TurnInId="36644" X="-2333.543" Y="-393.0733" Z="-8.012473" />
-<If Condition="!HasQuest(14460) &amp;&amp; !IsQuestCompleted(14460) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
-<If Condition="!HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)">
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3073" WaitTime="1000" CollectionDistance="50" X="-2926.32" Y="-215.72" Z="61.07576" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+	<TurnIn QuestName="Rite of the Winds" QuestId="24215" TurnInName="Ahmo Thunderhorn" TurnInId="36644" X="-2333.543" Y="-393.0733" Z="-8.012473" />
+	<RunTo X="-2278.431" Y="-300.0629" Z="-9.424632" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3077" WaitTime="1000" X="-2280.133" Y="-297.7678" Z="-9.424728" />	
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-2251.124" Y="-308.8826" Z="-9.424632" />
+		<CustomBehavior File="InteractWith" MobId="3076" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-2247.812" Y="-308.1569" Z="-9.424822" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-2251.124" Y="-308.8826" Z="-9.424632" />
+		<CustomBehavior File="InteractWith" MobId="3076" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-2247.812" Y="-308.1569" Z="-9.424822" />
+	</If>
 </If>
 <PickUp QuestName="Poison Water" QuestId="20440" GiverName="Mull Thunderhorn" GiverId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
 <PickUp QuestName="Swoop Hunting" QuestId="761" GiverName="Harken Windtotem" GiverId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />
-<PickUp QuestName="Kyle's Gone Missing!" QuestId="11129" GiverName="Ahab Wheathoof" GiverId="23618" X="-2097.517" Y="-430.5395" Z="-6.711194" />
-<If Condition="(HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)) || (HasQuest(761) &amp;&amp; !IsQuestCompleted(761)) || (HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129) &amp;&amp; !HasItem(33009))" >
-  <RunTo X="-2097.517" Y="-430.5395" Z="-6.711194" />
+<If Condition="(HasQuest(20440) &amp;&amp; !IsQuestCompleted(20440)) || (HasQuest(761) &amp;&amp; !IsQuestCompleted(761))" >
   <LootMobs Value="true" />
 </If>
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4759" CollectCount="4" />
-<If Condition="HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129) &amp;&amp; !HasItem(33009)" >
-  <SetGrindArea>
-  <GrindArea>
-  <Factions>189</Factions>
-	<Hotspots>
-      <Hotspot X="-2395.164" Y="-685.9266" Z="-6.47179" />
-      <Hotspot X="-2503.923" Y="-593.2648" Z="-9.342" />
-      <Hotspot X="-2572.37" Y="-465.9059" Z="-3.941662" />
-      <Hotspot X="-2413.254" Y="-677.5309" Z="-4.478985"/>
-	  <Hotspot X="-2449.91" Y="-658.3047" Z="-4.430669"/>
-	  <Hotspot X="-2517.941" Y="-564.2294" Z="-7.720027"/>
-	  <Hotspot X="-2600.191" Y="-540.9617" Z="-6.265002"/>
-	  <Hotspot X="-2647.118" Y="-555.3084" Z="-3.50658"/>
-	  <Hotspot X="-2646.238" Y="-635.8493" Z="-2.7524"/>
-	</Hotspots>
-  </GrindArea>
-  </SetGrindArea>
-  <GrindTo Condition="HasItem(33009)" />
-</If>
 <Objective QuestName="Swoop Hunting" QuestId="761" Type="CollectItem" ItemId="4769" CollectCount="8" />
 <Objective QuestName="Poison Water" QuestId="20440" Type="CollectItem" ItemId="4758" CollectCount="6" />
-<If Condition="HasQuest(20440) || HasQuest(761) || HasQuest(11129)" >
+<If Condition="HasQuest(20440) || HasQuest(761)" >
   <LootMobs Value="null" />
+	<TurnIn QuestName="Poison Water" QuestId="20440" TurnInName="Mull Thunderhorn" TurnInId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
+	<TurnIn QuestName="Swoop Hunting" QuestId="761" TurnInName="Harken Windtotem" TurnInId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />
+<!--
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-2302.217" Y="-380.305" Z="-9.0957" />
+	<CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-2299.118" Y="-381.5382" Z="-9.052119" />
+	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
+-->
 </If>
-<TurnIn QuestName="Poison Water" QuestId="20440" TurnInName="Mull Thunderhorn" TurnInId="2948" X="-2341.405" Y="-445.4486" Z="-6.500389" />
-<TurnIn QuestName="Swoop Hunting" QuestId="761" TurnInName="Harken Windtotem" TurnInId="2947" X="-2304.791" Y="-454.8085" Z="-5.438223" />
-<If Condition="HasQuest(11129) &amp;&amp; !IsQuestCompleted(11129)" >
-  <RunTo X="-2314.98" Y="-387.8395" Z="-8.804328" />
-  <While Condition="!IsQuestCompleted(11129)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="11129" ItemId="33009" Range="20" WaitForNpcs="False" MobId="23616" X="-2314.98" Y="-387.8395" Z="-8.804328" />
-    <CustomBehavior File="WaitTimer" QuestId="11129" WaitTime="6000"/>
-  </While>
-</If>
-<TurnIn QuestName="Kyle's Gone Missing!" QuestId="11129" TurnInName="Ahab Wheathoof" TurnInId="23618" X="-2097.517" Y="-430.5395" Z="-6.711194" />
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="UseTransport" TransportId="164871"
+  WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+  GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+  StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+  TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+  TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
+<!--
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+-->
 </QuestOrder>
 </HBProfile>
