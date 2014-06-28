@@ -197,22 +197,25 @@
 
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsAlliance || Me.Race != WoWRace.BloodElf" >
+<If Condition="Me.Race != WoWRace.BloodElf" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
-<If Condition="Me.ZoneId != 6455 &amp;&amp; Me.ZoneId != 3430">
+<!--<If Condition="Me.ZoneId != 6455 &amp;&amp; Me.ZoneId != 3430 &amp;&amp; Me.ZoneId != 3487">
   <CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1"
   Text="There is a problem moving char to quest\n\n
   Please move your char to: EVERSONG WOODS/SUNSTRIDER ISLE\n
   and start bot." />
 </If>
+--><CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Blood Elf Quests (1-5)" LogColor="Aquamarine" />
-
-<!--# # # Level 1 # # # -->
 <PickUp QuestName="Reclaiming Sunstrider Isle" QuestId="8325" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
-<If Condition="HasQuest(8325) &amp;&amp; !IsQuestCompleted(8325)" >
-  <Objective QuestName="Reclaiming Sunstrider Isle" QuestId="8325" Type="KillMob" MobId="15274" KillCount="6"/>
-</If>
+<Objective QuestName="Reclaiming Sunstrider Isle" QuestId="8325" Type="KillMob" MobId="15274" KillCount="6"/>
 <TurnIn QuestName="Reclaiming Sunstrider Isle" QuestId="8325" TurnInId="15278" TurnInName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <PickUp QuestName="Unfortunate Measures" QuestId="8326" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <If Condition="(Me.Class == WoWClass.Warrior)">
@@ -241,18 +244,37 @@
 </If>
 <PickUp QuestName="Solanian's Belongings" QuestId="8330" GiverId="15295" GiverName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
 <PickUp QuestName="The Shrine of Dath'Remar" QuestId="8345" GiverId="15295" GiverName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<If Condition="!HasQuest(8336) &amp;&amp; !IsQuestCompleted(8336)" >
-  <RunTo X="10394.88" Y="-6396.846" Z="49.95017" />
-  <CustomBehavior File="MyCTM" X="10403.87" Y="-6372.688" Z="35.91055" />
-</If>
 <PickUp QuestName="A Fistful of Slivers" QuestId="8336" GiverId="15296" GiverName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
 <PickUp QuestName="Thirst Unending" QuestId="8346" GiverName="Arcanist Helion" GiverId="15297" X="10419.66" Y="-6318.618" Z="35.5736" />
 <If Condition="HasQuest(8346) &amp;&amp; !IsQuestCompleted(8346)" >
   <RunTo X="10377.3" Y="-6184.679" Z="32.19027" />
-  <CustomBehavior File="CastSpellOn" QuestId="8346" NumOfTimes="1" MobHpPercentLeft="100" MobId="15274" Range="2" MinRange="1"
-    SpellId1="28730" SpellId2="50613" SpellId3="80483" SpellId4="129597" SpellId5="25046" SpellId6="69179" X="10379.94" Y="-6283.283" Z="25.71898" />
+	<While Condition="!IsQuestCompleted(8346)" >
+		<If Condition="HasSpell(28730)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="28730" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(50613)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="50613" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(80483)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" MinRange="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="80483" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(129597)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="129597" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(25046)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="25046" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(69179)">
+			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="69179" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+	</While>
 </If>
-<!--# # # Level 2 # # # -->
 <Objective QuestName="Unfortunate Measures" QuestId="8326" Type="CollectItem" ItemId="20797" CollectCount="8"/>
 <Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20471" CollectCount="1"/>
 <Objective QuestName="The Shrine of Dath'Remar" QuestId="8345" Type="UseObject" ObjectId="180516" UseCount="1"/>
@@ -260,163 +282,118 @@
 <Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20472" CollectCount="1"/>
 <Objective QuestName="A Fistful of Slivers" QuestId="8336" Type="CollectItem" ItemId="20482" CollectCount="6"/>
 <TurnIn QuestName="Unfortunate Measures" QuestId="8326" TurnInId="15278" TurnInName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
-<!--# # # Level 3 # # # -->
 <PickUp QuestName="Report to Lanthan Perilon" QuestId="8327" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <If Condition="(Me.Class == WoWClass.Warrior)">
   <TurnIn QuestName="Warrior Training" QuestId="8329" TurnInName="Delios Silverblade" TurnInId="43010" X="10381.3" Y="-6422.5" Z="38.53276" />
   <PickUp QuestName="Charge!" QuestId="27091" GiverName="Delios Silverblade" GiverId="43010" X="10381.3" Y="-6422.5" Z="38.53276" />
-  <While Condition="HasQuest(27091) &amp;&amp; !IsQuestCompleted(27091)" >
-    <RunTo QuestId="27091" X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27091" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <RunTo QuestId="27091" X="10408.3" Y="-6361.7" Z="35.6597" />
-    <RunTo QuestId="27091" X="10396.98" Y="-6370.057" Z="36.64354" />
-    <CustomBehavior File="CastSpellOn" QuestId="27091" SpellId="100" MobId="44937" NumOfTimes="1" MobHpPercentLeft="100" MinRange="18" X="10381.8" Y="-6381.9" Z="37.74933" />
-  </While>
+	<RunTo QuestId="27091" X="10383.18" Y="-6379.935" Z="37.70687" />
+	<While Condition="HasQuest(27091) &amp;&amp; !IsQuestCompleted(27091)" >
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="27091" InteractByCastingSpellId="100" MobId="44937" NumOfTimes="20" MinRange="8" X="10381.8" Y="-6381.9" Z="37.74933" />
+	</While>
   <TurnIn QuestName="Charge!" QuestId="27091" TurnInName="Delios Silverblade" TurnInId="43010" X="10381.3" Y="-6422.5" Z="38.53276" />
 </If>
 <If Condition="(Me.Class == WoWClass.Paladin)">
   <TurnIn QuestName="Paladin Training" QuestId="9676" TurnInName="Jesthenis Sunstriker" TurnInId="15280" X="10366.67" Y="-6431.529" Z="38.5341" />
   <PickUp QuestName="Ways of the Light" QuestId="10069" GiverName="Jesthenis Sunstriker" GiverId="15280" X="10366.67" Y="-6431.529" Z="38.5341" />
   <CustomBehavior File="Misc\RunLua" QuestId="27023" Lua="CastSpellByID(105361)" WaitTime="1000" />
-  <While Condition="HasQuest(10069) &amp;&amp; !IsQuestCompleted(10069)" >
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10069" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" QuestId="10069" SpellId="35395" MobId="44937" NumOfTimes="1" MobHpPercentLeft="100" MinRange="3" Range="5" X="10381.8" Y="-6381.9" Z="37.74933" />
-  </While>
+	<RunTo QuestId="27023" X="10383.18" Y="-6379.935" Z="37.70687" />
+	<While Condition="HasQuest(10069) &amp;&amp; !IsQuestCompleted(10069)" >
+		<CustomBehavior File="Misc\RunLua" QuestId="10069" Lua="CastSpellByID(105361)" WaitTime="1000" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10069" MobId="44937" InteractByCastingSpellId="35395" X="10381.8" Y="-6381.9" Z="37.74933" />
+	</While>
   <TurnIn QuestName="Ways of the Light" QuestId="10069" TurnInName="Jesthenis Sunstriker" TurnInId="15280" X="10366.67" Y="-6431.529" Z="38.5341" />
 </If>
 <If Condition="(Me.Class == WoWClass.Hunter)">
   <TurnIn QuestName="Hunter Training" QuestId="9393" TurnInName="Ranger Sallina" TurnInId="15513" X="10384.72" Y="-6410.674" Z="38.53271" />
   <PickUp QuestName="Steady Shot" QuestId="10070" GiverName="Ranger Sallina" GiverId="15513" X="10384.72" Y="-6410.674" Z="38.53271" />
+  <RunTo QuestId="10070" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(10070) &amp;&amp; !IsQuestCompleted(10070)" >
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10070" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-	<CustomBehavior File="CastSpellOn" QuestId="10070" SpellId="56641" MobId="44937" NumOfTimes="20" MobHpPercentLeft="100" MinRange="7" X="10381.8" Y="-6381.9" Z="37.74933" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10070" InteractByCastingSpellId="56641" MobId="44937" NumOfTimes="20" MinRange="7" X="10381.8" Y="-6381.9" Z="37.74933" />
   </While>
   <TurnIn QuestName="Steady Shot" QuestId="10070" TurnInName="Ranger Sallina" TurnInId="15513" X="10384.72" Y="-6410.674" Z="38.53271" />
 </If>
 <If Condition="(Me.Class == WoWClass.Rogue)">
   <TurnIn QuestName="Rogue Training" QuestId="9392" TurnInName="Pathstalker Kariel" TurnInId="15285" X="10384.53" Y="-6404.986" Z="38.53375" />
   <PickUp QuestName="Evisceration" QuestId="10071" GiverName="Pathstalker Kariel" GiverId="15285" X="10384.53" Y="-6404.986" Z="38.53375" />
+  <RunTo QuestId="10071" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(10071) &amp;&amp; !IsQuestCompleted(10071)">
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10071" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="44937" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="44937" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="10381.8" Y="-6381.9" Z="37.74933" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10071" InteractByCastingSpellId="1752" MobId="44937" NumOfTimes="3" X="10381.8" Y="-6381.9" Z="37.74933" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10071" InteractByCastingSpellId="2098" MobId="44937" NumOfTimes="1" X="10381.8" Y="-6381.9" Z="37.74933" />
   </While>
   <TurnIn QuestName="Evisceration" QuestId="10071" TurnInName="Pathstalker Kariel" TurnInId="15285" X="10384.53" Y="-6404.986" Z="38.53375" />
 </If>
 <If Condition="(Me.Class == WoWClass.Priest)">
   <TurnIn QuestName="Priest Training" QuestId="8564" TurnInName="Matron Arena" TurnInId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
   <PickUp QuestName="Healing the Wounded" QuestId="10072" GiverName="Matron Arena" GiverId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
+  <RunTo QuestId="10072" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(10072) &amp;&amp; !IsQuestCompleted(10072)" >
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10072" MobId="44937" WaitTime="1000" InteractByCastingSpellId="589" X="10381.8" Y="-6381.9" Z="37.74933" />
-	<!--
-    <CustomBehavior File="CastSpellOn" QuestId="10072" SpellId="589" MobId="44937" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="10381.8" Y="-6381.9" Z="37.74933" />
-    -->
   </While>
   <TurnIn QuestName="Healing the Wounded" QuestId="10072" TurnInName="Matron Arena" TurnInId="15284" X="10372.4" Y="-6428.843" Z="38.53291" />
 </If>
 <If Condition="(Me.Class == WoWClass.Mage)">
   <TurnIn QuestName="Mage Training" QuestId="8328" TurnInName="Julia Sunstriker" TurnInId="15279" X="10337.19" Y="-6419.446" Z="38.533" />
   <PickUp QuestName="Arcane Missiles" QuestId="10068" GiverName="Julia Sunstriker" GiverId="15279" X="10337.19" Y="-6419.446" Z="38.533" />
+  <RunTo QuestId="10068" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(10068) &amp;&amp; !IsQuestCompleted(10068)">
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10068" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" SpellId="122" MobId="44937" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" Range="30" X="10381.8" Y="-6381.9" Z="37.74933" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10068" InteractByCastingSpellId="122" MobId="44937" NumOfTimes="2" X="10381.8" Y="-6381.9" Z="37.74933" />
   </While>
   <TurnIn QuestName="Arcane Missiles" QuestId="10068" TurnInName="Julia Sunstriker" TurnInId="15279" X="10337.19" Y="-6419.446" Z="38.533" />
 </If>
 <If Condition="(Me.Class == WoWClass.Warlock)">
   <TurnIn QuestName="Warlock Training" QuestId="8563" TurnInName="Summoner Teli'Larien" TurnInId="15283" X="10337.57" Y="-6405.026" Z="38.53403" />
   <PickUp QuestName="Immolation" QuestId="10073" GiverName="Summoner Teli'Larien" GiverId="15283" X="10337.57" Y="-6405.026" Z="38.53403" />
+  <RunTo QuestId="10073" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(10073) &amp;&amp; !IsQuestCompleted(10073)">
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10073" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" QuestId="10073" SpellId="172" MobId="44937" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" X="10381.8" Y="-6381.9" Z="37.74933" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="10073" InteractByCastingSpellId="172" MobId="44937" NumOfTimes="5" X="10381.8" Y="-6381.9" Z="37.74933" />
   </While>
   <TurnIn QuestName="Immolation" QuestId="10073" TurnInName="Summoner Teli'Larien" TurnInId="15283" X="10337.57" Y="-6405.026" Z="38.53403" />
 </If>
 <If Condition="(Me.Class == WoWClass.Monk)">
   <TurnIn QuestName="Monk Training" QuestId="31170" TurnInName="Pao" TurnInId="63332" X="10378.89" Y="-6398.024" Z="38.53153" />
   <PickUp QuestName="Tiger Palm" QuestId="31171" GiverName="Pao" GiverId="63332" X="10378.89" Y="-6398.024" Z="38.53153" />
+  <RunTo QuestId="31171" X="10383.18" Y="-6379.935" Z="37.70687" />
   <While Condition="HasQuest(31171) &amp;&amp; !IsQuestCompleted(31171)">
-    <RunTo X="10383.18" Y="-6379.935" Z="37.70687" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31171" MobId="44937" WaitTime="1000" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100780" MobId="44937" X="10381.8" Y="-6381.9" Z="37.74933" />
-    <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100787" MobId="44937" X="10381.8" Y="-6381.9" Z="37.74933" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31171" InteractByCastingSpellId="100780" MobId="44937" X="10381.8" Y="-6381.9" Z="37.74933" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31171" InteractByCastingSpellId="100787" MobId="44937" X="10381.8" Y="-6381.9" Z="37.74933" />
   </While>
   <TurnIn QuestName="Tiger Palm" QuestId="31171" TurnInName="Pao" TurnInId="63332" X="10378.89" Y="-6398.024" Z="38.53153" />
 </If>
 <TurnIn QuestName="Solanian's Belongings" QuestId="8330" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
 <TurnIn QuestName="The Shrine of Dath'Remar" QuestId="8345" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<If Condition="HasQuest(8336)">
-  <RunTo X="10394.88" Y="-6396.846" Z="49.95017" />
-  <CustomBehavior File="MyCTM" X="10403.87" Y="-6372.688" Z="35.91055" />
-</If>
 <TurnIn QuestName="A Fistful of Slivers" QuestId="8336" TurnInId="15296" TurnInName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
 <TurnIn QuestName="Thirst Unending" QuestId="8346" TurnInName="Arcanist Helion" TurnInId="15297"  X="10419.66" Y="-6318.618" Z="35.5736" />
-<!--# # # Level 4 # # # -->
-<If Condition="HasQuest(8327)" >
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-</If>
 <TurnIn QuestName="Report to Lanthan Perilon" QuestId="8327" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
-<If Condition="!HasQuest(8334) &amp;&amp; !IsQuestCompleted(8334) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
-  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="Aggression" QuestId="8334" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Tender" MobId="15271" KillCount="7"/>
 <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Feral Tender" MobId="15294" KillCount="7"/>
 <TurnIn QuestName="Aggression" QuestId="8334" TurnInName="Lanthan Perilon" TurnInId="15281" X="10302.25" Y="-6229.303" Z="26.62198" />
-<If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-<CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
-  <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
-<If Condition="!HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335)" >
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="15291" WaitTime="1000" CollectionDistance="50" X="10416.79" Y="-6316.604" Z="35.57223" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-</If>
 <PickUp QuestName="Felendren the Banished" QuestId="8335" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
-<If Condition="(HasQuest(8335) &amp;&amp; !IsQuestCompleted(8335))|| (!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; !HasItem(20483))" >
-  <RunTo X="10152.22" Y="-6006.758" Z="110.1539" />
-</If>
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="CollectItem" ItemId="20799" CollectCount="1" X="10130.96" Y="-5994.089" Z="110.1553"/>
 <If Condition="!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; !HasItem(20483)" >
   <LootMobs Value="true" />
-  <CustomBehavior File="CollectThings" MobId="15298" MobState="Alive" CollectItemCount="1" CollectItemId="20483" HuntingGroundRadius="200" >
-    <Hotspot X="10074.03" Y="-6044.311" Z="42.16472" />
-    <Hotspot X="10083" Y="-5989.162" Z="63.32516" />
-    <Hotspot X="10155.72" Y="-5980.525" Z="63.57067" />
-    <Hotspot X="10169.4" Y="-6011.75" Z="63.57126" />
-    <Hotspot X="10131.61" Y="-5994.761" Z="110.1554" />
-  </CustomBehavior>
+	<SetGrindArea>
+		<GrindArea>
+			<MobIDs>15298</MobIDs>
+			<Hotspots>
+				<Hotspot X="10074.03" Y="-6044.311" Z="42.16472" />
+				<Hotspot X="10083" Y="-5989.162" Z="63.32516" />
+				<Hotspot X="10155.72" Y="-5980.525" Z="63.57067" />
+				<Hotspot X="10169.4" Y="-6011.75" Z="63.57126" />
+				<Hotspot X="10131.61" Y="-5994.761" Z="110.1554" />
+			</Hotspots>
+		</GrindArea>
+	</SetGrindArea>
+	<GrindTo Condition="HasItem(20483)" />
   <LootMobs Value="null" />
 </If>
 <If Condition="!HasQuest(8338) &amp;&amp; !IsQuestCompleted(8338) &amp;&amp; HasItem(20483)" >
-  <PickUp QuestName="Tainted Arcane Sliver" QuestId="8338" GiverName="Tainted Arcane Sliver" GiverId="20483" GiverType="Item" />
+	<PickUp QuestName="Tainted Arcane Sliver" QuestId="8338" GiverName="Tainted Arcane Sliver" GiverId="20483" GiverType="Item" />
 </If>
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="KillMob" Name="Tainted Arcane Wraith" MobId="15298" KillCount="2" />
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="KillMob" Name="Arcane Wraith" MobId="15273" KillCount="8" />
 <If Condition="HasQuest(8335) &amp;&amp; IsQuestCompleted(8335)" >
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="3431" />
 </If>
 <TurnIn QuestName="Tainted Arcane Sliver" QuestId="8338" TurnInName="Arcanist Helion" TurnInId="15297" X="10419.66" Y="-6318.618" Z="35.5736" />
 <TurnIn QuestName="Felendren the Banished" QuestId="8335" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
@@ -427,7 +404,51 @@
 <PickUp QuestName="Package Recovery" QuestId="9705" GiverId="17849" GiverName="Slain Outrunner" X="9870.997" Y="-6557.191" Z="10.29913" />
 <TurnIn QuestName="Package Recovery" QuestId="9705" TurnInId="15301" TurnInName="Outrunner Alarion" X="9984.044" Y="-6478.019" Z="0.9970118" />
 <PickUp QuestName="Completing the Delivery" QuestId="8350" GiverName="Outrunner Alarion" GiverId="15301" X="9984.044" Y="-6478.019" Z="0.9970118" />
-<TurnIn QuestName="Completing the Delivery" QuestId="8350" TurnInName="Innkeeper Delaniel" TurnInId="15433" X="9476.913" Y="-6859.21" Z="17.34164" />
+<If Condition="HasQuest(8350)" >
+	<!--Mir2 Sell-->
+	<RunTo X="9533.109" Y="-6874.842" Z="18.59401" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="16257" WaitTime="1000" X="9534.379" Y="-6875.67" Z="18.75013" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="9487.833" Y="-6859.888" Z="17.42731" />
+		<CustomBehavior File="InteractWith" MobId="16259" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="9491.642" Y="-6856.795" Z="17.42993" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="9487.833" Y="-6859.888" Z="17.42731" />
+		<CustomBehavior File="InteractWith" MobId="16259" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="9491.642" Y="-6856.795" Z="17.42993" />
+	</If>
+	<TurnIn QuestName="Completing the Delivery" QuestId="8350" TurnInName="Innkeeper Delaniel" TurnInId="15433" X="9476.913" Y="-6859.21" Z="17.34164" />
+</If>
+<!--
+<If Condition="Me.ZoneId == 6455 || Me.ZoneId == 3430 || Me.ZoneId == 3487">
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
+	<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
+	<CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for port {TimeRemaining}" />
+</If>
+<If Condition="Me.ZoneId == 1497 || Me.ZoneId == 85">
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="2066.672" Y="285.47" Z="97.03136" />
+	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 164871 &amp;&amp; u.Distance &lt;= 25))" >
+  </While>
+	<DisableBehavior Name="Vendor" />
+	<CustomBehavior File="UseTransport" TransportId="164871"
+		WaitAtX="2067.576" WaitAtY="290.3322" WaitAtZ="97.03136"
+		GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
+		StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
+		TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
+		TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
+	<EnableBehavior Name="Vendor" />
+</If>
+<If Condition="Me.ZoneId == 1637 || Me.ZoneId == 14">
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
+	<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+-->
 <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="10034.75" Y="-7000.683" Z="61.57553" />
 <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="184502" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="10034.75" Y="-7000.683" Z="61.57553" />
