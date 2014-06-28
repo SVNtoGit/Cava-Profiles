@@ -499,7 +499,7 @@
   <If Condition="HasQuest(26916) &amp;&amp; !IsQuestCompleted(26916)">
 		<RunTo QuestId="26916" X="-8962.82" Y="-145.7038" Z="81.51518" />
 		<While Condition="!IsQuestCompleted(26916)">
-			<CustomBehavior File="InteractWith" InteractByCastingSpellId="122" MobId="44548" NumOfTimes="2" X="-8965.57" Y="-146.288" Z="81.50985" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="122" MobId="44548" NumOfTimes="2" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
   </If>
 	<TurnIn QuestName="Mastering the Arcane" QuestId="26916" TurnInName="Khelden Bremen" TurnInId="198" X="-8851.57" Y="-188.234" Z="89.31409" />
@@ -541,7 +541,7 @@
 		<RunTo QuestId="26918" X="-8962.82" Y="-145.7038" Z="81.51518" />
 		<CustomBehavior QuestId="26918" File="Misc\RunLua" Lua="CastSpellByID(105361)" WaitTime="1000" />
 		<While Condition="!IsQuestCompleted(26918)" >
-			<CustomBehavior File="InteractWith" QuestId="26918" MobId="44548" InteractByCastingSpellId="35395" X="-8967.868" Y="-153.4938" Z="81.50329" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26918" MobId="44548" InteractByCastingSpellId="35395" X="-8967.868" Y="-153.4938" Z="81.50329" />
 		</While>
   </If>
 	<TurnIn QuestName="The Power of the Light" QuestId="26918" TurnInName="Brother Sammuel" TurnInId="925" X="-8914.567" Y="-215.0163" Z="82.11682" />
@@ -583,7 +583,7 @@
   <RunTo QuestId="26919" X="-8962.82" Y="-145.7038" Z="81.51518" />
   <If Condition="HasQuest(26919) &amp;&amp; !IsQuestCompleted(26919)">
 		<While Condition="!IsQuestCompleted(26919)">
-      <CustomBehavior File="InteractWith" QuestId="26919" InteractByCastingSpellId="589" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26919" InteractByCastingSpellId="589" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
   </If>
 	<TurnIn QuestName="Healing the Wounded" QuestId="26919" TurnInName="Priestess Anetta" TurnInId="375" X="-8853.587" Y="-193.336" Z="81.93242" />
@@ -622,8 +622,13 @@
   <If Condition="HasQuest(26915) &amp;&amp; !IsQuestCompleted(26915)">
 		<RunTo QuestId="26915" X="-8962.82" Y="-145.7038" Z="81.51518" />
 		<While Condition="!IsQuestCompleted(26915)">
-			<CustomBehavior File="InteractWith" InteractByCastingSpellId="1752" MobId="44548" NumOfTimes="3" X="-8965.57" Y="-146.288" Z="81.50985" />
-      <CustomBehavior File="InteractWith" InteractByCastingSpellId="2098" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
+   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26915" MobId="44548" WaitTime="1000" X="-8965.57" Y="-146.288" Z="81.50985" />
+    <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="44548" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8965.57" Y="-146.288" Z="81.50985" />
+    <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="44548" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8965.57" Y="-146.288" Z="81.50985" />
+<!--
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="1752" MobId="44548" NumOfTimes="3" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" InteractByCastingSpellId="2098" MobId="44548" NumOfTimes="1" X="-8965.57" Y="-146.288" Z="81.50985" />
+-->
 		</While>
   </If>
 	<TurnIn QuestName="The Deepest Cut" QuestId="26915" TurnInName="Jorik Kerridan" TurnInId="915" X="-8863.468" Y="-210.9055" Z="80.57269" />
@@ -664,7 +669,7 @@
   <If Condition="HasQuest(26914) &amp;&amp; !IsQuestCompleted(26914)">
 		<While Condition="!IsQuestCompleted(26914)">
 			<RunTo QuestId="26914" X="-8962.82" Y="-145.7038" Z="81.51518" />
-      <CustomBehavior File="InteractWith" QuestId="26914" InteractByCastingSpellId="172" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26914" InteractByCastingSpellId="172" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
   </If>
 	<TurnIn QuestName="Immolation" QuestId="26914" TurnInName="Drusilla La Salle" TurnInId="459" X="-8926.743" Y="-195.5889" Z="80.58879" />
@@ -705,7 +710,7 @@
   <If Condition="HasQuest(26913) &amp;&amp; !IsQuestCompleted(26913)">
 		<While Condition="!IsQuestCompleted(26913)">
 			<RunTo QuestId="26913" X="-8941.607" Y="-144.8659" Z="82.17437" />
-      <CustomBehavior File="InteractWith" QuestId="26913" InteractByCastingSpellId="100" MobId="44548" Range="20" MinRange="15" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26913" InteractByCastingSpellId="100" MobId="44548" Range="20" MinRange="15" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
 	</If>
   <TurnIn QuestName="Charging into Battle" QuestId="26913" TurnInName="Llane Beshere" TurnInId="911" X="-8918.364" Y="-208.4109" Z="82.12605" />
@@ -746,7 +751,7 @@
   <If Condition="HasQuest(26917) &amp;&amp; !IsQuestCompleted(26917)">
 		<While Condition="!IsQuestCompleted(26917)">
 			<RunTo QuestId="26917" X="-8962.82" Y="-145.7038" Z="81.51518" />
-      <CustomBehavior File="InteractWith" QuestId="26917" InteractByCastingSpellId="56641" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26917" InteractByCastingSpellId="56641" MobId="44548" NumOfTimes="5" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
 	</If>
   <TurnIn QuestName="The Hunter's Path" QuestId="26917" TurnInName="Ashley Blank" TurnInId="43278" X="-8924.651" Y="-149.9028" Z="81.36339" />
@@ -787,8 +792,8 @@
   <If Condition="HasQuest(31142) &amp;&amp; !IsQuestCompleted(31142)">
 		<RunTo QuestId="31142" X="-8962.82" Y="-145.7038" Z="81.51518" />
 		<While Condition="!IsQuestCompleted(31142)">
-			<CustomBehavior File="InteractWith" QuestId="31142" InteractByCastingSpellId="100780" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
-      <CustomBehavior File="InteractWith" QuestId="31142" InteractByCastingSpellId="100787" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31142" InteractByCastingSpellId="100780" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31142" InteractByCastingSpellId="100787" MobId="44548" X="-8965.57" Y="-146.288" Z="81.50985" />
 		</While>
   </If>
 	<TurnIn QuestName="Palm of the Tiger" QuestId="31142" TurnInName="Bao" TurnInId="63258" X="-8907.551" Y="-212.0174" Z="82.1137" />

@@ -263,8 +263,8 @@
 <If Condition="Me.Class == WoWClass.Rogue">
   <TurnIn QuestName="Encrypted Parchment" QuestId="3088" TurnInName="Rwag" TurnInId="3155" X="-617.059" Y="-4202.635" Z="38.13412" />
   <PickUp QuestName="Eviscerate" QuestId="25141" GiverName="Rwag" GiverId="3155" X="-617.059" Y="-4202.635" Z="38.13412" />
+    <RunTo QuestId="25141" X="-639.7845" Y="-4239.468" Z="38.13419" />
   <While Condition="HasQuest(25141) &amp;&amp; !IsQuestCompleted(25141)">
-    <RunTo X="-639.7845" Y="-4239.468" Z="38.13419" />
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25141" MobId="44820" WaitTime="1000" X="-639.7845" Y="-4239.468" Z="38.13419" />
     <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="44820" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-641.186" Y="-4239.43" Z="38.13395" />
     <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="44820" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-641.186" Y="-4239.43" Z="38.13395" />
