@@ -154,7 +154,7 @@
 
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsAlliance || Me.Race != WoWRace.Undead" >
+<If Condition="Me.Race != WoWRace.Undead" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 6454 &amp;&amp; Me.ZoneId != 85">
@@ -163,9 +163,14 @@
   Please move your char to: TIRISFAL GLADES/DEATHKNELL\n
   and start bot." />
 </If>
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Undead Quests (1-5)" LogColor="Aquamarine" />
-
-<!--# # # Level 1 # # # -->
 <PickUp QuestName="Fresh out of the Grave" QuestId="24959" GiverName="Agatha" GiverId="49044" X="1700.2" Y="1703.361" Z="137.1976" />
 <TurnIn QuestName="Fresh out of the Grave" QuestId="24959" TurnInName="Undertaker Mordo" TurnInId="1568" X="1689.712" Y="1674.793" Z="135.5913" />
 <PickUp QuestName="the Shadow Grave" QuestId="28608" GiverName="Undertaker Mordo" GiverId="1568" X="1689.712" Y="1674.793" Z="135.5913" />
@@ -175,22 +180,14 @@
 <PickUp QuestName="Those That Couldn't Be Saved" QuestId="26799" GiverId="1568" GiverName="Undertaker Mordo" X="1689.712" Y="1674.793" Z="135.5913" />
 <PickUp QuestName="The Wakening" QuestId="24960" GiverId="2307" GiverName="Caretaker Caice" X="1685.67" Y="1647.569" Z="137.2404" />
 <If Condition="HasQuest(24960) &amp;&amp; !IsQuestCompleted(24960)">
-  <While Condition="!IsObjectiveComplete(3, 24960)" >
-    <RunTo X="1738.893" Y="1703.881" Z="128.6123" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="49231" NumOfTimes="1" GossipOptions="1,1,1" CollectionDistance="50" X="1740.354" Y="1704.372" Z="128.7762" />
-  </While>
-  <While Condition="!IsObjectiveComplete(1, 24960)" >
-    <RunTo X="1756.616" Y="1667.141" Z="121.32" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="38895" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1757.392" Y="1666.097" Z="121.2159" />
-  </While>
-  <While Condition="!IsObjectiveComplete(2, 24960)" >
-    <RunTo X="1753.84" Y="1642.301" Z="117.7763" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="49230" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1753.845" Y="1640.663" Z="117.5054" />
+	<While Condition="!IsQuestCompleted(24960)">
+    <CustomBehavior File="InteractWith" QuestId="24960" QuestObjectiveIndex="3" NonCompeteDistance="0" MobId="49231" NumOfTimes="1" GossipOptions="1,1,1" CollectionDistance="50" X="1740.354" Y="1704.372" Z="128.7762" />
+    <CustomBehavior File="InteractWith" QuestId="24960" QuestObjectiveIndex="1" NonCompeteDistance="0" MobId="38895" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1757.392" Y="1666.097" Z="121.2159" />
+    <CustomBehavior File="InteractWith" QuestId="24960" QuestObjectiveIndex="2" NonCompeteDistance="0" MobId="49230" NumOfTimes="1" GossipOptions="1,1" CollectionDistance="50" X="1753.845" Y="1640.663" Z="117.5054" />
   </While>
 </If>
 <Objective QuestName="Those That Couldn't Be Saved" QuestId="26799" Type="KillMob" MobId="1501" KillCount="6"/>
 <TurnIn QuestName="Those That Couldn't Be Saved" QuestId="26799" TurnInId="1568" GiverName="Undertaker Mordo" X="1689.712" Y="1674.793" Z="135.5913" />
-<!--# # # Level 2 # # # -->
 <TurnIn QuestName="The Wakening" QuestId="24960" TurnInId="2307" TurnInName="Caretaker Caice" X="1685.67" Y="1647.569" Z="137.2404" />
 <PickUp QuestName="Beyond the Graves" QuestId="25089" GiverId="2307" GiverName="Caretaker Caice" X="1685.67" Y="1647.569" Z="137.2404" />
 <TurnIn QuestName="Beyond the Graves" QuestId="25089" TurnInId="1740" TurnInName="Deathguard Saltain" X="1863.524" Y="1602.818" Z="94.52253" />
@@ -212,14 +209,13 @@
 </If>
 <TurnIn QuestName="Recruitment" QuestId="26800" TurnInName="Deathguard Saltain" TurnInId="1740" X="1863.524" Y="1602.818" Z="94.52253" />
 <TurnIn QuestName="Scourge on our Perimeter" QuestId="26801" TurnInId="1569" TurnInName="Shadow Priest Sarvis" X="1843.317" Y="1639.905" Z="97.62814" />
-<!--# # # Level 3 # # # -->
 <PickUp QuestName="The Truth of the Grave" QuestId="24961" GiverId="1661" GiverName="Novice Elreth" X="1847.73" Y="1638.654" Z="96.93375" />
 <If Condition="Me.Class == WoWClass.Rogue">
   <PickUp QuestName="Encrypted Scroll" QuestId="3096" GiverId="1569" GiverName="Shadow Priest Sarvis" X="1843.317" Y="1639.905" Z="97.62814" />
   <TurnIn QuestName="Encrypted Scroll" QuestId="3096" TurnInId="2122" TurnInName="David Trias" X="1859.652" Y="1563.301" Z="94.30677"/>
   <PickUp QuestName="Stab!" QuestId="24967" GiverId="2122" GiverName="David Trias" X="1859.652" Y="1563.301" Z="94.30677"/>
   <While Condition="HasQuest(24967) &amp;&amp; !IsQuestCompleted(24967)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
+    <RunTo QuestId="24967" X="1823.106" Y="1603.139" Z="95.67953" />
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24967" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="44794" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="1821.23" Y="1603.28" Z="95.78717" />
     <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="44794" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="1821.23" Y="1603.28" Z="95.78717" />
@@ -231,9 +227,8 @@
   <TurnIn QuestName="Hallowed Scroll" QuestId="3097" TurnInId="2123" TurnInName="Dark Cleric Duesten" X="1848.324" Y="1627.631" Z="96.93338"/>
   <PickUp QuestName="Of Light and Shadows" QuestId="24966" GiverId="2123" GiverName="Dark Cleric Duesten" X="1848.324" Y="1627.631" Z="96.93338"/>
   <While Condition="HasQuest(24966) &amp;&amp; !IsQuestCompleted(24966)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24966" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-	<CustomBehavior File="CastSpellOn" QuestId="24966" SpellId="589" MobId="44794" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="24966" X="1823.106" Y="1603.139" Z="95.67953" />
+    <CustomBehavior File="InteractWith" QuestId="24966" NonCompeteDistance="0" InteractByCastingSpellId="589" MobId="44794" NumOfTimes="5" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Of Light and Shadows" QuestId="24966" TurnInId="2123" TurnInName="Dark Cleric Duesten" X="1848.324" Y="1627.631" Z="96.93338"/>
 </If>
@@ -242,9 +237,8 @@
   <TurnIn QuestName="Glyphic Scroll" QuestId="3098" TurnInId="2124" TurnInName="Isabella" X="1847.386" Y="1635.52" Z="96.93366"/>
   <PickUp QuestName="Magic Training" QuestId="24965" GiverId="2124" GiverName="Isabella" X="1847.386" Y="1635.52" Z="96.93366"/>
   <While Condition="HasQuest(24965) &amp;&amp; !IsQuestCompleted(24965)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24965" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-    <CustomBehavior File="CastSpellOn" SpellId="122" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" Range="30" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="24965" X="1823.106" Y="1603.139" Z="95.67953" />
+		<CustomBehavior File="InteractWith" QuestId="24965" NonCompeteDistance="0" InteractByCastingSpellId="122" MobId="44494" NumOfTimes="2" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Magic Training" QuestId="24965" TurnInId="2124" TurnInName="Isabella" X="1847.386" Y="1635.52" Z="96.93366"/>
 </If>
@@ -253,9 +247,8 @@
   <TurnIn QuestName="Tainted Scroll" QuestId="3099" TurnInId="2126" TurnInName="Maximillion" X="1839.03" Y="1636.539" Z="96.93337"/>
   <PickUp QuestName="Dark Deeds" QuestId="24968" GiverId="2126" GiverName="Maximillion" X="1839.03" Y="1636.539" Z="96.93337"/>
   <While Condition="HasQuest(24968) &amp;&amp; !IsQuestCompleted(24968)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24968" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-    <CustomBehavior File="CastSpellOn" QuestId="24968" SpellId="172" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="24968" X="1823.106" Y="1603.139" Z="95.67953" />
+    <CustomBehavior File="InteractWith" QuestId="24968" NonCompeteDistance="0" InteractByCastingSpellId="172" MobId="44794" NumOfTimes="5" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Dark Deeds" QuestId="24968" TurnInId="2126" TurnInName="Maximillion" X="1839.03" Y="1636.539" Z="96.93337"/>
 </If>
@@ -264,10 +257,8 @@
   <TurnIn QuestName="Simple Scroll" QuestId="3095" TurnInId="2119" TurnInName="Dannal Stern" X="1860.85" Y="1557.41" Z="94.78485"/>
   <PickUp QuestName="Charging into Battle" QuestId="24969" GiverId="2119" GiverName="Dannal Stern" X="1860.85" Y="1557.41" Z="94.78485"/>
   <While Condition="HasQuest(24969) &amp;&amp; !IsQuestCompleted(24969)">
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24969" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-    <RunTo X="1862.386" Y="1600.113" Z="94.35104" />
-    <RunTo X="1840.043" Y="1601.823" Z="94.98824" />
-    <CustomBehavior File="CastSpellOn" QuestId="24969" SpellId="100" MobId="44794" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="24969" X="1840.043" Y="1601.823" Z="94.98824" />
+    <CustomBehavior File="InteractWith" QuestId="24969"  NonCompeteDistance="0" InteractByCastingSpellId="100" MobId="44494" Range="20" MinRange="15" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Charging into Battle" QuestId="24969" TurnInId="2119" TurnInName="Dannal Stern" X="1860.85" Y="1557.41" Z="94.78485"/>
 </If>
@@ -276,9 +267,8 @@
   <TurnIn QuestName="Trail-Worn Scroll" QuestId="24962" TurnInId="38911" TurnInName="Xavier the Huntsman" X="1861.363" Y="1612.109" Z="95.60777"/>
   <PickUp QuestName="The Thrill of the Hunt" QuestId="24964" GiverId="38911" GiverName="Xavier the Huntsman" X="1861.363" Y="1612.109" Z="95.60777"/>
   <While Condition="HasQuest(24964) &amp;&amp; !IsQuestCompleted(24964)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24964" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-    <CustomBehavior File="CastSpellOn" QuestId="24964" NumOfTimes="1" SpellId="56641" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="24964" X="1823.106" Y="1603.139" Z="95.67953" />
+    <CustomBehavior File="InteractWith" QuestId="24964" NonCompeteDistance="0" InteractByCastingSpellId="56641" MobId="44794" NumOfTimes="5" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="The Thrill of the Hunt" QuestId="24964" TurnInId="38911" TurnInName="Xavier the Huntsman" X="1861.363" Y="1612.109" Z="95.60777"/>
 </If>
@@ -287,10 +277,9 @@
   <TurnIn QuestName="Scribbled Scroll" QuestId="31146" TurnInName="Ting, Strong of Stomach" TurnInId="63272" X="1857.422" Y="1568.047" Z="94.3139" />
   <PickUp QuestName="Tiger Palm" QuestId="31147" GiverName="Ting, Strong of Stomach" GiverId="63272" X="1857.422" Y="1568.047" Z="94.3139" />
   <While Condition="HasQuest(31147) &amp;&amp; !IsQuestCompleted(31147)">
-    <RunTo X="1823.106" Y="1603.139" Z="95.67953" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31147" MobId="44794" WaitTime="1000" X="1821.23" Y="1603.28" Z="95.78717" />
-    <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100780" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
-    <CustomBehavior File="CastSpellOn" NumOfTimes="1" SpellId="100787" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
+    <RunTo QuestId="31147" X="1823.106" Y="1603.139" Z="95.67953" />
+    <CustomBehavior File="InteractWith" QuestId="31147" NonCompeteDistance="0" InteractByCastingSpellId="100780" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
+    <CustomBehavior File="InteractWith" QuestId="31147" NonCompeteDistance="0" InteractByCastingSpellId="100787" MobId="44794" X="1821.23" Y="1603.28" Z="95.78717" />
   </While>
   <TurnIn QuestName="Tiger Palm" QuestId="31147" TurnInName="Ting, Strong of Stomach" TurnInId="63272" X="1857.422" Y="1568.047" Z="94.3139" />
 </If>
@@ -308,7 +297,6 @@
 <TurnIn QuestName="The Damned" QuestId="26802" TurnInId="1570" TurnInName="Executor Arren" X="1996.085" Y="1543.51" Z="77.99786" />
 <PickUp QuestName="Night Web's Hollow" QuestId="24973" GiverName="Executor Arren" GiverId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
 <Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1504" KillCount="8"/>
-<!--# # # Level 4 # # # -->
 <Objective QuestName="Night Web's Hollow" QuestId="24973" Type="KillMob" MobId="1505" KillCount="5"/>
 <TurnIn QuestName="Night Web's Hollow" QuestId="24973" TurnInName="Executor Arren" TurnInId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
 <PickUp QuestName="No Better Than the Zombies" QuestId="24970" GiverName="Executor Arren" GiverId="1570" X="1996.085" Y="1543.51" Z="77.99786" />
@@ -317,12 +305,47 @@
 <Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49424" KillCount="1"/>
 <Objective QuestName="Assault on the Rotbrain Encampment" QuestId="24971" Type="KillMob" MobId="49422" KillCount="8"/>
 <If Condition="HasQuest(24971)">
-  <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="5692" />
+	<TurnIn QuestName="Assault on the Rotbrain Encampment" QuestId="24971" TurnInName="Shadow Priest Sarvis" TurnInId="1569" X="1843.317" Y="1639.905" Z="97.62814" />
 </If>
-<TurnIn QuestName="Assault on the Rotbrain Encampment" QuestId="24971" TurnInName="Shadow Priest Sarvis" TurnInId="1569" X="1843.317" Y="1639.905" Z="97.62814" />
 <PickUp QuestName="Vital Intelligence" QuestId="24972" GiverName="Shadow Priest Sarvis" GiverId="1569" X="1843.317" Y="1639.905" Z="97.62814" />
-<TurnIn QuestName="Vital Intelligence" QuestId="24972" TurnInName="Deathguard Simmer" TurnInId="1519" X="2220.611" Y="1011.286" Z="37.12381" />
+<If Condition="HasQuest(24972)">
+	<TurnIn QuestName="Vital Intelligence" QuestId="24972" TurnInName="Deathguard Simmer" TurnInId="1519" X="2220.611" Y="1011.286" Z="37.12381" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10666" WaitTime="1000" X="2238.561" Y="1029.307" Z="36.39568" />
+	<!--check Bags-->
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="2237.002" Y="1023.227" Z="36.46513" />
+		<CustomBehavior File="InteractWith" MobId="44034" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="2234.77" Y="1021.9" Z="36.44963" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="2237.002" Y="1023.227" Z="36.46513" />
+		<CustomBehavior File="InteractWith" MobId="44034" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="2234.77" Y="1021.9" Z="36.44963" />	
+	</If>
+</If>
+<!--
+<If Condition="Me.ZoneId == 6454 || Me.ZoneId == 1497 || Me.ZoneId == 85">
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="2066.713" Y="290.0318" Z="97.00895" />
+	<While Condition="(ObjectManager.GetObjectsOfType&lt;WoWGameObject&gt;().Any(u =&gt; u.Entry == 164871 &amp;&amp; u.Distance &lt;= 25))" >
+  </While>
+	<DisableBehavior Name="Vendor" />
+	<CustomBehavior File="UseTransport" TransportId="164871"
+		WaitAtX="2066.713" WaitAtY="290.0318" WaitAtZ="97.00895"
+		GetOffX="1841.301" GetOffY="-4392.312" GetOffZ="135.233"
+		StandOnX="2068.504" StandOnY="295.32117" StandOnZ="97.27293"
+		TransportStartX="2062.376" TransportStartY="292.998" TransportStartZ="114.973"
+		TransportEndX="1833.509" TransportEndY="-4391.523" TransportEndZ="152.7679" />
+	<EnableBehavior Name="Vendor" />
+</If>
+<If Condition="Me.ZoneId == 1637 || Me.ZoneId == 14">
+	<CustomBehavior File="Message" Text="Moving to DUROTAR, Please do not stop bot" LogColor="Aquamarine" />
+	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
+	<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+-->
 <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </QuestOrder>
 </HBProfile>

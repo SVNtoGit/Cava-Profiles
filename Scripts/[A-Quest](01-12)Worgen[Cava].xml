@@ -386,8 +386,8 @@
   <TurnIn QuestName="Someone's Keeping Track of You" QuestId="14269" TurnInName="Loren the Fence" TurnInId="35871" X="-1696.627" Y="1298.148" Z="20.28437" />
   <PickUp QuestName="Eviscerate" QuestId="14272" GiverName="Loren the Fence" GiverId="35871" X="-1696.627" Y="1298.148" Z="20.28437" />
 	<If Condition="HasQuest(14272) &amp;&amp; !IsQuestCompleted(14272)" >
-		<While Condition="!IsQuestCompleted(14272)">
 			<RunTo QuestId="14272" X="-1690.998" Y="1316.906" Z="19.89987" />
+		<While Condition="!IsQuestCompleted(14272)">
 			<CustomBehavior File="InteractWith" QuestId="14272" InteractByCastingSpellId="1752" MobId="35118" WaitTime="2000" ProactiveCombatStrategy="ClearMobsTargetingUs" X="-1702.011" Y="1307.625" Z="19.78224" />
 		</While>
 	</If>
