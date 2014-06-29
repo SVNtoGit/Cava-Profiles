@@ -190,10 +190,9 @@
     </Hotspots>
   </Objective>
 </Quest>
-
 <!-- ################################### End of Quest Overrides #################################################################### -->
 <QuestOrder IgnoreCheckPoints="False" >
-<If Condition="Me.IsAlliance || Me.Race != WoWRace.Troll" >
+<If Condition="Me.Race != WoWRace.Troll" >
   <CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
 </If>
 <If Condition="Me.ZoneId != 6453 &amp;&amp; Me.ZoneId != 14">
@@ -202,46 +201,47 @@
   Please move your char to: DUROTAR/ECHO ISLES\n
   and start bot." />
 </If>
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+<CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
+<CustomBehavior File="EnablePlugin" Names="MIR2" />
+<CustomBehavior File="EnablePlugin" Names="Anti Drown" />
+<CustomBehavior File="UserSettings" AutoEquip="true" />
+<CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Troll Quests (1-5)" LogColor="Aquamarine" />
-
-<!--# # # Level 1 # # # -->
 <If Condition="Me.Class == WoWClass.Monk">
   <PickUp QuestName="The Rise of the Darkspear" QuestId="31159" GiverName="Jin'thala" GiverId="37951" X="-1168.401" Y="-5265.219" Z="0.8493478" />
   <TurnIn QuestName="The Rise of the Darkspear" QuestId="31159" TurnInName="Zabrax" TurnInId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <PickUp QuestName="The Basics: Hitting Things" QuestId="31158" GiverName="Zabrax" GiverId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <If Condition="HasQuest(31158) &amp;&amp; !IsQuestCompleted(31158)" >
-    <CustomBehavior File="KillUntilComplete" QuestId="31158" MobId="38038" X="-1149.391" Y="-5441.252" Z="12.04295" />
+		<CustomBehavior File="KillUntilComplete" QuestId="31158" MobId="38038" X="-1149.391" Y="-5441.252" Z="12.04295" />
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="31158" TurnInName="Zabrax" TurnInId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <PickUp QuestName="A Rough Start" QuestId="31160" GiverName="Zabrax" GiverId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
-  <If Condition="HasQuest(31160) &amp;&amp; !IsQuestCompleted(31160)" >
-    <Objective QuestName="A Rough Start" QuestId="31160" Type="CollectItem" ItemId="50222" CollectCount="6" />
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="31160" Type="CollectItem" ItemId="50222" CollectCount="6" />
   <TurnIn QuestName="A Rough Start" QuestId="31160" TurnInName="Zabrax" TurnInId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <PickUp QuestName="Proving Pit" QuestId="31161" GiverName="Zabrax" GiverId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <If Condition="HasQuest(31161) &amp;&amp; !IsQuestCompleted(31161)" >
     <While Condition="!IsQuestCompleted(31161)" >
-      <RunTo QuestId="31161" X="-1160.432" Y="-5531.69" Z="11.95188" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31161" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="31161" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="31161" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="31161" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="31161" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="31161" X="-1160.432" Y="-5531.69" Z="11.95188" />
+			<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31161" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
+			<RunTo QuestId="31161" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="31161" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="31161" NonCompeteDistance="0" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="31161" TurnInName="Zabrax" TurnInId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Monk" QuestId="31162" GiverName="Zabrax" GiverId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
   <If Condition="HasQuest(31162) &amp;&amp; !IsQuestCompleted(31162)">
     <While Condition="!IsQuestCompleted(31162)">
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31162" InteractByCastingSpellId="100780" MobId="38038" X="-1141.224" Y="-5444.458" Z="11.98756" />
+    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31162" InteractByCastingSpellId="100787" MobId="38038" X="-1141.224" Y="-5444.458" Z="11.98756" />
+<!--
    	  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="31162" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
 	  <CustomBehavior File="CastSpellOn" SpellId="100780" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" X="-1141.224" Y="-5444.458" Z="11.98756" />
 	  <CustomBehavior File="CastSpellOn" SpellId="100787" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" X="-1141.224" Y="-5444.458" Z="11.98756" />
+-->
     </While>
   </If>
   <TurnIn QuestName="The Arts of a Monk" QuestId="31162" TurnInName="Zabrax" TurnInId="63310" X="-1149.391" Y="-5441.252" Z="12.04295" />
@@ -257,9 +257,7 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24765" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="A Rough Start" QuestId="24767" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
-  <If Condition="HasQuest(24767) &amp;&amp; !IsQuestCompleted(24767)" >
-    <Objective QuestName="A Rough Start" QuestId="24767" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
+  <Objective QuestName="A Rough Start" QuestId="24767" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <!--# # # Level 2 # # # -->
   <TurnIn QuestName="A Rough Start" QuestId="24767" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="Proving Pit" QuestId="24768" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
@@ -267,13 +265,9 @@
     <While Condition="!IsQuestCompleted(24768)" >
       <RunTo QuestId="24768" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24768" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24768" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24768" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24768" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24768" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24768" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24768" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24768" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
@@ -282,7 +276,7 @@
   <PickUp QuestName="The Arts of a Druid" QuestId="24766" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <While Condition="!IsQuestCompleted(24766)">
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24766" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
-	<CustomBehavior File="CastSpellOn" QuestId="24766" SpellId="8921" MobId="38038" MinRange="8" X="-1141.224" Y="-5444.458" Z="11.98756" />
+		<CustomBehavior File="CastSpellOn" QuestId="24766" SpellId="8921" MobId="38038" MinRange="8" X="-1141.224" Y="-5444.458" Z="11.98756" />
   </While>
   <TurnIn QuestName="The Arts of a Druid" QuestId="24766" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="More Than Expected" QuestId="24769" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
@@ -297,23 +291,16 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24771" TurnInName="Legati" TurnInId="38244" X="-1125.962" Y="-5446.971" Z="11.98218" />
   <PickUp QuestName="A Rough Start" QuestId="24773" GiverName="Legati" GiverId="38244" X="-1125.962" Y="-5446.971" Z="11.98218" />
-  <If Condition="HasQuest(24773) &amp;&amp; !IsQuestCompleted(24773)" >
-    <Objective QuestName="A Rough Start" QuestId="24773" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24773" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24773" TurnInName="Legati" TurnInId="38244" X="-1125.962" Y="-5446.971" Z="11.98218" />
   <PickUp QuestName="Proving Pit" QuestId="24774" GiverName="Legati" GiverId="38244" X="-1125.962" Y="-5446.971" Z="11.98218" />
   <If Condition="HasQuest(24774) &amp;&amp; !IsQuestCompleted(24774)" >
     <While Condition="!IsQuestCompleted(24774)" >
       <RunTo QuestId="24774" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24774" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24774" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24774" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24774" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24774" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24774" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24774" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24774" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
@@ -338,28 +325,20 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24777" TurnInName="Ortezza" TurnInId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
   <PickUp QuestName="A Rough Start" QuestId="24779" GiverName="Ortezza" GiverId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
-  <If Condition="HasQuest(24779) &amp;&amp; !IsQuestCompleted(24779)" >
-    <Objective QuestName="A Rough Start" QuestId="24779" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24779" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24779" TurnInName="Ortezza" TurnInId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
   <PickUp QuestName="Proving Pit" QuestId="24780" GiverName="Ortezza" GiverId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
   <If Condition="HasQuest(24780) &amp;&amp; !IsQuestCompleted(24780)" >
     <While Condition="!IsQuestCompleted(24780)" >
       <RunTo QuestId="24780" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24780" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24780" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24780" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24780" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24780" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24780" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24780" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24780" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24780" TurnInName="Ortezza" TurnInId="38247" X="-1136.46" Y="-5525.13" Z="11.99713" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Hunter" QuestId="24778" GiverName="Ortezza" GiverId="38247" X="-1136.46" Y="-5525.13" Z="11.99713" />
   <While Condition="!IsQuestCompleted(24778)" >
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24778" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
@@ -378,28 +357,20 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24639" TurnInName="Nortet" TurnInId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
   <PickUp QuestName="A Rough Start" QuestId="24641" GiverName="Nortet" GiverId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
-  <If Condition="HasQuest(24641) &amp;&amp; !IsQuestCompleted(24641)" >
-    <Objective QuestName="A Rough Start" QuestId="24641" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24641" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24641" TurnInName="Nortet" TurnInId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
   <PickUp QuestName="Proving Pit" QuestId="24642" GiverName="Nortet" GiverId="38037" />
   <If Condition="HasQuest(24642) &amp;&amp; !IsQuestCompleted(24642)" >
     <While Condition="!IsQuestCompleted(24642)" >
       <RunTo QuestId="24642" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24642" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24642" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24642" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24642" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24642" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24642" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24642" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24642" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24642" TurnInName="Nortet" TurnInId="38037" X="-1158.99" Y="-5421.14" Z="13.21972" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Warrior" QuestId="24640" GiverName="Nortet" GiverId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
   <While Condition="!IsQuestCompleted(24640)" >
     <RunTo QuestId="24640" X="-1170.316" Y="-5432.534" Z="12.05945" />
@@ -421,32 +392,24 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24783" TurnInName="Tunari" TurnInId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
   <PickUp QuestName="A Rough Start" QuestId="24785" GiverName="Tunari" GiverId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
-  <If Condition="HasQuest(24785) &amp;&amp; !IsQuestCompleted(24785)" >
-    <Objective QuestName="A Rough Start" QuestId="24785" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24785" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24785" TurnInName="Tunari" TurnInId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
   <PickUp QuestName="Proving Pit" QuestId="24786" GiverName="Tunari" GiverId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
   <If Condition="HasQuest(24786) &amp;&amp; !IsQuestCompleted(24786)" >
     <While Condition="!IsQuestCompleted(24786)" >
       <RunTo QuestId="24786" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24786" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24786" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24786" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24786" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24786" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24786" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24786" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24786" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24786" TurnInName="Tunari" TurnInId="38245" X="-1137" Y="-5528.23" Z="11.97896" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="Learnin' tha Word" QuestId="24784" GiverName="Tunari" GiverId="38245" X="-1137" Y="-5528.23" Z="11.97896" />
   <While Condition="!IsQuestCompleted(24784)" >
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24784" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
-	<CustomBehavior File="CastSpellOn" QuestId="24784" SpellId="589" MobId="38038" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="-1128.101" Y="-5521.003" Z="12.29303" />
+		<CustomBehavior File="CastSpellOn" QuestId="24784" SpellId="589" MobId="38038" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="-1128.101" Y="-5521.003" Z="12.29303" />
   </While>
   <TurnIn QuestName="Learnin' tha Word" QuestId="24784" TurnInName="Tunari" TurnInId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
   <PickUp QuestName="More Than Expected" QuestId="24787" GiverName="Tunari" GiverId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
@@ -461,28 +424,20 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24759" TurnInName="Nekali" TurnInId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
   <PickUp QuestName="A Rough Start" QuestId="24761" GiverName="Nekali" GiverId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
-  <If Condition="HasQuest(24761) &amp;&amp; !IsQuestCompleted(24761)" >
-    <Objective QuestName="A Rough Start" QuestId="24761" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24761" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24761" TurnInName="Nekali" TurnInId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
   <PickUp QuestName="Proving Pit" QuestId="24762" GiverName="Nekali" GiverId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
   <If Condition="HasQuest(24762) &amp;&amp; !IsQuestCompleted(24762)" >
     <While Condition="!IsQuestCompleted(24762)" >
       <RunTo QuestId="24762" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24762" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24762" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24762" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24762" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24762" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24762" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24762" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24762" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24762" TurnInName="Nekali" TurnInId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Shaman" QuestId="24760" GiverName="Nekali" GiverId="38242" />
   <While Condition="!IsQuestCompleted(24760)" >
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24760" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
@@ -501,23 +456,16 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="26273" TurnInName="Voldreka" TurnInId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
   <PickUp QuestName="A Rough Start" QuestId="26275" GiverName="Voldreka" GiverId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
-  <If Condition="HasQuest(26275) &amp;&amp; !IsQuestCompleted(26275)" >
-    <Objective QuestName="A Rough Start" QuestId="26275" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="26275" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="26275" TurnInName="Voldreka" TurnInId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
   <PickUp QuestName="Proving Pit" QuestId="26276" GiverName="Voldreka" GiverId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
   <If Condition="HasQuest(26276) &amp;&amp; !IsQuestCompleted(26276)" >
     <While Condition="!IsQuestCompleted(26276)" >
       <RunTo QuestId="26276" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26276" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="26276" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="26276" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="26276" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="26276" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="26276" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="26276" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="26276" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
@@ -541,23 +489,16 @@
   </If>
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24751" TurnInName="Soratha" TurnInId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <PickUp QuestName="A Rough Start" QuestId="24753" GiverName="Soratha" GiverId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
-  <If Condition="HasQuest(24753) &amp;&amp; !IsQuestCompleted(24753)" >
-    <Objective QuestName="A Rough Start" QuestId="24753" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  </If>
-  <!--# # # Level 2 # # # -->
+  <Objective QuestName="A Rough Start" QuestId="24753" Type="CollectItem" ItemId="50222" CollectCount="6"/>
   <TurnIn QuestName="A Rough Start" QuestId="24753" TurnInName="Soratha" TurnInId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <PickUp QuestName="Proving Pit" QuestId="24754" GiverName="Soratha" GiverId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <If Condition="HasQuest(24754) &amp;&amp; !IsQuestCompleted(24754)" >
     <While Condition="!IsQuestCompleted(24754)" >
       <RunTo QuestId="24754" X="-1160.432" Y="-5531.69" Z="11.95188" />
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24754" MobId="39062" GossipOptions="1" NumOfTimes="1" X="-1143.191" Y="-5429.963" Z="13.86398" />
-	  <RunTo QuestId="24754" X="-1148.155" Y="-5531.127" Z="8.104877" />
-	  <CustomBehavior QuestId="24754" File="WaitTimer" WaitTime="8000"/>
-      <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24754" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
-	  <CustomBehavior QuestId="24754" File="WaitTimer" WaitTime="4000" />
-	  <CustomBehavior File="InteractWith" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
+			<RunTo QuestId="24754" X="-1148.155" Y="-5531.127" Z="8.104877" />
+			<CustomBehavior QuestId="24754" File="WaitTimer" WaitTime="8000"/>
+      <CustomBehavior File="InteractWith" QuestId="24754" WaitForNpcs="False" MobState="Alive" MobId="38142" X="-1135.868" Y="-5414.137" Z="13.26942" />
     </While>
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
@@ -572,96 +513,50 @@
   <PickUp QuestName="More Than Expected" QuestId="24755" GiverName="Soratha" GiverId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <TurnIn QuestName="More Than Expected" QuestId="24755" TurnInName="Vol'Jin" TurnInId="38966" X="-1318.085" Y="-5603.771" Z="23.7197" />
 </If>
-<If Condition="!HasQuest(25064) &amp;&amp; !IsQuestCompleted(25064) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="Moraya'" QuestId="25064" GiverName="Vol'jin" GiverId="38966" X="-1318.085" Y="-5603.771" Z="23.7197" />
 <PickUp QuestName="Crab Fishin'" QuestId="25037" GiverName="Tora'jin" GiverId="39007" X="-1282.203" Y="-5585" Z="20.98982" />
-<If Condition="HasQuest(25037) &amp;&amp; !IsQuestCompleted(25037)" >
-  <Objective QuestName="Crab Fishin'" QuestId="25037" Type="CollectItem" ItemId="52080" CollectCount="5"/>
-</If>
+<Objective QuestName="Crab Fishin'" QuestId="25037" Type="CollectItem" ItemId="52080" CollectCount="5"/>
 <TurnIn QuestName="Crab Fishin'" QuestId="25037" TurnInName="Tora'jin" TurnInId="39007" X="-1282.203" Y="-5585" Z="20.98982" />
 <TurnIn QuestName="Moraya" QuestId="25064" TurnInName="Moraya" TurnInId="38005" X="-1291.92" Y="-5518.061" Z="20.76728" />
 <PickUp QuestName="A Troll's Truest Companion" QuestId="24622" GiverName="Moraya" GiverId="38005" X="-1291.92" Y="-5518.061" Z="20.76728" />
 <TurnIn QuestName="A Troll's Truest Companion" QuestId="24622" TurnInName="Kijara" TurnInId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
-<If Condition="!HasQuest(24623) &amp;&amp; !IsQuestCompleted(24623) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
 <PickUp QuestName="Saving the Young" QuestId="24623" GiverName="Kijara" GiverId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
 <PickUp QuestName="Mercy for the Lost" QuestId="24624" GiverName="Tegashi" GiverId="37987" X="-1548.524" Y="-5317.635" Z="7.809188" />
 <PickUp QuestName="Consort of the Sea Witch" QuestId="24625" GiverName="Tegashi" GiverId="37987" X="-1548.524" Y="-5317.635" Z="7.809188" />
 <If Condition="HasQuest(24623) &amp;&amp; !IsQuestCompleted(24623)" >
+	<RunTo QuestId="24623" X="-1407.962" Y="-5185.318" Z="3.508107" />
   <While Condition="!IsQuestCompleted(24623)" >
-    <RunTo QuestId="24623" X="-1407.962" Y="-5185.318" Z="3.508107" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1409.432" Y="-5154.412" Z="2.503425" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1379.158" Y="-5075.402" Z="1.785618" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1347.798" Y="-5126.92" Z="2.160961" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1301.065" Y="-5157.317" Z="1.391732" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1321.906" Y="-5186.578" Z="1.451914" />
-	<CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
-    <RunTo QuestId="24623" X="-1354.942" Y="-5218.253" Z="3.439395" />
-    <CustomBehavior File="Misc\RunLua" QuestId="24623" Lua="UseItemByName(52283)" NumOfTimes="1" />
+    <CustomBehavior File="InteractWith" QuestId="24623" MobId="39157" InteractByUsingItemId="52283" NumOfTimes="1000" CollectionDistance="1000" NotMoving="True" ProactiveCombatStrategy="ClearMobsTargetingUs">
+			<HuntingGrounds>
+				<Hotspot X="-1407.962" Y="-5185.318" Z="3.508107" />
+				<Hotspot X="-1409.432" Y="-5154.412" Z="2.503425" />
+				<Hotspot X="-1379.158" Y="-5075.402" Z="1.785618" />
+				<Hotspot X="-1347.798" Y="-5126.92" Z="2.160961" />
+				<Hotspot X="-1301.065" Y="-5157.317" Z="1.391732" />
+				<Hotspot X="-1321.906" Y="-5186.578" Z="1.451914" />
+				<Hotspot X="-1354.942" Y="-5218.253" Z="3.439395" />
+			</HuntingGrounds>
+		</CustomBehavior>
   </While>
 </If>
 <Objective QuestName="Mercy for the Lost" QuestId="24624" Type="KillMob" MobId="37961" KillCount="8"/>
 <Objective QuestName="Consort of the Sea Witch" QuestId="24625" Type="CollectItem" ItemId="50018" CollectCount="1"/>
-<!--# # # Level 4 # # # -->
 <TurnIn QuestName="Saving the Young" QuestId="24623" TurnInName="Kijara" TurnInId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
 <TurnIn QuestName="Mercy for the Lost" QuestId="24624" TurnInName="Tegashi" TurnInId="37987" X="-1548.524" Y="-5317.635" Z="7.809188" />
 <TurnIn QuestName="Consort of the Sea Witch" QuestId="24625" TurnInName="Tegashi" TurnInId="37987" X="-1548.524" Y="-5317.635" Z="7.809188" />
 <PickUp QuestName="Young and Vicious" QuestId="24626" GiverName="Kijara" GiverId="37969" X="-1553.439" Y="-5310.803" Z="8.310581" />
 <If Condition="HasQuest(24626) &amp;&amp; !IsQuestCompleted(24626)" >
-  <While Condition="!IsObjectiveComplete(1, 24626)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="24626" ItemId="50053" Range="25" WaitForNpcs="False" MobId="38002" X="-1551.19" Y="-5311.055" Z="8.260497" />
-  </While>
-  <While Condition="!IsQuestCompleted(24626)" >
-    <RunTo QuestId="24626" X="-1304.525" Y="-5443.421" Z="14.68565" />
-    <CustomBehavior File="RunMacro" Macro="/click MainMenuBarVehicleLeaveButton" />
-  </While>
+	<While Condition="!IsQuestCompleted(24626)" >
+		<If Condition="!Me.IsOnTransport &amp;&amp; !IsQuestCompleted(24626)">
+			<CustomBehavior File="InteractWith" QuestId="24626" MobId="38002" MobState="Alive" InteractByUsingItemId="50053" Range="25" AuraIdMissingFromMob="70925" X="-1572.195" Y="-5291.221" Z="8.486437" />
+		</If>
+		<If Condition="Me.IsOnTransport &amp;&amp; !IsQuestCompleted(24626)">
+			<RunTo QuestId="24626" X="-1304.525" Y="-5443.421" Z="14.68565" />
+			<CustomBehavior File="RunMacro" Macro="/click MainMenuBarVehicleLeaveButton" />
+		</If>
+	</While>
 </If>
 <TurnIn QuestName="Young and Vicious" QuestId="24626" TurnInName="Moraya" TurnInId="38005" X="-1291.92" Y="-5518.061" Z="20.76728" />
-<If Condition="!HasQuest(25035) &amp;&amp; !IsQuestCompleted(25035) &amp;&amp; (Me.LevelFraction &gt;= 5.5)">
-  <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
-  <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-  <CustomBehavior File="UseTransport" TransportId="164871"
-    WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-    GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-    StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-    TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-    TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
-  <RunTo X="2222.609" Y="1014.027" Z="37.12219" />
-  <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
-</If>
-<If Condition="!HasQuest(25035) &amp;&amp; !IsQuestCompleted(25035)" >
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="39033" WaitTime="1000" CollectionDistance="50" X="-1268.302" Y="-5572.389" Z="20.8555" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="39033" WaitTime="1000" CollectionDistance="50" X="-1268.302" Y="-5572.389" Z="20.8555" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-</If>
 <PickUp QuestName="Breaking the Line" QuestId="25035" GiverName="Tortunga" GiverId="38440" X="-1329.891" Y="-5556.582" Z="21.4683" />
 <If Condition="HasQuest(25035)" >
 	<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="38989" GossipOptions="1" X="-1330.837" Y="-5558.896" Z="21.40415" />
@@ -672,7 +567,17 @@
 <PickUp QuestName="Territorial Fetish" QuestId="24813" GiverName="Morakki" GiverId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
 <If Condition="HasQuest(24813) &amp;&amp; !IsQuestCompleted(24813)" >
   <While Condition="!IsQuestCompleted(24813)" >
-    <RunTo QuestId="24813" X="-753.6565" Y="-5597.114" Z="-6.89723" />
+		<CustomBehavior File="InteractWith" QuestId="24813" MobId="202113" NumOfTimes="1000" InteractByUsingItemId="52065" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs">
+     	<HuntingGrounds>
+				<Hotspot QuestId="24813" X="-753.6565" Y="-5597.114" Z="-6.89723" />
+				<Hotspot QuestId="24813" X="-722.5359" Y="-5612.982" Z="-9.333908" />
+				<Hotspot QuestId="24813" X="-678.6846" Y="-5623.085" Z="-9.657411" />
+				<Hotspot QuestId="24813" X="-676.84" Y="-5596.621" Z="-8.446787" />
+				<Hotspot QuestId="24813" X="-706.6125" Y="-5606.43" Z="-5.368433" />
+			</HuntingGrounds>
+		</CustomBehavior>
+<!--
+	<RunTo QuestId="24813" X="-753.6565" Y="-5597.114" Z="-6.89723" />
 	<CustomBehavior File="Misc\RunLua" QuestId="24813" Lua="UseItemByName(52065)" NumOfTimes="1" />
 	<CustomBehavior File="WaitTimer" QuestId="24813" WaitTime="1500" />
     <RunTo QuestId="24813" X="-722.5359" Y="-5612.982" Z="-9.333908" />
@@ -687,11 +592,30 @@
     <RunTo QuestId="24813" X="-706.6125" Y="-5606.43" Z="-5.368433" />
 	<CustomBehavior File="Misc\RunLua" QuestId="24813" Lua="UseItemByName(52065)" NumOfTimes="1" />
 	<CustomBehavior File="WaitTimer" QuestId="24813" WaitTime="1500" />
+-->
   </While>
 </If>
 <Objective QuestName="No More Mercy" QuestId="24812" Type="KillMob" MobId="38300" KillCount="12" />
 <TurnIn QuestName="No More Mercy" QuestId="24812" TurnInName="Morakki" TurnInId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
-<TurnIn QuestName="Territorial Fetish" QuestId="24813" TurnInName="Morakki" TurnInId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
+<If Condition="HasQuest(24813)">
+	<TurnIn QuestName="Territorial Fetish" QuestId="24813" TurnInName="Morakki" TurnInId="38442" X="-802.9844" Y="-5555.736" Z="4.518481" />
+	<RunTo X="-771.3128" Y="-4947.544" Z="22.88078" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="10369" WaitTime="1000" X="-769.1502" Y="-4948.526" Z="22.84936" />
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-779.7921" Y="-4938.55" Z="22.24657" />
+		<CustomBehavior File="InteractWith" MobId="3186" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-779.368" Y="-4936.507" Z="22.24647" />
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="-779.7921" Y="-4938.55" Z="22.24657" />
+		<CustomBehavior File="InteractWith" MobId="3186" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="-779.368" Y="-4936.507" Z="22.24647" />
+	</If>
+	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
+</If>
+<!--
+	<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+-->
 <CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
 <CustomBehavior File="UseTransport" TransportId="164871"
