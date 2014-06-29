@@ -258,7 +258,6 @@
   <TurnIn QuestName="The Basics: Hitting Things" QuestId="24765" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="A Rough Start" QuestId="24767" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <Objective QuestName="A Rough Start" QuestId="24767" Type="CollectItem" ItemId="50222" CollectCount="6"/>
-  <!--# # # Level 2 # # # -->
   <TurnIn QuestName="A Rough Start" QuestId="24767" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="Proving Pit" QuestId="24768" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <If Condition="HasQuest(24768) &amp;&amp; !IsQuestCompleted(24768)" >
@@ -272,11 +271,9 @@
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24768" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Druid" QuestId="24766" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <While Condition="!IsQuestCompleted(24766)">
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24766" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
-		<CustomBehavior File="CastSpellOn" QuestId="24766" SpellId="8921" MobId="38038" MinRange="8" X="-1141.224" Y="-5444.458" Z="11.98756" />
+    <CustomBehavior File="InteractWith" QuestId="24766" NonCompeteDistance="0" InteractByCastingSpellId="8921" MobId="38038" NumOfTimes="20" MinRange="8" X="-1141.224" Y="-5444.458" Z="11.98756" />
   </While>
   <TurnIn QuestName="The Arts of a Druid" QuestId="24766" TurnInName="Zen'tabra" TurnInId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
   <PickUp QuestName="More Than Expected" QuestId="24769" GiverName="Zen'tabra" GiverId="38243" X="-1175.598" Y="-5540.39" Z="11.94129" />
@@ -305,7 +302,6 @@
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24774" TurnInName="Legati" TurnInId="38244" X="-1143.547" Y="-5432.563" Z="13.69913" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Rogue" QuestId="24772" GiverName="Legati" GiverId="38244" X="-1143.547" Y="-5432.563" Z="13.69913" />
   <While Condition="!IsQuestCompleted(24772)">
    	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24772" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
@@ -341,8 +337,7 @@
   <TurnIn QuestName="Proving Pit" QuestId="24780" TurnInName="Ortezza" TurnInId="38247" X="-1136.46" Y="-5525.13" Z="11.99713" />
   <PickUp QuestName="The Arts of a Hunter" QuestId="24778" GiverName="Ortezza" GiverId="38247" X="-1136.46" Y="-5525.13" Z="11.99713" />
   <While Condition="!IsQuestCompleted(24778)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24778" MobId="38038" WaitTime="1000" X="-1141.224" Y="-5444.458" Z="11.98756" />
-    <CustomBehavior File="CastSpellOn" QuestId="24778" NumOfTimes="1" SpellId="56641" MobId="38038" X="-1141.224" Y="-5444.458" Z="11.98756" />
+    <CustomBehavior File="InteractWith" QuestId="24778" NonCompeteDistance="0" InteractByCastingSpellId="56641" MobId="38038" NumOfTimes="5" X="-1141.224" Y="-5444.458" Z="11.98756" />
   </While>
   <TurnIn QuestName="The Arts of a Hunter" QuestId="24778" TurnInName="Ortezza" TurnInId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
   <PickUp QuestName="More Than Expected" QuestId="24781" GiverName="Ortezza" GiverId="38247" X="-1128.116" Y="-5510.068" Z="11.98143" />
@@ -372,12 +367,9 @@
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24642" TurnInName="Nortet" TurnInId="38037" X="-1158.99" Y="-5421.14" Z="13.21972" />
   <PickUp QuestName="The Arts of a Warrior" QuestId="24640" GiverName="Nortet" GiverId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
+  <RunTo QuestId="24640" X="-1152.843" Y="-5434.078" Z="12.96899" />
   <While Condition="!IsQuestCompleted(24640)" >
-    <RunTo QuestId="24640" X="-1170.316" Y="-5432.534" Z="12.05945" />
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24640" MobId="38038" WaitTime="1000" X="-1172.155" Y="-5432.292" Z="12.06485" />
-    <RunTo QuestId="24640" X="-1125.655" Y="-5440.47" Z="12.14798" />
-    <RunTo QuestId="24640" X="-1152.843" Y="-5434.078" Z="12.96899" />
-    <CustomBehavior File="CastSpellOn" QuestId="24640" SpellId="100" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="18" X="-1172.155" Y="-5432.292" Z="12.06485" />
+    <CustomBehavior File="InteractWith" QuestId="24640"  NonCompeteDistance="0" InteractByCastingSpellId="100" MobId="38038" Range="20" MinRange="15" X="-1172.155" Y="-5432.292" Z="12.06485" />
   </While>
   <TurnIn QuestName="The Arts of a Warrior" QuestId="24640" TurnInName="Nortet" TurnInId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
   <PickUp QuestName="More Than Expected" QuestId="24643" GiverName="Nortet" GiverId="38037" X="-1171.352" Y="-5440.788" Z="11.94383" />
@@ -408,8 +400,7 @@
   <TurnIn QuestName="Proving Pit" QuestId="24786" TurnInName="Tunari" TurnInId="38245" X="-1137" Y="-5528.23" Z="11.97896" />
   <PickUp QuestName="Learnin' tha Word" QuestId="24784" GiverName="Tunari" GiverId="38245" X="-1137" Y="-5528.23" Z="11.97896" />
   <While Condition="!IsQuestCompleted(24784)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24784" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
-		<CustomBehavior File="CastSpellOn" QuestId="24784" SpellId="589" MobId="38038" NumOfTimes="20" MobHpPercentLeft="100" MinRange="8" X="-1128.101" Y="-5521.003" Z="12.29303" />
+    <CustomBehavior File="InteractWith" QuestId="24784" NonCompeteDistance="0" InteractByCastingSpellId="589" MobId="38038" NumOfTimes="20" MinRange="8" X="-1128.101" Y="-5521.003" Z="12.29303" />
   </While>
   <TurnIn QuestName="Learnin' tha Word" QuestId="24784" TurnInName="Tunari" TurnInId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
   <PickUp QuestName="More Than Expected" QuestId="24787" GiverName="Tunari" GiverId="38245" X="-1118.16" Y="-5539.962" Z="11.9791" />
@@ -440,8 +431,7 @@
   <TurnIn QuestName="Proving Pit" QuestId="24762" TurnInName="Nekali" TurnInId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
   <PickUp QuestName="The Arts of a Shaman" QuestId="24760" GiverName="Nekali" GiverId="38242" />
   <While Condition="!IsQuestCompleted(24760)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24760" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
-    <CustomBehavior File="CastSpellOn" QuestId="24760" SpellId="73899" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" Range="3" X="-6150.75" Y="378.814" Z="395.5428" />
+    <CustomBehavior File="InteractWith" QuestId="24760" NonCompeteDistance="0" InteractByCastingSpellId="73899" MobId="38038" NumOfTimes="20" X="-1128.101" Y="-5521.003" Z="12.29303" />
   </While>
   <TurnIn QuestName="The Arts of a Shaman" QuestId="24760" TurnInName="Nekali" TurnInId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
   <PickUp QuestName="More Than Expected" QuestId="24763" GiverName="Nekali" GiverId="38242" X="-1160.215" Y="-5396.146" Z="12.23201" />
@@ -470,11 +460,9 @@
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="26276" TurnInName="Voldreka" TurnInId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Warlock" QuestId="26274" GiverName="Voldreka" GiverId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
   <While Condition="!IsQuestCompleted(26274)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="26274" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
-    <CustomBehavior File="CastSpellOn" QuestId="26274" SpellId="172" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="1" X="-1128.101" Y="-5521.003" Z="12.29303" />
+    <CustomBehavior File="InteractWith" QuestId="26274" NonCompeteDistance="0" InteractByCastingSpellId="172" MobId="38038" NumOfTimes="5" X="-1128.101" Y="-5521.003" Z="12.29303" />
   </While>
   <TurnIn QuestName="The Arts of a Warlock" QuestId="26274" TurnInName="Voldreka" TurnInId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
   <PickUp QuestName="More Than Expected" QuestId="26277" GiverName="Voldreka" GiverId="42618" X="-1126.516" Y="-5395.474" Z="12.20928" />
@@ -503,11 +491,9 @@
     <RunTo X="-1164.301" Y="-5531.653" Z="12.01467" />
   </If>
   <TurnIn QuestName="Proving Pit" QuestId="24754" TurnInName="Soratha" TurnInId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
-  <!--# # # Level 3 # # # -->
   <PickUp QuestName="The Arts of a Mage" QuestId="24752" GiverName="Soratha" GiverId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <While Condition="!IsQuestCompleted(24752)" >
-   	<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24752" MobId="38038" WaitTime="1000" X="-1128.101" Y="-5521.003" Z="12.29303" />
-    <CustomBehavior File="CastSpellOn" SpellId="122" MobId="38038" NumOfTimes="1" MobHpPercentLeft="100" MinRange="5" Range="30" X="-1128.101" Y="-5521.003" Z="12.29303" />
+		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="24752" InteractByCastingSpellId="122" MobId="38038" NumOfTimes="2" X="-1128.101" Y="-5521.003" Z="12.29303" />
   </While>
   <TurnIn QuestName="The Arts of a Mage" QuestId="24752" TurnInName="Soratha" TurnInId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
   <PickUp QuestName="More Than Expected" QuestId="24755" GiverName="Soratha" GiverId="38246" X="-1145.95" Y="-5543.13" Z="12.48829" />
