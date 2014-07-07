@@ -534,7 +534,7 @@
 <If Condition="HasQuest(24626) &amp;&amp; !IsQuestCompleted(24626)" >
 	<While Condition="!IsQuestCompleted(24626)" >
 		<If Condition="!Me.IsOnTransport &amp;&amp; !IsQuestCompleted(24626)">
-			<CustomBehavior File="InteractWith" QuestId="24626" MobId="38002" MobState="Alive" InteractByUsingItemId="50053" Range="25" AuraIdMissingFromMob="70925" X="-1572.195" Y="-5291.221" Z="8.486437" />
+			<CustomBehavior File="InteractWith" QuestId="24626" MobId="38002" MobState="Alive" InteractByUsingItemId="50053" Range="25" AuraIdMissingFromMob="70925" TerminateWhen="Me.IsOnTransport" X="-1572.195" Y="-5291.221" Z="8.486437" />
 		</If>
 		<If Condition="Me.IsOnTransport &amp;&amp; !IsQuestCompleted(24626)">
 			<RunTo QuestId="24626" X="-1304.525" Y="-5443.421" Z="14.68565" />
