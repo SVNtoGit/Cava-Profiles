@@ -599,6 +599,18 @@
 	</If>
 	<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
 </If>
-	<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+<!--
+        <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-08)Durotar[Cava]" />
+-->
+<CustomBehavior File="Message" Text="Moving to TIRISFAL GLADES, Please do not stop bot" LogColor="Aquamarine" />
+<RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+<CustomBehavior File="UseTransport" TransportId="164871"
+  WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+  GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+  StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+  TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+  TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+<RunTo X="2222.609" Y="1014.027" Z="37.12219" />
+<CustomBehavior File="LoadProfile" ProfileName="[H-Quest](05-11)TirisfalGlades[Cava]" />
 </QuestOrder>
 </HBProfile>
