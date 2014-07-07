@@ -2095,6 +2095,88 @@
 		<CustomBehavior File="InteractWith" MobId="3369" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="1774.259" Y="-4510.272" Z="27.78381" />	
 	</If>
 </If>
+<!--
+<If Condition="!HasQuest(840) &amp;&amp; !IsQuestCompleted(840)">
+	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="362" />
+	<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True"/>
+	<RunTo X="356.2737" Y="-4708.725" Z="14.56763" />
+	<CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" NonCompeteDistance="0" KeepTargetSelected="True" MobId="3167" WaitTime="1000" X="358.1284" Y="-4706.727" Z="14.39383" />
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(23); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(22); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(21); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+	<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 4)">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">
+			<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+			<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i) do z=GetContainerItemID(i,j) if z == 4498 then PickupBagFromSlot(20); PickupContainerItem(i,j); end end end" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000" />
+		</If>
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(4)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(3)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />		
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(2)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />		
+	</If>
+  <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 6) &amp;&amp; Me.Silver &gt;= 5">
+    <CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Small Brown Pouch. Please do not stop bot." LogColor="Aquamarine" />
+		<RunTo X="321.869" Y="-4836.84" Z="10.52365" />
+		<CustomBehavior File="InteractWith" MobId="3164" MobState="Alive" InteractByBuyingItemId="4496" WaitTime="4000" NonCompeteDistance="0" X="321.5481" Y="-4838.399" Z="10.52453" />	
+	</If>
+	<PickUp QuestName="Conscript of the Horde" QuestId="840" GiverName="Takrin Pathseeker" GiverId="3336" X="271.8056" Y="-4650.833" Z="13.75515" />	
+</If>
+<TurnIn QuestName="Conscript of the Horde" QuestId="840" TurnInName="Kargal Battlescar" TurnInId="3337" X="301.1074" Y="-3685.806" Z="27.10915" />
+-->
 <CustomBehavior File="Message" Text="Moving to SILVERPINE FOREST, Please do not stop bot" LogColor="Aquamarine" />
 <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
 <CustomBehavior File="UseTransport" TransportId="164871"

@@ -687,9 +687,9 @@
 <If Condition="Mount.GroundMounts.Count() &lt;= 0">
   <CustomBehavior File="LoadProfile" ProfileName="MountsBy[Cava]" />
 </If>
-<!--<If Condition="!HasQuest(27527) &amp;&amp; IsQuestCompleted(27527)" >
+<If Condition="!HasQuest(27527) &amp;&amp; IsQuestCompleted(27527)" >
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](44-46)Badlands[Cava]" />
-</If>-->
+</If>
 <If Condition="Me.ZoneId != 139">
   <If Condition="Me.ZoneId != 1519">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
