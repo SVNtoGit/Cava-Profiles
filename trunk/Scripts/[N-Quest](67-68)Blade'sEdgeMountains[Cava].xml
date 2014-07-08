@@ -1401,17 +1401,20 @@
   <PickUp QuestName="Ridgespine Menace" QuestId="10620" GiverName="Dizzy Dina" GiverId="21824" X="1921.623" Y="5569.297" Z="263.7382" />
   <PickUp QuestName="Cutting Your Teeth" QuestId="10632" GiverName="Razak Ironsides" GiverId="21118" X="1944.888" Y="5571.545" Z="263.3051" />
   <If Condition="HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710)">
-    <CustomBehavior File="FlyTo" QuestId="10710" Land="True" X="1913.616" Y="5575.294" Z="263.5218" />
-    <If Condition="!HasItem(30540)">
-			<CustomBehavior File="FlyTo" Land="True" X="1937.468" Y="5575.969" Z="263.4758" />		
-      <CustomBehavior File="InteractWith" MobId="21460" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1935.01" Y="5575.737" Z="263.6919" />    
-		</If>
-		<CustomBehavior File="Misc\RunLua" QuestId="10710" WaitTime="2000" Lua="UseItemByName(30540)" />
-    <While Condition="!IsQuestCompleted(10710)">
-			<RunTo  QuestId="10710" X="1919.339" Y="5579.646" Z="263.8946" />
-      <CustomBehavior File="InteractWith" QuestId="10710" MobId="21461" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1,1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1920.312" Y="5581.301" Z="263.8955" />
-      <CustomBehavior File="WaitTimer" WaitTime="30000" />
-    </While>
+		<While Condition="!IsQuestCompleted(10710)">
+			<CustomBehavior File="FlyTo" QuestId="10710" Land="True" X="1913.616" Y="5575.294" Z="263.5218" />
+			<If Condition="!HasItem(30540)">
+				<CustomBehavior File="FlyTo" Land="True" X="1937.468" Y="5575.969" Z="263.4758" />		
+				<CustomBehavior File="InteractWith" MobId="21460" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1935.01" Y="5575.737" Z="263.6919" />    
+			</If>
+			<CustomBehavior File="WaitTimer" WaitTime="1000" />
+			<CustomBehavior File="Misc\RunLua" QuestId="10710" WaitTime="2000" Lua="UseItemByName(30540)" />
+			<If Condition="!IsQuestCompleted(10710)">
+				<RunTo  QuestId="10710" X="1919.339" Y="5579.646" Z="263.8946" />
+				<CustomBehavior File="InteractWith" QuestId="10710" MobId="21461" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1,1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1920.312" Y="5581.301" Z="263.8955" />
+				<CustomBehavior File="WaitTimer" WaitTime="30000" />
+			</If>
+		</While>
   </If>
   <If Condition="(HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657)) ||
                  (HasQuest(10632) &amp;&amp; !IsQuestCompleted(10632)) ||
