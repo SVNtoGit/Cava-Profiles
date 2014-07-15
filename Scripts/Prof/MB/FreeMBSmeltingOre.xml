@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Professionbuddy>
   <While Condition="SecondaryBot.Name != &quot;Grind Bot&quot;" IgnoreCanRun="True">
-    <ChangeBotAction BotName="Grind Bot" />
+    <ChangeBot BotName="Grind Bot" />
   </While>
-
-  <EnableProfileAction ProfileType="Professionbuddy" Path="http://cavaprofiles.net/index.php/profiles/profiles-list/cavaprofessions/mining/86-freesmeltingore-1" IsLocal="False"/>
-  <CustomAction Code="TreeRoot.Stop();" />
-
+  <LoadProfile ProfileType="Professionbuddy" Path="http://cavaprofiles.net/index.php/profiles/profiles-list/cavaprofessions/mining/86-freesmeltingore-1" IsLocal="False" />
+  <Custom Code="TreeRoot.Stop();" />
 </Professionbuddy>

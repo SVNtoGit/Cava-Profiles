@@ -1,156 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Professionbuddy>
   <While Condition="SecondaryBot.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True">
-    <ChangeBotAction BotName="Gatherbuddy2" />
+    <ChangeBot BotName="Gatherbuddy2" />
   </While>
-  <WaitAction Condition="false" Timeout="6000" />
-<If Condition="Me.IsAlliance" IgnoreCanRun="True">
-	<LoadProfileAction ProfileType="Honorbuddy" Path="AllianceBlank.xml" />
-</If>
-<If Condition="Me.IsHorde" IgnoreCanRun="True">
-	<LoadProfileAction ProfileType="Honorbuddy" Path="HordeBlank.xml" />
-</If>
-  <CustomAction Code="Bots.Gatherbuddy.GatherbuddySettings.Instance.GatherMinerals = true;" />
-  <CustomAction Code="Bots.Gatherbuddy.GatherbuddySettings.Instance.GatherHerbs = false;" />
-  <CustomAction Code="CharacterSettings.Instance.LootMobs = false;" />
-  <If Condition="!(bool)Settings[&quot;PreRun&quot;]">
-    <If Condition="File.Exists(&quot;PB-Cava_MB.html&quot;)">
-      <CustomAction Code="System.Diagnostics.Process.Start(&quot;PB-Cava_MB.html&quot;);" />
-      <WaitAction Condition="false" Timeout="30000" />
-      <CustomAction Code="MessageBox.Show(&quot;Welcome to Mining &amp; Blacksmithing profile by Cava\n\n
-                Press OK to continue&quot;);" />
+  <Wait Condition="false" Timeout="6000" />
+  <If Condition="Me.IsAlliance" IgnoreCanRun="True">
+    <LoadProfile ProfileType="Honorbuddy" Path="AllianceBlank.xml" IsLocal="True" />
+  </If>
+  <If Condition="Me.IsHorde" IgnoreCanRun="True">
+    <LoadProfile ProfileType="Honorbuddy" Path="HordeBlank.xml" IsLocal="True" />
+  </If>
+  <Custom Code="Bots.Gatherbuddy.GatherbuddySettings.Instance.GatherMinerals = true;" />
+  <Custom Code="Bots.Gatherbuddy.GatherbuddySettings.Instance.GatherHerbs = false;" />
+  <Custom Code="CharacterSettings.Instance.LootMobs = false;" />
+  <If Condition="!(bool)Settings[&quot;PreRun&quot;]" IgnoreCanRun="True">
+    <If Condition="File.Exists(&quot;PB-Cava_MB.html&quot;)" IgnoreCanRun="True">
+      <Custom Code="System.Diagnostics.Process.Start(&quot;PB-Cava_MB.html&quot;);" />
+      <Wait Condition="false" Timeout="30000" />
+      <Custom Code="MessageBox.Show(&quot;Welcome to Mining &amp; Blacksmithing profile by Cava\n\n                 Press OK to continue&quot;);" />
     </If>
-    <If Condition="File.Exists(&quot;Scripts\\Prof\\Mb\\PB-Cava_MB.html&quot;)">
-      <CustomAction Code="System.Diagnostics.Process.Start(&quot;Scripts\\Prof\\Mb\\PB-Cava_MB.html&quot;);" />
-      <WaitAction Condition="false" Timeout="30000" />
-      <CustomAction Code="MessageBox.Show(&quot;Welcome to Mining &amp; Blacksmithing profile by Cava\n\n
-                Press OK to continue&quot;);" />
+    <If Condition="File.Exists(&quot;Scripts\\Prof\\Mb\\PB-Cava_MB.html&quot;)" IgnoreCanRun="True">
+      <Custom Code="System.Diagnostics.Process.Start(&quot;Scripts\\Prof\\Mb\\PB-Cava_MB.html&quot;);" />
+      <Wait Condition="false" Timeout="30000" />
+      <Custom Code="MessageBox.Show(&quot;Welcome to Mining &amp; Blacksmithing profile by Cava\n\n                 Press OK to continue&quot;);" />
     </If>
     <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;Please, press 'Bot Config' button \n Check configurations and enable 'Options Configured' ...EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
+      <Custom Code="MessageBox.Show(&quot;Please, press 'Bot Config' button \n Check configurations and enable 'Options Configured' ...EXITING&quot;);" />
+      <Custom Code="TreeRoot.Stop();" />
     </If>
-	</If>
-    <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;Please, press 'Bot Config' button \n Check configurations and enable 'Options Configured' ...EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="(Int32)Settings[&quot;Farm Time&quot;] &lt; 5 || (Int32)Settings[&quot;Farm Time&quot;] &gt; 30" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;Farm time must be from 5 to 30..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="!(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; !(bool)Settings[&quot;Excess Mats To GBank&quot;] &amp;&amp; !(bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;There is none selected option for excess mats..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To GBank&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="(bool)Settings[&quot;Excess Mats To GBank&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <If Condition="(bool)Settings[&quot;Excess Mats To Mailbox&quot;] &amp;&amp; (string)Settings[&quot;Mail Recipent&quot;]==&quot;Character Name&quot;" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;The option for excess mats is selected to use Mailbox, but there is no alt name defined..EXITING&quot;);" />
-      <CustomAction Code="TreeRoot.Stop();" />
-    </If>
-    <CustomAction Code="var9 = WoWSpell.FromId((int)90267);" />
-    <CustomAction Code="var1 = WoWSpell.FromId((int)115913);" />
-    <If Condition="var1 == null || var9 == null || Mount.FlyingMounts.Count() == 0" IgnoreCanRun="True">
-      <CustomAction Code="MessageBox.Show(&quot;Please check your Fly Mounts and/or Ridding skills, This profile use FLY ..EXITING&quot;);" />
-      <!--<CustomAction Code="TreeRoot.Stop();" />-->
-    </If>
-	
-	
-	
-	
-    <If Condition="(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
-      <EnableProfileAction ProfileType="Professionbuddy" Path="http://cavaprofiles.net/index.php/profiles/profiles-list/cavaprofessions/blacksmithing-1/98-pbmbcavav2" IsLocal="False"/>
-		</If>
-    <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
-			<CustomAction Code="MessageBox.Show(&quot;You Didnt Selected Any Configuration, Press Bot Config and Do It Now ..EXITING&quot;);" />
-		</If>
-    <CustomAction Code="TreeRoot.Stop();" />
-
-      <!--excess mats, what todo-->
-      <Settings DefaultValue="true" Type="Boolean" Name="Excess Mats To AH" Summary="Should it sell excess farmed mats to Action-House?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Excess Mats To GBank" Summary="Should it drop excess farmed mats in Guild-Bank?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Excess Mats To Mailbox" Summary="Should it mail excess farmed mats to an alt Char?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
-      <!--Char name to mail itens-->
-      <Settings DefaultValue="Character Name" Type="String" Name="Mail Recipent" Summary="Who should it be sent to if Mailbox is enabled?" Category="2. Use Mailbox" Global="False" Hidden="False" />
-      <!--Misc Options-->
-      <Settings DefaultValue="false" Type="Boolean" Name="Use HS" Summary="Should it use Heartstone?" Category="4. Misc Options" Global="False" Hidden="False" />
-      <Settings DefaultValue="20" Type="Int32" Name="Farm Time" Summary="How many minutes should bot farm at each map? (5 to 30)" Category="4. Misc Options" Global="False" Hidden="False" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Debug" Summary="Enable this to allow bot to print debug lines" Category="4. Misc Options" Global="False" Hidden="False" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Reset" Summary="Only enable this option if bot, is farming at strange places, like copper with mining and blacksmithing level 500" Category="4. Misc Options" Global="False" Hidden="False" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Options Configured" Summary="Enable this to allow bot to run profile" Category="5. Extra" Global="False" Hidden="False" />
-      <!--Hiden Options-->
-      <Settings DefaultValue="false" Type="Boolean" Name="PreRun" Summary="did bot checkd portals?" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Smelted" Summary="did bot ran Smelt profile?" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Crafted" Summary="did bot ran Craft profile?" Category="Hiden" Global="False" Hidden="True" />
-
-      <Settings DefaultValue="0" Type="Int32" Name="RoughStoneNeed" Summary="Need this amount of Rough Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CopperBarNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CopperOreNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CoarseStoneNeed" Summary="Need this amount of Coarse Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SilverBarNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SilverOreNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="RoughGrindingStoneNeed" Summary="Need this amount of Rough Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="TinBarNeed" Summary="Need this amount of Tin" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="TinOreNeed" Summary="Need this amount of Tin" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="BronzeBarNeed" Summary="Need this amount of Bronze" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CoarseStoneNeed" Summary="Need this amount of Coarse Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CoarseGrindingStoneNeed" Summary="Need this amount of Coarse Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="HeavyStoneNeed" Summary="Need this amount of Heavy Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="IronBarNeed" Summary="Need this amount of Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="IronOreNeed" Summary="Need this amount of Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="HeavyStoneNeed" Summary="Need this amount of Heavy Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="HeavyGrindingStoneNeed" Summary="Need this amount of Heavy Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SteelBarNeed" Summary="Need this amount of Steel" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SolidStoneNeed" Summary="Need this amount of Solid Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="MithrilBarNeed" Summary="Need this amount of Mithril" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="MithrilOreNeed" Summary="Need this amount of Mithril" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="DenseStoneNeed" Summary="Need this amount of Dense Stone" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ThoriumBarNeed" Summary="Need this amount of Thorium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ThoriumOreNeed" Summary="Need this amount of Thorium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="StarRubyNeed" Summary="Need this amount of Star Ruby" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="FelIronBarNeed" Summary="Need this amount of Fel Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="FelIronOreNeed" Summary="Need this amount of Fel Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="NetherweaveClothNeed" Summary="Need this amount of Netherweave Cloth" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="AdamantiteBarNeed" Summary="Need this amount of Adamantite" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="AdamantiteOreNeed" Summary="Need this amount of Adamantite" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CobaltBarNeed" Summary="Need this amount of Cobalt" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="CobaltOreNeed" Summary="Need this amount of Cobalt" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SaroniteBarNeed" Summary="Need this amount of Saronite" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SaroniteOreNeed" Summary="Need this amount of Saronite" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="TitaniumBarNeed" Summary="Need this amount of Titanium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="TitaniumOreNeed" Summary="Need this amount of Titanium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ObsidiumBarNeed" Summary="Need this amount of Obsidium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ObsidiumOreNeed" Summary="Need this amount of Obsidium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="FoldedObsidiumNeed" Summary="Need this amount of Folded Obsidium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="VolatileFireNeed" Summary="Need this amount of Volatile Fire" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="VolatileEarthNeed" Summary="Need this amount of Volatile Earth" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ElementiumBarNeed" Summary="Need this amount of Elementium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="ElementiumOreNeed" Summary="Need this amount of Elementium" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="GhostIronBarNeed" Summary="Need this amount of Ghost Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="GhostIronOreNeed" Summary="Need this amount of Ghost Iron" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="SpiritofHarmonyNeed" Summary="Need this amount of Spirit of Harmony" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="MotesofHarmonyNeed" Summary="Need this amount of Motes of Harmony" Category="Hiden" Global="False" Hidden="True" />
-
-      <Settings DefaultValue="null" Type="String" Name="MatToFarm" Summary="What" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="MapToFarm" Summary="Where" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="0" Type="Int32" Name="FarmTilLevel" Summary="Till" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Hyjal Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Deepholm Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Twilight Highlands Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
-      <Settings DefaultValue="false" Type="Boolean" Name="Pandaria Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
-    <Declaration Code="public string version = &quot;alpha 1&quot;;" />
-    <Declaration Code="private void slog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.Aquamarine, &quot;[PB-Cava]: &quot; + format, args);&#xD;&#xA;}" />
-    <Declaration Code="private void dlog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.LemonChiffon, &quot;[PBCava-Debug]: &quot; + format, args);&#xD;&#xA;}" />
+  </If>
+  <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;Please, press 'Bot Config' button \n Check configurations and enable 'Options Configured' ...EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="(Int32)Settings[&quot;Farm Time&quot;] &lt; 5 || (Int32)Settings[&quot;Farm Time&quot;] &gt; 30" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;Farm time must be from 5 to 30..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="!(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; !(bool)Settings[&quot;Excess Mats To GBank&quot;] &amp;&amp; !(bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;There is none selected option for excess mats..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To GBank&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="(bool)Settings[&quot;Excess Mats To AH&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="(bool)Settings[&quot;Excess Mats To GBank&quot;] &amp;&amp; (bool)Settings[&quot;Excess Mats To Mailbox&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;There is more than one option for excess mats selected..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <If Condition="(bool)Settings[&quot;Excess Mats To Mailbox&quot;] &amp;&amp; (string)Settings[&quot;Mail Recipent&quot;]==&quot;Character Name&quot;" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;The option for excess mats is selected to use Mailbox, but there is no alt name defined..EXITING&quot;);" />
+    <Custom Code="TreeRoot.Stop();" />
+  </If>
+  <Custom Code="var9 = WoWSpell.FromId((int)90267);" />
+  <Custom Code="var1 = WoWSpell.FromId((int)115913);" />
+  <If Condition="var1 == null || var9 == null || Mount.FlyingMounts.Count() == 0" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;Please check your Fly Mounts and/or Ridding skills, This profile use FLY ..EXITING&quot;);" />
+    <!--<CustomAction Code="TreeRoot.Stop();" />-->
+  </If>
+  <If Condition="(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
+    <LoadProfile ProfileType="Professionbuddy" Path="http://cavaprofiles.net/index.php/profiles/profiles-list/cavaprofessions/blacksmithing-1/98-pbmbcavav2" IsLocal="False" />
+  </If>
+  <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
+    <Custom Code="MessageBox.Show(&quot;You Didnt Selected Any Configuration, Press Bot Config and Do It Now ..EXITING&quot;);" />
+  </If>
+  <Custom Code="TreeRoot.Stop();" />
+  <!--excess mats, what todo-->
+  <Setting DefaultValue="true" Type="Boolean" Name="Excess Mats To AH" Summary="Should it sell excess farmed mats to Action-House?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Excess Mats To GBank" Summary="Should it drop excess farmed mats in Guild-Bank?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Excess Mats To Mailbox" Summary="Should it mail excess farmed mats to an alt Char?" Category="1. Excess Mats - ONLY ENABLE 1" Global="False" Hidden="False" />
+  <!--Char name to mail itens-->
+  <Setting DefaultValue="Character Name" Type="String" Name="Mail Recipent" Summary="Who should it be sent to if Mailbox is enabled?" Category="2. Use Mailbox" Global="False" Hidden="False" />
+  <!--Misc Options-->
+  <Setting DefaultValue="false" Type="Boolean" Name="Use HS" Summary="Should it use Heartstone?" Category="4. Misc Options" Global="False" Hidden="False" />
+  <Setting DefaultValue="20" Type="Int32" Name="Farm Time" Summary="How many minutes should bot farm at each map? (5 to 30)" Category="4. Misc Options" Global="False" Hidden="False" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Debug" Summary="Enable this to allow bot to print debug lines" Category="4. Misc Options" Global="False" Hidden="False" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Reset" Summary="Only enable this option if bot, is farming at strange places, like copper with mining and blacksmithing level 500" Category="4. Misc Options" Global="False" Hidden="False" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Options Configured" Summary="Enable this to allow bot to run profile" Category="5. Extra" Global="False" Hidden="False" />
+  <!--Hiden Options-->
+  <Setting DefaultValue="false" Type="Boolean" Name="PreRun" Summary="did bot checkd portals?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Smelted" Summary="did bot ran Smelt profile?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Crafted" Summary="did bot ran Craft profile?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="RoughStoneNeed" Summary="Need this amount of Rough Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CopperBarNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CopperOreNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CoarseStoneNeed" Summary="Need this amount of Coarse Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SilverBarNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SilverOreNeed" Summary="Need this amount of Copper" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="RoughGrindingStoneNeed" Summary="Need this amount of Rough Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="TinBarNeed" Summary="Need this amount of Tin" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="TinOreNeed" Summary="Need this amount of Tin" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="BronzeBarNeed" Summary="Need this amount of Bronze" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CoarseStoneNeed" Summary="Need this amount of Coarse Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CoarseGrindingStoneNeed" Summary="Need this amount of Coarse Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="HeavyStoneNeed" Summary="Need this amount of Heavy Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="IronBarNeed" Summary="Need this amount of Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="IronOreNeed" Summary="Need this amount of Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="HeavyStoneNeed" Summary="Need this amount of Heavy Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="HeavyGrindingStoneNeed" Summary="Need this amount of Heavy Grinding Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SteelBarNeed" Summary="Need this amount of Steel" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SolidStoneNeed" Summary="Need this amount of Solid Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="MithrilBarNeed" Summary="Need this amount of Mithril" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="MithrilOreNeed" Summary="Need this amount of Mithril" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="DenseStoneNeed" Summary="Need this amount of Dense Stone" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ThoriumBarNeed" Summary="Need this amount of Thorium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ThoriumOreNeed" Summary="Need this amount of Thorium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="StarRubyNeed" Summary="Need this amount of Star Ruby" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="FelIronBarNeed" Summary="Need this amount of Fel Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="FelIronOreNeed" Summary="Need this amount of Fel Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="NetherweaveClothNeed" Summary="Need this amount of Netherweave Cloth" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="AdamantiteBarNeed" Summary="Need this amount of Adamantite" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="AdamantiteOreNeed" Summary="Need this amount of Adamantite" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CobaltBarNeed" Summary="Need this amount of Cobalt" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="CobaltOreNeed" Summary="Need this amount of Cobalt" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SaroniteBarNeed" Summary="Need this amount of Saronite" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SaroniteOreNeed" Summary="Need this amount of Saronite" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="TitaniumBarNeed" Summary="Need this amount of Titanium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="TitaniumOreNeed" Summary="Need this amount of Titanium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ObsidiumBarNeed" Summary="Need this amount of Obsidium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ObsidiumOreNeed" Summary="Need this amount of Obsidium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="FoldedObsidiumNeed" Summary="Need this amount of Folded Obsidium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="VolatileFireNeed" Summary="Need this amount of Volatile Fire" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="VolatileEarthNeed" Summary="Need this amount of Volatile Earth" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ElementiumBarNeed" Summary="Need this amount of Elementium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="ElementiumOreNeed" Summary="Need this amount of Elementium" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="GhostIronBarNeed" Summary="Need this amount of Ghost Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="GhostIronOreNeed" Summary="Need this amount of Ghost Iron" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="SpiritofHarmonyNeed" Summary="Need this amount of Spirit of Harmony" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="MotesofHarmonyNeed" Summary="Need this amount of Motes of Harmony" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="null" Type="String" Name="MatToFarm" Summary="What" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="MapToFarm" Summary="Where" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="0" Type="Int32" Name="FarmTilLevel" Summary="Till" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Hyjal Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Deepholm Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Twilight Highlands Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
+  <Setting DefaultValue="false" Type="Boolean" Name="Pandaria Portal" Summary="Does char know this portal?" Category="Hiden" Global="False" Hidden="True" />
+  <Declaration Code="public string version = &quot;alpha 1&quot;;" />
+  <Declaration Code="private void slog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.Aquamarine, &quot;[PB-Cava]: &quot; + format, args);&#xD;&#xA;}" />
+  <Declaration Code="private void dlog(string format, params object[] args)&#xD;&#xA;{&#xD;&#xA;    Logging.Write(Colors.LemonChiffon, &quot;[PBCava-Debug]: &quot; + format, args);&#xD;&#xA;}" />
 </Professionbuddy>
-
