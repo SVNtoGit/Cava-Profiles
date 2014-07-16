@@ -1521,14 +1521,23 @@
   </If>
   <TurnIn QuestName="Force Commander Danath" QuestId="10254" TurnInName="Force Commander Danath Trollbane" TurnInId="16819" X="-815.6094" Y="2614.204" Z="124.3895" />
   <PickUp QuestName="The Legion Reborn" QuestId="10141" GiverName="Force Commander Danath Trollbane" GiverId="16819" X="-815.6094" Y="2614.204" Z="124.3895" />
-  <PickUp QuestName="Know your Enemy" QuestId="10160" GiverName="Force Commander Danath Trollbane" GiverId="16819" X="-815.6094" Y="2614.204" Z="124.3895" />
-  <If Condition="!HasQuest(10055) &amp;&amp; !IsQuestCompleted(10055)">
+
+  <If Condition="HasQuest(10482) &amp;&amp; !IsQuestCompleted(10482)">
+    <CustomBehavior File="AbandonQuest" QuestId="10482" />
+    <CustomBehavior File="WaitTimer" WaitTime="4000"/>
+	</If>
+  <If Condition="!IsQuestCompleted(10482)">
+		<PickUp QuestName="Know your Enemy" QuestId="10160" GiverName="Force Commander Danath Trollbane" GiverId="16819" X="-815.6094" Y="2614.204" Z="124.3895" />
+  </If>
+	<If Condition="!HasQuest(10055) &amp;&amp; !IsQuestCompleted(10055)">
     <CustomBehavior File="FlyTo" X="-585.2981" Y="2892.709" Z="59.2042" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <PickUp QuestName="Waste Not, Want Not" QuestId="10055" GiverName="Dumphry" GiverId="21209" X="-584.432" Y="2895.453" Z="59.20426" />
-  <TurnIn QuestName="Know your Enemy" QuestId="10160" TurnInName="Lieutenant Amadi" TurnInId="16820" X="-591.543" Y="2910.224" Z="59.21259" />
-  <PickUp QuestName="Fel Orc Scavengers" QuestId="10482" GiverName="Lieutenant Amadi" GiverId="16820" X="-591.543" Y="2910.224" Z="59.21259" />
+	<If Condition="HasQuest(10160)">
+		<TurnIn QuestName="Know your Enemy" QuestId="10160" TurnInName="Lieutenant Amadi" TurnInId="16820" X="-591.543" Y="2910.224" Z="59.21259" />
+  </If>
+	<PickUp QuestName="Fel Orc Scavengers" QuestId="10482" GiverName="Lieutenant Amadi" GiverId="16820" X="-591.543" Y="2910.224" Z="59.21259" />
   <If Condition="HasQuest(10141)">
     <CustomBehavior File="FlyTo" X="-607.3435" Y="2347.864" Z="35.64784" />
     <CustomBehavior File="ForcedDismount" />
