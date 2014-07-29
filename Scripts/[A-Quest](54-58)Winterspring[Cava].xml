@@ -1203,8 +1203,10 @@
 <TurnIn QuestName="Shy-Rotam" QuestId="28742" TurnInName="Jez Goodgrub" TurnInId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 <TurnIn QuestName="Ursius" QuestId="28639" TurnInName="Francis Morcott" TurnInId="49436" X="7634.253" Y="-4429.314" Z="623.8746" />
 <If Condition="HasQuest(28847)">
+<!--
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
+-->
   <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
 </If>
 <TurnIn QuestName="The Pursuit of Umbranse" QuestId="28847" TurnInName="Haleh" TurnInId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
@@ -1338,10 +1340,12 @@
 </If>
 <TurnIn QuestName="The Arcane Storm Within" QuestId="28841" TurnInName="Haleh" TurnInId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
 <TurnIn QuestName="Umbranse's Deliverance" QuestId="28842" TurnInName="Haleh" TurnInId="10929" X="6178.788" Y="-4559.205" Z="713.3438" />
+<!--
 <If Condition="!HasQuest(28857) &amp;&amp; !IsQuestCompleted(28857)" >
   <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(6948)" WaitTime="1000" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" GoalText="Waiting for Hearth {TimeRemaining}" />
 </If>
+-->
 <PickUp QuestName="Blasted Lands: The Other Side of the World" QuestId="28857" GiverName="Innkeeper Vizzie" GiverId="11118" X="6695.151" Y="-4673.041" Z="721.569" />
 <If Condition="HasQuest(28857)" >
   <RunTo X="6802.778" Y="-4737.768" Z="701.4667" />
