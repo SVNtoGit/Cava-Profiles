@@ -832,7 +832,23 @@
 <If Condition="!HasQuest(28742) &amp;&amp; !IsQuestCompleted(28742)" >
   <PickUp QuestName="Shy-Rotam" QuestId="28742" GiverName="Jez Goodgrub" GiverId="49396" X="7640.542" Y="-4431.807" Z="623.8754" />
 </If>
+<If Condition="HasQuest(28742) &amp;&amp; !IsQuestCompleted(28742)" >
+	<RunTo X="8074.958" Y="-3824.374" Z="690.0328" />
+	<While Condition="!IsQuestCompleted(28742)" >
+		<SetGrindArea>
+			<GrindArea>
+			<MobIDs>10737</MobIDs>
+				<Hotspots>
+					<Hotspot X="8074.958" Y="-3824.374" Z="690.0328" />
+				</Hotspots>
+			</GrindArea>
+		</SetGrindArea>
+		<GrindTo Condition="IsQuestCompleted(28742)" />
+	</While>
+</If>
+<!--
 <Objective QuestName="Shy-Rotam" QuestId="28742" Type="KillMob" MobId="10737" KillCount="1" />
+-->
 <If Condition="HasQuest(28638) &amp;&amp; !IsQuestCompleted(28638)" >
   <CustomBehavior File="CollectThings" QuestId="28638" MobId="7455" MobState="Alive" CollectUntil="QuestComplete" HuntingGroundRadius="200" >
     <Hotspot X="7617.011" Y="-4449.026" Z="614.3275" />
