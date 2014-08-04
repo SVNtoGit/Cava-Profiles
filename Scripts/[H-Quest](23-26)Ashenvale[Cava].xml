@@ -675,7 +675,7 @@
   <While Condition="!IsQuestCompleted(13888)" >
     <While Condition="!Me.IsOnTransport" >
       <RunTo X="2494.426" Y="-1314.698" Z="135.0329" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34289"  GossipOptions="1" WaitTime="1000" X="2490.533" Y="-1317.807" Z="137.2946" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="34289"  GossipOptions="1" WaitTime="1000" TerminateWhen="Me.IsOnTransport" ProactiveCombatStrategy="ClearMobsTargetingUs" X="2490.533" Y="-1317.807" Z="137.2946" />
     </While>
     <DisableBehavior Name="Combat" />
     <CustomBehavior File="Cava\13888-Ashenvale-qVortex" />
