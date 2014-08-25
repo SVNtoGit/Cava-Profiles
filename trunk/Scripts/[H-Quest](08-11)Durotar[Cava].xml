@@ -180,6 +180,19 @@
 <CustomBehavior File="RunMacro" Macro="/script SetCVar('AutoLootDefault', 1)" NumOfTimes="1" WaitTime="1000" />
 <CustomBehavior File="Message" Text="Compiling Durotar Quests (8-11)" LogColor="Aquamarine" />
 <If Condition="Me.ZoneId != 14">
+	<If Condition="Me.ZoneId == 6452 || Me.ZoneId == 215">
+		<RunTo X="-2302.217" Y="-380.305" Z="-9.0957" />
+		<CustomBehavior File="Cava\TaxiRide" MobId="40809" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-2299.118" Y="-381.5382" Z="-9.052119" />
+	</If>
+	<If Condition="Me.ZoneId == 1638">
+		<RunTo X="-1197.21" Y="29.71" Z="176.9499" />
+		<CustomBehavior File="Cava\TaxiRide" MobId="2995" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-1195.095" Y="25.68229" Z="176.9489" />
+	</If>
+	<If Condition="Me.MapId == 1">
+		<RunTo X="-780.267" Y="-4890.28" Z="19.6215" />
+	</If>
+</If>
+<If Condition="Me.ZoneId != 14">
   <If Condition="Me.ZoneId != 1637">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   </If>

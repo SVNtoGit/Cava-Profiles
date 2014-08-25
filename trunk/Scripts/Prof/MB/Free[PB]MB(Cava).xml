@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Professionbuddy>
   <While Condition="SecondaryBot.Name != &quot;Gatherbuddy2&quot;" IgnoreCanRun="True">
     <ChangeBot BotName="Gatherbuddy2" />
@@ -62,7 +62,7 @@
     <Custom Code="TreeRoot.Stop();" />
   </If>
   <If Condition="(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
-    <EnableProfileAction ProfileType="Professionbuddy" Path="http://cavaprofiles.net/index.php/profiles/profiles-list/cavaprofessions/mining/87-freemb-1" IsLocal="False" />
+    <EnableProfileAction ProfileType="Professionbuddy" Path="cavaprofessions/mining/87-freemb-1" IsLocal="False" />
   </If>
   <If Condition="!(bool)Settings[&quot;Options Configured&quot;]" IgnoreCanRun="True">
     <Custom Code="MessageBox.Show(&quot;You Didnt Selected Any Configuration, Press Bot Config and Do It Now ..EXITING&quot;);" />
