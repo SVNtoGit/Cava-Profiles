@@ -1813,9 +1813,9 @@
 
 <If Condition="Me.IsHorde">
   <!--# # # Level 60 # # # -->
-  <PickUp QuestName="Arrival in Outland" QuestId="10120" GiverName="Lieutenant General Orion" GiverId="19253" X="-232.92" Y="1028.272" Z="54.32446" />
-  <TurnIn QuestName="Arrival in Outland" QuestId="10120" TurnInName="Vlagga Freyfeather" TurnInId="18930" X="-176.4199" Y="1028.531" Z="54.17286" />
   <If Condition="!HasQuest(10291) &amp;&amp; !IsQuestCompleted(10291)">
+		<PickUp QuestName="Arrival in Outland" QuestId="10120" GiverName="Lieutenant General Orion" GiverId="19253" X="-232.92" Y="1028.272" Z="54.32446" />
+		<TurnIn QuestName="Arrival in Outland" QuestId="10120" TurnInName="Vlagga Freyfeather" TurnInId="18930" X="-176.4199" Y="1028.531" Z="54.17286" />
 		<PickUp QuestName="Journey to Thrallmar" QuestId="10289" GiverName="Vlagga Freyfeather" GiverId="18930" X="-176.4199" Y="1028.531" Z="54.17286" />
   </If>
 	<If Condition="HasQuest(10289)">
