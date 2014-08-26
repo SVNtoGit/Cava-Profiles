@@ -1821,8 +1821,10 @@
 	<If Condition="HasQuest(10289)">
     <CustomBehavior File="InteractWith" MobId="18930" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" InteractByGossipOptions="1" X="-176.4199" Y="1028.531" Z="54.17286" />
   </If>
-  <TurnIn QuestName="Journey to Thrallmar" QuestId="10289" TurnInName="General Krakork" TurnInId="19255" X="204.0605" Y="2654.455" Z="88.39183" />
-  <If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 224">
+	<If Condition="HasQuest(10289)">
+		<TurnIn QuestName="Journey to Thrallmar" QuestId="10289" TurnInName="General Krakork" TurnInId="19255" X="204.0605" Y="2654.455" Z="88.39183" />
+  </If>
+	<If Condition="Me.GetSkill(Styx.SkillLine.Riding).CurrentValue &lt;= 224">
     <CustomBehavior File="Message" Text="Starting Mount Procedures. Going to Learn: EXPERT RIDING SKILL. Please do not stop bot." LogColor="Aquamarine" />
     <If Condition="(Me.Gold &gt;= 250)" >
       <RunTo X="47.24786" Y="2740.635" Z="85.25571" />
