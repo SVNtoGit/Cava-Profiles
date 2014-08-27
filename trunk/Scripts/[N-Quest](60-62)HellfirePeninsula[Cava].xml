@@ -1648,7 +1648,12 @@
   <TurnIn QuestName="Disrupt Their Reinforcements" QuestId="10144" TurnInName="Forward Commander Kingston" TurnInId="19310" X="-680.1464" Y="1855.198" Z="66.90966" />
   <PickUp QuestName="Mission: The Murketh and Shaadraz Gateways" QuestId="10146" GiverName="Forward Commander Kingston" GiverId="19310" X="-680.1464" Y="1855.198" Z="66.90966" />
   <If Condition="HasQuest(10146) &amp;&amp; !IsQuestCompleted(10146)">
-    <While Condition="!IsQuestCompleted(10146)">
+		<If Condition="!HasItem(28038)">
+			<CustomBehavior File="AbandonQuest" QuestId="10146" />
+			<CustomBehavior File="WaitTimer" WaitTime="4000"/>
+			<PickUp QuestName="Mission: The Murketh and Shaadraz Gateways" QuestId="10146" GiverName="Forward Commander Kingston" GiverId="19310" X="-680.1464" Y="1855.198" Z="66.90966" />
+		</If>
+		<While Condition="!IsQuestCompleted(10146)">
       <RunTo X="-671.6398" Y="1855.097" Z="66.90812" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="SpecificQuests\10129-10146-Hellfire-MurkethAndShaadraz" QuestId="10146" />

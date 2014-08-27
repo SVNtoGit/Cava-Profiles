@@ -266,7 +266,10 @@
 <If Condition="!HasQuest(26139) &amp;&amp; !IsQuestCompleted(26139)" >
 	<PickUp QuestName="Into Arathi" QuestId="26139" GiverName="Thargas Anvilmar" GiverId="42160" X="-2622.276" Y="-2433.997" Z="80.75504" />
 </If>
-<TurnIn QuestName="Into Arathi" QuestId="26139" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.3444" />
+<If Condition="HasQuest(26139)" >
+	<RunTo X="-1273.429" Y="-2516.552" Z="21.33924" />
+	<TurnIn QuestName="Into Arathi" QuestId="26139" TurnInName="Captain Nials" TurnInId="2700" X="-1274.687" Y="-2516.632" Z="21.3444" />
+</If>
 <!--# # # Level 26 # # # -->
 <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](26-27)ArathiHighlands[Cava]" />
 </QuestOrder>
