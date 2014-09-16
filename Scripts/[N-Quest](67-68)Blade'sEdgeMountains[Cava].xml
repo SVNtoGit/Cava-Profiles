@@ -1179,7 +1179,7 @@
   <If Condition="HasQuest(10927) &amp;&amp; !IsQuestCompleted(10927)">
     <Objective QuestName="Killing the Crawlers" QuestId="10927" Type="KillMob" MobId="22044" KillCount="6" />
     <RunTo X="1496.922" Y="6824.74" Z="109.1675" />
-    <CustomBehavior File="FlyTo" X="1971.046" Y="6856.048" Z="161.5043" />
+    <CustomBehavior File="Cava\FlyTo" X="1971.046" Y="6856.048" Z="161.5043" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="No Time for Curiosity" QuestId="9794" TurnInName="Kialon Nightblade" TurnInId="18098" X="1972.715" Y="6859.702" Z="162.0973" />
@@ -1206,24 +1206,24 @@
   <PickUp QuestName="Into the Draenethyst Mine" QuestId="10510" GiverName="Bronwyn Stouthammer" GiverId="21197" X="2055.932" Y="6816.509" Z="175.5976" />
   <PickUp QuestName="Strange Brew" QuestId="10511" GiverName="Borgrim Stouthammer" GiverId="21151" X="2069.854" Y="6816.89" Z="175.5974" />
   <If Condition="HasQuest(10455) &amp;&amp; !IsQuestCompleted(10455)">
-    <CustomBehavior File="FlyTo" X="1904.713" Y="6833.777" Z="146.685" />
+    <CustomBehavior File="Cava\FlyTo" X="1904.713" Y="6833.777" Z="146.685" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="The Encroaching Wilderness" QuestId="10455" Type="KillMob" MobId="21022" KillCount="12" />
   </If>
   <If Condition="HasQuest(10555) &amp;&amp; !IsQuestCompleted(10555)">
-    <CustomBehavior File="FlyTo" X="1809.213" Y="6879.273" Z="144.9554" />
+    <CustomBehavior File="Cava\FlyTo" X="1809.213" Y="6879.273" Z="144.9554" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Malaise" QuestId="10555" Type="CollectItem" ItemId="30529" CollectCount="18" />
   </If>
   <If Condition="HasQuest(10555) &amp;&amp; IsQuestCompleted(10555)">
-    <CustomBehavior File="FlyTo" X="1593.391" Y="6975.331" Z="188.9578" />
+    <CustomBehavior File="Cava\FlyTo" X="1593.391" Y="6975.331" Z="188.9578" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Malaise" QuestId="10555" TurnInName="Lashh'an Tome" TurnInType="GameObject" TurnInId="184825" X="1593.391" Y="6975.331" Z="188.9578" />
   <PickUp QuestName="Scratches" QuestId="10556" GiverName="Lashh'an Tome" GiverType="GameObject" GiverId="184825" X="1593.391" Y="6975.331" Z="188.9578" />
   <If Condition="HasQuest(10556) &amp;&amp; !IsQuestCompleted(10556)">
     <While Condition="!IsQuestCompleted(10556)">
-      <CustomBehavior File="FlyTo" X="1612.209" Y="6935.645" Z="159.1149" />
+      <CustomBehavior File="Cava\FlyTo" X="1612.209" Y="6935.645" Z="159.1149" />
       <CustomBehavior File="ForcedDismount" />
       <While Condition="!Me.HasAura(36904)" >
         <RunTo X="1612.209" Y="6935.645" Z="159.1149" />
@@ -1256,7 +1256,7 @@
   <If Condition="!HasQuest(10456) &amp;&amp; !IsQuestCompleted(10456) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -1264,7 +1264,7 @@
   <If Condition="(HasQuest(10510) &amp;&amp; !IsQuestCompleted(10510)) ||
                  (HasQuest(10511) &amp;&amp; !IsQuestCompleted(10511)) ||
                  (HasQuest(10502) &amp;&amp; !IsQuestCompleted(10502))">
-    <CustomBehavior File="FlyTo" X="1418.335" Y="6601.435" Z="2.654301" />
+    <CustomBehavior File="Cava\FlyTo" X="1418.335" Y="6601.435" Z="2.654301" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <Objective QuestName="Into the Draenethyst Mine" QuestId="10510" Type="CollectItem" ItemId="30315" CollectCount="5" />
@@ -1304,7 +1304,7 @@
     <GrindTo Condition="IsQuestCompleted(10502)" />
   </If>
   <If Condition="HasQuest(10510) || HasQuest(10511) || HasQuest(10502)">
-    <CustomBehavior File="FlyTo" X="2004.588" Y="6860.847" Z="171.9417" />
+    <CustomBehavior File="Cava\FlyTo" X="2004.588" Y="6860.847" Z="171.9417" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Bloodmaul Ogres" QuestId="10502" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
@@ -1314,23 +1314,23 @@
   <If Condition="!HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Getting the Bladespire Tanked" QuestId="10512" GiverName="Borgrim Stouthammer" GiverId="21151" X="2069.854" Y="6816.89" Z="175.5974" />
   <If Condition="HasQuest(10456) &amp;&amp; !IsQuestCompleted(10456)">
-    <CustomBehavior File="FlyTo" X="2024.353" Y="6190.363" Z="138.1348" />
+    <CustomBehavior File="Cava\FlyTo" X="2024.353" Y="6190.363" Z="138.1348" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Marauding Wolves" QuestId="10456" Type="CollectItem" ItemId="30184" CollectCount="4" />
   </If>
   <If Condition="HasQuest(10690) &amp;&amp; !IsQuestCompleted(10690)">
-    <CustomBehavior File="FlyTo" X="1703.838" Y="6043.119" Z="144.1103" />
+    <CustomBehavior File="Cava\FlyTo" X="1703.838" Y="6043.119" Z="144.1103" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="The Den Mother" QuestId="10690" Type="KillMob" MobId="21956" KillCount="1" />
   </If>
   <If Condition="!HasQuest(10608) &amp;&amp; !IsQuestCompleted(10608)">
-    <CustomBehavior File="FlyTo" X="1862.596" Y="5530.411" Z="276.5416" />
+    <CustomBehavior File="Cava\FlyTo" X="1862.596" Y="5530.411" Z="276.5416" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="21107" MobState="Alive" X="1860.727" Y="5528.274" Z="276.6549" />
   </If>
@@ -1345,19 +1345,19 @@
     </While>
   </If>
   <If Condition="HasQuest(10557)">
-    <CustomBehavior File="FlyTo" X="1937.302" Y="5575.896" Z="263.4961" />
+    <CustomBehavior File="Cava\FlyTo" X="1937.302" Y="5575.896" Z="263.4961" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Test Flight: The Zephyrium Capacitorium" QuestId="10557" TurnInName="Tally Zapnabber" TurnInId="21460" X="1935.01" Y="5575.737" Z="263.6925" />
   <If Condition="!HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
     <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -1381,19 +1381,19 @@
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
   </If>
   <If Condition="HasQuest(10584)">
-    <CustomBehavior File="FlyTo" X="1915.938" Y="5560.567" Z="262.8255" />
+    <CustomBehavior File="Cava\FlyTo" X="1915.938" Y="5560.567" Z="262.8255" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Picking Up Some Power Converters" QuestId="10584" TurnInName="Toshley" TurnInId="21691" X="1913.948" Y="5562.182" Z="262.7087" />
   <If Condition="!HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
     <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -1402,9 +1402,9 @@
   <PickUp QuestName="Cutting Your Teeth" QuestId="10632" GiverName="Razak Ironsides" GiverId="21118" X="1944.888" Y="5571.545" Z="263.3051" />
   <If Condition="HasQuest(10710) &amp;&amp; !IsQuestCompleted(10710)">
 		<While Condition="!IsQuestCompleted(10710)">
-			<CustomBehavior File="FlyTo" QuestId="10710" Land="True" X="1913.616" Y="5575.294" Z="263.5218" />
+			<CustomBehavior File="Cava\FlyTo" QuestId="10710" Land="True" X="1913.616" Y="5575.294" Z="263.5218" />
 			<If Condition="!HasItem(30540)">
-				<CustomBehavior File="FlyTo" Land="True" X="1937.468" Y="5575.969" Z="263.4758" />		
+				<CustomBehavior File="Cava\FlyTo" Land="True" X="1937.468" Y="5575.969" Z="263.4758" />		
 				<CustomBehavior File="InteractWith" MobId="21460" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1935.01" Y="5575.737" Z="263.6919" />    
 			</If>
 			<CustomBehavior File="WaitTimer" WaitTime="1000" />
@@ -1419,7 +1419,7 @@
   <If Condition="(HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657)) ||
                  (HasQuest(10632) &amp;&amp; !IsQuestCompleted(10632)) ||
                  (HasQuest(10620) &amp;&amp; !IsQuestCompleted(10620))">
-    <CustomBehavior File="FlyTo" X="1768.728" Y="5184.333" Z="265.9362" />
+    <CustomBehavior File="Cava\FlyTo" X="1768.728" Y="5184.333" Z="265.9362" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10657) &amp;&amp; !IsQuestCompleted(10657)">
@@ -1513,14 +1513,14 @@
     </While>
     <UseMount Value="true" />
     <CustomBehavior File="RunMacro" Macro="/cancelaura Repolarized Magneto Sphere" />
-    <CustomBehavior File="FlyTo" X="1762.535" Y="5192.072" Z="343.1736" />
-    <CustomBehavior File="FlyTo" X="1768.728" Y="5184.333" Z="265.9362" />
+    <CustomBehavior File="Cava\FlyTo" X="1762.535" Y="5192.072" Z="343.1736" />
+    <CustomBehavior File="Cava\FlyTo" X="1768.728" Y="5184.333" Z="265.9362" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <Objective QuestName="Cutting Your Teeth" QuestId="10632" Type="CollectItem" ItemId="30798" CollectCount="5" />
   <Objective QuestName="Ridgespine Menace" QuestId="10620" Type="KillMob" MobId="20714" KillCount="10" />
   <If Condition="(HasQuest(10609) &amp;&amp; !IsQuestCompleted(10609)) || (HasQuest(10608) &amp;&amp; !IsQuestCompleted(10608))">
-    <CustomBehavior File="FlyTo" X="1703.39" Y="5168.477" Z="265.6878" />
+    <CustomBehavior File="Cava\FlyTo" X="1703.39" Y="5168.477" Z="265.6878" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10609) &amp;&amp; !IsQuestCompleted(10609)">
@@ -1560,7 +1560,7 @@
   </If>
   <Objective QuestName="Crystal Clear" QuestId="10608" Type="KillMob" MobId="21189" KillCount="10" />
   <If Condition="HasQuest(10657) || HasQuest(10632) || HasQuest(10620) || HasQuest(10609)">
-    <CustomBehavior File="FlyTo" X="1923.533" Y="5560.863" Z="263.0811" />
+    <CustomBehavior File="Cava\FlyTo" X="1923.533" Y="5560.863" Z="263.0811" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Cutting Your Teeth" QuestId="10632" TurnInName="Razak Ironsides" TurnInId="21118" X="1944.888" Y="5571.545" Z="263.3051" />
@@ -1573,20 +1573,20 @@
   <TurnIn QuestName="Crystal Clear" QuestId="10608" TurnInName="Nickwinkle the Metro-Gnome" TurnInId="21755" X="1914.839" Y="5578.607" Z="263.8767" />
   <If Condition="!HasQuest(10594) &amp;&amp; !IsQuestCompleted(10594) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
     <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Gauging the Resonant Frequency" QuestId="10594" GiverName="Nickwinkle the Metro-Gnome" GiverId="21755" X="1914.839" Y="5578.607" Z="263.8767" />
   <PickUp QuestName="Test Flight: Razaan's Landing" QuestId="10711" GiverName="Tally Zapnabber" GiverId="21460" X="1935.01" Y="5575.737" Z="263.6923" />
   <If Condition="HasQuest(10594) &amp;&amp; !IsQuestCompleted(10594)">
-    <CustomBehavior File="FlyTo" X="1666.972" Y="5529.272" Z="265.514" /><!--center-->
+    <CustomBehavior File="Cava\FlyTo" X="1666.972" Y="5529.272" Z="265.514" /><!--center-->
     <CustomBehavior File="ForcedDismount" />
     <RunTo X="1680.559" Y="5528.994" Z="265.3343" /><!--1-->
     <UseItem QuestId="10594" ItemId="30701" X="1680.559" Y="5528.994" Z="265.3343" />
@@ -1636,19 +1636,19 @@
     </While>
   </If>
   <If Condition="HasQuest(10594)">
-    <CustomBehavior File="FlyTo" X="1912.919" Y="5576.881" Z="263.6205" />
+    <CustomBehavior File="Cava\FlyTo" X="1912.919" Y="5576.881" Z="263.6205" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Gauging the Resonant Frequency" QuestId="10594" TurnInName="Nickwinkle the Metro-Gnome" TurnInId="21755" X="1914.839" Y="5578.607" Z="263.8767" />
   <If Condition="HasQuest(10711) &amp;&amp; !IsQuestCompleted(10711) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
     <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -1657,10 +1657,10 @@
       <CustomBehavior File="InteractWith" QuestId="10711" MobId="21461" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1920.312" Y="5581.301" Z="263.8955" />
       <CustomBehavior File="WaitTimer" WaitTime="40000" />
     </While>
-    <CustomBehavior File="FlyTo" X="2602.762" Y="5230.631" Z="266.1868" />
+    <CustomBehavior File="Cava\FlyTo" X="2602.762" Y="5230.631" Z="266.1868" />
   </If>
   <If Condition="(HasQuest(10674) &amp;&amp; !IsQuestCompleted(10674)) || (HasQuest(10671) &amp;&amp; !IsQuestCompleted(10671))">
-    <CustomBehavior File="FlyTo" X="2602.762" Y="5230.631" Z="266.1868" />
+    <CustomBehavior File="Cava\FlyTo" X="2602.762" Y="5230.631" Z="266.1868" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10671) &amp;&amp; !IsQuestCompleted(10671)">
@@ -1678,7 +1678,7 @@
   </If>
   <Objective QuestName="More than a Pound of Flesh" QuestId="10671" Type="CollectItem" ItemId="30840" CollectCount="5" />
   <If Condition="HasQuest(10711)">
-    <CustomBehavior File="FlyTo" X="1912.335" Y="5568.018" Z="262.8703" />
+    <CustomBehavior File="Cava\FlyTo" X="1912.335" Y="5568.018" Z="262.8703" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Test Flight: Razaan's Landing" QuestId="10711" TurnInName="Tally Zapnabber" TurnInId="21460" X="1935.01" Y="5575.737" Z="263.6923" />
@@ -1686,13 +1686,13 @@
   <TurnIn QuestName="Trapping the Light Fantastic" QuestId="10674" TurnInName="Toshley" TurnInId="21691" X="1913.948" Y="5562.182" Z="262.7087" />
   <If Condition="HasQuest(10675) &amp;&amp; !IsQuestCompleted(10675) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
     <TurnIn QuestName="Marauding Wolves" QuestId="10456" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -1701,7 +1701,7 @@
     <!--<CustomBehavior File="InteractWith" QuestId="10675" MobId="21461" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1,3" InteractByQuestFrameDisposition="TerminateBehavior" PreInteractMountStrategy="Dismount" X="1920.312" Y="5581.301" Z="263.8955" />
       <CustomBehavior File="WaitTimer" WaitTime="40000" />
     -->
-    <CustomBehavior File="FlyTo" X="2822.901" Y="5237.732" Z="264.4786" />
+    <CustomBehavior File="Cava\FlyTo" X="2822.901" Y="5237.732" Z="264.4786" />
     <While Condition="!IsQuestCompleted(10675)" >
       <SetGrindArea>
       <GrindArea>
@@ -1718,12 +1718,12 @@
     </While>
   </If>
   <If Condition="HasQuest(10675)">
-    <CustomBehavior File="FlyTo" X="1912.335" Y="5568.018" Z="262.8703" />
+    <CustomBehavior File="Cava\FlyTo" X="1912.335" Y="5568.018" Z="262.8703" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Show Them Gnome Mercy!" QuestId="10675" TurnInName="Toshley" TurnInId="21691" X="1913.948" Y="5562.182" Z="262.7087" />
   <If Condition="HasQuest(10690)">
-    <CustomBehavior File="FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
+    <CustomBehavior File="Cava\FlyTo" X="2005.058" Y="6862.109" Z="172.5272" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Den Mother" QuestId="10690" TurnInName="Commander Skyshadow" TurnInId="21158" X="2012.687" Y="6877.448" Z="178.9913" />
@@ -1731,31 +1731,31 @@
   <If Condition="!HasQuest(10457) &amp;&amp; !IsQuestCompleted(10457) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Protecting Our Own" QuestId="10457" GiverName="Rina Moonspring" GiverId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
   <If Condition="HasQuest(10457) &amp;&amp; !IsQuestCompleted(10457)">
-    <CustomBehavior File="FlyTo" X="1874.795" Y="6853.016" Z="144.7594" />
+    <CustomBehavior File="Cava\FlyTo" X="1874.795" Y="6853.016" Z="144.7594" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Protecting Our Own" QuestId="10457" Type="UseObject" ObjectId="184631" UseCount="5" />
   </If>
   <If Condition="HasQuest(10457) &amp;&amp; !IsQuestCompleted(10457)">
-    <CustomBehavior File="FlyTo" X="1977.878" Y="6877.486" Z="161.8129" />
+    <CustomBehavior File="Cava\FlyTo" X="1977.878" Y="6877.486" Z="161.8129" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Protecting Our Own" QuestId="10457" TurnInName="Rina Moonspring" TurnInId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
   <If Condition="!HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="A Dire Situation" QuestId="10506" GiverName="Rina Moonspring" GiverId="21066" X="1980.62" Y="6881.188" Z="161.2903" />
   <If Condition="HasQuest(10506) &amp;&amp; !IsQuestCompleted(10506)">
-    <CustomBehavior File="FlyTo" X="1483.94" Y="6579.726" Z="-10.23015" />
+    <CustomBehavior File="Cava\FlyTo" X="1483.94" Y="6579.726" Z="-10.23015" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="UserSettings" UseMount="False" />
     <CustomBehavior File="CombatUseItemOnV2" QuestId="10506" ItemId="30251" ItemAppliesAuraId="36310" MobId="20058" MaxRangeToUseItem="5"
@@ -1783,14 +1783,14 @@
   </If>
 <!--
   <If Condition="!HasQuest(10516) &amp;&amp; !IsQuestCompleted(10516)">
-    <CustomBehavior File="FlyTo" X="2534.637" Y="6452.14" Z="-3.103959" />
+    <CustomBehavior File="Cava\FlyTo" X="2534.637" Y="6452.14" Z="-3.103959" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <PickUp QuestName="The Trappings of a Vindicator" QuestId="10516" GiverName="Vindicator Vuuleen" GiverId="21277" X="2533.749" Y="6458.374" Z="-3.128562" />
   <Objective QuestName="The Trappings of a Vindicator" QuestId="10516" Type="CollectItem" ItemId="30415" CollectCount="1" />
 -->
   <If Condition="(HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512)) || (HasQuest(10504) &amp;&amp; !IsQuestCompleted(10504))">
-    <CustomBehavior File="FlyTo" X="2503.129" Y="6431.297" Z="-10.00925" />
+    <CustomBehavior File="Cava\FlyTo" X="2503.129" Y="6431.297" Z="-10.00925" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10512) &amp;&amp; !IsQuestCompleted(10512)">
@@ -1882,7 +1882,7 @@ turnin 10517
     </CustomBehavior>
   </If>
   <If Condition="HasQuest(10512)  || HasQuest(10504)">
-    <CustomBehavior File="FlyTo" X="2060.193" Y="6845.305" Z="172.5214" />
+    <CustomBehavior File="Cava\FlyTo" X="2060.193" Y="6845.305" Z="172.5214" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Getting the Bladespire Tanked" QuestId="10512" TurnInName="Borgrim Stouthammer" TurnInId="21151" X="2069.854" Y="6816.89" Z="175.5974" />
@@ -1891,12 +1891,12 @@ turnin 10517
   <If Condition="!HasQuest(10712) &amp;&amp; !IsQuestCompleted(10712) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
     <RunTo X="3079.379" Y="3599.404" Z="144.061" />
-    <CustomBehavior File="FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
+    <CustomBehavior File="Cava\FlyTo" X="3374.864" Y="4331.585" Z="122.641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <If Condition="!HasQuest(10712) &amp;&amp; !IsQuestCompleted(10712)">
-    <CustomBehavior File="FlyTo" X="1937.942" Y="5576.389" Z="263.4713" />
+    <CustomBehavior File="Cava\FlyTo" X="1937.942" Y="5576.389" Z="263.4713" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <PickUp QuestName="Test Flight: Ruuan Weald" QuestId="10712" GiverName="Tally Zapnabber" GiverId="21460" X="1935.01" Y="5575.737" Z="263.692" />
@@ -1924,7 +1924,7 @@ turnin 10517
   <If Condition="HasQuest(10928) &amp;&amp; !IsQuestCompleted(10928)">
     <Objective QuestName="Killing the Crawlers" QuestId="10928" Type="KillMob" MobId="22044" KillCount="6" />
     <RunTo X="1668.24" Y="6045.087" Z="140.2567" />
-    <CustomBehavior File="FlyTo" X="2447.827" Y="6020.851" Z="154.4785" />
+    <CustomBehavior File="Cava\FlyTo" X="2447.827" Y="6020.851" Z="154.4785" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Killing the Crawlers" QuestId="10928" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
@@ -1947,47 +1947,47 @@ turnin 10517
   <PickUp QuestName="Felling an Ancient Tree" QuestId="10489" GiverName="Wanted Poster" GiverId="184660" GiverType="GameObject" X="2318.512" Y="6029.955" Z="142.5888" />
   <PickUp QuestName="The Encroaching Wilderness" QuestId="10486" GiverName="Gor'drek" GiverId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="HasQuest(10486) &amp;&amp; !IsQuestCompleted(10486)">
-    <CustomBehavior File="FlyTo" X="2187.631" Y="6080.56" Z="144.3649" />
+    <CustomBehavior File="Cava\FlyTo" X="2187.631" Y="6080.56" Z="144.3649" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="The Encroaching Wilderness" QuestId="10486" Type="KillMob" MobId="21033" KillCount="12" />
   </If>
   <If Condition="HasQuest(10486)">
-    <CustomBehavior File="FlyTo" X="2310.197" Y="6009.16" Z="142.9709" />
+    <CustomBehavior File="Cava\FlyTo" X="2310.197" Y="6009.16" Z="142.9709" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Encroaching Wilderness" QuestId="10486" TurnInName="Gor'drek" TurnInId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="!HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Dust from the Drakes" QuestId="10487" GiverName="Gor'drek" GiverId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="HasQuest(10487) &amp;&amp; !IsQuestCompleted(10487)">
-    <CustomBehavior File="FlyTo" X="1970.291" Y="6617.207" Z="141.9279" />
+    <CustomBehavior File="Cava\FlyTo" X="1970.291" Y="6617.207" Z="141.9279" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Dust from the Drakes" QuestId="10487" Type="CollectItem" ItemId="30174" CollectCount="4" />
   </If>
   <If Condition="HasQuest(10489) &amp;&amp; !IsQuestCompleted(10489)">
-    <CustomBehavior File="FlyTo" X="1831.922" Y="6813.671" Z="139.5408" />
+    <CustomBehavior File="Cava\FlyTo" X="1831.922" Y="6813.671" Z="139.5408" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Felling an Ancient Tree" QuestId="10489" Type="CollectItem" ItemId="30177" CollectCount="1" />
   </If>
   <If Condition="HasQuest(10487) || HasQuest(10489)">
-    <CustomBehavior File="FlyTo" X="2294.121" Y="6030.15" Z="142.5574" />
+    <CustomBehavior File="Cava\FlyTo" X="2294.121" Y="6030.15" Z="142.5574" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Felling an Ancient Tree" QuestId="10489" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
   <TurnIn QuestName="Dust from the Drakes" QuestId="10487" TurnInName="Gor'drek" TurnInId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="!HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Protecting Our Own" QuestId="10488" GiverName="Gor'drek" GiverId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="HasQuest(10488) &amp;&amp; !IsQuestCompleted(10488)">
-    <CustomBehavior File="FlyTo" X="2210.438" Y="6076.39" Z="143.6374" />
+    <CustomBehavior File="Cava\FlyTo" X="2210.438" Y="6076.39" Z="143.6374" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10488)">
       <CustomBehavior File="InteractWith" QuestId="10488" MobId="20748" MobState="Alive" AuraIdMissingFromMob="32578" InteractByUsingItemId="30175"
@@ -2018,13 +2018,13 @@ turnin 10517
     </While>
   </If>
   <If Condition="HasQuest(10488)">
-    <CustomBehavior File="FlyTo" X="2322.635" Y="6012.405" Z="142.5345" />
+    <CustomBehavior File="Cava\FlyTo" X="2322.635" Y="6012.405" Z="142.5345" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Protecting Our Own" QuestId="10488" TurnInName="Gor'drek" TurnInId="21117" X="2325.909" Y="6010.899" Z="142.4941" />
   <If Condition="(!HasQuest(10524) &amp;&amp; !IsQuestCompleted(10524) &amp;&amp; !HasItem(30431)) ||
                  (HasQuest(10503) &amp;&amp; !IsQuestCompleted(10503))">
-    <CustomBehavior File="FlyTo" X="2493.296" Y="6447.299" Z="-9.42304" />
+    <CustomBehavior File="Cava\FlyTo" X="2493.296" Y="6447.299" Z="-9.42304" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(10524) &amp;&amp; !IsQuestCompleted(10524) &amp;&amp; !HasItem(30431)">
@@ -2058,18 +2058,18 @@ turnin 10517
   </If>
   <If Condition="HasQuest(10524) &amp;&amp; !IsQuestCompleted(10524)">
     <While Condition="!IsObjectiveComplete(2, 10524)">
-      <CustomBehavior File="FlyTo" X="2325.631" Y="6646.654" Z="15.9813" />
+      <CustomBehavior File="Cava\FlyTo" X="2325.631" Y="6646.654" Z="15.9813" />
       <CustomBehavior File="ForcedDismount" />
       <Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30432" CollectCount="1" />
       <RunTo X="2325.631" Y="6646.654" Z="15.9813" />
     </While>
     <While Condition="!IsObjectiveComplete(1, 10524)">
-      <CustomBehavior File="FlyTo" X="2503.024" Y="6599.342" Z="26.27926" />
+      <CustomBehavior File="Cava\FlyTo" X="2503.024" Y="6599.342" Z="26.27926" />
       <CustomBehavior File="ForcedDismount" />
       <Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30433" CollectCount="1" />
     </While>
     <While Condition="!IsObjectiveComplete(3, 10524)">
-      <CustomBehavior File="FlyTo" X="2693.514" Y="6601.092" Z="22.13038" />
+      <CustomBehavior File="Cava\FlyTo" X="2693.514" Y="6601.092" Z="22.13038" />
       <CustomBehavior File="ForcedDismount" />
       <Objective QuestName="Thunderlord Clan Artifacts" QuestId="10524" Type="CollectItem" ItemId="30434" CollectCount="1" />
       <RunTo X="2693.514" Y="6601.092" Z="22.13038" />
@@ -2105,7 +2105,7 @@ turnin 10517
     <GrindTo Condition="IsQuestCompleted(10503)" />
   </If>
   <If Condition="HasQuest(10503) || HasQuest(10524)">
-    <CustomBehavior File="FlyTo" X="2294.121" Y="6030.15" Z="142.5574" />
+    <CustomBehavior File="Cava\FlyTo" X="2294.121" Y="6030.15" Z="142.5574" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Bladespire Threat" QuestId="10503" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
@@ -2121,14 +2121,14 @@ turnin 10517
   <TurnIn QuestName="Vision Guide" QuestId="10525" TurnInName="Rokgah Bloodgrip" TurnInId="21311" X="2276.082" Y="5981.618" Z="142.7057" />
   <If Condition="!HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="The Thunderspike" QuestId="10526" GiverName="Rokgah Bloodgrip" GiverId="21311" X="2276.082" Y="5981.618" Z="142.7057" />
   <If Condition="!HasQuest(10542) &amp;&amp; !IsQuestCompleted(10542)">
     <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-    <CustomBehavior File="FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
+    <CustomBehavior File="Cava\FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <PickUp QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" GiverName="T'chali the Witch Doctor" GiverId="21349" X="1792.967" Y="6406.444" Z="-11.90137" />
@@ -2137,15 +2137,15 @@ turnin 10517
   </If>
   <Objective QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" Type="CollectItem" ItemId="29443" CollectCount="10" />
   <If Condition="HasQuest(10542) &amp;&amp; !IsQuestCompleted(10542)">
-    <CustomBehavior File="FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
+    <CustomBehavior File="Cava\FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" Type="CollectItem" ItemId="29443" CollectCount="10" />
-    <CustomBehavior File="FlyTo" X="1473.459" Y="6563.371" Z="-10.33755" />
+    <CustomBehavior File="Cava\FlyTo" X="1473.459" Y="6563.371" Z="-10.33755" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" Type="CollectItem" ItemId="30468" CollectCount="1" />
   </If>
   <If Condition="HasQuest(10526) &amp;&amp; !IsQuestCompleted(10526)">
-    <CustomBehavior File="FlyTo" X="1388.339" Y="6540.324" Z="12.3827" />
+    <CustomBehavior File="Cava\FlyTo" X="1388.339" Y="6540.324" Z="12.3827" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10526)">
       <RunTo X="1316.709" Y="6691.531" Z="-18.70573" />
@@ -2191,7 +2191,7 @@ turnin 10517
   </If>
 <!--coleciona 16 aqui-->
   <If Condition="HasQuest(10542)">
-    <CustomBehavior File="FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
+    <CustomBehavior File="Cava\FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <Objective Nav="Fly" QuestName="They Stole Me Hookah and Me Brews!" QuestId="10542" Type="CollectItem" ItemId="29443" CollectCount="10" />
@@ -2199,7 +2199,7 @@ turnin 10517
   <PickUp QuestName="Bladespire Kegger" QuestId="10545" GiverName="T'chali the Witch Doctor" GiverId="21349" X="1792.967" Y="6406.444" Z="-11.90137" />
   <If Condition="HasQuest(10545) &amp;&amp; !IsQuestCompleted(10545)">
     <LootMobs Value="true" />
-    <CustomBehavior File="FlyTo" X="2495.597" Y="6485.357" Z="-6.766351" />
+    <CustomBehavior File="Cava\FlyTo" X="2495.597" Y="6485.357" Z="-6.766351" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10545)">
       <If Condition="HasItem(29443)">
@@ -2258,12 +2258,12 @@ turnin 10517
     <LootMobs Value="null" />
   </If>
   <If Condition="HasQuest(10545)">
-    <CustomBehavior File="FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
+    <CustomBehavior File="Cava\FlyTo" X="1795.554" Y="6406.568" Z="-10.33759" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Bladespire Kegger" QuestId="10545" TurnInName="T'chali the Witch Doctor" TurnInId="21349" X="1792.967" Y="6406.444" Z="-11.90137" />
   <If Condition="HasQuest(10505) || HasQuest(10526)">
-    <CustomBehavior File="FlyTo" X="2293.412" Y="6029.715" Z="142.5575" />
+    <CustomBehavior File="Cava\FlyTo" X="2293.412" Y="6029.715" Z="142.5575" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Bloodmaul Ogres" QuestId="10505" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5575" />
@@ -2272,16 +2272,16 @@ turnin 10517
   <TurnIn QuestName="The Spirits Have Voices" QuestId="10718" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5029" />
   <PickUp QuestName="Whispers on the Wind" QuestId="10614" GiverName="Rexxar" GiverId="21984" X="2298.111" Y="6034.416" Z="142.5029" />
   <If Condition="HasQuest(10614)">
-    <CustomBehavior File="FlyTo" X="2026.291" Y="4703.683" Z="150.5641" />
+    <CustomBehavior File="Cava\FlyTo" X="2026.291" Y="4703.683" Z="150.5641" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="22455" MobState="Alive" X="2023.776" Y="4702.706" Z="150.5849" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Whispers on the Wind" QuestId="10614" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9988" />
   <If Condition="!HasQuest(10709) &amp;&amp; !IsQuestCompleted(10709) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -2294,16 +2294,16 @@ turnin 10517
   <PickUp QuestName="Silkwing Cocoons" QuestId="10617" GiverName="Taerek" GiverId="21895" X="2186.735" Y="4729.706" Z="156.9829" />
   <PickUp QuestName="The Softest Wings" QuestId="10618" GiverName="Silmara" GiverId="21896" X="2182.919" Y="4731.6" Z="156.5488" />
   <If Condition="HasQuest(10709)">
-    <CustomBehavior File="FlyTo" X="2025.162" Y="4703.067" Z="150.5693" />
+    <CustomBehavior File="Cava\FlyTo" X="2025.162" Y="4703.067" Z="150.5693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Cava\TaxiRide" MobId="22455" NpcState="Alive" DestName="Thunderlord Stronghold" />
-    <CustomBehavior File="FlyTo" X="2294.083" Y="6036.863" Z="142.4019" />
+    <CustomBehavior File="Cava\FlyTo" X="2294.083" Y="6036.863" Z="142.4019" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Reunion" QuestId="10709" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5028" />
   <PickUp QuestName="On Spirit's Wings" QuestId="10714" GiverName="Rexxar" GiverId="21984" X="2298.111" Y="6034.416" Z="142.5028" />
   <If Condition="HasQuest(10617) &amp;&amp; !IsQuestCompleted(10617) || HasQuest(10618) &amp;&amp; !IsQuestCompleted(10618)">
-    <CustomBehavior File="FlyTo" X="2170.37" Y="4888.416" Z="144.2872" />
+    <CustomBehavior File="Cava\FlyTo" X="2170.37" Y="4888.416" Z="144.2872" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10618) &amp;&amp; !IsQuestCompleted(10618)">
@@ -2315,10 +2315,10 @@ turnin 10517
   </If>
   <Objective QuestName="The Softest Wings" QuestId="10618" Type="CollectItem" ItemId="30792" CollectCount="12" />
   <If Condition="HasQuest(10565) &amp;&amp; !IsQuestCompleted(10565)">
-    <CustomBehavior File="FlyTo" X="1666.332" Y="4708.135" Z="141.8402" />
+    <CustomBehavior File="Cava\FlyTo" X="1666.332" Y="4708.135" Z="141.8402" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="The Stones of Vekh'nir" QuestId="10565" Type="CollectItem" ItemId="30561" CollectCount="1" />
-    <CustomBehavior File="FlyTo" X="1707.92" Y="4624.767" Z="144.2996" />
+    <CustomBehavior File="Cava\FlyTo" X="1707.92" Y="4624.767" Z="144.2996" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10565)">
       <RunTo X="1707.92" Y="4624.767" Z="144.2996" />
@@ -2326,7 +2326,7 @@ turnin 10517
     </While>
   </If>
   <If Condition="HasQuest(10565) || HasQuest(10617) || HasQuest(10618)">
-    <CustomBehavior File="FlyTo" X="2162.079" Y="4767.749" Z="156.2823" />
+    <CustomBehavior File="Cava\FlyTo" X="2162.079" Y="4767.749" Z="156.2823" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="The Stones of Vekh'nir" QuestId="10565" TurnInName="Dertrok" TurnInId="21496" X="2162.213" Y="4769.62" Z="156.5495" />
@@ -2335,7 +2335,7 @@ turnin 10517
   <TurnIn QuestName="The Softest Wings" QuestId="10618" TurnInName="Silmara" TurnInId="21896" X="2182.919" Y="4731.6" Z="156.5488" />
   <If Condition="!HasQuest(10846) &amp;&amp; !IsQuestCompleted(10846) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
@@ -2344,7 +2344,7 @@ turnin 10517
     <PickUp QuestName="Understanding the Mok'Nathal" QuestId="10846" GiverName="Leoroxx" GiverId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
   </If>
   <If Condition="(HasQuest(10846) &amp;&amp; !IsQuestCompleted(10846)) || HasQuest(10566) &amp;&amp; !IsQuestCompleted(10566)">
-    <CustomBehavior File="FlyTo" X="1718.792" Y="4950.115" Z="170.2041" />
+    <CustomBehavior File="Cava\FlyTo" X="1718.792" Y="4950.115" Z="170.2041" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10566) &amp;&amp; !IsQuestCompleted(10566)">
@@ -2479,7 +2479,7 @@ turnin 10517
   </If>
   <If Condition="HasQuest(10846) || HasQuest(10566)">
     <RunTo X="1819.705" Y="4919.578" Z="172.4356" />
-    <CustomBehavior File="FlyTo" X="2161.209" Y="4767.991" Z="156.2881" />
+    <CustomBehavior File="Cava\FlyTo" X="2161.209" Y="4767.991" Z="156.2881" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Trial and Error" QuestId="10566" TurnInName="Dertrok" TurnInId="21496" X="2162.213" Y="4769.62" Z="156.5495" />
@@ -2487,14 +2487,14 @@ turnin 10517
   <TurnIn QuestName="Understanding the Mok'Nathal" QuestId="10846" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
   <If Condition="!HasQuest(10843) &amp;&amp; !IsQuestCompleted(10843) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Since Time Forgotten..." QuestId="10843" GiverName="Leoroxx" GiverId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
   <PickUp QuestName="The Totems of My Enemy" QuestId="10851" GiverName="Spiritcaller Dohgar" GiverId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <If Condition="HasQuest(10860) &amp;&amp; !IsQuestCompleted(10860)">
-    <CustomBehavior File="FlyTo" X="2042.249" Y="5095.372" Z="265.6076" />
+    <CustomBehavior File="Cava\FlyTo" X="2042.249" Y="5095.372" Z="265.6076" />
     <CustomBehavior File="ForcedDismount" />
     <LootMobs Value="true" />
     <SetGrindArea>
@@ -2541,17 +2541,17 @@ turnin 10517
     <Objective QuestName="Mok'Nathal Treats" QuestId="10860" Type="CollectItem" ItemId="31671" CollectCount="3" />
   </If>
   <If Condition="HasQuest(10851) &amp;&amp; !IsQuestCompleted(10851)">
-    <CustomBehavior File="FlyTo" X="2257.782" Y="5662.023" Z="265.7594" />
+    <CustomBehavior File="Cava\FlyTo" X="2257.782" Y="5662.023" Z="265.7594" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="The Totems of My Enemy" QuestId="10851" Type="CollectItem" ItemId="31651" CollectCount="5" />
   </If>
   <If Condition="HasQuest(10843) &amp;&amp; !IsQuestCompleted(10843)">
-    <CustomBehavior File="FlyTo" X="2404.663" Y="5728.226" Z="272.3704" />
+    <CustomBehavior File="Cava\FlyTo" X="2404.663" Y="5728.226" Z="272.3704" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Since Time Forgotten..." QuestId="10843" Type="KillMob" MobId="20768" KillCount="1" />
   </If>
   <If Condition="HasQuest(10851) || HasQuest(10843) || HasQuest(10860)">
-    <CustomBehavior File="FlyTo" X="2205.793" Y="4761.732" Z="157.9073" />
+    <CustomBehavior File="Cava\FlyTo" X="2205.793" Y="4761.732" Z="157.9073" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Since Time Forgotten..." QuestId="10843" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
@@ -2560,19 +2560,19 @@ turnin 10517
   <TurnIn QuestName="The Totems of My Enemy" QuestId="10851" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <PickUp QuestName="Spirit Calling" QuestId="10853" GiverName="Spiritcaller Dohgar" GiverId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <If Condition="(HasQuest(10845) &amp;&amp; !IsQuestCompleted(10845)) || (HasItem(31663) &amp;&amp; HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853))">
-    <CustomBehavior File="FlyTo" X="1685.734" Y="5247.103" Z="265.4699" />
+    <CustomBehavior File="Cava\FlyTo" X="1685.734" Y="5247.103" Z="265.4699" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="HasQuest(10853) &amp;&amp; !IsQuestCompleted(10853)">
     <LootMobs Value="true" />
     <While Condition="!IsQuestCompleted(10853)">
       <If Condition="!HasItem(31663)">
-        <CustomBehavior File="FlyTo" X="2220.365" Y="4782.358" Z="156.3423" />
+        <CustomBehavior File="Cava\FlyTo" X="2220.365" Y="4782.358" Z="156.3423" />
         <CustomBehavior File="ForcedDismount" />
         <While Condition="!HasItem(31663)">
           <CustomBehavior File="InteractWith" MobId="22312" MobState="Alive" InteractByGossipOptions="1" X="2221.213" Y="4781.799" Z="156.5003" />
         </While>
-        <CustomBehavior File="FlyTo" X="1685.734" Y="5247.103" Z="265.4699" />
+        <CustomBehavior File="Cava\FlyTo" X="1685.734" Y="5247.103" Z="265.4699" />
         <CustomBehavior File="ForcedDismount" />
       </If>
       <CustomBehavior File="CombatUseItemOnV2" ItemId="31663" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" MobId="21004"
@@ -2598,20 +2598,20 @@ turnin 10517
   </If>
   <Objective QuestName="Slay the Brood Mother" QuestId="10845" Type="KillMob" MobId="21032" KillCount="1" />
   <If Condition="HasQuest(10845) || HasQuest(10853)">
-    <CustomBehavior File="FlyTo" X="2205.793" Y="4761.732" Z="157.9073" />
+    <CustomBehavior File="Cava\FlyTo" X="2205.793" Y="4761.732" Z="157.9073" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Slay the Brood Mother" QuestId="10845" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.9989" />
   <TurnIn QuestName="Spirit Calling" QuestId="10853" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <If Condition="!HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Gather the Orbs" QuestId="10859" GiverName="Spiritcaller Dohgar" GiverId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <If Condition="HasQuest(10859) &amp;&amp; !IsQuestCompleted(10859)">
-    <CustomBehavior File="FlyTo" X="2725.402" Y="5290.666" Z="266.3831" />
+    <CustomBehavior File="Cava\FlyTo" X="2725.402" Y="5290.666" Z="266.3831" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10859)">
       <RunTo X="2725.402" Y="5290.666" Z="266.3831" />
@@ -2620,7 +2620,7 @@ turnin 10517
     </While>
   </If>
   <If Condition="HasQuest(10859)">
-    <CustomBehavior File="FlyTo" X="2219.11" Y="4782.457" Z="156.1956" />
+    <CustomBehavior File="Cava\FlyTo" X="2219.11" Y="4782.457" Z="156.1956" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Gather the Orbs" QuestId="10859" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
@@ -2628,13 +2628,13 @@ turnin 10517
   <TurnIn QuestName="Inform Leoroxx!" QuestId="10865" TurnInName="Leoroxx" TurnInId="22004" X="2207.242" Y="4761.254" Z="157.999" />
   <If Condition="!HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="There Can Be Only One Response" QuestId="10867" GiverName="Leoroxx" GiverId="22004" X="2207.242" Y="4761.254" Z="157.999" />
   <If Condition="HasQuest(10867) &amp;&amp; !IsQuestCompleted(10867)">
-    <CustomBehavior File="FlyTo" X="2822.901" Y="5237.732" Z="264.4786" />
+    <CustomBehavior File="Cava\FlyTo" X="2822.901" Y="5237.732" Z="264.4786" />
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(10867)" >
       <SetGrindArea>
@@ -2652,12 +2652,12 @@ turnin 10517
     </While>
   </If>
   <If Condition="HasQuest(10867)">
-    <CustomBehavior File="FlyTo" X="2219.11" Y="4782.457" Z="156.1956" />
+    <CustomBehavior File="Cava\FlyTo" X="2219.11" Y="4782.457" Z="156.1956" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="There Can Be Only One Response" QuestId="10867" TurnInName="Spiritcaller Dohgar" TurnInId="22312" X="2221.213" Y="4781.799" Z="156.5011" />
   <If Condition="HasQuest(10615)">
-    <CustomBehavior File="FlyTo" X="2976.76" Y="5497.944" Z="143.3803" />
+    <CustomBehavior File="Cava\FlyTo" X="2976.76" Y="5497.944" Z="143.3803" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="22216" MobState="Alive" X="2975.634" Y="5499.793" Z="143.5847" />
   </If>
@@ -2674,7 +2674,7 @@ turnin 10517
 <PickUp QuestName="From the Ashes" QuestId="10771" GiverName="Mosswood the Ancient" GiverId="22053" X="3017.657" Y="5523.286" Z="148.126" />
 <PickUp QuestName="A Time for Negotiation..." QuestId="10682" GiverName="Tree Warden Chawn" GiverId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
 <If Condition="(!HasQuest(10810) &amp;&amp; !IsQuestCompleted(10810) &amp;&amp; !HasItem(31384)) || (HasQuest(10753) &amp;&amp; !IsQuestCompleted(10753))">
-  <CustomBehavior File="FlyTo" X="3089.544" Y="5038.416" Z="264.2749" />
+  <CustomBehavior File="Cava\FlyTo" X="3089.544" Y="5038.416" Z="264.2749" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <If Condition="!HasQuest(10810) &amp;&amp; !IsQuestCompleted(10810) &amp;&amp; !HasItem(31384)">
@@ -2706,7 +2706,7 @@ turnin 10517
 <Objective QuestName="Culling the Wild" QuestId="10753" Type="KillMob" MobId="21124" KillCount="4" />
 <Objective QuestName="Culling the Wild" QuestId="10753" Type="KillMob" MobId="21300" KillCount="2" />
 <If Condition="(HasQuest(10771) &amp;&amp; !IsQuestCompleted(10771)) || (HasQuest(10770) &amp;&amp; !IsQuestCompleted(10770))">
-  <CustomBehavior File="FlyTo" X="3599.738" Y="4960.25" Z="267.771" />
+  <CustomBehavior File="Cava\FlyTo" X="3599.738" Y="4960.25" Z="267.771" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <Objective QuestName="From the Ashes" QuestId="10771" Type="UseObject" ObjectId="185124" UseCount="1" />
@@ -2714,12 +2714,12 @@ turnin 10517
 <Objective QuestName="From the Ashes" QuestId="10771" Type="UseObject" ObjectId="185148" UseCount="1" />
 <Objective QuestName="Little Embers" QuestId="10770" Type="KillMob" MobId="21021" KillCount="8" />
 <If Condition="HasQuest(10567) &amp;&amp; !IsQuestCompleted(10567)">
-  <CustomBehavior File="FlyTo" X="3302.016" Y="5307.847" Z="151.2686" />
+  <CustomBehavior File="Cava\FlyTo" X="3302.016" Y="5307.847" Z="151.2686" />
   <CustomBehavior File="ForcedDismount" />
   <LootMobs Value="true" />
   <While Condition="!IsQuestCompleted(10567)">
     <Objective QuestName="Creating the Pendant" QuestId="10567" Type="CollectItem" ItemId="30704" CollectCount="6" />
-    <CustomBehavior File="FlyTo" X="3210.835" Y="5348.214" Z="144.5372" />
+    <CustomBehavior File="Cava\FlyTo" X="3210.835" Y="5348.214" Z="144.5372" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="Misc\RunLua" WaitTime="2000" NumOfTimes="1" Lua="UseItemByName(30704)" />
     <CustomBehavior File="WaitTimer" QuestId="10567" WaitTime="10000" />
@@ -2729,7 +2729,7 @@ turnin 10517
   <LootMobs Value="null" />
 </If>
 <If Condition="HasQuest(10682) &amp;&amp; !IsQuestCompleted(10682)">
-  <CustomBehavior File="FlyTo" X="3027.344" Y="5678.334" Z="145.2125" />
+  <CustomBehavior File="Cava\FlyTo" X="3027.344" Y="5678.334" Z="145.2125" />
   <CustomBehavior File="InteractWith" QuestId="10682" MobId="21981" MobState="Alive" InteractByGossipOptions="1" PreInteractMountStrategy="Dismount"
     MovementBy="NavigatorPreferred" InteractByQuestFrameDisposition="TerminateBehavior" CollectionDistance="1000" >
     <HuntingGrounds >
@@ -2739,7 +2739,7 @@ turnin 10517
   </CustomBehavior>
 </If>
 <If Condition="HasQuest(10753) || HasQuest(10567) || HasQuest(10810) || HasQuest(10770) || HasQuest(10771) || HasQuest(10682)">
-  <CustomBehavior File="FlyTo" X="3025.682" Y="5451.479" Z="147.3082" />
+  <CustomBehavior File="Cava\FlyTo" X="3025.682" Y="5451.479" Z="147.3082" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Culling the Wild" QuestId="10753" TurnInName="Faradrella" TurnInId="22133" X="3023.679" Y="5449.589" Z="147.2052" />
@@ -2753,7 +2753,7 @@ turnin 10517
 <TurnIn QuestName="A Time for Negotiation..." QuestId="10682" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
 <If Condition="!HasQuest(10713) &amp;&amp; !IsQuestCompleted(10713) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+  <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </If>
@@ -2786,7 +2786,7 @@ turnin 10517
 <Objective QuestName="Poaching from Poachers" QuestId="10717" Type="CollectItem" ItemId="31119" CollectCount="5" />
 <Objective QuestName="...and a Time for Action" QuestId="10713" Type="KillMob" MobId="21810" KillCount="10" />
 <If Condition="HasQuest(10717) || HasQuest(10717)">
-  <CustomBehavior File="FlyTo" X="2978.763" Y="5485.312" Z="143.5036" />
+  <CustomBehavior File="Cava\FlyTo" X="2978.763" Y="5485.312" Z="143.5036" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Poaching from Poachers" QuestId="10717" TurnInName="Samia Inkling" TurnInId="21983" X="2981.399" Y="5485.771" Z="143.7749" />
@@ -2795,7 +2795,7 @@ turnin 10517
 <TurnIn QuestName="Did You Get The Note?" QuestId="10719" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7577" />
 <If Condition="!HasQuest(10894) &amp;&amp; !IsQuestCompleted(10894) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+  <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </If>
@@ -2814,14 +2814,14 @@ Text="\n
 <If Condition="HasQuest(10819)">
   <While Condition="HasQuest(10819)">
     <While Condition="!HasItem(31366) &amp;&amp; !Me.HasAura(38448)">
-      <CustomBehavior File="FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
+      <CustomBehavior File="Cava\FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="InteractWith" MobId="22127" MobState="Alive" InteractByGossipOptions="1" X="2972.379" Y="5510.297" Z="143.8835" />
     </While>
     <If Condition="!Me.HasAura(38448)" >
       <CustomBehavior File="EquipItem" ItemId="31366" Slot="HeadSlot" />
     </If>
-    <CustomBehavior File="FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
+    <CustomBehavior File="Cava\FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="185165" KeepTargetSelected="True" PreInteractMountStrategy="Dismount" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
@@ -2830,14 +2830,14 @@ Text="\n
 <If Condition="!HasQuest(10820) &amp;&amp; !IsQuestCompleted(10820)">
   <While Condition="!HasQuest(10820)">
     <While Condition="!HasItem(31366) &amp;&amp; !Me.HasAura(38448)">
-      <CustomBehavior File="FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
+      <CustomBehavior File="Cava\FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="InteractWith" MobId="22127" MobState="Alive" InteractByGossipOptions="1" X="2972.379" Y="5510.297" Z="143.8835" />
     </While>
     <If Condition="!Me.HasAura(38448)" >
       <CustomBehavior File="EquipItem" ItemId="31366" Slot="HeadSlot" />
     </If>
-    <CustomBehavior File="FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
+    <CustomBehavior File="Cava\FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="185165" KeepTargetSelected="True" PreInteractMountStrategy="Dismount" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" NumOfTimes="1" WaitTime="1000" />
@@ -2848,14 +2848,14 @@ Text="\n
 <If Condition="HasQuest(10820)">
   <While Condition="HasQuest(10820)">
     <While Condition="!HasItem(31366) &amp;&amp; !Me.HasAura(38448)">
-      <CustomBehavior File="FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
+      <CustomBehavior File="Cava\FlyTo" X="2967.128" Y="5508.434" Z="143.6665" />
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="InteractWith" MobId="22127" MobState="Alive" InteractByGossipOptions="1" X="2972.379" Y="5510.297" Z="143.8835" />
     </While>
     <If Condition="!Me.HasAura(38448)" >
       <CustomBehavior File="EquipItem" ItemId="31366" Slot="HeadSlot" />
     </If>
-    <CustomBehavior File="FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
+    <CustomBehavior File="Cava\FlyTo" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="185165" KeepTargetSelected="True" PreInteractMountStrategy="Dismount" X="2958.946" Y="4873.343" Z="277.511" />
     <CustomBehavior File="RunMacro" Macro="/click QuestFrameCompleteQuestButton" NumOfTimes="1" WaitTime="1000" />
@@ -2869,7 +2869,7 @@ Text="\n
 -->
 <If Condition="Me.IsAlliance" >
   <If Condition="(!HasQuest(10797) &amp;&amp; !IsQuestCompleted(10797) &amp;&amp; !HasItem(31363)) || (HasQuest(10795) &amp;&amp; !IsQuestCompleted(10795)) || (HasQuest(10796) &amp;&amp; !IsQuestCompleted(10796))">
-      <CustomBehavior File="FlyTo" X="3495.05" Y="5833.953" Z="2.227145" />
+      <CustomBehavior File="Cava\FlyTo" X="3495.05" Y="5833.953" Z="2.227145" />
       <CustomBehavior File="ForcedDismount" />
   </If>
   <If Condition="!HasQuest(10797) &amp;&amp; !IsQuestCompleted(10797) &amp;&amp; !HasItem(31363)">
@@ -2886,7 +2886,7 @@ Text="\n
   <Objective QuestName="Crush the Bloodmaul Camp!" QuestId="10796" Type="KillMob" MobId="19994" KillCount="5" />
   <Objective QuestName="Crush the Bloodmaul Camp!" QuestId="10796" Type="KillMob" MobId="19993" KillCount="10" />
   <If Condition="HasQuest(10795) || HasQuest(10796) || HasQuest(10797)">
-    <CustomBehavior File="FlyTo" X="3033.339" Y="5478.831" Z="146.8944" />
+    <CustomBehavior File="Cava\FlyTo" X="3033.339" Y="5478.831" Z="146.8944" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Crush the Bloodmaul Camp!" QuestId="10796" TurnInName="Lieutenant Fairweather" TurnInId="22150" X="3036.01" Y="5483.127" Z="146.9879" />
@@ -2894,42 +2894,42 @@ Text="\n
   <TurnIn QuestName="Favor of the Gronn" QuestId="10797" TurnInName="Commander Haephus Stonewall" TurnInId="22149" X="3034.587" Y="5483.083" Z="147.1203" />
   <If Condition="!HasQuest(10798) &amp;&amp; !IsQuestCompleted(10798) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Pay the Baron a Visit" QuestId="10798" GiverName="Commander Haephus Stonewall" GiverId="22149" X="3034.587" Y="5483.083" Z="147.1203" />
   <If Condition="HasQuest(10798)">
-    <CustomBehavior File="FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
+    <CustomBehavior File="Cava\FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Pay the Baron a Visit" QuestId="10798" TurnInName="Baron Sablemane" TurnInId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <PickUp QuestName="Into the Churning Gulch" QuestId="10799" GiverName="Baron Sablemane" GiverId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <If Condition="HasQuest(10799) &amp;&amp; !IsQuestCompleted(10799)">
-    <CustomBehavior File="FlyTo" X="3003.351" Y="6064.707" Z="7.845531" />
+    <CustomBehavior File="Cava\FlyTo" X="3003.351" Y="6064.707" Z="7.845531" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Into the Churning Gulch" QuestId="10799" Type="CollectItem" ItemId="31132" CollectCount="7" />
   </If>
   <If Condition="HasQuest(10799)">
-    <CustomBehavior File="FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
+    <CustomBehavior File="Cava\FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Into the Churning Gulch" QuestId="10799" TurnInName="Baron Sablemane" TurnInId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <PickUp QuestName="Goodnight, Gronn" QuestId="10800" GiverName="Baron Sablemane" GiverId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <If Condition="HasQuest(10800) &amp;&amp; !IsQuestCompleted(10800)">
-    <CustomBehavior File="FlyTo" X="2687.22" Y="5579.975" Z="-10.57613" />
+    <CustomBehavior File="Cava\FlyTo" X="2687.22" Y="5579.975" Z="-10.57613" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="InteractWith" MobId="20216" AuraIdMissingFromMob="38510" InteractByUsingItemId="31403" MinRange="30" Range="40" X="2686.504" Y="5540.581" Z="-1.942934" />
     <CustomBehavior File="InteractWith" MobId="185152" X="2686.504" Y="5540.581" Z="-1.942934" />
   </If>
   <If Condition="HasQuest(10800)">
-    <CustomBehavior File="FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
+    <CustomBehavior File="Cava\FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Goodnight, Gronn" QuestId="10800" TurnInName="Baron Sablemane" TurnInId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <PickUp QuestName="It's a Trap!" QuestId="10801" GiverName="Baron Sablemane" GiverId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <If Condition="HasQuest(10801)">
-    <CustomBehavior File="FlyTo" X="3031.73" Y="5481.652" Z="147.2019" />
+    <CustomBehavior File="Cava\FlyTo" X="3031.73" Y="5481.652" Z="147.2019" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="It's a Trap!" QuestId="10801" TurnInName="Commander Haephus Stonewall" TurnInId="22149" X="3034.587" Y="5483.083" Z="147.1196" />
@@ -2941,7 +2941,7 @@ Text="\n
 -->
 <If Condition="Me.IsHorde">
   <If Condition="HasQuest(10714) &amp;&amp; !IsQuestCompleted(10714)">
-  	<CustomBehavior File="FlyTo" Land="true" X="3339.336" Y="5749.54" Z="-10.33813" />
+  	<CustomBehavior File="Cava\FlyTo" Land="true" X="3339.336" Y="5749.54" Z="-10.33813" />
 		<While Condition="!IsQuestCompleted(10714)">
 			<CustomBehavior File="InteractWith" QuestId="10714" MobId1="22384" MobId2="223160" NumOfTimes="1000" MobState="Alive" NotMoving="True"
 			  InteractByUsingItemId="31128" CollectionDistance="1000" MinRange="20" PreInteractMountStrategy="DismountOrCancelShapeshift"
@@ -2962,54 +2962,54 @@ Text="\n
 		</While>
 	</If>
   <If Condition="HasQuest(10714)">
-    <CustomBehavior File="FlyTo" X="2296.762" Y="6037.325" Z="142.4104" />
+    <CustomBehavior File="Cava\FlyTo" X="2296.762" Y="6037.325" Z="142.4104" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="On Spirit's Wings" QuestId="10714" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5028" />
   <If Condition="!HasQuest(10783) &amp;&amp; !IsQuestCompleted(10783) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Baron Sablemane" QuestId="10783" GiverName="Rexxar" GiverId="21984" X="2298.111" Y="6034.416" Z="142.5028" />
   <If Condition="HasQuest(10783)">
-    <CustomBehavior File="FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
+    <CustomBehavior File="Cava\FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Baron Sablemane" QuestId="10783" TurnInName="Baron Sablemane" TurnInId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <PickUp QuestName="Into the Churning Gulch" QuestId="10715" GiverName="Baron Sablemane" GiverId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <If Condition="HasQuest(10715) &amp;&amp; !IsQuestCompleted(10715)">
-    <CustomBehavior File="FlyTo" X="3003.351" Y="6064.707" Z="7.845531" />
+    <CustomBehavior File="Cava\FlyTo" X="3003.351" Y="6064.707" Z="7.845531" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Into the Churning Gulch" QuestId="10715" Type="CollectItem" ItemId="31132" CollectCount="7" />
   </If>
   <If Condition="HasQuest(10715)">
-    <CustomBehavior File="FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
+    <CustomBehavior File="Cava\FlyTo" X="2928.098" Y="5978.654" Z="-0.7493714" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Into the Churning Gulch" QuestId="10715" TurnInName="Baron Sablemane" TurnInId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <PickUp QuestName="Baron Sablemane's Poison" QuestId="10749" GiverName="Baron Sablemane" GiverId="22103" X="2919.109" Y="5956.932" Z="3.137352" />
   <If Condition="HasQuest(10749)">
-    <CustomBehavior File="FlyTo" X="2297.696" Y="6037.63" Z="142.4144" />
+    <CustomBehavior File="Cava\FlyTo" X="2297.696" Y="6037.63" Z="142.4144" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Baron Sablemane's Poison" QuestId="10749" TurnInName="Rexxar" TurnInId="21984" X="2298.111" Y="6034.416" Z="142.5036" />
   <If Condition="!HasQuest(10784) &amp;&amp; !IsQuestCompleted(10784) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <PickUp QuestName="Crush the Bloodmaul Camp" QuestId="10784" GiverName="Tor'chunk Twoclaws" GiverId="21147" X="2295.879" Y="6027.986" Z="142.5579" />
   <If Condition="HasQuest(10784) &amp;&amp; !IsQuestCompleted(10784)">
-    <CustomBehavior File="FlyTo" X="3495.05" Y="5833.953" Z="2.227145" />
+    <CustomBehavior File="Cava\FlyTo" X="3495.05" Y="5833.953" Z="2.227145" />
     <CustomBehavior File="ForcedDismount" />
     <Objective QuestName="Crush the Bloodmaul Camp" QuestId="10784" Type="KillMob" MobId="19994" KillCount="5" />
     <Objective QuestName="Crush the Bloodmaul Camp" QuestId="10784" Type="KillMob" MobId="19993" KillCount="10" />
   </If>
   <If Condition="HasQuest(10784)">
-    <CustomBehavior File="FlyTo" X="2297.696" Y="6037.63" Z="142.4144" />
+    <CustomBehavior File="Cava\FlyTo" X="2297.696" Y="6037.63" Z="142.4144" />
     <CustomBehavior File="ForcedDismount" />
   </If>
   <TurnIn QuestName="Crush the Bloodmaul Camp" QuestId="10784" TurnInName="Tor'chunk Twoclaws" TurnInId="21147" X="2295.879" Y="6027.986" Z="142.5579" />
@@ -3020,23 +3020,23 @@ Text="\n
                                                                                                                                    |
 -->
 <If Condition="HasQuest(10894)">
-  <CustomBehavior File="FlyTo" X="3009.575" Y="5452.864" Z="145.7428" />
+  <CustomBehavior File="Cava\FlyTo" X="3009.575" Y="5452.864" Z="145.7428" />
   <RunTo X="3022.377" Y="5436.481" Z="146.6176" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="22922" AreaId="3951" X="3022.902" Y="5435.593" Z="146.6173" /> /> <!--id3951-->
   <RunTo X="3009.575" Y="5452.864" Z="145.7428" />
-  <CustomBehavior File="FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
+  <CustomBehavior File="Cava\FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Wyrmskull Watcher" QuestId="10894" TurnInName="Watcher Moonshade" TurnInId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
 <If Condition="!HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+  <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </If>
 <PickUp QuestName="Longtail is the Lynchpin" QuestId="10893" GiverName="Watcher Moonshade" GiverId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
 <If Condition="HasQuest(10893) &amp;&amp; !IsQuestCompleted(10893)">
-  <CustomBehavior File="FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
+  <CustomBehavior File="Cava\FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="UserSettings" UseMount="False" />
   <RunTo X="3201.532" Y="6275.544" Z="124.6176" />
@@ -3049,23 +3049,23 @@ Text="\n
   <TurnIn QuestName="Longtail is the Lynchpin" QuestId="10893" TurnInName="Watcher Moonshade" TurnInId="22386" X="3108.117" Y="6133.535" Z="136.3833" />
   <If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-    <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+    <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
   </If>
   <If Condition="(HasQuest(10607) &amp;&amp; !IsQuestCompleted(10607)) || (HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; !HasItem(31489))">
-    <CustomBehavior File="FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
+    <CustomBehavior File="Cava\FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
     <CustomBehavior File="NoCombatMoveTo" X="3560.864" Y="6802.16" Z="138.3943" />
   </If>
 </If>
 <If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
   <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+  <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </If>
 <If Condition="!HasQuest(10825) &amp;&amp; !IsQuestCompleted(10825) &amp;&amp; !HasItem(31489)">
-  <CustomBehavior File="FlyTo" X="3663.343" Y="6749.25" Z="132.4122" />
+  <CustomBehavior File="Cava\FlyTo" X="3663.343" Y="6749.25" Z="132.4122" />
   <CustomBehavior File="ForcedDismount" />
   <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" CollectItemId="31489" CollectItemCount="1" CollectUntil="RequiredCountReached" MobState="Alive"
@@ -3114,14 +3114,14 @@ Text="\n
       <GrindTo Condition="Me.HasAura(37642)" />
     </If>
     <If Condition="!IsObjectiveComplete(3, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <CustomBehavior File="Cava\FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
       <While Condition="!IsObjectiveComplete(3, 10607) &amp;&amp; Me.HasAura(37642)">
         <RunTo X="3732.359" Y="6639.947" Z="133.6599" />
         <CustomBehavior File="WaitTimer" WaitTime="3000" />
       </While>
     </If>
     <If Condition="!IsObjectiveComplete(1, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <CustomBehavior File="Cava\FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
       <While Condition="!IsObjectiveComplete(1, 10607) &amp;&amp; Me.HasAura(37642)">
         <RunTo X="3785.497" Y="6727.599" Z="170.4497" />
         <CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -3129,7 +3129,7 @@ Text="\n
       <RunTo X="3739.521" Y="6669.184" Z="137.5289" />
     </If>
     <If Condition="!IsObjectiveComplete(2, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
+      <CustomBehavior File="Cava\FlyTo" X="3739.521" Y="6669.184" Z="137.5289" />
       <While Condition="!IsObjectiveComplete(2, 10607) &amp;&amp; Me.HasAura(37642)">
         <RunTo X="3626.344" Y="6544.786" Z="154.9798" />
         <CustomBehavior File="WaitTimer" WaitTime="3000" />
@@ -3137,13 +3137,13 @@ Text="\n
       <RunTo X="3739.521" Y="6669.184" Z="137.5289" />
     </If>
     <If Condition="!IsObjectiveComplete(4, 10607) &amp;&amp; Me.HasAura(37642)">
-      <CustomBehavior File="FlyTo" X="3578.347" Y="6663.851" Z="128.6124" />
+      <CustomBehavior File="Cava\FlyTo" X="3578.347" Y="6663.851" Z="128.6124" />
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </If>
   </While>
 </If>
 <!--<If Condition="HasQuest(10747) &amp;&amp; !IsQuestCompleted(10747)">
-  <CustomBehavior File="FlyTo" X="3195.461" Y="7132.668" Z="174.0501" />
+  <CustomBehavior File="Cava\FlyTo" X="3195.461" Y="7132.668" Z="174.0501" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="UserSettings" UseMount="False" />
   <CustomBehavior File="CombatUseItemOnV2" QuestId="10747" ItemId="31129" ItemAppliesAuraId="AssumeItemUseAlwaysSucceeds" MobId="21387"
@@ -3169,13 +3169,13 @@ Text="\n
 <TurnIn QuestName="The Truth Unorbed" QuestId="10825" TurnInName="Tree Warden Chawn" TurnInId="22007" X="2980.58" Y="5483.43" Z="143.7591" />
 <If Condition="!HasQuest(10829) &amp;&amp; !IsQuestCompleted(10829) &amp;&amp; (Me.LevelFraction &gt;= 68.50)">
     <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+  <CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </If>
 <PickUp QuestName="Treebole Must Know" QuestId="10829" GiverName="Tree Warden Chawn" GiverId="22007" X="2980.58" Y="5483.43" Z="143.7591" />
 <If Condition="HasQuest(10829)">
-  <CustomBehavior File="FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
+  <CustomBehavior File="Cava\FlyTo" X="3102.66" Y="6117.984" Z="134.5902" />
   <CustomBehavior File="RunLikeHell" AllowCombat="False">
     <Hotspot X="3112.217" Y="6171.479" Z="138.2665" />
     <Hotspot X="3108.871" Y="6211.908" Z="133.3658" />
@@ -3192,14 +3192,14 @@ Text="\n
     <Hotspot X="3361.416" Y="6541.538" Z="150.8105" />
     <Hotspot X="3393.963" Y="6564.937" Z="147.5037" />
   </CustomBehavior>
-  <CustomBehavior File="FlyTo" X="3560.864" Y="6802.16" Z="138.3943" />
+  <CustomBehavior File="Cava\FlyTo" X="3560.864" Y="6802.16" Z="138.3943" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Treebole Must Know" QuestId="10829" TurnInName="Treebole" TurnInId="22215" X="3567.709" Y="6864.399" Z="140.4095" />
 <PickUp QuestName="Exorcising the Trees" QuestId="10830" GiverName="Treebole" GiverId="22215" X="3567.709" Y="6864.399" Z="140.4095" />
 <If Condition="HasQuest(10830) &amp;&amp; !IsQuestCompleted(10830)">
   <While Condition="!IsQuestCompleted(10830)">
-  <CustomBehavior File="FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
+  <CustomBehavior File="Cava\FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
   <CustomBehavior File="ForcedDismount" />
   <LootMobs Value="true" />
   <CustomBehavior File="CollectThings" CollectItemId="31517" CollectItemCount="5" CollectUntil="RequiredCountReached" MobState="Alive"
@@ -3223,7 +3223,7 @@ Text="\n
       <Hotspot X="3558.941" Y="6843.202" Z="139.5598" />
   </CustomBehavior>
   <LootMobs Value="null" />
-  <CustomBehavior File="FlyTo" X="3750.051" Y="6735.967" Z="137.537" />
+  <CustomBehavior File="Cava\FlyTo" X="3750.051" Y="6735.967" Z="137.537" />
   <CustomBehavior File="ForcedDismount" />
   <CustomBehavior File="CollectThings" CollectItemId="31495" CollectItemCount="5" CollectUntil="RequiredCountReached" MobState="Alive"
     ObjectId="182941">
@@ -3238,7 +3238,7 @@ Text="\n
       <Hotspot X="3693.554" Y="6677.507" Z="132.0336" />
   </CustomBehavior>
   <LootMobs Value="null" />
-  <CustomBehavior File="FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
+  <CustomBehavior File="Cava\FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
   <CustomBehavior File="ForcedDismount" />
   <While Condition="HasItem(31517) &amp;&amp; HasItem(31495) &amp;&amp; GetItemCount(31518) &lt; 5">
     <CustomBehavior File="Misc\RunLua" WaitTime="1000" NumOfTimes="1" Lua="UseItemByName(31517)" />
@@ -3269,12 +3269,12 @@ Text="\n
   </While></While>
 </If>
 <If Condition="HasQuest(10830)">
-  <CustomBehavior File="FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
+  <CustomBehavior File="Cava\FlyTo" X="3570.461" Y="6853.023" Z="140.0498" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <TurnIn QuestName="Exorcising the Trees" QuestId="10830" TurnInName="Treebole" TurnInId="22215" X="3567.709" Y="6864.399" Z="140.4095" />
 <CustomBehavior File="Message" Text="Moving to NETHERSTORM, Please do not stop bot" LogColor="Aquamarine" />
-<CustomBehavior File="FlyTo" X="3393.963" Y="6564.937" Z="147.5037" />
+<CustomBehavior File="Cava\FlyTo" X="3393.963" Y="6564.937" Z="147.5037" />
 <CustomBehavior File="ForcedDismount" />
 <CustomBehavior File="RunLikeHell" AllowCombat="False">
   <Hotspot X="3393.963" Y="6564.937" Z="147.5037" />
@@ -3292,7 +3292,7 @@ Text="\n
   <Hotspot X="3108.871" Y="6211.908" Z="133.3658" />
   <Hotspot X="3112.217" Y="6171.479" Z="138.2665" />
 </CustomBehavior>
-<CustomBehavior File="FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
+<CustomBehavior File="Cava\FlyTo" X="3387.901" Y="4223.911" Z="123.8774" />
 <CustomBehavior File="ForcedDismount" />
 <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](68-70)Netherstorm[Cava]" />
 </QuestOrder>
