@@ -1439,12 +1439,8 @@
     <If Condition="Me.ZoneId != 1519">
       <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
     <Else>
-      <RunTo X="-9006.312" Y="870.4896" Z="129.6931" />
-      <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="195141" ObjectType="GameObject" Range="8" NumOfTimes="1" CollectionDistance="1000" X="-9006.312" Y="870.4896" Z="129.6931" />
-      <CustomBehavior File="WaitTimer" WaitTime="8000" GoalText="Waiting for port {TimeRemaining}" />
-      <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-      <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-      <CustomBehavior File="WaitTimer" WaitTime="12000" />
+			<RunTo X="-9001.712" Y="856.824" Z="29.6207" />
+      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-9003.66" Y="855.3229" Z="29.62067" />
       <RunTo X="-327.35" Y="1020.49" Z="54.24804" />
       </Else>
     </If>
@@ -1479,12 +1475,8 @@
     <If Condition="Me.ZoneId != 1637">
       <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
     <Else>
-      <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-      <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
-      <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
-      <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-      <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-      <CustomBehavior File="WaitTimer" WaitTime="12000" />
+			<RunTo X="1684.342" Y="-4126.446" Z="66.34187" />
+      <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1685.18" Y="-4123.42" Z="66.3376" />
       <RunTo X="-178.09" Y="1026.72" Z="54.19" />
       </Else>
     </If>
@@ -3185,7 +3177,7 @@
     <CustomBehavior File="ForcedDismount" />
     <While Condition="!IsQuestCompleted(9874)">
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="9874" MobId="18240" Nav="CTM" CollectionDistance="1000" X="-1718.66" Y="8439.353" Z="-24.07712" />
-      <CustomBehavior File="InteractWith" QuestId="9874" MobId="18240" InteractByUsingItemId="24560" WaitTime="11000" CollectionDistance="1000" X="-1718.66" Y="8439.353" Z="-24.07712" />
+      <CustomBehavior File="Cava\UseItemOn" QuestId="9874" MobId="18240" ItemId="24560" WaitTime="11000" CollectionDistance="1000" X="-1718.66" Y="8439.353" Z="-24.07712" />
     </While>
     <CustomBehavior File="AscendInWater" />
   </If>
