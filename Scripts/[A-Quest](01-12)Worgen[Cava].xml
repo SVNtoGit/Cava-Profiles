@@ -504,7 +504,7 @@
 <PickUp QuestName="Save Krennan Aranas" QuestId="14293" GiverName="King Genn Greymane" GiverId="35550" X="-1803.646" Y="1406.674" Z="19.83721" />
 <If Condition="HasQuest(14293) &amp;&amp; !IsQuestCompleted(14293)" >
 	<DisableBehavior Name="Combat" />
-	<CustomBehavior File="Vehicles\NoControlVehicle" QuestId="14293" VehicleMountId="68219" TargetId="35753" AttackButton="1" VehicleId="35905" OftenToUse="1500" MaxRange="12" TypeId="1" />
+	<CustomBehavior File="Vehicles\NoControlVehicle" VehicleMountId="68219" TargetId="35753" AttackButton="1" VehicleId="35905" OftenToUse="1500" MaxRange="12" TypeId="1" />
 </If>
 <If Condition="HasQuest(14293)" >
   <TurnIn QuestName="Save Krennan Aranas" QuestId="14293" TurnInName="Lord Godfrey" TurnInId="35906" X="-1785.66" Y="1437.613" Z="20.20581" />
@@ -1109,11 +1109,12 @@
 <TurnIn QuestName="Slowing the Inevitable" QuestId="24920" TurnInName="King Genn Greymane" TurnInId="38539" X="-1644.885" Y="1645.379" Z="21.46622" />
 <PickUp QuestName="Knee-Deep" QuestId="24678" GiverName="King Genn Greymane" GiverId="38539" X="-1644.885" Y="1645.379" Z="21.46622" />
 <If Condition="HasQuest(24678)" >
+  <CustomBehavior File="Hooks\DoWhen" ItemId="50220" UseAtInterval="500" AllowUseDuringCombat="true" />
   <DisableBehavior Name="Pull" />
   <RunTo X="-1642.377" Y="1635.776" Z="10.13438" />
-  <CustomBehavior File="ItemWhileMoving" ItemId="50220" X="-1727.067" Y="1873.281" Z="17.85262" />
 	<TurnIn QuestName="Knee-Deep" QuestId="24678" TurnInName="Krennan Aranas" TurnInId="38144" />
   <EnableBehavior Name="Pull" />
+  <CustomBehavior File="Hooks\DoWhen" ItemId="50220" Command="Remove" />
 </If>
 <PickUp QuestName="Laid to Rest" QuestId="24602" GiverName="Krennan Aranas" GiverId="38144" />
 <Objective QuestName="Laid to Rest" QuestId="24602" Type="CollectItem" ItemId="49921" CollectCount="5" X="-1727.559" Y="1871.792" Z="17.81516" />
@@ -1143,7 +1144,7 @@
 		<CustomBehavior File="Message" Text="Upgrating Bag Procedures. Going to Buy : 1 Brown Leather Satchel. Please do not stop bot." LogColor="Aquamarine" />
 		<RunTo X="-2455.32" Y="1542.39" Z="18.68922" />
     <If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 4)">
-			<CustomBehavior File="InteractWith" MobId="38783" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-1314.288" Y="2146.639" Z="6.817043" />
+			<CustomBehavior File="InteractWith" MobId="38783" MobState="Alive" InteractByBuyingItemId="4498" WaitTime="4000" NonCompeteDistance="0" X="-1314.288" Y="2146.639" Z="6.817074" />
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
     </If>
 		<If Condition="((Lua.GetReturnVal&lt;int&gt;(&quot;return GetContainerNumSlots(1)&quot;, 0)) &lt; 8) &amp;&amp; Me.Silver &gt;= 25">

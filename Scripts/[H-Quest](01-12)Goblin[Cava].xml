@@ -734,8 +734,8 @@
   <RunTo QuestId="14010" X="-8426.8" Y="1307.235" Z="102.2296" />
   <While Condition="HasQuest(14010) &amp;&amp; !IsQuestCompleted(14010)" >
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14010" MobId="48304" WaitTime="1000" X="-8427.5" Y="1305.22" Z="102.3335" />
-    <CustomBehavior File="CastSpellOn" SpellId="1752" MobId="48304" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8427.5" Y="1305.22" Z="102.3335" />
-    <CustomBehavior File="CastSpellOn" SpellId="2098" MobId="48304" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8427.5" Y="1305.22" Z="102.3335" />
+    <CustomBehavior File="Cava\CastSpellOn" SpellId="1752" MobId="48304" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8427.5" Y="1305.22" Z="102.3335" />
+    <CustomBehavior File="Cava\CastSpellOn" SpellId="2098" MobId="48304" MobHpPercentLeft="100" NumOfTimes="1" MinRange="3" Range="5" X="-8427.5" Y="1305.22" Z="102.3335" />
 	</While>
 	<TurnIn QuestName="Eviscerate" QuestId="14010" TurnInName="Slinky Sharpshiv" TurnInId="34693" X="-8430.425" Y="1325.04" Z="101.7823" />
 </If>
@@ -763,7 +763,7 @@
     <RunTo X="-8426.8" Y="1307.235" Z="102.2296" />
     <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14013" MobId="48304" WaitTime="1000" X="-8427.5" Y="1305.22" Z="102.3335" />
     <RunTo X="-8408.67" Y="1345.142" Z="102.552" />
-    <CustomBehavior File="CastSpellOn" QuestId="14013" SpellId="100" MobId="48304" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-8427.5" Y="1305.22" Z="102.3335" />
+    <CustomBehavior File="Cava\CastSpellOn" QuestId="14013" SpellId="100" MobId="48304" NumOfTimes="1" MobHpPercentLeft="100" MinRange="8" X="-8427.5" Y="1305.22" Z="102.3335" />
   </While>
   <TurnIn QuestName="Charge" QuestId="14013" TurnInName="Warrior-Matic NX-01" TurnInId="34697" X="-8431.764" Y="1313.502" Z="103.0257" />
 </If>
@@ -784,20 +784,20 @@
   <TurnIn QuestName="Steady Shot" QuestId="14007" TurnInName="Bamm Megabomb" TurnInId="34673" X="-8429.455" Y="1311.641" Z="103.4599" />
 </If>
 <If Condition="!HasQuest(14153) &amp;&amp; !IsQuestCompleted(14153) &amp;&amp; !HasQuest(14113) &amp;&amp; !IsQuestCompleted(14113)">
-  <RunTo X="-8424.005" Y="1365.501" Z="104.6771" />
+	<RunTo X="-8423.904" Y="1366.365" Z="104.675" />
 	<While Condition="!HasQuest(14153) &amp;&amp; !HasQuest(14113)">
 		<While Condition="HasQuestAvailable(35054)" >
 			<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35054" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="-8422.143" Y="1367.708" Z="104.675" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 			<!--FEMALE <PickUp QuestName="Life of the Party" QuestId="14153" GiverName="Chip Endale" GiverId="35054"/>-->
 		</While>
 		<While Condition="HasQuestAvailable(35053)" >
 			<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="35053" NumOfTimes="1" CollectionDistance="200" WaitTime="1000" X="-8422.143" Y="1367.708" Z="104.675" />
-			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()" WaitTime="1000" />
+			<CustomBehavior File="RunMacro" Macro="/click QuestFrameAcceptButton" />
 			<!--MALE <PickUp QuestName="Life of the Party" QuestId="14113" GiverName="Candy Cane" GiverId="35053"/>-->
 		</While>
-	</While>	
-</If>
+	</While>
+</If>	
 <If Condition="HasQuest(14153) &amp;&amp; !IsQuestCompleted(14153)" >
   <RunTo X="-8453.67" Y="1321.467" Z="101.6971" />
   <While Condition="!IsQuestCompleted(14153)" >
@@ -916,9 +916,10 @@
 <TurnIn QuestName="Liberate the Kaja'mite" QuestId="14124" TurnInName="Foreman Dampwick" TurnInId="34872" X="-8431.545" Y="1276.95" Z="103.5289" />
 <Objective QuestName="Robbing Hoods" QuestId="14121" Type="CollectItem" ItemId="47530" CollectCount="12" />
 <If Condition="HasQuest(14122) &amp;&amp; !IsQuestCompleted(14122)" >
+  <CustomBehavior File="EjectVeh" Eject="True" />
   <DisableBehavior Name="Combat" />
   <RunTo X="-8373.546" Y="1727.475" Z="39.94706" />
-  <CustomBehavior File="SpecificQuests\14122-Kezan-TheGreatBankHeist" QuestId="14122" />
+  <CustomBehavior File="Cava\14122-Kezan-TheGreatBankHeist" />
   <CustomBehavior File="WaitTimer" WaitTime="3000"/>
   <CustomBehavior File="EjectVeh" Eject="True" />
   <EnableBehavior Name="Combat" />
@@ -936,8 +937,10 @@
   </If>
   <If Condition="!IsObjectiveComplete(3, 14123)" >
     <RunTo X="-8007.437" Y="1860.484" Z="53.19614" />
-		<CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14123" MobId="195518" ObjectType="GameObject" Range="8" Nav="CTM" NumOfTimes="1" CollectionDistance="50" X="-8007.437" Y="1860.484" Z="53.19614" />
-  </If>
+		<While Condition="!IsObjectiveComplete(3, 14123)" >
+		  <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="14123" MobId="195518" ObjectType="GameObject" Range="8" Nav="CTM" NumOfTimes="1" CollectionDistance="50" X="-8007.437" Y="1860.484" Z="53.19614" />
+		</While>
+	</If>
 </If>
 <If Condition="HasQuest(14123)" >
 	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="4765" />
