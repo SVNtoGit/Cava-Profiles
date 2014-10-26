@@ -1040,18 +1040,22 @@
 <PickUp QuestName="The Harborage" QuestId="27918" GiverName="Holaaru" GiverId="18221" X="-10146.8" Y="-3834.61" Z="17.59489" />
 <If Condition="HasQuest(27845) &amp;&amp; !IsQuestCompleted(27845)" >
   <While Condition="!IsQuestCompleted(27845)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10267.41" Y="-3623.011" Z="23.39148" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10232.67" Y="-3644.883" Z="24.17784" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10200.73" Y="-3620.399" Z="20.81746" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10216.85" Y="-3583.456" Z="24.46354" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10251.44" Y="-3562.025" Z="23.85062" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10283.15" Y="-3537.2" Z="19.29914" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10310.94" Y="-3507.93" Z="22.2594" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10339.75" Y="-3536.634" Z="22.5881" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10337.08" Y="-3576.596" Z="19.17322" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10313.17" Y="-3609.768" Z="18.75535" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="27845" MobId="46881" WaitForNpcs="False" Range="5" ItemId="62517" IsMissingAuraId="87293" CollectionDistance="1000" X="-10280.24" Y="-3633.533" Z="22.3148" />
-  </While>
+    <CustomBehavior File="InteractWith" QuestId="27845" MobId="46881" Range="5" InteractByUsingItemId="62517" AuraIdMissingFromMob="87293" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift">
+      <HuntingGrounds>
+        <Hotspot X="-10267.41" Y="-3623.011" Z="23.39148" />
+        <Hotspot X="-10232.67" Y="-3644.883" Z="24.17784" />
+        <Hotspot X="-10200.73" Y="-3620.399" Z="20.81746" />
+        <Hotspot X="-10216.85" Y="-3583.456" Z="24.46354" />
+        <Hotspot X="-10251.44" Y="-3562.025" Z="23.85062" />
+        <Hotspot X="-10283.15" Y="-3537.2" Z="19.29914" />
+        <Hotspot X="-10310.94" Y="-3507.93" Z="22.2594" />
+        <Hotspot X="-10339.75" Y="-3536.634" Z="22.5881" />
+        <Hotspot X="-10337.08" Y="-3576.596" Z="19.17322" />
+        <Hotspot X="-10313.17" Y="-3609.768" Z="18.75535" />
+        <Hotspot X="-10280.24" Y="-3633.533" Z="22.3148" />
+      </HuntingGrounds>
+    </CustomBehavior>
+ </While>
 </If>
 <Objective QuestName="Reinforcements Denied" QuestId="27843" Type="KillMob" MobId="46770" KillCount="3" />
 <Objective QuestName="Tides of Darkness" QuestId="27795" Type="KillMob" MobId="46765" KillCount="6" />
