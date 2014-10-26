@@ -249,10 +249,7 @@
 <PickUp QuestName="Final Report" QuestId="13619" GiverName="Gorat" GiverId="33294" X="1424.913" Y="-1999.623" Z="96.32894" />
 <If Condition="HasQuest(13613) &amp;&amp; !IsQuestCompleted(13613)" >
   <While Condition="!IsQuestCompleted(13613)" >
-<!--
-    <CustomBehavior File="Cava\UseItemOn" QuestId="13613" MobId1="33266" MobId2="33440" ItemId="45001" WaitTime="4000" NumOfTimes="1000" CollectionDistance="1000" X="1372.504" Y="-2173.76" Z="92.26099" />
--->
-   <CustomBehavior File="InteractWith" QuestId="13613" MobId1="33266" MobState="Alive" InteractByUsingItemId="45001" ProactiveCombatStrategy="ClearMobsTargetingUs"
+    <CustomBehavior File="InteractWith" QuestId="13613" MobId1="33266" MobState="Alive" InteractByUsingItemId="45001" ProactiveCombatStrategy="ClearMobsTargetingUs"
      CollectionDistance="1000" NotMoving="True" Range="9" NumOfTimes="1000" PreInteractMountStrategy="Dismount" X="1372.504" Y="-2173.76" Z="92.26099" />
   </While>
 </If>

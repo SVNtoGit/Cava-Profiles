@@ -694,7 +694,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-    <CustomBehavior File="Cava\UseItemOn" MobId="48100" ItemId="63350" Range="8" X="-8088.02" Y="-1882.75" Z="183.0008" />
+    <CustomBehavior File="InteractWith" MobId="48100" WaitForNpcs="False" InteractByUsingItemId="63350" Range="8" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8088.02" Y="-1882.75" Z="183.0008" />
   </While>
   <While Condition="!IsObjectiveComplete(2, 28246)">
     <If Condition="!Me.HasAura(89253) &amp;&amp; !Me.HasAura(89254) &amp;&amp; !Me.HasAura(89255) &amp;&amp; !Me.HasAura(89256) &amp;&amp; !Me.HasAura(89257)  &amp;&amp;
@@ -702,7 +702,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-    <CustomBehavior File="Cava\UseItemOn" MobId="48099" ItemId="63350" Range="8" X="-8158.001" Y="-1702.858" Z="136.9838" />
+    <CustomBehavior File="InteractWith" MobId="48099" WaitForNpcs="False" InteractByUsingItemId="63350" Range="8" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8158.001" Y="-1702.858" Z="136.9838" />
   </While>
   <While Condition="!IsObjectiveComplete(1, 28246)">
     <If Condition="!Me.HasAura(89253) &amp;&amp; !Me.HasAura(89254) &amp;&amp; !Me.HasAura(89255) &amp;&amp; !Me.HasAura(89256) &amp;&amp; !Me.HasAura(89257)  &amp;&amp;
@@ -710,7 +710,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-    <CustomBehavior File="Cava\UseItemOn" MobId="9176" ItemId="63350" Range="8" CollectionDistance="1000" X="-8247.663" Y="-1787.593" Z="147.3594" />
+    <CustomBehavior File="InteractWith" MobId="9176" WaitForNpcs="False" InteractByUsingItemId="63350" Range="8" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8247.663" Y="-1787.593" Z="147.3594" />
   </While>
 </If>
 <If Condition="HasQuest(28246) &amp;&amp; IsQuestCompleted(28246)" >
@@ -905,7 +905,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" QuestId="28252" MobId="48111" ItemId="63356" MobState="Alive" IsMissingAuraId="89477" Range="5" CollectionDistance="1000" X="-8249.335" Y="-1914.226" Z="147.2735" />
+    <CustomBehavior File="InteractWith" QuestId="28252" MobId="48111" MobState="Alive" AuraIdMissingFromMob="89477" WaitForNpcs="False" InteractByUsingItemId="63356" Range="5" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-8249.335" Y="-1914.226" Z="147.2735" />
   </While>
 </If>
 <If Condition="HasQuest(28252) &amp;&amp; IsQuestCompleted(28252)" >
@@ -1958,29 +1958,25 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" QuestId="28279" MobId="48201" ItemId="63390" MobState="Alive" NumOfTimes="1" WaitTime="0" Range="2" CollectionDistance="10" X="-7711.775" Y="-1470.79" Z="140.7948" />
-
+    <CustomBehavior File="InteractWith" QuestId="28279" MobId="48201" MobState="Alive" WaitForNpcs="False" InteractByUsingItemId="63390" Range="2" CollectionDistance="10" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7711.775" Y="-1470.79" Z="140.7948" />
     <If Condition="!Me.HasAura(89253) &amp;&amp; !Me.HasAura(89254) &amp;&amp; !Me.HasAura(89255) &amp;&amp; !Me.HasAura(89256) &amp;&amp; !Me.HasAura(89257)  &amp;&amp;
                    !Me.HasAura(89258) &amp;&amp; !Me.HasAura(89259) &amp;&amp; !Me.HasAura(89260) &amp;&amp; !Me.HasAura(89261) &amp;&amp; !Me.HasAura(89262)" >
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" QuestId="28279" MobId="48201" ItemId="63390" MobState="Alive" NumOfTimes="1" WaitTime="0" Range="2" CollectionDistance="10" X="-7733.86" Y="-1499.777" Z="132.7664" />
-
+    <CustomBehavior File="InteractWith" QuestId="28279" MobId="48201" MobState="Alive" WaitForNpcs="False" InteractByUsingItemId="63390" Range="2" CollectionDistance="10" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7733.86" Y="-1499.777" Z="132.7664" />
     <If Condition="!Me.HasAura(89253) &amp;&amp; !Me.HasAura(89254) &amp;&amp; !Me.HasAura(89255) &amp;&amp; !Me.HasAura(89256) &amp;&amp; !Me.HasAura(89257)  &amp;&amp;
                    !Me.HasAura(89258) &amp;&amp; !Me.HasAura(89259) &amp;&amp; !Me.HasAura(89260) &amp;&amp; !Me.HasAura(89261) &amp;&amp; !Me.HasAura(89262)" >
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" QuestId="28279" MobId="48201" ItemId="63390" MobState="Alive" NumOfTimes="1" WaitTime="0" Range="2" CollectionDistance="10" X="-7758.191" Y="-1518.219" Z="131.9321" />
-
+    <CustomBehavior File="InteractWith" QuestId="28279" MobId="48201" MobState="Alive" WaitForNpcs="False" InteractByUsingItemId="63390" Range="2" CollectionDistance="10" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7758.191" Y="-1518.219" Z="131.9321" />
     <If Condition="!Me.HasAura(89253) &amp;&amp; !Me.HasAura(89254) &amp;&amp; !Me.HasAura(89255) &amp;&amp; !Me.HasAura(89256) &amp;&amp; !Me.HasAura(89257)  &amp;&amp;
                    !Me.HasAura(89258) &amp;&amp; !Me.HasAura(89259) &amp;&amp; !Me.HasAura(89260) &amp;&amp; !Me.HasAura(89261) &amp;&amp; !Me.HasAura(89262)" >
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" QuestId="28279" MobId="48201" ItemId="63390" MobState="Alive" NumOfTimes="1" WaitTime="0" Range="2" CollectionDistance="10" X="-7796.66" Y="-1496.935" Z="133.4379" />
-
+    <CustomBehavior File="InteractWith" QuestId="28279" MobId="48201" MobState="Alive" WaitForNpcs="False" InteractByUsingItemId="63390" Range="2" CollectionDistance="10" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7796.66" Y="-1496.935" Z="133.4379" />
   </While>
 </If>
 <If Condition="HasQuest(28278) &amp;&amp; !IsQuestCompleted(28278)" >
@@ -2016,7 +2012,7 @@
       <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(63357)" WaitTime="1000" />
       <CustomBehavior File="WaitTimer" WaitTime="6000"/>
     </If>
-	<CustomBehavior File="Cava\UseItemOn" MobId1="7025" MobId2="48119" MobId3="48121" ItemId="63390" MobState="Alive" WaitTime="0" Range="2" CollectionDistance="1000" X="-7733.425" Y="-1567.21" Z="131.858" />
+    <CustomBehavior File="InteractWith" MobId1="7025" MobId2="48119" MobId3="48121" MobState="Alive" WaitForNpcs="False" InteractByUsingItemId="63390" Range="2" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift" X="-7733.425" Y="-1567.21" Z="131.858" />
   </While>
 </If>
 <If Condition="HasQuest(28278)" >
@@ -2084,19 +2080,23 @@
 <If Condition="HasQuest(28313) &amp;&amp; !IsQuestCompleted(28313)" >
   <CustomBehavior File="UserSettings"  SkinMobs="False" />
   <While Condition="!IsQuestCompleted(28313)" >
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8218.628" Y="-2744.223" Z="134.8074" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8207.409" Y="-2783.79" Z="137.7379" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8199.042" Y="-2823.646" Z="137.4139" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8159.044" Y="-2828.371" Z="134.4788" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8131.69" Y="-2798.565" Z="134.5166" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8102.571" Y="-2769.869" Z="133.808" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8110.699" Y="-2729.843" Z="133.737" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8128.179" Y="-2692.968" Z="133.3335" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8131.225" Y="-2652.353" Z="133.4375" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8166.587" Y="-2634.608" Z="133.598" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8207.028" Y="-2640.882" Z="134.483" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8238.132" Y="-2667.018" Z="134.8995" />
-    <CustomBehavior File="Cava\UseItemOn" QuestId="28313" MobId="9697" ItemId="63427" CollectionDistance="1000" X="-8236.797" Y="-2708.298" Z="135.2648" />
+    <CustomBehavior File="InteractWith" QuestId="28313" MobId="9697" InteractByUsingItemId="63427" CollectionDistance="1000" PreInteractMountStrategy="DismountOrCancelShapeshift">
+      <HuntingGrounds>
+        <Hotspot X="-8218.628" Y="-2744.223" Z="134.8074" />
+        <Hotspot X="-8207.409" Y="-2783.79" Z="137.7379" />
+        <Hotspot X="-8199.042" Y="-2823.646" Z="137.4139" />
+        <Hotspot X="-8159.044" Y="-2828.371" Z="134.4788" />
+        <Hotspot X="-8131.69" Y="-2798.565" Z="134.5166" />
+        <Hotspot X="-8102.571" Y="-2769.869" Z="133.808" />
+        <Hotspot X="-8110.699" Y="-2729.843" Z="133.737" />
+        <Hotspot X="-8128.179" Y="-2692.968" Z="133.3335" />
+        <Hotspot X="-8131.225" Y="-2652.353" Z="133.4375" />
+        <Hotspot X="-8166.587" Y="-2634.608" Z="133.598" />
+        <Hotspot X="-8207.028" Y="-2640.882" Z="134.483" />
+        <Hotspot X="-8238.132" Y="-2667.018" Z="134.8995" />
+        <Hotspot X="-8236.797" Y="-2708.298" Z="135.2648" />
+      </HuntingGrounds>
+    </CustomBehavior>
   </While>
   <CustomBehavior File="UserSettings" Preset="UserOriginal" />
   <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="40" FoodAmount="40" FoodName="8932" DrinkName="8766"/>
