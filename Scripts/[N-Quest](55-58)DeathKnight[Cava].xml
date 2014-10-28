@@ -802,13 +802,11 @@
   <If Condition="HasQuest(13188)" >
     <CustomBehavior File="NoCombatMoveTo" X="-8363.06" Y="232.2361" Z="156.9904" />
     <TurnIn QuestName="Where Kings Walk" QuestId="13188" TurnInName="King Varian Wrynn" TurnInId="29611" X="-8363.06" Y="232.2361" Z="156.9904" />
-    <CustomBehavior File="Message" Text="Moving to BLASTED LANDS, Please do not stop bot" LogColor="Aquamarine" />
-    <RunTo X="-9006.312" Y="870.4896" Z="129.6931" />
-    <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-9006.312" Y="870.4896" Z="129.6931" />
-    <RunTo X="-10915.95" Y="-3394.028" Z="81.71524" />
   </If>
+  <CustomBehavior File="Message" Text="Moving to BLASTED LANDS, Please do not stop bot" LogColor="Aquamarine" />
   <EnableRepair />
   <EnableBehavior Name="Combat" />
+	<RunTo X="-10915.95" Y="-3394.028" Z="81.71524" />
   <CustomBehavior File="LoadProfile" ProfileName="[A-Quest](58-60)BlastedLands[Cava]" />
 </If>
 <If Condition="Me.IsHorde" >
