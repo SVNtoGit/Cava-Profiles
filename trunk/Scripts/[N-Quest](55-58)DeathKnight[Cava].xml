@@ -819,12 +819,19 @@
 		<CustomBehavior File="NoCombatMoveTo" X="1669.178" Y="-4343.229" Z="28.36206" />
 		<TurnIn QuestName="Warchief's Blessing" QuestId="13189" TurnInName="Garrosh Hellscream" TurnInId="39605" X="1669.178" Y="-4343.229" Z="28.36206" />
     <CustomBehavior File="Message" Text="Moving to BLASTED LANDS, Please do not stop bot" LogColor="Aquamarine" />
-    <RunTo X="1770.304" Y="-4327.098" Z="-8.316218" />
-    <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1770.304" Y="-4327.098" Z="-8.316218" />
-    <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
-    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="43121" MobState="Alive" X="-10931.3" Y="-2794.58" Z="25.69842" />
     <EnableRepair />
     <EnableBehavior Name="Combat" />
+    <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
+    <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
+    <CustomBehavior File="ForcedDismount" />
+    <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
+    <CustomBehavior File="UseTransport" TransportId="164871"
+      WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
+      GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
+      StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
+      TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
+      TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+    <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
     <CustomBehavior File="LoadProfile" ProfileName="[H-Quest](57-60)BlastedLands[Cava]" />
   </If>
 </If>
