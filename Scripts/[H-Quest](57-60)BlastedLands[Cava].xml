@@ -1148,9 +1148,11 @@
   <RunTo X="-11811.34" Y="-3183.254" Z="-30.6249" />
   <While Condition="!IsQuestCompleted(25695)" >
     <RunTo X="-11809.89" Y="-3225.522" Z="-30.65356" />
-	<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 41269 &amp;&amp; u.Distance &lt;= 8))" >
+		<While Condition="!(ObjectManager.GetObjectsOfType&lt;WoWUnit&gt;().Any(u =&gt; u.Entry == 41269 &amp;&amp; u.Distance &lt;= 5))">
+			<RunTo X="-11809.89" Y="-3225.522" Z="-30.65356" />
     </While>
-    <CustomBehavior File="InteractWith" MobId="203226" Range="5" NonCompeteDistance="0" WaitTime="3000" X="-11809.47" Y="-3229.115" Z="-30.31655" />
+		<CustomBehavior File="InteractWith" MobId="203226" Range="5" NonCompeteDistance="0" WaitTime="3000" PreInteractMountStrategy="DismountOrCancelShapeshift"
+			ProactiveCombatStrategy="NoClear" X="-11809.47" Y="-3229.115" Z="-30.31655" />
   </While>
   <RunTo X="-11811.34" Y="-3183.254" Z="-30.6249" />
 </If>
