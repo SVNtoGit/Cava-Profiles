@@ -561,7 +561,8 @@
   <If Condition="Me.ZoneId != 1519">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
-    <RunTo X="-10915.95" Y="-3394.028" Z="81.71524" />
+		<RunTo X="-9006.103" Y="870.3699" Z="129.693" />
+    <CustomBehavior File="InteractWith" MobId="235882" Range="8" NonCompeteDistance="0" WaitTime="12000" X="-9007.301" Y="872.2969" Z="129.6921" />
     </Else>
   </If>
 </If>
@@ -572,43 +573,6 @@
   and start bot." />
 </If>
 <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
-<If Condition="Me.Race == WoWRace.Dwarf">
-  
-<ElseIf Condition="Me.Race == WoWRace.Gnome">
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Human">
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.NightElf" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Worgen" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Draenei" >
-  
-  </ElseIf>
-<ElseIf Condition="Me.Race == WoWRace.Pandaren" >
-  
-  </ElseIf>
-<Else>
-  </Else>
-</If>
-<If Condition="Me.Class == WoWClass.Paladin">
-  <If Condition="Me.Race == WoWRace.Draenei">
-    
-  <Else>
-    
-    </Else>
-  </If>
-</If>
-<If Condition="Me.Class == WoWClass.Warlock">
-  
-</If>
-<If Condition="Me.Class == WoWClass.DeathKnight">
-  
-</If>
 <CustomBehavior File="Message" Text="Compiling Blasted Lands Map Zone" LogColor="Aquamarine" />
 <!--# # # Level 58.15 # # # -->
 <If Condition="(Me.Level &gt;= 60 )">
@@ -628,12 +592,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <If Condition="!HasQuest(25710) &amp;&amp; !IsQuestCompleted(25710)">
   <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
@@ -671,12 +633,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Eliminate the Okril'lon" QuestId="25711" GiverName="Quartermaster Lungertz" GiverId="5393" X="-10912.7" Y="-3394.94" Z="81.71564" />
 <PickUp QuestName="Nethergarde Reigns" QuestId="25712" GiverName="Leyan Steelson" GiverId="42262" X="-10910.1" Y="-3398.56" Z="81.71423" />
@@ -715,12 +675,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <If Condition="HasQuest(25715) &amp;&amp; !IsQuestCompleted(25715)" >
   <RunTo X="-11310.28" Y="-3688.21" Z="3.335101" />
@@ -802,12 +760,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Cultists at our Doorstep" QuestId="25716" GiverName="Watcher Mahar Ba" GiverId="5385" X="-10994.69" Y="-3507.891" Z="103.1427" />
 <Objective QuestName="Cultists at our Doorstep" QuestId="25716" Type="CollectItem" ItemId="57134" CollectCount="6" />
@@ -843,12 +799,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The First Step" QuestId="26159" GiverName="Kasim Sharim" GiverId="42298" X="-11225.13" Y="-3483.986" Z="8.551289" />
 <PickUp QuestName="A Bloodmage's Gotta Eat Too" QuestId="26172" GiverName="Kasim Sharim" GiverId="42298" X="-11225.13" Y="-3483.986" Z="8.551289" />
@@ -959,12 +913,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <Objective QuestName="The Amulet of Allistarj" QuestId="26167" Type="CollectItem" ItemId="10755" CollectCount="1" />
 <If Condition="HasQuest(26169) &amp;&amp; !IsQuestCompleted(26169)" >
@@ -1042,12 +994,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="False Idols" QuestId="25705" GiverName="Neptool" GiverId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
 <PickUp QuestName="Neptool's Revenge" QuestId="25706" GiverName="Neptool" GiverId="41354" X="-12051.22" Y="-3796.101" Z="25.62789" />
@@ -1109,12 +1059,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The Charred Granite of the Dark Portal" QuestId="26164" GiverName="Watcher Grimeo" GiverId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
 <PickUp QuestName="The Vile Blood of Demons" QuestId="26165" GiverName="Watcher Grimeo" GiverId="42299" X="-11793.69" Y="-3212.203" Z="-30.55652" />
@@ -1163,12 +1111,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Watching Our Back" QuestId="26174" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99932" />
 <Objective QuestName="Watching Our Back" QuestId="26174" Type="UseObject" ObjectId="203225" UseCount="1" />
@@ -1206,12 +1152,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <Objective QuestName="Not Just Any Body" QuestId="26161" Type="CollectItem" ItemId="55836" CollectCount="1" />
 <Objective QuestName="Not Just Any Body" QuestId="26161" Type="CollectItem" ItemId="55829" CollectCount="1" />
@@ -1245,12 +1189,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <If Condition="HasQuest(26175)" >
   <RunTo X="-12746.18" Y="-2872.322" Z="1.778063" />
@@ -1280,12 +1222,10 @@
   <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
   <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
   <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
   <CustomBehavior File="MyCTM" X="-11909.64" Y="-3209.608" Z="-14.86957" />
   <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  <TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-  <CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Advice from the Cenarion Circle" QuestId="26185" GiverName="Mayor Charlton Connisport" GiverId="42349" X="-12711.88" Y="-2891.745" Z="1.393323" />
 <TurnIn QuestName="Advice from the Cenarion Circle" QuestId="26185" TurnInName="Cenarion Observer Shayana" TurnInId="42352" X="-12706.26" Y="-2887.116" Z="1.392433" />
@@ -1352,31 +1292,25 @@
   </GrindArea>
 </SetGrindArea>
 <GrindTo Level="60" />
-<If Condition="!HasQuest(10119) &amp;&amp; !IsQuestCompleted(10119)">
-  <RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-  <CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5508" WaitTime="1000" CollectionDistance="50" X="-10951.8" Y="-3451.99" Z="66.76195" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5508" WaitTime="1000" CollectionDistance="50" X="-10951.8" Y="-3451.99" Z="66.76195" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="Cava\SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.50076" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-</If>
-<PickUp QuestName="Through the Dark Portal" QuestId="10119" GiverName="Watch Commander Relthorn Netherwane" GiverId="16841" X="-11815.21" Y="-3195.544" Z="-30.99907" />
-<If Condition="HasQuest(10119)">
-  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" />
-</If>
-<TurnIn QuestName="Through the Dark Portal" QuestId="10119" TurnInName="Commander Duron" TurnInId="19229" X="-266.3687" Y="1028.86" Z="54.32331" />
-<CustomBehavior File="LoadProfile" ProfileName="TalentsBy[Cava]" />
+<RunTo X="-10953.27" Y="-3451.177" Z="66.76474" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+<CustomBehavior File="ForceSetVendor" DoMail="True" DoSell="True" DoRepair="True" />
+<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5508" WaitTime="1000" CollectionDistance="50" X="-10951.8" Y="-3451.99" Z="66.76195" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="5508" WaitTime="1000" CollectionDistance="50" X="-10951.8" Y="-3451.99" Z="66.76195" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+<CustomBehavior File="Cava\SetHearthstone" MobId="44325" X="-10925.3" Y="-3417.68" Z="66.50076" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<RunTo X="-10944.79" Y="-3370.042" Z="66.49883" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="3546" BuyItemId="23848" WaitTime="5000" CollectionDistance="50" X="-10946.64" Y="-3369.315" Z="66.49869" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+<CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+<CustomBehavior File="WaitTimer" WaitTime="12000" />
+<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </QuestOrder>
 </HBProfile>

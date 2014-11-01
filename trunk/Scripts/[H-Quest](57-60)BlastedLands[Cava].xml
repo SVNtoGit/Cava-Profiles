@@ -640,16 +640,8 @@
   <If Condition="Me.ZoneId != 1637">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
-    <RunTo X="1803.344" Y="-4370.224" Z="102.8182" />
-    <RunTo X="1851.46" Y="-4402.753" Z="103.9465" />
-    <CustomBehavior File="ForcedDismount" />
-    <RunTo X="1846.624" Y="-4397.398" Z="135.215" />
-    <CustomBehavior File="UseTransport" TransportId="164871"
-      WaitAtX="1840.128" WaitAtY="-4390.435" WaitAtZ="135.2329"
-      GetOffX="2067.576" GetOffY="290.3322" GetOffZ="97.03136"
-      StandOnX="1835.073" StandOnY="-4385.413" StandOnZ="135.0524"
-      TransportStartX="1833.509" TransportStartY="-4391.543" TransportStartZ="152.7679"
-      TransportEndX="2062.376" TransportEndY="292.998" TransportEndZ="114.973"/>
+		<RunTo X="1775.403" Y="-4328.412" Z="-8.084095" />
+    <CustomBehavior File="InteractWith" MobId="235877" Range="8" NonCompeteDistance="0" WaitTime="12000" X="1767.899" Y="-4326.429" Z="-8.405741" />		
     <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
     </Else>
   </If>
@@ -733,13 +725,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Heartstrike" QuestId="25676" GiverName="Okrilla" GiverId="41124" X="-10867.65" Y="-2675.7" Z="9.808718" />
@@ -820,13 +808,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The Dreadmaul Furnace" QuestId="25683" GiverName="Okrilla" GiverId="41124" X="-10867.65" Y="-2675.7" Z="9.808218" />
@@ -979,13 +963,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Blood Ritual" QuestId="25686" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
@@ -1028,13 +1008,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The Altar of Storms" QuestId="25688" GiverName="Bloodmage Lynnore" GiverId="7506" X="-11469.4" Y="-2629.918" Z="4.088411" />
@@ -1075,13 +1051,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Time is Short" QuestId="25689" GiverName="Loramus Thalipedes" GiverId="7783" X="-11457" Y="-2635.34" Z="3.952704" />
@@ -1133,13 +1105,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Watching Our Back" QuestId="25695" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67968" />
@@ -1169,13 +1137,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <If Condition="!HasQuest(25696) &amp;&amp; !IsQuestCompleted(25696) &amp;&amp; HasQuest(25693)">
@@ -1212,15 +1176,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
-    <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  </If>
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The Amulet of Allistarj" QuestId="25697" GiverName="Loramus Thalipedes" GiverId="7783" X="-11457" Y="-2635.34" Z="3.952949" />
@@ -1354,15 +1312,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
-    <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  </If>
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <TurnIn QuestName="Loramus Thalipedes Awaits" QuestId="25700" TurnInName="Loramus Thalipedes" TurnInId="7783" X="-11457" Y="-2635.34" Z="3.952257" />
@@ -1398,15 +1350,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
-    <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  </If>
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="Demoniac Vessel" QuestId="25719" GiverName="Elijah Dawnflight" GiverId="42348" X="-12271.1" Y="-2919.788" Z="97.45673" />
@@ -1439,15 +1385,9 @@
   <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
   <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
   <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
-    <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-  </If>
-  <If Condition="HasQuest(9407)">
-    <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-    <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+  <CustomBehavior File="WaitTimer" WaitTime="12000" />
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </If>
 <PickUp QuestName="The Downfall of Marl Wormthorn" QuestId="25720" GiverName="Rohan Sunveil" GiverId="42344" X="-12327.2" Y="-3015.781" Z="88.2174" />
@@ -1464,7 +1404,7 @@
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="2000" />
 	<CustomBehavior File="UseItemTargetLocation" QuestId="25720" ItemId="57185" UseType="ToObject" WaitTime="4000" ObjectId="42334" MinRange="2" Range="6" X="-12238.83" Y="-2464.189" Z="38.91131" />
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="10000" />
-    <CustomBehavior File="InteractWith" QuestId="25720" MobId="42334" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="-12238.83" Y="-2464.189" Z="38.91042" />
+  <CustomBehavior File="InteractWith" QuestId="25720" MobId="42334" WaitForNpcs="False" MobState="Alive" WaitTime="1000" CollectionDistance="50" X="-12238.83" Y="-2464.189" Z="38.91042" />
 	<CustomBehavior File="WaitTimer" QuestId="25720" WaitTime="1000" />
   </While>
 </If>
@@ -1497,28 +1437,22 @@
   </GrindArea>
 </SetGrindArea>
 <GrindTo Level="60" />
-<If Condition="!HasQuest(9407) &amp;&amp; !IsQuestCompleted(9407)">
-  <CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
-  <CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
-  <RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
-  <CustomBehavior File="Cava\TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
-  <RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
-  <CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
-  <CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
-  <CustomBehavior File="WaitTimer" WaitTime="1000" />
-  <PickUp QuestName="Through the Dark Portal" QuestId="9407" GiverName="Warlord Dar'toon" GiverId="19254" X="-11817.3" Y="-3187.891" Z="-30.67916" />
-</If>
-<If Condition="HasQuest(9407)">
-  <RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
-  <CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
-  <CustomBehavior File="WaitTimer" WaitTime="12000" />
-</If>
-<TurnIn QuestName="Through the Dark Portal" QuestId="9407" TurnInName="Lieutenant General Orion" TurnInId="19253" X="-232.92" Y="1028.272" Z="54.32441" />
+<CustomBehavior File="Message" Text="Moving to HELLFIRE PENINSULA, Please do not stop bot" LogColor="Aquamarine" />
+<CustomBehavior File="UserSettings" DrinkAmount="0" FoodAmount="0" />
+<RunTo X="-12361.95" Y="-3057.223" Z="90.04025" />
+<CustomBehavior File="Cava\TaxiRide" MobId="43114" DestName="Dreadmaul Hold" WaitTime="1000" />
+<RunTo X="-10931.16" Y="-2792.609" Z="25.69575" />
+<CustomBehavior File="RunMacro" Macro="/run for i=1,GetNumQuestLogEntries() do SelectQuestLogEntry(i); SetAbandonQuest(); AbandonQuest(); end" />
+<CustomBehavior File="InteractWith" NonCompeteDistance="0" KeepTargetSelected="True" MobId="44311" WaitTime="1000" CollectionDistance="50" X="-11000.45" Y="-2727.72" Z="6.416295" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)PickupMerchantItem(0)end end end end" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<CustomBehavior File="RunMacro" Macro="/run for i=0,4 do for j=1,GetContainerNumSlots(i)do l=GetContainerItemLink(i,j)if l then _,_,q=GetItemInfo(l)if q==0 or q==2 or q==3 then PickupContainerItem(i,j)DeleteCursorItem()end end end end" />
+<CustomBehavior File="Cava\SetHearthstone" MobId="44309" X="-10859.73" Y="-2674.269" Z="9.808667" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
+<RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+<CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+<CustomBehavior File="WaitTimer" WaitTime="12000" />
 <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](60-62)HellfirePeninsula[Cava]" />
 </QuestOrder>
 </HBProfile>
