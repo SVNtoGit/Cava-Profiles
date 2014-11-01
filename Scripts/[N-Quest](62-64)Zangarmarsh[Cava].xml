@@ -1442,7 +1442,24 @@
     <RunTo X="-207.4555" Y="5487.848" Z="21.84623" />
   </If>
   <If Condition="Me.ZoneId != 3521">
-    <If Condition="Me.ZoneId != 1519">
+		<If Condition="Me.ZoneId == 4">
+			<RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+			<CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+			<CustomBehavior File="WaitTimer" WaitTime="12000" />
+		</If>
+		<If Condition="Me.ZoneId == 1537">
+			<RunTo X="-4607.371" Y="-927.633" Z="501.0688" />
+      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-4606.441" Y="-928.9965" Z="501.07" />
+  	</If>
+		<If Condition="Me.ZoneId == 1657">
+			<RunTo X="9661.311" Y="2512.096" Z="1331.643" />
+      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="9661.557" Y="2510.448" Z="1331.634" />
+		</If>
+		<If Condition="Me.ZoneId == 3557">
+			<RunTo X="-4048.977" Y="-11576.78" Z="-138.5357" />
+      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-4053.682" Y="-11575.2" Z="-138.5848" />
+		</If>
+		<If Condition="Me.ZoneId != 1519">
       <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
     <Else>
 			<RunTo X="-9001.712" Y="856.824" Z="29.6207" />
@@ -1453,7 +1470,17 @@
       <CustomBehavior File="ForcedDismount" />
       </Else>
     </If>
-  </If>
+      <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
+    <Else>
+			<RunTo X="-9001.712" Y="856.824" Z="29.6207" />
+      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-9003.66" Y="855.3229" Z="29.62067" />
+      <RunTo X="-327.35" Y="1020.49" Z="54.24804" />
+      <CustomBehavior File="Cava\TaxiRide" MobId="18931" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
+      <CustomBehavior File="Cava\FlyTo" X="-207.4555" Y="5487.848" Z="21.84623" />
+      <CustomBehavior File="ForcedDismount" />
+      </Else>
+    </If>
+	</If>	
   <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
@@ -1476,15 +1503,32 @@
     <RunTo X="91.67" Y="5214.92" Z="23.09996" />
   </If>
   <If Condition="Me.ZoneId != 3521">
-    <If Condition="Me.ZoneId != 1637">
+		<If Condition="Me.ZoneId == 4">
+			<RunTo X="-11899.23" Y="-3208.114" Z="-14.63598" />
+			<CustomBehavior File="MyCTM" X="-11909.64" Y="-3210.608" Z="-14.86957" />
+			<CustomBehavior File="WaitTimer" WaitTime="12000" />
+		</If>
+		<If Condition="Me.ZoneId == 1638">
+			<RunTo X="-946.2008" Y="276.8575" Z="111.1087" />
+      <CustomBehavior File="InteractWith" MobId="195142" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-944.0643" Y="274.8594" Z="111.71" />
+		</If>
+		<If Condition="Me.ZoneId == 1497">
+			<RunTo X="1769.213" Y="59.76224" Z="-46.32144" />
+      <CustomBehavior File="InteractWith" MobId="195142" Range="8" NonCompeteDistance="0" WaitTime="8000" X="1768.77" Y="55.3698" Z="-46.3194" />
+		</If>
+		<If Condition="Me.ZoneId == 3487">
+			<RunTo X="9986.821" Y="-7104.82" Z="47.70458" />
+      <CustomBehavior File="InteractWith" MobId="195142" Range="8" NonCompeteDistance="0" WaitTime="8000" X="9984.026" Y="-7108.431" Z="47.70494" />
+		</If>
+		<If Condition="Me.ZoneId != 1637">
       <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
     <Else>
-			<RunTo X="1684.342" Y="-4126.446" Z="66.34187" />
-      <CustomBehavior File="InteractWith" MobId="195142" NonCompeteDistance="0" PreInteractMountStrategy="DismountOrCancelShapeshift" X="1685.18" Y="-4123.42" Z="66.3376" />
+			<RunTo X="1792.238" Y="-4277.94" Z="7.517143" />
+      <CustomBehavior File="InteractWith" MobId="195142" Range="8" NonCompeteDistance="0" WaitTime="8000" X="1791.696" Y="-4273.472" Z="7.674594" />
       <RunTo X="-178.09" Y="1026.72" Z="54.19" />
       <CustomBehavior File="Cava\TaxiRide" MobId="18930" NpcState="Alive" DestName="Swamprat Post" />
       <RunTo X="91.67" Y="5214.92" Z="23.09996" />
-      </Else>
+			</Else>
     </If>
   </If>
   <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />

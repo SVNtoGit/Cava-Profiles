@@ -311,28 +311,9 @@
   <If Condition="Me.ZoneId != 1519">
     <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
   <Else>
-    <RunTo X="-8359.502" Y="518.125" Z="84.40871" />
-    <CustomBehavior File="MyCTM" X="-8354.25" Y="513.0112" Z="84.4087" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
+		<RunTo X="-9435.902" Y="84.68204" Z="56.6716" />
+		<CustomBehavior File="Cava\TaxiRide" MobId="42983" MobState="Alive" WaitForNpcs="True" TaxiNumber="2" WaitTime="5000" X="-9436.498" Y="87.12305" Z="57.99459" />
     </Else>
-  </If>
-  <If Condition="Me.ZoneId == 2257 &amp;&amp; (Me.Y &gt; 2400)" >
-    <RunTo X="14.59232" Y="2490.695" Z="-4.292887" />
-    <CustomBehavior File="UseTransport" TransportId="216507"
-    WaitAtX="14.59232" WaitAtY="2490.695" WaitAtZ="-4.292887"
-	GetOffX="14.44697" GetOffY="7.817594"  GetOffZ="-4.287234"
-	StandOnX="6.865148" StandOnY="2490.98" StandOnZ="7.011068"
-	TransportStartX="4.527849" TransportStartY="2490.735" TransportStartZ="7.197604"
-	TransportEndX="4.528066" TransportEndY="8.435292" TransportEndZ="6.937446" />
-  </If>
-  <If Condition="Me.ZoneId == 2257 &amp;&amp; (Me.Y &lt; 30)" >
-    <RunTo X="66.82361" Y="10.57" Z="-4.296649" />
-    <CustomBehavior File="MyCTM" X="72.05002" Y="10.44316" Z="-4.296649" />
-    <CustomBehavior File="WaitTimer" WaitTime="12000" />
-  </If>
-  <If Condition="Me.ZoneId == 1537">
-    <RunTo X="-4824.257" Y="-1161.926" Z="502.2072" />
-    <RunTo X="-5663.654" Y="-4262.426" Z="407.0248" />
   </If>
 </If>
 <If Condition="Me.ZoneId != 38">
