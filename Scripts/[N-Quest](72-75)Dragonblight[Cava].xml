@@ -1848,9 +1848,17 @@
   <PickUp Nav="Fly" QuestName="The Noble's Crypt" QuestId="12311" GiverName="Cavalier Durkon" GiverId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
   <PickUp QuestName="Secrets of the Scourge" QuestId="12312" GiverName="Flesh-bound Tome" GiverId="189311" GiverType="GameObject" X="3620.989" Y="-782.3368" Z="148.0109" />
   <Objective QuestName="The Noble's Crypt" QuestId="12311" Type="KillMob" MobId="27508" KillCount="1" />
-  <TurnIn QuestName="The Noble's Crypt" QuestId="12311" TurnInName="Cavalier Durkon" TurnInId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
-  <TurnIn QuestName="Secrets of the Scourge" QuestId="12312" TurnInName="Cavalier Durkon" TurnInId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
-  <PickUp Nav="Fly" QuestName="Mystery of the Tome" QuestId="12319" GiverName="Cavalier Durkon" GiverId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
+  <If Condition="HasQuest(12311) || HasQuest(12312)" >
+		<DisableBehavior Name="Combat" />
+		<RunTo X="3527.179" Y="-782.9921" Z="221.9578" />		
+		<While Condition="Me.Combat" >
+			<RunTo X="3527.179" Y="-782.9921" Z="221.9578" />		
+		</While>
+    <TurnIn QuestName="The Noble's Crypt" QuestId="12311" TurnInName="Cavalier Durkon" TurnInId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
+    <TurnIn QuestName="Secrets of the Scourge" QuestId="12312" TurnInName="Cavalier Durkon" TurnInId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
+		<EnableBehavior Name="Combat" />	
+  </If>
+	<PickUp Nav="Fly" QuestName="Mystery of the Tome" QuestId="12319" GiverName="Cavalier Durkon" GiverId="27318" X="3585.292" Y="-806.8299" Z="179.1107" />
   <TurnIn Nav="Fly" QuestName="Mystery of the Tome" QuestId="12319" TurnInName="High Commander Halford Wyrmbane" TurnInId="27136" X="3768.969" Y="-776.3963" Z="195.9308" />
   <PickUp QuestName="Understanding the Language of Death" QuestId="12320" GiverName="High Commander Halford Wyrmbane" GiverId="27136" X="3768.969" Y="-776.3963" Z="195.9308" />
   <If Condition="HasQuest(12320)" >

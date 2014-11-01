@@ -1833,6 +1833,7 @@
   <EnableBehavior Name="Loot,Pull" />
 </If>
 <TurnIn Nav="Fly" QuestName="Filling the Cages" QuestId="11984" TurnInName="Samir" TurnInId="26424" X="3850.492" Y="-1960.482" Z="208.4385" />
+<!--truce
 <PickUp Nav="Fly" QuestName="Truce?" QuestId="11989" GiverName="Drakuru" GiverId="26423" X="3844.588" Y="-1973.076" Z="208.4326" />
 <If Condition="HasQuest(11989) &amp;&amp; !IsQuestCompleted(11989)" >
   <CustomBehavior File="Cava\FlyTo" X="3833.68" Y="-1971.556" Z="208.2026" />
@@ -1846,7 +1847,7 @@
     </While>
     <RunTo X="3841.884" Y="-1973.448" Z="208.4156" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
-    <CustomBehavior File="Cava\CavaInteractWith" Range="5" KeepTargetSelected="True" InteractByQuestFrameDisposition="Ignore" NonCompeteDistance="1" MobId="26423" X="3844.588" Y="-1973.076" Z="208.4326" />
+    <CustomBehavior File="InteractWith" Range="5" KeepTargetSelected="True" InteractByQuestFrameDisposition="Ignore" NonCompeteDistance="1" MobId="26423" X="3844.588" Y="-1973.076" Z="208.4326" />
     <CustomBehavior File="WaitTimer" WaitTime="2000" />
     <CustomBehavior File="RunMacro" Macro="/click GossipTitleButton3" />
     <CustomBehavior File="WaitTimer" QuestId="11989" WaitTime="60000" />
@@ -1896,7 +1897,6 @@
   </While>
 </If>
 <TurnIn Nav="Fly" QuestName="Scourgekabob" QuestId="12484" TurnInName="Mack Fearsen" TurnInId="26604" X="3826.503" Y="-1985.58" Z="208.2881" />
-<!--<PickUp Nav="Fly" QuestName="Seared Scourge" QuestId="12029" GiverName="Mack Fearsen" GiverId="26604" X="3826.503" Y="-1985.58" Z="208.2881" />-->
 <PickUp Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" GiverName="Prigmon" GiverId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
 <If Condition="HasQuest(12483) &amp;&amp; !IsQuestCompleted(12483)" >
   <If Condition="!IsObjectiveComplete(1, 12483) || !IsObjectiveComplete(2, 12483)" >
@@ -2063,12 +2063,6 @@
     </While>
   </While>
 </If>
-<!--
-goto 16,29.9
-.' Jump on the big rock and stand on it
-.' Use Mack's Dark Grog and throw it at the trolls running around to the north |use Mack's Dark Grog##35908
-.' Burn 20 Scourge Trolls |q 12029/1 |modelnpc Famished Scourge Troll##26570+
-step
 -->
 <!--
                                                                                                                                    |
@@ -2077,7 +2071,9 @@ step
 -->
 <If Condition="Me.IsAlliance" >
   <If Condition="!HasQuest(12307) &amp;&amp; !IsQuestCompleted(12307) &amp;&amp; (Me.LevelFraction &gt;= 77.40)">
-    <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+<!--truce
+		<TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+-->
     <If Condition="HasQuest(12215) || HasQuest(12292)" >
       <CustomBehavior File="Cava\FlyTo" X="3440.473" Y="-2770.172" Z="200.4227" />
       <CustomBehavior File="ForcedDismount" />
@@ -2116,7 +2112,9 @@ step
 	</If>
   <TurnIn Nav="Fly" QuestName="Wolfsbane Root" QuestId="12307" TurnInName="Katja" TurnInId="27545" />
   <If Condition="!HasQuest(12802) &amp;&amp; !IsQuestCompleted(12802) &amp;&amp; (Me.LevelFraction &gt;= 77.40)">
+<!--truce
     <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+-->
     <If Condition="HasQuest(12215) || HasQuest(12292)" >
       <CustomBehavior File="Cava\FlyTo" X="3440.473" Y="-2770.172" Z="200.4227" />
       <CustomBehavior File="ForcedDismount" />
@@ -2137,7 +2135,9 @@ step
 <If Condition="Me.IsHorde">
   <TurnIn QuestName="Tactical Clemency" QuestId="12422" TurnInName="Captured Trapper" TurnInId="27497" X="4469.308" Y="-2261.685" Z="181.0929" />
   <If Condition="HasQuest(12413) &amp;&amp; !IsQuestCompleted(12413) &amp;&amp; (Me.LevelFraction &gt;= 77.40)">
+<!--truce
     <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+-->
     <CustomBehavior File="Message" Text="Moving to ZUL'DRAK, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
     <CustomBehavior File="ForcedDismount" />
@@ -2154,6 +2154,7 @@ step
                                                      Neutral                                                                       |
                                                                                                                                    |
 -->
+<!--truce
 <If Condition="HasQuest(12042) || (!HasQuest(12802) &amp;&amp; !IsQuestCompleted(12802))">
   <CustomBehavior File="Cava\FlyTo" X="4380.872" Y="-3065.916" Z="339.8466" />
   <CustomBehavior File="ForcedDismount" />
@@ -2229,6 +2230,7 @@ step
     </While>
   </While>
 </If>
+-->
 <!--
                                                                                                                                    |
                                                      Alliance                                                                      |
@@ -2345,7 +2347,9 @@ step
   </If>
   <TurnIn QuestName="Attack on Silverbrook" QuestId="12413" TurnInName="Conqueror Krenna" TurnInId="26860" X="3270.885" Y="-2197.225" Z="117.3736" />
   <If Condition="HasQuest(12425) &amp;&amp; !IsQuestCompleted(12425) &amp;&amp; (Me.LevelFraction &gt;= 77.40)">
+<!--truce
     <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+-->
     <CustomBehavior File="Message" Text="Moving to ZUL'DRAK, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
     <CustomBehavior File="ForcedDismount" />
@@ -2363,13 +2367,12 @@ step
                                                                                                                                    |
                                                      Neutral                                                                       |
                                                                                                                                    |
-goto 16.7,48.3
-.talk 26604
-..turnin 12029
-step
+
 -->
+<!--truce
 <TurnIn Nav="Fly" QuestName="Shimmercap Stew" QuestId="12483" TurnInName="Prigmon" TurnInId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
 <PickUp QuestName="Say Hello to My Little Friend" QuestId="12190" GiverName="Prigmon" GiverId="26519" X="3882.445" Y="-1936.447" Z="209.0927" />
+-->
 <!--
                                                                                                                                    |
                                                      Alliance                                                                      |
@@ -3147,7 +3150,9 @@ step
                                                      Neutral                                                                       |
                                                                                                                                    |
 -->
+<!--truce
 <TurnIn Nav="Fly" QuestName="Say Hello to My Little Friend" QuestId="12190" TurnInName="Harkor" TurnInId="26884" X="4326.229" Y="-4983.153" Z="20.37801" />
+-->
 <PickUp Nav="Fly" QuestName="Nice to Meat You" QuestId="12113" GiverName="Harkor" GiverId="26884" X="4326.229" Y="-4983.153" Z="20.37801" />
 <PickUp Nav="Fly" QuestName="Therapy" QuestId="12114" GiverName="Harkor" GiverId="26884" X="4326.229" Y="-4983.153" Z="20.37801" />
 <PickUp Nav="Fly" QuestName="It Takes Guts...." QuestId="12116" GiverName="Kraz" GiverId="26886" X="4322.282" Y="-4990.636" Z="20.37801" />
@@ -3626,6 +3631,25 @@ step
   <TurnIn Nav="Fly" QuestName="... Or Maybe We Don't" QuestId="12138" TurnInName="Raegar Breakbrow" TurnInId="26883" X="3814.069" Y="-5157.368" Z="119.2714" />
   <TurnIn Nav="Fly" QuestName="Vordrassil's Sapling" QuestId="12248" TurnInName="Hierophant Thayreen" TurnInId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
   <TurnIn Nav="Fly" QuestName="Vordrassil's Seeds" QuestId="12250" TurnInName="Hierophant Thayreen" TurnInId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
+<If Condition="Me.LevelFraction &lt; 77.40" >
+	<CustomBehavior File="Message" Text="Farming time until I reach level 77 and 2 bars." LogColor="Lime" />				
+  <CustomBehavior File="Cava\FlyTo" Land="true" X="5800.945" Y="5677.459" Z="-69.97756" />
+  <SetGrindArea>
+  <GrindArea>
+	<Factions>14 2030</Factions>
+	<Hotspots>
+		<Hotspot X="5800.945" Y="5677.459" Z="-69.97756" />
+		<Hotspot X="5941.971" Y="5612.417" Z="-69.88351" />
+		<Hotspot X="6157.625" Y="5504.379" Z="-63.6214" />
+		<Hotspot X="6074.877" Y="5711.478" Z="-33.21479" />
+		<Hotspot X="5843.036" Y="5936.517" Z="-30.87323" />
+		<Hotspot X="5675.703" Y="5983.148" Z="-40.86446" />
+		<Hotspot X="5640.853" Y="5834.434" Z="-63.26075" />
+	</Hotspots>
+	</GrindArea>
+  </SetGrindArea>					
+	<GrindTo Condition="Me.LevelFraction &gt;= 77.40" GoalText="Farming untill level 77.40" />
+</If>
   <CustomBehavior File="Message" Text="Moving to ZUL'DRAK, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="Cava\FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
 </If>
@@ -3870,6 +3894,25 @@ step
   </If>
   <TurnIn QuestName="Destroy the Sapling" QuestId="12241" TurnInName="Windseer Grayhorn" TurnInId="27262" X="3316.828" Y="-2291.839" Z="110.1083" />
   <TurnIn QuestName="Vordrassil's Seeds" QuestId="12242" TurnInName="Windseer Grayhorn" TurnInId="27262" X="3316.828" Y="-2291.839" Z="110.1083" />
+<If Condition="Me.LevelFraction &lt; 77.40" >
+	<CustomBehavior File="Message" Text="Farming time until I reach level 77 and 2 bars." LogColor="Lime" />				
+  <CustomBehavior File="Cava\FlyTo" Land="true" X="5800.945" Y="5677.459" Z="-69.97756" />
+  <SetGrindArea>
+  <GrindArea>
+	<Factions>14 2030</Factions>
+	<Hotspots>
+		<Hotspot X="5800.945" Y="5677.459" Z="-69.97756" />
+		<Hotspot X="5941.971" Y="5612.417" Z="-69.88351" />
+		<Hotspot X="6157.625" Y="5504.379" Z="-63.6214" />
+		<Hotspot X="6074.877" Y="5711.478" Z="-33.21479" />
+		<Hotspot X="5843.036" Y="5936.517" Z="-30.87323" />
+		<Hotspot X="5675.703" Y="5983.148" Z="-40.86446" />
+		<Hotspot X="5640.853" Y="5834.434" Z="-63.26075" />
+	</Hotspots>
+	</GrindArea>
+  </SetGrindArea>					
+	<GrindTo Condition="Me.LevelFraction &gt;= 77.40" GoalText="Farming untill level 77.40" />
+</If>
   <CustomBehavior File="Message" Text="Moving to ZUL'DRAK, Please do not stop bot" LogColor="Aquamarine" />
   <CustomBehavior File="Cava\FlyTo" X="5188.778" Y="-2200.854" Z="239.3991" />
 </If>
