@@ -414,7 +414,7 @@
 <TurnIn Nav="Fly" QuestName="Scourge Tactics" QuestId="13008" TurnInName="Crusade Commander Entari" TurnInId="30223" X="6255.768" Y="-17.86448" Z="410.0481" />
 <PickUp Nav="Fly" QuestName="If There Are Survivors..." QuestId="13044" GiverName="Crusade Commander Entari" GiverId="30223" X="6255.768" Y="-17.86448" Z="410.0481" />
 <TurnIn Nav="Fly" QuestName="If There Are Survivors..." QuestId="13044" TurnInName="Penumbrius" TurnInId="30227" X="6123.025" Y="-12.60655" Z="383.512" />
-<If Condition="!HasQuest(13045) &amp;&amp; !IsQuestCompleted(13045) &amp;&amp; (Me.LevelFraction &gt;= 80.65)">
+<If Condition="!HasQuest(13045) &amp;&amp; !IsQuestCompleted(13045) &amp;&amp; (Me.LevelFraction &gt;= 800.65)">
 	<CustomBehavior File="Message" Text="Moving to THE STORM PEAKS, Please do not stop bot" LogColor="Aquamarine" />
 	<CustomBehavior File="Cava\FlyTo" Land="True" X="6105.605" Y="-1070.542" Z="403.1535" />
 	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](80-81)TheStormPeaks[Cava]" />
@@ -428,16 +428,15 @@
 		</While>
 		<CustomBehavior File="Vehicles\FlyingVehicle" QuestId="13045" VehicleId="30228" NpcList="30407"
 			PickUpPassengerButton="1" DropPassengerButton="2" SpeedButton="3"
-      StartPath="6545.917, 348.2747, 580.2816 | 6619.757, 488.2379, 408.1627 "
       Path="6608.668, 443.7926, 436.0548 | 6713.227, 484.2516, 446.7397 | 6598.934, 582.8495, 437.1812 "
-      EndPath="6545.917, 348.2747, 580.2816 | 6216.801, 4.160139, 416.227" />
+      EndX="6216.801" EndY="4.160139" EndZ="416.227"/>
 	</While>
   <CustomBehavior File="EjectVeh" />
 </If>
 <TurnIn Nav="Fly" QuestName="Into The Wild Green Yonder" QuestId="13045" TurnInName="Highlord Tirion Fordring" TurnInId="28179" X="6256.38" Y="-40.85156" Z="421.4159" />
 <PickUp Nav="Fly" QuestName="A Cold Front Approaches" QuestId="13070" GiverName="Highlord Tirion Fordring" GiverId="28179" X="6256.38" Y="-40.85156" Z="421.4159" />
 <TurnIn Nav="Fly" QuestName="A Cold Front Approaches" QuestId="13070" TurnInName="Siegemaster Fezzik" TurnInId="30657" X="6249.122" Y="74.68902" Z="390.059" />
-<If Condition="!HasQuest(13086) &amp;&amp; !IsQuestCompleted(13086) &amp;&amp; (Me.LevelFraction &gt;= 80.65)">
+<If Condition="!HasQuest(13086) &amp;&amp; !IsQuestCompleted(13086) &amp;&amp; (Me.LevelFraction &gt;= 800.65)">
 	<CustomBehavior File="Message" Text="Moving to THE STORM PEAKS, Please do not stop bot" LogColor="Aquamarine" />
 	<CustomBehavior File="Cava\FlyTo" Land="True" X="6105.605" Y="-1070.542" Z="403.1535" />
 	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](80-81)TheStormPeaks[Cava]" />
@@ -502,7 +501,7 @@
 <If Condition="HasQuest(13105)">
 	<TurnIn Nav="Fly" QuestName="Once More Unto The Breach, Hero" QuestId="13105" TurnInName="The Ebon Watcher" TurnInId="30596" X="6377.439" Y="237.9219" Z="396.046" />
 </If>
-<If Condition="!HasQuest(13118) &amp;&amp; !IsQuestCompleted(13118) &amp;&amp; (Me.LevelFraction &gt;= 80.65)">
+<If Condition="!HasQuest(13118) &amp;&amp; !IsQuestCompleted(13118) &amp;&amp; (Me.LevelFraction &gt;= 800.65)">
 	<CustomBehavior File="Message" Text="Moving to THE STORM PEAKS, Please do not stop bot" LogColor="Aquamarine" />
 	<CustomBehavior File="Cava\FlyTo" Land="True" X="6105.605" Y="-1070.542" Z="403.1535" />
 	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](80-81)TheStormPeaks[Cava]" />
@@ -617,7 +616,7 @@
 <TurnIn Nav="Fly" QuestName="The Battle For Crusaders' Pinnacle" QuestId="13141" TurnInName="Father Gustav" TurnInId="30683" X="6383.944" Y="246.8663" Z="396.0465" />
 <PickUp Nav="Fly" QuestName="The Crusaders' Pinnacle" QuestId="13157" GiverName="Father Gustav" GiverId="30683" X="6383.944" Y="246.8663" Z="396.0465" />
 <TurnIn Nav="Fly" QuestName="The Crusaders' Pinnacle" QuestId="13157" TurnInName="Highlord Tirion Fordring" TurnInId="31044" X="6426.662" Y="440.0376" Z="511.2253" />
-<If Condition="!HasQuest(13068) &amp;&amp; !IsQuestCompleted(13068) &amp;&amp; (Me.LevelFraction &gt;= 80.65)">
+<If Condition="!HasQuest(13068) &amp;&amp; !IsQuestCompleted(13068) &amp;&amp; (Me.LevelFraction &gt;= 800.65)">
 	<CustomBehavior File="Message" Text="Moving to THE STORM PEAKS, Please do not stop bot" LogColor="Aquamarine" />
 	<CustomBehavior File="Cava\FlyTo" Land="True" X="6105.605" Y="-1070.542" Z="403.1535" />
 	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest](80-81)TheStormPeaks[Cava]" />
@@ -964,6 +963,23 @@
 <PickUp Nav="Fly" QuestName="Light Within the Darkness" QuestId="13083" GiverName="Bridenbrad's Possessions" GiverId="192833" GiverType="GameObject" X="8138.402" Y="436.8353" Z="574.6364" />	
 <TurnIn Nav="Fly" QuestName="Light Within the Darkness" QuestId="13083" TurnInName="Highlord Tirion Fordring" TurnInId="31044" X="6426.662" Y="440.0376" Z="511.2235" />
 <CustomBehavior File="Message" Text="Moving to THE STORM PEAKS, Please do not stop bot" LogColor="Aquamarine" />
+<If Condition="Me.LevelFraction &lt; 80.50" >
+	<CustomBehavior File="Message" Text="Farming time until I reach level 80.50" LogColor="Lime" />				
+  <CustomBehavior File="Cava\FlyTo" Land="true" X="7200.662" Y="-2104.061" Z="767.1284" />
+  <SetGrindArea>
+  <GrindArea>
+	<Factions>1711 1712</Factions>
+	<Hotspots>
+		<Hotspot X="7200.662" Y="-2104.061" Z="767.1284" />
+		<Hotspot X="7227.904" Y="-1976.756" Z="766.2302" />
+		<Hotspot X="7289.814" Y="-2001.424" Z="766.2178" />
+		<Hotspot X="7333.991" Y="-2081.395" Z="769.2742" />
+		<Hotspot X="7263.211" Y="-2132.19" Z="778.8481" />
+	</Hotspots>
+	</GrindArea>
+  </SetGrindArea>					
+	<GrindTo Condition="Me.LevelFraction &gt;= 80.50" GoalText="Farming untill level 80.50" />
+</If>
 <CustomBehavior File="Cava\FlyTo" Land="True" X="6105.605" Y="-1070.542" Z="403.1535" />
 <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](80-81)TheStormPeaks[Cava]" />
 </QuestOrder>

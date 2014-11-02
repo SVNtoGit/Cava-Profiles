@@ -26,6 +26,24 @@
     <Spot X="7484.667" Y="-1198.14" />
     <Spot X="7365.787" Y="-1104.822" />
   </AerialBlackspot>
+  <AerialBlackspot Faction="Neutral" MapId="571" Name="mines" >
+    <Spot X="6079.496" Y="-577.2844" />
+    <Spot X="6116.35" Y="-586.6377" />
+    <Spot X="6142.42" Y="-616.3074" />
+    <Spot X="6150.173" Y="-655.6337" />
+    <Spot X="6143.985" Y="-695.568" />
+    <Spot X="6122.827" Y="-729.9243" />
+    <Spot X="6091.284" Y="-754.6334" />
+    <Spot X="6053.057" Y="-763.8586" />
+    <Spot X="6013.161" Y="-758.9492" />
+    <Spot X="5976.24" Y="-745.0193" />
+    <Spot X="5955.674" Y="-713.2495" />
+    <Spot X="5969.219" Y="-674.4586" />
+    <Spot X="5984.021" Y="-638.4517" />
+    <Spot X="5992.327" Y="-599.4037" />
+    <Spot X="6015.947" Y="-569.5162" />
+    <Spot X="6055.083" Y="-559.3507" />
+  </AerialBlackspot>
   <Blackspot X="7416.581" Y="-1055.138" Z="688.4521" Radius="100" Height="400" />
 </Blackspots>
 <Mailboxes>
@@ -805,6 +823,7 @@
   </If>
   <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](81-82)MountHyjal[Cava]" />
 </If>
+<!--jac
 <If Condition="HasQuest(12819) &amp;&amp; !IsQuestCompleted(12819)">
   <CustomBehavior File="Cava\FlyTo" X="6206.813" Y="-743.1313" Z="428.5049" />
   <CustomBehavior File="Cava\FlyTo" X="6118.319" Y="-512.6484" Z="393.9029" />
@@ -888,15 +907,19 @@
     <CustomBehavior File="Cava\FlyTo" X="6206.813" Y="-743.1313" Z="428.5049" />
   </If>
 </If>
-<If Condition="HasQuest(12819) || (!HasQuest(12826) &amp;&amp; !IsQuestCompleted(12826)) || HasQuest(12826) || (!HasQuest(12820) &amp;&amp; !IsQuestCompleted(12820))">
+<If Condition="IsQuestCompleted(12819) || (!HasQuest(12826) &amp;&amp; !IsQuestCompleted(12826)) || HasQuest(12826) || (!HasQuest(12820) &amp;&amp; !IsQuestCompleted(12820))">
   <CustomBehavior File="Cava\FlyTo" X="6105.605" Y="-1070.542" Z="403.1535" />
   <CustomBehavior File="ForcedDismount" />
+
   <TurnIn QuestName="Just Around the Corner" QuestId="12819" TurnInName="Jeer Sparksocket" TurnInId="29431" X="6099.427" Y="-1075.954" Z="404.1566" />
+
   <PickUp QuestName="Slightly Unstable" QuestId="12826" GiverName="Jeer Sparksocket" GiverId="29431" X="6099.427" Y="-1075.954" Z="404.1566" />
   <TurnIn QuestName="Slightly Unstable" QuestId="12826" TurnInName="Ricket" TurnInId="29428" X="6152.991" Y="-1069.415" Z="402.7604" />
+
   <PickUp QuestName="A Delicate Touch" QuestId="12820" GiverName="Ricket" GiverId="29428" X="6152.991" Y="-1069.415" Z="402.7604" />
   <RunTo X="6105.605" Y="-1070.542" Z="403.1535" />
 </If>
+-->
 <If Condition="HasQuest(12820) &amp;&amp; !IsQuestCompleted(12820) &amp;&amp; (Me.Level &gt;= 81)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to STORMWIND, Please do not stop bot" LogColor="Aquamarine" />
@@ -1098,10 +1121,12 @@
 </If>
 <TurnIn Nav="Fly" QuestName="Moving In" QuestId="12829" TurnInName="Tore Rumblewrench" TurnInId="29430" X="6404.13" Y="-1122.326" Z="426.3503" />
 <TurnIn Nav="Fly" QuestName="Ore Repossession" QuestId="12830" TurnInName="Tore Rumblewrench" TurnInId="29430" X="6404.13" Y="-1122.326" Z="426.3503" />
-<If Condition="HasQuest(12820) || HasQuest(12828) || (!HasQuest(12846) &amp;&amp; !IsQuestCompleted(12846))">
+<If Condition="IsQuestCompleted(12820) || HasQuest(12828) || (!HasQuest(12846) &amp;&amp; !IsQuestCompleted(12846))">
   <CustomBehavior File="Cava\FlyTo" X="6105.605" Y="-1070.542" Z="403.1535" />
   <CustomBehavior File="ForcedDismount" />
+<!--
   <TurnIn QuestName="A Delicate Touch" QuestId="12820" TurnInName="Ricket" TurnInId="29428" X="6152.991" Y="-1069.415" Z="402.7604" />
+-->
   <TurnIn QuestName="Ample Inspiration" QuestId="12828" TurnInName="Ricket" TurnInId="29428" X="6152.991" Y="-1069.415" Z="402.7594" />
   <TurnIn QuestName="They Took Our Men!" QuestId="12843" TurnInName="Gretchen Fizzlespark" TurnInId="29473" X="6113.345" Y="-1084.83" Z="402.8354" />
   <PickUp QuestName="Leave No Goblin Behind" QuestId="12846" GiverName="Gretchen Fizzlespark" GiverId="29473" X="6113.345" Y="-1084.83" Z="402.8354" />
@@ -1440,18 +1465,18 @@
       <CustomBehavior File="ForcedDismount" />
       <CustomBehavior File="MountVehOnly" QuestId="12851" VehicleMountId="29598" X="7083.069" Y="-1940.31" Z="772.6819" />
     </If>
-    <While Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(1, 12851) &amp;&amp; !IsObjectiveComplete(2, 12851)" >
+    <If Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(1, 12851) &amp;&amp; !IsObjectiveComplete(2, 12851)" >
       <CustomBehavior File="Vehicles\NoControlVehicle" QuestId="12851" AttackButton="1" MaxRange="50" TypeId="2"
       TargetId1="29351" TargetId2="29358" VehicleId="29602"/>
-    </While>
-    <While Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(1, 12851)" >
+    </If>
+    <If Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(1, 12851) &amp;&amp; IsObjectiveComplete(2, 12851)" >
       <CustomBehavior File="Vehicles\NoControlVehicle" QuestId="12851" AttackButton="1" MaxRange="50" TypeId="2"
       TargetId="29358" VehicleId="29602"/>
-    </While>
-    <While Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(2, 12851)" >
+    </If>
+    <If Condition="Me.IsOnTransport &amp;&amp; !IsObjectiveComplete(2, 12851) &amp;&amp; IsObjectiveComplete(1, 12851)" >
       <CustomBehavior File="Vehicles\NoControlVehicle" QuestId="12851" AttackButton="1" MaxRange="50" TypeId="2"
       TargetId="29351" VehicleId="29602"/>
-    </While>
+    </If>
   </While>
   <EnableBehavior Name="Combat" />
 </If>
@@ -1849,7 +1874,7 @@
       </If>
       <If Condition="Me.IsOnTransport" >
         <DisableBehavior Name="Combat" />
-        <CustomBehavior File="Vehicles\NoControlVehicle" QuestId="12855" AttackButton="1" MaxRange="25" TypeId="2" TargetId="29696" VehicleId="29677"/>
+        <CustomBehavior File="Cava\NoControlVehicle" QuestId="12855" AttackButton="1" MaxRange="25" TypeId="2" TargetId="29696" VehicleId="29677"/>
         <EnableBehavior Name="Combat" />
       </If>
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
@@ -2636,6 +2661,23 @@
       <CustomBehavior File="WaitTimer" WaitTime="3000" />
     </While>
   </If>
+</If>
+<If Condition="Me.Level &lt; 81" >
+	<CustomBehavior File="Message" Text="Farming time until I reach level 81." LogColor="Lime" />				
+  <CustomBehavior File="Cava\FlyTo" Land="true" X="7200.662" Y="-2104.061" Z="767.1284" />
+  <SetGrindArea>
+  <GrindArea>
+	<Factions>1711 1712</Factions>
+	<Hotspots>
+		<Hotspot X="7200.662" Y="-2104.061" Z="767.1284" />
+		<Hotspot X="7227.904" Y="-1976.756" Z="766.2302" />
+		<Hotspot X="7289.814" Y="-2001.424" Z="766.2178" />
+		<Hotspot X="7333.991" Y="-2081.395" Z="769.2742" />
+		<Hotspot X="7263.211" Y="-2132.19" Z="778.8481" />
+	</Hotspots>
+	</GrindArea>
+  </SetGrindArea>					
+	<GrindTo Condition="Me.Level &gt;= 81" GoalText="Farming untill level 81" />
 </If>
 <If Condition="Me.IsAlliance" >
   <CustomBehavior File="Message" Text="Moving to STORMWIND, Please do not stop bot" LogColor="Aquamarine" />
