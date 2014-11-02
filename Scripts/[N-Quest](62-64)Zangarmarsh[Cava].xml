@@ -1470,18 +1470,7 @@
       <CustomBehavior File="ForcedDismount" />
       </Else>
     </If>
-      <CustomBehavior File="LoadProfile" ProfileName="MovetoMainCity[Cava]" />
-    <Else>
-			<RunTo X="-9001.712" Y="856.824" Z="29.6207" />
-      <CustomBehavior File="InteractWith" MobId="195141" Range="8" NonCompeteDistance="0" WaitTime="8000" X="-9003.66" Y="855.3229" Z="29.62067" />
-      <RunTo X="-327.35" Y="1020.49" Z="54.24804" />
-      <CustomBehavior File="Cava\TaxiRide" MobId="18931" MobState="Alive" WaitForNpcs="True" TaxiNumber="3" WaitTime="5000" />
-      <CustomBehavior File="Cava\FlyTo" X="-207.4555" Y="5487.848" Z="21.84623" />
-      <CustomBehavior File="ForcedDismount" />
-      </Else>
-    </If>
 	</If>	
-  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <Else><!--me is horde-->
   <ClearVendor />
   <ClearMailbox />
@@ -1531,7 +1520,6 @@
 			</Else>
     </If>
   </If>
-  <CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
   </Else>
 </If>
 <If Condition="Me.ZoneId != 3521">
@@ -1540,6 +1528,7 @@
   Please move your char to: ZANGARMARSH\n
   and start bot." />
 </If>
+<CustomBehavior File="UserSettings"  UseMount="True" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <CustomBehavior File="Message" Text="Compiling Zangarmarsh Map Zone" LogColor="Aquamarine" />
 <!--# # # Alliance Level 62.4 # # # -->
 <!--# # # Horde Level 62.9 # # # -->
