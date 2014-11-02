@@ -1686,9 +1686,9 @@
   <TurnIn Nav="Fly" QuestName="A Minor Substitution" QuestId="12176" TurnInName="Hidetrader Jun'ik" TurnInId="27037" X="3237.743" Y="-2267.833" Z="115.7856" />
   <PickUp QuestName="Jun'ik's Coverup" QuestId="12177" GiverName="Hidetrader Jun'ik" GiverId="27037" X="3237.743" Y="-2267.833" Z="115.7856" />
   <If Condition="HasQuest(12177) &amp;&amp; !IsQuestCompleted(12177)">
-    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;).Enabled">
+    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;).Enabled">
       <CustomBehavior File="Message" Text="\n\n    Disabling\n MrItemRemover2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
-	  <CustomBehavior File="DisablePlugin" Names="MIR2 2.1" />
+	  <CustomBehavior File="DisablePlugin" Names="MIR2" />
 	  <While Condition="GetItemCount(30817) &lt; 5">
 	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26868" InteractByBuyingItemId="30817" BuyItemCount="5" X="3200.552" Y="-2301.466" Z="107.6752" />
 	  </While>
@@ -1696,7 +1696,7 @@
 	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="27134" InteractByBuyingItemId="3857" BuyItemCount="1" X="3309.34" Y="-2338.626" Z="110.8465" />
 	  </While>
 	  <TurnIn Nav="Fly" QuestName="Jun'ik's Coverup" QuestId="12177" TurnInName="Hidetrader Jun'ik" TurnInId="27037" X="3237.743" Y="-2267.833" Z="115.7856" />
-	  <CustomBehavior File="EnablePlugin" Names="MIR2 2.1" />
+	  <CustomBehavior File="EnablePlugin" Names="MIR2" />
 	  <CustomBehavior File="Message" Text="\n\n    Enabled\n MrItemRemover2 Plugin\n" LogColor="Aquamarine" />
     <Else>
 	  <While Condition="GetItemCount(30817) &lt; 5">
@@ -1865,14 +1865,14 @@
   </If>
   <If Condition="!HasItem(3371)" >
     <CustomBehavior File="Cava\FlyTo" X="3843.456" Y="-1950.792" Z="208.6879" />
-    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;).Enabled">
+    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;).Enabled">
       <CustomBehavior File="Message" Text="\n\n    Disabling\n MrItemRemover2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
-	  <CustomBehavior File="DisablePlugin" Names="MIR2 2.1" />
+	  <CustomBehavior File="DisablePlugin" Names="MIR2" />
 	  <While Condition="GetItemCount(3371) &lt; 1">
 	    <CustomBehavior File="InteractWith" NonCompeteDistance="0" MobId="26474" InteractByBuyingItemId="3371" BuyItemCount="1" X="3844.036" Y="-1948.214" Z="208.7926" />
 	  </While>
       <TurnIn Nav="Fly" QuestName="Vial of Visions" QuestId="11990" TurnInName="Drakuru" TurnInId="26423" X="3844.588" Y="-1973.076" Z="208.4326" />
-	  <CustomBehavior File="EnablePlugin" Names="MIR2 2.1" />
+	  <CustomBehavior File="EnablePlugin" Names="MIR2" />
 	  <CustomBehavior File="Message" Text="\n\n    Enabled\n MrItemRemover2 Plugin\n" LogColor="Aquamarine" />
     <Else>
 	  <While Condition="GetItemCount(3371) &lt; 1">
@@ -2908,23 +2908,22 @@
   <If Condition="HasQuest(11998) &amp;&amp; !IsQuestCompleted(11998)">
     <CustomBehavior File="Cava\FlyTo" X="4113.992" Y="-4736.487" Z="100.7886" />
     <CustomBehavior File="ForcedDismount" />
-    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2 2.1&quot;).Enabled">
+    <If Condition="(Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;) != null) &amp;&amp; Styx.Plugins.PluginManager.Plugins.FirstOrDefault(x =&gt; x.Name == &quot;MIR2&quot;).Enabled">
       <CustomBehavior File="Message" Text="\n\n    Disabling\n MrItemRemover2 Plugin\n For next Quest\n" LogColor="Aquamarine" />
-	  <CustomBehavior File="DisablePlugin" Names="MIR2 2.1" />
-	  <While Condition="GetItemCount(35796) &lt; 1">
-	    <CustomBehavior File="InteractWith" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26484" InteractByBuyingItemId="35796" BuyItemCount="1" X="4113.109" Y="-4738.284" Z="100.7877" />
-	  </While>
-      <TurnIn Nav="Fly" QuestName="Softening the Blow" QuestId="11998" TurnInName="Brugar Stoneshear" TurnInId="26226" X="4551.792" Y="-4250.052" Z="170.4935" />
-	  <CustomBehavior File="EnablePlugin" Names="MIR2 2.1" />
-	  <CustomBehavior File="Message" Text="\n\n    Enabled\n MrItemRemover2 Plugin\n" LogColor="Aquamarine" />
+			<CustomBehavior File="DisablePlugin" Names="MIR2" />
+			<While Condition="!IsQuestCompleted(11998)">
+				<CustomBehavior File="InteractWith" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26484" InteractByBuyingItemId="35796" BuyItemCount="1" X="4113.109" Y="-4738.284" Z="100.7877" />
+			</While>
+			<CustomBehavior File="EnablePlugin" Names="MIR2" />
+			<CustomBehavior File="Message" Text="\n\n    Enabled\n MrItemRemover2 Plugin\n" LogColor="Aquamarine" />
     <Else>
-	  <While Condition="GetItemCount(35796) &lt; 1">
-	    <CustomBehavior File="InteractWith" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26484" InteractByBuyingItemId="35796" BuyItemCount="1" X="4113.109" Y="-4738.284" Z="100.7877" />
-	  </While>
-      <TurnIn Nav="Fly" QuestName="Softening the Blow" QuestId="11998" TurnInName="Brugar Stoneshear" TurnInId="26226" X="4551.792" Y="-4250.052" Z="170.4935" />
-	  </Else>
+			<While Condition="!IsQuestCompleted(11998)">
+				<CustomBehavior File="InteractWith" InteractByGossipOptions="1" NonCompeteDistance="0" MobId="26484" InteractByBuyingItemId="35796" BuyItemCount="1" X="4113.109" Y="-4738.284" Z="100.7877" />
+			</While>
+			</Else>
     </If>
   </If>
+  <TurnIn Nav="Fly" QuestName="Softening the Blow" QuestId="11998" TurnInName="Brugar Stoneshear" TurnInId="26226" X="4551.792" Y="-4250.052" Z="170.4935" />
   <PickUp Nav="Fly" QuestName="Brothers in Battle" QuestId="12002" GiverName="Brugar Stoneshear" GiverId="26226" X="4551.792" Y="-4250.052" Z="170.4935" />
   <PickUp Nav="Fly" QuestName="Find Kurun!" QuestId="11981" GiverName="Fallen Earthen Warrior" GiverId="26335" X="4706.642" Y="-4453.706" Z="194.9646" />
   <PickUp Nav="Fly" QuestName="The Damaged Journal" QuestId="11986" GiverName="Battered Journal" GiverId="188261" GiverType="GameObject" X="4825" Y="-4484.307" Z="198.816" />
@@ -3167,9 +3166,11 @@
 <If Condition="HasQuest(12114) &amp;&amp; !IsQuestCompleted(12114)">
   <CustomBehavior File="Cava\FlyTo" X="4442.226" Y="-4891.297" Z="26.69714" />
   <CustomBehavior File="ForcedDismount" />
+<!--truce
   <If Condition="HasQuest(12068) &amp;&amp; !IsQuestCompleted(12068) &amp;&amp; GetItemCount(36758) &lt; 5">
     <LootMobs Value="true" />
   </If>
+-->
   <If Condition="!IsObjectiveComplete(1, 12114) &amp;&amp; !IsObjectiveComplete(2, 12114)" >
     <SetGrindArea>
     <GrindArea>
@@ -3203,13 +3204,17 @@
     <LootMobs Value="null" />
   </If>
 </If>
+<!--truce
 <Objective QuestName="Voices From the Dust" QuestId="12068" Type="CollectItem" ItemId="36758" CollectCount="5" />
+-->
 <If Condition="(HasQuest(12116) &amp;&amp; !IsQuestCompleted(12116)) || (HasQuest(12068) &amp;&amp; !IsQuestCompleted(12068)) || (!HasQuest(12082) &amp;&amp; !IsQuestCompleted(12082))">
   <CustomBehavior File="Cava\FlyTo" X="4695.292" Y="-4859.704" Z="32.11085" />
   <CustomBehavior File="ForcedDismount" />
 </If>
 <Objective QuestName="It Takes Guts...." QuestId="12116" Type="CollectItem" ItemId="36825" CollectCount="5" />
+<!--truce
 <Objective QuestName="Voices From the Dust" QuestId="12068" Type="CollectItem" ItemId="36757" CollectCount="1" />
+-->
 <If Condition="HasQuest(12082) &amp;&amp; !IsQuestCompleted(12082)" >
   <CustomBehavior File="AbandonQuest" QuestId="12082" />
   <CustomBehavior File="WaitTimer" WaitTime="4000" />
@@ -3227,6 +3232,7 @@
     </If>
   </While>
 </If>
+<!--truce
 <If Condition="HasQuest(12068)" >
   <While Condition="HasQuest(12068)" >
     <If Condition="!HasItem(35797)" >
@@ -3259,9 +3265,6 @@
       <Hotspot X="4473.7" Y="-4890.941" Z="25.22799" />
       </CustomBehavior>
       <LootMobs Value="null" />
-<!--
-      <Objective QuestName="Voices From the Dust" QuestId="12068" Type="CollectItem" ItemId="36758" CollectCount="5" />
--->
     </If>
     <CustomBehavior File="Cava\FlyTo" X="4601.668" Y="-4873.976" Z="48.06377" />
     <CustomBehavior File="ForcedDismount" />
@@ -3286,6 +3289,7 @@
     </While>
   </While>
 </If>
+-->
 <If Condition="HasQuest(12279) &amp;&amp; !IsQuestCompleted(12279)">
   <CustomBehavior File="Cava\FlyTo" X="4288.479" Y="-5123.302" Z="0.3098376" />
   <CustomBehavior File="ForcedDismount" />
@@ -3415,8 +3419,9 @@
   <CustomBehavior File="ForcedDismount" />
   <While Condition="!IsQuestCompleted(12137)">
     <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="12137" MobId="26812" NonCompeteDistance="0" InteractByUsingItemId="36859" Range="12" WaitTime="12000"
-    CollectionDistance="1000" X="4817.429" Y="-4841.946" Z="26.97438" />
-    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="12137" MobId="188525" NonCompeteDistance="0" CollectionDistance="1000" X="4817.429" Y="-4841.946" Z="26.97438" />
+    ProactiveCombatStrategy="ClearMobsTargetingUs" CollectionDistance="1000" X="4817.429" Y="-4841.946" Z="26.97438" />
+    <CustomBehavior File="InteractWith" MovementBy="NavigatorPreferred" QuestId="12137" MobId="188525" NonCompeteDistance="0" CollectionDistance="1000"
+		ProactiveCombatStrategy="ClearMobsTargetingUs" WaitForNpcs="False" X="4817.429" Y="-4841.946" Z="26.97438" />
   </While>
 </If>
 <TurnIn Nav="Fly" QuestName="Chill Out, Mon" QuestId="12137" TurnInName="Kraz" TurnInId="26886" X="4322.282" Y="-4990.636" Z="20.37801" />
@@ -3632,7 +3637,7 @@
   <TurnIn Nav="Fly" QuestName="Vordrassil's Sapling" QuestId="12248" TurnInName="Hierophant Thayreen" TurnInId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
   <TurnIn Nav="Fly" QuestName="Vordrassil's Seeds" QuestId="12250" TurnInName="Hierophant Thayreen" TurnInId="27295" X="3435.225" Y="-2746.362" Z="199.3695" />
 <If Condition="Me.LevelFraction &lt; 77.40" >
-	<CustomBehavior File="Message" Text="Farming time until I reach level 77 and 2 bars." LogColor="Lime" />				
+	<CustomBehavior File="Message" Text="Farming time until I reach level 77 and 8 bars." LogColor="Lime" />				
   <CustomBehavior File="Cava\FlyTo" Land="true" X="5800.945" Y="5677.459" Z="-69.97756" />
   <SetGrindArea>
   <GrindArea>
