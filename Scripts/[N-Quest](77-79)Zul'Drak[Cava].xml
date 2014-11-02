@@ -781,8 +781,8 @@
       </CustomBehavior>
     </If>
     <If Condition="!IsQuestCompleted(12861) &amp;&amp; HasItem(41161)" >
-      <CustomBehavior File="InteractWith" MobId="29686" CollectionDistance="1000" MobState="Alive" NotMoving="True" AuraIdOnMob="55009"
-        PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" >
+      <CustomBehavior File="InteractWith" MobId="29686" CollectionDistance="1000" MobState="Alive" NotMoving="True" AuraIdOnMob="55009" Range="4"
+        PreInteractMountStrategy="Dismount" ProactiveCombatStrategy="ClearMobsTargetingUs" InteractByUsingItemId="41161" WaitTime="4000">
         <HuntingGrounds>
           <Hotspot X="4968.648" Y="-2367.363" Z="244.2257" />
           <Hotspot X="4929.807" Y="-2377.634" Z="238.6576" />
@@ -795,8 +795,10 @@
         </HuntingGrounds>
       </CustomBehavior>
     </If>
-    <CustomBehavior File="Misc\RunLua" Lua="UseItemByName(41161)" WaitTime="1000" />
+    <!--
+		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(41161)" WaitTime="1000" />
     <CustomBehavior File="WaitTimer" WaitTime="4000" />
+		-->
   </While>
 </If>
 <If Condition="HasQuest(12861)" >
