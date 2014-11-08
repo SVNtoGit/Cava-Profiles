@@ -2786,7 +2786,7 @@
   </If>
   <PickUp Nav="Fly" QuestName="Speak with your Ambassador" QuestId="12766" GiverName="Tariolstrasz" GiverId="26443" X="3549.37" Y="379.3498" Z="52.22787" />
   <TurnIn Nav="Fly" QuestName="Speak with your Ambassador" QuestId="12766" TurnInName="Lauriel Trueblade" TurnInId="27803" X="3514.944" Y="262.123" Z="47.28833" />
-  <If Condition="!HasQuest(12460) &amp;&amp; !IsQuestCompleted(12460) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12460) &amp;&amp; !IsQuestCompleted(12460) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3556.123" Y="162.5857" Z="61.21074" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
@@ -3150,7 +3150,7 @@
   <If Condition="HasQuest(12091) &amp;&amp; !IsQuestCompleted(12091)" >
     <CustomBehavior File="Cava\FlyTo" X="3901.673" Y="1061.088" Z="141.5118" />
     <CustomBehavior File="ForcedDismount" />
-    <CustomBehavior File="Cava\PullMobs" QuestId="12091" MobId="26838" PullMob="True" MobState="Alive" CollectUntil="QuestComplete" >
+    <CustomBehavior File="Cava\PullMobs" QuestId="12091" MobId="26838" PullMob="True" MobState="Alive" CollectUntil="QuestComplete" NonCompeteDistance="1" HuntingGroundRadius="25" >
       <Hotspot X="3901.673" Y="1061.088" Z="141.5118" />
     </CustomBehavior>
   </If>
@@ -3207,7 +3207,7 @@
     <RunTo X="3841.514" Y="1544.577" Z="89.72555" />
   </If>
   <TurnIn Nav="Fly" QuestName="Victory Nears..." QuestId="12034" TurnInName="Senior Sergeant Juktok" TurnInId="26415" X="3833.262" Y="1573.53" Z="86.69933" />
-  <If Condition="!HasQuest(12036) &amp;&amp; !IsQuestCompleted(12036) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12036) &amp;&amp; !IsQuestCompleted(12036) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -3285,7 +3285,7 @@
   <TurnIn Nav="Fly" QuestName="Black Blood of Yogg-Saron" QuestId="12039" TurnInName="Borus Ironbender" TurnInId="26564" X="3810.295" Y="1574.131" Z="89.22948" />
   <PickUp Nav="Fly" QuestName="Scourge Armaments" QuestId="12048" GiverName="Borus Ironbender" GiverId="26564" X="3810.295" Y="1574.131" Z="89.22948" />
   <TurnIn Nav="Fly" QuestName="From the Depths of Azjol-Nerub" QuestId="12036" TurnInName="Senior Sergeant Juktok" TurnInId="26415" X="3833.262" Y="1573.53" Z="86.69933" />
-  <If Condition="!HasQuest(12053) &amp;&amp; !IsQuestCompleted(12053) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12053) &amp;&amp; !IsQuestCompleted(12053) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -3457,7 +3457,7 @@
 -->
   <If Condition="HasQuest(12071)">
     <TurnIn QuestName="Attack by Air! " QuestId="12071" TurnInName="Valnok Windrager" TurnInId="26574" X="3865.594" Y="1540.067" Z="89.90228" />
-    <If Condition="Me.LevelFraction &gt;= 75.25">
+    <If Condition="Me.LevelFraction &gt;= 75.50">
       <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
       <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
       <CustomBehavior File="ForcedDismount" />
@@ -3572,7 +3572,7 @@
   </If>
   <PickUp QuestName="That Which Creates Can Also Destroy" QuestId="12459" GiverName="Lord Itharius" GiverId="27785" X="3538.212" Y="284.4531" Z="342.7216" />
   <TurnIn Nav="Fly" QuestName="Report to the Ruby Dragonshrine" QuestId="12460" TurnInName="Ceristrasz" TurnInId="27506" X="3703.88" Y="699.0208" Z="89.20235" />
-  <If Condition="!HasQuest(12416) &amp;&amp; !IsQuestCompleted(12416) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12416) &amp;&amp; !IsQuestCompleted(12416) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -3583,7 +3583,7 @@
   <Objective Nav="Fly" QuestName="Heated Battle" QuestId="12416" Type="KillMob" MobId="27686" KillCount="8" />
   <Objective Nav="Fly" QuestName="Heated Battle" QuestId="12416" Type="KillMob" MobId="27531" KillCount="1" />
   <TurnIn Nav="Fly" QuestName="Heated Battle" QuestId="12416" TurnInName="Ceristrasz" TurnInId="27506" X="3703.88" Y="699.0208" Z="89.20235" />
-  <If Condition="!HasQuest(12417) &amp;&amp; !IsQuestCompleted(12417) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12417) &amp;&amp; !IsQuestCompleted(12417) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -3612,7 +3612,7 @@
     </While>
   </If>
   <TurnIn Nav="Fly" QuestName="Return to the Earth" QuestId="12417" TurnInName="Ceristrasz" TurnInId="27506" X="3703.88" Y="699.0208" Z="89.20235" />
-  <If Condition="!HasQuest(12418) &amp;&amp; !IsQuestCompleted(12418) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12418) &amp;&amp; !IsQuestCompleted(12418) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -3644,7 +3644,7 @@
   </If>
   <TurnIn Nav="Fly" QuestName="Informing the Queen" QuestId="12123" TurnInName="Alexstrasza the Life-Binder" TurnInId="26917" X="3531.015" Y="271.4031" Z="342.7215" />
   <TurnIn Nav="Fly" QuestName="The Fate of the Ruby Dragonshrine" QuestId="12419" TurnInName="Krasus" TurnInId="27990" X="3529.382" Y="273.8734" Z="342.7215" />
-  <If Condition="HasQuest(12459) &amp;&amp; !IsQuestCompleted(12459) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12459) &amp;&amp; !IsQuestCompleted(12459) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -3721,7 +3721,7 @@
     <CustomBehavior File="ForcedDismount" />
     <TurnIn QuestName="What Secrets Men Hide" QuestId="12475" TurnInName="Zelig the Visionary" TurnInId="27314" />
   </If>
-  <If Condition="!HasQuest(12478) &amp;&amp; !IsQuestCompleted(12478) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12478) &amp;&amp; !IsQuestCompleted(12478) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
 	<RunTo X="3793.728" Y="-793.8074" Z="196.7066" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
@@ -3871,7 +3871,7 @@
     <TurnIn QuestName="Frostmourne Cavern" QuestId="12478" TurnInName="Zelig the Visionary" TurnInId="27314" X="3811.172" Y="-811.7258" Z="198.3762" />
     <RunTo X="3793.728" Y="-793.8074" Z="196.7066" />
   </If>
-  <If Condition="!HasQuest(12262) &amp;&amp; !IsQuestCompleted(12262) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12262) &amp;&amp; !IsQuestCompleted(12262) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -3910,7 +3910,7 @@
   <TurnIn Nav="Fly" QuestName="In Service of Blood" QuestId="12125" TurnInName="Koltira Deathweaver" TurnInId="26581" X="3855.537" Y="1597.466" Z="89.68515" />
   <TurnIn Nav="Fly" QuestName="In Service of the Unholy" QuestId="12126" TurnInName="Koltira Deathweaver" TurnInId="26581" X="3855.537" Y="1597.466" Z="89.68515" />
   <TurnIn Nav="Fly" QuestName="In Service of Frost" QuestId="12127" TurnInName="Koltira Deathweaver" TurnInId="26581" X="3855.537" Y="1597.466" Z="89.68515" />
-  <If Condition="!HasQuest(12132) &amp;&amp; !IsQuestCompleted(12132) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12132) &amp;&amp; !IsQuestCompleted(12132) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -3952,7 +3952,7 @@
   </If>
 -->
   <TurnIn Nav="Fly" QuestName="Return to Soar" QuestId="12104" TurnInName="Soar Hawkfury" TurnInId="26504" X="3759.467" Y="1547.636" Z="87.03118" />
-  <If Condition="!HasQuest(12111) &amp;&amp; !IsQuestCompleted(12111) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12111) &amp;&amp; !IsQuestCompleted(12111) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4047,7 +4047,7 @@
   </If>
   <TurnIn Nav="Fly" QuestName="Where the Wild Things Roam" QuestId="12111" TurnInName="Soar Hawkfury" TurnInId="26504" X="3759.467" Y="1547.636" Z="87.03118" />
   <TurnIn Nav="Fly" QuestName="Report to the Ruby Dragonshrine" QuestId="12461" TurnInName="Vargastrasz" TurnInId="27763" X="3671.929" Y="1216.935" Z="142.8557" />
-  <If Condition="!HasQuest(12448) &amp;&amp; !IsQuestCompleted(12448) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12448) &amp;&amp; !IsQuestCompleted(12448) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4156,14 +4156,14 @@
 <PickUp Nav="Fly" QuestName="Nozzlerust Defense" QuestId="12043" GiverName="Narf" GiverId="26647" X="4692.297" Y="571.8094" Z="120.5159" />
 <PickUp Nav="Fly" QuestName="Shaved Ice" QuestId="12045" GiverName="Zivlix" GiverId="26661" X="4705.633" Y="559.0539" Z="124.0265" />
 <TurnIn Nav="Fly" QuestName="Return to Sender" QuestId="12469" TurnInName="Xink" TurnInId="26660" X="4699.055" Y="541.1164" Z="120.4209" />
-<If Condition="!HasQuest(12044) &amp;&amp; !IsQuestCompleted(12044) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="!HasQuest(12044) &amp;&amp; !IsQuestCompleted(12044) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4173,14 +4173,14 @@
 <PickUp Nav="Fly" QuestName="Stocking Up" QuestId="12044" GiverName="Xink" GiverId="26660" X="4699.055" Y="541.1164" Z="120.4209" />
 <Objective Nav="Fly" QuestName="Shaved Ice" QuestId="12045" Type="CollectItem" ItemId="36728" CollectCount="4" />
 <TurnIn Nav="Fly" QuestName="Shaved Ice" QuestId="12045" TurnInName="Zivlix" TurnInId="26661" X="4705.633" Y="559.0539" Z="124.0265" />
-<If Condition="!HasQuest(12046) &amp;&amp; !IsQuestCompleted(12046) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="!HasQuest(12046) &amp;&amp; !IsQuestCompleted(12046) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4210,14 +4210,14 @@
   <LootMobs Value="null" />
 </If>
 <TurnIn Nav="Fly" QuestName="Soft Packaging" QuestId="12046" TurnInName="Zivlix" TurnInId="26661" X="4705.633" Y="559.0539" Z="124.0265" />
-<If Condition="!HasQuest(12047) &amp;&amp; !IsQuestCompleted(12047) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="!HasQuest(12047) &amp;&amp; !IsQuestCompleted(12047) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4256,14 +4256,14 @@
 <Objective Nav="Fly" QuestName="Something That Doesn't Melt" QuestId="12047" Type="CollectItem" ItemId="36730" CollectCount="12" />
 <TurnIn Nav="Fly" QuestName="Hard to Swallow" QuestId="12049" TurnInName="Xink" TurnInId="26660" X="4699.055" Y="541.1164" Z="120.421" />
 <TurnIn Nav="Fly" QuestName="Something That Doesn't Melt" QuestId="12047" TurnInName="Zivlix" TurnInId="26661" X="4705.633" Y="559.0539" Z="124.0265" />
-<If Condition="!HasQuest(12052) &amp;&amp; !IsQuestCompleted(12052) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="!HasQuest(12052) &amp;&amp; !IsQuestCompleted(12052) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4275,14 +4275,14 @@
 <Objective Nav="Fly" QuestName="Nozzlerust Defense" QuestId="12043" Type="KillMob" MobId="26493" KillCount="1" />
 <TurnIn Nav="Fly" QuestName="Nozzlerust Defense" QuestId="12043" TurnInName="Narf" TurnInId="26647" X="4692.297" Y="571.8094" Z="120.5159" />
 <TurnIn Nav="Fly" QuestName="Stocking Up" QuestId="12044" TurnInName="Xink" TurnInId="26660" X="4699.055" Y="541.1164" Z="120.4209" />
-<If Condition="!HasQuest(12075) &amp;&amp; !IsQuestCompleted(12075) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="!HasQuest(12075) &amp;&amp; !IsQuestCompleted(12075) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4316,14 +4316,14 @@
   <RunTo X="4931.773" Y="251.1325" Z="129.7399" />
 </If>
 <!--
-<If Condition="HasQuest(12076) &amp;&amp; !IsQuestCompleted(12076) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<If Condition="HasQuest(12076) &amp;&amp; !IsQuestCompleted(12076) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4396,14 +4396,14 @@
   </If>
   <RunTo X="4931.773" Y="251.1325" Z="129.7399" />
 </If>-->
-<!--<If Condition="!HasQuest(12078) &amp;&amp; !IsQuestCompleted(12078) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+<!--<If Condition="!HasQuest(12078) &amp;&amp; !IsQuestCompleted(12078) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
   <If Condition="Me.IsAlliance" >
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
     <CustomBehavior File="LoadProfile" ProfileName="[N-Quest](75-77)GrizzlyHills[Cava]" />
   </If>
-  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="Me.IsHorde &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4451,7 +4451,7 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsAlliance" >
-  <If Condition="!HasQuest(12542) &amp;&amp; !IsQuestCompleted(12542) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12542) &amp;&amp; !IsQuestCompleted(12542) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -4479,7 +4479,7 @@
   </If>
   <TurnIn Nav="Fly" QuestName="The Cleansing Of Jintha'kalar" QuestId="12545" TurnInName="Crusader Valus" TurnInId="28228" X="4599.034" Y="-1082.734" Z="165.4833" />
   <PickUp Nav="Fly" QuestName="Into the Breach!" QuestId="12789" GiverName="Crusader Valus" GiverId="28228" X="4599.034" Y="-1082.734" Z="165.4833" />
-  <If Condition="!HasQuest(12794) &amp;&amp; !IsQuestCompleted(12794) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="!HasQuest(12794) &amp;&amp; !IsQuestCompleted(12794) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3446.649" Y="-2756.03" Z="199.3693" />
     <CustomBehavior File="ForcedDismount" />
@@ -4542,7 +4542,7 @@
                                                                                                                                    |
 -->
 <If Condition="Me.IsHorde">
-  <If Condition="HasQuest(12458) &amp;&amp; !IsQuestCompleted(12458) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12458) &amp;&amp; !IsQuestCompleted(12458) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4568,7 +4568,7 @@
     </If>
     <RunTo X="3236.864" Y="-693.0738" Z="166.9393" />
   </If>
-  <If Condition="HasQuest(12459) &amp;&amp; !IsQuestCompleted(12459) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12459) &amp;&amp; !IsQuestCompleted(12459) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4603,7 +4603,7 @@
     <CustomBehavior File="InteractWith" MobId="26443" MovementBy="NavigatorPreferred" NonCompeteDistance="0" InteractByGossipOptions="1" PreInteractMountStrategy="DismountOrCancelShapeshift" X="3549.37" Y="379.3498" Z="52.22818" />
     <TurnIn QuestName="That Which Creates Can Also Destroy" QuestId="12459" TurnInName="Lord Itharius" TurnInId="27785" X="3538.212" Y="284.4531" Z="342.7216" />
   </If>
-  <If Condition="HasQuest(12095) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12095) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4633,7 +4633,7 @@
     </If>
     <RunTo X="3548.887" Y="384.2773" Z="52.22828" />
   </If>
-  <If Condition="HasQuest(12148) &amp;&amp; !IsQuestCompleted(12148) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12148) &amp;&amp; !IsQuestCompleted(12148) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />
@@ -4651,7 +4651,7 @@
     </If>
     <RunTo X="3561.993" Y="159.8616" Z="52.22831" />
   </If>
-  <If Condition="HasQuest(12149) &amp;&amp; !IsQuestCompleted(12149) &amp;&amp; (Me.LevelFraction &gt;= 75.25)">
+  <If Condition="HasQuest(12149) &amp;&amp; !IsQuestCompleted(12149) &amp;&amp; (Me.LevelFraction &gt;= 75.50)">
     <CustomBehavior File="Message" Text="Moving to GRIZZLY HILLS, Please do not stop bot" LogColor="Aquamarine" />
     <CustomBehavior File="Cava\FlyTo" X="3259.141" Y="-2262.608" Z="114.4192" />
     <CustomBehavior File="ForcedDismount" />

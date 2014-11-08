@@ -2085,6 +2085,25 @@
   </While>
 </If>
 <TurnIn Nav="Fly" QuestName="Freya's Pact" QuestId="12621" TurnInName="Avatar of Freya" TurnInId="27801" X="5876.064" Y="4116.528" Z="-85.51128" />
+<If Condition="Me.LevelFraction &lt; 80.10" >
+	<CustomBehavior File="Message" Text="Farming time until I reach level 80 and 2 bars." LogColor="Lime" />				
+  <CustomBehavior File="Cava\FlyTo" Land="true" X="5800.945" Y="5677.459" Z="-69.97756" />
+  <SetGrindArea>
+  <GrindArea>
+	<Factions>14 2030</Factions>
+	<Hotspots>
+		<Hotspot X="5800.945" Y="5677.459" Z="-69.97756" />
+		<Hotspot X="5941.971" Y="5612.417" Z="-69.88351" />
+		<Hotspot X="6157.625" Y="5504.379" Z="-63.6214" />
+		<Hotspot X="6074.877" Y="5711.478" Z="-33.21479" />
+		<Hotspot X="5843.036" Y="5936.517" Z="-30.87323" />
+		<Hotspot X="5675.703" Y="5983.148" Z="-40.86446" />
+		<Hotspot X="5640.853" Y="5834.434" Z="-63.26075" />
+	</Hotspots>
+	</GrindArea>
+  </SetGrindArea>					
+	<GrindTo Condition="Me.LevelFraction &gt;= 80.10" GoalText="Farming untill level 80.10" />
+</If>
 <CustomBehavior File="Message" Text="Moving to ICECROW, Please do not stop bot" LogColor="Aquamarine" />
 <CustomBehavior File="Cava\FlyTo" Land="True" X="6034.953" Y="160.4058" Z="358.419" />
 <CustomBehavior File="ForcedDismount" />
