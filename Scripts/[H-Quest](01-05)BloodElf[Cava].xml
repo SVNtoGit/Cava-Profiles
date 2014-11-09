@@ -66,7 +66,7 @@
 	</Hotspots>
   </Objective>
 </Quest>
-<Quest Id="8330" Name="Solanian's Belongings">
+<Quest Id="37443" Name="Solanian's Belongings">
   <Objective Type="CollectItem" ItemId="20471" CollectCount="1">
     <CollectFrom>
       <GameObject Name="Scroll of Scourge Magic" Id="180511" />
@@ -92,14 +92,14 @@
     </Hotspots>
   </Objective>
 </Quest>
-<Quest Id="8345" Name="The Shrine of Dath'Remar">
+<Quest Id="37442" Name="The Shrine of Dath'Remar">
   <Objective Type="UseObject" ObjectId="180516" UseCount="1">
     <Hotspots>
       <Hotspot X="10405.8" Y="-5946.007" Z="42.50818" />
     </Hotspots>
   </Objective>
 </Quest>
-<Quest Id="8336" Name="A Fistful of Slivers">
+<Quest Id="37440" Name="A Fistful of Slivers">
   <Objective Type="CollectItem" ItemId="20482" CollectCount="6">
     <CollectFrom>
       <Mob Id="15274" Name="Mana Wyrm" />
@@ -206,7 +206,8 @@
   Please move your char to: EVERSONG WOODS/SUNSTRIDER ISLE\n
   and start bot." />
 </If>
---><CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
+-->
+<CustomBehavior File="Misc\ProfileCompatibilityInfo" AllowBrokenAddOns="true" AllowBrokenPlugIns="true" />
 <CustomBehavior File="UserSettings" GroundMountFarmingMode="False" KillBetweenHotspots="False" UseRandomMount="False" FindMountAutomatically="False" DrinkAmount="0" FoodAmount="0" />
 <CustomBehavior File="EnablePlugin" Names="CavaPlugin" />
 <CustomBehavior File="EnablePlugin" Names="MIR2" />
@@ -242,47 +243,8 @@
 <If Condition="(Me.Class == WoWClass.Monk)">
   <PickUp QuestName="Monk Training" QuestId="31170" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 </If>
-<PickUp QuestName="Solanian's Belongings" QuestId="8330" GiverId="15295" GiverName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<PickUp QuestName="The Shrine of Dath'Remar" QuestId="8345" GiverId="15295" GiverName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<PickUp QuestName="A Fistful of Slivers" QuestId="8336" GiverId="15296" GiverName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
-<PickUp QuestName="Thirst Unending" QuestId="8346" GiverName="Arcanist Helion" GiverId="15297" X="10419.66" Y="-6318.618" Z="35.5736" />
-<If Condition="HasQuest(8346) &amp;&amp; !IsQuestCompleted(8346)" >
-  <RunTo X="10377.3" Y="-6184.679" Z="32.19027" />
-	<While Condition="!IsQuestCompleted(8346)" >
-		<If Condition="HasSpell(28730)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="28730" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-		<If Condition="HasSpell(50613)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="50613" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-		<If Condition="HasSpell(80483)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" MinRange="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="80483" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-		<If Condition="HasSpell(129597)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="129597" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-		<If Condition="HasSpell(25046)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="25046" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-		<If Condition="HasSpell(69179)">
-			<CustomBehavior File="InteractWith" QuestId="8346" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
-				InteractByCastingSpellId="69179" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
-		</If>	
-	</While>
-</If>
 <Objective QuestName="Unfortunate Measures" QuestId="8326" Type="CollectItem" ItemId="20797" CollectCount="8"/>
-<Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20471" CollectCount="1"/>
-<Objective QuestName="The Shrine of Dath'Remar" QuestId="8345" Type="UseObject" ObjectId="180516" UseCount="1"/>
-<Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20470" CollectCount="1"/>
-<Objective QuestName="Solanian's Belongings" QuestId="8330" Type="CollectItem" ItemId="20472" CollectCount="1"/>
-<Objective QuestName="A Fistful of Slivers" QuestId="8336" Type="CollectItem" ItemId="20482" CollectCount="6"/>
 <TurnIn QuestName="Unfortunate Measures" QuestId="8326" TurnInId="15278" TurnInName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
-<PickUp QuestName="Report to Lanthan Perilon" QuestId="8327" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <If Condition="(Me.Class == WoWClass.Warrior)">
   <TurnIn QuestName="Warrior Training" QuestId="8329" TurnInName="Delios Silverblade" TurnInId="43010" X="10381.3" Y="-6422.5" Z="38.53276" />
   <PickUp QuestName="Charge!" QuestId="27091" GiverName="Delios Silverblade" GiverId="43010" X="10381.3" Y="-6422.5" Z="38.53276" />
@@ -364,14 +326,53 @@
   </While>
   <TurnIn QuestName="Tiger Palm" QuestId="31171" TurnInName="Pao" TurnInId="63332" X="10378.89" Y="-6398.024" Z="38.53153" />
 </If>
-<TurnIn QuestName="Solanian's Belongings" QuestId="8330" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<TurnIn QuestName="The Shrine of Dath'Remar" QuestId="8345" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
-<TurnIn QuestName="A Fistful of Slivers" QuestId="8336" TurnInId="15296" TurnInName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
-<TurnIn QuestName="Thirst Unending" QuestId="8346" TurnInName="Arcanist Helion" TurnInId="15297"  X="10419.66" Y="-6318.618" Z="35.5736" />
+<PickUp QuestName="Solanian's Belongings" QuestId="37443" GiverId="15295" GiverName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
+<PickUp QuestName="The Shrine of Dath'Remar" QuestId="37442" GiverName="Well Watcher Solanian" GiverId="15295" X="10376.4" Y="-6406.69" Z="49.71518" />
+<PickUp QuestName="A Fistful of Slivers" QuestId="37440" GiverId="15296" GiverName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
+<PickUp QuestName="Thirst Unending" QuestId="37439" GiverName="Arcanist Helion" GiverId="15297" X="10419.66" Y="-6318.618" Z="35.5736" />
+<If Condition="HasQuest(37439) &amp;&amp; !IsQuestCompleted(37439)" >
+  <RunTo X="10377.3" Y="-6184.679" Z="32.19027" />
+	<While Condition="!IsQuestCompleted(37439)" >
+		<If Condition="HasSpell(28730)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="28730" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(50613)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="50613" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(80483)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" MinRange="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="80483" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(129597)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="129597" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(25046)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="25046" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(69179)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="69179" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+		<If Condition="HasSpell(155145)">
+			<CustomBehavior File="InteractWith" QuestId="37439" MobId="15274" Range="6" MobState="Alive" X="10379.94" Y="-6283.283" Z="25.71898"
+				InteractByCastingSpellId="155145" CollectionDistance="1000" ProactiveCombatStrategy="ClearMobsTargetingUs"/>
+		</If>	
+	</While>
+</If>
+<TurnIn QuestName="Thirst Unending" QuestId="37439" TurnInName="Arcanist Helion" TurnInId="15297"  X="10419.66" Y="-6318.618" Z="35.5736" />
+<PickUp QuestName="Report to Lanthan Perilon" QuestId="8327" GiverId="15278" GiverName="Magistrix Erona" X="10351.96" Y="-6359.932" Z="34.03377" />
 <TurnIn QuestName="Report to Lanthan Perilon" QuestId="8327" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <PickUp QuestName="Aggression" QuestId="8334" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Tender" MobId="15271" KillCount="7"/>
 <Objective QuestName="Aggression" QuestId="8334" Type="KillMob" Name="Feral Tender" MobId="15294" KillCount="7"/>
+<Objective QuestName="Solanian's Belongings" QuestId="37443" Type="CollectItem" ItemId="20471" CollectCount="1"/>
+<Objective QuestName="The Shrine of Dath'Remar" QuestId="37442" Type="UseObject" ObjectId="180516" UseCount="1"/>
+<Objective QuestName="Solanian's Belongings" QuestId="37443" Type="CollectItem" ItemId="20470" CollectCount="1"/>
+<Objective QuestName="Solanian's Belongings" QuestId="37443" Type="CollectItem" ItemId="20472" CollectCount="1"/>
 <TurnIn QuestName="Aggression" QuestId="8334" TurnInName="Lanthan Perilon" TurnInId="15281" X="10302.25" Y="-6229.303" Z="26.62198" />
 <PickUp QuestName="Felendren the Banished" QuestId="8335" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <Objective QuestName="Felendren the Banished" QuestId="8335" Type="CollectItem" ItemId="20799" CollectCount="1" X="10130.96" Y="-5994.089" Z="110.1553"/>
@@ -400,6 +401,9 @@
 <If Condition="HasQuest(8335) &amp;&amp; IsQuestCompleted(8335)" >
 	<CustomBehavior File="Cava\GoSavedInn" BindPointAreaId="3431" />
 </If>
+<TurnIn QuestName="The Shrine of Dath'Remar" QuestId="37442" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
+<TurnIn QuestName="Solanian's Belongings" QuestId="37443" TurnInId="15295" TurnInName="Well Watcher Solanian" X="10376.4" Y="-6406.69" Z="49.71518" />
+<TurnIn QuestName="A Fistful of Slivers" QuestId="37440" TurnInId="15296" TurnInName="Arcanist Ithanas" X="10413.7" Y="-6372.463" Z="35.64136" />
 <TurnIn QuestName="Tainted Arcane Sliver" QuestId="8338" TurnInName="Arcanist Helion" TurnInId="15297" X="10419.66" Y="-6318.618" Z="35.5736" />
 <TurnIn QuestName="Felendren the Banished" QuestId="8335" TurnInId="15281" TurnInName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
 <PickUp QuestName="Aiding the Outrunners" QuestId="8347" GiverId="15281" GiverName="Lanthan Perilon" X="10302.25" Y="-6229.303" Z="26.62198" />
