@@ -405,7 +405,7 @@
       <SetGrindArea>
   	  <GrindArea>
 	    <Factions>54</Factions>
-		<Hotspots>
+				<Hotspots>
           <Hotspot X="-2969.498" Y="-1934.745" Z="9.831531" />
           <Hotspot X="-2993.342" Y="-1968.604" Z="10.58754" />
           <Hotspot X="-3032.002" Y="-1980.211" Z="8.747863" />
@@ -424,14 +424,14 @@
           <Hotspot X="-2984.567" Y="-2044.702" Z="9.505842" />
           <Hotspot X="-2976.75" Y="-2004.994" Z="9.255939" />
           <Hotspot X="-2956.278" Y="-1969.664" Z="10.67414" />
-		</Hotspots>
-	  </GrindArea>
-	  </SetGrindArea>
-	  <GrindTo Condition="(GetItemCount(56081) &gt;= 1)" />
+				</Hotspots>
+			</GrindArea>
+			</SetGrindArea>
+			<GrindTo Condition="(GetItemCount(56081) &gt;= 1)" />
     </If>
     <While Condition="HasQuest(25867) &amp;&amp; !IsQuestCompleted(25867) &amp;&amp; HasItem(56081)" >
       <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25867" MobId="41410" WaitTime="1" CollectionDistance="2000" X="-3077.955" Y="-2196.848" Z="8.435206" />
-	  <CustomBehavior File="UseGameObject" QuestId="25867" ObjectId="203282" WaitTime="6000" NumOfTimes="1" X="-3077.955" Y="-2196.848" Z="8.435206" />
+      <CustomBehavior File="InteractWith" NonCompeteDistance="0" QuestId="25867" MobId="203282" WaitTime="6000" CollectionDistance="2000" X="-3077.955" Y="-2196.848" Z="8.435206" />
       <CustomBehavior File="WaitTimer" WaitTime="4000" />
     </While>
   </While>
