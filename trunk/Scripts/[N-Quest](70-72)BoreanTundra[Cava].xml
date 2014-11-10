@@ -3121,35 +3121,15 @@
     <RunTo X="3575.694" Y="6944.262" Z="173.0755" />
   </If>
 </If>
-<If Condition="HasQuest(11912) &amp;&amp; !IsQuestCompleted(11912) &amp;&amp; (GetItemCount(35492) &lt; 5)" >
+<If Condition="HasQuest(11912) &amp;&amp; !IsQuestCompleted(11912)" >
   <CustomBehavior File="Cava\FlyTo" X="3744.509" Y="6581.362" Z="172.674" />
   <CustomBehavior File="ForcedDismount" />
-  <CustomBehavior File="CollectThings" ObjectId="188113" CollectUntil="RequiredCountReached" CollectItemCount="5" CollectItemId="35492">
-    <Hotspot X="3744.509" Y="6581.362" Z="172.674" />
-    <Hotspot X="3747.888" Y="6541.027" Z="177.929" />
-    <Hotspot X="3759.459" Y="6502.749" Z="181.4041" />
-    <Hotspot X="3796.731" Y="6485.405" Z="183.0272" />
-    <Hotspot X="3836.471" Y="6496.872" Z="181.2371" />
-    <Hotspot X="3867.066" Y="6524.504" Z="177.8381" />
-    <Hotspot X="3903.687" Y="6542.606" Z="176.1427" />
-    <Hotspot X="3939.889" Y="6561.633" Z="175.8315" />
-    <Hotspot X="3946.148" Y="6600.943" Z="171.3454" />
-    <Hotspot X="3911.385" Y="6621.626" Z="166.6518" />
-    <Hotspot X="3875.775" Y="6603.179" Z="165.502" />
-    <Hotspot X="3843.555" Y="6578.668" Z="167.1066" />
-    <Hotspot X="3803.775" Y="6573.885" Z="168.014" />
-    <Hotspot X="3766.038" Y="6587.458" Z="170.1896" />
-  </CustomBehavior>
+  <Objective Nav="Fly" QuestName="Nuts for Berries" QuestId="11912" Type="CollectItem" ItemId="35492" CollectCount="10" />
 </If>
 <Objective Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35483" CollectCount="3" />
 <Objective Nav="Fly" QuestName="Secrets of the Ancients" QuestId="11910" Type="CollectItem" ItemId="35484" CollectCount="3" />
 <If Condition="HasQuest(11910)" >
   <LootMobs Value="null" />
-</If>
-<If Condition="HasQuest(11912) &amp;&amp; !IsQuestCompleted(11912)" >
-  <CustomBehavior File="Cava\FlyTo" X="3744.509" Y="6581.362" Z="172.674" />
-  <CustomBehavior File="ForcedDismount" />
-  <Objective Nav="Fly" QuestName="Nuts for Berries" QuestId="11912" Type="CollectItem" ItemId="35492" CollectCount="10" />
 </If>
 <If Condition="HasQuest(11918) &amp;&amp; !IsQuestCompleted(11918)" >
   <CustomBehavior File="Cava\FlyTo" X="3736.517" Y="6615.127" Z="167.8221" />
