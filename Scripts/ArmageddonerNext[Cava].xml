@@ -2,13 +2,22 @@
 <Name>Armageddoner Next [Cava] $Rev$</Name>
 <QuestOrder>
 <If Condition="(Me.Level &gt;= 81)">
+	<If Condition="IsQuestCompleted(30928)">
+		<If Condition="Me.IsAlliance &amp;&amp; !HasQuest(33256) &amp;&amp; IsQuestCompleted(33256)">
+			<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(92-94)Gorgrond[Cava]" />
+		</If>	          
+
+
+		<If Condition="Me.IsHorde &amp;&amp; !HasQuest(34446) &amp;&amp; IsQuestCompleted(34446)">
+			<CustomBehavior File="LoadProfile" ProfileName="[H-Quest]Armageddoner(90-92)FrostfireRidge[Cava]" />
+		</If>	          
+		<If Condition="Me.IsAlliance &amp;&amp; !HasQuest(35884) &amp;&amp; IsQuestCompleted(35884)">
+			<CustomBehavior File="LoadProfile" ProfileName="[A-Quest]Armageddoner(90-92)ShadowMoonValley[Cava]" />
+		</If>	          
+	</If>
 	<If Condition="!HasQuest(30928) &amp;&amp; IsQuestCompleted(30928)">
-		<!--
-		<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]End[Cava]" />
-		-->
-		<CustomBehavior File="UserDialog" AllowBotStop="True" SoundCue="Exclamation" SoundCueInterval="1" Text="Finished All Tester Profiles ......Done" />
-		<CustomBehavior File="Halt"/>
-	</If>	
+		<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(90-90)TanaanJungle[Cava]" />
+	</If>	          
 	<If Condition="!HasQuest(30723) &amp;&amp; IsQuestCompleted(30723)">
 		<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(89-90)TownlongSteppes[Cava]" />
 	</If>	          
