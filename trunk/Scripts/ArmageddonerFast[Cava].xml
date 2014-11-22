@@ -1,0 +1,47 @@
+<HBProfile>
+<Name>Armageddoner Fast [Cava] $Rev$</Name>
+<QuestOrder>
+<If Condition="(Me.Level &gt;= 90)">
+	<If Condition="HasQuest(30928) &amp;&amp; !IsQuestCompleted(30928)">
+		<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(90-90)TanaanJungle[Cava]" />
+	</If>	          
+	<If Condition="(Me.Level &gt;= 92)">
+		<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(92-94)Gorgrond[Cava]" />
+	</If>
+	<If Condition="Me.IsHorde">
+		<CustomBehavior File="LoadProfile" ProfileName="[H-Quest]Armageddoner(90-92)FrostfireRidge[Cava]" />
+	</If>	          
+	<If Condition="Me.IsAlliance">
+		<CustomBehavior File="LoadProfile" ProfileName="[A-Quest]Armageddoner(90-92)ShadowMoonValley[Cava]" />
+	</If>	          
+</If>
+<If Condition="(Me.Level &gt;= 89)">
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(89-90)TownlongSteppes[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 88)">
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(88-89)Kun-LaiSummit[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 87)">
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(87-88)KrasarangWilds[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 86)">
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(86-87)ValleyoftheFourWinds[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 85)">
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(85-86)TheJadeForest[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 84)">
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(84-85)TwilightHighlands[Cava]" />
+</If>
+<If Condition="(Me.Level &gt;= 83)">
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(83-84)Uldum[Cava]" />
+</If>
+<If Condition="Me.LevelFraction &gt;= 82.50">
+	<CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(82-83)Deepholm[Cava]" />
+</If>	
+<If Condition="(Me.Level &gt;= 81)">
+  <CustomBehavior File="LoadProfile" ProfileName="[N-Quest]Armageddoner(81-82)MountHyjal[Cava]" />
+</If>
+<CustomBehavior File="LoadProfile" ProfileName="Next[Cava]" />
+</QuestOrder>
+</HBProfile>
